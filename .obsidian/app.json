@@ -1,0 +1,19 @@
+{
+  "promptDelete": false,
+  "spellcheckLanguages": [
+    "es-MX"
+  ],
+  "autoConvertHtml": true,
+  "strictLineBreaks": false,
+  "tabSize": 5,
+  "alwaysUpdateLinks": true,
+  "showInlineTitle": false,
+  "autoPairBrackets": true,
+  "autoPairMarkdown": false,
+  "readableLineLength": false,
+  "smartIndentList": true,
+  "legacyEditor": false,
+  "useMarkdownLinks": true,
+  "trashOption": "none",
+  "showUnsupportedFiles": true
+}
