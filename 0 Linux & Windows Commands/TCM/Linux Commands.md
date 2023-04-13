@@ -1,5 +1,7 @@
 # Introduction to Linux ❮❯
 
+Tags: #Linux #Comandos 
+
 ❯ **Ctrl + l** Limpiamos la pantalla en la consola Linux (l=ele)
 
 ❯ **sudo su -** Para ser root
