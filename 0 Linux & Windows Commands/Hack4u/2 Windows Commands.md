@@ -1,5 +1,7 @@
 # Comandos Windows ❮❯
 
+Tags: #Windows #Comandos
+
 **C:\Windows\Temp** Directorio en donde tenemos capacidad de escritura y lectura
 
 ❯ **ipconfig** Nos muestra las interfaces y las direcciones IP
