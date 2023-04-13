@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "309372091a574359",
+            "id": "4f27d6d6e3c6a8ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/80, 443, 8080, 5000 - WEB.md",
+                "file": "Hack4u - Course/Direcciones IP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "/var/www",
+                "query": "tag:#Puerto",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -97,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Ports/80, 443, 8080, 5000 - WEB.md"
+                "file": "Hack4u - Course/Direcciones IP.md"
               }
             }
           }
@@ -121,23 +121,12 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "309372091a574359",
+  "active": "4f27d6d6e3c6a8ae",
   "lastOpenFiles": [
-    "Hack4u - Course/1 Direcciones IP.md",
-    "Hack4u - Course/2 Reconocimiento.md",
-    "Hack4u - Course/3 Docker.md",
-    "Hack4u - Course/4 Servicios comunes.md",
-    "Hack4u - Course/5 Enumeracion y Explotacion.md",
-    "Hack4u - Course/WordPress.md",
-    "TCM - PNPT - Course/6 Wireless Penetration Testing.md",
-    "2 Tools/Hashcat.md",
-    "2 Tools/Hydra.md",
-    "2 Tools/GitTools.md",
-    "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "2 Tools/Dirbuster.md",
+    "Untitled.md",
+    "1 Ports/22 - SSH.md",
     "2 Tools/BurpSuite.md",
-    "2 Tools/1 Code.md",
-    "2 Tools/0 Webpages.md",
+    "Hack4u - Course/Direcciones IP.md",
     "1 Ports/6379 - REDIS.md",
     "1 Ports/5985 - WINRM.md",
     "1 Ports/5800, 5900 - VNC.md",
@@ -149,7 +138,23 @@
     "1 Ports/873 - RSYNC.md",
     "1 Ports/445, 139- SMB.md",
     "1 Ports/389 - LDAP.md",
-    "Pasted image 20230411160004.png",
+    "1 Ports/161 - SNMP.md",
+    "1 Ports/135 - RPC.md",
+    "1 Ports/113 - IDENTD.md",
+    "1 Ports/111 - NFS.md",
+    "1 Ports/110, 995 - POP3.md",
+    "1 Ports/80, 443, 8080, 5000 - WEB.md",
+    "1 Ports/69 - TFTP.md",
+    "1 Ports/53 - DNS.md",
+    "1 Ports/25, 465, 587, 2525 - SMTP.md",
+    "1 Ports/20 - 21 FTP.md",
+    "0 Linux & Windows Commands/TCM/Windows Commands.md",
+    "Z Imagenes/Pasted image 20230403193603.png",
+    "Z Imagenes/Pasted image 20230412181925.png",
+    "Z Imagenes/Pasted image 20230411160004.png",
+    "Z Imagenes/SSRF.png",
+    "Pasted image 20230224161942.png",
+    "Z Imagenes",
     "6 Vulhub - Machines/Hack4u/2 Docker",
     "6 Vulhub - Machines/TCM",
     "7 Informe",
@@ -158,10 +163,6 @@
     "0 Linux & Windows Commands/Hack4u",
     "4 Linux & Windows Escalation/TCM",
     "4 Linux & Windows Escalation/Hack4u",
-    "4 Linux & Windows Escalation",
-    "0 Linux & Windows Commands",
-    "Pasted image 20230403193603.png",
-    "Pasted image 20230224161942.png",
-    "Pasted image 20230224161949.png"
+    "4 Linux & Windows Escalation"
   ]
 }
