@@ -1,5 +1,7 @@
 # Enumeracion de servicios comunes y gestores de contenido ❮❯
 
+Tags: #web #Enumeracion 
+
 ## Enumeración del servicio FTP
 
 FTP es un protocolo ampliamente utilizado para la **transferencia de archivos** en redes. La enumeración del servicio FTP implica recopilar información relevante, como la versión del servidor FTP, la configuración de permisos de archivos, los usuarios y las contraseñas (mediante ataques de fuerza bruta o guessing), entre otros.
