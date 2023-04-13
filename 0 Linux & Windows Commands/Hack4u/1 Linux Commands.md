@@ -1,5 +1,6 @@
 # Linux Commands ❮❯
 
+Tags: #Linux #Comandos 
 
 ❯ **nano /etc/hosts** Para agregar algun dominio existente
 
