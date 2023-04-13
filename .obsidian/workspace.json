@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ce4d4a9ed3d8e535",
+        "id": "fb556fc20edc739a",
         "type": "tabs",
         "children": [
           {
-            "id": "309372091a574359",
+            "id": "816e57ae6cedb38a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u - Course/4 Servicios comunes.md",
+                "file": "3 PortSwigger - SQLI/Directory Path Traversal.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,10 +49,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "/var/www",
-                "matchingCase": true,
-                "explainSearch": true,
-                "collapseAll": true,
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hack4u - Course/4 Servicios comunes.md"
+                "file": "3 PortSwigger - SQLI/Directory Path Traversal.md"
               }
             }
           }
@@ -121,14 +121,33 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "309372091a574359",
+  "active": "816e57ae6cedb38a",
   "lastOpenFiles": [
-    "README.md",
+    "TCM - PNPT - Course/1 Buffer Overflow.md",
+    "Hack4u - Course/1 Direcciones IP.md",
+    "Hack4u - Course/2 Reconocimiento.md",
     "Hack4u - Course/3 Docker.md",
     "Hack4u - Course/4 Servicios comunes.md",
+    "Hack4u - Course/5 Enumeracion y Explotacion.md",
+    "Hack4u - Course/WordPress.md",
+    "6 Vulhub - Machines\\Udemy",
+    "6 Vulhub - Machines\\TCM",
+    "6 Vulhub - Machines\\Hack4u\\2 Docker",
+    "6 Vulhub - Machines\\Hack4u\\1 Easy",
+    "5 HTB - Machines\\Medium",
+    "5 HTB - Machines\\Easy",
+    "4 Linux & Windows Escalation\\TCM",
+    "4 Linux & Windows Escalation\\Hack4u",
+    "0 Linux & Windows Commands\\TCM",
+    "0 Linux & Windows Commands\\Hack4u",
+    "Untitled.md",
+    "5 HTB - Machines/Easy/20 ScriptKiddie.md",
+    "1 Ports/80, 443, 8080, 5000 - WEB.md",
+    "2 Tools/BurpSuite.md",
+    "Pasted image 20230412181925.png",
+    "README.md",
     "1 Ports/445, 139- SMB.md",
     "0 Linux & Windows Commands/Hack4u/1 Linux Commands.md",
-    "1 Ports/80, 443, 8080, 5000 - WEB.md",
     "2 Tools/Nmap.md",
     "1 Ports/22 - SSH.md",
     "2 Tools/Hydra.md",
@@ -141,25 +160,7 @@
     "1 Ports/20 - 21 FTP.md",
     "6 Vulhub - Machines/Hack4u/2 Docker/1.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "6 Vulhub - Machines/Hack4u/1 Easy/2 Untitled.md",
-    "6 Vulhub - Machines/Hack4u/1 Easy/1 Symfonos 1.md",
-    "5 HTB - Machines/Medium/Waldo.md",
-    "5 HTB - Machines/Medium/Union.md",
-    "5 HTB - Machines/Medium/Tenten.md",
-    "5 HTB - Machines/Medium/Stratosphere.md",
-    "5 HTB - Machines/Medium/SolidState.md",
-    "5 HTB - Machines/Medium/Poison.md",
     "Pasted image 20230411160004.png",
-    "6 Vulhub - Machines/Hack4u/2 Docker",
-    "6 Vulhub - Machines/TCM",
-    "7 Informe",
-    "6 Vulhub - Machines/Hack4u/1 Easy",
-    "0 Linux & Windows Commands/TCM",
-    "0 Linux & Windows Commands/Hack4u",
-    "4 Linux & Windows Escalation/TCM",
-    "4 Linux & Windows Escalation/Hack4u",
-    "4 Linux & Windows Escalation",
-    "0 Linux & Windows Commands",
     "Pasted image 20230403193603.png",
     "Pasted image 20230224161942.png",
     "Pasted image 20230224161949.png"
