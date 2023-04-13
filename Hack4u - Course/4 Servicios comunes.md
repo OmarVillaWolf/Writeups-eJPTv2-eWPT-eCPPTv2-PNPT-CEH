@@ -95,12 +95,6 @@ A continuación, os compartimos el enlace directo a la Wiki para que podáis ins
 
 -   **CrackMapExec**: [https://wiki.porchetta.industries/getting-started/installation/installation-on-unix](https://wiki.porchetta.industries/getting-started/installation/installation-on-unix)
 
-
-
-
-
-
-
 ## Enumeración de gestores de contenido (CMS) – Joomla
 Joomla es un sistema de gestión de contenidos (CMS) de código abierto que se utiliza para **crear sitios web** y **aplicaciones en línea**. Joomla es muy popular debido a su facilidad de uso y flexibilidad, lo que lo hace una opción popular para sitios web empresariales, gubernamentales y de organizaciones sin fines de lucro.
 
