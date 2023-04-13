@@ -97,19 +97,81 @@ A continuación, os compartimos el enlace directo a la Wiki para que podáis ins
 
 
 
-## Enumeración de gestores de contenido (CMS) – WordPress
-
-WordPress es un CMS de código abierto muy popular que fue lanzado en 2003. Es utilizado por millones de sitios web en todo el mundo y se destaca por su facilidad de uso y flexibilidad. Con WordPress, los usuarios pueden crear y personalizar sitios web sin necesidad de conocimientos de programación avanzados. Además, cuenta con una amplia variedad de plantillas y plugins que permiten añadir funcionalidades adicionales al sitio.
-
-El proyecto que utilizamos en esta clase para enumerar un WordPress es el siguiente:
-
--   **DVWP**: [https://github.com/vavkamil/dvwp](https://github.com/vavkamil/dvwp)
-
-Una de las herramientas que utilizamos en esta clase para enumerar este gestor de contenido es **Wpscan**. Wpscan es una herramienta de código abierto que se utiliza para escanear sitios web en busca de vulnerabilidades de seguridad en WordPress.
-
-Con Wpscan, podemos realizar una enumeración completa del sitio web y obtener información detallada sobre la instalación de WordPress, como la versión utilizada, los plugins y temas instalados y los usuarios registrados en el sitio. También nos permite realizar pruebas de fuerza bruta para descubrir contraseñas débiles y vulnerabilidades conocidas en plugins y temas.
-
-Wpscan es una herramienta muy útil para los administradores de sitios web que desean mejorar la seguridad de su sitio WordPress, ya que permite identificar y corregir vulnerabilidades antes de que sean explotadas por atacantes malintencionados. Además, es una herramienta fácil de usar y muy efectiva para identificar posibles debilidades de seguridad en nuestro sitio web.
 
 
-#
+
+
+## Enumeración de gestores de contenido (CMS) – Joomla
+Joomla es un sistema de gestión de contenidos (CMS) de código abierto que se utiliza para **crear sitios web** y **aplicaciones en línea**. Joomla es muy popular debido a su facilidad de uso y flexibilidad, lo que lo hace una opción popular para sitios web empresariales, gubernamentales y de organizaciones sin fines de lucro.
+
+Joomla es altamente personalizable y cuenta con una gran cantidad de extensiones disponibles, lo que permite a los usuarios añadir funcionalidades adicionales a sus sitios web sin necesidad de conocimientos de programación avanzados. Joomla también cuenta con una comunidad activa de desarrolladores y usuarios que comparten sus conocimientos y recursos para mejorar el CMS.
+
+A continuación, se comparte el enlace del proyecto que estaremos desplegando en Docker para auditar un Joomla:
+
+-   **CVE-2015-8562**: [https://github.com/vulhub/vulhub/tree/master/joomla/CVE-2015-8562](https://github.com/vulhub/vulhub/tree/master/joomla/CVE-2015-8562)
+
+Una de las herramientas que usamos en esta clase es **Joomscan**. Joomscan es una herramienta de línea de comandos diseñada específicamente para escanear sitios web que utilizan Joomla y buscar posibles vulnerabilidades y debilidades de seguridad.
+
+Joomscan utiliza una variedad de técnicas de enumeración para identificar información sobre el sitio web de Joomla, como la versión de Joomla utilizada, los plugins y módulos instalados y los usuarios registrados en el sitio. También utiliza una base de datos de vulnerabilidades conocidas para buscar posibles vulnerabilidades en la instalación de Joomla.
+
+Para utilizar Joomscan, primero debemos descargar la herramienta desde su sitio web oficial. A continuación se os proporciona el enlace al proyecto:
+
+-   **Joomscan**: [https://github.com/OWASP/joomscan](https://github.com/OWASP/joomscan)
+
+Una vez descargado, podemos utilizar la siguiente sintaxis básica para escanear un sitio web de Joomla:
+
+➜ `perl joomscan.pl -u ❮URL❯`
+
+Donde ❮URL❯ es la URL del sitio web que deseamos escanear. Joomscan escaneará el sitio web y nos proporcionará una lista detallada de posibles vulnerabilidades y debilidades de seguridad.
+
+Es importante tener en cuenta que joomscan **no es una herramienta infalible** y puede generar **falsos positivos** o **falsos negativos**. Por lo tanto, es importante utilizar joomscan junto con otras herramientas y técnicas de seguridad para tener una imagen completa de la seguridad del sitio web de Joomla que estemos auditando.
+
+## Enumeración de gestores de contenido (CMS) – Drupal
+
+
+Drupal ofrece un alto grado de personalización y escalabilidad, lo que lo convierte en una opción popular para sitios web complejos y grandes. Drupal se utiliza en una amplia gama de sitios web, desde blogs personales hasta sitios web gubernamentales y empresariales. Es altamente flexible y cuenta con una amplia variedad de módulos y herramientas que permiten a los usuarios personalizar su sitio web para satisfacer sus necesidades específicas.
+
+Una de las herramientas que veremos en esta clase para enumerar un Drupal es la herramienta **droopescan**. Droopescan es una herramienta de escaneo de seguridad especializada en la identificación de versiones de Drupal y sus módulos, y en la detección de vulnerabilidades conocidas en ellos. La herramienta realiza un escaneo exhaustivo del sitio web para encontrar versiones de Drupal instaladas, módulos activos y vulnerabilidades conocidas, lo que ayuda a los administradores de sistemas y desarrolladores a identificar y solucionar los problemas de seguridad en sus sitios web.
+
+Con esta herramienta, se pueden llevar a cabo análisis de seguridad en sitios web basados en Drupal, lo que puede ayudar a prevenir posibles ataques y problemas de seguridad en el futuro.
+
+A continuación, es proporciona el enlace directo al proyecto en Github:
+
+-   **Droopescan**: [https://github.com/SamJoan/droopescan](https://github.com/SamJoan/droopescan)
+
+Su uso es bastante intuitivo, a continuación se comparte un ejemplo de uso de esta herramienta:
+
+➜ `droopescan scan drupal --url https://example.com`
+
+Donde “**scan**” indica que queremos realizar un escaneo, “**drupal**” especifica que estamos realizando un escaneo de Drupal y “**–url https://example.com**” indica la URL del sitio web que se va a escanear.
+
+Asimismo, os compartimos a continuación el enlace al proyecto de Github correspondiente al laboratorio que estaremos desplegando en Docker:
+
+-   **CVE-2018-7600**: [https://github.com/vulhub/vulhub/tree/master/drupal/CVE-2018-7600](https://github.com/vulhub/vulhub/tree/master/drupal/CVE-2018-7600)
+
+
+## Enumeración de gestores de contenido (CMS) – Magento
+
+Magento es una plataforma de comercio electrónico de código abierto, que se utiliza para construir tiendas en línea de alta calidad y escalables. Es una de las plataformas más populares para el comercio electrónico y es utilizado por grandes marcas como Nike, Coca-Cola y Ford.
+
+Sin embargo, con la popularidad de Magento también ha surgido la preocupación por la seguridad. Una de las herramientas que veremos en esta clase es **Magescan**, una herramienta de escaneo de vulnerabilidades específica para Magento.
+
+Magescan puede detectar vulnerabilidades comunes en Magento, incluyendo problemas con permisos de archivos, errores de configuración y vulnerabilidades conocidas en extensiones populares de Magento.
+
+A continuación se proporciona el enlace directo al proyecto en Github:
+
+-   **Magescan**: [https://github.com/steverobbins/magescan](https://github.com/steverobbins/magescan)
+
+Su sintaxis y modo de uso es bastante sencillo, a continuación se comparte un ejemplo:
+
+➜ `php magescan.phar scan:all https://example.com`
+
+Donde “**magescan.pha**r” es el archivo ejecutable de la herramienta “**Magescan**“, “**scan:all**” es el comando específico de Magescan que indica que se realizará un escaneo exhaustivo de todas las vulnerabilidades conocidas en el sitio web objetivo y “**https://example.com**” es la URL del sitio web objetivo que se escaneará en busca de vulnerabilidades.
+
+Asimismo, se comparte el enlace al laboratorio que estaremos desplegando en Docker para configurar el Magento vulnerable:
+
+-   **Magento 2.2 SQL Injection**: [https://github.com/vulhub/vulhub/tree/master/magento/2.2-sqli](https://github.com/vulhub/vulhub/tree/master/magento/2.2-sqli)
+
+Un ataque de inyección SQL exitoso puede permitir al atacante obtener información confidencial, como credenciales de usuario o datos de pago, o incluso ejecutar comandos en la base de datos del sitio web.
+
+En el caso del Magento que estaremos desplegando, explotaremos una inyección SQL con el objetivo de obtener una cookie de sesión, la cual podremos posteriormente utilizar para llevar a cabo un ataque de “**Cookie Hijacking**“. Este tipo de ataque nos permitirá como atacantes asumir la identidad del usuario legítimo y acceder a las funciones del usuario, que en este caso será administrador.
