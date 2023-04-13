@@ -4,23 +4,50 @@
     "type": "split",
     "children": [
       {
-        "id": "ce4d4a9ed3d8e535",
+        "id": "38486378f211cb90",
         "type": "tabs",
         "children": [
           {
-            "id": "4f27d6d6e3c6a8ae",
+            "id": "da2d2dc133cbb4f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u - Course/Direcciones IP.md",
+                "file": "Hack4u - Course/Enumeracion y Explotacion/Enumeracion.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2417d126b8345ef2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Ports/80, 443, 8080, 5000 - WEB.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "804c0c27a31e3624",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -97,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hack4u - Course/Direcciones IP.md"
+                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands.md"
               }
             }
           }
@@ -121,12 +148,28 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "4f27d6d6e3c6a8ae",
+  "active": "804c0c27a31e3624",
   "lastOpenFiles": [
+    "Pasted image 20230413184303.png",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands.md",
+    "Pasted image 20230413184032.png",
+    "Pasted image 20230413183956.png",
+    "1 Ports/80, 443, 8080, 5000 - WEB.md",
     "Untitled.md",
+    "Hack4u - Course/Enumeracion y Explotacion/Enumeracion.md",
+    "Z2 - AWS - CLI - Commands/IAM - User.md",
+    "Hack4u - Course/Enumeracion y Explotacion",
+    "Z2 - AWS - CLI - Commands/CLI - Commands.md",
+    "Z2 - AWS - CLI - Commands/Cloud Shell - Commands.md",
+    "README.md",
     "1 Ports/22 - SSH.md",
-    "2 Tools/BurpSuite.md",
+    "4 Linux & Windows Escalation/TCM/Priv Escalation Linux.md",
+    "Z2 - AWS - CLI - Commands",
+    "4 Linux & Windows Escalation/TCM/Priv Escalation Windows.md",
+    "4 Linux & Windows Escalation/Hack4u/Windows Escalation.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation.md",
     "Hack4u - Course/Direcciones IP.md",
+    "2 Tools/BurpSuite.md",
     "1 Ports/6379 - REDIS.md",
     "1 Ports/5985 - WINRM.md",
     "1 Ports/5800, 5900 - VNC.md",
@@ -137,18 +180,6 @@
     "1 Ports/1433 - MSSQL.md",
     "1 Ports/873 - RSYNC.md",
     "1 Ports/445, 139- SMB.md",
-    "1 Ports/389 - LDAP.md",
-    "1 Ports/161 - SNMP.md",
-    "1 Ports/135 - RPC.md",
-    "1 Ports/113 - IDENTD.md",
-    "1 Ports/111 - NFS.md",
-    "1 Ports/110, 995 - POP3.md",
-    "1 Ports/80, 443, 8080, 5000 - WEB.md",
-    "1 Ports/69 - TFTP.md",
-    "1 Ports/53 - DNS.md",
-    "1 Ports/25, 465, 587, 2525 - SMTP.md",
-    "1 Ports/20 - 21 FTP.md",
-    "0 Linux & Windows Commands/TCM/Windows Commands.md",
     "Z Imagenes/Pasted image 20230403193603.png",
     "Z Imagenes/Pasted image 20230412181925.png",
     "Z Imagenes/Pasted image 20230411160004.png",
@@ -161,8 +192,6 @@
     "6 Vulhub - Machines/Hack4u/1 Easy",
     "0 Linux & Windows Commands/TCM",
     "0 Linux & Windows Commands/Hack4u",
-    "4 Linux & Windows Escalation/TCM",
-    "4 Linux & Windows Escalation/Hack4u",
-    "4 Linux & Windows Escalation"
+    "4 Linux & Windows Escalation/TCM"
   ]
 }
