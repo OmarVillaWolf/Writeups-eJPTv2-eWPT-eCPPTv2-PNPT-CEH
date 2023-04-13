@@ -33,8 +33,31 @@ Tags: #Linux #Comandos
 ❯ **lsof -i:80** Para ver que servicio esta ocuoando cierto puerto
 ❯ **pwdx 1355887** Le pasamos el PID del comando anterior y asi podemos ver en que ruta se esta ejecutando ese servicio 
 
-❯ **nc -nlvp 443** Para ponernos en escucha por Netcat en espera de la revershell para Linux
-❯ **rlwrap nc -nlvp 443** Para ponernos en escucha por Netcat en espera de la revershell para Windows 
+![20](Pasted%20image%2020230413184303.png) Para ponernos en escucha por Netcat en espera de la **ReverShell** por el puerto **443** Linux y recibir una Shell de: 
+1) Linux
+2) Windows
+```bash
+❯ nc -nlvp 443 
+
+❯ rlwrap nc -nlvp 443
+
+	* nc = Netcat 
+	* n = No DNS
+	* l = Modo escucha, conexiones entrantes
+	* v = verbose
+	* p = numero local de puerto en esucha
+
+```
+
+![20](Pasted%20image%2020230413184303.png) Para ponernos en escucha por Netcat en espera de la **BindShell** por el puerto **443**: 
+```bash
+❯ nc IP-Victima 443
+```
+
+![20](Pasted%20image%2020230413184303.png) Para ponernos en escucha por Netcat en espera de la **ForwardShell** por el puerto **443**: 
+```bash
+❯ 
+```
 
 ❯ **tcpdump -i tun0 icmp -n** Nos ponemos en escucha en la interfaz Tun0 para ICMP
 
