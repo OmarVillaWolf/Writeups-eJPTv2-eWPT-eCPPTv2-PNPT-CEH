@@ -1,5 +1,7 @@
 # Reconocimiento ❮❯
 
+Tags: #Nmap #Tool #Reconocimiento #Escaneo
+
 ## Nmap y sus diferentes modos de escaneo
 
 ### Escaneo por TCP
