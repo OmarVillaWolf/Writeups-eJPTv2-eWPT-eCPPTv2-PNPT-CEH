@@ -1,5 +1,7 @@
 # MYSQL ❮❯
 
+Tags: #MySQL #Servidor #Comandos #Mongo #DB 
+
 ### DATABASE - TABLES - COLUMS - DATA 
 Asi se conforma una base de datos
 
