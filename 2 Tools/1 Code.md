@@ -1,22 +1,23 @@
 # Diferentes codigos ❮❯
 
-## Tratamiento de la consola
+## Tratamiento de la pseudo-consola
+```bash
+❯ python3 -c ‘import pty;pty.spawn(“/bin/bash”)’         # Para remplazar el comando de 'Script' por si no lo acepta la consola
 
- **Script /dev/null -c bash** Nos sales que esto no se puede hacer, por lo que hacemos lo siguiente
- **python3 -c ‘import pty;pty.spawn(“/bin/bash”)’** Para remplazar lo de arriba por si no nos deja
- **Ctrl + z**
- **stty raw -echo; fg**
- **reset xterm**
+❯ Script /dev/null -c bash
+❯ Ctrl + z
+❯ stty raw -echo; fg
+❯ reset xterm
 
-Despues cambiamos esto para poder hacer Ctrl+ l y Ctrl + c
-**echo $SHELL** Para ver la ruta de shell y ver que valor tiene **/usr/bin/nologin**
-**export SHELL=bash** o **export SHELL=/bin/bash**Hacemos que shell ahora valga bash
-**export TERM=xterm** Para poder hacer Ctrl +c y Ctrl + l (l=ele)
+# Despues cambiamos esto para poder hacer Ctrl+ l y Ctrl + c
+❯ echo $SHELL                                            # Para ver la ruta de shell y ver que valor tiene **/usr/bin/nologin**
+❯ export SHELL=bash o ❯ export SHELL=/bin/bash           # Hacemos que shell ahora valga bash
+❯ export TERM=xterm                                      # Para poder hacer Ctrl +c y Ctrl + l (l=ele)
 
-Ahora para modificar las dimensiones de Vim/nano debemos hacer lo siguiente.
-**stty size** Con este comando podemos ver las dimensiones de la consola nano de 24 80 por lo que debemos de modificar ese valor a este
-**stty rows 51 columns 189** Modificamos las dimenesiones de la consola nano
-
+# Ahora para modificar las dimensiones de Vim/nano debemos hacer lo siguiente.
+❯ stty size                                              # Miramos las dimensiones de la consola
+❯ stty rows 51 columns 189                               # Modificamos las dimensiones de la consola Vim/Nano
+```
 
 ## PHP
 Con este codigo le decimos a la pagina que queremos que cuando se ejecute comandos cmd los guarde en la variable, esto si estamos en un Framework
