@@ -1,8 +1,31 @@
-# Metasploit ❮❯
+## Metasploit ❮❯
+
+Tags: #Comandos #Metasploit #Payloads #Msfvenom
 
 Sintax: 
 	RHOSTS = Remote Host (The target IP)
 	LHOST = Local host (Our IP)
+
+* Para verificar la DB del Metasploit y despues entrar (Cuando se ejecuta por primera vez)
+```bash 
+❯ msfdb run
+```
+
+* Ejecutar Metasploit
+```bash 
+❯ msfconsole -q         # q = Quitar el banner de inicio
+```
+
+* Comandos de Metasploit dentro de la maquina victima 
+```bash 
+❯ help                  # Miramos el panel de ayuda
+❯ shell                 # Nos regresa una Shell para interactuar mejor 
+❯ screenshot            # Captura de pantalla del esquipo
+❯ keyscan_start         # Sniffer de pulsaciones del teclado
+❯ keyscan_dump          # Nos muestra lo que capturo por el teclado con el comando anterior
+❯ background            # Ponemos la sesion en segundo plano 
+❯ sessions              # Miramos las sesiones activas en segundo plano 
+```
 
 - **msfconsole -q** Iniciamos metasploit (q=no cargue el banner)
 **❯ search ❮exploit❯** Buscamos el exploit
@@ -65,32 +88,3 @@ Lista de exploits:
 
 **❯ shell** Dentro del exploit con shell nos podemos conseguir una consola interactiva
 
-
-
-
-----
-# Metasploit Msfconsole ❮❯
-
-The main components of the Metasploit Framework can be summarized as follows;
--   **msfconsole**: The main command-line interface.
--   **Modules**: supporting modules such as exploits, scanners, payloads, etc.
--   **Tools**: Stand-alone tools that will help vulnerability research, vulnerability assessment, or penetration testing. Some of these tools are msfvenom, pattern_create and pattern_offset. We will cover msfvenom within this module, but pattern_create and pattern_offset are tools useful in exploit development which is beyond the scope of this module.
-
--   **Exploit:** A piece of code that uses a vulnerability present on the target system.
--   **Vulnerability:** A design, coding, or logic flaw affecting the target system. The exploitation of a vulnerability can result in disclosing confidential information or allowing the attacker to execute code on the target system.
--   **Payload:** An exploit will take advantage of a vulnerability. However, if we want the exploit to have the result we want (gaining access to the target system, read confidential information, etc.), we need to use a payload. Payloads are the code that will run on the target system.
-
-- **Encoders**: Encoders will allow you to encode the exploit and payload in the hope that a signature-based antivirus solution may miss them.
-- **Evasion**: While encoders will encode the payload, they should not be considered a direct attempt to evade antivirus software.
-
-
-
-Comandos Metasploit, Soporta comandos Linux, no puede redireccionar el output de un comando, ademas puedes completar comandos con TAB
-- Comando -> **msfconsole -q** Inicias el servicio de msfconsole (q=ignoras el banner del inicio)
-	**>help** Menu de ayuda de metasploit
-	**>clear** Limpiamos la pantalla
-	**>ls** Listamos el contenido en donde ejecutamos metasploit
-	**>ping -c 1 < IP>** Podemos hacer ping a una IP determinada (c=numero de ping a realizar)
-	**>history** Muestra el historial de comandos
-	
-	 	
