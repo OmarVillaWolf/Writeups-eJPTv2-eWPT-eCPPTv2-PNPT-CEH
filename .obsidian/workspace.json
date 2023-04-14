@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "38486378f211cb90",
+        "id": "a85f70306d34a81c",
         "type": "tabs",
         "children": [
           {
-            "id": "da2d2dc133cbb4f2",
+            "id": "3c47d8aee40f6fdb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u - Course/Enumeracion y Explotacion/Enumeracion.md",
+                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,25 +21,12 @@
             }
           },
           {
-            "id": "2417d126b8345ef2",
+            "id": "c5b3f89c1145a159",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/80, 443, 8080, 5000 - WEB.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "804c0c27a31e3624",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands.md",
+                "file": "11 AWS - Practitioner/3 EC2.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -76,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Puerto",
+                "query": "tag:#Web",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -124,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands.md"
+                "file": "11 AWS - Practitioner/3 EC2.md"
               }
             }
           }
@@ -148,50 +135,51 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "804c0c27a31e3624",
+  "active": "c5b3f89c1145a159",
   "lastOpenFiles": [
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
+    "11 AWS - Practitioner/3 EC2.md",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/ReverShell.md",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Commands.md",
+    "11 AWS - Practitioner/2.2 Cloud Shell - Commands.md",
+    "11 AWS - Practitioner/2 IAM - User.md",
+    "8 Hack4u - Course/2 Reconocimiento/7 Imagenes.md",
+    "8 Hack4u - Course/2 Reconocimiento/9 Tecnologias Web.md",
+    "8 Hack4u - Course/5 Enumeracion y Explotacion/3 Explotacion.md",
+    "8 Hack4u - Course/5 Enumeracion y Explotacion/2 Payloads.md",
+    "2 Tools/Metasploit.md",
+    "1 Ports/80, 443, 8080, 5000 - WEB.md",
+    "2 Tools/1 Code.md",
+    "0 Linux & Windows Commands/Hack4u/Linux Commands.md",
+    "1 Ports/3389 - RDP.md",
+    "1 Ports/4555 - RSIP.md",
+    "1 Ports/5800, 5900 - VNC.md",
+    "1 Ports/5985 - WINRM.md",
+    "1 Ports/6379 - REDIS.md",
+    "1 Ports/69 - TFTP.md",
+    "1 Ports/53 - DNS.md",
+    "1 Ports/25, 465, 587, 2525 - SMTP.md",
+    "1 Ports/22 - SSH.md",
+    "1 Ports/20 - 21 FTP.md",
+    "1 Ports/110, 995 - POP3.md",
+    "1 Ports/111 - NFS.md",
+    "0 Linux & Windows Commands/Hack4u/Docker",
+    "8 Hack4u - Course/4 Servicios y Gestores",
+    "8 Hack4u - Course/3 Docker",
+    "8 Hack4u - Course/2 Reconocimiento",
+    "8 Hack4u - Course/1 IP",
+    "0 Linux & Windows Commands/Hack4u/OverTheWire",
+    "0 Linux & Windows Commands/Hack4u/Bash",
+    "0 Linux & Windows Commands/Hack4u/2 Windows Commands",
+    "Untitled",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands",
     "Pasted image 20230413184303.png",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands.md",
     "Pasted image 20230413184032.png",
     "Pasted image 20230413183956.png",
-    "1 Ports/80, 443, 8080, 5000 - WEB.md",
-    "Untitled.md",
-    "Hack4u - Course/Enumeracion y Explotacion/Enumeracion.md",
-    "Z2 - AWS - CLI - Commands/IAM - User.md",
-    "Hack4u - Course/Enumeracion y Explotacion",
-    "Z2 - AWS - CLI - Commands/CLI - Commands.md",
-    "Z2 - AWS - CLI - Commands/Cloud Shell - Commands.md",
-    "README.md",
-    "1 Ports/22 - SSH.md",
-    "4 Linux & Windows Escalation/TCM/Priv Escalation Linux.md",
-    "Z2 - AWS - CLI - Commands",
-    "4 Linux & Windows Escalation/TCM/Priv Escalation Windows.md",
-    "4 Linux & Windows Escalation/Hack4u/Windows Escalation.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation.md",
-    "Hack4u - Course/Direcciones IP.md",
-    "2 Tools/BurpSuite.md",
-    "1 Ports/6379 - REDIS.md",
-    "1 Ports/5985 - WINRM.md",
-    "1 Ports/5800, 5900 - VNC.md",
-    "1 Ports/4555 - RSIP.md",
-    "1 Ports/3389 - RDP.md",
-    "1 Ports/3306, 27017 - MYSQL y MONGO DB.md",
-    "1 Ports/3128 - SQUID.md",
-    "1 Ports/1433 - MSSQL.md",
-    "1 Ports/873 - RSYNC.md",
-    "1 Ports/445, 139- SMB.md",
     "Z Imagenes/Pasted image 20230403193603.png",
     "Z Imagenes/Pasted image 20230412181925.png",
     "Z Imagenes/Pasted image 20230411160004.png",
     "Z Imagenes/SSRF.png",
-    "Pasted image 20230224161942.png",
-    "Z Imagenes",
-    "6 Vulhub - Machines/Hack4u/2 Docker",
-    "6 Vulhub - Machines/TCM",
-    "7 Informe",
-    "6 Vulhub - Machines/Hack4u/1 Easy",
-    "0 Linux & Windows Commands/TCM",
-    "0 Linux & Windows Commands/Hack4u",
-    "4 Linux & Windows Escalation/TCM"
+    "Pasted image 20230224161942.png"
   ]
 }
