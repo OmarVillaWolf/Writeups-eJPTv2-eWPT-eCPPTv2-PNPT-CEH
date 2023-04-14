@@ -1,6 +1,6 @@
 # BurpSuite ❮❯
 
-Tags: #BurpSuite #Escaneo  #web #Enumeracion 
+Tags: #BurpSuite #Escaneo  #Web #Enumeracion 
 
 ❯ **burpsuite &> /dev/null &** Iniciamos el BurpSuite y lo mandamos a segundo plano
 ❯ **disown** Para independizar el proceso del BurpSuite
