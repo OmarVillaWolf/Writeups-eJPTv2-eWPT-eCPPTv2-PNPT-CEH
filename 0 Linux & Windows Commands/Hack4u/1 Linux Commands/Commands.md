@@ -44,3 +44,6 @@ Tags: #Linux #Comandos
 * rw -> Crear la montura con capacidad de lectura y escritura
 ❯ **umount /mnt/mounted** Para eliminar la montura que esta en un dir especifico
 
+```bash 
+❯ cat file | xclip -sel clip                      # Para copiarnos el output a la Clipboard
+```
