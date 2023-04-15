@@ -1,6 +1,11 @@
 # John the Ripper
 
+Tags: #Hash 
+
 Es una herramienta de prueba de penetracion que se utiliza para probar la seguridad de las passwd. Esta disenado para desifrar passwd encriptadas en sistemas y aplicaciones.
+
+* **MD5 = 32 Caracteres**
+
 
 - Soporte de multiples formatos de passwd. Es complatible con una amplia gama de passwd, incluyendo Unix, Windows, MD5, SHA y muchos otros.
 - Fuerza bruta avanzada: Es capas de realizar ataques de fuerza bruta avanzados, incluyendo ataques de diccionario, ataques basados en patrones y ataques basados en reglas. 
@@ -11,6 +16,8 @@ Es una herramienta de prueba de penetracion que se utiliza para probar la seguri
 	- Pruebas de penetracion: Se utiliza para probar la seguridad de sistemas y aplicaciones que utilizan passwd. 
 	- Auditoria de passwd: Se utiliza para auditar la fortaleza de las passwds en sistemas y aplicaciones.
 	- Recuperacion de passwds: Se utiliza para recuperar passwds perdidas u olvidadas. 
+
+
 
 - John the Ripper is one of the most well known, well-loved and versatile hash cracking tools out there. It combines a fast cracking speed, with an extraordinary range of compatible hash types.
 
