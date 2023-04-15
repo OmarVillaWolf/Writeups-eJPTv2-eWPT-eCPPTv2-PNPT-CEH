@@ -1,5 +1,9 @@
 # Escalacion de privilegios Windows
 
+Tags: #Windows #Escalada #Privilegios #NT-AuthoSystem
+
+## Enumeracion Tools
+
 Usar **WinPEAS** ya que te escanea y te muestra las vulnerabilidades 
 Debemos de descargar el archivo **winPeasx64.exe**
 Usamos este comando en la maquina victima Windows para cargar un archivo de la maquina de atacante
@@ -20,7 +24,9 @@ Usamos este comando en la maquina victima Windows para cargar un archivo de la m
 Para instalar el archivo .msi en una maquina Windows debemos de colocar el siguiente comando:
 ❯ **msiexec /quiet /qn /i reverse.msi**
 
-****
+
+## Manual 
+
 ❯  **whoami /priv** Miramos los privilegios que tenemos  
 	**SeInpersonatePrivilege** En el cual podriamos usar RottenPotato o  JuicyPotato 
 
