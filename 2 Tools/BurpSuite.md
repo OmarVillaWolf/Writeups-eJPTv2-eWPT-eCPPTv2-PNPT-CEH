@@ -12,6 +12,8 @@ Tags: #BurpSuite #Escaneo  #Web #Enumeracion
 **Decoder** Nos ayuda a convertir texto plano en alguna codificacion Codificar o Decodificar (Base64, Hex, Bits, URL)
 **Comparer** Sirve para comparar dos respuestas. Primero debemos de mandar lo del Proxy al Repeater y las respuestas las pasamos al Comparer
 
+❯ **Click derecho > Copy to file** Para guardar la intercepcion del **Proxy** en un archivo **.req** y asi usarlo con la herramienta **SQL-Map**
+
 ❯ **Ctrl + I** Para mandar lo del proxy al intruder (I=i)
 ❯ **Ctrl + r** Para mandar lo del proxy al repeater
 ❯ **Ctrl + u** Para url encodear
