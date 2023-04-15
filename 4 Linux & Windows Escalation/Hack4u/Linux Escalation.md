@@ -1,5 +1,12 @@
 # Escalacion de privilegios Linux
 
+Tags: #Linux #Escalada #Root #Privilegios 
+
+## Enumeracion Tools
+
+
+## Manual 
+
 ❯ **sudo -l** Ver que permisos tenemos en el sudoers (l=ele)
 	(ALL : ALL) ALL
 	(root) NOPASSWD: /usr/bin/find -> Puede ejecutar un comando sin necesidad de password
