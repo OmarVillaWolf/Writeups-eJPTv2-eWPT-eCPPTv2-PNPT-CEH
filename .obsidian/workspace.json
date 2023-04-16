@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3c60cca139f32b75",
+            "id": "61b547a0d86ed0f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Tools/BurpSuite.md",
+                "file": "2 NVIM.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,19 +34,6 @@
             }
           },
           {
-            "id": "61b547a0d86ed0f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 NVIM.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "2b8eada512b73322",
             "type": "leaf",
             "state": {
@@ -60,25 +47,12 @@
             }
           },
           {
-            "id": "f364c2db8df41fb4",
+            "id": "3c60cca139f32b75",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 Linux & Windows Escalation/Hack4u/Windows Escalation.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d553c3ca337f565b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 Linux & Windows Escalation/Hack4u/Linux Escalation.md",
+                "file": "2 Tools/BurpSuite.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -115,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#NANO",
+                "query": "procmon",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -163,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 NVIM.md"
+                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Commands.md"
               }
             }
           }
@@ -187,15 +161,18 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "61b547a0d86ed0f8",
+  "active": "2b8eada512b73322",
   "lastOpenFiles": [
-    "4 Linux & Windows Escalation/Hack4u/Windows Escalation.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation.md",
     "2 Tools/BurpSuite.md",
-    "3 PortSwigger - SQLI/SQLI.md",
     "2 NVIM.md",
+    "3 PortSwigger - SQLI/SQLI.md",
     "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Commands.md",
+    "4 Linux & Windows Escalation/Hack4u/Windows.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux.md",
+    "2 Tools/0 Webpages.md",
+    "5 HTB - Machines/Medium/SolidState.md",
     "8 Hack4u - Course/5 Enumeracion y Explotacion/4 Enumeracion.md",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
     "2 Tools/John the Ripper.md",
     "0 Linux & Windows Commands/Hack4u/Bash/Bash.md",
     "1 Kitty.md",
@@ -207,7 +184,6 @@
     "8 Hack4u - Course/5 Enumeracion y Explotacion/3 Explotacion.md",
     "2 Tools/SQLMap.md",
     "1 Ports/22 - SSH.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
     "11 AWS - Practitioner/3 EC2.md",
     "0 Linux & Windows Commands/Hack4u/1 Linux Commands/ReverShell.md",
     "11 AWS - Practitioner/2.2 Cloud Shell - Commands.md",
@@ -216,8 +192,6 @@
     "8 Hack4u - Course/2 Reconocimiento/9 Tecnologias Web.md",
     "8 Hack4u - Course/5 Enumeracion y Explotacion/2 Payloads.md",
     "2 Tools/Metasploit.md",
-    "1 Ports/80, 443, 8080, 5000 - WEB.md",
-    "2 Tools/1 Code.md",
     "0 Linux & Windows Commands/Hack4u/Docker",
     "8 Hack4u - Course/4 Servicios y Gestores",
     "8 Hack4u - Course/3 Docker",
