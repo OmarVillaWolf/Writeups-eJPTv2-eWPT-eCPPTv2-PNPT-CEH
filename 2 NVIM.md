@@ -26,12 +26,12 @@ Modo No-Insesion **Filtros**
 ```bash
 ❯ **:%s/,/\r/g** Para aplicar una sustitucion 
 
-	Donde
 	# s = Sustitucion 
 	# /,/ = Entre / es desde donde inicia (Delimitador)
 	# \r = Retorno de carro y lo aplicara para la primer coincidencia 
 	# /g = Para aplicar el filtro a todas las coincidencias
 ```
+
 ### Modo VIM en la zshell
 Agregas el modo Vim en la .zshrc
 	bindkey -v
