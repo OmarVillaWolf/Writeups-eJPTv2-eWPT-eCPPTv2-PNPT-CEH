@@ -24,12 +24,13 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 
 ❯ **Ctrl + I** Para mandar lo del proxy al intruder (I=i)
 ❯ **Ctrl + r** Para mandar lo del proxy al repeater
-❯ **Ctrl + u** Para url encodear
+❯ **Ctrl + u** Para url encodear la data de las peticiones
+❯ **Ctrl + Shift + u** Para url decodear la data de las peticiones
 
 **/usr/share/wordlists/fasttrack.txt** Diccionario para passwd que generalmente traen los sitios Web 
 
 ****
-## Tipos de Brute Force
+## Tipos de Brute Force en Intruder
 ### Intruder: Sniper
 
 Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos permite agregar un Payload (una carga util) y probar con un solo parametro (una sola posicion). 
