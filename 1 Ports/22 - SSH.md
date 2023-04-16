@@ -8,11 +8,15 @@ Si la versión del servidor SSH es “**OpenSSH 8.2p1 Ubuntu 4ubuntu0.5**“, po
 Todas estas búsquedas las aplicamos sobre el siguiente dominio:
 -   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
 
+```bash
+❯  ssh ❮User❯@❮IP❯                                    # Para conectarnos por ssh en el puerto default 22
+```
 
-❯  **ssh ❮User❯@❮IP❯** Para conectarnos por ssh en el puerto default 22
-❯  **ssh ❮User❯@❮IP❯ -p 2222** Para conectarnos por ssh
-* p -> En un puerto especifico
+```bash
+❯  ssh ❮User❯@❮IP❯ -p 2222                            # Para conectarnos por ssh
 
+	# p = En un puerto especifico
+```
 
 
 
