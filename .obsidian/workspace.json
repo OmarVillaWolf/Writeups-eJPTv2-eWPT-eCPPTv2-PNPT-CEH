@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Commands.md",
+                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -73,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Commands.md"
+                "file": "1 Ports/80, 443, 8080, 5000 - WEB.md"
               }
             }
           }
@@ -174,25 +174,28 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "2b8eada512b73322",
+  "active": "61f838227f37e68e",
   "lastOpenFiles": [
+    "2 Tools/1 Code.md",
+    "2 Tools/0 Webpages.md",
+    "1 Ports/80, 443, 8080, 5000 - WEB.md",
+    "0 Linux & Windows Commands/Hack4u/Bash/Bash.md",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/SearchSploit.md",
+    "8 Hack4u - Course/4 Servicios y Gestores/5 WordPress.md",
     "3 PortSwigger - SQLI/SQLI.md",
     "2 Tools/BurpSuite.md",
-    "1 Ports/80, 443, 8080, 5000 - WEB.md",
     "2 Tools/Nmap.md",
     "1 Ports/445, 139- SMB.md",
     "1 Ports/22 - SSH.md",
     "1 Ports/20 - 21 FTP.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Commands.md",
     "2 NVIM.md",
     "4 Linux & Windows Escalation/Hack4u/Windows.md",
     "4 Linux & Windows Escalation/Hack4u/Linux.md",
-    "2 Tools/0 Webpages.md",
     "5 HTB - Machines/Medium/SolidState.md",
     "8 Hack4u - Course/5 Enumeracion y Explotacion/4 Enumeracion.md",
     "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
     "2 Tools/John the Ripper.md",
-    "0 Linux & Windows Commands/Hack4u/Bash/Bash.md",
     "1 Kitty.md",
     "Untitled.md",
     "README.md",
@@ -202,9 +205,6 @@
     "8 Hack4u - Course/5 Enumeracion y Explotacion/3 Explotacion.md",
     "2 Tools/SQLMap.md",
     "11 AWS - Practitioner/3 EC2.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/ReverShell.md",
-    "11 AWS - Practitioner/2.2 Cloud Shell - Commands.md",
-    "11 AWS - Practitioner/2 IAM - User.md",
     "0 Linux & Windows Commands/Hack4u/Docker",
     "8 Hack4u - Course/4 Servicios y Gestores",
     "8 Hack4u - Course/3 Docker",
