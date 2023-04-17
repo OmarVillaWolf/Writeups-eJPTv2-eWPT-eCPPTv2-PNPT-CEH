@@ -5,23 +5,32 @@ Tags: #MySQL #Servidor #Comandos #Mongo #DB
 ### DATABASE - TABLES - COLUMS - DATA 
 Asi se conforma una base de datos
 
-❯ **sudo pat install mariadb-server –** Instalar Mariadb
-❯ **service mariadb start –** Iniciar el servicio
+```bash
+❯ sudo apt install mariadb-server              # Instalar Mariadb
+```
+
+```bash
+❯ service mariadb start                        # Iniciar el servicio
+❯ service mariadb stop                         # Parar el servicio
+```
+
 
 Nos conectamos a la base de datos de esta manera 
-❯  **mysql -u ❮User❯ -p** Nos conectamos y le proporcionamos la password encontrada en el archivo anterior
-	**>show databases;** Muestra las bases de datos
-	**>create database *Twitch*;** -Creas una base de datos llamada Twitch
-	**>use *mattermost*;** Usamos una base de datos especifica, en este caso llamada mattermost
-	**>show tables;** Mostramos el contenido de las tablas de la base de datos
-	**>describe *Users*;** Miramos que columnas existen
-	**>select *Username,Password* from *Users*;** Seleccionamos los campos de una tabla especifica 
-	**>select * from** users; -Seleccionamos todo de la tabla users
-	**>select * from** **users** **where** username**=’**admin**’**;
-	>drop table *users*;** -Eliminas la tabla llamada users
-	**>create table *users* (*id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32)*);** Creamos una tabla llamada Users y dentro de ella creamos las columnas con sus nombres.
-	 **>insert into users(*username, password, subscription*) **values(*“admin”,”admin123”,”no aplica”*)** Insertamos en la tabla llamada users los valores para llenarla
+```bash
+❯  mysql -u ❮User❯ -p                          # Nos conectamos y le proporcionamos la password encontrada en el archivo anterior
 
+	> show ❮DBs❯;                                    # Muestra todas las bases de datos existentes
+	> use ❮DB_name❯;                                 # Usamos una base de datos especifica
+	> show tables;                                   # Mostramos el contenido de las tablas de la base de datos elegida
+	> describe ❮Table_name❯;                         # Miramos que columnas existen
+	> select User,Password from ❮Table_name❯;        # Seleccionamos los campos de una tabla especifica 
+	> select * from ❮Table_name❯;                    # Seleccionamos todo de la tabla users
+	> select * from ❮Table_name❯ where username=’admin’;
+	> create database ❮DB_name❯;                     # Creamos una base de datos
+	> drop table ❮Table_name❯;                       # Eliminas la tabla llamada users
+	> create table users (id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32));                                  # Creamos una tabla llamada Users y dentro de ella creamos las columnas con sus nombres.
+	> insert into users(username, password, subscription) values(“admin”,”admin123”,”no aplica”) # Insertamos en la tabla llamada users los valores para llenarla
+```
 
 ----
 #### Mongo DB
