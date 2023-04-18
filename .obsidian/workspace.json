@@ -8,20 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2a10530fc433fce2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3c60cca139f32b75",
+            "id": "0876d14980e2c240",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,22 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "ffe9797c5d724283",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Ports/3306, 27017 - MYSQL y MONGO DB.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Ports/3306, 27017 - MYSQL y MONGO DB.md"
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md"
               }
             }
           }
@@ -148,17 +121,18 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "ffe9797c5d724283",
+  "active": "0876d14980e2c240",
   "lastOpenFiles": [
+    "1 Kitty.md",
     "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
     "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
+    "1 Ports/3306, 27017 - MYSQL y MONGO DB.md",
+    "3 PortSwigger - SQLI/SQLI.md",
     "7 Informe/Report Hack4u.md",
     "2 NVIM.md",
     "0 Linux & Windows Commands/Hack4u/Linux Commands.md",
     "2 Tools/BurpSuite.md",
-    "3 PortSwigger - SQLI/SQLI.md",
     "8 Hack4u - Course/6 OWASP TOP 10",
-    "1 Kitty.md",
     "2 Tools/Dirbuster.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
     "1 Ports/80, 443, 8080, 5000 - WEB.md",
@@ -176,7 +150,6 @@
     "5 HTB - Machines/Medium/SolidState.md",
     "8 Hack4u - Course/5 Enumeracion y Explotacion/4 Enumeracion.md",
     "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
-    "2 Tools/John the Ripper.md",
     "Pasted image 20230413183956.png",
     "Pasted image 20230413184032.png",
     "Pasted image 20230413184303.png",
