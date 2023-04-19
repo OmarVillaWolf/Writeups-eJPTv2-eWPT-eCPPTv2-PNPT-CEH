@@ -1,5 +1,6 @@
 # Comandos Linux
 
+
 - **sudo** -> Te permite ejecutar un comando o funcion en la consola.
 - **su (switch user)** -> Cambiar de usuario
 
