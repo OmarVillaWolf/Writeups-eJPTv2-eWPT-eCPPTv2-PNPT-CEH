@@ -8,12 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0876d14980e2c240",
+            "id": "8b5e00746cae881b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0605e19b641458e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -97,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md"
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md"
               }
             }
           }
@@ -121,11 +134,22 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "0876d14980e2c240",
+  "active": "8b5e00746cae881b",
   "lastOpenFiles": [
-    "1 Kitty.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
     "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
+    "0 Linux & Windows Commands/Hack4u/Docker/6 Port Forw y Mount.md",
+    "0 Linux & Windows Commands/Hack4u/Docker/5 Gestion Contenedores.md",
+    "0 Linux & Windows Commands/Hack4u/Docker/4 Contenedor.md",
+    "0 Linux & Windows Commands/Hack4u/Docker/7 Docker-Compose.md",
+    "0 Linux & Windows Commands/Hack4u/Docker/1 Instalacion Linux.md",
+    "0 Linux & Windows Commands/Hack4u/Docker/3 Imagenes.md",
+    "0 Linux & Windows Commands/Hack4u/Docker/2 Estructura.md",
+    "3 PortSwigger - SQLI/SSRF.md",
+    "3 PortSwigger - SQLI/XXE.md",
+    "3 PortSwigger - SQLI/SSTI.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
+    "1 Kitty.md",
     "1 Ports/3306, 27017 - MYSQL y MONGO DB.md",
     "3 PortSwigger - SQLI/SQLI.md",
     "7 Informe/Report Hack4u.md",
@@ -139,17 +163,6 @@
     "2 Tools/1 Code.md",
     "2 Tools/0 Webpages.md",
     "0 Linux & Windows Commands/Hack4u/Bash/Bash.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/SearchSploit.md",
-    "8 Hack4u - Course/4 Servicios y Gestores/5 WordPress.md",
-    "2 Tools/Nmap.md",
-    "1 Ports/445, 139- SMB.md",
-    "1 Ports/22 - SSH.md",
-    "1 Ports/20 - 21 FTP.md",
-    "4 Linux & Windows Escalation/Hack4u/Windows.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux.md",
-    "5 HTB - Machines/Medium/SolidState.md",
-    "8 Hack4u - Course/5 Enumeracion y Explotacion/4 Enumeracion.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
     "Pasted image 20230413183956.png",
     "Pasted image 20230413184032.png",
     "Pasted image 20230413184303.png",
