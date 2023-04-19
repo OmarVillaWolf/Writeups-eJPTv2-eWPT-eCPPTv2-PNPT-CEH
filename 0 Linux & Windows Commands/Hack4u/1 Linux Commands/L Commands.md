@@ -34,7 +34,10 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ arp-scan -I ens33 --localnet               # Para hacer un escaneo de la red (I=i mayuscula interface) en la interface ens33
+❯ arp-scan -I ens33 --localnet --ignoredups              # Para hacer un escaneo de la red 
+
+	# I = i mayuscula; es la interface ens33
+	# ignore = Ignora duplicados 
 ```
 
 
@@ -67,11 +70,11 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ git clone \https://❮IP❯                   # Nos clonamos un repositorio de Github
+❯ git clone https://❮IP❯                   # Nos clonamos un repositorio de Github
 ```
 
 ```bash
-❯ svn checkout \https://❮IP❯                # Para clonar una subcarpeta de Github y en donde dice /tree/master quitarlo de la url y colocar /trunk y el resto de la url
+❯ svn checkout https://❮IP❯                # Para clonar una subcarpeta de Github y en donde dice /tree/master quitarlo de la url y colocar /trunk y el resto de la url
 ```
 
 ```bash
