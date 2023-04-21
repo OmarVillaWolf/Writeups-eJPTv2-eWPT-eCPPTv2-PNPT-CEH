@@ -8,32 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8b5e00746cae881b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "268be5d9eb78f7c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b60801d66fdf8025",
             "type": "leaf",
             "state": {
@@ -47,19 +21,33 @@
             }
           },
           {
-            "id": "865b5b05fca1a75f",
+            "id": "ee454f4f44b48209",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/80, 443, 8080, 5000 - WEB.md",
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/4.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0bfb7830fc567a2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/3 XXE.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -136,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md"
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/3 XXE.md"
               }
             }
           }
@@ -160,17 +148,28 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "8b5e00746cae881b",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
+    "Z Imagenes/Pasted image 20230421134216.png",
+    "8 Hack4u - Course/6 OWASP TOP 10/4.md",
     "6 Vulhub - Machines/Hack4u/2 XSS/MyExpense.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/3 XXE.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
+    "Z Imagenes/Pasted image 20230420212052.png",
+    "Z Imagenes/Pasted image 20230420211907.png",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/ReverShell.md",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/SearchSploit.md",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
+    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
+    "Z Imagenes/Pasted image 20230420210056.png",
+    "Z Imagenes/Pasted image 20230420210113.png",
+    "Z Imagenes/Pasted image 20230420210246.png",
+    "Z Imagenes/Pasted image 20230420205849.png",
+    "Z Imagenes/Pasted image 20230420205723.png",
+    "10 CEH - Course/Untitled.md",
     "1 Ports/80, 443, 8080, 5000 - WEB.md",
     "6 Vulhub - Machines/Hack4u/1 Easy/2 Untitled.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/L Commands.md",
     "0 Linux & Windows Commands/Hack4u/Linux Commands.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/SearchSploit.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/ReverShell.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Msfvenom.md",
     "0 Linux & Windows Commands/Hack4u/Docker/6 Port Forw y Mount.md",
     "0 Linux & Windows Commands/Hack4u/Docker/5 Gestion Contenedores.md",
     "0 Linux & Windows Commands/Hack4u/Docker/4 Contenedor.md",
@@ -184,10 +183,6 @@
     "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
     "1 Kitty.md",
     "1 Ports/3306, 27017 - MYSQL y MONGO DB.md",
-    "3 PortSwigger - SQLI/SQLI.md",
-    "7 Informe/Report Hack4u.md",
-    "2 NVIM.md",
-    "2 Tools/BurpSuite.md",
     "8 Hack4u - Course/6 OWASP TOP 10",
     "Pasted image 20230413183956.png",
     "Pasted image 20230413184032.png",
@@ -200,11 +195,6 @@
     "0 Linux & Windows Commands/Hack4u/OverTheWire",
     "0 Linux & Windows Commands/Hack4u/Bash",
     "0 Linux & Windows Commands/Hack4u/2 Windows Commands",
-    "Untitled",
-    "Z Imagenes/Pasted image 20230403193603.png",
-    "Z Imagenes/Pasted image 20230412181925.png",
-    "Z Imagenes/Pasted image 20230411160004.png",
-    "Z Imagenes/SSRF.png",
-    "Pasted image 20230224161942.png"
+    "Untitled"
   ]
 }
