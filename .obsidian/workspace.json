@@ -8,25 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b60801d66fdf8025",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 Vulhub - Machines/Hack4u/2 XSS/MyExpense.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ee454f4f44b48209",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 Hack4u - Course/6 OWASP TOP 10/4.md",
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/4 LFI.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,20 +21,19 @@
             }
           },
           {
-            "id": "0bfb7830fc567a2e",
+            "id": "e7654eccc31aa04e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 Hack4u - Course/6 OWASP TOP 10/3 XXE.md",
+                "file": "5 HTB - Machines/Easy/7 GoodGames.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8 Hack4u - Course/6 OWASP TOP 10/3 XXE.md"
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/4 LFI.md"
               }
             }
           }
@@ -148,12 +134,23 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "ee454f4f44b48209",
   "lastOpenFiles": [
-    "Z Imagenes/Pasted image 20230421134216.png",
-    "8 Hack4u - Course/6 OWASP TOP 10/4.md",
-    "6 Vulhub - Machines/Hack4u/2 XSS/MyExpense.md",
+    "5 HTB - Machines/Easy/7 GoodGames.md",
+    "3 PortSwigger - SQLI/Directory Path Traversal.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/4 LFI.md",
     "8 Hack4u - Course/6 OWASP TOP 10/3 XXE.md",
+    "5 HTB - Machines/Easy/6 NunChucks.md",
+    "5 HTB - Machines/Easy/4 Love.md",
+    "5 HTB - Machines/Easy/5 NodeBlog.md",
+    "5 HTB - Machines/Easy/3 Horizontal.md",
+    "5 HTB - Machines/Easy/2 Return.md",
+    "5 HTB - Machines/Easy/1 Validation.md",
+    "6 Vulhub - Machines/Hack4u/2 XSS/MyExpense.md",
+    "11 Red - Team THM/1 Fundamentals/Untitled.md",
+    "11 Red - Team THM/1 Fundamentals",
+    "11 Red - Team THM",
+    "Z Imagenes/Pasted image 20230421134216.png",
     "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
     "Z Imagenes/Pasted image 20230420212052.png",
     "Z Imagenes/Pasted image 20230420211907.png",
@@ -175,26 +172,15 @@
     "0 Linux & Windows Commands/Hack4u/Docker/4 Contenedor.md",
     "0 Linux & Windows Commands/Hack4u/Docker/7 Docker-Compose.md",
     "0 Linux & Windows Commands/Hack4u/Docker/1 Instalacion Linux.md",
-    "0 Linux & Windows Commands/Hack4u/Docker/3 Imagenes.md",
-    "0 Linux & Windows Commands/Hack4u/Docker/2 Estructura.md",
-    "3 PortSwigger - SQLI/SSRF.md",
-    "3 PortSwigger - SQLI/XXE.md",
-    "3 PortSwigger - SQLI/SSTI.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
-    "1 Kitty.md",
-    "1 Ports/3306, 27017 - MYSQL y MONGO DB.md",
     "8 Hack4u - Course/6 OWASP TOP 10",
     "Pasted image 20230413183956.png",
     "Pasted image 20230413184032.png",
-    "Pasted image 20230413184303.png",
     "0 Linux & Windows Commands/Hack4u/Docker",
     "8 Hack4u - Course/4 Servicios y Gestores",
     "8 Hack4u - Course/3 Docker",
     "8 Hack4u - Course/2 Reconocimiento",
     "8 Hack4u - Course/1 IP",
     "0 Linux & Windows Commands/Hack4u/OverTheWire",
-    "0 Linux & Windows Commands/Hack4u/Bash",
-    "0 Linux & Windows Commands/Hack4u/2 Windows Commands",
-    "Untitled"
+    "0 Linux & Windows Commands/Hack4u/Bash"
   ]
 }
