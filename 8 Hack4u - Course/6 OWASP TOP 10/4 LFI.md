@@ -148,3 +148,5 @@ Este nos ayudaria convertir de UTF-8 a UTF-16:
 Otro **Groupers** que podemos usar en la web es el siguiente:
 Este nos ayudara a ejecutar comandos
 * index.php?page=**php://filter/convert.iconv.utf-8.utf-16/resource=secret.php** y obtendriamos como resultado
+
+
