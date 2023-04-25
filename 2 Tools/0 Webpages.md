@@ -7,8 +7,6 @@
 - ExploitDB: [ExploitDB](https://www.exploit-db.com/) Te expone las vulnerabilidades y ademas te exponen el codigo para que puedas explotar las vulnerabilidad en determinado servicio
 
 ## Desencriptar 
-❯ Devglan: [Devglan](https://www.devglan.com/online-tools/aes-encryption-decryption)   -> Nos ayudara a encryptar con diferentes hashes
-* Nos vamos a la session de **Online Bcrypt Hashing** y generamos este tipo de hash \$2y\$
+* Devglan: [Devglan](https://www.devglan.com/online-tools/aes-encryption-decryption)   -> Nos ayudara a encryptar con diferentes hashes, Dentreo de la web noos vamos a la session de **Online Bcrypt Hashing** y generamos este tipo de hash \$2y\$
 
-## D
 
