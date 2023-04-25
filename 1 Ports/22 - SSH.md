@@ -18,6 +18,9 @@ Todas estas búsquedas las aplicamos sobre el siguiente dominio:
 	# p = En un puerto especifico
 ```
 
+```bash
+❯ sshpass -p <'PASSWORD'> ssh <USER>@<IP>           # Conectarnos por ssh colocando de una vez la passwd  
+```
 
 
 
@@ -29,7 +32,6 @@ Podemos buscar en searchsploit **ssh user enumeration** <7.7 un exploit en Pytho
 - Comando -> **python2 45939.py < VICTIM IP> < USER> 2/dev/null** Para confirmar si ese usuario existe en esa IP
 
 - Comando -> **ssh < user>@< IP>** Para conectarnos por ssh
-- Comando -> **sshpass -p <'PASSWORD'> ssh < USER>@< IP>** Conectarnos por ssh   
 - Comando -> **ssh -i id_rsa < user>@< IP>** Nos conectamos por ssh teniendo un id_rsa con privilegio 600
 - Comando -> **ssh < user>@localhost** Por lo que cuando tenemos un authorized_key podemos entrar por SSH sin proporcionar passwd en forma local 
 
