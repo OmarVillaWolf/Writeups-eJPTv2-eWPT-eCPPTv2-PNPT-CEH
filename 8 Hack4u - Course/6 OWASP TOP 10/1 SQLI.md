@@ -1,6 +1,4 @@
-# OWASP TOP 10 ❮❯
-
-## SQLI
+# SQL Injection
 
 Tags: #SQLI #OWASP #Explotacion 
 
