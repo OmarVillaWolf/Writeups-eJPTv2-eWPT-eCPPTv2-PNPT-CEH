@@ -82,9 +82,6 @@ El segundo payload se refiere a que ahi podemos colocar uns lista que podrian se
 En este caso probara primero el primer elemento de la lista 1 y despues probara todos los elementos de la lista 2. Pasara a otro elemento de la lista 1 y despues probara todos los elementos de la lista 2 y asi sucesivamente. 
 ****
 
-## 
-
-
 
 
 
