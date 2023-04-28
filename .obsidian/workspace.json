@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ee454f4f44b48209",
+            "id": "32c50d3cb03dac21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 Hack4u - Course/6 OWASP TOP 10/4 LFI.md",
+                "file": "5 HTB - Machines/Easy/9 ToolBox.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,38 +21,12 @@
             }
           },
           {
-            "id": "e7654eccc31aa04e",
+            "id": "c0895c6cb7552101",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 HTB - Machines/Easy/7 GoodGames.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d915d8fa3d564a5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Linux Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b2cf988c29fec4c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 Linux & Windows Escalation/Hack4u/Linux Escalation.md",
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/11 Padding Oracle.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -89,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "procmon",
+                "query": "tag:#SSTI",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -137,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 HTB - Machines/Easy/7 GoodGames.md"
+                "file": "8 Hack4u - Course/6 OWASP TOP 10/11 Padding Oracle.md"
               }
             }
           }
@@ -161,35 +135,39 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "e7654eccc31aa04e",
+  "active": "c0895c6cb7552101",
   "lastOpenFiles": [
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/Linux Commands.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation.md",
-    "0 Linux & Windows Commands/Hack4u/4 Bash/Bash.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/10 CSTI.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/11 Padding Oracle.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/9 SSTI.md",
+    "5 HTB - Machines/Easy/9 ToolBox.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/8 SSRF.md",
     "5 HTB - Machines/Easy/7 GoodGames.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/4 LFI.md",
-    "1 Ports/22 - SSH.md",
-    "0 Linux & Windows Commands/Hack4u/2 Windows Commands/Windows Commands.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/SearchSploit.md",
-    "0 Linux & Windows Commands/Hack4u/Linux Commands.md",
-    "1 Ports/80, 443, 8080, 5000 - WEB.md",
-    "2 Tools/0 Webpages.md",
-    "2 Tools/1 Code.md",
-    "0 Linux & Windows Commands/Hack4u/1 Linux Commands/ReverShell.md",
-    "2 Tools/John the Ripper.md",
-    "4 Linux & Windows Escalation/Hack4u/Windows Escalation.md",
-    "0 Linux & Windows Commands/Hack4u/3 OverTheWire/OverTheWire.md",
-    "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
-    "6 Vulhub - Machines/CEH/Untitled 1.md",
-    "6 Vulhub - Machines/Hack4u/1 Easy/2 Untitled.md",
-    "6 Vulhub - Machines/CEH",
-    "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
-    "2 Tools/Nmap.md",
-    "2 Tools/Ffuf, Gobuster, Wfuz.md",
     "5 HTB - Machines/Easy/6 NunChucks.md",
-    "5 HTB - Machines/Easy/5 NodeBlog.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/5 RFI.md",
+    "Z Imagenes/Pasted image 20230427152444.png",
+    "8 Hack4u - Course/6 OWASP TOP 10/6 LFI a RCE.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/7 CSRF.md",
+    "5 HTB - Machines/Easy/8 Driver.md",
+    "Z Imagenes/Pasted image 20230426163000.png",
+    "Pasted image 20230426161809.png",
     "5 HTB - Machines/Easy/4 Love.md",
-    "5 HTB - Machines/Easy/3 Horizontal.md",
+    "3 PortSwigger - SQLI/SSRF.md",
+    "5 HTB - Machines/Easy/5 NodeBlog.md",
+    "5 HTB - Machines/Medium/Waldo.md",
+    "5 HTB - Machines/Medium/Union.md",
+    "5 HTB - Machines/Medium/Tenten.md",
+    "5 HTB - Machines/Medium/Stratosphere.md",
+    "5 HTB - Machines/Medium/SolidState.md",
+    "5 HTB - Machines/Medium/Poison.md",
+    "5 HTB - Machines/Medium/Node.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation.md",
+    "4 Linux & Windows Escalation/Hack4u/Windows Escalation.md",
+    "5 HTB - Machines/Medium/Jeeves.md",
+    "5 HTB - Machines/Medium/Hawk.md",
+    "5 HTB - Machines/Medium/Flustered.md",
+    "Z Imagenes/Pasted image 20230425233123.png",
+    "6 Vulhub - Machines/CEH",
     "11 Red - Team THM/1 Fundamentals",
     "11 Red - Team THM",
     "Z Imagenes/Pasted image 20230421134216.png",
@@ -198,11 +176,7 @@
     "Z Imagenes/Pasted image 20230420210056.png",
     "Z Imagenes/Pasted image 20230420210113.png",
     "Z Imagenes/Pasted image 20230420210246.png",
-    "Z Imagenes/Pasted image 20230420205849.png",
-    "Z Imagenes/Pasted image 20230420205723.png",
     "8 Hack4u - Course/6 OWASP TOP 10",
-    "Pasted image 20230413183956.png",
-    "Pasted image 20230413184032.png",
     "0 Linux & Windows Commands/Hack4u/5 Docker",
     "8 Hack4u - Course/4 Servicios y Gestores",
     "8 Hack4u - Course/3 Docker",
