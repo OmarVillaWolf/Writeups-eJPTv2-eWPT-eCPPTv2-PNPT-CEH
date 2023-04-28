@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Contenedor #BurpSuite #John #Fuzzing #SSTI #SQLI  #Montura #PortScan 
+Tags: #Contenedor #BurpSuite #John #Fuzzing #SSTI #SQLI  #Montura #PortScan #Root  #Linux 
 
 - IP -> 10.10.11.130
 - Ports -> TCP (80), UDP (idk)
@@ -309,7 +309,7 @@ Descubrimos que el puerto 22 esta abierto en ese contenedor. Por lo que usaremos
 Ahora estamos dentro de la maquina real victima.
 
 ```bash
-❯ ip a                                       # Para ver las interfaces e IPs de una maquina
+❯ ip a                                                        # Para ver las interfaces e IPs de una maquina
 ```
 
 ## Root
@@ -373,7 +373,7 @@ Pero no nos ayuda de nada
 ```
 
 ```bash
-❯ chmod 4755 bash                          # Le cambiamos los privilegios SUID y tendra una 's'
+❯ chmod 4755 bash                          # Le cambiamos los privilegios SUID y ahora tendra una 's'
 ```
 
 Despues regresamos a la maquina original con ssh
