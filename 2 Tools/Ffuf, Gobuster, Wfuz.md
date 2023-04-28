@@ -79,6 +79,17 @@ Conceptos de Range
 	# hw -> HideWords y sirve para ocultar el numero de palabras
 ```
 
+Para descubrir si tiene el Plugin de **gwolle-gb** 
+```bash
+❯ wfuzz -c --hc=404 -t 200 -w wp-plugins.fuzz.txt http://❮IP❯/FUZZ
+
+	# hc -> HideCode 404
+	# c -> Formato colorido
+	# w -> Ruta del diccionario
+	# FUZZ -> Donde va a insertar las palabras el diccionario
+	# t -> Lanzar tareas en paralelo al mismo tiempo
+```
+
 # Gobuster ❮❯
 Go trabaja muy bien con Sockets y conexiones 
 ```bash
