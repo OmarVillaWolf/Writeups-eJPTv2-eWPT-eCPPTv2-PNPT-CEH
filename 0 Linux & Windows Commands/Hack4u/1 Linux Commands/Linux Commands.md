@@ -1,22 +1,33 @@
 # Linux Commands ❮❯
 
-Tags: #Linux #Comandos 
+Tags: #Linux #Comandos #Netcat #Montura 
 
 ```bash
-/tmp                                         # Directorios con capacidad de escritura en Linux
+/tmp                                         # Directorios con capacidad de lectura y escritura en Linux                                      
 /var/tmp 
-/dev/shm               
+/dev/shm      
+/temp                                        # Directorios con capacidad de lectura y escritura en PHP
 ```
 
 ```bash
-❯ nano /etc/hosts                            # Para agregar algun dominio existente
+/etc/hosts                                   # Para agregar algun dominio existente
+/etc/passwd                                  # Ruta de las cuentas de usuario
+/etc/shadow                                  # Ruta de hashes de passwrod de usuario estan almacenadas ahi
+/etc/group                                   # Ruta de configuracion del archivo de grupos
+/etc/shells                                  # Podemos ver las diferentes shells que hay 
+/etc/ssh/sshd_config                         # Podemos ver las configuraciones de ssh y ver si el usuario root se puede conectar 
 ```
 
 ```bash
-❯ ping -c 1 ❮IP❯                             # Para saber si la maquina esta activa o no
+❯ ping -c 1 ❮IP❯                             # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
 
 	# IP = IP Address de la maquina target 
 	# c = Numero de pings a ejecutar
+
+❯ ping -c 1 < TARGET IP> -R                 # Verificar si tenemos conexion a una IP mandando numeros de ping especificos 
+	
+	# R = Traceroute, solo aplica en maquinas Linux
+	# c = Numero de ping 
 ```
 
 ```bash
@@ -29,14 +40,12 @@ Tags: #Linux #Comandos
 
 ```bash
 ❯ ip a                                       # Para ver las interfaces e IPs de una maquina
-```
-
-```bash
 ❯ ifconfig                                   # Para saber que IP hay en mi maquina 
+❯ ifconfig docker0                           # Miramos la IP de la interfaz de Docker
 ```
 
 ```bash
-❯ ifconfig docker0                           # Miramos la IP de la interfaz de Docker
+❯ file <FILE>                                # Nos muestra que tipo de archivo es por los magic numbers
 ```
 
 ```bash
@@ -64,7 +73,9 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ exiftool ❮File❯                           # Para ver si hay metadatos en un archivo, imagen
+❯ exiftool ❮Image.jpg❯                      # Para ver si hay metadatos en un archivo, imagen
+❯ steghide info <Image.jpg>                 # Para ver si la imagen tiene contenido oculto
+❯ steghide extract -sf <Image.jpg>          # Para ver si la imagen tiene contenido oculto (sf=sourcefile)
 ```
 
 ```bash
@@ -77,9 +88,7 @@ Tags: #Linux #Comandos
 
 ```bash
 ❯ hashid <2b22337f218b2d82dfc3b6f77e7cb8ec> # Podemos saber el tipo de hash, no es muy confiable
-```
 
-```bash
 ❯ hash-identifier                           # Abriremos la tool y desoues colocaremos el hash a encontrar
 	2b22337f218b2d82dfc3b6f77e7cb8ec
 
@@ -87,14 +96,12 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ echo -n "2b22337f218b2d82dfc3b6f77e7cb8ec" | wc -c           # Nos muestra el numero de caracteres en una linea
+❯ echo -n "2b22337f218b2d82dfc3b6f77e7cb8ec" | wc -c           # Nos muestra el numero de caracteres en una fila
+❯ cat File | wc -l                                             # Te muestra el numero de palabras en fila que existen en ese archivo (l=ele)
 ```
 
 ```bash
 ❯ lsof -i:80                                # Para ver que servicio esta ocupando cierto puerto
-```
-
-```bash
 ❯ pwdx 1355887                              # Le pasamos el PID del comando anterior 'lsof' y asi podemos ver en que ruta se esta ejecutando ese servicio 
 ```
 
@@ -104,14 +111,11 @@ Tags: #Linux #Comandos
 
 ```bash
 ❯ git clone https://❮IP❯                    # Nos clonamos un repositorio de Github
-```
-
-```bash
-❯ svn checkout https://❮IP❯                # Para clonar una subcarpeta de Github y en donde dice /tree/master quitarlo de la url y colocar /trunk y el resto de la url
+❯ svn checkout https://❮IP❯                 # Para clonar una subcarpeta de Github y en donde dice /tree/master quitarlo de la url y colocar /trunk y el resto de la url
 ```
 
 ```bash 
-❯ cat file | xclip -sel clip               # Para copiarnos el output a la Clipboard
+❯ cat file | xclip -sel clip                # Para copiarnos el output a la Clipboard
 ```
 
 Para las monturas en Docker serian los siguientes comandos
@@ -121,26 +125,35 @@ Para las monturas en Docker serian los siguientes comandos
 	# t = Tipo de montura 'cifs'
 	# o = Para que no me pida la passwd
 	# rw = Crear la montura con capacidad de lectura y escritura
-```
 
-```bash
 ❯ umount /mnt/mounted                      # Para eliminar la montura que esta en un dir especifico
-```
-
-```bash
 ❯ mount | grep home                        # Nos muestra desde donde hasta donde esta creada esa montura
 ```
 
 ```bash
-❯ base64 -w 0 File.sh | xclip -set clip             # Codificamos el contenido de un archivo en base64 y lo copiamos en la clipboard
+❯ cp /bin/bash .                           # Copiamos la bash en el dir actual
 ```
 
 ```bash
+❯ base64 -w 0 File.sh | xclip -set clip             # Codificamos el contenido de un archivo en base64 y lo copiamos en la clipboard
 ❯ echo kiufgaiuafgajlfufa98ag676a85g6ga7 | base64 -d > File.sh  # Decodeamos el archivo en base64 y lo colocamos en un archivo que se llamara File.sh
 ```
 
 ```bash
 ❯ echo $PATH                              # Nos damos cuenta que tiene un PATH muy pequeno, por lo que vamos a copiar el nuestro a la maquina victima y asi poder extenderlo
-
 ❯ export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin   # Faltan mas PATH pero es para hacer el ejemplo
+```
+
+```bash
+❯ chown root:root bash                    # Le asignamos de propietario y grupo 'root' a la bash
+❯ chown <USER:USER> -R <DIR_PATH>         # Le cambiamos el propietario a un directorio (R=Forma recursiva)
+```
+
+```bash
+❯ chmod u+x <FILE>                        # Le cambiamos los permisos a un archivo (r=read, w=write, x=execution, u=user, g=grupo, o=other)
+❯ chmod 4755 bash                         # Le cambiamos los privilegios SUID y ahora tendra una 's'
+```
+
+```bash
+❯ upx <FILE>                              # Podemos bajarle el peso al archivo para transferirlo a la maquina victima mas rapido
 ```
