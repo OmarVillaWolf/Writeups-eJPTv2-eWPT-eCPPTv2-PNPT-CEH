@@ -56,5 +56,13 @@ A hash is a way of taking a piece of data of any length and  representing it in
 	# hashfile = Archivo que contiene el hash a crackear
 ```
 
+```bash
+❯ zip2john File.zip > hash                      # Para que nos devuelva el Hash y asi despues poderlo crackear, el resultado lo metemos dentro de un archivo llamado 'hash'
 
+❯ fcrackzip -p /usr/share/wordlists/rockyou.txt -b -u File.zip -D # Nos crackea el hash y nos proporciona la passwd 
+	# p = Init-passwd-string 
+	# b = Bruteforce
+	# D = Dicctionary 
+	# u = Use-unzip 
+```
 
