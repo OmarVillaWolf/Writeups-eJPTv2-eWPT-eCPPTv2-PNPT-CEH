@@ -1,4 +1,4 @@
-# WINRM ❮❯
+# WINRM 
 
 Tags: #WinRM #Windows #Comandos 
 
