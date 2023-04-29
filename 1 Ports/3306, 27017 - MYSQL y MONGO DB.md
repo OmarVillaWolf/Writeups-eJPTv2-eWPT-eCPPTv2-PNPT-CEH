@@ -1,4 +1,4 @@
-# MYSQL ❮❯
+# MYSQL 
 
 Tags: #MySQL #Servidor #Comandos #Mongo #DB 
 
