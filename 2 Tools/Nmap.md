@@ -50,7 +50,7 @@ Tags: #Nmap #Escaneo
 ```
 
 ```bash
-❯ nmap --script ssl-heartbleed -p8443 ❮Target IP❯ 	# heartbleed = Verifica si es vulnerable a Heartbleed
+❯ nmap --script ssl-heartbleed -p443 ❮Target IP❯ 	# heartbleed = Verifica si es vulnerable a Heartbleed
 
 	#  -p8443 o 443 = Indica el puerto que se quiere escanear
 	#  Target IP = Dirección IP que se quiere escanear
