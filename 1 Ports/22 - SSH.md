@@ -1,4 +1,4 @@
-# SSH ❮❯
+# SSH 
 
 Tags: #SSH #Puerto #Comandos 
 
