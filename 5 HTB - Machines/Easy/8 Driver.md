@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #SMB #SCF #John #Hash  #NT-AuthoritySystem #Windows #WinRM #WinPEAS
+Tags: #SMB #SCF #John #Hash #Windows #WinRM #WinPEAS
 
 - IP -> 10.10.11.106
 - Ports -> TCP (445, 80, 135,5985), UDP (idk)
