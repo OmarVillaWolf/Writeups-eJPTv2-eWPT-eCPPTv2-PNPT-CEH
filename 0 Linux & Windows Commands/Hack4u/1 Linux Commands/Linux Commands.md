@@ -19,6 +19,14 @@ Tags: #Linux #Comandos #Netcat #Montura
 ```
 
 ```bash
+❯ echo ‘’ > ~/.zsh_history                   # Para borrar el historial en la zshrc
+```
+
+```bash
+❯ !$                                         # Referencias el ultimo argumento que hayamos puesto en la consola 
+```
+
+```bash
 ❯ ping -c 1 ❮IP❯                             # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
 
 	# IP = IP Address de la maquina target 
@@ -61,7 +69,11 @@ Tags: #Linux #Comandos #Netcat #Montura
 ```
 
 ```bash
-❯ route -n                                   # Para mirar las routing tables
+❯ route -n                                   # Para mirar la tabla de ruteo
+```
+
+```bash
+❯ netstat -nat                               # Para mirar la tabla de ruteo y algunos puertos abiertos
 ```
 
 ```bash
@@ -128,6 +140,11 @@ Tags: #Linux #Comandos #Netcat #Montura
 
 ```bash 
 ❯ cat file | xclip -sel clip                # Para copiarnos el output a la Clipboard
+```
+
+```bash
+❯ 7z l file.zip                              # Podemos ver el contenido interno del archivo zip, gz, bzip2, etc... (l=ele)
+❯ 7z x file.gz                               # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
 ```
 
 Para las monturas en Docker serian los siguientes comandos
