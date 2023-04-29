@@ -1,6 +1,6 @@
 # Escalacion de privilegios Linux
 
-Tags: #Linux #Escalada #Root #Privilegios #Capabilities #SUID #LSE #PSPY #LinPEAS #CRON #Netstat 
+Tags: #Linux #Escalada #Root #Privilegios #Capabilities #SUID #LSE #PSPY #LinPEAS #CRON #Netstat #GCC
 
 * HackTricks: [Hacktricks](https://book.hacktricks.xyz/welcome/readme)
 * GTFOBins: [GTFOBins](https://gtfobins.github.io/)
@@ -70,14 +70,25 @@ Esta herramienta nos ayudara a identificar tareas, procesos que se estan ejecuta
 ```
 
 
+#### gcc
+
+* [Dirty-Pipe]()
+
+```bash
+❯ which gcc                                       #
+
+	# /usr/bin/gcc = Podemos usar el Dirty-Pipe el cual nos ayudara a sobre-escribir el /etc/passwd 
+```
+
 #### Privilegios SUID
 
 * **GTFOBins:** [GTFOBins](https://gtfobins.github.io/)
 Podemos ver en esa pagina que comando podemos usar si encontramos un permiso SUID
 ```bash 
-❯ find / -perm -4000 -ls 2>/dev/null                   # Buscaremos por privilegios SUID, con ls = Miramos los privilegios y buscamos los de root
+❯ find / -perm -4000 -ls 2>/dev/null               # Buscaremos por privilegios SUID, con ls = Miramos los privilegios y buscamos los de root
 
-	#  
+	# /usr/bin/pkexec 
+	# 
 ```
 
 
