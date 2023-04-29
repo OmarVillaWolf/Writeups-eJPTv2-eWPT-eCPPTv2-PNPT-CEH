@@ -26,4 +26,8 @@ Cuando recibimos un output, podamos mostrar solo el segundo argumento
 	# Queremos que todo lo que inicie con espacio seguido de nada, me lo quite 
 ```
 
+Por si el comando ping no esta disponible
+```bash
+❯ echo ‘’ > /dev/tcp/172.16.0.1/22) 2>/dev/null && echo “[+] Puerto abierto” || echo “[+] Puerto cerrado”
+```
 
