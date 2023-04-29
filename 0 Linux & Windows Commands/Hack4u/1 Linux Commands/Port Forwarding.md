@@ -1,4 +1,7 @@
 ## Chisel 
+
+Tags: #Chisel #PortForwarding #LocalForwarding #DinamicForwarding 
+
 #### Local Port Forwarding 
 Nos permite redirigir todo el trafico entrante de un puerto local hacia un puerto remoto.
 Server -> Windows 
