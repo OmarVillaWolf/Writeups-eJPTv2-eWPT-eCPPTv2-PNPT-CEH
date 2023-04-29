@@ -31,6 +31,14 @@ Tags: #Linux #Comandos #Netcat #Montura
 ```
 
 ```bash
+❯ ls -la                                     # Podemos observar todos los archivos del dir inclyendo los ocultos 
+```
+
+```bash
+❯ chmod 600 id_rsa                           # Para darle un permiso 600 a la id_rsa      
+```
+
+```bash
 ❯ whoami                                     # Miramos el nombre del usuario
 ```
 
@@ -46,6 +54,10 @@ Tags: #Linux #Comandos #Netcat #Montura
 
 ```bash
 ❯ file <FILE>                                # Nos muestra que tipo de archivo es por los magic numbers
+```
+
+```bash
+❯ find  / -name file.txt 2>/dev/null         # Para buscar un archivo en el sistema desde la raiz
 ```
 
 ```bash
