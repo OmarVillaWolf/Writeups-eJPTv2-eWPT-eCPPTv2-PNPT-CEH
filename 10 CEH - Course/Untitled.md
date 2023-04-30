@@ -1,7 +1,0 @@
-# Conceptos
-
-
-### Autenticacion:
-
-### Autenticidad:
-
