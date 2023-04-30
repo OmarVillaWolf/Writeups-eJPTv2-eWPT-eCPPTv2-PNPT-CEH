@@ -1,4 +1,4 @@
-# Metasploit ❮❯
+# Metasploit 
 
 Tags: #Comandos #Metasploit #Payloads #Msfvenom
 
