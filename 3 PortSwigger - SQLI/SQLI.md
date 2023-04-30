@@ -1,4 +1,4 @@
-# SQL Intection 'PortSwigger' MySQL ❮❯
+# SQL Intection 'PortSwigger' MySQL 
 
 Tags: #BurpSuite #SQLI #Explotacion #Enumeracion 
 
