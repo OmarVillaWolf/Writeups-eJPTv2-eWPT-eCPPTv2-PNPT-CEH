@@ -43,10 +43,6 @@ Tags: #Linux #Comandos #Netcat #Montura
 ```
 
 ```bash
-❯ chmod 600 id_rsa                           # Para darle un permiso 600 a la id_rsa      
-```
-
-```bash
 ❯ whoami                                     # Miramos el nombre del usuario
 ```
 
@@ -181,8 +177,18 @@ Para las monturas en Docker serian los siguientes comandos
 ```bash
 ❯ chmod u+x <FILE>                        # Le cambiamos los permisos a un archivo (r=read, w=write, x=execution, u=user, g=grupo, o=other)
 ❯ chmod 4755 bash                         # Le cambiamos los privilegios SUID y ahora tendra una 's'
+❯ chmod 600 id_rsa                        # Para darle un permiso 600 a la id_rsa   
 ```
 
 ```bash
 ❯ upx <FILE>                              # Podemos bajarle el peso al archivo para transferirlo a la maquina victima mas rapido
+```
+
+
+---
+
+Instalar pip2 en Parrot
+```python
+$ wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+$ sudo python2.7 get-pip.py
 ```
