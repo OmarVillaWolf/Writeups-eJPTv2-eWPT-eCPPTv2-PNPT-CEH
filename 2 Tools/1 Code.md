@@ -1,4 +1,4 @@
-# Diferentes codigos ❮❯
+# Diferentes codigos
 
 ## Tratamiento de la pseudo-consola
 ```bash
