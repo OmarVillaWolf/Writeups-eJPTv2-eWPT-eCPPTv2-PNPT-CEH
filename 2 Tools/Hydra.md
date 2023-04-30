@@ -1,4 +1,4 @@
-# Hydra ❮❯
+# Hydra 
 
 Es una herramienta de prueba de penetracion que se utiliza para realizar ataques de fuerza bruta, por asi decirlo, en servicios de autenticacion remotos. Esta herramientas nos ayuda a poder encontrar passwd mediante ataques futivos. 
 
