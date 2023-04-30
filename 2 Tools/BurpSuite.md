@@ -1,4 +1,4 @@
-# BurpSuite ❮❯
+# BurpSuite 
 
 Tags: #BurpSuite #Escaneo  #Web #Enumeracion 
 
@@ -15,7 +15,8 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 ## Iniciar BurpSuite 
 
 ```bash
-❯ burpsuite &> /dev/null & disown        # Iniciamos el BurpSuite y lo mandamos a segundo plano e independizar el proceso del BurpSuite
+❯ burpsuite &> /dev/null & disown                # Iniciamos el BurpSuite y lo mandamos a segundo plano e independizar el proceso del BurpSuite
+❯ BurpSuiteCommunity &> /dev/null & disown
 ```
 
 ## Comandos
