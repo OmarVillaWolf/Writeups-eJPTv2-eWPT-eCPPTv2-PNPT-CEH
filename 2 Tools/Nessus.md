@@ -1,4 +1,4 @@
-# Nessus ❮❯
+# Nessus 
 
 Windows cmd Administrator
 ❯ **net start "Tenable Nessus"** Activamos Nesus
