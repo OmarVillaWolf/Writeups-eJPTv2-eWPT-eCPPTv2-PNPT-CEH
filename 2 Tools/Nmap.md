@@ -1,4 +1,4 @@
-# Nmap ❮❯
+# Nmap 
 
 Tags: #Nmap #Escaneo 
 
@@ -60,5 +60,13 @@ Tags: #Nmap #Escaneo
 ❯ nmap --script ftp-anon -p21 ❮Target IP❯              # ftp-enum = Escanea y mira si el usuario invitado 'Anonymous' esta habilitado
 
 	#  p21 = Indica el puerto que se quiere escanear
+	#  Target IP = Dirección IP que se quiere escanear
+```
+
+
+```bash
+❯ nmap --script ldap\* -p389 ❮Target IP❯               # Para enumerar LDAP
+
+	#  p389 = Indica el puerto que se quiere escanear
 	#  Target IP = Dirección IP que se quiere escanear
 ```
