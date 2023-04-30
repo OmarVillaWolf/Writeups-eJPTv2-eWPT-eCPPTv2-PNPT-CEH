@@ -1,4 +1,4 @@
-# SQL-Map ❮❯
+# SQL-Map 
 
 Tags: #Tool #Web #Enumeracion #BurpSuite #SQLI
 
