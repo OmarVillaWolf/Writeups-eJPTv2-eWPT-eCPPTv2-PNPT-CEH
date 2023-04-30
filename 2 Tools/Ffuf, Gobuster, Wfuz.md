@@ -1,4 +1,4 @@
-# Diferentes tipos de Fuzzers ❮❯
+# Diferentes tipos de Fuzzers 
 Modo directorio: Listar los directorios y archivos 
 	**/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt**
   **/usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt**
@@ -7,7 +7,7 @@ Modo DNS: Encontrar los subdominios
 Modo vhost: Encontrar host virtuales que esten configurados en el servidor
 	**/usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt** 
 
-# Wfuzz ❮❯
+# Wfuzz 
 ```bash
 ❯ wfuzz -c --hc=404 --hh=12345 -t 200 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.❮IP❯” https://❮IP❯
 
@@ -90,7 +90,7 @@ Para descubrir si tiene el Plugin de **gwolle-gb**
 	# t -> Lanzar tareas en paralelo al mismo tiempo
 ```
 
-# Gobuster ❮❯
+# Gobuster
 Go trabaja muy bien con Sockets y conexiones 
 ```bash
 ❯ gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://❮IP❯ -t 200 -k 
@@ -144,7 +144,7 @@ Go trabaja muy bien con Sockets y conexiones
 	# w -> Ruta del diccionario
 ```
 
-# Ffuf ❮❯
+# Ffuf 
 **ffuf** stands for **Fuzz Faster U Fool**. It's a tool used for web enumeration, fuzzing, and directory brute forcing. Y trabaja muy bien con Sockets y Conexiones porque esta programado en Go
 
 ```bash
