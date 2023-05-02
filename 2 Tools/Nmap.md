@@ -23,9 +23,9 @@ Tags: #Nmap #Escaneo
 ```
 
 ```bash
-❯ nmap -sCV -p22,80 ❮Target IP❯ -oN targeted
+❯ nmap -sCV -p22,... ❮Target IP❯ -oN targeted
 
-	#  p22,80 = Indica los puertos que se quieren escanear
+	#  p22,... = Indica los puertos que se quieren escanear
 	#  sC = Lanza scripts básicos de enumeración
 	#  sV = Enumera la versión y servicio que está corriendo en los puertos
 	#  Target IP = Dirección IP que se quiere escanear
