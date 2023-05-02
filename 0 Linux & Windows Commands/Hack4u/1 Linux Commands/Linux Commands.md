@@ -61,6 +61,10 @@ Tags: #Linux #Comandos #Netcat #Montura
 ```
 
 ```bash
+❯ locate nc.exe                              # Buscar el Netcat para Windows
+```
+
+```bash
 ❯ find  / -name file.txt 2>/dev/null         # Para buscar un archivo en el sistema desde la raiz
 ```
 
@@ -80,7 +84,7 @@ Tags: #Linux #Comandos #Netcat #Montura
 ❯ arp-scan -I ens33 --localnet --ignoredups              # Para hacer un escaneo de la red 
 
 	# I = i mayuscula; es la interface ens33
-	# ignore = Ignora duplicados 
+	# ignoredups = Ignora IPs duplicadas 
 ```
 
 
@@ -126,7 +130,7 @@ Tags: #Linux #Comandos #Netcat #Montura
 ```
 
 ```bash
-❯ tcpdump -i tun0 icmp -n                   # Nos ponemos en escucha en la interfaz i = Tun0 para trazas ICMP, n = No DNS
+❯ tcpdump -i tun0 icmp -n                   # Nos ponemos en escucha en la interfaz i = Tun0 para trazas ICMP, n = No trazas DNS
 ```
 
 ```bash
