@@ -95,7 +95,7 @@ Go trabaja muy bien con Sockets y conexiones
 ```bash
 ❯ gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://❮IP❯ -t 200 -k 
 
-	# vhost -> Modo enumeracion VHost
+	# vhost -> Modo enumeracion VHost Subdominios
 	# w -> Ruta del diccionario
 	# t -> Lanzar tareas en paralelo al mismo tiempo
 	# k -> Para certificados autofirmados para el puerto 443
@@ -104,7 +104,7 @@ Go trabaja muy bien con Sockets y conexiones
 ```bash
 ❯ gobuster vhost -u https://tinder.com -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 20 | grep -v "403"
 
-	# vhost -> Modo enumeracion VHost
+	# vhost -> Modo enumeracion VHost Subdominios
 	# u -> Colocamos la url
 	# t -> Lanzar peticiones en paralelo al mismo tiempo
 	# w -> Ruta del diccionario
