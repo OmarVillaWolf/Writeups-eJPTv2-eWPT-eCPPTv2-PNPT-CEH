@@ -148,7 +148,7 @@ Go trabaja muy bien con Sockets y conexiones
 **ffuf** stands for **Fuzz Faster U Fool**. It's a tool used for web enumeration, fuzzing, and directory brute forcing. Y trabaja muy bien con Sockets y Conexiones porque esta programado en Go
 
 ```bash
-❯ **ffuf -h** Despliega el panel de ayuda
+❯ ffuf -h                   # Despliega el panel de ayuda
 ```
 
 ```bash
