@@ -1,6 +1,6 @@
 # Nmap 
 
-Tags: #Nmap #Escaneo 
+Tags: #Nmap #Escaneo #UDP #TCP 
 
 ```bash
 ❯ nmap ❮Target_IP/24❯                      # Para escanear toda la red
@@ -30,6 +30,10 @@ Tags: #Nmap #Escaneo
 	#  sV = Enumera la versión y servicio que está corriendo en los puertos
 	#  Target IP = Dirección IP que se quiere escanear
 	#  oN targeted = Exporta el output a un fichero en formato nmap con nombre “targeted”
+```
+
+```bash
+❯ nmap -sU --top-ports 100 --open -T5 -v -n ❮Target IP❯     # Escaneo de puertos por UDP
 ```
 
 ```bash
