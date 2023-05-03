@@ -1,4 +1,17 @@
 # Hashcat
 
-❯ **hashcat.exe --stdout -r rules/best64.rule hash.txt > passwords**  Podemos hacer y mostrar variantes de la password almacenada en ese archivo hash.txt y nos creamos un diccionario el cual contenga todas esas variantes
-❯ **hashcat.exe -m 3200 -a 0 hash passwords** Con la misma herramienta crackearemos la password pasandole el hash 
+Tags: #HashCat 
+
+* Siempre se debe de ejcutar Hashcat fuera de la maquina virtual, ya que si no iria muy lento.
+
+```bash
+❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt 
+
+	# m = 0 = MD5
+	# hashes.txt = Archivo que contiene el hash
+```
+
+```bash
+❯ hashcat.exe --stdout -r rules/best64.rule hash.txt > passwords  # Podemos hacer y mostrar variantes de la password almacenada en ese archivo hash.txt y nos creamos un diccionario el cual contenga todas esas variantes
+❯ hashcat.exe -m 3200 -a 0 hash passwords                         # Con la misma herramienta crackearemos la password pasandole el hash 
+```
