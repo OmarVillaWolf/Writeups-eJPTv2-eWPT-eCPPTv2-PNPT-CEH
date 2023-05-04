@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #FTP #SSH #HTTP #Hash #HashCat #ReverShell #LinPEAS #www-data #PSPY 
+Tags: #FTP #SSH #HTTP #Hash #HashCat #ReverShell #LinPEAS #www-data #PSPY #Linux 
 
 - IP -> 192.168.68.110
 - Ports -> TCP (21,22,80,), UDP (idk)
