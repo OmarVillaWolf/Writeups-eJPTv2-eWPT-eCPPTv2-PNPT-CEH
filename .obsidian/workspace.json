@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Vulhub - Machines/TCM/4 Dev.md",
+                "file": "6 Vulhub - Machines/TCM/5 Butler.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,7 +21,20 @@
             }
           },
           {
-            "id": "9573c1ba236fb0ed",
+            "id": "8852a0ba1b12c156",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5 HTB - Machines/Hack4u/Easy/11 Shocker.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "eb5e9594d344b934",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -63,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "linpeas",
+                "query": "gtfo",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -143,34 +156,35 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "9573c1ba236fb0ed",
+  "active": "eb5e9594d344b934",
   "lastOpenFiles": [
-    "6 Vulhub - Machines/TCM/4 Dev.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/15 Latex.md",
     "5 HTB - Machines/Hack4u/Easy/11 Shocker.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/13 NoSQLI.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/14 Deserializacion.md",
-    "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
-    "6 Vulhub - Machines/TCM/2 Blue.md",
-    "6 Vulhub - Machines/TCM/3 Academy.md",
-    "5 HTB - Machines/Hack4u/Easy/9 ToolBox.md",
-    "5 HTB - Machines/Hack4u/Easy/6 NunChucks.md",
-    "5 HTB - Machines/Hack4u/Easy/5 NodeBlog.md",
-    "5 HTB - Machines/Hack4u/Easy/4 Love.md",
-    "5 HTB - Machines/Hack4u/Easy/2 Return.md",
-    "5 HTB - Machines/Hack4u/Easy/1 Validation.md",
-    "6 Vulhub - Machines/Udemy/2 Lupin.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation.md",
-    "4 Linux & Windows Escalation/TCM/Priv Escalation Linux.md",
+    "Z Imagenes/Pasted image 20230506141928.png",
+    "Pasted image 20230506141425.png",
+    "8 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
+    "6 Vulhub - Machines/TCM/5 Butler.md",
     "5 HTB - Machines/Hack4u/Easy/10 Antique.md",
-    "0 Linux & Windows Commands/SearchSploit.md",
-    "0 Linux & Windows Commands/Port Forwarding.md",
+    "6 Vulhub - Machines/TCM/4 Dev.md",
+    "6 Vulhub - Machines/Udemy/2 Lupin.md",
+    "5 HTB - Machines/Hack4u/Easy/6 NunChucks.md",
+    "4 Linux & Windows Escalation/TCM/Priv Escalation Linux.md",
+    "1 Ports/22 - SSH.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/4 LFI.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/3 XXE.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
+    "8 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
     "0 Linux & Windows Commands/1 Linux Commands.md",
-    "2 Tools/1 Code.md",
-    "0 Linux & Windows Commands/ReverShell.md",
-    "1 Ports/23 - Telnet.md",
-    "1 Ports/161 - SNMP.md",
+    "2 Tools/Hashcat.md",
+    "2 Tools/Hydra.md",
+    "2 Tools/John the Ripper.md",
+    "2 Tools/Wireshark.md",
+    "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "2 Tools/Nmap.md",
+    "0 Linux & Windows Commands/Docker/5 Gestion Contenedores.md",
+    "0 Linux & Windows Commands/Docker/7 Docker-Compose.md",
+    "0 Linux & Windows Commands/Docker/6 Port Forw y Mount.md",
+    "0 Linux & Windows Commands/Docker/3 Imagenes.md",
+    "0 Linux & Windows Commands/Docker/4 Contenedor.md",
     "10 CEH - Course/CEH Day 1",
     "5 HTB - Machines/Hack4u",
     "9 TCM - PNPT - Course/6 Wireless Penetration Testing",
@@ -188,8 +202,6 @@
     "Pasted image 20230426161809.png",
     "Z Imagenes/Pasted image 20230425233123.png",
     "6 Vulhub - Machines/CEH",
-    "11 Red - Team THM/1 Fundamentals",
-    "Z Imagenes/Pasted image 20230421134216.png",
-    "Z Imagenes/Pasted image 20230420212052.png"
+    "11 Red - Team THM/1 Fundamentals"
   ]
 }
