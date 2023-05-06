@@ -7,6 +7,9 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 /var/tmp 
 /dev/shm      
 /temp                                        # Directorios con capacidad de lectura y escritura en PHP
+
+❯ Ctrl + u                                   # Miramos el codigo fuente de la pagina 
+❯ Ctrl + Shift + c                           # Abrimos el 'Inspect' de la pagina 
 ```
 
 ```bash
@@ -100,6 +103,15 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ exiftool ❮Image.jpg❯                      # Para ver si hay metadatos en un archivo, imagen
 ❯ steghide info <Image.jpg>                 # Para ver si la imagen tiene contenido oculto
 ❯ steghide extract -sf <Image.jpg>          # Para ver si la imagen tiene contenido oculto (sf=sourcefile)
+```
+
+```bash
+❯ fcrackzip -v -u -D -p /usr/share/worlists/rockyou.txt <File.zip>    # Nos ayuda a crackear un archivo zip con Fuerza Bruta
+
+	# v = Verbose
+	# u = Unzip
+	# D = Dictionary attack
+	# p = File to attack 'File.zip'
 ```
 
 ```bash
