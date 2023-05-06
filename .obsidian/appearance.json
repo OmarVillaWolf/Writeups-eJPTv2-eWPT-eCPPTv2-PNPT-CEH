@@ -3,5 +3,8 @@
   "cssTheme": "Obsidianite",
   "baseFontSize": 19,
   "interfaceFontFamily": "Calibri",
-  "textFontFamily": "Calibri"
+  "textFontFamily": "Calibri",
+  "enabledCssSnippets": [
+    "cards"
+  ]
 }
