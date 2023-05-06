@@ -1,6 +1,6 @@
 # Abuso de APIs
 
-Tags: #APIs #OWASP #Explotacion 
+Tags: #APIs #OWASP #Explotacion #Postman 
 
 Cuando hablamos del abuso de APIs, a lo que nos referimos es a la explotación de vulnerabilidades en las interfaces de programación de aplicaciones (**APIs**) que se utilizan para permitir la comunicación y el intercambio de datos entre diferentes aplicaciones y servicios en una red.
 
@@ -27,5 +27,18 @@ A continuación, se proporciona el enlace al proyecto de Github que utilizamos p
 -   **crAPI**: [https://github.com/OWASP/crAPI](https://github.com/OWASP/crAPI)
 
 
-## Comandos 
+## POSTMAN 
 
+En el **'Inspector'**, en la parte de **Network** de la pagina web,  ahi encontramos peticiones de la **API**
+* En **'XHR'** podemos ver las solicitudes de la API
+	* En **login** podemos ver lo que se esta tramitando (**Headers** = Peticion por POST a un endpoint, Tambien esta la cabecera Authorization en donde vemos el JWT de tipo Bearer, **Request** = Estructura en Json donde se envia el correo y la passwd, **Response** = Token de Sesion y es un JWT)
+	* En **dashboard** podemos ver (**Headers** = Peticion por GET a un endpoint, **Response** = Informacion del usuario)
+* **JWT** = Es un Jason Web Tokens y su estructura basica es la siguiente: **Header | Payload | Signature**   
+
+Usaremos **POSTMAN** 
+![](Pasted%20image%2020230506141928.png)
+Debemos de crear una **Collections** llamada crAPI en donde crearemos una nueva peticion **HTTP Request** y ahi colocaremos lo que esta en la imagen.
+
+```bash
+
+```
