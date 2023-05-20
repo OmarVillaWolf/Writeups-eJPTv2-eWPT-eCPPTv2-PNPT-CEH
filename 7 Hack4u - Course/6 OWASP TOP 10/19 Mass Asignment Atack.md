@@ -11,4 +11,38 @@ A continuación, se os proporciona el enlace directo al proyecto **Juice Shop**
 -   **Juice Shop**: [https://hub.docker.com/r/bkimminich/juice-shop](https://hub.docker.com/r/bkimminich/juice-shop)
 
 
-## Comandos
+## Mass Asignment Attack
+
+1. Sirve para que a la hora de registrar un usuario, podamos meter mas parametros de los que deberiamos. 
+2. 
+![](Pasted%20image%2020230515182502.png)
+Podemos observar la data que estamos enviando al servidor al momento de registrarnos en la pagina web. 
+
+![](Pasted%20image%2020230515182631.png)
+
+En la respuesta del servidor podemos observar que nos arroja un 'Success'. Esto quiere decir que el registro se ha hecho de manera correcta. Si el servidor no esta sanitizado. Podemos inyectar campos nuevos en el 'registro' de un usuario nuevo y poder agregar campos. 
+
+Registro de un usuario con un campo inyectado llamado 'role:admin'. 
+
+![](Pasted%20image%2020230515182919.png)
+
+Respuesta del servidor.
+
+![](Pasted%20image%2020230515183441.png)
+
+Podemos observar que la respuesta del servidor nos agrega el parametro que antes habiamos colocado. Ya que el servidor crea a ese usuario con todas las propiedades que le hayan llegado. 
+
+2. Otro ejemplo en donde podemos inyectar campos para poder modificar al usuario y hacerlo admin.
+
+![](Pasted%20image%2020230515184217.png)
+
+Si la propiedad que queremos modificar no viaja en la data, podermos concatenarla de la misma manera que esta viajando la demas data, solo seria cuestion de ir probando como se llama el campo a cambiar y asi hacer que cambie en este caso de false a true en el usuario. Esto de la sigueinte manera. 
+
+Ejemplos del campo a cambiar: 
+(is_admin, isAdmin, isadmin, IsAdmin, admin, Admin, Administrator, administrator, privileged, privilege)
+
+![](Pasted%20image%2020230515184550.png)
+
+Respuesta del servidor en donde le cambiamos la data y ahora somos admin.
+
+![](Pasted%20image%2020230515184820.png)
