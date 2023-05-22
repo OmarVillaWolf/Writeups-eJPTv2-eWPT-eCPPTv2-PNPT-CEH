@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u - Course/6 OWASP TOP 10/25 CORS.md",
+                "file": "7 Hack4u - Course/6 OWASP TOP 10/28 Json Web Tokens.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u - Course/6 OWASP TOP 10/25 CORS.md"
+                "file": "7 Hack4u - Course/6 OWASP TOP 10/28 Json Web Tokens.md"
               }
             }
           }
@@ -172,11 +172,25 @@
   },
   "active": "a7936183d163ecf8",
   "lastOpenFiles": [
-    "7 Hack4u - Course/6 OWASP TOP 10/24 IDORs.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/25 CORS.md",
+    "7 Hack4u - Course/6 OWASP TOP 10/27 Puzzling-Fixation-Overloading.md",
+    "7 Hack4u - Course/6 OWASP TOP 10/28 Json Web Tokens.md",
+    "Pasted image 20230522175109.png",
+    "Pasted image 20230522174842.png",
+    "Pasted image 20230522174807.png",
+    "Pasted image 20230522174438.png",
+    "Pasted image 20230522174137.png",
+    "Pasted image 20230522174111.png",
+    "Pasted image 20230522173634.png",
+    "Pasted image 20230522173619.png",
+    "7 Hack4u - Course/6 OWASP TOP 10/26 SQL Trunk.md",
+    "Pasted image 20230522172159.png",
+    "Pasted image 20230522171520.png",
+    "7 Hack4u - Course/6 OWASP TOP 10/4 LFI.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "Pasted image 20230520145641.png",
-    "Pasted image 20230520144708.png",
+    "7 Hack4u - Course/6 OWASP TOP 10/25 CORS.md",
+    "7 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
+    "5 Vulhub - Machines/TCM/5 Butler.md",
+    "7 Hack4u - Course/6 OWASP TOP 10/24 IDORs.md",
     "7 Hack4u - Course/6 OWASP TOP 10/23 XPath.md",
     "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
     "7 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
@@ -185,7 +199,6 @@
     "7 Hack4u - Course/6 OWASP TOP 10/22 ShellShock.md",
     "1 Ports/3128 - SQUID.md",
     "1 Ports/22 - SSH.md",
-    "5 Vulhub - Machines/TCM/5 Butler.md",
     "1 Ports/6379 - REDIS.md",
     "1 Ports/5985 - WINRM.md",
     "1 Ports/5800, 5900 - VNC.md",
@@ -195,19 +208,6 @@
     "1 Ports/1433 - MSSQL.md",
     "1 Ports/873 - RSYNC.md",
     "1 Ports/445, 139- SMB.md",
-    "1 Ports/389 - LDAP.md",
-    "1 Ports/161 - SNMP.md",
-    "1 Ports/135 - RPC.md",
-    "1 Ports/113 - IDENTD.md",
-    "1 Ports/111 - NFS.md",
-    "Z Imagenes/Pasted image 20230516144325.png",
-    "Z Imagenes/Pasted image 20230516141344.png",
-    "Z Imagenes/Pasted image 20230516141059.png",
-    "Z Imagenes/Pasted image 20230516140336.png",
-    "Z Imagenes/Pasted image 20230516140044.png",
-    "Z Imagenes/Pasted image 20230516135755.png",
-    "Z Imagenes/Pasted image 20230516135708.png",
-    "Z Imagenes/Pasted image 20230516135348.png",
     "5 Vulhub - Machines/Udemy/eJPT",
     "5 Vulhub - Machines/Hack4u/1 eJPT",
     "4 HTB - Machines/Hack4u/eJPT",
