@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u - Course/6 OWASP TOP 10/28 Json Web Tokens.md",
+                "file": "AWS-Architect/1.IAM-CLI.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u - Course/6 OWASP TOP 10/28 Json Web Tokens.md"
+                "file": "AWS-Architect/1.IAM-CLI.md"
               }
             }
           }
@@ -170,26 +170,38 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "a7936183d163ecf8",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "7 Hack4u - Course/6 OWASP TOP 10/27 Puzzling-Fixation-Overloading.md",
+    "Pasted image 20230528152323.png",
+    "Pasted image 20230528152234.png",
+    "Z Imagenes/Pasted image 20230528152038.png",
+    "Z Imagenes/Pasted image 20230528151857.png",
+    "Z Imagenes/Pasted image 20230528151651.png",
+    "7 Hack4u - Course/6 OWASP TOP 10/29 Race Condition.md",
+    "AWS-Architect/1.IAM-CLI.md",
+    "AWS-Architect",
+    "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
+    "AWS Architect/1. IAM y CLI AWS.md",
+    "Untitled 1",
+    "AWS Architect",
+    "Z Anexos PDF/Apoyo CAP 1 Hacking Basic.pdf",
+    "Z Anexos PDF/APOYO CAP 1 Ataques.pdf",
+    "README.md",
+    "Untitled.md",
+    "Z Imagenes/Pasted image 20230520144708.png",
+    "Z Imagenes/Pasted image 20230520145641.png",
+    "Z Imagenes/Pasted image 20230524121713.png",
+    "Z Imagenes/Pasted image 20230524121625.png",
     "7 Hack4u - Course/6 OWASP TOP 10/28 Json Web Tokens.md",
-    "Pasted image 20230522175109.png",
-    "Pasted image 20230522174842.png",
-    "Pasted image 20230522174807.png",
-    "Pasted image 20230522174438.png",
-    "Pasted image 20230522174137.png",
-    "Pasted image 20230522174111.png",
-    "Pasted image 20230522173634.png",
-    "Pasted image 20230522173619.png",
+    "Z Imagenes/Pasted image 20230524115925.png",
+    "Z Imagenes/Pasted image 20230524115806.png",
+    "5 Vulhub - Machines/TCM/5 Butler.md",
+    "7 Hack4u - Course/6 OWASP TOP 10/27 Puzzling-Fixation-Overloading.md",
     "7 Hack4u - Course/6 OWASP TOP 10/26 SQL Trunk.md",
-    "Pasted image 20230522172159.png",
-    "Pasted image 20230522171520.png",
     "7 Hack4u - Course/6 OWASP TOP 10/4 LFI.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
     "7 Hack4u - Course/6 OWASP TOP 10/25 CORS.md",
     "7 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
-    "5 Vulhub - Machines/TCM/5 Butler.md",
     "7 Hack4u - Course/6 OWASP TOP 10/24 IDORs.md",
     "7 Hack4u - Course/6 OWASP TOP 10/23 XPath.md",
     "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
@@ -202,21 +214,9 @@
     "1 Ports/6379 - REDIS.md",
     "1 Ports/5985 - WINRM.md",
     "1 Ports/5800, 5900 - VNC.md",
-    "1 Ports/4555 - RSIP.md",
-    "1 Ports/3389 - RDP.md",
-    "1 Ports/3306, 27017 - MYSQL y MONGO DB.md",
-    "1 Ports/1433 - MSSQL.md",
-    "1 Ports/873 - RSYNC.md",
-    "1 Ports/445, 139- SMB.md",
     "5 Vulhub - Machines/Udemy/eJPT",
     "5 Vulhub - Machines/Hack4u/1 eJPT",
     "4 HTB - Machines/Hack4u/eJPT",
-    "Z Anexos PDF/APOYO CAP 1 Ataques.pdf",
-    "Z Anexos PDF/Apoyo CAP 1 Hacking Basic.pdf",
-    "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
-    "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
-    "Z Anexos PDF",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/2 Medium",
-    "5 HTB - Machines/Hack4u/3 Hard"
+    "Z Anexos PDF"
   ]
 }
