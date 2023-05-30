@@ -10,7 +10,7 @@ Por ejemplo, imagina que un usuario ha iniciado sesión en su cuenta bancaria en
 
 El ataque CSRF puede ser utilizado para realizar una amplia variedad de acciones no deseadas, incluyendo la transferencia de fondos, la modificación de la información de la cuenta, la eliminación de datos y mucho más.
 
-Para prevenir los ataques CSRF, los desarrolladores de aplicaciones web deben implementar medidas de seguridad adecuadas, como la inclusión de tokens CSRF en los formularios y solicitudes HTTP. Estos tokens CSRF permiten que la aplicación web verifique que la solicitud proviene de un usuario legítimo y no de un atacante malintencionado (aunque cuidadín que también se pueden hacer cositas con esto).
+Para prevenir los ataques CSRF, los desarrolladores de aplicaciones web deben implementar medidas de seguridad adecuadas, como la inclusión de tokens CSRF en los formularios y solicitudes HTTP. Estos tokens CSRF permiten que la aplicación web verifique que la solicitud proviene de un usuario legítimo y no de un atacante malintencionado (aunque cuidado que también se pueden hacer cositas con esto).
 
 Os compartimos a continuación el enlace al comprimido ZIP que utilizamos en esta clase para desplegar el laboratorio donde practicamos esta vulnerabilidad:
 
@@ -18,7 +18,7 @@ Os compartimos a continuación el enlace al comprimido ZIP que utilizamos en est
 
 
 ## HTML
-En el CSRF podemos modificar todos aquellos campos en donde no sea necesaria una autenticacion en caso de no tener las credenciales. Pero si las tenemos claro que podemos modificar cualquier tipo de campo. 
+En el CSRF podemos modificar todos aquellos campos en donde no sea necesaria una autenticación en caso de no tener las credenciales. Pero si las tenemos claro que podemos modificar cualquier tipo de campo. 
 * Son muy comunes en ataques de phishing
 * La persona debe de estar logeada en la web donde esta el CSRF, y al momento de que abra el enlace, este pueda hacer los cambios como (Passwd, campos criticos, etc...)
 
@@ -27,7 +27,7 @@ Este tipo de scripts se deben de hacer en html, en donde sabemos que podemos hac
 ```html
 <img src="http://www.seed-server.com/action/friends/add?friend=57" alt="image" width="1" height="1" />  <!-- Enviaremos un html de una 'imagen' con un codigo-->
 ```
-Desde la parte de action es para agregar un amigo en el lab de la pagina anterior. Por lo que al momento de mandarlo a alguien y este abra el correo o url, automaticamente se le agregara el amigo con ese identificador que en este caso es 57.  La accion va de la mano con el identificador del usuario a atacar.
+Desde la parte de action es para agregar un amigo en el lab de la pagina anterior. Por lo que al momento de mandarlo a alguien y este abra el correo o url, automáticamente se le agregara el amigo con ese identificador que en este caso es 57.  La accion va de la mano con el identificador del usuario a atacar.
 
 
 
