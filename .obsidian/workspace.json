@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "eb5e9594d344b934",
+            "id": "8db940e7c9cb6668",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
+                "file": "AWS-Architect/1.IAM-CLI.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 Vulhub - Machines/TCM/5 Butler.md",
+                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,25 +34,12 @@
             }
           },
           {
-            "id": "8852a0ba1b12c156",
+            "id": "ca05116ce62c43ad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a7936183d163ecf8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS-Architect/1.IAM-CLI.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -60,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -145,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AWS-Architect/1.IAM-CLI.md"
+                "file": "README.md"
               }
             }
           }
@@ -170,53 +157,53 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "ca05116ce62c43ad",
   "lastOpenFiles": [
-    "Z Imagenes/Pasted image 20230528152323.png",
-    "Z Imagenes/Pasted image 20230528152234.png",
-    "Z Imagenes/Pasted image 20230528152038.png",
-    "Z Imagenes/Pasted image 20230528151857.png",
-    "Z Imagenes/Pasted image 20230528151651.png",
-    "7 Hack4u - Course/6 OWASP TOP 10/29 Race Condition.md",
+    "Untitled.md",
+    "README.md",
+    "0 Linux & Windows Commands/1 Linux Commands.md",
+    "0 Linux & Windows Commands/2 Windows Commands.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/3. Tareas CRON.md",
+    "3 Linux & Windows Escalation/Hack4u/Windows Escalation",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/7. Capabilities.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Untitled",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/6. Permisos incorrectos.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
+    "Z Imagenes/Pasted image 20230529182157.png",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/4. Path Hijacking.md",
+    "Z Imagenes/Pasted image 20230529181530.png",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/5. Python Library Hijacking.md",
+    "Z Imagenes/Pasted image 20230529173624.png",
+    "Z Imagenes/Pasted image 20230529173500.png",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/1. Sudoers.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/2. SUID.md",
+    "Z Imagenes/Pasted image 20230529163726.png",
+    "Z Imagenes/Pasted image 20230529162803.png",
+    "Pasted image 20230529163037.png",
+    "Z Imagenes/Pasted image 20230529162640.png",
+    "Z Imagenes/Pasted image 20230529162619.png",
+    "Z Imagenes/Pasted image 20230529160811.png",
     "AWS-Architect/1.IAM-CLI.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation",
+    "7 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
+    "5 Vulhub - Machines/TCM/5 Butler.md",
+    "7 Hack4u - Course/6 OWASP TOP 10/17 Abuso Subida Archivos.md",
+    "1 Ports/3128 - SQUID.md",
+    "7 Hack4u - Course/6 OWASP TOP 10/19 Mass Asignment Atack.md",
+    "1 Ports/1433 - MSSQL.md",
+    "1 Ports/873 - RSYNC.md",
+    "1 Ports/445, 139- SMB.md",
+    "1 Ports/389 - LDAP.md",
+    "1 Ports/161 - SNMP.md",
+    "1 Ports/135 - RPC.md",
+    "1 Ports/113 - IDENTD.md",
+    "1 Ports/111 - NFS.md",
     "AWS-Architect",
     "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
-    "AWS Architect/1. IAM y CLI AWS.md",
     "Untitled 1",
     "AWS Architect",
     "Z Anexos PDF/Apoyo CAP 1 Hacking Basic.pdf",
     "Z Anexos PDF/APOYO CAP 1 Ataques.pdf",
-    "README.md",
-    "Untitled.md",
-    "Z Imagenes/Pasted image 20230520144708.png",
-    "Z Imagenes/Pasted image 20230520145641.png",
-    "Z Imagenes/Pasted image 20230524121713.png",
-    "Z Imagenes/Pasted image 20230524121625.png",
-    "7 Hack4u - Course/6 OWASP TOP 10/28 Json Web Tokens.md",
-    "Z Imagenes/Pasted image 20230524115925.png",
-    "Z Imagenes/Pasted image 20230524115806.png",
-    "5 Vulhub - Machines/TCM/5 Butler.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/27 Puzzling-Fixation-Overloading.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/26 SQL Trunk.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/4 LFI.md",
-    "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/25 CORS.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/2 XSS.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/24 IDORs.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/23 XPath.md",
-    "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/21 WebDAV.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/22 ShellShock.md",
-    "1 Ports/3128 - SQUID.md",
-    "1 Ports/22 - SSH.md",
-    "1 Ports/6379 - REDIS.md",
-    "1 Ports/5985 - WINRM.md",
-    "1 Ports/5800, 5900 - VNC.md",
-    "5 Vulhub - Machines/Udemy/eJPT",
-    "5 Vulhub - Machines/Hack4u/1 eJPT",
-    "4 HTB - Machines/Hack4u/eJPT",
-    "Z Anexos PDF"
+    "5 Vulhub - Machines/Udemy/eJPT"
   ]
 }
