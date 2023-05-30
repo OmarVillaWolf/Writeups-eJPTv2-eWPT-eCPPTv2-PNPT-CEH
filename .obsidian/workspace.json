@@ -4,50 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "2f4efbbaaef2ddec",
+        "id": "94011b11f54c8eb1",
         "type": "tabs",
         "children": [
           {
-            "id": "8db940e7c9cb6668",
+            "id": "409c68b386212fc0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS-Architect/1.IAM-CLI.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "50947a3e73d5dba4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ca05116ce62c43ad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
+                "file": "0 Linux & Windows Commands/1 Linux Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "0 Linux & Windows Commands/1 Linux Commands.md"
               }
             }
           }
@@ -157,10 +130,13 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "ca05116ce62c43ad",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "Untitled.md",
+    "AWS-Architect/2..md",
+    "AWS-Architect/1.IAM-CLI.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
     "README.md",
+    "Untitled.md",
     "0 Linux & Windows Commands/1 Linux Commands.md",
     "0 Linux & Windows Commands/2 Windows Commands.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/3. Tareas CRON.md",
@@ -168,7 +144,6 @@
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/7. Capabilities.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Untitled",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/6. Permisos incorrectos.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
     "Z Imagenes/Pasted image 20230529182157.png",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/4. Path Hijacking.md",
     "Z Imagenes/Pasted image 20230529181530.png",
@@ -183,7 +158,6 @@
     "Z Imagenes/Pasted image 20230529162640.png",
     "Z Imagenes/Pasted image 20230529162619.png",
     "Z Imagenes/Pasted image 20230529160811.png",
-    "AWS-Architect/1.IAM-CLI.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation",
     "7 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
     "5 Vulhub - Machines/TCM/5 Butler.md",
@@ -197,7 +171,6 @@
     "1 Ports/161 - SNMP.md",
     "1 Ports/135 - RPC.md",
     "1 Ports/113 - IDENTD.md",
-    "1 Ports/111 - NFS.md",
     "AWS-Architect",
     "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
     "Untitled 1",
