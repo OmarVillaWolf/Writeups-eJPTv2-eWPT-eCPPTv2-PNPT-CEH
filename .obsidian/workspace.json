@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Linux & Windows Commands/1 Linux Commands.md",
+                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "337b57fcf4bd2862",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Linux & Windows Commands/1 Linux Commands.md"
+                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md"
               }
             }
           }
@@ -130,18 +143,28 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "409c68b386212fc0",
   "lastOpenFiles": [
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/12. Secuestro de Biblioteca.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/11. Binarios Especificos.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/10. Servicios Internos.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
+    "0 Linux & Windows Commands/1 Linux Commands.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/8. Kernel.md",
+    "Z Imagenes/Pasted image 20230530142040.png",
+    "Z Imagenes/Pasted image 20230530142007.png",
+    "7 Hack4u - Course/6 OWASP TOP 10/22 ShellShock.md",
+    "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/7. Capabilities.md",
     "AWS-Architect/2..md",
     "AWS-Architect/1.IAM-CLI.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
     "README.md",
     "Untitled.md",
-    "0 Linux & Windows Commands/1 Linux Commands.md",
     "0 Linux & Windows Commands/2 Windows Commands.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/3. Tareas CRON.md",
     "3 Linux & Windows Escalation/Hack4u/Windows Escalation",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/7. Capabilities.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Untitled",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/6. Permisos incorrectos.md",
     "Z Imagenes/Pasted image 20230529182157.png",
@@ -156,21 +179,11 @@
     "Z Imagenes/Pasted image 20230529162803.png",
     "Pasted image 20230529163037.png",
     "Z Imagenes/Pasted image 20230529162640.png",
-    "Z Imagenes/Pasted image 20230529162619.png",
-    "Z Imagenes/Pasted image 20230529160811.png",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation",
     "7 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
     "5 Vulhub - Machines/TCM/5 Butler.md",
     "7 Hack4u - Course/6 OWASP TOP 10/17 Abuso Subida Archivos.md",
     "1 Ports/3128 - SQUID.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/19 Mass Asignment Atack.md",
-    "1 Ports/1433 - MSSQL.md",
-    "1 Ports/873 - RSYNC.md",
-    "1 Ports/445, 139- SMB.md",
-    "1 Ports/389 - LDAP.md",
-    "1 Ports/161 - SNMP.md",
-    "1 Ports/135 - RPC.md",
-    "1 Ports/113 - IDENTD.md",
     "AWS-Architect",
     "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
     "Untitled 1",
