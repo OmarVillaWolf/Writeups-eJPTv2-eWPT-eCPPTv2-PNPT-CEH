@@ -8,28 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "409c68b386212fc0",
+            "id": "6e57112658047e52",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
-          },
-          {
-            "id": "6e57112658047e52",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +104,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md"
+              }
             }
           }
         ],
@@ -139,20 +132,30 @@
   },
   "active": "6e57112658047e52",
   "lastOpenFiles": [
+    "Pasted image 20230531125838.png",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
+    "Pasted image 20230531123628.png",
+    "Z Imagenes/Pasted image 20230531123804.png",
+    "Z Imagenes/Pasted image 20230531123551.png",
+    "Z Imagenes/Pasted image 20230531123516.png",
+    "Z Imagenes/Pasted image 20230531123435.png",
+    "Z Imagenes/Pasted image 20230531123342.png",
+    "Z Imagenes/Pasted image 20230531123312.png",
+    "Z Imagenes/Pasted image 20230531123203.png",
+    "Z Imagenes/Pasted image 20230531122053.png",
+    "7 Hack4u - Course/7 Buffer Overflow",
+    "Z Imagenes/Pasted image 20230531113253.png",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
     "6 Informe/Report TCM.md",
     "6 Informe/Report Hack4u.md",
     "5 Vulhub - Machines/CEH/1 Metasploitable2.md",
     "README.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/12. Secuestro de Biblioteca.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/11. Binarios Especificos.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/10. Servicios Internos.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
     "0 Linux & Windows Commands/1 Linux Commands.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/8. Kernel.md",
-    "Z Imagenes/Pasted image 20230530142040.png",
-    "Z Imagenes/Pasted image 20230530142007.png",
     "7 Hack4u - Course/6 OWASP TOP 10/22 ShellShock.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/7. Capabilities.md",
@@ -164,26 +167,16 @@
     "3 Linux & Windows Escalation/Hack4u/Windows Escalation",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Untitled",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/6. Permisos incorrectos.md",
-    "Z Imagenes/Pasted image 20230529182157.png",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/4. Path Hijacking.md",
-    "Z Imagenes/Pasted image 20230529181530.png",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/5. Python Library Hijacking.md",
-    "Z Imagenes/Pasted image 20230529173624.png",
-    "Z Imagenes/Pasted image 20230529173500.png",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/1. Sudoers.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/2. SUID.md",
-    "Z Imagenes/Pasted image 20230529163726.png",
-    "Z Imagenes/Pasted image 20230529162803.png",
-    "Pasted image 20230529163037.png",
-    "Z Imagenes/Pasted image 20230529162640.png",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation",
-    "7 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
     "AWS-Architect",
     "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
     "Untitled 1",
     "AWS Architect",
     "Z Anexos PDF/Apoyo CAP 1 Hacking Basic.pdf",
-    "Z Anexos PDF/APOYO CAP 1 Ataques.pdf",
-    "5 Vulhub - Machines/Udemy/eJPT"
+    "Z Anexos PDF/APOYO CAP 1 Ataques.pdf"
   ]
 }
