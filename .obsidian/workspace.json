@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,19 +21,15 @@
             }
           },
           {
-            "id": "337b57fcf4bd2862",
+            "id": "6e57112658047e52",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -117,9 +113,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -143,12 +137,16 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "409c68b386212fc0",
+  "active": "6e57112658047e52",
   "lastOpenFiles": [
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/12. Secuestro de Biblioteca.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/11. Binarios Especificos.md",
+    "6 Informe/Report TCM.md",
+    "6 Informe/Report Hack4u.md",
+    "5 Vulhub - Machines/CEH/1 Metasploitable2.md",
+    "README.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/12. Secuestro de Biblioteca.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/11. Binarios Especificos.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/10. Servicios Internos.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
     "0 Linux & Windows Commands/1 Linux Commands.md",
@@ -160,7 +158,6 @@
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/7. Capabilities.md",
     "AWS-Architect/2..md",
     "AWS-Architect/1.IAM-CLI.md",
-    "README.md",
     "Untitled.md",
     "0 Linux & Windows Commands/2 Windows Commands.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/3. Tareas CRON.md",
@@ -181,9 +178,6 @@
     "Z Imagenes/Pasted image 20230529162640.png",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation",
     "7 Hack4u - Course/6 OWASP TOP 10/16 APIs.md",
-    "5 Vulhub - Machines/TCM/5 Butler.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/17 Abuso Subida Archivos.md",
-    "1 Ports/3128 - SQUID.md",
     "AWS-Architect",
     "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
     "Untitled 1",
