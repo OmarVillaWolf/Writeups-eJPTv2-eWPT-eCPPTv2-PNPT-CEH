@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #SMB #FTP #BurpSuite #HTTPS #PostgreSQL #Netcat #Docker #Contenedor #Windows #RCE #ReverShell #DockerToolbox #Id_RSA
+Tags: #SMB #FTP #BurpSuite #HTTPS #PostgreSQL #Netcat #Docker #Contenedor #Windows #RCE #ReverShell #DockerToolbox #Id_RSA #Nmap 
 
 - IP -> 10.10.11.130
 - Ports -> TCP (21,22,135139,443,445,5985), UDP (idk)
