@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u - Course/7 Buffer Overflow/3 Fase Inicial Fuzzing.md",
+                "file": "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b43f93543e326efa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Linux & Windows Commands/1 Linux Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u - Course/7 Buffer Overflow/3 Fase Inicial Fuzzing.md"
+                "file": "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md"
               }
             }
           }
@@ -132,17 +145,33 @@
   },
   "active": "c89e7fec4ed6faa7",
   "lastOpenFiles": [
-    "7 Hack4u - Course/7 Buffer Overflow/2 Lab Immunity Debuger.md",
-    "7 Hack4u - Course/7 Buffer Overflow/3 Fase Inicial Fuzzing.md",
-    "7 Hack4u - Course/7 Buffer Overflow/1 Intro BufferOverflow.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/1 SQLI.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/3. Tareas CRON.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/10. Servicios Internos.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/11. Binarios Especificos.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/12. Secuestro de Biblioteca.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
-    "Pasted image 20230531125838.png",
+    "0 Linux & Windows Commands/1 Linux Commands.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
+    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/1. Sudoers.md",
+    "2 Tools/1 Code.md",
+    "0 Linux & Windows Commands/ReverShell.md",
+    "7 Hack4u - Course/6 OWASP TOP 10/22 ShellShock.md",
+    "2 Tools/Nmap.md",
+    "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "1 Ports/80, 443, 8080, 5000 - WEB.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/10 Antique.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/9 ToolBox.md",
+    "2 Tools/Metasploit.md",
+    "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/5. Infovore 1.md",
+    "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/4. Presidential 1.md",
+    "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/3. Symfonos 6.1.md",
+    "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/2. Casino Royale 1.md",
+    "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/1. IMF 1.md",
+    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/1 DarkHole2.md",
+    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/8 Election1.md",
+    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
+    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/6 Durian1.md",
+    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/5 Venom1.md",
+    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/4 Corrosion2.md",
+    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/3 ICA1.md",
+    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/2 Symfonos1.md",
+    "Z Imagenes/Pasted image 20230531125838.png",
     "Pasted image 20230531123628.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531123551.png",
@@ -153,24 +182,8 @@
     "Z Imagenes/Pasted image 20230531123203.png",
     "Z Imagenes/Pasted image 20230531122053.png",
     "7 Hack4u - Course/7 Buffer Overflow",
-    "6 Informe/Report TCM.md",
-    "6 Informe/Report Hack4u.md",
-    "5 Vulhub - Machines/CEH/1 Metasploitable2.md",
-    "README.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
-    "0 Linux & Windows Commands/1 Linux Commands.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/8. Kernel.md",
-    "7 Hack4u - Course/6 OWASP TOP 10/22 ShellShock.md",
-    "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/7. Capabilities.md",
-    "AWS-Architect/2..md",
-    "AWS-Architect/1.IAM-CLI.md",
-    "Untitled.md",
-    "0 Linux & Windows Commands/2 Windows Commands.md",
     "3 Linux & Windows Escalation/Hack4u/Windows Escalation",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Untitled",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/6. Permisos incorrectos.md",
-    "3 Linux & Windows Escalation/Hack4u/Linux Escalation/4. Path Hijacking.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation",
     "AWS-Architect",
     "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
