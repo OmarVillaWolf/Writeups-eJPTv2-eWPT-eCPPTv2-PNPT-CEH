@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Linux #SQLI #BurpSuite #ReverShell #PHP
+Tags: #Linux #SQLI #BurpSuite #ReverShell #PHP #Nmap 
 
 - IP -> 10.10.11.116
 - Ports -> TCP (22, 80, 8080, 4566), UDP (idk)
