@@ -13,20 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b43f93543e326efa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Linux & Windows Commands/1 Linux Commands.md",
+                "file": "4 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -118,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md"
+                "file": "4 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md"
               }
             }
           }
@@ -145,9 +132,19 @@
   },
   "active": "c89e7fec4ed6faa7",
   "lastOpenFiles": [
-    "0 Linux & Windows Commands/1 Linux Commands.md",
-    "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
     "4 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
+    "0 Linux & Windows Commands/1 Linux Commands.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/2 Return.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/3 Horizontal.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/4 Love.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/5 NodeBlog.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/6 NunChucks.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/7 GoodGames.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/8 Driver.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/9 ToolBox.md",
+    "4 HTB - Machines/Hack4u/eJPT/1 Easy/10 Antique.md",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/1. Sudoers.md",
     "2 Tools/1 Code.md",
     "0 Linux & Windows Commands/ReverShell.md",
@@ -155,22 +152,12 @@
     "2 Tools/Nmap.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
     "1 Ports/80, 443, 8080, 5000 - WEB.md",
-    "4 HTB - Machines/Hack4u/eJPT/1 Easy/10 Antique.md",
-    "4 HTB - Machines/Hack4u/eJPT/1 Easy/9 ToolBox.md",
     "2 Tools/Metasploit.md",
     "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/5. Infovore 1.md",
     "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/4. Presidential 1.md",
     "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/3. Symfonos 6.1.md",
     "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/2. Casino Royale 1.md",
     "5 Vulhub - Machines/Hack4u/2 Curso Hack4u/1. IMF 1.md",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/1 DarkHole2.md",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/8 Election1.md",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/6 Durian1.md",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/5 Venom1.md",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/4 Corrosion2.md",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/3 ICA1.md",
-    "5 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/2 Symfonos1.md",
     "Z Imagenes/Pasted image 20230531125838.png",
     "Pasted image 20230531123628.png",
     "Z Imagenes/Pasted image 20230531123804.png",
