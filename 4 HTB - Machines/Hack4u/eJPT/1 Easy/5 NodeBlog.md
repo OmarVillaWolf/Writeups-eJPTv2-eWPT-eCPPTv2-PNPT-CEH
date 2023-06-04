@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Linux #BurpSuite #NoSQLI #XML #XXE #Netstat #Deserializacion #Unserialized 
+Tags: #Linux #BurpSuite #NoSQLI #XML #XXE #Netstat #Deserializacion #Unserialized #Nmap 
 N
 - IP -> 10.10.11.139
 - Ports -> TCP (22,5000), UDP (idk)
