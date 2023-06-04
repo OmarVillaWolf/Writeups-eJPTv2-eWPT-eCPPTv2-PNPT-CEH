@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Windows #HTTP #HTTPS #SSRF #RCE #ReverShell #WinPEAS #Msfvenom 
+Tags: #Windows #HTTP #HTTPS #SSRF #RCE #ReverShell #WinPEAS #Msfvenom #Nmap 
 N
 - IP -> 10.10.10.239
 - Ports -> TCP (80,135,139,443,445,3306,5000,5040,5985,7680,47001,), UDP (idk)
