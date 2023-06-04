@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Windows #SMB #WinRM #ReverShell #Netcat #NetUser  
+Tags: #Windows #SMB #WinRM #ReverShell #Netcat #NetUser  #Nmap 
 
 - IP -> 
 - Ports -> TCP (53,80,88,135,139,389,445,5985), UDP (idk)
