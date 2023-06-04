@@ -74,3 +74,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	#  p389 = Indica el puerto que se quiere escanear
 	#  Target IP = Dirección IP que se quiere escanear
 ```
+
+```bash 
+❯ nmap --script http-shellshock --script-args uri=/cgi-bin/user.sh -p80 10.10.10.56    # Ver si es vulnerable a ShellShock
+```
