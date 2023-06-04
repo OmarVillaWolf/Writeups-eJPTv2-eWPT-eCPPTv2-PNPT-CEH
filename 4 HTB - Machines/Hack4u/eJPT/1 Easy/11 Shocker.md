@@ -1,6 +1,6 @@
 ## Summary
 
-Tags:  #Linux #SSH #HTTP #ShellShock #Sudoers 
+Tags:  #Linux #HTTP #ShellShock #Sudoers #Fuzzing #Nmap 
 
 - IP -> 10.10.10.56
 - Ports -> TCP (80, 2222), UDP (idk)
