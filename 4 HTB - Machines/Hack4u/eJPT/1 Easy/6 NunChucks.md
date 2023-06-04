@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Linux #HTTPS #Fuzzing #SSTI #Capabilities 
+Tags: #Linux #HTTPS #Fuzzing #SSTI #Capabilities #Nmap 
 
 - IP -> 10.10.11.122
 - Ports -> TCP (22,80,443), UDP (idk)
