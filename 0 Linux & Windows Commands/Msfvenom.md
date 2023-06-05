@@ -1,6 +1,6 @@
 ## Msfvenom ❮❯
 
-Tags: #Msfvenom #Metasploit #ReverShell #Payloads #Netcat
+Tags: #Msfvenom #Metasploit #ReverShell #Payloads #Netcat #Windows 
 
 ### Netcat
 * Nos sirve para crear un binario malicioso, para despues usar metsploit y obtener la ReverShell para maquinas Windows 
@@ -16,7 +16,8 @@ Tags: #Msfvenom #Metasploit #ReverShell #Payloads #Netcat
 	# platform = Plataforma a usar
 	# a = Arquitectura
 ```
-Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un servidor HTTP
+
+* Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un servidor HTTP y en la maquina victima lo podemos descargar desde el navegador colocando la IP del servicio compartido
 
 * Nos ponemos en escucha por Netcat:
 ```bash 
