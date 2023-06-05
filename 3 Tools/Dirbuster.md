@@ -5,7 +5,7 @@ Esta herramienta sirve para enumerar directorios
 ❯ dirbuster&                                   # Ejecutamos el programa y nos saldra una interface como la siguiente:
 ```
 
-![[Pasted image 20230403193603.png|400]]
+![Dirbuster](Dirbuster.png)
 
 * Ahi colocamos la url empezando por **http://** y debemos de seguir la sintaxis como la de la imagen
 * Podemos activar la casilla de **Go Faster** para que el escaneo sea mas rapido 
