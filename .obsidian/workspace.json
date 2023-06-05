@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8ed0bc79c4acab0a",
+        "id": "63d83c3f1cf835bb",
         "type": "tabs",
         "children": [
           {
-            "id": "9143ee5b97579c87",
+            "id": "3e194cafe73634ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c89e7fec4ed6faa7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
+                "file": "3 Tools/Dirbuster.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -118,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "3 Tools/Dirbuster.md"
               }
             }
           }
@@ -143,36 +130,38 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "3e194cafe73634ab",
   "lastOpenFiles": [
+    "Z.md",
+    "3 Tools/Dirbuster.md",
+    "paste.md",
+    "Pasted image 20230403193603.md",
+    "Z Imagenes/Dirbuster.png",
+    "3 Tools/BurpSuite.md",
+    "3 Tools/1 Code.md",
+    "3 Tools/Wireshark.md",
+    "3 Tools/SQLMap.md",
+    "3 Tools/Nmap.md",
+    "3 Tools/Nikto.md",
+    "3 Tools/Nessus.md",
+    "3 Tools/Metasploit.md",
+    "3 Tools/John the Ripper.md",
+    "3 Tools/Hydra.md",
+    "3 Tools/Hashcat.md",
+    "3 Tools/GitTools.md",
+    "3 Tools/Ffuf, Gobuster, Wfuz.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
     "7 Hack4u - Course/8 Pivoting/1. Pivoting.md",
     "Z Imagenes/Pasted image 20230605024736.png",
     "Z Imagenes/Pasted image 20230605024702.png",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
-    "3 Tools/SQLMap.md",
-    "3 Tools/Metasploit.md",
     "1 Linux & Windows Commands/Msfvenom.md",
     "7 Hack4u - Course/8 Pivoting",
-    "3 Tools/Nmap.md",
     "2 Ports/80, 443, 8080, 5000 - WEB.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
-    "3 Tools/Dirbuster.md",
     "README.md",
     "6 Informe/Report Hack4u.md",
     "6 Informe/Report TCM.md",
     "1 Linux & Windows Commands/1 Linux Commands.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/2 Return.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/3 Horizontal.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/4 Love.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/5 NodeBlog.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/6 NunChucks.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/7 GoodGames.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/8 Driver.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/9 ToolBox.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/10 Antique.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/1. Sudoers.md",
-    "3 Tools/1 Code.md",
     "Z Imagenes/Pasted image 20230531125838.png",
     "Pasted image 20230531123628.png",
     "Z Imagenes/Pasted image 20230531123804.png",
@@ -180,7 +169,6 @@
     "Z Imagenes/Pasted image 20230531123516.png",
     "Z Imagenes/Pasted image 20230531123435.png",
     "Z Imagenes/Pasted image 20230531123342.png",
-    "Z Imagenes/Pasted image 20230531123312.png",
     "7 Hack4u - Course/7 Buffer Overflow",
     "4 Linux & Windows Escalation/Hack4u/Windows Escalation",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Untitled",
