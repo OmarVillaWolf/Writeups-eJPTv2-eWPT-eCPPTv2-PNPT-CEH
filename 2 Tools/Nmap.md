@@ -20,6 +20,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	#  Pn = Indica que no aplique el protocolo ARP
 	#  Target IP = Dirección IP que se quiere escanear
 	#  oG allPorts = Exporta el output a un fichero grepeable con nombre “allPorts”
+	#  oX = Exporta el output a un fichero XML con nombre 'allPorts'
 ```
 
 ```bash
