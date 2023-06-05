@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u - Course/8 Pivoting/1. Pivoting.md",
+                "file": "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u - Course/8 Pivoting/1. Pivoting.md"
+                "file": "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md"
               }
             }
           }
@@ -159,9 +159,22 @@
   },
   "active": "3e194cafe73634ab",
   "lastOpenFiles": [
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/1. Pivoting.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/1. IMF 1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/2. Casino Royale 1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/5. Infovore 1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/4. Presidential 1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/3. Symfonos 6.1.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/6 Matrix.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/7 Brainpan.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/5 Dumbledore.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/4 Fawkes.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/1 DarkHole2.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting",
     "Pasted image 20230605171832.png",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
-    "7 Hack4u - Course/8 Pivoting/1. Pivoting.md",
     "1 Linux & Windows Commands/1 Linux Commands.md",
     "7 Hack4u - Course/7 Buffer Overflow/2 Lab Immunity Debuger.md",
     "3 Tools/Dirbuster.md",
@@ -175,27 +188,15 @@
     "3 Tools/SQLMap.md",
     "3 Tools/Nmap.md",
     "3 Tools/Nikto.md",
-    "3 Tools/Nessus.md",
-    "3 Tools/Metasploit.md",
-    "3 Tools/John the Ripper.md",
-    "3 Tools/Hydra.md",
-    "3 Tools/Hashcat.md",
-    "3 Tools/GitTools.md",
-    "3 Tools/Ffuf, Gobuster, Wfuz.md",
     "Z Imagenes/Pasted image 20230605024736.png",
     "Z Imagenes/Pasted image 20230605024702.png",
-    "1 Linux & Windows Commands/Msfvenom.md",
     "7 Hack4u - Course/8 Pivoting",
-    "2 Ports/80, 443, 8080, 5000 - WEB.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
-    "README.md",
     "Z Imagenes/Pasted image 20230531125838.png",
     "Pasted image 20230531123628.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123516.png",
     "Z Imagenes/Pasted image 20230531123435.png",
-    "Z Imagenes/Pasted image 20230531123342.png",
     "7 Hack4u - Course/7 Buffer Overflow",
     "4 Linux & Windows Escalation/Hack4u/Windows Escalation",
     "3 Linux & Windows Escalation/Hack4u/Linux Escalation/Untitled",
@@ -203,7 +204,6 @@
     "AWS-Architect",
     "Z Anexos PDF/Apoyo CAP 1 NIST 800-115.pdf",
     "Untitled 1",
-    "AWS Architect",
-    "Z Anexos PDF/Apoyo CAP 1 Hacking Basic.pdf"
+    "AWS Architect"
   ]
 }
