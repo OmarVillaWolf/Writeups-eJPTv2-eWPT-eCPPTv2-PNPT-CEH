@@ -8,19 +8,46 @@
         "type": "tabs",
         "children": [
           {
+            "id": "bb29a51282539896",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6b5b89fa736080ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Linux & Windows Commands/1 Linux Commands.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "3e194cafe73634ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 Tools/Dirbuster.md",
+                "file": "7 Hack4u - Course/8 Pivoting/1. Pivoting.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -105,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 Tools/Dirbuster.md"
+                "file": "7 Hack4u - Course/8 Pivoting/1. Pivoting.md"
               }
             }
           }
@@ -132,8 +159,13 @@
   },
   "active": "3e194cafe73634ab",
   "lastOpenFiles": [
-    "Z.md",
+    "Pasted image 20230605171832.png",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
+    "7 Hack4u - Course/8 Pivoting/1. Pivoting.md",
+    "1 Linux & Windows Commands/1 Linux Commands.md",
+    "7 Hack4u - Course/7 Buffer Overflow/2 Lab Immunity Debuger.md",
     "3 Tools/Dirbuster.md",
+    "Z.md",
     "paste.md",
     "Pasted image 20230403193603.md",
     "Z Imagenes/Dirbuster.png",
@@ -150,8 +182,6 @@
     "3 Tools/Hashcat.md",
     "3 Tools/GitTools.md",
     "3 Tools/Ffuf, Gobuster, Wfuz.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
-    "7 Hack4u - Course/8 Pivoting/1. Pivoting.md",
     "Z Imagenes/Pasted image 20230605024736.png",
     "Z Imagenes/Pasted image 20230605024702.png",
     "1 Linux & Windows Commands/Msfvenom.md",
@@ -159,9 +189,6 @@
     "2 Ports/80, 443, 8080, 5000 - WEB.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
     "README.md",
-    "6 Informe/Report Hack4u.md",
-    "6 Informe/Report TCM.md",
-    "1 Linux & Windows Commands/1 Linux Commands.md",
     "Z Imagenes/Pasted image 20230531125838.png",
     "Pasted image 20230531123628.png",
     "Z Imagenes/Pasted image 20230531123804.png",
