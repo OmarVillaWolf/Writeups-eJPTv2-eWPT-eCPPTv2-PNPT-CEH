@@ -15,6 +15,10 @@ Esta herramienta sirve para enumerar directorios
 
 * Otra forma de usar Dirbuster de manera no grafica
 ```bash
-❯ dirb http://<IP>
+❯ dirb http://<IP> /usr/share/seclists/Discovery/Web-Content/Directory-list-2.3-medium.txt -X .php
+
+	# X = Buscar por una extencion especifica
+	# Ruta del diccionario 
+	# IP = Maquina a fuzear
 ```
 
