@@ -1,6 +1,6 @@
 # Bash ❮❯
 
-Tags: #Comandos #Shell 
+Tags: #Comandos #BashShell 
 
 ## Aplicar Filtros 
 
@@ -26,8 +26,23 @@ Cuando recibimos un output, podamos mostrar solo el segundo argumento
 	# Queremos que todo lo que inicie con espacio seguido de nada, me lo quite 
 ```
 
-Por si el comando ping no esta disponible
+Para ir descubriendo interfaces con el comando ping 
+```bash 
+!#/bin/bash 
+
+for i in $(seq 1 254); do
+	timeout 1 bash -c "ping -c 1 10.10.0.$i" &>/dev/null && echo "[+] Host 10.10.0.$i - ACTIVE" &
+done; wait  
+```
+
+Por si el comando ping no esta disponible, podemos hacerlo por los puertos mas comunes 
 ```bash
-❯ echo ‘’ > /dev/tcp/172.16.0.1/22) 2>/dev/null && echo “[+] Puerto abierto” || echo “[+] Puerto cerrado”
+!#/bin/bash 
+
+for i in $(seq 1 254); do
+	for port in 21 22 80 443 445 8080; do
+		timeout 1 bash -c "echo '' > /dev/tcp/10.10.0.$i/$port" &>/dev/null && echo "[+] Host 10.10.0.$i - PORT $port - OPEN" &
+	done 
+done; wait 
 ```
 
