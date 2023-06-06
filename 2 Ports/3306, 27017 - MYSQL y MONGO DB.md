@@ -19,7 +19,7 @@ Nos conectamos a la base de datos de esta manera
 ```bash
 ❯  mysql -u ❮User❯ -p                          # Nos conectamos y le proporcionamos la password encontrada en el archivo anterior
 
-	> show ❮DBs❯;                                    # Muestra todas las bases de datos existentes
+	> show databases;                                # Muestra todas las bases de datos existentes
 	> use ❮DB_name❯;                                 # Usamos una base de datos especifica
 	> show tables;                                   # Mostramos el contenido de las tablas de la base de datos elegida
 	> describe ❮Table_name❯;                         # Miramos que columnas existen
