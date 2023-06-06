@@ -33,6 +33,17 @@ Cuando estamos en una **restricted bash** (rbash) podemos meter comandos en el s
 	bash                                          # Colocamos bash como comando, podremos interactuar aunque no nos de una pseudo-consola. Pero podemos hacer un tratamiento de la consola Linux
 ```
 
+```bash 
+❯ ssh-keygen                                                     # Creamos una clave publica y una clave privada en nuestra maquina de atacante 
+❯ cat ~/.ssh/id_rsa.pub | tr -d '\n' | xclip -sel clip           # Miramos el contenido de nuestra clave publica    
+	# ~ = /home/omar/...
+	# tr = Quitar el salto de linea
+	# xclip = Copiarno el output en la clipboard
+
+# El resultado lo pegaremos en el archivo que crearemos con nombre 'authorized_keys' en la ruta de la maquina victima que es /root/.ssh
+❯ nano authorized_keys
+```
+
 Descargando el Script, podemos enumerar usuarios 
 ```bash
 ❯ searchsploit ssh user enumeration                # Es un exploit en Python2 que lo podemos enocntrar con SearchSploit y debe ser <7.7 de version para que funcione
