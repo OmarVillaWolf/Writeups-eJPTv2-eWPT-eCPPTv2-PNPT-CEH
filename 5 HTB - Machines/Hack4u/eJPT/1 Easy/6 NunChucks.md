@@ -40,7 +40,9 @@ Nos pide que ingresemos un email, al momento de hacerlo vemos que nos devuleve e
 Por lo que estamos frente a un **Server Side Template Injection** en node.js, por lo que procedemos a buscar en **Google** (**node.js** **nunjunks** **ssti** **(https://disse.cting.org/2016/08/02/2016-08-02-sandbox-break-out-nunjucks-template-engine)**) el cual nos dara ejemplos de como usar esa vulnerabilidad.
 
 Encontramos estos comando para poder introducisrlos en la pagina web.
-{{7*7}}@test.com Si nos muestra la respuesta en este caso 49, estamos ante un SSTI, colocamos el @test.com por que es un requisito de que lo que entra es un correo electronico.
+```ruby
+{{7*7}}@test.com            # Si nos muestra la respuesta en este caso 49, estamos ante un SSTI, colocamos el @test.com por que es un requisito de que lo que entra es un correo electronico.
+```
 
 Ahora en la misma pagina de nunjunks nos dice que comando podemos colocar para poder injectar un comando
 ❯ **{{range.constructor("return global.process.mainModule.require('child_process').execSync('tail /etc/passwd')")()}}@test.com**
