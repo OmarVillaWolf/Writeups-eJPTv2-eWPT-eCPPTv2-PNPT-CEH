@@ -9,6 +9,10 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ```bash 
+❯ nmap --top-ports 500 -open -T5 -v -n ❮Target IP❯
+```
+
+```bash 
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn ❮Target IP❯  -oG allPorts
 
 	#  p = Escanea todos los puertos (65535)
