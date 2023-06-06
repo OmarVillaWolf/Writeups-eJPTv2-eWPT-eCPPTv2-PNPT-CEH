@@ -114,7 +114,7 @@ Go trabaja muy bien con Sockets y conexiones
 ```bash
 ❯ gobuster dir -u https://miwifi.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 --add-slash -b 403,404
 
-	# dir -> Modo enumeracion directory/file
+	# dir -> Modo enumeracion directorios y archivos 
 	# u -> Colocamos la url
 	# t -> Lanzar peticiones en paralelo al mismo tiempo
 	# w -> Ruta del diccionario
