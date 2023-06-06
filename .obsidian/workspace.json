@@ -58,22 +58,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "9c6d0bf34668f8b9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md"
+                "file": "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md"
               }
             }
           }
@@ -183,44 +170,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "9c6d0bf34668f8b9",
+  "active": "3e194cafe73634ab",
   "lastOpenFiles": [
+    "1 Linux & Windows Commands/4 Hacking/Chisel - Port Forwarding.md",
+    "7 Hack4u/6 OWASP TOP 10/4 LFI.md",
+    "7 Hack4u/6 OWASP TOP 10/3 XXE.md",
+    "7 Hack4u/6 OWASP TOP 10/2 XSS.md",
+    "7 Hack4u/6 OWASP TOP 10/1 SQLI.md",
+    "AWS-Architect/1.IAM-CLI.md",
+    "AWS-Architect/2..md",
+    "11 PortSwigger/SSRF.md",
+    "Z Imagenes/Hacking/SSRF.png",
+    "11 PortSwigger/SQLI.md",
+    "11 PortSwigger/Directory Path Traversal.md",
+    "10 Red - Team THM/1 Fundamentals/Untitled.md",
+    "9 CEH v12/1 Conceptos Hacking.md",
+    "8 TCM - PNPT/6 Wireless Penetration Testing/6 Wireless Penetration Testing.md",
+    "8 TCM - PNPT/5 OWASP Top 10/5 OWASP Top 10.md",
+    "8 TCM - PNPT/4 Web Appliaction Enumeartion/4 Web Application Enumeration.md",
+    "8 TCM - PNPT/3 Post Explotation/3 Post Explotation.md",
+    "8 TCM - PNPT/2 Active Directory/2 Acitve Directory.md",
+    "8 TCM - PNPT/1 Buffer Overflow/1 Buffer Overflow.md",
+    "7 Hack4u/7 Buffer Overflow/3 Fase Inicial Fuzzing.md",
+    "7 Hack4u/7 Buffer Overflow/2 Lab Immunity Debuger.md",
+    "7 Hack4u/7 Buffer Overflow/1 Intro BufferOverflow.md",
+    "3 Tools/Metasploit.md",
+    "7 Hack4u/5 Enumeracion y Explotacion/2 Payloads.md",
+    "1 Linux & Windows Commands/4 Hacking/ReverShell.md",
+    "1 Linux & Windows Commands/4 Hacking/Msfvenom.md",
+    "7 Hack4u/5 Enumeracion y Explotacion/1 ReverShell.md",
+    "Z Imagenes/Hacking/Piv2.png",
+    "Z Imagenes/Hacking/Piv1.png",
+    "Pasted image 20230606022516.png",
     "Z Imagenes/Hacking/DB8.png",
     "Z Imagenes/Hacking/DB7.png",
     "Z Imagenes/Hacking/DB6.png",
     "Z Imagenes/Hacking/DB5.png",
     "Z Imagenes/Hacking/DB4.png",
     "Z Imagenes/Hacking/DB3.png",
-    "Z Imagenes/Hacking/DB2.png",
-    "Z Imagenes/Hacking/DB1.png",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
-    "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
-    "1 Linux & Windows Commands/4 Hacking/Chisel - Port Forwarding.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
-    "4 Linux & Windows Escalation/TCM/Priv Escalation Windows.md",
-    "4 Linux & Windows Escalation/TCM/Priv Escalation Linux.md",
-    "4 Linux & Windows Escalation/Hack4u/Windows Escalation/Windows Escalation.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/12. Secuestro de Biblioteca.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/11. Binarios Especificos.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/10. Servicios Internos.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/8. Kernel.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/6. Permisos incorrectos.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/5. Python Library Hijacking.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/7. Capabilities.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/4. Path Hijacking.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/3. Tareas CRON.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/2. SUID.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/1. Sudoers.md",
-    "3 Tools/Wireshark.md",
-    "3 Tools/SQLMap.md",
-    "3 Tools/Nmap.md",
-    "3 Tools/Nikto.md",
-    "3 Tools/Nessus.md",
-    "Z Imagenes/Hacking/SQUID.png",
-    "Pasted image 20230606022516.png",
-    "Z Imagenes/SSRF.png",
     "Z Imagenes/Hacking",
     "Z Imagenes/CEH",
     "Z Imagenes/AWS",
