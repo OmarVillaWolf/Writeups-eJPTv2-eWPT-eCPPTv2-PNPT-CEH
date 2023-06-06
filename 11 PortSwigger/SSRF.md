@@ -22,7 +22,7 @@ Todos los lab se hacen metiendonos a 'View Details' y con **BurpSuite** podemos 
 
 ### Lab 1 Basic SSRF against the local server 
 
-![SSRF | 400](SSRF.png)
+[![SSRF.png](https://i.postimg.cc/Thv2NTdm/SSRF.png)](https://postimg.cc/n9TtCbQc)
 
 
 Debemos de ingresar a http://localhost/admin
