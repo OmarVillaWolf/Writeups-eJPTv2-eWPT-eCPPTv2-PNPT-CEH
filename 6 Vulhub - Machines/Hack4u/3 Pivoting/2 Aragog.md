@@ -341,4 +341,4 @@ Forma de verificar
 ❯ proxychains nmap -sT -Pn --top-ports 500 -open -T5 -v -n ❮Target IP❯ 2>/dev/null      # Este nos ayudara que el comando pase por el tunel creado por chisel 
 ```
 
-![](Pasted%20image%2020230606000420.png)
+[![Pasted%20image%2020230606000420.png](https://i.postimg.cc/XN1zQ39m/Pasted%20image%2020230606000420.png)](https://postimg.cc/LhfD8cC3)
