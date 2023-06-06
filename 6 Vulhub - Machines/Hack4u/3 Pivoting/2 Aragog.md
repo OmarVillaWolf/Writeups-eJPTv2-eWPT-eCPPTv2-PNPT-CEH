@@ -338,6 +338,7 @@ sock5 127.0.0.1 1080
 
 Forma de verificar 
 ```bash 
-❯ proxychains nmap -sT -Pn --top-ports 500 -open -T5 -v -n ❮Target IP❯ 2>/dev/null      # Este nos ayudara que el comando pase por el tunel creado por chisel 
+❯ proxychains nmap -sT -Pn --top-ports 500 -open -T5 -v -n ❮Target IP❯ 2>/dev/null      # Proxychains nos ayudara que el comando pase por el tunel creado por chisel 
 ```
 
+Por es es importante seguir con lo que hemos estado llevando ....l. bla bla bla 
