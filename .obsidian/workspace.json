@@ -58,9 +58,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9c6d0bf34668f8b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -170,12 +183,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "3e194cafe73634ab",
+  "active": "9c6d0bf34668f8b9",
   "lastOpenFiles": [
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
+    "2 Ports/3128 - SQUID.md",
+    "2 Ports/1433 - MSSQL.md",
+    "2 Ports/873 - RSYNC.md",
+    "2 Ports/445, 139- SMB.md",
+    "2 Ports/389 - LDAP.md",
+    "2 Ports/161 - SNMP.md",
+    "2 Ports/135 - RPC.md",
+    "2 Ports/113 - IDENTD.md",
+    "2 Ports/111 - NFS.md",
+    "2 Ports/110, 995 - POP3.md",
+    "2 Ports/80, 443, 8080, 5000 - WEB.md",
+    "2 Ports/69 - TFTP.md",
+    "2 Ports/53 - DNS.md",
+    "2 Ports/25, 465, 587, 2525 - SMTP.md",
+    "2 Ports/23 - Telnet.md",
+    "2 Ports/22 - SSH.md",
+    "2 Ports/20 - 21 FTP.md",
+    "1 Linux & Windows Commands/Tratamiento TTY.md",
+    "1 Linux & Windows Commands/SearchSploit.md",
+    "1 Linux & Windows Commands/ReverShell.md",
+    "1 Linux & Windows Commands/Msfvenom.md",
     "1 Linux & Windows Commands/Chisel - Port Forwarding.md",
+    "1 Linux & Windows Commands/2 Windows Commands.md",
     "1 Linux & Windows Commands/1 Linux Commands.md",
+    "9 CEH v12/5 Anonimato, Reconocimiento.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
     "Pasted image 20230606000420.png",
     "8 TCM - PNPT\\6 Wireless Penetration Testing",
     "8 TCM - PNPT\\5 OWASP Top 10",
@@ -187,28 +222,6 @@
     "7 Hack4u\\6 OWASP TOP 10",
     "7 Hack4u\\5 Enumeracion y Explotacion",
     "7 Hack4u\\4 Servicios y Gestores",
-    "3 Tools/Nmap.md",
-    "2 Ports/111 - NFS.md",
-    "2 Ports/113 - IDENTD.md",
-    "2 Ports/135 - RPC.md",
-    "2 Ports/161 - SNMP.md",
-    "2 Ports/389 - LDAP.md",
-    "2 Ports/873 - RSYNC.md",
-    "2 Ports/445, 139- SMB.md",
-    "2 Ports/6379 - REDIS.md",
-    "2 Ports/5985 - WINRM.md",
-    "2 Ports/5800, 5900 - VNC.md",
-    "2 Ports/4555 - RSIP.md",
-    "2 Ports/3389 - RDP.md",
-    "2 Ports/3306, 27017 - MYSQL y MONGO DB.md",
-    "1 Linux & Windows Commands/Bash/Bash.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/3. Tareas CRON.md",
-    "2 Ports/22 - SSH.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/2. SUID.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/1. Sudoers.md",
-    "9 CEH v12/4.md",
     "Pasted image 20230605171832.png",
     "Z Imagenes/Dirbuster.png",
     "Z Imagenes/Pasted image 20230605024736.png",
