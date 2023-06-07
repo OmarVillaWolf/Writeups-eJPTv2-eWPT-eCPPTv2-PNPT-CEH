@@ -8,6 +8,11 @@
     - 80 -> 
     - 8080 -> 
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **whatweb http://< URL>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
 - Comando -> **whatweb http://< URL>:< PUERTO>** – Nos dara una breve descripcion del gestor de contenidos por puerto especifico
