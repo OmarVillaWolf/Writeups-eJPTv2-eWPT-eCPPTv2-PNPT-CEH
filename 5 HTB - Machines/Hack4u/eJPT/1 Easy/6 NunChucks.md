@@ -10,6 +10,11 @@ Tags: #Linux #HTTPS #Fuzzing #SSTI #Capabilities #Nmap
     - 80 -> HTTP nginx 1.18.0
     - 443 -> HTTPS nginx 1.18.0
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 Launchpad 4ubuntu0.3 -> Bionic
 Launchpad nginx 1.18.0 -> Hirsuite 
