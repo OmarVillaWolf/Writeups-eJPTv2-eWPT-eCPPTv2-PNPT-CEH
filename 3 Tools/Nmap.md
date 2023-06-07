@@ -2,9 +2,14 @@
 
 Tags: #Nmap #Escaneo #UDP #TCP 
 
-```bash
-❯ nmap ❮Target_IP/24❯                      # Para escanear toda la red
+```bash 
+❯ nmap -PR -sn ❮Target_IP/24❯              # Usara ARP para escanear la red
+```
 
+```bash
+❯ nmap ❮Target_IP/24❯                      # Para escanear toda la red en la Capa 3 del modelo OSI 
+
+	# Protocolo usado ICMP Ping y mira si el host esta activo o no
 	# Target IP = El rango de direccion a escanear 1.1.1.0/24 (Debe terminar en 0 con /24)
 ```
 
@@ -13,8 +18,9 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ```bash 
-❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn ❮Target IP❯  -oG allPorts
+❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn ❮Target IP❯  -oG allPorts       # Escaneo en la Capa 4 del modelo OSI
 
+	# Protocolo usado TCP, UDP
 	#  p = Escanea todos los puertos (65535)
 	#  open = Muestra solo los puertos con un estatus “open”
 	#  sS = Aplica un TCP SYN Scan
