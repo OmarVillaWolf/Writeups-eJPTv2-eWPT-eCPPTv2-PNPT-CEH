@@ -9,6 +9,11 @@ Y
     -  -> 
     -  -> 
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **crackmapexec smb {ip_targeted}** Para listar recursos compartidos de Windows. Enotramos un Windows 7 x64
 - Comando -> **nmap --scripts “vuln and safe” -p< PORT> < TARGET IP> -oN < FILENAME>** Lanzara vulnerabilidades que no sean muy intrusivas de tipo seguro, va a mandar scripts al puerto 445 para saber si tiene alguna vulnerabilidad que podamos explotar y encontramos el ms17-010 Ethernal Blue
