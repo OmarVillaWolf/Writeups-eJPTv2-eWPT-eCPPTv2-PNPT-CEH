@@ -8,6 +8,11 @@ Esta maquina es dificil en un punto final que no terminamos de escribir
     - 22 -> OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 -> Xenial
     - 3000 -> Apache Hadoop
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **whatweb http://< URL:PORT>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
 - Comando -> **searchsploit ssh user enumeration** Buscamos vulnerabilidades, si encontramos con .py mucho mejor, tenemos que encontrar con la version de ssh 7.2 en python2
