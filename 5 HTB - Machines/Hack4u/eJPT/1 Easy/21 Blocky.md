@@ -12,6 +12,11 @@ Y
 		Did not follow redirect to http://blocky.htb
     - 25565 -> minecraft 1.11.2
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **whatweb http://blocky.htb** Para analizar su gestor de contenido 
 Miramos su pagina web para ver si podemos encontrar algo especifico como su panel de autenticacion:
