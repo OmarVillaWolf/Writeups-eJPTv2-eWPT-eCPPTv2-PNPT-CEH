@@ -9,6 +9,11 @@
     - 445 ->
     - 5000 ->
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon 
 - Comando -> **Whatweb < http:// IP Address>** = Microsoft IIS 10.0
 - Comando -> **Whatweb < http:// IP Address> -v** Miramos las cabeceras de la pagina web
