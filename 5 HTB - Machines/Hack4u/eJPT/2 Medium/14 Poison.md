@@ -7,6 +7,11 @@
     - 22 -> OpenSSH 7.2
     - 80 -> Apache httpd 2.4.29
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **whatweb http://< URL>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
 Que es FreeBSD: Es un sistema de codigo abierto para computadoras basado en las CPU de arquitectura x86, Pentium. En la actualidad se ejecuta en once arquitectiras distintas como Alpha, AMD64, IA-64, MISP, PowerPC y UltraSPARC.
