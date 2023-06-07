@@ -7,6 +7,11 @@
     - 22 -> SSH Openssh 7.2p2
     - 80 -> HTTP Apache Httpd 2.4.18 -> WordPress 4.7.3, La version mas actual de WordPress es la 6.0
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 Launchpad SSH Openssh 7.2p2 4ubuntu2.1 -> Para saber el Codename Xenial
 Launchpad Apache 2.4.18 ->  Xenial
