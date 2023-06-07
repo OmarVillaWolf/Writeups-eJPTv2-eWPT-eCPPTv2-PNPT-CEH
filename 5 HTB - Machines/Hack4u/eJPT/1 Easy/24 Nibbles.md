@@ -9,6 +9,11 @@ Y
     - 22 -> OpenSSH 7.2p2  
     - 80 -> Apache httpd 2.4.18 
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 Podemos enumerar usuarios con ese version de SSH, ya que es inferior a la version **7.7** 
 Buscaremos con el codename **OpenSSH 7.2p2 ubuntu 4ubuntu2.2 launchpad** y veremos que version de Linux es: Xenial
