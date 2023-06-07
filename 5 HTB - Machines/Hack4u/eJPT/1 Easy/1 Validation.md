@@ -12,6 +12,9 @@ Tags: #Linux #SQLI #BurpSuite #ReverShell #PHP #Nmap
     - 4566 -> http nginx / Forbidden
 
 Launchpad -> Focal
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
 
 ## Recon
 
@@ -92,7 +95,7 @@ Primero haremos la prueba colocando lo que sea en un archivo .php
 
 # Podemos crear un archivo llamado 'file.php' en la ruta html que contenga un cmd que nos interpretara comandos. Primero podemos hacer una prueba, colocando lo que sea en donde esta la parte de System.
 
-# Despues debemos de colocar en la url: **\http://1.1.1.1/prueba.php?cmd=whoami**
+# Despues debemos de colocar en la url: \http://1.1.1.1/prueba.php?cmd=whoami
 	# 1.1.1.1 -> IP de la victima
 	# whoami -> Comando a usar, estos pueden ir variando
 	# Pero podemos hacer un archivo de PHP Reverse ...
