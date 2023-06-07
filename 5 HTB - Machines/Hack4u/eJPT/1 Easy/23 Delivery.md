@@ -10,6 +10,11 @@ Y
     -  80 ->  http nginx 1.14.2
     -  8065 -> http webpage Mattermost
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **whatweb http://< URL>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
 Miramos la pagina web para ver que podemos encontrar
