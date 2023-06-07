@@ -8,7 +8,10 @@ N
 - Services & Applications
     - 21 -> Ftp 
     - 80 -> Microsoft IIS 7.5
- 
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - 21 -> Anonymous login allowed
 
