@@ -9,6 +9,11 @@
     - 80 -> http launchpad -> Para ver que distribucion de Linux es
     - 4555 -> rsip
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **whatweb http://< URL>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
 - Comando -> **nc 10.10.10.51 4555** Nos conectamos al puerto 4555 por netcat, nos muestra un James Remote Administratio Tool 2.3.2, el cual podemos encontar sus default passwd en Internet, este es un servico Apache
