@@ -10,6 +10,11 @@ Tags: #Windows #SMB #WinRM #ReverShell #Netcat #NetUser  #Nmap
     - 445 -> SMB
     - 5985 -> WinRM
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 Windows IIS (10.0)
 
