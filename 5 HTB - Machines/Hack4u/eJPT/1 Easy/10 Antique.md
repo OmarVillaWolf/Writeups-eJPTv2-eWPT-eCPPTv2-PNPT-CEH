@@ -9,6 +9,11 @@ Tags: #UDP #Chisel #PortForwarding #GCC #Telnet #Linux #UDP #SNMP #Chisel #CUPS 
     - 23 -> Telnet
     - 161 -> SNMP 
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 
 ```bash 
