@@ -13,6 +13,11 @@ Tags: #SMB #FTP #BurpSuite #HTTPS #PostgreSQL #Netcat #Docker #Contenedor #Windo
     - 445 -> SMB
     - 5985 -> WinRM
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 
 ```bash
