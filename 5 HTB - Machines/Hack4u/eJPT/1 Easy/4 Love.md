@@ -9,6 +9,11 @@ N
     - 80 -> Apache httpd 2.4.46 
     - 443 -> HTTPS
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 
 ```bash
