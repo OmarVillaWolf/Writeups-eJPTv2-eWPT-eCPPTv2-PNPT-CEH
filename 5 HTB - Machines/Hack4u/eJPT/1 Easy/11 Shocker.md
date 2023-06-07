@@ -11,9 +11,10 @@ Tags:  #Linux #HTTP #ShellShock #Sudoers #Fuzzing #Nmap
 
 ## Launchpad
 
-* 80 -> Xenial 
-* 2222 -> Xenial
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
 
+* 80 -> Apache httpd 2.4.18  -> Xenial 
+* 2222 -> OpenSSH 7.2p2  -> Xenial
 
 ## Recon
 
