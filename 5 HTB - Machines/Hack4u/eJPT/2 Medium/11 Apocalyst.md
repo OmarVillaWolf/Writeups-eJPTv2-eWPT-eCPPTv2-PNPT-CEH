@@ -7,6 +7,11 @@
     - 22 -> Open SSH 7.2p2 Ubuntu 4ubuntu2.2
     - 80 -> WordPress 4.8
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 Webpage 
 - **/etc/host** Colocar la ruta ahi, porque esta aplicando virtual hosting
