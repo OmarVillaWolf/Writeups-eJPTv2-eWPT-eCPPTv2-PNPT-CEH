@@ -12,6 +12,11 @@ Y
     - 139 -> netbios-ssn
     - 445 -> samba microsoft-ds Windows server 2008 R2 - 2012 microsoft-ds
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **ftp 10.10.10.152** Ingresamos por FTP y ahi podemos encontrar la flag de user.txt
 - Comando -> **crackmapexec smb {ip_targeted}** Para ver si podemos listar los servicios de Windows del puerto 445 y nos sale Netmon 
