@@ -8,6 +8,11 @@
     - 80 -> HTTP nginx 1.18.0
     - 443 -> HTTPS nginx 1.18.0
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 Openssh 8.21p1 4ubuntu0.3 Launchpad -> Focal
 - Comando -> **whatweb http://< URL>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
