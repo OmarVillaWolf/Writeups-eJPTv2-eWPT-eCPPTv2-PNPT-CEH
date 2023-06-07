@@ -11,6 +11,11 @@ Tags: #SMB #SCF #John #Hash #Windows #WinRM #WinPEAS #Nmap
     - 445 -> SMB
     - 5985 -> WinRM
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 ```bash
 ❯ whatweb ❮http://IP❯                  # Nos dara una breve descripcion del gestor de contenidos del puerto 80
