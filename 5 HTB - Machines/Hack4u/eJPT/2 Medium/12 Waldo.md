@@ -7,6 +7,11 @@
     - 22 -> Open SSH 7.5
     - 80 -> http nginx 1.12.2
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **whatweb http://< URL>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
 
