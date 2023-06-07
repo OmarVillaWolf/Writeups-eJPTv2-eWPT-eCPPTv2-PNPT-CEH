@@ -11,6 +11,11 @@ N
 ## Paginas de ayuda
 * PayloadAllTheThings: [PayloasAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 ```bash 
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn ❮Target IP❯  -oG allPorts
