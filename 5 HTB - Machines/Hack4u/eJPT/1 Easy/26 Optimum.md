@@ -9,6 +9,11 @@ N
     -  -> 
     -  -> 
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 - Comando -> **whatweb http://< URL>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
 - Comando -> **searchsploit HFS 2.3** Buscamos vulnerabilidades, si encontramos con .py mucho mejor
