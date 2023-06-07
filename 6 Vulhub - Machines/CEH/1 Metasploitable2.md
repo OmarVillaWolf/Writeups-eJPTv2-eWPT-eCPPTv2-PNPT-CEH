@@ -13,8 +13,6 @@ Tags:
 
 -   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
 
-
-
 ## Recon
 
 
