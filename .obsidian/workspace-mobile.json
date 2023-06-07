@@ -1,0 +1,176 @@
+{
+  "main": {
+    "id": "3a68e251c384db7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "46dcf955fb8e3e40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "341972c80df5b245",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Kitty.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "39779ba3e1b41512",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "2a0ad217615bfec7",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "2910f17057270722",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "80741cc98ea2b0b9",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "1818e488a063ce05",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "0927fb18097148fe",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "cd58730c805336e3",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "1 Kitty.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "66109cf93d044e13",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "1 Kitty.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "209d666f7cf55626",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "1 Kitty.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "341972c80df5b245",
+  "lastOpenFiles": [
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
+    "7 Hack4u/4 Enumeracion y Explotacion/3 Explotacion.md",
+    "1 Kitty.md",
+    "Z Imagenes/Pasted image 20230522174842.png",
+    "Z Imagenes/Hacking/DB5.png",
+    "Z Imagenes/Pasted image 20230507173451.png",
+    "7 Hack4u/5 OWASP TOP 10/22 ShellShock.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/26 Optimum.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
+    "10 PortSwigger/SSRF.md",
+    "7 Hack4u/5 OWASP TOP 10/31 Des-YAML.md",
+    "Z Imagenes/Pasted image 20230524113435.png",
+    "Z Imagenes/Pasted image 20230528170353.png",
+    "Z Imagenes/Pasted image 20230531123435.png",
+    "Z Imagenes/Pasted image 20230528181718.png",
+    "1 Linux & Windows Commands/4 Hacking/Tratamiento TTY.md",
+    "7 Hack4u/5 OWASP TOP 10/15 Latex.md",
+    "7 Hack4u/2 Reconocimiento/5 ARP e ICMP.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/8. Kernel.md",
+    "Z Imagenes/Pasted image 20230530142040.png",
+    "Z Imagenes/Hacking/DB8.png",
+    "Z Imagenes/Pasted image 20230506144457.png",
+    "9 CEH v12/1 Conceptos Hacking.md",
+    "2 Ports/445, 139- SMB.md",
+    "7 Hack4u/5 OWASP TOP 10/30 CSS o CSSI.md",
+    "1 Linux & Windows Commands/3 Docker/2 Estructura.md",
+    "7 Hack4u/5 OWASP TOP 10/24 IDORs.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/4 Fawkes.md",
+    "7 Hack4u/5 OWASP TOP 10/18 Prototype Pollution.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/21 Blocky.md",
+    "7 Hack4u/3 Servicios y Gestores/7 Drupal.md",
+    "1 Linux & Windows Commands/3 Docker/6 Port Forw y Mount.md",
+    "7 Hack4u/5 OWASP TOP 10/25 CORS.md",
+    "1 Linux & Windows Commands/3 Docker/5 Gestion Contenedores.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/12. Secuestro de Biblioteca.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/5 Dumbledore.md",
+    "Z Anexos CEH PDF/Apoyo CAP 1 Hacking Basic.pdf",
+    "Z Anexos CEH PDF/Apoyo CAP 1 NIST 800-115.pdf",
+    "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf"
+  ]
+}
