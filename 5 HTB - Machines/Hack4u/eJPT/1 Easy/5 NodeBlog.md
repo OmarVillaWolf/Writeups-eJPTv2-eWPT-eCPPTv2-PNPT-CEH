@@ -9,6 +9,11 @@ N
     - 22 -> OpenSSH 8.2p1 Ubuntu 4ubuntu0.3
     - 5000 -> http Nose.js
 
+
+## Launchpad
+
+-   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+
 ## Recon
 ❯ **nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.10.11.139  -oG allPorts**
 ❯ **nmap -sCV -p22,5000 10.10.11.139 -oN targeted**
