@@ -46,4 +46,4 @@ Activamos el modo VI en la consola de comandos
 **Ctrl + k** Cortar
 **Ctrl + u** Pegas
 **Ctrl + x** Salir
-**Ctrl + o** Guardas
+**Ctrl + s** Guardas
