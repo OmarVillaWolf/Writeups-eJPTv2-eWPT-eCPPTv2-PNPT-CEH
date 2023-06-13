@@ -100,12 +100,16 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash
-❯ arp-scan -I ens33 --localnet --ignoredups              # Para hacer un escaneo de la red 
+❯ arp-scan -I ens33 --localnet --ignoredups       # Para hacer un escaneo de la red local, no puedes encontrar mas usuarios despues del router que no pertenecen a tu red
 
+	# Escaneamos la Capa 3 del modelo OSI con el protocolo ARP el cual lo hacer por medio de Broadcast en un segmento de la red, y provee el MAC Address
 	# I = i mayuscula; es la interface ens33
-	# ignoredups = Ignora IPs duplicadas 
+	# ignoredups = Ignora IPs duplicadas
+	 
+	# apt install arp-scan  = Instalar ARP-Scan
 ```
 
+* [IP-Address-Calculator](https://www.ipaddressguide.com/cidr)
 
 **Tip: Si nos dan una IP 192.168.11.2/24 con esa mascara que seria de clase C, podriamos hacer el escaneo con una mascara de clase B -> asi 192.168.0.0/16 en lugar de 192.168.11.0/24**
 ```bash
