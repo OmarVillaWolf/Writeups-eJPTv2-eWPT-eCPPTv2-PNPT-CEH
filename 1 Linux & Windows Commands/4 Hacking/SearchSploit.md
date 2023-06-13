@@ -1,6 +1,6 @@
 # Searchsploit
 
-Tags: #Enumeracion 
+Tags: #Enumeracion #SearchSploit
 
 Podemos usar esta herramienta para buscar exploits y ver si alguno nos puede ayudar a la explotacion del sistema
 
