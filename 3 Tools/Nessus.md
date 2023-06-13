@@ -1,5 +1,7 @@
 # Nessus 
 
+Tags: #Nessus #Escaneo 
+
 Windows cmd Administrator
 ```bash
 ❯ net start "Tenable Nessus"                  # Activamos Nesus
