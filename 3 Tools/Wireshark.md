@@ -1,5 +1,7 @@
 # Wireshark 
 
+Tags: #Wireshark 
+
 ```bash
 ❯ wireshark &> /dev/null & disown                 # Ejecutamos el Wireshark y lo independizamos para seguir ocupando la terminal 
 ❯ wireshark ❮File.cap❯ &> /dev/null & disown      # Le pasamos la captura .cap y la abrimos en Wireshark
