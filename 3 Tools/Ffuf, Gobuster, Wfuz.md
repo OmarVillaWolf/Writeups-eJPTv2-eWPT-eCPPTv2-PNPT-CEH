@@ -1,4 +1,7 @@
 # Diferentes tipos de Fuzzers 
+
+Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing 
+
 Modo directorio: Listar los directorios y archivos 
 	**/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt**
   **/usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt**
