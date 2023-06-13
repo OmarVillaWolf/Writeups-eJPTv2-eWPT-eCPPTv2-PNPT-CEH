@@ -57,6 +57,10 @@ $7$	          -> Scrypt
 ```bash
 ❯ zip2john File.zip > hash                      # Para que nos devuelva el Hash y asi despues poderlo crackear, el resultado lo metemos dentro de un archivo llamado 'hash'
 
+❯ jhon -w:/usr/share/wordlists/rockyou.txt hash # Usando jhon y el diccionario rockyou, romperemos el hash obtenido anteriormente
+```
+
+```bash 
 ❯ fcrackzip -p /usr/share/wordlists/rockyou.txt -b -u File.zip -D # Nos crackea el hash y nos proporciona la passwd 
 	# p = Init-passwd-string 
 	# b = Bruteforce
