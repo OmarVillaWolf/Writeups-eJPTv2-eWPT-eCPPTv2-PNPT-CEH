@@ -4,6 +4,8 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ```bash 
 ❯ nmap -PR -sn ❮Target_IP/24❯              # Usara ARP para escanear la red
+
+❯ nmap -sn ❮Target_IP/24❯                  # Usara ARP para escanear la red
 ```
 
 ```bash
