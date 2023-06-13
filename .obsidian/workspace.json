@@ -8,38 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bb29a51282539896",
+            "id": "c63e0e2b05cec1b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3e194cafe73634ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6b5b89fa736080ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
+                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/13 Jerry.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -52,14 +26,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/80, 443, 8080, 5000 - WEB.md",
+                "file": "6 Vulhub - Machines/Youtube Simu eJPT/Maquina 1.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "aa5445152b48c388",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -144,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md"
+                "file": "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md"
               }
             }
           }
@@ -169,34 +157,36 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "bb29a51282539896",
+  "active": "aa5445152b48c388",
   "lastOpenFiles": [
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
-    "1 Kitty.md",
-    "2 Ports/80, 443, 8080, 5000 - WEB.md",
-    "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
-    "7 Hack4u/5 OWASP TOP 10/6 LFI a RCE.md",
-    "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
-    "7 Hack4u/5 OWASP TOP 10/4 LFI.md",
-    "3 Tools/Ffuf, Gobuster, Wfuz.md",
-    "3 Tools/Nmap.md",
-    "6 Vulhub - Machines/Udemy/eJPT/4 Darkhole2.md",
-    "6 Vulhub - Machines/Udemy/eJPT/3 Devguru.md",
-    "6 Vulhub - Machines/Udemy/eJPT/2 Lupin.md",
-    "6 Vulhub - Machines/Udemy/eJPT/1 Breakout.md",
-    "6 Vulhub - Machines/TCM/5 Butler.md",
-    "6 Vulhub - Machines/TCM/4 Dev.md",
-    "6 Vulhub - Machines/TCM/6 Black Pearl.md",
-    "6 Vulhub - Machines/TCM/3 Academy.md",
-    "6 Vulhub - Machines/TCM/2 Blue.md",
-    "6 Vulhub - Machines/TCM/1 Kioptrix level 1.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/7 Brainpan.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/6 Matrix.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/5 Dumbledore.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/4 Fawkes.md",
+    "1 Linux & Windows Commands/3 Docker/1 Instalacion Linux.md",
+    "1 Linux & Windows Commands/3 Docker/5 Gestion Contenedores.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/13 Jerry.md",
     "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
-    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/3. Symfonos 6.1.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/9. Grupos especiales.md",
+    "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/6. Permisos incorrectos.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/2. SUID.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/1. Sudoers.md",
+    "4 Linux & Windows Escalation/Hack4u/Windows Escalation/Windows Escalation.md",
+    "3 Tools/John the Ripper.md",
+    "1 Linux & Windows Commands/4 Hacking/Tratamiento TTY.md",
+    "1 Linux & Windows Commands/4 Hacking/ReverShell.md",
+    "1 Linux & Windows Commands/4 Hacking/Msfvenom.md",
+    "3 Tools/Ffuf, Gobuster, Wfuz.md",
+    "3 Tools/Metasploit.md",
+    "1 Linux & Windows Commands/3 Docker/6 Port Forw y Mount.md",
+    "1 Linux & Windows Commands/3 Docker/7 Docker-Compose.md",
+    "3 Tools/BurpSuite.md",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/2 Symfonos1.md",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/1 DarkHole2.md",
+    "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/13. Docker Breakout.md",
+    "7 Hack4u/5 OWASP TOP 10/33 GraphQL.md",
+    "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf",
+    "6 Vulhub - Machines/Youtube Simu eJPT",
     "Z Imagenes/Hacking/SSRF.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
@@ -214,8 +204,6 @@
     "8 TCM - PNPT\\6 Wireless Penetration Testing",
     "8 TCM - PNPT\\5 OWASP Top 10",
     "8 TCM - PNPT\\4 Web Appliaction Enumeartion",
-    "8 TCM - PNPT\\3 Post Explotation",
-    "8 TCM - PNPT\\2 Active Directory",
-    "8 TCM - PNPT\\1 Buffer Overflow"
+    "8 TCM - PNPT\\3 Post Explotation"
   ]
 }
