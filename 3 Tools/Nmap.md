@@ -3,15 +3,19 @@
 Tags: #Nmap #Escaneo #UDP #TCP 
 
 ```bash 
-❯ nmap -PR -sn ❮Target_IP/24❯              # Usara ARP para escanear la red
+❯ nmap -PR -sn ❮IP/24❯              # Usara ARP para escanear la red
 
-❯ nmap -sn ❮Target_IP/24❯                  # Usara ARP para escanear la red
+❯ nmap -sn ❮IP/24❯                  # Usara ARP para escanear la red
 ```
 
 ```bash
-❯ nmap ❮Target_IP/24❯                      # Para escanear toda la red en la Capa 3 del modelo OSI 
+❯ nmap ❮IP/24❯                      # Para escanear toda la red
 
-	# Protocolo usado ICMP Ping y mira si el host esta activo o no
+❯ nmap ❮IP/24❯ --reason <IP.1>      # Escanea toda la red pero trae informacion detallada de esa IP especifica 
+
+	# reason = Ademas nos ayuda a saber que host tenemos up o down 
+	# Escaneo TCP Completo
+	# Protocolo usado Ping ARP y mira si el host esta activo o no
 	# Target IP = El rango de direccion a escanear 1.1.1.0/24 (Debe terminar en 0 con /24)
 ```
 
@@ -25,7 +29,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	# Protocolo usado TCP, UDP
 	#  p = Escanea todos los puertos (65535)
 	#  open = Muestra solo los puertos con un estatus “open”
-	#  sS = Aplica un TCP SYN Scan
+	#  sS = Aplica un TCP SYN Scan (Rapido, Fiable, Sigiloso)
 	#  min-rate 5000 = Indica que quiero emitir paquetes no más lentos que 5000 paquetes por segundo
 	#  vvv = Muestra la información en pantalla a medida que se descubre
 	#  n = Indica que no aplique resolución DNS
@@ -90,4 +94,55 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ```bash 
 ❯ nmap --script http-shellshock --script-args uri=/cgi-bin/user.sh -p80 10.10.10.56    # Ver si es vulnerable a ShellShock
+```
+
+
+----
+## Opciones de Nmap
+
+```python
+# SYN        -> TCP envia 1 paquete 
+# ACK        -> Confirmacion
+# FIN        -> Origen (acaba)
+# RST        -> Error (Politica de seguridad) no permite ICMP (Ping) -  IP Tables - Logs
+# PSH        -> No se almacena en un Buffer, los paquetes que llegan los va procesando (Cache - Running - Real Time Apps)
+# URG        -> Macht a x segmentos y da prioridad
+
+
+# OPEN       -> Podemos interactuar con ese puerto abierto (Servicio)
+# CLOSED     -> Nmap con el TWH muestra el puerto cerrado (politicas), pero con tecnicas de evasion podriamos vulnerarlo
+# FILTERED   -> Existe una herramienta de seguridad intermediaria (FW, IDS, IPS) que filtra los paquetes
+# OPEN FILTERED -> Nmap no sabe si el puerto esta abierto o filtrado, cuando envia el SYN lo detecta y detecta una herramienta 
+# CLOSED FILTERED -> Nmap no sabe si esta cerrado, filtrado o lo estan usando para escaneo de la IP
+
+
+# TCP CONNECT SCAN - Tecnica completa de Scan - SYN Scan, puede ser detectado por los FW
+# SCAN SYN - Abreviado (SYN - SYN ACK - RST) - Silencioso
+❯ nmap <IP>   # Aqui si se completa la sesion en el Three Way Handshake (Demorado, evidencia)
+
+# UDP Scan - Escaneo lento
+-sU          # Escaneo por UDP (DHCP - 67 servidor / 68 Cliente)
+
+# NULL, FIN, XMAS Scan - paquetes = 0 - Para evasion de Firewall, ya que los Firewall no examinan paquetes con flag apagados
+-sN          # Evasion de Firewall o IDS
+-sX          # Evasion de Firewall un XMAS
+-sF          # Escaneo NULL, escaneo FIN (Inicie el escaneo y finalicelo), cuando queremos engañar HonneyPots
+
+-sT          # Sirve para cerrar la conexion (Menos eficiente en el escaneo), sirve para el Firewall 
+-sW          # Estudia el Firewall de Windows (Mira la sintaxis, politicas, etc... bloquea), trata de alcanzar los puertos y conectar (Tarda mucho tiempo)
+
+# Flags
+-A           # Escaneo agresivo, traer mas informacion 
+-sA          # Escaneo tipo TCP ACK, forzara a que el destino envie el ACK (Agresivo)
+-O           # Sistema Operativo
+-v           # Verbose, cada que encuentre algo que nos lo reporte por consola, podemos tener hasta (-vvv)
+-n           # Evita la resolucion de DNS inverso por ende, aceleras el proceso
+-sS          # Aplican un escaneo TCP SYN Scan (Rapido, Fiable, Sigiloso), pero no se completa la session de TWH
+-sT          # Sirve para cerrar la conexion (Menos eficiente en el escaneo), sirve para el Firewall 
+-p           # Escaneo a puertos, -p- Todos los puertos, -p-65535, -p 1-500 Ciertos puertos
+-T4          # Temporizador (0, 1, 2, 3, 4, 5) la velocidad el escaneo
+-PE          # Peticiones ICMP de modo 'echo', solo se envia cuando haga ping a un host 
+-PP          # Utiliza peticiones tipe stand, nos trae las librerias que tengan esos puertos, aveces trae algoritmos criptograficos
+-PM          # 
+-PS          # Enviamos paquetes con el bit de control SYN y que nos diga si hay o no respuesta 
 ```
