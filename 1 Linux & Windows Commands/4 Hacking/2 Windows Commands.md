@@ -1,9 +1,17 @@
 # Comandos Windows ❮❯
 
-Tags: #Windows #Comandos
+Tags: #Windows #Comandos 
 
 ```bash
 C:\Windows\Temp                              # Directorios con capacidad de escritura en Windows
+```
+
+```bash 
+❯ cd DOCUME~1                                # Para ir a un dir que tenga espacios en su nombre 'Documents and settings', debemos de colocar las 6 primeras letras 
+```
+
+```bash 
+❯ systeminfo                                 # Nos muestra la informacion del Windows
 ```
 
 ```bash
