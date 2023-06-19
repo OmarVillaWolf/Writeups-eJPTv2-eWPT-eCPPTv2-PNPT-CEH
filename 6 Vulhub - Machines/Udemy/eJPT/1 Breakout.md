@@ -16,19 +16,19 @@
 
 Cosas a tomar en cuenta en una WebPage:
 	- Errores de codigo, dejan olvidada alguna cosa dentro de la pagina
-	- Ctrl + u -> Para ver el codigo de la WebPage y encontrar alguna pista en todo su codigo
+	- Ctrl + u -> Para ver el codigo de la WebPage y encontrar alguna pista en todo su código
 	- 
 
 
 ## Recon
-- **ifconfig** Para ver nuestra direccion IP '192.168.68.108'
-- **nmap 192.168.68.1/24** Hacemos eso para que nmap pueda buscar direcciones IP en nuestro entorno, ademas de exponer sus servicios, asi como mostrar que tipo de dispositivo es y asi podremos encontrar la maquina de VulHub '192.168.68.111'
+- **ifconfig** Para ver nuestra dirección IP '192.168.68.108'
+- **Nmap 192.168.68.1/24** Hacemos eso para que Nmap pueda buscar direcciones IP en nuestro entorno, además de exponer sus servicios, así como mostrar que tipo de dispositivo es y así podremos encontrar la maquina de VulHub '192.168.68.111'
 
 - **nmap -sV -p- 192.168.68.111** 
 	- sV -> Detectamos la version y los servicios activos 
 	- -p- ->Escaneo de todos los puertos TCP
 
-Encontramos en la pagina web por el puerto 80 en su codigo fuente una encriptacion, por lo que nos disponemos a desencriptar.
+Encontramos en la pagina web por el puerto 80 en su código fuente una encriptacion, por lo que nos disponemos a desencriptar.
 Ahora nos disponemos a verificar los otros dos puertos http que son el 10000 y 20000 en la WebPage
 
 Miramos que en el puerto 20000 tenemos un login, por lo que tendriamos la passwd pero nos falta el usuario. Por lo que nos disponemos a hacer enumeracion de la sigueinte manera.
