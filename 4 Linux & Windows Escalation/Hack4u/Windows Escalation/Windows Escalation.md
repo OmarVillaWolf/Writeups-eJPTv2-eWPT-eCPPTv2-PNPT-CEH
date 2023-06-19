@@ -25,6 +25,9 @@ En WinPeas podemos encontrar las siguientes vulnerabilidades
 ❯  whoami /all                               # Miramos todos los privilegios
 ```
 
+Nos descargamos el de la siguiente pagina:
+* [Juicy-Potato-Server-2003](https://binaryregion.wordpress.com/2021/08/04/privilege-escalation-windows-churrasco-exe/)
+
 ```bash
 ❯ systeminfo                                 # Nos copiamos todo lo que nos salga con ese comando y usaremos un programa llamado '' para deterctar vulnerabilidades en un equipo Windows, todo desde nuestra maquina Linux con el archivo que hemos creado con ese informacion obtenida.
 ```
