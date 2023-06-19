@@ -17,7 +17,7 @@ A continuación, se os comparte el enlace al proyecto de Github el cual estaremo
 
 ## Escenarios 
 
-1. Podemos subir un archivo  sin importar que no sea la extencion mencionada ya que la web no esta sanitizada en ninguna parte. 
+1. Podemos subir un archivo  sin importar que no sea la extensión mencionada ya que la web no esta sanitizada en ninguna parte. 
 * Podemos crear nuestros scripts en **cmd.php**, cabe mencionar que la web debe tener como 'Programming Languages = PHP'
 ```php 
 <?php
@@ -26,18 +26,18 @@ A continuación, se os comparte el enlace al proyecto de Github el cual estaremo
 ```
 
 
-3. Podemos subir un archivo, la web esta sanitizada ya que esta aplicando una validacion a la extencion del archivo.
-* Debemos de ver en  donde se esta aplicando la validacion, si es en el 'Servidor o Cliente en nuestro navegador'
+3. Podemos subir un archivo, la web esta sanitizada ya que esta aplicando una validación a la extensión del archivo.
+* Debemos de ver en  donde se esta aplicando la validación, si es en el 'Servidor o Cliente en nuestro navegador'
 
 ![](Pasted%20image%2020230509161842.png)
 
 ![](Pasted%20image%2020230509161627.png)
 
-Cuando la validacion es en **nuestro navegador web**. Podemos eliminar toda esa parte de 'onsubmit' y esto hara que ya no exista la validacion. Eso se encuentra en el inspector en la parte de 'Upload'
+Cuando la validación es en **nuestro navegador web**. Podemos eliminar toda esa parte de 'onsubmit' y esto hará que ya no exista la validación. Eso se encuentra en el inspector en la parte de 'Upload'
 
 
-10. Nos dice que subir archivos PHP estan prohibidos 
-* Nos damos cuenta que la validacion la hace el **servidor**, ya que miramos que al momento de subir el archivo php nos hace un 'Redirect'
+10. Nos dice que subir archivos PHP están prohibidos 
+* Nos damos cuenta que la validación la hace el **servidor**, ya que miramos que al momento de subir el archivo php nos hace un 'Redirect'
 * [HackTricks-PHP](https://book.hacktricks.xyz/pentesting-web/file-upload) En esta web podemos ver algunas alternativas a la extension PHP
 
 ![](Pasted%20image%2020230509162940.png)
@@ -51,17 +51,17 @@ Para esta ocasion debemos de subir otro tipo de extensiones como 'pht, phtm...' 
 ![](Pasted%20image%2020230509164104.png)
 
 
-12. Nos dice que subir archivos PHP estan prohibidos 
+12. Nos dice que subir archivos PHP están prohibidos 
 * No nos dejara subir archivos .php3, .php4 ... ni algunas extensiones como lo son .pht, .phtm, .phtml...
 
-Debemos de aplicar una politica para poder decir que cuando subamos un archivo, este pueda ser interpretado por PHP. Y o haremos con '.htaccess'
-**.htaccess**: Conocido como archivo de configuracion distribuida, es un fichero especial, popularizado por el servido HTTP Apache que permite definir diferentes directivas de configuracion para cada directorio sin necesidad de editar el archivo de configuracion principal de Apache. 
+Debemos de aplicar una política para poder decir que cuando subamos un archivo, este pueda ser interpretado por PHP. Y o haremos con '.htaccess'
+**.htaccess**: Conocido como archivo de configuración distribuida, es un fichero especial, popularizado por el servido HTTP Apache que permite definir diferentes directivas de configuración para cada directorio sin necesidad de editar el archivo de configuración principal de Apache. 
 
 * [Bypass-Filter-Upload](https://thibaud-robin.fr/articles/bypass-filter-upload/)
 
 ![](Pasted%20image%2020230509165455.png)
 
-En lugar de subir un archivo con alguna de las extenciones. Podemos hacer lo siguiente:
+En lugar de subir un archivo con alguna de las extensiones. Podemos hacer lo siguiente:
 
 ![](Pasted%20image%2020230509165622.png)
 
