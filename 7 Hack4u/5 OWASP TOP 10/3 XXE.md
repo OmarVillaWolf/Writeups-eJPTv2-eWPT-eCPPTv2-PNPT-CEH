@@ -30,7 +30,7 @@ A continuación, se proporciona el enlace al proyecto de Github correspondiente 
 ![00x200](Pasted%20image%2020230420210113.png)  ![00x200](Pasted%20image%2020230420210246.png)
 ![00x350](Pasted%20image%2020230420211907.png)
 ![00x280](Pasted%20image%2020230420212052.png)
-Tambie podemos explotar
+También podemos explotar
 ![00x400](Pasted%20image%2020230421134216.png)
 
 ## XML en la web
