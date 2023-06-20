@@ -32,22 +32,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6b06bbc8b066adb5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 Vulhub - Machines/Youtube Simu eJPT/Maquina 1.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -132,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Vulhub - Machines/Youtube Simu eJPT/Maquina 1.md"
+                "file": "6 Vulhub - Machines/CEH/1 Metasploitable2.md"
               }
             }
           }
@@ -157,23 +144,27 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "6b06bbc8b066adb5",
+  "active": "192788ec2f23df15",
   "lastOpenFiles": [
-    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/2. SUID.md",
     "6 Vulhub - Machines/Youtube Simu eJPT/Maquina 1.md",
+    "3 Tools/Hashcat.md",
+    "3 Tools/John the Ripper.md",
+    "2 Ports/3306, 27017 - MYSQL y MONGO DB.md",
+    "3 Tools/Metasploit.md",
+    "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
+    "4 Linux & Windows Escalation/Hack4u/Linux Escalation/2. SUID.md",
     "4 Linux & Windows Escalation/Hack4u/Linux Escalation/10. Servicios Internos.md",
     "4 Linux & Windows Escalation/Hack4u/Linux Escalation/Linux Escalation.md",
     "4 Linux & Windows Escalation/Hack4u/Linux Escalation/3. Tareas CRON.md",
     "2 Ports/80, 443, 8080, 5000 - WEB.md",
     "3 Tools/Hydra.md",
-    "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/14 Granny.md",
     "1 Linux & Windows Commands/4 Hacking/2 Windows Commands.md",
     "4 Linux & Windows Escalation/Hack4u/Windows Escalation/Windows Escalation.md",
     "4 Linux & Windows Escalation/TCM/Priv Escalation Windows.md",
     "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
     "1 Linux & Windows Commands/4 Hacking/SearchSploit.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
     "6 Vulhub - Machines/TCM/2 Blue.md",
     "5 HTB - Machines/Hack4u/eJPT/2 Medium/1 Jeeves.md",
     "6 Vulhub - Machines/TCM/1 Kioptrix level 1.md",
@@ -181,10 +172,6 @@
     "3 Tools/Nmap.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/13 Jerry.md",
     "9 CEH v12/CEH TIPS.md",
-    "3 Tools/Metasploit.md",
-    "7 Hack4u/2 Reconocimiento/3 Nmap - Firewalls Evasion.md",
-    "9 CEH v12/3 Fundamentos de seguridad.md",
-    "1 Linux & Windows Commands/1 OverTheWire/2 Archivos Especiales.md",
     "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf",
     "6 Vulhub - Machines/Youtube Simu eJPT",
     "Z Imagenes/Hacking/SSRF.png",
