@@ -5,10 +5,21 @@ Tags: #HashCat
 * Siempre se debe de ejcutar Hashcat fuera de la maquina virtual, ya que si no iria muy lento.
 
 ```bash
-❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt 
+❯ hashcat --help     # Nos muestra el panel de ayuda de la tool y algunos ejemplos
 
-	# m = 0 = MD5
+❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt
+❯ hashcat -m 400 -a 0 hash.txt /usr/share/wordlists/rockyou.txt 
+
+	# m 
+		# 0 = MD5
+		# 400 = $P$
 	# hashes.txt = Archivo que contiene el hash
+```
+
+```bash 
+❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt --show
+
+	# show = Muestra las passwd que ya han sido crackeadas 'historial'
 ```
 
 ```bash
