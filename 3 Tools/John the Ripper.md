@@ -26,6 +26,7 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 
 ID	Cryptographic Hash Algorithm
 ```bash
+$P$            -> Hash
 $1$	          -> MD5
 $2a$	          -> Blowfish
 $5$	          -> SHA-256
