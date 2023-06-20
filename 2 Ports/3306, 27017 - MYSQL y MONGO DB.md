@@ -16,6 +16,14 @@ Asi se conforma una base de datos
 
 
 Nos conectamos a la base de datos de esta manera 
+```bash 
+❯  mysql -u root -p -h <IP>
+
+	# h = Host
+	# u = User
+	# p= passwd    -> Dar enter, root, admin -> Passwd por defecto
+```
+
 ```bash
 ❯  mysql -u ❮User❯ -p                          # Nos conectamos y le proporcionamos la password encontrada en el archivo anterior
 
