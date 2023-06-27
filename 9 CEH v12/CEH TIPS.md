@@ -1,4 +1,4 @@
-# CEH TIPS
+# CEH TIPS Practical 
 
 
 
@@ -49,4 +49,31 @@ Tarea: Vulnerar el servicio 139 netbios-ssn, 5900 vnc, 445 smb, 23 Telnet
 Servicio de Windows 
 * MSRPC - Enumerar ese servicio
 * Microsoft-ds - Enumerar el servicio 
+----
+Mallware 
+
+* Llave Simétrica .- Passwd simétrica - Texto plano 
+* Llave Roamy .- Clave root o privilegiado
+* Llave Crypto - Encriptado bajo protocolo de encriptación - SHA256
+
+---
+### Capítulo 9 
+
+```bash 
+# Práctico 
+
+Wireshark  
+
+	❯ 
+```
+
+```bash
+# Teorico 
+
+* Un sniffer trabaja de paquete completo o fragmentado? Trabaja de manera fragmentada y por secuencia
+* 
+```
+
+---
+### Capítulo 10
 
