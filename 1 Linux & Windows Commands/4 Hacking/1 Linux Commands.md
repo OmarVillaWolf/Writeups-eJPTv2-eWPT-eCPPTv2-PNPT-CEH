@@ -99,6 +99,19 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ hostname -I                                # Nos muestra solo la direccion IP
 ```
 
+```bash 
+❯ ip a                                       # Miras la IP que tienes asignada 
+❯ ifconfig                                   # Miras la IP asignada en Linux
+❯ ipconfig                                   # Miras la IP asignada en Windows
+```
+
+```bash 
+❯ netdiscover -i ens33 -r <IP/24>            # funciona enviando solicitudes ARP
+
+	# i = Interface 
+	# r = range 
+```
+
 ```bash
 ❯ arp-scan -I ens33 --localnet --ignoredups       # Para hacer un escaneo de la red local, no puedes encontrar mas usuarios despues del router que no pertenecen a tu red
 
