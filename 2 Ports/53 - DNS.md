@@ -28,6 +28,20 @@ A continuación, se proporciona el enlace correspondiente al proyecto de Github 
 
 -   **DNS-Zone-Transfer**: [https://github.com/vulhub/vulhub/tree/master/dns/dns-zone-transfer](https://github.com/vulhub/vulhub/tree/master/dns/dns-zone-transfer)
 
+Paginas de ayuda para el DNS Zone Transfer:
+* [DNSDumpster](https://dnsdumpster.com/)
+
+Registros DNS 
+* A            -       Resuelve un dominio de hostname de un IPV4
+* AAAA    -       Resuelve un dominio de hostname  de un IPV6
+* NS         -       Referencia a los dominios 'nombre del servidor'
+* MX        -       Resuelve un dominio al servidor de mail 
+* CNAME -      Usado para los alias de dominio
+* TXT       -       Registros de texto 
+* HINFO   -      Información del host 
+* SOA       -      Autoridad de dominio
+* SRV        -      Registros de servicio 
+* PTR        -      Resuelve una dirección IP de un hostname 
 
 ## Comandos 
 
@@ -43,4 +57,16 @@ A continuación, se proporciona el enlace correspondiente al proyecto de Github 
 ❯ dig axfr @<IP> <Domain>       # Para hacer el ataque de transferencia de Zona
 
 	# Dominio = Debemos de conocer el dominio anteriormente, ya que si no no funcionaria
+```
+
+```bash  
+❯ dnsrecon -d <domain.com>     # Para ver los registros (Servidores) 
+```
+
+```bash 
+❯ dnsenum zonetransfer.me      # Reconocimiento de registros (Servidores)
+```
+
+```bash 
+❯ fierce -dns <domain.com>     # Reconocimiento 
 ```
