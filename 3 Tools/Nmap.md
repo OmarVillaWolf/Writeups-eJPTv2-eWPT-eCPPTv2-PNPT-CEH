@@ -2,21 +2,37 @@
 
 Tags: #Nmap #Escaneo #UDP #TCP 
 
+
+### Discovery Host
+
 ```bash 
+❯ man nmap                          # Despliega el manual de nmap 
+```
+
+```bash 
+❯ nmap -sn ❮IP/24❯                  # Usara ARP para escanear la red y descubir los diferentes dispositivos en la red
 ❯ nmap -PR -sn ❮IP/24❯              # Usara ARP para escanear la red
 
-❯ nmap -sn ❮IP/24❯                  # Usara ARP para escanear la red
+	# sn = No escanea los puertos despues de descubir un host 'Se refiere a un escaneo de PING', es un ICMP, TCP SYNC
 ```
 
 ```bash
 ❯ nmap ❮IP/24❯                      # Para escanear toda la red
-
 ❯ nmap ❮IP/24❯ --reason <IP.1>      # Escanea toda la red pero trae informacion detallada de esa IP especifica 
 
-	# reason = Ademas nos ayuda a saber que host tenemos up o down 
-	# Escaneo TCP Completo
+	# Escaneo TCP Completo de los 1000 puertos mas frecuentes 
 	# Protocolo usado Ping ARP y mira si el host esta activo o no
 	# Target IP = El rango de direccion a escanear 1.1.1.0/24 (Debe terminar en 0 con /24)
+	# reason = Ademas nos ayuda a saber que host tenemos up o down 
+```
+
+
+### Port Scanning 
+
+```bash 
+❯ nmap -Pn <IP>
+❯ nmap -Pn -p443 <IP>
+❯ nmap -Pn -sV -p80 <IP> 
 ```
 
 ```bash 
@@ -24,6 +40,15 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ```bash 
+# Windows siempre bloquea los PING ICMP, por lo que debemos de agregar la sig. bandera
+❯ nmap -Pn -F -sVC -O ❮IP/24❯ -v                
+	# Pn = Identifica si el host esta activo 
+	# F = Escanea los 100 puertos mas usados 
+	# sV = Version 
+	# O = Sistema operativo 
+	# v = Verbose
+	# sC = Ejecuta una lista de scipts de Nmap
+
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn ❮Target IP❯  -oG allPorts       # Escaneo en la Capa 4 del modelo OSI
 
 	# Protocolo usado TCP, UDP
@@ -36,7 +61,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	#  Pn = Indica que no aplique el protocolo ARP
 	#  Target IP = Dirección IP que se quiere escanear
 	#  oG allPorts = Exporta el output a un fichero grepeable con nombre “allPorts”
-	#  oX = Exporta el output a un fichero XML con nombre 'allPorts'
+	#  oX = Exporta el output a un fichero XML con nombre 'allPorts.xml' para Metasploit
 ```
 
 ```bash
@@ -51,6 +76,8 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ```bash
 ❯ nmap -sU --top-ports 100 --open -T5 -v -n ❮Target IP❯     # Escaneo de puertos por UDP
+
+	# sU = Escaneo de UDP
 ```
 
 ```bash
@@ -97,7 +124,6 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 
-----
 ## Opciones de Nmap
 
 ```python
@@ -111,7 +137,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 # OPEN       -> Podemos interactuar con ese puerto abierto (Servicio)
 # CLOSED     -> Nmap con el TWH muestra el puerto cerrado (politicas), pero con tecnicas de evasion podriamos vulnerarlo
-# FILTERED   -> Existe una herramienta de seguridad intermediaria (FW, IDS, IPS) que filtra los paquetes
+# FILTERED   -> Existe una herramienta de seguridad intermediaria (FW, IDS, IPS) que filtra los paquetes, reglas de ruteo o que el puerto es de un host basado en un software de Firewall
 # OPEN FILTERED -> Nmap no sabe si el puerto esta abierto o filtrado, cuando envia el SYN lo detecta y detecta una herramienta 
 # CLOSED FILTERED -> Nmap no sabe si esta cerrado, filtrado o lo estan usando para escaneo de la IP
 
@@ -132,7 +158,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 -sW          # Estudia el Firewall de Windows (Mira la sintaxis, politicas, etc... bloquea), trata de alcanzar los puertos y conectar (Tarda mucho tiempo)
 
 # Flags
--A           # Escaneo agresivo, traer mas informacion 
+-A           # Escaneo agresivo, traer mas informacion ya que combina -O, -sC, -sV
 -sA          # Escaneo tipo TCP ACK, forzara a que el destino envie el ACK (Agresivo)
 -O           # Sistema Operativo
 -v           # Verbose, cada que encuentre algo que nos lo reporte por consola, podemos tener hasta (-vvv)
