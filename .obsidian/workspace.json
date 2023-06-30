@@ -8,12 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aa5445152b48c388",
+            "id": "00ab733a652cfb19",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
+                "file": "9 CEH v12/9 Sniffer.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "966ca07833f51b07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,20 +47,7 @@
             }
           },
           {
-            "id": "8051f6743e46ae24",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ba69b271522a60c1",
+            "id": "756aefab707efe02",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -60,20 +60,19 @@
             }
           },
           {
-            "id": "00ab733a652cfb19",
+            "id": "31a716a9f76dec0a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9 CEH v12/CEH TIPS.md",
+                "file": "2 Ports/20 - 21 FTP 134 - TFTP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -158,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9 CEH v12/CEH TIPS.md"
+                "file": "9 CEH v12/9 Sniffer.md"
               }
             }
           }
@@ -185,32 +184,32 @@
   },
   "active": "00ab733a652cfb19",
   "lastOpenFiles": [
-    "9 CEH v12/Cap 9.md",
+    "9 CEH v12/10 Ingeniería Social.md",
+    "9 CEH v12/9 Sniffer.md",
+    "9 CEH v12/CEH TIPS.md",
     "9 CEH v12/5 Reconocimiento activo.md",
+    "2 Ports/20 - 21 FTP 134 - TFTP.md",
+    "3 Tools/Wireshark - Tcpdump.md",
+    "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
     "9 CEH v12/4 Reconocimiento Pasivo.md",
-    "9 CEH v12/3 Fundamentos de seguridad.md",
     "9 CEH v12/2 Fundamentos Networking.md",
     "9 CEH v12/1 Conceptos Hacking.md",
-    "9 CEH v12/CEH TIPS.md",
-    "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
-    "3 Tools/Wireshark.md",
-    "6 Vulhub - Machines/Youtube Simu eJPT/2 SMB.md",
-    "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
-    "2 Ports/5800, 5900 - VNC.md",
-    "2 Ports/23 - Telnet.md",
-    "2 Ports/25, 465, 587, 2525 - SMTP.md",
-    "2 Ports/22 - SSH.md",
-    "2 Ports/80, 443, 8080, 5000 - WEB.md",
-    "3 Tools/Metasploit.md",
+    "9 CEH v12/3 Fundamentos de seguridad.md",
     "3 Tools/Nmap.md",
+    "6 Vulhub - Machines/Youtube Simu eJPT/2 SMB.md",
+    "2 Ports/135 - RPC.md",
+    "2 Ports/5985 - WINRM.md",
+    "2 Ports/445, 139- SMB.md",
+    "2 Ports/6379 - REDIS.md",
+    "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
     "6 Vulhub - Machines/Youtube Simu eJPT/1 WordPress.md",
+    "3 Tools/Metasploit.md",
+    "3 Tools/Hydra.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
-    "1 Linux & Windows Commands/4 Hacking/Msfvenom.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/15 Grandpa.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/14 Granny.md",
-    "1 Linux & Windows Commands/4 Hacking/2 Windows Commands.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/13 Jerry.md",
-    "2 Ports/53 - DNS.md",
+    "3 Tools/Ffuf, Gobuster, Wfuz.md",
+    "3 Tools/Dirbuster.md",
+    "2 Ports/80, 443, 8080, 5000 - WEB.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/18 Legacy.md",
     "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf",
     "6 Vulhub - Machines/Youtube Simu eJPT",
     "Z Imagenes/Hacking/SSRF.png",
