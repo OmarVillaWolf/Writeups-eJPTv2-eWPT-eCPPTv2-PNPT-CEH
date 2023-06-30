@@ -55,6 +55,8 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 	
 	# R = Traceroute, solo aplica en maquinas Linux
 	# c = Numero de ping 
+
+❯ fping -I ens33 -g <IP/24> -a 2>/dev/null # Manda un ping a multiples IP
 ```
 
 ```bash
