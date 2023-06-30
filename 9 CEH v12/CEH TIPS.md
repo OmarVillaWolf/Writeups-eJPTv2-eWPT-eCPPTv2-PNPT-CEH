@@ -23,7 +23,7 @@
 
 * Pasar archivos de Linux/Linux o Linux/Windows 
 
-# CEH TIPS
+# CEH TIPS PRACTICAL
 ## Tools a usar 
 
 * Nmap 
