@@ -2,8 +2,11 @@
 
 Tags: #Nmap #Escaneo #UDP #TCP 
 
+```bash 
+❯ zenmap                           # Es la version GUI de nmap
+```
 
-### Discovery Host
+### Host Discovery 
 
 ```bash 
 ❯ man nmap                          # Despliega el manual de nmap 
@@ -28,6 +31,10 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 
 ### Port Scanning 
+
+```bash
+❯ nmap -iL <IP_File> -sV -O        # Escanear un archivo con varias IP, Version y Sistema Operativo
+```
 
 ```bash 
 ❯ nmap -Pn <IP>
@@ -78,6 +85,10 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ❯ nmap -sU --top-ports 100 --open -T5 -v -n ❮Target IP❯     # Escaneo de puertos por UDP
 
 	# sU = Escaneo de UDP
+
+❯ nmap -sU -p1-250 ❮Target IP❯                 # Escaneo por UDP del 1 al 250
+❯ nmap -sUV -p134,177,234 ❮Target IP❯          # Muestra las versiones de los puertos de UDP
+❯ nmap -sUV -p134 ❮Target IP❯ --script=discovery    # Enumerar informacion 
 ```
 
 ```bash
@@ -87,6 +98,18 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	#  Target IP = Dirección IP que se quiere escanear
 	#  oN smbVulnScan = Exporta el output a un fichero en formato nmap con nombre “smbVulnScan”
 	#  vuln and safe = Detecta vulnerabilidades de forma segura, sin experimentar un DoS
+
+❯ nmap -p445 -sCV ❮Target IP❯                                # Para enumerar exaustiva al SMB 
+
+❯ nmap -p445 --script smb-protocols ❮Target IP❯              # Ver que protocolos se estan usando
+
+❯ nmap -p445 --script smb-security-mode ❮Target IP❯          # Ver si permite la autenticacion de usuarios sin passwd
+
+❯ nmap -p445 --script smb-enum-shares ❮Target IP❯            # Ver si hay directorios 
+
+❯ nmap -p445 --script smb-enum-users ❮Target IP❯             # Ver si hay usuarios 
+
+❯ nmap -p445 --script smb-enum-sessions ❮Target IP❯          # Ver si hay sesiones activas
 ```
 
 ```bash
