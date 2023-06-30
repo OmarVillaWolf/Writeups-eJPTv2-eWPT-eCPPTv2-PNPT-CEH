@@ -2,7 +2,7 @@
 
 Tags: #UDP #Chisel #PortForwarding #GCC #Telnet #Linux #UDP #SNMP #Chisel #CUPS #Nmap 
 
-- IP -> 10.10.11.107
+- IP -> 10.10.10.107
 - Ports -> TCP (23), UDP (161)
 - OS ->  Linux
 - Services & Applications
