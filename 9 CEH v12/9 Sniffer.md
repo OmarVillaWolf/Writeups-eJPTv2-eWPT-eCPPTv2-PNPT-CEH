@@ -3,6 +3,11 @@
 [![CAP-9-Hacking-Etico.png](https://i.postimg.cc/s2v2JQ49/CAP-9-Hacking-Etico.png)](https://postimg.cc/061xkN3b)
 [CAP_9_Hacking_Etico.pdf](https://github.com/OmarVillaWolf/Writeups-eJPTv2-eWPT-eCPPTv2-PNPT-CEH/files/11877964/CAP_9_Hacking_Etico.pdf)
 
+### Material de apoyo
+
+[APOYO CAP 9-Manual Wireshark.pdf](https://github.com/OmarVillaWolf/Writeups-eJPTv2-eWPT-eCPPTv2-PNPT-CEH/files/11920017/APOYO.CAP.9-Manual.Wireshark.pdf)
+[APOYO CAP 9-Analisis de paquetes con Wireshark estudio de vulnerabilidades.pdf](https://github.com/OmarVillaWolf/Writeups-eJPTv2-eWPT-eCPPTv2-PNPT-CEH/files/11920016/APOYO.CAP.9-Analisis.de.paquetes.con.Wireshark.estudio.de.vulnerabilidades.pdf)
+[APOYO CAP 9 -analisis trafico wireshark.pdf](https://github.com/OmarVillaWolf/Writeups-eJPTv2-eWPT-eCPPTv2-PNPT-CEH/files/11920015/APOYO.CAP.9.-analisis.trafico.wireshark.pdf)
 
 ## Tips ANSI
 
