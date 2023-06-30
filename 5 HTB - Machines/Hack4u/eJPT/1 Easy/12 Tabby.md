@@ -2,7 +2,7 @@
 
 Tags: #Linux #HTTP #SSH #Tomcat #LFI #DirectoryPathTraversal #Msfvenom #Base64 #John #GruposExpeciales #Lxd
 
-- IP -> 10.10.11.194
+- IP -> 10.10.10.194
 - Ports -> TCP (80, 22, 8080), UDP (idk)
 - OS ->  Linux
 - Services & Applications
