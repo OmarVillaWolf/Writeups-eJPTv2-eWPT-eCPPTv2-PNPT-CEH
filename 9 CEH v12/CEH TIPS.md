@@ -1,6 +1,43 @@
-# CEH TIPS Practical 
+# eJPTv2 TIPS
 
+## Tools a usar 
 
+* Nmap
+* Dirbuster
+* Metasploit
+* Wordpress
+* Joomla
+* SMB
+* Nikto
+* Crackmapexec
+* Hydra
+* Msfvenom
+* Searchsploit
+* Web application 
+* Pivoting
+
+* Diccionarios
+	* /usr/share/wordlists/rockyou.txt 
+	* /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
+	* /usr/share/metasploit-framework/data/wordlists/unix_users.txt
+
+* Pasar archivos de Linux/Linux o Linux/Windows 
+
+# CEH TIPS
+## Tools a usar 
+
+* Nmap 
+* Metasploit
+* Wireshark - Manual y debemos de hacer las practicas que vienen ahí
+* Tcpdump
+* THM E-Learning:
+	* Nmap
+	* Red Team 
+* THM Maquinas similares:
+	* Basic Pentesting
+	* Red Team Fundamentals 
+
+## Capítulo 1
 
 ---
 nmap [IP] - Aquí se hacer el Three Way Hanshake completo
@@ -57,7 +94,7 @@ Mallware
 * Llave Crypto - Encriptado bajo protocolo de encriptación - SHA256
 
 ---
-### Capítulo 9 
+### Capítulo
 
 ```bash 
 # Práctico 
@@ -67,13 +104,18 @@ Wireshark
 	❯ 
 ```
 
-```bash
-# Teorico 
+### Capítulo 9 Sniffer
 
-* Un sniffer trabaja de paquete completo o fragmentado? Trabaja de manera fragmentada y por secuencia
-* 
+* Practicar: Explotación - Malware - Sniffer
+
+```bash 
+# Practico Esto se hace en Wireshark
+x.x.x.x -> Retrasmision a c.c.c.c - Indique el puerto:   
+❯ tcp.options.eol y debemos ver el transmission Control Protocol, puerto origen y puerto destino
+# Se le llama trafico .eol
+# Es un tema de Sniffer
+	1. wireshark # Colocaremos Wireshark en la interfaz correcta y capturamos el trafico 
+	2. Filtramos el trafico y miramos el puerto o el servicio 
 ```
 
----
-### Capítulo 10
 
