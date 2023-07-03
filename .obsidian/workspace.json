@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9 CEH v12/10 Ingeniería Social.md",
+                "file": "9 CEH v12/11 Wireless Security.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -131,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9 CEH v12/10 Ingeniería Social.md"
+                "file": "9 CEH v12/11 Wireless Security.md"
               }
             }
           }
@@ -158,8 +158,8 @@
   },
   "active": "00ab733a652cfb19",
   "lastOpenFiles": [
-    "9 CEH v12/11.md",
     "9 CEH v12/10 Ingeniería Social.md",
+    "9 CEH v12/11 Wireless Security.md",
     "6 Vulhub - Machines/Youtube Simu eJPT/2 SMB.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
     "9 CEH v12/9 Sniffer.md",
