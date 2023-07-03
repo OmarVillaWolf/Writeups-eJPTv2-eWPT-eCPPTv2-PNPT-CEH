@@ -13,6 +13,21 @@
 
 ## Tips ANSI
 
-```bash 
+```bash
+# Conceptos 
 
+IETF               # Tiene diferentes estándar (RFC-2284)
+802.1i             # Protocolo Wireless
+EAP                # Extensible Authenthication Protocol
+WEP                # Wired Equivalent Privacy
+LEAP               # Lightweight EAP
+PEAP
+TTLS
+802.11i            # Protocolo con cifrado AES
+
+
+# Herramientas Wireless
+
+Airmac             # Nos ayuda a capturar trafico 
+AirSnort           # Escaneo de redes
 ```
