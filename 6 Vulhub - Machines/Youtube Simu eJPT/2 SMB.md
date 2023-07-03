@@ -154,15 +154,42 @@ Otra forma de ingresar es:
 	❯ set SMBPASS <passwd>                  # Colocamos la passwd de l usuario
 	❯ run
 
-	❯ sysinfo
-	❯ getuid
+	*❯ sysinfo                              # Nos muestra informacion de Windows 
+	*❯ getuid                               # Miras el usuario
+	*❯ getprivs                             # Miras los privilegios 
 	❯ help
 	❯ hashdump
 	❯ pgrep lsass                           # Buscamos el proceso
 	❯ migrate 464                           # migramos a ese proceso 
 	❯ hashdump                              # Dumpeamos los passwd 'hashes'
 	❯ ps                                    # Miramos todos los procesos
+	❯ net users                             # Para saber cuantos usuarios hay en Windows y serian todos los que aparezcan, aveces necesita de una Shell para poder usarse  
+	❯ search -f *.doc                       # Para buscar un archivo o varios archivos con una extension especifica
+	*❯ ipconfig 
+	
+
+	❯ shell
+	*❯ whoami
+	*❯ whoami /priv                         # Muestra los privilegios 
+	*❯ query user
+	*❯ net user administrator               # Mas info del usuario
+	*❯ net localgroup administrators
+	*❯ hostname                             # Nombre de la maquina 
+	*❯ systeminfo                           # Hostfix (Parches instalados)
+	*❯ arp -a                               # Miramos la tabla de ruteo
 ```
+\* Comandos importantes 
+
+```bash 
+❯ run arp_scanner -r <IP/24>                 # Para ver los host en esa IP
+```
+
+```bash 
+❯ run autoroute -s <IP/24>                      # Agregamos la IP a la route table
+```
+
+Después de obtener los hashes con Hashdump
+
 
 ## User
 
