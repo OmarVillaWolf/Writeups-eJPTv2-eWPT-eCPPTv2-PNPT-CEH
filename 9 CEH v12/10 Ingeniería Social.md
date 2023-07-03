@@ -15,3 +15,21 @@
 
 ## Tips ANSI
 
+```bash 
+# Categorias 
+
+Ataques Técnicos 
+Ataque al Ego
+Ataque de Simpatia
+Ataque de Intimidación 
+
+# Ataques de Ingenieria Social 
+Pretetxting 
+Dumpster Diving
+Shoulder Surfing
+Baiting 
+Phishing
+Smishing
+Vishing
+Sextorsión 
+```
