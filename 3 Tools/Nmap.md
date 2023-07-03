@@ -105,11 +105,29 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ❯ nmap -p445 --script smb-security-mode ❮Target IP❯          # Ver si permite la autenticacion de usuarios sin passwd
 
+❯ nmap -p445 --script smb-enum-sessions ❮Target IP❯          # Ver si hay sesiones activas
+❯ nmap -p445 --script smb-enum-sessions --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯        
+# Ver si hay sesiones activas, con un usuario y su passwd validos
+
 ❯ nmap -p445 --script smb-enum-shares ❮Target IP❯            # Ver si hay directorios 
+❯ nmap -p445 --script smb-enum-shares --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯          
+# Ver si hay directorios con un usuario y passwd validos 
 
 ❯ nmap -p445 --script smb-enum-users ❮Target IP❯             # Ver si hay usuarios 
+❯ nmap -p445 --script smb-enum-users --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯          
+# Ver si hay usuarios con un usuario y passwd validos 
 
-❯ nmap -p445 --script smb-enum-sessions ❮Target IP❯          # Ver si hay sesiones activas
+❯ nmap -p445 --script smb-server-stats --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
+# Ver las estadisticas del servidor, miramos cuanta data es enviada y recibida
+
+❯ nmap -p445 --script smb-enum-domains --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
+# Ver los dominios existentes
+
+❯ nmap -p445 --script smb-enum-groups --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
+# Ver los grupos existentes 
+
+❯ nmap -p445 --script smb-enum-services --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
+# Ver los servicios que estan corriendo
 ```
 
 ```bash
