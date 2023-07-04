@@ -213,9 +213,10 @@ Manera de descargar archivos en la maquina victima
 ❯ cat file | xclip -sel clip                # Para copiarnos el output a la Clipboard
 ```
 
-```bash
-❯ 7z l file.zip                              # Podemos ver el contenido interno del archivo zip, gz, bzip2, etc... (l=ele)
-❯ 7z x file.gz                               # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
+```python
+❯ 7z l <file.zip>                              # Podemos ver el contenido interno del archivo zip, gz, bzip2, etc... (l=ele)
+❯ 7z x <file.gz>                               # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
+❯ tar -xf <file.tar.gz>                        # Descomprimimos el archivo tar.gz
 ```
 
 Para las monturas en Docker serian los siguientes comandos
