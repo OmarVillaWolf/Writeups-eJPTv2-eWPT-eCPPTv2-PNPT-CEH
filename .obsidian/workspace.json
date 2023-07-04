@@ -34,64 +34,12 @@
             }
           },
           {
-            "id": "24bb6cf75fdd8c72",
+            "id": "31e095450bc20fe4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/445, 139- SMB.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "06c1d04e92f7bb04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Nmap.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ac6ca5f21205740c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Metasploit.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "40a28e2f6cd73ac7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Hydra.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "49ca3801889a32da",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
+                "file": "2 Ports/20 - 21 FTP 134 - TFTP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -184,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md"
+                "file": "2 Ports/20 - 21 FTP 134 - TFTP.md"
               }
             }
           }
@@ -211,12 +159,13 @@
   },
   "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "2 Ports/445, 139- SMB.md",
-    "3 Tools/Hydra.md",
-    "3 Tools/Metasploit.md",
-    "3 Tools/Nmap.md",
-    "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
     "6 Vulhub - Machines/Youtube Simu eJPT/2 SMB.md",
+    "2 Ports/445, 139- SMB.md",
+    "3 Tools/Nmap.md",
+    "3 Tools/Metasploit.md",
+    "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
+    "3 Tools/Hydra.md",
+    "6 Vulhub - Machines/CEH/1 Metasploitable2.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/19 Devel.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/18 Legacy.md",
@@ -225,7 +174,6 @@
     "9 CEH v12/10 Ingeniería Social.md",
     "9 CEH v12/9 Sniffer.md",
     "9 CEH v12/CEH TIPS.md",
-    "1 Linux & Windows Commands/4 Hacking/1 Linux Commands.md",
     "2 Ports/20 - 21 FTP 134 - TFTP.md",
     "3 Tools/Wireshark - Tcpdump.md",
     "9 CEH v12/5 Reconocimiento activo.md",
