@@ -128,6 +128,18 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ❯ nmap -p445 --script smb-enum-services --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
 # Ver los servicios que estan corriendo
+
+❯ nmap -p445 --script smb-enum-shares,smb-ls --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
+# Nos conectaremos al SMB y ejecutaresmos 'ls'
+
+❯ nmap -p445 --script smb-os-discovery ❮Target IP❯    # Mirar la version OS de Samba
+
+```
+
+También hay puertos por UDP que pertenecen al Samba como 137,138
+```bash 
+❯ nmap ❮Target IP❯ -sU --top-port 25 --open             # Escaneo de puertos UDP, encontramos el 137,138
+❯ nmap ❮Target IP❯ -sU --top-port 25 --open -sV         # Mirar la version de los puertos encontrados para SMB
 ```
 
 ```bash
