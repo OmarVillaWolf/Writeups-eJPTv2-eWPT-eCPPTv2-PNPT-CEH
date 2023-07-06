@@ -199,6 +199,32 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ❯ nmap ❮Target IP❯ --script ssh-brute --script-args userdb=/root/users.txt -p22
 ```
 
+## MYSQL
+
+```bash 
+❯ nmap ❮Target IP❯ -p 3306 --script=mysql-empty-password     # Nos muestra los usuarios que se pueden loggear sin password 'anonymous login'
+
+❯ nmap ❮Target IP❯ -p 3306 --script=mysql-info               # Nos muestra informacion de la base de datos, capabilities 
+
+# Colocamos un usuario y su passwd valida, si somos root nos mostrara los usuarios existentes en la DB
+❯ nmap ❮Target IP❯ -p 3306 --script=mysql-users --script-args="mysqluser='root',mysqlpass=''" 
+
+# Colocamos un usuario y su passwd valida, si somos root nos mostrara las bases de datos en la DB
+❯ nmap ❮Target IP❯ -p 3306 --script=mysql-databases --script-args="mysqluser='root',mysqlpass=''"
+
+# Colocamos un usuario y su passwd valida, si somos root nos mostrara el directorio 'datadir:/var/lib/mysql/'
+❯ nmap ❮Target IP❯ -p 3306 --script=mysql-variables --script-args="mysqluser='root',mysqlpass=''"
+
+# Colocamos un usuario y su passwd valida, Si el archivo de privilegios puede ser otorgado a usuarios no admin
+❯ nmap ❮Target IP❯ -p 3306 --script=mysql-audit --script-args="mysql-audit.username='root',mysql-audit.password='',mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'"
+
+# Colocamos un usuario y su passwd valida, nos muestra los hashes de los usuarios 
+❯ nmap ❮Target IP❯ -p 3306 --script=mysql-dump-hashes --script-args="username='root',password=''"
+
+# Colocamos un usuario y su passwd valida, y asi podremos usar una query para que nos muestre 
+❯ nmap ❮Target IP❯ -p 3306 --script=mysql-query --script-args="query='select count(*) from <dbs.table_name>;',username='root',password=''"
+```
+
 ## LDAP
 ```bash
 ❯ nmap --script ldap\* -p389 ❮Target IP❯               # Para enumerar LDAP
