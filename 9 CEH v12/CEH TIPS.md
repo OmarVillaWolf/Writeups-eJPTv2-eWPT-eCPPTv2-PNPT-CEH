@@ -118,4 +118,13 @@ x.x.x.x -> Retrasmision a c.c.c.c - Indique el puerto:
 	2. Filtramos el trafico y miramos el puerto o el servicio 
 ```
 
+## Capitulo 12
 
+```bash 
+❯ www.pent.com                 # Indique el tipo de desarrollo y si es susceptible a un XXS
+
+Podemos ver los modulos en el 'Inspector' de la pagina web
+# En la parte de Ready tenemos informacion 
+
+
+```
