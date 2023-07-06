@@ -18,10 +18,10 @@ Esta herramienta sirve para enumerar directorios
 * Browse: Podemos buscar el diccionario de fuerza bruta (**/usr/share/wordlists/dirbuster/directory-list-2.3-small.txt**)
 
 
-## Escaneo no grafico 
+## Escaneo no gráfico 
 
 ```python
-❯ dirb http://<IP>/             # Para encontrar rutas en la pagina web  
+❯ dirb http://<IP>/             # Para encontrar rutas de directorios en la pagina web  
 ```
 
 ```python
@@ -30,5 +30,7 @@ Esta herramienta sirve para enumerar directorios
 	# X = Buscar por una extencion especifica
 	# Ruta del diccionario 
 	# IP = Maquina a fuzear
-```
 
+# Enumeracion de directorios
+❯ dirb http://<IP> /usr/share/metasploit-framework/data/wordlists/directory.txt 
+```
