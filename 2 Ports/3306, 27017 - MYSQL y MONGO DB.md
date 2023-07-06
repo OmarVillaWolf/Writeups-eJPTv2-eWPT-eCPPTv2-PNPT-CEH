@@ -17,6 +17,7 @@ Asi se conforma una base de datos
 
 Nos conectamos a la base de datos de esta manera 
 ```bash 
+❯  mysql -u root -h <IP>
 ❯  mysql -u root -p -h <IP>
 
 	# h = Host
