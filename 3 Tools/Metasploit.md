@@ -344,3 +344,9 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 	❯ set verbose false
 	❯ run 
 ```
+
+## Puerto 1433 MSSQL 'Reconocimiento'
+
+```bash 
+
+```
