@@ -91,6 +91,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ❯ nmap -sUV -p134 ❮Target IP❯ --script=discovery    # Enumerar informacion 
 ```
 
+## SMB
 ```bash
 ❯ nmap --script "vuln and safe" -p445 ❮Target IP❯ -oN smbVulnScan   # Para ver si este servicio es vulnerable al ethernalblue (ms17-010) en Windows 7.
 
@@ -142,14 +143,30 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ❯ nmap ❮Target IP❯ -sU --top-port 25 --open -sV         # Mirar la version de los puertos encontrados para SMB
 ```
 
+## HTTP
 ```bash
 ❯ nmap --script http-enum -p80 ❮Target IP❯ -oN WebScan #  http-enum = Aplica Fuzing a HTTP, utiliza un diccionario de 1000 rutas y ver si hay algunas rutas existen
 
 	#  -p80 = Indica el puerto que se quiere escanear
 	#  Target IP = Dirección IP que se quiere escanear
 	#  -oN WebScan = Exporta el output a un fichero en formato nmap con nombre “WebScan”
+
+
+#Enumeracion de IIS
+❯ nmap --script http-headers -p80 ❮Target IP❯         # Nos trae informacion sobre las cabeceras
+
+# Nos trae informacion sobre los metodos soportados
+❯ nmap --script http-methods -p80 ❮Target IP❯ --script-args http-methods.url-path=/webdav/      
+
+# Identifica las instalaciones de Webdav, utilizando opciones y metodos
+❯ nmap --script http-webdav-scan -p80 ❮Target IP❯ --script-args http-methods.url-path=/webdav/ 
+
+
+# Enumeracion de Apache
+❯ nmap --script banner -p80 ❮Target IP❯    # Miras el banner y su informacion principal 
 ```
 
+## HTTPS
 ```bash
 ❯ nmap --script ssl-heartbleed -p443 ❮Target IP❯ 	# heartbleed = Verifica si es vulnerable a Heartbleed
 
@@ -157,14 +174,32 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 	#  Target IP = Dirección IP que se quiere escanear
 ```
 
+## FTP
 ```bash
 ❯ nmap --script ftp-anon -p21 ❮Target IP❯              # ftp-enum = Escanea y mira si el usuario invitado 'Anonymous' esta habilitado
 
 	#  p21 = Indica el puerto que se quiere escanear
 	#  Target IP = Dirección IP que se quiere escanear
+
+
+# Cuando tenemos un usuario valido podemos hacerle fuerza bruta, colocamos la ruta del archivo que contiene al usuario
+❯ nmap ❮Target IP❯ --script ftp-brute --script-args userdb=/root/users.txt -p21
 ```
 
+## SSH
 
+```bash 
+❯ nmap --script ssh2-enum-algos -p22 ❮Target IP❯     # Enumeracion del SSH, algos = enumera todos los algoritmos
+
+❯ nmap --script ssh-hostkey -p22 ❮Target IP❯ --script-args ssh_hostkey=full   # Nos muestra todos los SSH RSA host key
+
+❯ nmap --script ssh-auth-methods -p22 ❮Target IP❯ --script-args="ssh.user=<username>" # Para saber si el usuario tiene metodos de autenticacion como 'publickey, password', de lo contrario podriamos entrar sin passwd
+
+# Cuando tenemos un usuario valido podemos hacerle fuerza bruta, colocamos la ruta del archivo que contiene al usuario
+❯ nmap ❮Target IP❯ --script ssh-brute --script-args userdb=/root/users.txt -p22
+```
+
+## LDAP
 ```bash
 ❯ nmap --script ldap\* -p389 ❮Target IP❯               # Para enumerar LDAP
 
@@ -172,6 +207,7 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 	#  Target IP = Dirección IP que se quiere escanear
 ```
 
+## Shellshock
 ```bash 
 ❯ nmap --script http-shellshock --script-args uri=/cgi-bin/user.sh -p80 10.10.10.56    # Ver si es vulnerable a ShellShock
 ```
