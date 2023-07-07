@@ -47,38 +47,12 @@
             }
           },
           {
-            "id": "4965f8e3c643fae9",
+            "id": "d13f5f0bd22248aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 Tools/Nmap.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c525634153d62e17",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Metasploit.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d5abd2a99b9961fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Hydra.md",
+                "file": "9 CEH v12/12 Web.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -171,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 Tools/Metasploit.md"
+                "file": "9 CEH v12/12 Web.md"
               }
             }
           }
@@ -196,13 +170,14 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "c525634153d62e17",
+  "active": "d13f5f0bd22248aa",
   "lastOpenFiles": [
+    "9 CEH v12/1 Conceptos Hacking.md",
+    "9 CEH v12/12 Web.md",
+    "6 Vulhub - Machines/Youtube Simu eJPT/2 SMB.md",
     "3 Tools/Nmap.md",
     "3 Tools/Metasploit.md",
-    "9 CEH v12/12 Web.md",
     "2 Ports/1433 - MSSQL.md",
-    "6 Vulhub - Machines/Youtube Simu eJPT/2 SMB.md",
     "3 Tools/Hydra.md",
     "2 Ports/3306 - MYSQL.md",
     "2 Ports/21017 - Mongo.md",
@@ -223,7 +198,6 @@
     "9 CEH v12/10 Ingeniería Social.md",
     "9 CEH v12/9 Sniffer.md",
     "3 Tools/Wireshark - Tcpdump.md",
-    "9 CEH v12/5 Reconocimiento activo.md",
     "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf",
     "6 Vulhub - Machines/Youtube Simu eJPT",
     "Z Imagenes/Hacking/SSRF.png",
