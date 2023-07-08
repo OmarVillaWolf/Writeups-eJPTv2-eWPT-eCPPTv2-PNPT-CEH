@@ -2,18 +2,18 @@
 
 Tags: #Hydra 
 
-Es una herramienta de prueba de penetracion que se utiliza para realizar ataques de fuerza bruta, por asi decirlo, en servicios de autenticacion remotos. Esta herramientas nos ayuda a poder encontrar passwd mediante ataques futivos. 
+Es una herramienta de prueba de penetración que se utiliza para realizar ataques de fuerza bruta, por así decirlo, en servicios de autenticación remotos. Esta herramientas nos ayuda a poder encontrar passwd mediante ataques furtivos. 
 
-- Soporte de multiples protocolos: Hydra es compatible con una amplia gama de protocolos de autenticacion incluyendo: SSH, Telnte, FTP, HTTP, POP3, SMB, etc...
+- Soporte de múltiples protocolos: Hydra es compatible con una amplia gama de protocolos de autenticación incluyendo: SSH, Telnet, FTP, HTTP, POP3, SMB, etc...
 * Fuerza bruta avanzada: Hydra es capas de realizar ataques de fuerza bruta avanzados, incluyendo ataques de diccionario y ataques basados en patrones. 
 	* Podemos usar los diccionarios que ya viene en Parrot o Kali Linux (rockyou.txt)
-* Modos de operacion flexibles: Hydra admite diferentes modos de operacion, incluyendo modo de ataque directo, modo de ataque de diccionario y modo de ataque hibrido.
-* Capacidad de parelelizacion: Hydra es capas de realizar multiples intentos de autenticacion simultaneamente, lo que mejora la velocidad y la eficiencia del ataque. 
+* Modos de operación flexibles: Hydra admite diferentes modos de operación, incluyendo modo de ataque directo, modo de ataque de diccionario y modo de ataque hibrido.
+* Capacidad de paralelización: Hydra es capas de realizar múltiples intentos de autenticación simultáneamente, lo que mejora la velocidad y la eficiencia del ataque. 
 
 - Casos de uso:
-	- Pruebas de pentracion 
-	- Audiroria de passwd
-	- Recuperacion de passwd
+	- Pruebas de penetración 
+	- Auditoria de passwd
+	- Recuperación de passwd
 
 ## Hydra fuerza bruta WordPress
 
