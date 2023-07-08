@@ -21,7 +21,7 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 
 ## Comandos
 
-❯ **Click derecho > Copy to file** Para guardar la intercepcion del **Proxy** en un archivo **.req** y asi usarlo con la herramienta **SQL-Map**
+❯ **Click derecho > Copy to file** Para guardar la intercepción del **Proxy** en un archivo **.req** y así usarlo con la herramienta **SQL-Map**
 
 ❯ **Ctrl + I** Para mandar lo del proxy al intruder (I=i)
 ❯ **Ctrl + r** Para mandar lo del proxy al repeater
@@ -34,7 +34,7 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 ## Tipos de Brute Force en Intruder
 ### Intruder: Sniper
 
-Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos permite agregar un Payload (una carga util) y probar con un solo parametro (una sola posicion). 
+Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos permite agregar un Payload (una carga útil) y probar con un solo parámetro (una sola posición). 
 .
 	Payload set: 1
 	Payload Type: Simple list
@@ -42,12 +42,12 @@ Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos pe
 Debemos de agregar nuestras propias palabras o cargar una lista.
 
 ### Intruder: Battering Ram
-Permite tomar tantas posiciones como querramos, pero cada uno de los espacios seran probados con la misma palabra.
+Permite tomar tantas posiciones como queramos, pero cada uno de los espacios serán probados con la misma palabra.
 .
 	Payload set: 1
 	Payload Type: Simple list
 
-Aqui podemos cargar el diccionario llamado fasttrack.txt
+Aquí podemos cargar el diccionario llamado fasttrack.txt
 Lo que hace es que toma la misma palabra y la coloca en todos las posiciones que habilitamos. 
 
 ### Intruder: Pitchfork
@@ -56,15 +56,15 @@ Permite tener dos posiciones en las cuales podemos tener una lista en cada una o
 	Payload set: 1
 	Payload Type: Simple list
 
-El primer payload se refiere a que ahi podemos colocar una lista de usuarios
+El primer payload se refiere a que ahí podemos colocar una lista de usuarios
 
 .
 	Payload set: 2
 	Payload Type: Simple list
 
-El segundo payload se refiere a que ahi podemos colocar uns lista que podrian ser de passwd.
+El segundo payload se refiere a que ahí podemos colocar una lista que podrían ser de passwd.
 
-Probara las posiciones al mismo tiempo, por lo que el usuario y la passwd correctas se deben de encontrar en la misma posicion, de lo contrario no podria encontrarlo aunque si existan en el diccionario.
+Probara las posiciones al mismo tiempo, por lo que el usuario y la passwd correctas se deben de encontrar en la misma posición, de lo contrario no podría encontrarlo aunque si existan en el diccionario.
 
 ### Intruder: Cluster Bomb
 Permite escoger dos posiciones (2 payloads).
@@ -72,16 +72,16 @@ Permite escoger dos posiciones (2 payloads).
 	Payload set: 1
 	Payload Type: Simple list
 
-El primer payload se refiere a que ahi podemos colocar una lista de usuarios
+El primer payload se refiere a que ahí podemos colocar una lista de usuarios
 
 .
 	Payload set: 2
 	Payload Type: Simple list
 
-El segundo payload se refiere a que ahi podemos colocar uns lista que podrian ser de passwd.
+El segundo payload se refiere a que ahí podemos colocar una lista que podrían ser de passwd.
 
-En este caso probara primero el primer elemento de la lista 1 y despues probara todos los elementos de la lista 2. Pasara a otro elemento de la lista 1 y despues probara todos los elementos de la lista 2 y asi sucesivamente. 
-****
+En este caso probara primero el primer elemento de la lista 1 y después probara todos los elementos de la lista 2. Pasara a otro elemento de la lista 1 y después probara todos los elementos de la lista 2 y así sucesivamente. 
+
 
 
 
