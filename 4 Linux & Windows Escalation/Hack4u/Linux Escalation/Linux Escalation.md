@@ -24,7 +24,7 @@ Esta herramienta nos ayudar a identificar vulnerabilidades para poderla explotar
 
 -   [PSPY](https://github.com/DominicBreuker/pspy)
 
-Esta herramienta nos ayudara a identificar tareas, procesos que se estan ejecutando.
+Esta herramienta nos ayudara a identificar tareas, procesos que se están ejecutando.
 	Releases > Improved troubleshooting > **pspy64** -> Binario que debemos de descargar
 
 ```bash
@@ -32,7 +32,7 @@ Esta herramienta nos ayudara a identificar tareas, procesos que se estan ejecuta
 ```
 
 
-* [LinPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)     ->     Para descragar el binario debemos de ir a **'Quick Start > the releases page > linpeas.sh'**
+* [LinPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)     ->     Para descargar el binario debemos de ir a **'Quick Start > the releases page > linpeas.sh'**
 ```bash
 ❯ chmod 777 linpeas.sh                   # Agregamos los privilegios para poder ejecutarlo en la maquina victima
 ❯ ./linpeas.sh                           # Para ejecutar el binario, podremos ver los diferentes colores y ahi podremos ver en donde es mas facil poder hacer el (PE=Privilege Escalation)
@@ -136,8 +136,8 @@ Tipos de capabilities:
 ❯ cat /etc/crontab                   # Ver el archivo como se estan ejecutando las tareas CRON
 ```
 
-* Podemos crearnos un Script Manual para ver las tareas que se estan ejecutando y ver lor procesos nuevos, antiguos, asi como comandos y ver cual proceso nos puede ayudar a escalar privilegios. 
-   Despues encontramos un archivo que lo esta ejecutando root y otros lo pueden modificar 
+* Podemos crearnos un Script Manual para ver las tareas que se están ejecutando y ver los procesos nuevos, antiguos, así como comandos y ver cual proceso nos puede ayudar a escalar privilegios. 
+   Después encontramos un archivo que lo esta ejecutando root y otros lo pueden modificar 
 ```bash 
 ❯ nano file.sh
 
