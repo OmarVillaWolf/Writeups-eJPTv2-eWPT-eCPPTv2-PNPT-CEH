@@ -15,11 +15,11 @@ Para prevenir este tipo de ataque, es importante configurar adecuadamente CORS e
 
 ## CORS Hijacking
 
-Lo que hace CORS es hacer que dominios externos de paginas puedan realizar solicitudes para que puedan sustraer informacion de la pagina pero solo los que CORS decida.
-Puedes definir en la politica de CORS que dominios terceros queremos que unicamente puedan realizar solicitudes.
+Lo que hace CORS es hacer que dominios externos de paginas puedan realizar solicitudes para que puedan sustraer información de la pagina pero solo los que CORS decida.
+Puedes definir en la política de CORS que dominios terceros queremos que únicamente puedan realizar solicitudes.
 
 
-Interceptaremos CORS con BurpSuite para ver su configuracion. 
+Interceptaremos CORS con BurpSuite para ver su configuración. 
 
 ![](Pasted%20image%2020230522150453.png)
 
@@ -34,7 +34,7 @@ Debemos de estar autenticados en la web que tiene el CORS.
 ![](Pasted%20image%2020230522151528.png)
 
 
-Ahora nos vamos a crear un recurso malicioso por el puerto 80 de nuestro equipo llamado 'malicious.html' y lo compartiremos con python. 
+Ahora nos vamos a crear un recurso malicioso por el puerto 80 de nuestro equipo llamado 'malicious.html' y lo compartiremos con Python. 
 ```bash
 ❯ python3 -m http.server 80
 ```
