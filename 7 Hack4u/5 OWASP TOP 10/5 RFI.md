@@ -17,7 +17,7 @@ Asimismo, se os comparte el enlace directo para la descarga del plugin ‘**Gwol
 -   **Gwolle Guestbook**: [https://es.wordpress.org/plugins/gwolle-gb/](https://es.wordpress.org/plugins/gwolle-gb/)
 
 
-## Codigo 
+## Código 
 
 Para descubrir si tiene el Plugin de **gwolle-gb** 
 ```bash
@@ -40,7 +40,7 @@ Debemos de tener activo un servidor http en nuestra maquina de atacante
 ❯ python3 -m http.server 80                 # Nos montamos un servidor http 80
 ```
 
-Por lo que debemos de crear ese archivo para cargar comandos y tambien podemos colocarle una revershell.
+Por lo que debemos de crear ese archivo para cargar comandos y también podemos colocarle una ReverShell.
 ```php
 ❯ nano wp-load.php
 	<?php
