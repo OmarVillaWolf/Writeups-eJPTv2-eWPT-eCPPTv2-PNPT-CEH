@@ -40,7 +40,7 @@ Podemos interceptar las peticiones en **BurpSuite y ahi inyectar los NoSQLI**. E
 	}
 }
 ```
-Aqui le diremos que la passwd no es igual a 'admin', por lo que es una afirmacion correcta y entrara al login.
+Aquí le diremos que la passwd no es igual a 'admin', por lo que es una afirmación correcta y entrara al login.
 
 ```bash
 {                                    # Probaremos el NoEqual = $ne, sin saber la passwd y el usuario
@@ -52,7 +52,7 @@ Aqui le diremos que la passwd no es igual a 'admin', por lo que es una afirmacio
 	}
 }
 ```
-En esta ocasion le diremos que el usuario no es 'omar' y la passwd no es 'admin', por lo que es una afirmacion correcta y entrara al login.
+En esta ocasión le diremos que el usuario no es 'omar' y la passwd no es 'admin', por lo que es una afirmación correcta y entrara al login.
 
 
 * Tambien podemos aplicar **Regex = Expresiones Regulares**
@@ -87,7 +87,7 @@ Para saber la longitud
 ```
 
 
-Podriamos aplicar Fuerza Bruta con las Regex para ir probando caracter por caracter y asi ir descubriendo la passwd de algun usuario especifico que exista.
+Podríamos aplicar Fuerza Bruta con las Regex para ir probando carácter por carácter y así ir descubriendo la passwd de algún usuario especifico que exista.
 ```python 
 ❯ nano NoSQL.py
 
