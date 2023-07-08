@@ -49,9 +49,9 @@ Esta es la tabla de verdad de la compuerta XOR
 
 ## Comandos
 
-Si la web es vulnerable a Padding Attack, podemos decifrar la **Cookie de session cifrada** y nos quedaria en texto plano.
-* El tamano del bloque en el cifrado CBC debe ser multiplo de 8 bits = 1 byte.
-* El valor de la Cookie de Session lo extraemos de la web **Inspect > Storage > Cookies > Value**
+Si la web es vulnerable a Padding Attack, podemos descifrar la **Cookie de session cifrada** y nos quedaría en texto plano.
+* El tamaño del bloque en el cifrado CBC debe ser múltiplo de 8 bits = 1 byte.
+* El valor de la Cookie de Sesión lo extraemos de la web **Inspect > Storage > Cookies > Value**
 
 ```bash
 ❯ padbuster http://127.0.0.1 x4ChsJumLYFLF7MHGRFDEwFH1682792456 8 -cookies 'auth=x4ChsJumLYFLF7MHGRFDEwFH1682792456'     # Descifraremos la Cookie de Session 
@@ -63,16 +63,16 @@ Si la web es vulnerable a Padding Attack, podemos decifrar la **Cookie de sessio
 	# Cuando nos pregunte ID marker, colocamos un 2
 ```
 
-Despues de descifrarnos la Cookie en testo plano 'user=omar', podemos crear una nueva Cookie de Session pero con otro valor, en este caso podriamos hacer una para 'admin'.
+Después de descifrarnos la Cookie en testo plano 'user=omar', podemos crear una nueva Cookie de Sesión pero con otro valor, en este caso podríamos hacer una para 'admin'.
 ```bash
 ❯ padbuster http://127.0.0.1 x4ChsJumLYFLF7MHGRFDEwFH1682792456 8 -cookies 'auth=x4ChsJumLYFLF7MHGRFDEwFH1682792456' -plaintext 'user=admin'  # Cifraremos la Cookie de Session 
 
 	# Cuando nos pregunte ID marker, colocamos un 2
 ```
 
-El nuevo valor obtenido lo volvemos a colocar en donde estaba la anterior Cookie de Session y recargamos la web. Por lo que ahora seriamos 'admin'
+El nuevo valor obtenido lo volvemos a colocar en donde estaba la anterior Cookie de Sesión y recargamos la web. Por lo que ahora seriamos 'admin'
 
-Tambien podemos hacer ataques de **Fuerza Bruta con BurpSuite** en el **Intruder** y asi poder variaciones de **Cookies de Session** para diferentes usuarios muy cercanos 
+También podemos hacer ataques de **Fuerza Bruta con BurpSuite** en el **Intruder** y así poder variaciones de **Cookies de Sesión** para diferentes usuarios muy cercanos 
 * Tipo Sniper
 * Payload set: 1
 * Payload Type: Bit Flipper
