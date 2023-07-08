@@ -44,13 +44,13 @@ Para la version de 1.5.9 - 1.5.11 de Angular Js
 }}
 ```
 
-Angular aveces no pemite caracteres, por lo que debemos de hacer lo siguiente para representar los caracteres y asi los pueda procesar. Esto se hara con la siguiente funcion y el caracter en Decimal.
+Angular a veces no permite caracteres, por lo que debemos de hacer lo siguiente para representar los caracteres y así los pueda procesar. Esto se hará con la siguiente función y el carácter en Decimal.
 ```bash
 ❯ String.fromCharCode(97)                   # a = 97 dec y el resul;tado es 'a'
 ❯ String.fromCharCode(97,98)                # a = 97 dec, b = 98 dec y el resultado es 'ab'
 ``` 
 
-Modificamos la parte del alert y ahi colocamos lo anterior. La palabra que agregaremos sera PWNED = 80,87,78,69,68
+Modificamos la parte del alert y ahí colocamos lo anterior. La palabra que agregaremos será PWNED = 80,87,78,69,68
 ```bash
 {{
     c=''.sub.call;b=''.sub.bind;a=''.sub.apply;
