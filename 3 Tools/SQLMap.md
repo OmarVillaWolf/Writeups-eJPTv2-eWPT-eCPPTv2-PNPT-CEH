@@ -101,5 +101,5 @@ Una vez obtenidas las columnas podemos hacer que nos **muestre (Dumpear)** sus v
 	# dump = Que nos muestre los valores que tienen esas columnas
 ```
 
-****
+
 
