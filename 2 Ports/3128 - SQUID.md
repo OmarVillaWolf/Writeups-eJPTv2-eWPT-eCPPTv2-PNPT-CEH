@@ -47,9 +47,9 @@ Adicionalmente, en esta clase aprovecharemos la ocasión para desarrollar una pe
 ❯ curl http://<IP> --proxy http://<IP>:3128    # Implementaremos un proxy con el curl, se podria decir que pasamos por el SQUID Proxy
 ```
 
-Debemos de agregar un SQUID Proxy a nuestro 'Foxy Proxy'. Esto nos ayudara a que cuando querramos ver una web y no nos la deje ver poque tiene un SQUID Proxy al momento de activarlo en Foxy Proxy ya podriamos ver el contenido de dicha Web.
+Debemos de agregar un SQUID Proxy a nuestro 'Foxy Proxy'. Esto nos ayudara a que cuando queramos ver una web y no nos la deje ver porque tiene un SQUID Proxy al momento de activarlo en Foxy Proxy ya podríamos ver el contenido de dicha Web.
 
-Asi podremos descrubrir directorios en un SQUID Proxy
+Así podremos descubrir directorios en un SQUID Proxy
 ```bash
 # Ataque de Fuerza Bruta a un SQUID Proxy para descubrir directorios 
 ❯ gobuster dir -u http://<IP>/ --proxy http://<IP>:3128 -w /usr/share/seclists/Discovery/Web-Content/discovery-list-2.3-medium.txt -t 20 
