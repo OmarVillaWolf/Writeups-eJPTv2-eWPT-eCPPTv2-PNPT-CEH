@@ -42,25 +42,25 @@ En el **'Inspector'**, en la parte de **Network** de la pagina web,  ahi encontr
 Usaremos **POSTMAN** para ir enumerando las peticiones.
 
 0. Crearemos una nueva 'Collections'
-1. Crearemos una peticion 'HTTP Request'
+1. Crearemos una petición 'HTTP Request'
 
 ![](Pasted%20image%2020230506141928.png)
-Debemos de crear una **Collections** llamada crAPI en donde crearemos una nueva peticion **HTTP Request** y ahi colocaremos lo que esta en la imagen y lo guardamos con el nombre de **Login**
+Debemos de crear una **Collections** llamada crAPI en donde crearemos una nueva petición **HTTP Request** y ahí colocaremos lo que esta en la imagen y lo guardamos con el nombre de **Login**
 
 
-2. Podemos trabajar con variables para que se haga mas facil para las peticiones GET.
+2. Podemos trabajar con variables para que se haga mas fácil para las peticiones GET.
 
 ![](Pasted%20image%2020230506143646.png)
 
 ![](Pasted%20image%2020230506144302.png)
 
-Usaremos el Token que nos ha otorgado el POSTMAN en la peticion pasada de POST y lo salvamos.
+Usaremos el Token que nos ha otorgado el POSTMAN en la petición pasada de POST y lo salvamos.
 
 
-3. Crearemos una nueva peticion pero por el metodo GET, usando la variable que acabamos de crear con el Token.
+3. Crearemos una nueva petición pero por el método GET, usando la variable que acabamos de crear con el Token.
 
 ![](Pasted%20image%2020230506144457.png)
-Aqui ya no nos dara problemas, ya que ahora tendremos la autorizacion y esa nos saldra automaticamente al momento de crearla por GET.
+Aquí ya no nos dará problemas, ya que ahora tendremos la autorización y esa nos saldrá automáticamente al momento de crearla por GET.
 
 ## Atacando la API
 
