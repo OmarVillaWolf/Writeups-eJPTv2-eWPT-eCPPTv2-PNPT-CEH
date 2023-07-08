@@ -12,21 +12,21 @@ La explotación de los JWT se produce cuando un atacante utiliza la información
 
 Para prevenir la enumeración y explotación de los JWT, es importante utilizar prácticas seguras de desarrollo web, como la validación adecuada de las solicitudes de entrada, la gestión segura de las claves de firma JWT y la limitación del tiempo de expiración de los JWT.
 
-A continuación, se os proporciona el enlace directo al proyecto de Github SKF-LABS, el cual estaremos usando para practicar la enumeración y explotación de los JWT:
+A continuación, se os proporciona el enlace directo al proyecto de GitHub SKF-LABS, el cual estaremos usando para practicar la enumeración y explotación de los JWT:
 
 -   **SKF-LABS**: [https://github.com/blabla1337/skf-labs](https://github.com/blabla1337/skf-labs)
 
 
 ## Json Web Token 
 
-Para esta ocasion utilizaremos SKF Labs en donde tendremos esta interfaz para poder hacer uso de la vulnerabilidad de WebToken. Podemos ver que hay dos botones, el primero de 'Authenticate' es para que al momento de ser autenticados se nos genere un Json Web Token y el boton de 'Admin' es para que nos coloque un alias de usuario, en este caso guest. Ademas, para este ejemplo tenemos un JWT Null Cipher.
+Para esta ocasión utilizaremos SKF Labs en donde tendremos esta interfaz para poder hacer uso de la vulnerabilidad de WebToken. Podemos ver que hay dos botones, el primero de 'Authenticate' es para que al momento de ser autenticados se nos genere un Json Web Token y el botón de 'Admin' es para que nos coloque un alias de usuario, en este caso guest. Además, para este ejemplo tenemos un JWT Null Cipher.
 
 ![](Pasted%20image%2020230524110032.png)
 
-Podemos encontrar la Cookie de Session asignada en esta parte del Inspector.  Miramos que tenemos dos puntos en su estructura que divide a las tres partes:
+Podemos encontrar la Cookie de Sesión asignada en esta parte del Inspector.  Miramos que tenemos dos puntos en su estructura que divide a las tres partes:
 * Parte inicial -> Header
-* Parte central -> Payload (Puede contener propiedades que tengan informacion del usuario)
-* Parte final -> Signature (Firma digital) esta se encarga de verificar la integridad del Token, esta se crea mediante un algoritmo de Hash criptografico que utiliza por detras una clave secreta.
+* Parte central -> Payload (Puede contener propiedades que tengan información del usuario)
+* Parte final -> Signature (Firma digital) esta se encarga de verificar la integridad del Token, esta se crea mediante un algoritmo de Hash criptográfico que utiliza por detrás una clave secreta.
 Cabe mencionar que cada parte de los JWT estan en **base64**
 
 ![](Pasted%20image%2020230524110425.png)
@@ -37,13 +37,13 @@ Cabe mencionar que cada parte de los JWT estan en **base64**
 En esta pagina podemos ver el contenido del Json Web Token. 
 Podemos observar en el Header: Algoritmo y tipo 
 En el Payload: El id, iat y exp
-Signature: Miramos que podemos colocar 256 bit secret y este al momento de colocarlo, hara que aunque modifiquemos los demas campos, nuestro JWT va a ser valido.
+Signature: Miramos que podemos colocar 256 bit secret y este al momento de colocarlo, hará que aunque modifiquemos los demás campos, nuestro JWT va a ser valido.
 
 ![](Pasted%20image%2020230524111138.png)
 
 Para este tipo de vulnerabilidades donde tenemos un Null Cipher, muchas veces en las parte del Header podemos colocar en **"alg" : "None"** y con esto la parte del signature no seria necesario. 
 
-Esto lo podriamos hacer desde consola para asi obtener el JWT del usuario 2 con los datos del usuario 1.
+Esto lo podríamos hacer desde consola para así obtener el JWT del usuario 2 con los datos del usuario 1.
 ```bash
 ❯ echo -n '{"alg":"NONE","typ":"JWT"}' | base64                            # Representaremos el Header en base64
 ❯ echo -n '{"id":2,"iat":1677770355,"exp":1677773955}' | base64            # Representaremos el Payload en base64
@@ -53,7 +53,7 @@ Esto lo podriamos hacer desde consola para asi obtener el JWT del usuario 2 con 
 El resultado obtenido lo colocamos de la siguiente manera, cabe mencionar que en el primer resultado del Header nos sale un '=' al final, por lo que se lo debemos de quitar.
 ![](Pasted%20image%2020230524113435.png)
 
-Despues lo cerramos y le damos al boton 'Admin', por lo que ahora somos el usuario 2. 
+Después lo cerramos y le damos al boton 'Admin', por lo que ahora somos el usuario 2. 
 
 
 * Para el segundo laboratorio. 
@@ -69,13 +69,13 @@ Obtenemos el JWT del primer usuario.
 ![](Pasted%20image%2020230524114556.png)
 
 
-Si hacemos el procedimiento del primer lab, nos saldra esto:
+Si hacemos el procedimiento del primer lab, nos saldrá esto:
 Que nos quiere decir que es necesario el campo Signature.
 
 ![](Pasted%20image%2020230524114821.png)
 
 
-Por lo que debemos de concer el 'Secreto' y colocarlo en el campo del signature. Para poder encontrar la palabra podemos hacer fuerza bruta o colocar palabras basicas. 
+Por lo que debemos de conocer el 'Secreto' y colocarlo en el campo del signature. Para poder encontrar la palabra podemos hacer fuerza bruta o colocar palabras básicas. 
 
 ![](Pasted%20image%2020230524115806.png)
 
