@@ -56,7 +56,7 @@ Webpages
 
 ## Kernel Exploits
 Webpage 
-- [Kernel Exploits](https://github.com/lucyoa/kernel-exploits)    ->   Podemos buscar la version del Kernel en Google y ver si tiene un exploit, o podemos usar la herramienta Exploit Suggester para ver los exploits que podemos usar para Escalar Privilegios
+- [Kernel Exploits](https://github.com/lucyoa/kernel-exploits)    ->   Podemos buscar la versión del Kernel en Google y ver si tiene un exploit, o podemos usar la herramienta Exploit Suggester para ver los exploit que podemos usar para Escalar Privilegios
 
 ## Escalation Path: Passwd and File permisions
 
@@ -111,7 +111,7 @@ Tenemos comandos para vim, awk, nano, apache2, etc...
 ```
 
  - [Exploit-DB for CVE-2019-14287](https://www.exploit-db.com/exploits/47502) Cuando tenemos en el Sudoers un (!root)
-Ahi nos explica que comando poner para poder ser root.
+Ahí nos explica que comando poner para poder ser root.
 ```bash
 ❯ sudo -u#-1 /bin/bash                                       # Comando para ser root cuando tenemos en el sudoers un (!root)
 ```
@@ -128,7 +128,7 @@ Ahi nos explica que comando poner para poder ser root.
 		❯ ls -la /usr/bin/systemctl   # Para ver los privilegios del archivo y lo mirariamos asi - rw**s** r-x r-x 
 ```
 
- - [GTFOBins](https://gtfobins.github.io/) Para buscar ahi el SUID y ver como podemos ejecutar el comando para escalar privilegios
+ - [GTFOBins](https://gtfobins.github.io/) Para buscar ahí el SUID y ver como podemos ejecutar el comando para escalar privilegios
 Aveces no todos son vulnerables y por lo tanto no se encuentran en esa pagina.
 
 ## Escalation Path: Other SUID Escalation
