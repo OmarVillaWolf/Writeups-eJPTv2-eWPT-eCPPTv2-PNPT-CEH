@@ -16,7 +16,7 @@ En el Software de Wireshark podemos:
 ❯ ip.flags.mf == 0                  # Forma de filtrar por paquetes que no son fragmentados
 ```
 
-Tambien podemos usar Tshark 
+También podemos usar Tshark 
 ```bash
 ❯ tshark -r ❮File.cap❯ 2>/dev/null                         # Le pasamos la captura en .cap y la podemos mirar por consola 
 ❯ tshark -r ❮File.cap❯ -Y "http" 2>/dev/null               # Le pasamos la captura en .cap y la podemos mirar por consola (Y=Filtramos)
