@@ -19,10 +19,10 @@ Para prevenir estas vulnerabilidades, es importante utilizar identificadores de 
 Primero debemos de hacer login.
 ![](Pasted%20image%2020230522173634.png)
 
-Despues miramos que tenemos una Cookie inicial de Session que por los dos puntos en su estructura es un Json Web Token.
+Después miramos que tenemos una Cookie inicial de Sesión que por los dos puntos en su estructura es un Json Web Token.
 Header -> Antes del primer punto
 Payload  -> Entre los dos puntos 
-Signature -> Despues del segundo punto 
+Signature -> Después del segundo punto 
 
 * [Json-Web-Token](https://jwt.io/)
 
@@ -33,18 +33,18 @@ Signature -> Despues del segundo punto
 
 La pagina web anterior nos muestra los campos de la Cookie inicial cuando estamos autenticados.
 
-Ahora en el lab nos salimos y nos vamos a 'Forgot Password'. Ahi colocamos el nombre del usuario e interceptamos la peticion con BurpSuite. 
+Ahora en el lab nos salimos y nos vamos a 'Forgot Password'. Ahí colocamos el nombre del usuario e interceptamos la petición con BurpSuite. 
 
 ![](Pasted%20image%2020230522174111.png)
 
 ![](Pasted%20image%2020230522174137.png)
 
 
-Una vez interceptada la peticion, nos damos cuenta que nos coloca una 'Cookie de Session' en la respuesta.
+Una vez interceptada la petición, nos damos cuenta que nos coloca una 'Cookie de Sesión' en la respuesta.
 
 ![](Pasted%20image%2020230522174438.png)
 
-Esta Cookie la podriamos usar para poder ver el Dahsboard del inicio ya que contempla los mismos campos que la Cookie anterior cuando estabamos autenticados.
+Esta Cookie la podríamos usar para poder ver el Dahsboard del inicio ya que contempla los mismos campos que la Cookie anterior cuando estábamos autenticados.
 
 ![](Pasted%20image%2020230522174807.png)
 
