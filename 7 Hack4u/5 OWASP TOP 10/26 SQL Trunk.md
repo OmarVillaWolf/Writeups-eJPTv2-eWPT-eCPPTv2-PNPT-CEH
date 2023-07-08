@@ -25,7 +25,7 @@ A continuación, se os proporciona el enlace directo de descarga a la máquina T
 
 ## SQL Truncation Attack
 
-Para esta lab usaremos la maquina Tornado en donde primero debemos de descubir rutas de directorios y lo haremos con Gobuster.
+Para esta lab usaremos la maquina Tornado en donde primero debemos de descubrir rutas de directorios y lo haremos con Gobuster.
 
 ```bash
 ❯ gobuster dir -u http://192.168.68.115/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 20
@@ -38,9 +38,9 @@ Para esta lab usaremos la maquina Tornado en donde primero debemos de descubir r
 ❯ gobuster dir -u http://192.168.68.115/bluesky -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 20 -x php
 ```
 
-Ahi encontraremos un dir llamado 'bluesky' en el cual enumeraremos por recursos php y ahi encontraremos un panel 'login.php, signup.php'
+Ahí encontraremos un dir llamado 'bluesky' en el cual enumeraremos por recursos php y ahí encontraremos un panel 'login.php, signup.php'
 
-Podemos hacer un LFI en la pagina web en donde podemos hacer uso de **~tornado/** que es como si hicieramos **/home/tornado/** y asi ingresar a su directorio personal de usuario, esto es gracias a que en la pagina Apache tiene un **alias** configurado de esa manera. 
+Podemos hacer un LFI en la pagina web en donde podemos hacer uso de **~tornado/** que es como si hiciéramos **/home/tornado/** y así ingresar a su directorio personal de usuario, esto es gracias a que en la pagina Apache tiene un **alias** configurado de esa manera. 
 ```bash
 ❯ http://192.168.68.115/~tornado/
 
@@ -54,13 +54,13 @@ Primero en la parte de registro nos damos cuenta que tenemos un limite de 13 car
 ![](Pasted%20image%2020230522170808.png)
 
 Primero debemos de modificar la longitud de la pagina y como ejemplo ponerle 35 en lugar de 13. 
-Al momento de volver a meter el usuario que ya existe le agregamos espacios en blanco y un caracter adicional.
+Al momento de volver a meter el usuario que ya existe le agregamos espacios en blanco y un carácter adicional.
 ![](Pasted%20image%2020230522170925.png)
 
- Esto hara que la base de datos  trate de crear este usuario, pero como desde un inicio estaba limitado a 13 caracteres, la **base de datos** le borrara los caracteres adicionales como los espacios y la 'a' por lo que lo dejara como estaba al incio pero con la diferencia de que lo va a '**sobre-registrar o sobre-escribir**' con la passwd nueva que nosotros le asignemos.
+ Esto hará que la base de datos  trate de crear este usuario, pero como desde un inicio estaba limitado a 13 caracteres, la **base de datos** le borrara los caracteres adicionales como los espacios y la 'a' por lo que lo dejara como estaba al inicio pero con la diferencia de que lo va a '**sobre-registrar o sobre-escribir**' con la passwd nueva que nosotros le asignemos.
 
 
-Una vez dentro de la pagina en la parte de **Contact** podemos colocar algunos comandos que nos pueden ayudar a entablar uuna ReverShell a nuestra maquina de atacante. 
+Una vez dentro de la pagina en la parte de **Contact** podemos colocar algunos comandos que nos pueden ayudar a entablar una ReverShell a nuestra maquina de atacante. 
 ![](Pasted%20image%2020230522172159.png)
 
 Nos ponemos en escucha en nuestra maquina de atacante 
