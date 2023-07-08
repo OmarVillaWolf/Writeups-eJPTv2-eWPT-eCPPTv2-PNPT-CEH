@@ -38,8 +38,8 @@ En este caso, estamos utilizando la opción ‘**–driver=bridge**‘ para indi
 Para el primer caso, solo podemos ver solo algunos puertos OPEN, como el puerto 80. Pero podemos hacer que la maquina victima haga peticiones **internas** (LocalHost) a sus puertos y servicios, para poder descubrir otros puertos abiertos como el 8089. 
 
 En un SSRF podemos encontrar **utility.php** que nos ayudara a colocar dominios a traves del parametro **url**, con el cual podemos hacer lo siguiente:
-	❯ Podemos colocar algun dominio para que nos muestre informacion acerca de algun servicio interno de la maquina, como su propio **localhost** 
-	❯ Podemos encontrar informacion relevante como el User/Passwd del administrador
+	❯ Podemos colocar algún dominio para que nos muestre información acerca de algún servicio interno de la maquina, como su propio **localhost** 
+	❯ Podemos encontrar información relevante como el User/Passwd del administrador
 
 ```bash 
 ❯ "http://172.17.0.2/utility.php?url=http://127.0.0.1:8089/login.html"
@@ -50,11 +50,11 @@ Podemos apuntar desde la maquina victima a su propio 'LocalHost' para poder ver 
 
 ![00x400](Pasted%20image%2020230427152444.png)
 
-Para el segundo caso, podemos llegar a la maquina victima porque estamos en la misma subred '172.17.0.0', solo podemos ver el puerto 80 abierto. Pero en eset caso existe un servicio que esta en otra subred,  la cual esta conectada con la primer maquina victima en la subred (10.10.0.0). Por lo que si quisieramos acceder a ese servicio interno tendriamos que hacerlo por medio de la primer maquina victima.
+Para el segundo caso, podemos llegar a la maquina victima porque estamos en la misma subred '172.17.0.0', solo podemos ver el puerto 80 abierto. Pero en este caso existe un servicio que esta en otra subred,  la cual esta conectada con la primer maquina victima en la subred (10.10.0.0). Por lo que si quisiéramos acceder a ese servicio interno tendríamos que hacerlo por medio de la primer maquina victima.
 
 ```bash 
 ❯ curl "http://172.17.0.2/utility.php?url=http://10.10.0.3:8089/"
 ```
-Estamos apuntando a la IP de la maquina victima y podemos cargar contenido que no esta expuesto al exrterior de una web alojada en una maquina de una red interna de la empresa.
+Estamos apuntando a la IP de la maquina victima y podemos cargar contenido que no esta expuesto al exterior de una web alojada en una maquina de una red interna de la empresa.
 
 
