@@ -20,7 +20,7 @@ A continuación, se proporcionan los enlaces a los 3 proyectos de Github que est
 ## Open Redirect 
 
 1. URL-Redirection
-El Open Re-Direct sucede cuando en la url puedes colocar otra url y en caso que te redirija a la pagina que colocaste, quiere decir que se esta sucitando uno. Este tipo de peticiones las hacemos por POST.
+El Open Re-Direct sucede cuando en la url puedes colocar otra url y en caso que te redirija a la pagina que colocaste, quiere decir que se esta suscitando uno. Este tipo de peticiones las hacemos por POST.
 
 ![0x420](Pasted%20image%2020230516133841.png)
 
@@ -28,12 +28,12 @@ Colocamos la url a la cual nos va a redirigir, en este caso es 'Google.es'
 
 ![](Pasted%20image%2020230516133752.png)
 
-El que hace la peticion en este tipo de casos es el servior mismo y podriamos ocasionar un ataque de DDoS a otros servicios. 
+El que hace la petición en este tipo de casos es el servidor mismo y podríamos ocasionar un ataque de DDoS a otros servicios. 
 
 
 2. URL-Redirection Harder
-Para este lab tendremos una restriccion en el punto de la url.
-Capturamos los datos de la solicitud con Burpsuite y obtenemos lo siguiente.
+Para este lab tendremos una restricción en el punto de la url.
+Capturamos los datos de la solicitud con BurpSuite y obtenemos lo siguiente.
 
 ![](Pasted%20image%2020230516135348.png)
 
@@ -41,26 +41,26 @@ Colocamos lo mismo que en el anterior ejemplo para ver si no redirige a Google.e
 
 ![](Pasted%20image%2020230516135708.png)
 
-Pero en este caso no nos deja, ya que la repsueta nos coloca que no podemos colocar un punto en la redireccion. 
+Pero en este caso no nos deja, ya que la respuesta nos coloca que no podemos colocar un punto en la redirección. 
 
 ![](Pasted%20image%2020230516135755.png)
 
-Por lo que para poder evadir eso, podemos hacer lo siguiente y es 'url-encodear'. Esto se lograra subrayando el punto '.' despues **Convert Selection > URL > URL-encode all characters**. Todo esto en Burpsuite. 
+Por lo que para poder evadir eso, podemos hacer lo siguiente y es 'url-encodear'. Esto se lograra subrayando el punto '.' después **Convert Selection > URL > URL-encode all characters**. Todo esto en BurpSuite. 
 
 ![](Pasted%20image%2020230516140044.png)
 
-Despues de 'url-encodearlo' y mandarlo, el servidor lo sigue detectando como un punto. Por lo que debemos de 'url-encodear' pero ahora el '%' y de esta manera podriamos evadir la restriccion del punto y hacer que la redireccion a la pagina de Google.es
+Después de 'url-encodearlo' y mandarlo, el servidor lo sigue detectando como un punto. Por lo que debemos de 'url-encodear' pero ahora el '%' y de esta manera podríamos evadir la restricción del punto y hacer que la redirección a la pagina de Google.es
 
 ![](Pasted%20image%2020230516140336.png)
 
 
 3. URL-Redirection Harder 2
-Para este lab tendremos una restriccion en el punto de la url y la barra. 
-Capturamos los datos de la solicitud con Burpsuite y obtenemos lo siguiente.
+Para este lab tendremos una restricción en el punto de la url y la barra. 
+Capturamos los datos de la solicitud con BurpSuite y obtenemos lo siguiente.
 
 ![](Pasted%20image%2020230516135708.png)
 
-Podemos colocar lo ultimo de lab anterior y asi poder burlar el punto.
+Podemos colocar lo ultimo de lab anterior y así poder burlar el punto.
 
 ![](Pasted%20image%2020230516140336.png)
 
@@ -68,9 +68,9 @@ Pero al momento de mandar la solicitud el servidor nos dice que no podemos usar 
 
 ![](Pasted%20image%2020230516141059.png)
 
-Por lo que deberiamos hacer lo siguiente para poder burlarlas.
+Por lo que deberíamos hacer lo siguiente para poder burlarlas.
 
-Nota: Solo para HTTPS no es necesario colocar en la url las dos barras '//' y asi podriamos burlar la parte de las barras. 
+Nota: Solo para HTTPS no es necesario colocar en la url las dos barras '//' y así podríamos burlar la parte de las barras. 
 
 ![](Pasted%20image%2020230516141344.png)
 
