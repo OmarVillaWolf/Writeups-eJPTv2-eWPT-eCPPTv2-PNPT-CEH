@@ -23,21 +23,21 @@ Si la contraseña almacenada en el sistema también se almacena como un número 
 Nosotros podemos cambiar el tipo de dato que estamos introduciendo en un login. 
 
 * Esto se vera mucho mejor en BurpSuite.
-* El campo por detras maneja **'isset'** -> Comparativa
+* El campo por detrás maneja **'isset'** -> Comparativa
 Si no sabemos la passwd, podemos representar el campo passwd como si fuera un array  con: []
 ```bash
 ❯ usuario=admin&password=admin                  # Peticion original, en donde la passwd es incorrecta
 
 ❯ usuario=admin&password[]=                     # Podemos burlar la passwd y entraria como el usuario admin en el login
 ```
-Si las comparativas de la web no estan bien controladas o sanitizadas, podemos entablar una comparativa de igualdad exitosa y burlar la autenticacion. 
+Si las comparativas de la web no están bien controladas o sanitizadas, podemos entablar una comparativa de igualdad exitosa y burlar la autenticación. 
 
 
-* Ahora el campo por detras maneja **'!empty'** -> Para comprobar que algun campo no este vacio, tambien se esta convirtiendo la passwd en **MD5** para compararla y asi poder entrar.
+* Ahora el campo por detrás maneja **'!empty'** -> Para comprobar que algún campo no este vacío, también se esta convirtiendo la passwd en **MD5** para compararla y así poder entrar.
 ```bash 
 ❯ usuario=admin&password=aabg7XSs                  # Peticion original, en donde el MD5 de la passwd es = 0e087386482136013740957780965295
 
 ❯ usuario=admin&password=QNKCDZO                   # El MD5 de esta palabra es = 0e830400451993494058024219903391
 ```
-**Nota:** Si el hash empieza con **0e** sin importar el resto que tenga, podemos colocar una passwd que al momento de aplicarle MD5 nos inicie con **0e** y aunque tenga otro valor de resto, este nos hara entrar al login ya que serian 'iguales' ya que todo numero que sea **0e o sea (0 elevado a algo = 0)**. 
+**Nota:** Si el hash empieza con **0e** sin importar el resto que tenga, podemos colocar una passwd que al momento de aplicarle MD5 nos inicie con **0e** y aunque tenga otro valor de resto, este nos hará entrar al login ya que serian 'iguales' ya que todo numero que sea **0e o sea (0 elevado a algo = 0)**. 
 * [Hash-Collition-MD5](https://news.ycombinator.com/item?id=9484757)
