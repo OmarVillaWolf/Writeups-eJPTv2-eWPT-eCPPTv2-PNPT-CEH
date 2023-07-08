@@ -7,7 +7,7 @@ Modo directorio: Listar los directorios y archivos
   **/usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt**
 Modo DNS: Encontrar los subdominios 
 	**/usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt** 
-Modo vhost: Encontrar host virtuales que esten configurados en el servidor
+Modo vhost: Encontrar host virtuales que estén configurados en el servidor
 	**/usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt** 
 
 # Wfuzz 
