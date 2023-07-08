@@ -22,7 +22,7 @@ A continuación, se comparten los enlaces correspondientes a los laboratorios qu
 
 ## IDORs
 
-El IDOR se encuentra en la URL, en esta imagen miramos que solo podemos seleccionar hasta 5 cafes, pero si metemos otro numero en la URL como 6,7,8,9,10 podriamos ver mas cafes. Este tipo de vulnerabilidades son muy comunes en paginas del Gobierno.
+El IDOR se encuentra en la URL, en esta imagen miramos que solo podemos seleccionar hasta 5 cafes, pero si metemos otro numero en la URL como 6,7,8,9,10 podríamos ver mas cafes. Este tipo de vulnerabilidades son muy comunes en paginas del Gobierno.
 
 ![](Pasted%20image%2020230520144708.png)
 
