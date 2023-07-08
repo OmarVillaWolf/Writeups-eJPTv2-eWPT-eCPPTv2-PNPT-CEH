@@ -22,21 +22,21 @@ A continuación, se proporciona el enlace directo al proyecto de Github que util
 * [Prototype-Pollution-Explain](https://medium.com/node-modules/what-is-prototype-pollution-and-why-is-it-such-a-big-deal-2dd8d89a93c)
 
 Esto hace un **Merge** entre dos objetos y sus propiedades.
-Si no encuentra la propiedad para el objeto actual, lo que hace es buscarla en el prototipo y si lo hemos modificado anteriormente, este lo hereda y asi podriamos hacer el 'PrototypePollution'
+Si no encuentra la propiedad para el objeto actual, lo que hace es buscarla en el prototipo y si lo hemos modificado anteriormente, este lo hereda y asi podríamos hacer el 'PrototypePollution'
 
 * Contaminaremos el prototipo para que la propiedad **IsAdmin = True** y con eso logremos ser usuario 'Admin'
 
 ![](Pasted%20image%2020230510162735.png)
 
-Aqui podemos ver que la contaminacion se hizo colocando la parte de **"\_\_proto\_\_:{"isAdmin":true}"**
+Aquí podemos ver que la contaminación se hizo colocando la parte de **"\_\_proto\_\_:{"isAdmin":true}"**
 
 * Si los objetos no tienen propiedades, pero logramos contaminar con el 'proto' podemos hacer que hereden la propiedad
 ![](Pasted%20image%2020230510163110.png)
 
 
-Debemos de modificar la data interceptada y pasarla a formato Json. Este ejemplo a continuacion es para el lab que nos descargamos.
+Debemos de modificar la data interceptada y pasarla a formato Json. Este ejemplo a continuación es para el lab que nos descargamos.
 ![](Pasted%20image%2020230510163455.png)
 
 ![](Pasted%20image%2020230510163714.png)
 
-Esto es lo que debemos de agregar y asi podriamos contaminar el prototipo para poder ser admin.
+Esto es lo que debemos de agregar y así podríamos contaminar el prototipo para poder ser admin.
