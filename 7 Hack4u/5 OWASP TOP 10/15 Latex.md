@@ -71,7 +71,7 @@ Podemos hacerlo de otra manera
 \closein\file
 ```
 
-Una mejor alternativa para hacer el de multiple lineas es hacerlo de la siguiente manera:
+Una mejor alternativa para hacer el de múltiple líneas es hacerlo de la siguiente manera:
 ```bash
 ❯ nvim get_files.sh
 	#!/bin/bash
