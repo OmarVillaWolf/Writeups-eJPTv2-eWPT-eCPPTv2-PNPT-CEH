@@ -75,7 +75,7 @@ Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/va
 
 ```
 Las etiquetas que usamos ahi son **Pre** de preformateadas y nos sirven para que nos muestre bien el Output
-Ya con ese archivo y que la Web interprete **php** podemos colocar en la url **?cmd=** y ahi pode colocar comandos y conectarmos a nuestra maquina de **Atacante** por una **ForwardShell**
+Ya con ese archivo y que la Web interprete **php** podemos colocar en la url **?cmd=** y ahí pode colocar comandos y conectarnos a nuestra maquina de **Atacante** por una **ForwardShell**
 
 Descargaremos el siguiente archivo y lo ejecutaremos con Pyhton3 para hacer una **ForwardShell**: 
 Debemos estar en la pestana de **Raw**
