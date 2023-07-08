@@ -39,9 +39,9 @@ Tenemos: **DB > TABLAS > COLUMNAS > DATOS**
 ### Inyecciones mirando el error en el Output
 
 Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre el **error**.
-* La mayoria de las inyecciones las puedes hacer empezando por  '
-* Dependiendo de la web podemos iniciar con comilla y a veces no, cuando es el caso tambien no es necesario colocar el comentario -- - al final de la query.
-* Un indicio de inyeccion SQL es encontrar en la url **.php?id=** No es necesario que diga **id** tambien puede tener otro parametro. 
+* La mayoría de las inyecciones las puedes hacer empezando por  '
+* Dependiendo de la web podemos iniciar con comilla y a veces no, cuando es el caso también no es necesario colocar el comentario -- - al final de la query.
+* Un indicio de inyección SQL es encontrar en la url **.php?id=** No es necesario que diga **id** también puede tener otro parámetro. 
 
 ```bash
 ❯ ' or '1'='1                                         # La mas sencilla y nos devolveria un true, dejamos una comilla sin cerrar ya que la propia query la cerrara
@@ -51,7 +51,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna e iremos adivinando hasta que no nos marque un error
 ```
 
-Despues de saber cuantas columnas existen podemos usar Union Select para meter un data en ese columna, esperando a que tambien esa columna acepte datos. Aqui tendriamos un ejemplo de que existen 3 columnas. Pero pueden ser mas o menos, dependiendo la DB.
+Después de saber cuantas columnas existen podemos usar Union Select para meter un data en ese columna, esperando a que también esa columna acepte datos. Aquí tendríamos un ejemplo de que existen 3 columnas. Pero pueden ser mas o menos, dependiendo la DB.
 ```bash
 ❯ ' union select 1,2,3 -- -                           # Primero colocamos eso y buscamos cual es el numero que nos pone en el output de la web, ya que es en esa columna en donde podremos inyectar algo
 ❯ ' union select NULL,NULL,NULL -- -                  # Aveces solo acepta NULL en lugar de numeros
