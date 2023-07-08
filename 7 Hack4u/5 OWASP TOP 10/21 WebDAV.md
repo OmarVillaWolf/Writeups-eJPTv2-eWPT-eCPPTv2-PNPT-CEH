@@ -21,11 +21,11 @@ A continuación, se proporciona el enlace al proyecto de Github el cual estaremo
 
 ## WebDAV 
 
-Al momento de querer entrar a una pagina Web. En el WebDAV nos podemos enocntrar con este tipo de login. 
+Al momento de querer entrar a una pagina Web. En el WebDAV nos podemos encontrar con este tipo de login. 
 
 ![](Pasted%20image%2020230516144325.png)
 
-Para darnos cuenta que es un WebDAV podriamos usar la herramienta de Whatweb que nos ayuda a identificar las tecnologias que corren detras de la web, asi como el gestor de contenidos, etc...
+Para darnos cuenta que es un WebDAV podríamos usar la herramienta de Whatweb que nos ayuda a identificar las tecnologías que corren detrás de la web, así como el gestor de contenidos, etc...
 
 ```bash
 ❯ whatweb http://127.0.0.1                  # Nos dara una breve descripcion del gestor de contenidos del puerto 80
@@ -34,7 +34,7 @@ Para darnos cuenta que es un WebDAV podriamos usar la herramienta de Whatweb que
 	# Tambien podriamos encontrar el 401 Unauthorized
 ```
 
-En donde podriamos colocar las credenciales comunes que son 'admin:admin'. Pero si vemos que no podemos entrar podriamos usar la siguiente herramienta si es que disponemos de credenciales validas. 
+En donde podríamos colocar las credenciales comunes que son 'admin:admin'. Pero si vemos que no podemos entrar podríamos usar la siguiente herramienta si es que disponemos de credenciales validas. 
 
 ```bash 
 ❯ davtest -url http://127.0.0.1 -auth admin:admin     # Debemos de tener el usuario y passwd validos para poder usar la tool
@@ -43,7 +43,7 @@ En donde podriamos colocar las credenciales comunes que son 'admin:admin'. Pero 
 	# 2do admin = passwd
 ```
 
-Para poder obtener la passwd, podriamos hacer lo siguiente:
+Para poder obtener la passwd, podríamos hacer lo siguiente:
 
 ```bash 
 ❯ cat /usr/share/wordlists/rockyou.txt | while read password; do response=$(davtest -url http://127.0.0.1 -auth admin:$password 2>&1 | grep -i succed); if [ $response ]; then echo "[+] La passwd correcta es: $password"; break; fi; done
@@ -51,7 +51,7 @@ Para poder obtener la passwd, podriamos hacer lo siguiente:
 # Ataque de Fuerza Bruta para encontrar la passwd con el comando davtest
 ```
 
-Podemos usar esta otra herramienta para , esta tool tambien nos pedira la autenticacion. 
+Podemos usar esta otra herramienta para , esta tool también nos pedirá la autenticación. 
 
 ```bash 
 ❯ cadaver http://127.0.0.1     # Sirve para subir archivos, descargar contenido, etc... 
