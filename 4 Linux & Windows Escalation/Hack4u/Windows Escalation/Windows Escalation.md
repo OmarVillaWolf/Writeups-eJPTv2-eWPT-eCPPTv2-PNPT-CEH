@@ -5,7 +5,7 @@ Tags: #Windows #Escalada #Privilegios #NT-AuthoritySystem #WinPEAS #SystemInfo #
 ## Enumeracion Tools
 
 * **Herramienta WinPEAS**: [WinPEAS](https://github.com/carlospolop/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md) 
-Nos dirigimos a: Download the **latest obfuscated and not obfuscated versions from here**, -> Despues debemos de descargar el archivo **winPeasx64.exe**
+Nos dirigimos a: Download the **latest obfuscated and not obfuscated versions from here**, -> Después debemos de descargar el archivo **winPeasx64.exe**
 
 ```bash
 En WinPeas podemos encontrar las siguientes vulnerabilidades
@@ -37,6 +37,4 @@ Nos descargamos el de la siguiente pagina:
 
 
 # Server Operators = Es un grupo en el que podemos administrar controladores de dominio, loggearse a un servicio interactivo, asi como crear, borrar recursos compartidos en la red, iniciar, parar servicios, back up, restaurar archivos, formatear el disco duro de la computadora y apagarla. Si pertenecemos a este grupo podemos cargar a la maquina victima Netcat.exe.
-
-# 
 ```
