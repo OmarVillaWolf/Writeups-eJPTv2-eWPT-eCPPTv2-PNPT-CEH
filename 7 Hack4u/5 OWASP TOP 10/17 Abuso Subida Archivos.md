@@ -38,15 +38,15 @@ Cuando la validación es en **nuestro navegador web**. Podemos eliminar toda esa
 
 10. Nos dice que subir archivos PHP están prohibidos 
 * Nos damos cuenta que la validación la hace el **servidor**, ya que miramos que al momento de subir el archivo php nos hace un 'Redirect'
-* [HackTricks-PHP](https://book.hacktricks.xyz/pentesting-web/file-upload) En esta web podemos ver algunas alternativas a la extension PHP
+* [HackTricks-PHP](https://book.hacktricks.xyz/pentesting-web/file-upload) En esta web podemos ver algunas alternativas a la extensión PHP
 
 ![](Pasted%20image%2020230509162940.png)
 
-Debemos ir cambiando de extension hasta que alguna funcione en el servidor e interprete el codigo, para este caso seria ".php5".
+Debemos ir cambiando de extensión hasta que alguna funcione en el servidor e interprete el código, para este caso seria ".php5".
 
 
-11. Nos dice que subir archivos PHP estan prohibidos y algunas de sus extenciones como 'php3, php4...' no nos deja o no nos lo interpreta. 
-Para esta ocasion debemos de subir otro tipo de extensiones como 'pht, phtm...' y ver que nos lo interprete la web.
+11. Nos dice que subir archivos PHP están prohibidos y algunas de sus extensiones como 'php3, php4...' no nos deja o no nos lo interpreta. 
+Para esta ocasión debemos de subir otro tipo de extensiones como 'pht, phtm...' y ver que nos lo interprete la web.
 
 ![](Pasted%20image%2020230509164104.png)
 
@@ -65,16 +65,16 @@ En lugar de subir un archivo con alguna de las extensiones. Podemos hacer lo sig
 
 ![](Pasted%20image%2020230509165622.png)
 
-En donde agregamos el '.htaccess', ademas de cambiarle el 'Content-Type' y al final le diremos que los archivos que sean .test nos lo interprete comop PHP.
+En donde agregamos el '.htaccess', además de cambiarle el 'Content-Type' y al final le diremos que los archivos que sean .test nos lo interprete como PHP.
 
 ![](Pasted%20image%2020230509165836.png)
 
-Adicional tenemos que subir un archivo, pero con la terminacion '.test' por lo que sera interpretado y podremos ejecutar comandos.
+Adicional tenemos que subir un archivo, pero con la terminación '.test' por lo que será interpretado y podremos ejecutar comandos.
 
 
 16. Nos restringe por el tamaño del archivo.  
-- Primer formade hacerlo es:
-Podemos ver el tamaño maximo del archivo a subir que en este caso es 30, pero lo podemos modificar a un tamaño que nos deje subir como por ejemplo 80.
+- Primer forma de hacerlo es:
+Podemos ver el tamaño máximo del archivo a subir que en este caso es 30, pero lo podemos modificar a un tamaño que nos deje subir como por ejemplo 80.
 
 ![](Pasted%20image%2020230510132746.png)
 
@@ -94,24 +94,24 @@ Podemos representar el mismo contenido de php pero de esta manera, para reducir 
 En la web pondriamos **?0=Command** 
 
 
-21. Tenemos una restriccion en el tipo de archivo. 
-* Lo que validan en esta ocasion es el '**Content-Type**', para un archivo php sale el siguiente.
+21. Tenemos una restricción en el tipo de archivo. 
+* Lo que validan en esta ocasión es el '**Content-Type**', para un archivo php sale el siguiente.
 
 ![](Pasted%20image%2020230510134340.png)
 
-En esta ocasion podemos manipularlo y colocarle uno como si fuera de una imagen. **'image/jpg'**
+En esta ocasión podemos manipularlo y colocarle uno como si fuera de una imagen. **'image/jpg'**
 
 ![](Pasted%20image%2020230510134517.png)
 
 
-23. Tenemos una restriccion en el tipo de archivo. Solo podemos subir archivos gif
-La validacion se hace con los 'Magic Numbers' que son los primeros numeros. Por lo que podriamos colocarle al principio **GIF8;** y con eso podriamos subir el archivo. 
+23. Tenemos una restricción en el tipo de archivo. Solo podemos subir archivos gif
+La validación se hace con los 'Magic Numbers' que son los primeros números. Por lo que podríamos colocarle al principio **GIF8;** y con eso podríamos subir el archivo. 
 
 ![](Pasted%20image%2020230510135308.png)
 
 
 31. Podemos subir solo archivos 'jpeg, gif'
-En esta ocasion si nos deja subir el archivo .php pero nos coloca un gif que al momento de mirar su 'nombre' en BurpSuite observamos que tiene 32 caracteres y esto nos da a entender que lo que subamos le aplican MD5 y despues le ponen la extension. 
+En esta ocasión si nos deja subir el archivo .php pero nos coloca un gif que al momento de mirar su 'nombre' en BurpSuite observamos que tiene 32 caracteres y esto nos da a entender que lo que subamos le aplican MD5 y después le ponen la extensión. 
 
 Podemos aplicarle MD5 al nombre de nuestro archivo. 
 ```bash
@@ -122,11 +122,11 @@ Podemos aplicarle MD5 al nombre de nuestro archivo.
 
 ![](Pasted%20image%2020230510140501.png)
 
-Ahora en la url de la web colocamos el md5 y la extension .php = **dfff0a7fa1a55c8c1a4966c19f6da452.php** y despues le colocamos **?cmd=Command** 
+Ahora en la url de la web colocamos el md5 y la extensión .php = **dfff0a7fa1a55c8c1a4966c19f6da452.php** y después le colocamos **?cmd=Command** 
 
 
 33. Solo podemos subir solo archivos 'jpeg, gif'
-Para este reto nos deja subir el archivo y tambien esta aplicando un MD5 pero lo hace tambien a la estension.
+Para este reto nos deja subir el archivo y también esta aplicando un MD5 pero lo hace también a la extensión.
 
 Podemos aplicarle MD5 al nombre de nuestro archivo. 
 ```bash
@@ -135,18 +135,18 @@ Podemos aplicarle MD5 al nombre de nuestro archivo.
 	# n = Quitar el salto de linea y asi no cambie el MD5
 ```
 
-Ahora en la url de la web colocamos el md5 y la extension .php = **b0e4bdfca013a84e5f0b9bc9ae028945.php** y despues le colocamos **?cmd=Command** 
+Ahora en la url de la web colocamos el md5 y la extensión .php = **b0e4bdfca013a84e5f0b9bc9ae028945.php** y después le colocamos **?cmd=Command** 
 
 
 35. Solo podemos subir solo archivos 'jpeg, gif'
-Para este reto le estan aplicando el **sha1sum** al contenido del archivo ya que tiene 40 caracteres el gif que nos sale por defecto.
+Para este reto le están aplicando el **sha1sum** al contenido del archivo ya que tiene 40 caracteres el gif que nos sale por defecto.
 ```bash
 ❯ echo -n "cmd" | sha1sum                 # Para aplicar sha1sum a un nombre
 ❯ echo -n "cmd.php" | sha1sum             # Para aplicar sha1sum a un nombre y la extension
 ❯ sha1sum cmd.php                         # Para aplicar sha1sum al contenido de un archivo 
 ```
 
-Ahora en la url de la web colocamos el md5 y la extension .php = **17717d2bf6c721c49d517e7edad96d0750a17a4b.php** y despues le colocamos **?cmd=Command** 
+Ahora en la url de la web colocamos el md5 y la extensión .php = **17717d2bf6c721c49d517e7edad96d0750a17a4b.php** y después le colocamos **?cmd=Command** 
 
 
 41. Solo podemos subir solo archivos 'jpeg, gif'
@@ -160,7 +160,7 @@ Probamos agregando alguno de esos directorios y le colocamos en la web "?cmd=Com
 
 
 51. Solo podemos subir solo archivos 'jpeg'
-Para esta ocasion haremos un ataque de doble extension y colocarle al archivo .jpg
+Para esta ocasión haremos un ataque de doble extensión y colocarle al archivo .jpg
 
 ![](Pasted%20image%2020230510150307.png)
 
@@ -184,11 +184,11 @@ Al momento de darnos el enlace, lo que hace el servidor es tratar de descargarno
 Debemos de subir el archivo .htaccess y el contenido correspondiente.
 ![](Pasted%20image%2020230510151639.png)
 
-Despues debemos de cambiarle esos tres parametros para que nos lo deje subir.
+Después debemos de cambiarle esos tres parámetros para que nos lo deje subir.
 
 ![](Pasted%20image%2020230510151826.png)
 
 
-Podemos usar los metadatos para inyectar codigo php con la herramienta **exiftool** a una imagen y cuando apuntemos a la imagen en algun punto nos colocara en este caso el resultado del comando 'whoami'
+Podemos usar los metadatos para inyectar código php con la herramienta **exiftool** a una imagen y cuando apuntemos a la imagen en algún punto nos colocara en este caso el resultado del comando 'whoami'
 
 ![](Pasted%20image%2020230510152313.png)
