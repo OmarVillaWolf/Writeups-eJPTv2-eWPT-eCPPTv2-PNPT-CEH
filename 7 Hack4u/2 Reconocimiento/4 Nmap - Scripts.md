@@ -2,18 +2,21 @@
 
 Tags: #Nmap #Tool #Reconocimiento #Escaneo #Comandos 
 
-❯ **nmap -p22 -sVC ❮IP❯** Para ver la Version y el Servicio que corren esos puertos (Fingerprinting)
-* sV -> Detecta la version y el servicio que estan corriendo el puerto seleccionado
-* sC -> Para lanzar un conjunto de scripts basicos de reconocimiento para que nos enumere mas informacion adicional
+```bash 
+❯ nmap -p22 -sVC ❮IP❯          # Para ver la Version y el Servicio que corren esos puertos (Fingerprinting)
+	# sV -> Detecta la version y el servicio que estan corriendo el puerto seleccionado
+	# sC -> Para lanzar un conjunto de scripts basicos de reconocimiento para que nos enumere mas informacion adicional
 
-❯ **locate .nse** Podemos ver los scripts de Nmap que estan en hechos en Lua
+❯ locate .nse                  # Podemos ver los scripts de Nmap que estan en hechos en Lua
 
-❯ **locate ftp-anon.nse** Este script es para cuando estamos auditando un ftp, si esta habilitado el usuario anonymous nos lo reporta, y ahi podriamos conectarnos sin proporcionar passwd y hasta podriamos subir archivos.
-❯ **locate http-robots.txt.nse** Este script es para validar la ruta **/robots.txt**, y si existe esta ruta podemos ver mas rutas que nos la reporta por consola 
+❯ locate ftp-anon.nse          # Este script es para cuando estamos auditando un ftp, si esta habilitado el usuario anonymous nos lo reporta, y ahi podriamos conectarnos sin proporcionar passwd y hasta podriamos subir archivos.
 
-Los scripts de nmap pueden tener una categoria o multiples categorias y son como 14
+❯ locate http-robots.txt.nse   # Este script es para validar la ruta /robots.txt, y si existe esta ruta podemos ver mas rutas que nos la reporta por consola 
+```
+
+Los scripts de Nmap pueden tener una categoría o múltiples categorías y son como 14
 * 1.- Discovery - 2.- Default
-* 3.- External - 4.- Version
+* 3.- External - 4.- Versión
 * 5.- Safe - 6.- Auth
 * 7.- Broadcast - 8.- DOS
 * 9.- Brute - 10.- Exploit
@@ -26,10 +29,13 @@ Los scripts de nmap pueden tener una categoria o multiples categorias y son como
 -   **intrusive**: Esta categoría incluye scripts más invasivos que pueden ser detectados fácilmente por un sistema de detección de intrusos o un Firewall, pero que pueden proporcionar información valiosa sobre vulnerabilidades y debilidades en la red.
 -   **vuln**: Esta categoría se enfoca específicamente en la detección de vulnerabilidades y debilidades en los sistemas y servicios que se están ejecutando en la red.
 
-❯ **locate .nse | xargs grep "categories"** Para filtrar por las categorias de los scripts de Nmap (xargs=nos permite operar de forma paralela con otro comando)
+```bash 
+❯ locate .nse | xargs grep "categories"     # Para filtrar por las categorias de los scripts de Nmap (xargs=nos permite operar de forma paralela con otro comando)
 
-❯ **nmap -p22 ❮IP❯ --script="vuln and safe"** Podemos mandar a escanear ciertas categorias, en este caso mandaremos puros scripts que usen las categorias 'vuln and safe' y en este caso estos actuan como Shakers 
-❯ **nmap -p80 ❮IP❯ --script http-enum** Podemos hacer Fuzzing pero con un diccionario mas chico y hara fuerza bruta, este se usa cuando la web es muy simple y lo hara por el metodo GET y por el codigo de estado determinara si existe o no (200=Ok, 404=Not-Found, 500=Internal Server Error, 301,302=Redirect, 401=Unauthorized) pero solo nos reportara los que tengan un 200
+❯ nmap -p22 ❮IP❯ --script="vuln and safe"   # Podemos mandar a escanear ciertas categorías, en este caso mandaremos puros scripts que usen las categorías 'vuln and safe' y en este caso estos actúan como Shakers 
+
+❯ nmap -p80 ❮IP❯ --script http-enum         # Podemos hacer Fuzzing pero con un diccionario mas chico y hara fuerza bruta, este se usa cuando la web es muy simple y lo hara por el metodo GET y por el codigo de estado determinara si existe o no (200=Ok, 404=Not-Found, 500=Internal Server Error, 301,302=Redirect, 401=Unauthorized) pero solo nos reportara los que tengan un 200
+```
 
 ## Creación de tus propios scripts en Lua para nmap
 Los campos más comunes que se definen en la tabla de un script de Lua en Nmap incluyen:
