@@ -20,14 +20,14 @@ Os compartimos a continuación el enlace al comprimido ZIP que utilizamos en est
 ## HTML
 En el CSRF podemos modificar todos aquellos campos en donde no sea necesaria una autenticación en caso de no tener las credenciales. Pero si las tenemos claro que podemos modificar cualquier tipo de campo. 
 * Son muy comunes en ataques de phishing
-* La persona debe de estar logeada en la web donde esta el CSRF, y al momento de que abra el enlace, este pueda hacer los cambios como (Passwd, campos criticos, etc...)
+* La persona debe de estar logeada en la web donde esta el CSRF, y al momento de que abra el enlace, este pueda hacer los cambios como (Passwd, campos críticos, etc...)
 
 
 Este tipo de scripts se deben de hacer en html, en donde sabemos que podemos hacer acciones en el mismo sitio tramitando data con la url.
 ```html
 <img src="http://www.seed-server.com/action/friends/add?friend=57" alt="image" width="1" height="1" />  <!-- Enviaremos un html de una 'imagen' con un codigo-->
 ```
-Desde la parte de action es para agregar un amigo en el lab de la pagina anterior. Por lo que al momento de mandarlo a alguien y este abra el correo o url, automáticamente se le agregara el amigo con ese identificador que en este caso es 57.  La accion va de la mano con el identificador del usuario a atacar.
+Desde la parte de action es para agregar un amigo en el lab de la pagina anterior. Por lo que al momento de mandarlo a alguien y este abra el correo o url, automáticamente se le agregara el amigo con ese identificador que en este caso es 57.  La acción va de la mano con el identificador del usuario a atacar.
 
 
 
