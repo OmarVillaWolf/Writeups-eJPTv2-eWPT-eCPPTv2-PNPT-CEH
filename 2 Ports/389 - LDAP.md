@@ -18,7 +18,7 @@ Para evitar las inyecciones LDAP, las aplicaciones web que interactúan con un s
 
 También es importante que las aplicaciones web se ejecuten con privilegios mínimos en la red y que se monitoreen regularmente las actividades del servidor LDAP para detectar posibles inyecciones.
 
-A continuación, se proporciona el enlace directo al proyecto de Github que nos descargamos para desplegar un laboratorio práctico donde poder ejecutar esta vulnerabilidad:
+A continuación, se proporciona el enlace directo al proyecto de GitHub que nos descargamos para desplegar un laboratorio práctico donde poder ejecutar esta vulnerabilidad:
 
 -   **LDAP-Injection-Vuln-App**: [https://github.com/motikan2010/LDAP-Injection-Vuln-App](https://github.com/motikan2010/LDAP-Injection-Vuln-App)
 
