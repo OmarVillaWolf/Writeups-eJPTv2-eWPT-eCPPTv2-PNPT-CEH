@@ -21,51 +21,12 @@
             }
           },
           {
-            "id": "e4756a138013cacb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/80, 443 - WebDAV en IIS.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e31025d33bfec646",
+            "id": "466266eb961c8765",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "3 Tools/Metasploit Exploit.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d14e17ba762807d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8b859b8060ac63dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/80, 443 - HTTP, HTTPS.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -158,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Ports/80, 443 - WebDAV en IIS.md"
+                "file": "3 Tools/Metasploit Exploit.md"
               }
             }
           }
@@ -184,27 +145,37 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "e4756a138013cacb",
+  "active": "466266eb961c8765",
   "lastOpenFiles": [
-    "2 Ports/80, 443 - HTTP, HTTPS.md",
-    "2 Ports/80, 443 - WebDAV en IIS.md",
-    "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
-    "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
-    "9 CEH v12/1 Conceptos Hacking.md",
-    "3 Tools/Metasploit Exploit.md",
     "3 Tools/Metasploit Reconocimiento.md",
-    "3 Tools/Metasploit.md",
+    "3 Tools/Metasploit Exploit.md",
+    "9 CEH v12/1 Conceptos Hacking.md",
+    "2 Ports/135 - RPC.md",
+    "2 Ports/445, 139- SMB.md",
+    "2 Ports/3389, 3333 - RDP.md",
     "3 Tools/Hydra.md",
-    "2 Ports/20 - 21 FTP 134 - TFTP.md",
-    "9 CEH v12/9 Sniffer.md",
-    "9 CEH v12/5 Reconocimiento activo.md",
-    "9 CEH v12/3 Fundamentos de seguridad.md",
-    "9 CEH v12/2 Fundamentos Networking.md",
+    "2 Ports/0 Servicios.md",
+    "3 Tools/Nmap.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/25 Blue.md",
+    "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
+    "2 Ports/80 - WordPress.md",
+    "2 Ports/80 - Apache.md",
+    "2 Ports/80, 443 - HTTP, HTTPS.md",
+    "2 Ports/80 - Drupal.md",
+    "2 Ports/80 - Magento.md",
+    "2 Ports/80 - Joomla.md",
+    "2 Ports/80, 443 - WebDAV - IIS.md",
+    "7 Hack4u/3 Servicios y Gestores/5 WordPress.md",
+    "3 Tools/Metasploit.md",
+    "2 Ports/445 - Samba.md",
+    "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
+    "2 Ports/5985-6 - WINRM.md",
+    "2 Ports/389 - LDAP.md",
+    "2 Ports/6379 - REDIS.md",
+    "2 Ports/5800, 5900 - VNC.md",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
-    "1 Kitty.md",
     "Z Imagenes/Pasted image 20230531123516.png",
     "Z Imagenes/Pasted image 20230531123312.png",
     "Z Imagenes/Pasted image 20230531113253.png",
@@ -212,16 +183,6 @@
     "Z Imagenes/Pasted image 20230530142007.png",
     "Z Imagenes/Pasted image 20230529173624.png",
     "Z Imagenes/Pasted image 20230529163726.png",
-    "10 PortSwigger/SSRF.md",
-    "10 PortSwigger/SQLI.md",
-    "10 PortSwigger/Directory Path Traversal.md",
-    "7 Hack4u/5 OWASP TOP 10/33 GraphQL.md",
-    "7 Hack4u/5 OWASP TOP 10/32 Des-Pickle.md",
-    "7 Hack4u/5 OWASP TOP 10/31 Des-YAML.md",
-    "7 Hack4u/5 OWASP TOP 10/30 CSS o CSSI.md",
-    "7 Hack4u/5 OWASP TOP 10/29 Race Condition.md",
-    "7 Hack4u/5 OWASP TOP 10/28 Json Web Tokens.md",
-    "7 Hack4u/5 OWASP TOP 10/27 Puzzling-Fixation-Overloading.md",
     "0 Windows Services/0 Windows Services",
     "0 Servicios",
     "2 Ports/Windows Services",
