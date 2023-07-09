@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "ebc3c6135e7652ad",
+            "id": "4ceb58f010e50e24",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/5 OWASP TOP 10/33 GraphQL.md",
+                "file": "9 CEH v12/1 Conceptos Hacking.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/5 OWASP TOP 10/33 GraphQL.md"
+                "file": "9 CEH v12/1 Conceptos Hacking.md"
               }
             }
           }
@@ -145,8 +145,29 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "ebc3c6135e7652ad",
+  "active": "4ceb58f010e50e24",
   "lastOpenFiles": [
+    "9 CEH v12/9 Sniffer.md",
+    "9 CEH v12/5 Reconocimiento activo.md",
+    "9 CEH v12/3 Fundamentos de seguridad.md",
+    "9 CEH v12/2 Fundamentos Networking.md",
+    "9 CEH v12/1 Conceptos Hacking.md",
+    "Z Imagenes/Pasted image 20230531123551.png",
+    "Z Imagenes/Pasted image 20230531123804.png",
+    "Z Imagenes/Pasted image 20230531125838.png",
+    "1 Kitty.md",
+    "Z Imagenes/Pasted image 20230531123516.png",
+    "Z Imagenes/Pasted image 20230531123312.png",
+    "Z Imagenes/Pasted image 20230531113253.png",
+    "Z Imagenes/Pasted image 20230530142040.png",
+    "Z Imagenes/Pasted image 20230530142007.png",
+    "Z Imagenes/Pasted image 20230529173624.png",
+    "Z Imagenes/Pasted image 20230529163726.png",
+    "2 Ports/80, 443 - WebDAV en IIS.md",
+    "10 PortSwigger/SSRF.md",
+    "10 PortSwigger/SQLI.md",
+    "10 PortSwigger/Directory Path Traversal.md",
+    "7 Hack4u/5 OWASP TOP 10/33 GraphQL.md",
     "7 Hack4u/5 OWASP TOP 10/32 Des-Pickle.md",
     "7 Hack4u/5 OWASP TOP 10/31 Des-YAML.md",
     "7 Hack4u/5 OWASP TOP 10/30 CSS o CSSI.md",
@@ -162,17 +183,6 @@
     "7 Hack4u/5 OWASP TOP 10/20 Open Redirect.md",
     "7 Hack4u/5 OWASP TOP 10/19 Mass Asignment Atack.md",
     "7 Hack4u/5 OWASP TOP 10/18 Prototype Pollution.md",
-    "7 Hack4u/5 OWASP TOP 10/17 Abuso Subida Archivos.md",
-    "7 Hack4u/5 OWASP TOP 10/16 APIs.md",
-    "7 Hack4u/5 OWASP TOP 10/15 Latex.md",
-    "7 Hack4u/5 OWASP TOP 10/14 Deserializacion.md",
-    "7 Hack4u/5 OWASP TOP 10/13 NoSQLI.md",
-    "7 Hack4u/5 OWASP TOP 10/12 Type Juggling.md",
-    "7 Hack4u/5 OWASP TOP 10/11 Padding Oracle.md",
-    "7 Hack4u/5 OWASP TOP 10/10 CSTI.md",
-    "7 Hack4u/5 OWASP TOP 10/9 SSTI.md",
-    "7 Hack4u/5 OWASP TOP 10/8 SSRF.md",
-    "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
     "0 Windows Services/0 Windows Services",
     "0 Servicios",
     "2 Ports/Windows Services",
@@ -180,16 +190,6 @@
     "DB Folder",
     "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf",
     "6 Vulhub - Machines/Youtube Simu eJPT",
-    "Z Imagenes/Hacking/SSRF.png",
-    "Z Imagenes/Hacking/Piv2.png",
-    "Z Imagenes/Hacking/Piv1.png",
-    "Pasted image 20230606022516.png",
-    "Z Imagenes/Hacking/DB8.png",
-    "Z Imagenes/Hacking/DB7.png",
-    "Z Imagenes/Hacking/DB6.png",
-    "Z Imagenes/Hacking/DB5.png",
-    "Z Imagenes/Hacking/DB4.png",
-    "Z Imagenes/Hacking/DB3.png",
     "Z Imagenes/Hacking",
     "Z Imagenes/CEH",
     "Z Imagenes/AWS"
