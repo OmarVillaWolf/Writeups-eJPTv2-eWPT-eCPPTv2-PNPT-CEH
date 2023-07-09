@@ -41,7 +41,7 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 	# LPORT = Local Port Atacante
 ```
 
-* Nos ponemos en escucha por Netcat:
+* Nos ponemos en escucha por Netcat:dows
 ```bash 
 ❯ nc -nlvp 443
 ```
