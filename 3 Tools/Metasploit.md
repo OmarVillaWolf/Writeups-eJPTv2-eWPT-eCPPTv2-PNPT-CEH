@@ -13,6 +13,7 @@ En esta clase, veremos cómo utilizar algunas de las funcionalidades de esta her
 
 Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera vez)
 ```bash 
+❯ service postgresql start      # Iniciamos la base de datos que consulta Metasploit
 ❯ msfdb run
 ```
 
