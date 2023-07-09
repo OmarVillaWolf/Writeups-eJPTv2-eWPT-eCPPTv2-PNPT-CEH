@@ -93,7 +93,9 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ## SMB
 ```bash
-❯ nmap --script "vuln and safe" -p445 ❮Target IP❯ -oN smbVulnScan   # Para ver si este servicio es vulnerable al ethernalblue (ms17-010) en Windows 7.
+❯ nmap -sV -p445 --script=smb-vuln-ms17-010 ❮Target IP❯             # Para ver si es vulnerable al EternalBlue
+
+❯ nmap --script "vuln and safe" -p445 ❮Target IP❯ -oN smbVulnScan   # Para ver si este servicio es vulnerable al EternalBlue (ms17-010) en Windows 7.
 
 	#  p445 = Indica el puerto que se quiere escanear
 	#  Target IP = Dirección IP que se quiere escanear
