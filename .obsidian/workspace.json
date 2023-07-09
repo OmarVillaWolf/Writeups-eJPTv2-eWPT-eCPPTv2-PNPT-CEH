@@ -8,6 +8,19 @@
         "type": "tabs",
         "children": [
           {
+            "id": "4ceb58f010e50e24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "9 CEH v12/1 Conceptos Hacking.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "e4756a138013cacb",
             "type": "leaf",
             "state": {
@@ -21,12 +34,25 @@
             }
           },
           {
-            "id": "4ceb58f010e50e24",
+            "id": "e31025d33bfec646",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9 CEH v12/1 Conceptos Hacking.md",
+                "file": "3 Tools/Metasploit Exploit.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d14e17ba762807d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -119,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9 CEH v12/1 Conceptos Hacking.md"
+                "file": "2 Ports/80, 443 - WebDAV en IIS.md"
               }
             }
           }
@@ -145,13 +171,20 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "4ceb58f010e50e24",
+  "active": "e4756a138013cacb",
   "lastOpenFiles": [
+    "9 CEH v12/1 Conceptos Hacking.md",
+    "2 Ports/80, 443 - WebDAV en IIS.md",
+    "3 Tools/Metasploit Exploit.md",
+    "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
+    "3 Tools/Metasploit Reconocimiento.md",
+    "3 Tools/Metasploit.md",
+    "3 Tools/Hydra.md",
+    "2 Ports/20 - 21 FTP 134 - TFTP.md",
     "9 CEH v12/9 Sniffer.md",
     "9 CEH v12/5 Reconocimiento activo.md",
     "9 CEH v12/3 Fundamentos de seguridad.md",
     "9 CEH v12/2 Fundamentos Networking.md",
-    "9 CEH v12/1 Conceptos Hacking.md",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
@@ -163,7 +196,6 @@
     "Z Imagenes/Pasted image 20230530142007.png",
     "Z Imagenes/Pasted image 20230529173624.png",
     "Z Imagenes/Pasted image 20230529163726.png",
-    "2 Ports/80, 443 - WebDAV en IIS.md",
     "10 PortSwigger/SSRF.md",
     "10 PortSwigger/SQLI.md",
     "10 PortSwigger/Directory Path Traversal.md",
@@ -177,12 +209,6 @@
     "7 Hack4u/5 OWASP TOP 10/26 SQL Trunk.md",
     "7 Hack4u/5 OWASP TOP 10/25 CORS.md",
     "7 Hack4u/5 OWASP TOP 10/24 IDORs.md",
-    "7 Hack4u/5 OWASP TOP 10/23 XPath.md",
-    "7 Hack4u/5 OWASP TOP 10/22 ShellShock.md",
-    "7 Hack4u/5 OWASP TOP 10/21 WebDAV.md",
-    "7 Hack4u/5 OWASP TOP 10/20 Open Redirect.md",
-    "7 Hack4u/5 OWASP TOP 10/19 Mass Asignment Atack.md",
-    "7 Hack4u/5 OWASP TOP 10/18 Prototype Pollution.md",
     "0 Windows Services/0 Windows Services",
     "0 Servicios",
     "2 Ports/Windows Services",
