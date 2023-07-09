@@ -19,22 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "466266eb961c8765",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Metasploit Exploit.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -119,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 Tools/Metasploit Exploit.md"
+                "file": "9 CEH v12/1 Conceptos Hacking.md"
               }
             }
           }
@@ -145,15 +131,17 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "466266eb961c8765",
+  "active": "4ceb58f010e50e24",
   "lastOpenFiles": [
-    "3 Tools/Metasploit Reconocimiento.md",
     "3 Tools/Metasploit Exploit.md",
+    "2 Ports/5985-6 - WINRM.md",
+    "2 Ports/445, 139- SMB.md",
+    "3 Tools/Hydra.md",
+    "2 Ports/3389, 3333 - RDP.md",
+    "2 Ports/4555 - RSIP.md",
+    "3 Tools/Metasploit Reconocimiento.md",
     "9 CEH v12/1 Conceptos Hacking.md",
     "2 Ports/135 - RPC.md",
-    "2 Ports/445, 139- SMB.md",
-    "2 Ports/3389, 3333 - RDP.md",
-    "3 Tools/Hydra.md",
     "2 Ports/0 Servicios.md",
     "3 Tools/Nmap.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/25 Blue.md",
@@ -169,10 +157,8 @@
     "3 Tools/Metasploit.md",
     "2 Ports/445 - Samba.md",
     "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
-    "2 Ports/5985-6 - WINRM.md",
     "2 Ports/389 - LDAP.md",
     "2 Ports/6379 - REDIS.md",
-    "2 Ports/5800, 5900 - VNC.md",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
