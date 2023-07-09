@@ -11,7 +11,8 @@ C:\Windows\Temp                              # Directorios con capacidad de escr
 ```
 
 ```bash 
-❯ systeminfo                                 # Nos muestra la informacion del Windows
+❯ systeminfo                                 # Nos muestra la informacion de Windows
+❯ sysinfo                                    # Nos muestra algunos detalles de Windows
 ```
 
 ```bash
