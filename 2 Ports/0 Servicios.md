@@ -4,8 +4,7 @@ Tags: #WindowsServices
 
 | IIS | TCP 80/443 | Servidor web desarrollado por Microsoft que solo corre en Windows |
 |----|----|---|
-| WebDAV | TCP 80/443 | Extensión HTTP que permite a los clientes update, delete, move and copy files en el servidor web.  |
-|||WebDAV actúa como servidor de archivos.|
+| WebDAV | TCP 80/443 | Extensión HTTP que permite a los clientes update, delete, move and copy files en el servidor web. WebDAV actúa como servidor de archivos. |
 | SMB/CIFS | TCP 445 | Protocolo para compartir archivos entre computadoras o en la red LAN |
 | Samba | TCP 445 | Implementación Linux de SMB y es usada para que los sistemas Windows puedan acceder a dispositivos y archivos Linux |
 | NetBIOS | TCP 139 |  |
@@ -29,3 +28,15 @@ Afecta a la siguientes versiones de Windows:
 * Vista
 * Windows 7
 * Windows Server 2008 & R2
+
+
+## Servicios de Linux comúnmente explotados 
+
+Tags: #LinuxServices
+
+| Apache Web Server | TCP 80/443 | Plataforma de código abierto para servicio web bajo la licencia de Apache 2.0 |
+|---|---|---|
+| SSH | TCP 22 | Protocolo de acceso remoto criptográfico usado para acceder remotamente y controlar sistemas de manera segura |
+| FTP | TCP 21 | Protocolo que es usado para facilitar la compartición de archivos entre cliente/servidor y viceversa |
+| SAMBA | TCP 445 | Samba es la implementación de Linux del SMB, y permite a los sistemas Windows acceder a los recursos compartidos y dispositivos Linux |
+
