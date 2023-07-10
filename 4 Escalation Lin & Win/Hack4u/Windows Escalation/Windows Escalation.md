@@ -16,6 +16,10 @@ En WinPeas podemos encontrar las siguientes vulnerabilidades
 
 ## Manual 
 
+```bash 
+❯  getuid                                    # Nombre del servidor 
+```
+
 ```bash
 ❯  whoami /priv                              # Miramos los privilegios que tenemos   
 	
