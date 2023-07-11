@@ -138,7 +138,17 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL
 	❯ run 
 ```
 
+## Shellshock (CVE-2014-6271)
 
+```bash 
+# Para confirmar si es vulnerable a Shellshock
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/apache_mod_cgi_bash_env     # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                               # Colocamos la IP de la maquina victima
+	❯ run 
+```
 
 ## Puerto 3306 MYSQL 
 
