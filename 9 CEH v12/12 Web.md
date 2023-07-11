@@ -9,6 +9,7 @@
 [APOYO CAP 12 Ataques a aplicaciones web.pdf](https://github.com/OmarVillaWolf/Writeups-eJPTv2-eWPT-eCPPTv2-PNPT-CEH/files/11986623/APOYO.CAP.12.Ataques.a.aplicaciones.web.pdf)
 
 [Pentesting With Burp Suite.pdf](https://github.com/OmarVillaWolf/Writeups-eJPTv2-eWPT-eCPPTv2-PNPT-CEH/files/11986628/Pentesting.With.Burp.Suite.pdf)
+https://www.youtube.com/watch?v=Fz_VU2OxnFg&list=PL4TbrTdoQBY_h0-ZxC0LbZ8Fsz7F91d1c&ab_channel=SniferL4bs
 
 ## ANSI Tips
 
