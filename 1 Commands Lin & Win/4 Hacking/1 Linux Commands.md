@@ -15,7 +15,7 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```bash
 /etc/hosts                                   # Para agregar algun dominio existente
 /etc/passwd                                  # Ruta de las cuentas de usuario
-/etc/shadow                                  # Ruta de hashes de passwrod de usuario estan almacenadas ahi
+/etc/shadow                                  # Hashes encriptados de passwds de los usuarios y solo puede acceder el usuario root 
 /etc/group                                   # Ruta de configuracion del archivo de grupos
 /etc/shells                                  # Podemos ver las diferentes shells que hay 
 /etc/ssh/sshd_config                         # Podemos ver las configuraciones de ssh y ver si el usuario root se puede conectar 
