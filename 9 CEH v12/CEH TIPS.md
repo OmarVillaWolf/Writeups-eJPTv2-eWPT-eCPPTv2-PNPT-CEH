@@ -5,26 +5,43 @@
 * Nmap
 * Dirbuster
 * Metasploit
-* Wordpress
-* Joomla
-* SMB
+* SMB / SAMBA
 * Nikto
 * Crackmapexec
 * Hydra
 * Msfvenom
 * Searchsploit
-* Web application 
+
+* Hashes 
+	* Dumping hashes
+
 * Pivoting
+
+* Gestores 
+	* Wordpress
+	* Joomla
 
 * Diccionarios
 	* /usr/share/wordlists/rockyou.txt 
-	* /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
+	* /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 	* /usr/share/metasploit-framework/data/wordlists/unix_users.txt
+	* /usr/share/metasploit-framework/data/wordlists/common_users.txt
 
 * Pasar archivos de Linux/Linux o Linux/Windows 
 
+* Escalación de privilegios 
+	* Linux 
+		* Kernel 
+		* CRON
+		* Binarios SUID
+	* Windows 
+		* Kernel 
+		* 
+
 # CEH TIPS PRACTICAL
 ## Tools a usar 
+
+* 6 horas del examen practico 
 
 * Nmap 
 * Metasploit
@@ -125,6 +142,34 @@ x.x.x.x -> Retrasmision a c.c.c.c - Indique el puerto:
 
 Podemos ver los modulos en el 'Inspector' de la pagina web
 # En la parte de Ready tenemos informacion 
+```
+
+## Capitulo 13
+
+```bash 
+# Tools 
+VeraCrypt     # Tool de encriptacion y desencriptacion de volumenes de disco
+	1. Crear volumen  # Forma de enciptar
+	2. Crear contenedor de archivos cifrado
+	3. Volumen VeraCrypt normal
+	4. Seleccionamos un archivo 
+	5. Tipo de cifrado / Algoritmo SHA-256 o SHA-512
+	6. Tamaño 
+	7. Password que nos daran en el examen 
+
+	1. Seleccionar archivo # Forma de desenciptar, siu sale el error de 'Code id file' buscamos el otro archivo en la carpeta 
+	2. Montar 
+	3. Password que nos daran en el examen 
+	4. Desmontar al finalizar 
 
 
+HashMyFiles  # Tool para calculo de integridad - HASH
+1. Abrimos la ruta 
+2. Cargamos todos los archivos y nos mostrara sus tipos de Hash
+3. Comparamos los hash de la herramienta con los de la copia de seguridad 
+
+CryptoForge  # Tool para desenciptar / Los archivos que tengan la extencion .cfe
+1. Click derecho - Encryptar 
+
+1. Click derecho - Desencriptar con la passwd que nos dan en el examen 
 ```
