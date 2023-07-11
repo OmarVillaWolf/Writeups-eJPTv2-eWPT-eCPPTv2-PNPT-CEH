@@ -22,7 +22,7 @@ Necesitamos credenciales validas para poder entrar al WebDav en la web
 	# asp, aspx, cfm, jsp, laudanum, perl, php, seclists
 ```
 
-## Tools 
+## WebDAV 
 
 ```bash 
 * davtest           # Usada para escanear, autenticar y explotar un WebDAV
