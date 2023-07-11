@@ -91,17 +91,8 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ❯ nmap -sUV -p134 ❮Target IP❯ --script=discovery    # Enumerar informacion 
 ```
 
-## SMB
+## SMB / SAMBA
 ```bash
-❯ nmap -sV -p445 --script=smb-vuln-ms17-010 ❮Target IP❯             # Para ver si es vulnerable al EternalBlue
-
-❯ nmap --script "vuln and safe" -p445 ❮Target IP❯ -oN smbVulnScan   # Para ver si este servicio es vulnerable al EternalBlue (ms17-010) en Windows 7.
-
-	#  p445 = Indica el puerto que se quiere escanear
-	#  Target IP = Dirección IP que se quiere escanear
-	#  oN smbVulnScan = Exporta el output a un fichero en formato nmap con nombre “smbVulnScan”
-	#  vuln and safe = Detecta vulnerabilidades de forma segura, sin experimentar un DoS
-
 ❯ nmap -p445 -sCV ❮Target IP❯                                # Para enumerar exaustiva al SMB 
 
 ❯ nmap -p445 --script smb-protocols ❮Target IP❯              # Ver que protocolos se estan usando
@@ -143,6 +134,19 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ```bash 
 ❯ nmap ❮Target IP❯ -sU --top-port 25 --open             # Escaneo de puertos UDP, encontramos el 137,138
 ❯ nmap ❮Target IP❯ -sU --top-port 25 --open -sV         # Mirar la version de los puertos encontrados para SMB
+```
+
+## EternalBlue 
+
+```bash 
+❯ nmap -sV -p445 --script=smb-vuln-ms17-010 ❮Target IP❯             # Para ver si es vulnerable al EternalBlue
+
+❯ nmap --script "vuln and safe" -p445 ❮Target IP❯ -oN smbVulnScan   # Para ver si este servicio es vulnerable al EternalBlue (ms17-010) en Windows 7.
+
+	#  p445 = Indica el puerto que se quiere escanear
+	#  Target IP = Dirección IP que se quiere escanear
+	#  oN smbVulnScan = Exporta el output a un fichero en formato nmap con nombre “smbVulnScan”
+	#  vuln and safe = Detecta vulnerabilidades de forma segura, sin experimentar un DoS
 ```
 
 ## HTTP
@@ -260,7 +264,9 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 
 ## Shellshock
 ```bash 
-❯ nmap --script http-shellshock --script-args uri=/cgi-bin/user.sh -p80 10.10.10.56    # Ver si es vulnerable a ShellShock
+# Ver si es vulnerable a ShellShock
+❯ nmap --script http-shellshock --script-args uri=/cgi-bin/user.sh -p80 ❮Target IP❯
+❯ nmap -p80 ❮Target IP❯ --script=http-shellshock --script-args "http-shelshock.uri=/gettime.cgi" 
 ```
 
 
