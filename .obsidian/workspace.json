@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bba55af50b02a441",
+            "id": "e8812429033926ad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
+                "file": "9 CEH v12/CEH TIPS.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9 CEH v12/1 Conceptos Hacking.md",
+                "file": "9 CEH v12/13 Criptografia.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "05a06d5243d4fc20",
+            "id": "bba55af50b02a441",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/0 Servicios.md",
+                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -76,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Puerto",
+                "query": "shellshock",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Ports/0 Servicios.md"
+                "file": "9 CEH v12/13 Criptografia.md"
               }
             }
           }
@@ -158,34 +158,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "05a06d5243d4fc20",
+  "active": "4ceb58f010e50e24",
   "lastOpenFiles": [
-    "9 CEH v12/1 Conceptos Hacking.md",
-    "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
-    "2 Ports/0 Servicios.md",
-    "4 Escalation Lin & Win/Hack4u/Windows Escalation/1 Windows Kernel.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
-    "4 Escalation Lin & Win/Hack4u/Linux Escalation/1. Sudoers.md",
-    "2 Ports/445, 139- SMB.md",
+    "9 CEH v12/CEH TIPS.md",
+    "9 CEH v12/13 Criptografia.md",
+    "9 CEH v12/12 Web.md",
+    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "3 Tools/Metasploit Exploit.md",
-    "2 Ports/5985-6 - WINRM.md",
-    "3 Tools/Hydra.md",
-    "2 Ports/3389, 3333 - RDP.md",
-    "2 Ports/4555 - RSIP.md",
-    "3 Tools/Metasploit Reconocimiento.md",
-    "2 Ports/135 - RPC.md",
-    "3 Tools/Nmap.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/25 Blue.md",
-    "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
-    "2 Ports/80 - WordPress.md",
-    "2 Ports/80 - Apache.md",
-    "2 Ports/80, 443 - HTTP, HTTPS.md",
-    "2 Ports/80 - Drupal.md",
-    "2 Ports/80 - Magento.md",
-    "2 Ports/80 - Joomla.md",
-    "2 Ports/80, 443 - WebDAV - IIS.md",
-    "7 Hack4u/3 Servicios y Gestores/5 WordPress.md",
     "3 Tools/Metasploit.md",
+    "3 Tools/John the Ripper.md",
+    "3 Tools/Metasploit Reconocimiento.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/2. SUID.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/Linux Escalation.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/3. Tareas CRON.md",
+    "README.md",
+    "9 CEH v12/1 Conceptos Hacking.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/0. Kernel.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/1. Sudoers.md",
+    "2 Ports/445 - Samba.md",
+    "3 Tools/Hydra.md",
+    "2 Ports/445, 139- SMB.md",
+    "3 Tools/Nmap.md",
+    "2 Ports/22 - SSH.md",
+    "2 Ports/20 - 21 FTP 134 - TFTP.md",
+    "2 Ports/80 - Shellshock - Apache.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/11 Shocker.md",
+    "3 Tools/BurpSuite.md",
+    "2 Ports/80, 443 - WebDAV - IIS.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
