@@ -45,6 +45,10 @@ Esta herramienta nos ayudara a identificar tareas, procesos que se están ejecut
 
 ## Manual 
 
+```bash 
+❯ groups <user>                           # Para ver a que grupos pertenece
+```
+
 ```bash
 ❯ sudo -l                                          # Ver que permisos tenemos en el sudoers (l=ele)
 
