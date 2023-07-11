@@ -24,21 +24,20 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 * Pagina para identificar los hashes: [Identificar_Hashes](https://hashes.com/en/tools/hash_identifier) 
 * Pagina para crackear los hashes: [Crackear_Hashes](https://crackstation.net/)
 
-ID	Cryptographic Hash Algorithm
-```bash
-$P$            -> Hash
-$1$	          -> MD5
-$2a$	          -> Blowfish
-$5$	          -> SHA-256
-$6$	          -> SHA-512
-$sha1$	     -> SHA1crypt
-$y$	          -> Yescrypt
-$gy$	          -> Gost-yescrypt
-$7$	          -> Scrypt
-```
+## ID	Cryptographic Hash Algorithm
 
+| \$P$ | Hash |
+|---|---|
+| $1 | MD5 |
+| $2 o $2a | Blowfish |
+| $5 | SHA-256 |
+| $6 | SHA-512 |
+| \$sha1$ | SHA1crypt |
+| \$y$ | Yescrypt |
+| \$gy$ | Gost-yescrypt |
+| \$7$ | Scrypt |
 
-## Comandos 
+## John 
 
 ```bash
 ❯ john --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>                              # Usamos John para crackear un hash con fuerza bruta
