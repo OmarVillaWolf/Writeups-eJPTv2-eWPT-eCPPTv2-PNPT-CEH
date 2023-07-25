@@ -34,7 +34,7 @@
             }
           },
           {
-            "id": "fefea7ad3cee7ad8",
+            "id": "b9ffd8f4a1732cd3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -71,9 +71,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "354015b31bb0de38",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Metasploit Exploit.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -158,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md"
+                "file": "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md"
               }
             }
           }
@@ -184,16 +197,23 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "fefea7ad3cee7ad8",
+  "active": "447bfb1551cb9639",
   "lastOpenFiles": [
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
+    "3 Tools/Metasploit Exploit.md",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md",
+    "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
+    "0 Ciberseguridad/5 ITIL.md",
+    "0 Ciberseguridad/4 PCI-DSS.md",
+    "0 Ciberseguridad/3 ISO 20000.md",
+    "0 Ciberseguridad/2 ISO 20017.md",
+    "0 Ciberseguridad/1 ISO 27001.md",
+    "2 NVIM.md",
+    "0 Ciberseguridad",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/1 Windows Kernel.md",
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
-    "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
     "3 Tools/Metasploit.md",
-    "3 Tools/Metasploit Exploit.md",
     "3 Tools/Metasploit Reconocimiento.md",
     "9 CEH v12/CEH TIPS.md",
     "9 CEH v12/13 Criptografia.md",
@@ -206,12 +226,6 @@
     "9 CEH v12/1 Conceptos Hacking.md",
     "4 Escalation Lin & Win/Hack4u/Linux Escalation/0. Kernel.md",
     "4 Escalation Lin & Win/Hack4u/Linux Escalation/1. Sudoers.md",
-    "2 Ports/445 - Samba.md",
-    "3 Tools/Hydra.md",
-    "2 Ports/445, 139- SMB.md",
-    "3 Tools/Nmap.md",
-    "2 Ports/22 - SSH.md",
-    "2 Ports/20 - 21 FTP 134 - TFTP.md",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
@@ -230,7 +244,6 @@
     "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf",
     "6 Vulhub - Machines/Youtube Simu eJPT",
     "Z Imagenes/Hacking",
-    "Z Imagenes/CEH",
-    "Z Imagenes/AWS"
+    "Z Imagenes/CEH"
   ]
 }
