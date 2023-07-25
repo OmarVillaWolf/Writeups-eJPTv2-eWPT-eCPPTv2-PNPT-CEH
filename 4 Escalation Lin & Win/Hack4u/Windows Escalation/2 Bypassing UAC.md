@@ -7,6 +7,11 @@ Los atacantes pueden hacer Bypass UAC para ejecutar archivos ejecutables malicio
 
 [![UAC.png](https://i.postimg.cc/nr0DF9j1/UAC.png)](https://postimg.cc/fSSL5Lv3)
 
-```bash 
+Para que sea exitoso el Bypassing debemos tener acceso a una cuenta que sea parte de un grupo local de administradores.
+Existen diferentes herramientas y técnicas para poder hacer le Bypassing, sin embargo, esto dependerá de la versión de Windows que se este ejecutando en el sistema. 
 
+* [UACMe](https://github.com/hfiref0x/UACME)   Esta herramienta funciona desde Windows 7 a Windows 10
+
+```bash 
+# HFS es el nombre de la vulnerabilidad que podemos explotar con Metasploit
 ```
