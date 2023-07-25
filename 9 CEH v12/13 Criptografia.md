@@ -47,7 +47,7 @@ Mecanismo utilizado pasa asociar una clave publica con una coleccion de componen
 * Documento digital
 
 # TLS
-Los versionamientos de certificados SSL en la web o aplicacion 
+Los versionamientos de certificados SSL en lav web o aplicacion 
 V1 - Entorno simple 
 V2 - Entorno Controlado 
 V3
