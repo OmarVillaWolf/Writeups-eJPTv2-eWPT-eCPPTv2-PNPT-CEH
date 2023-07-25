@@ -2,12 +2,24 @@
 
 Tags: #Windows #Comandos 
 
+```bash 
+# Cuando tienes la sesion con Meterpreter 
+
+❯ ctrl + z                   # Colocas la sesion en 'Background'
+❯ sessions                   # Miramos las sesiones activas 
+❯ sessions -u <ID>           # Regresamos a la sesion 
+
+❯ getuid
+❯ getprivs                 # Miramos los privilegios 
+❯ getsystem                # Miras los procesos privilegiados 
+```
+
 ```bash
-C:\Windows\Temp                              # Directorios con capacidad de escritura en Windows
+❯ .\file.exe               # Ejecutamos un arcxhivo .exe en Windows 
 ```
 
 ```bash 
-❯ cd DOCUME~1                                # Para ir a un dir que tenga espacios en su nombre 'Documents and settings', debemos de colocar las 6 primeras letras 
+❯ cd DOCUME~1              # Para ir a un dir que tenga espacios en su nombre 'Documents and settings', debemos de colocar las 6 primeras letras 
 ```
 
 ```bash 
