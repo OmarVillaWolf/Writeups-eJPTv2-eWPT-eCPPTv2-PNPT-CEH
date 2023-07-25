@@ -2,6 +2,7 @@
 
 Tags: #Windows #Comandos 
 
+## Comandos con Meterpreter
 ```bash 
 # Cuando tienes la sesion con Meterpreter 
 
@@ -9,11 +10,25 @@ Tags: #Windows #Comandos
 ❯ sessions                   # Miramos las sesiones activas 
 ❯ sessions -u <ID>           # Regresamos a la sesion 
 
+❯ sysinfo                  # Muestra informacion del Windows 
+❯ pgrep explorer           # Mirar el numero del proceso 
+❯ migrate <ID>             # Nos migramos al proceso 
+ 
 ❯ getuid
 ❯ getprivs                 # Miramos los privilegios 
 ❯ getsystem                # Miras los procesos privilegiados 
+
+❯ getprivs                 # Miramos los  procesos con privilegios
 ```
 
+
+## Comandos con Shell
+
+```bash
+❯ net user                                   # Miramos todos los usuarios existentes y sus grupos
+❯ net user <User>                            # Miramos el grupo de un usuario especifico
+❯ net localgroup administrators              # Miramos los miembros del grupo administrador
+```
 ```bash
 ❯ .\file.exe               # Ejecutamos un arcxhivo .exe en Windows 
 ```
@@ -37,11 +52,6 @@ Tags: #Windows #Comandos
 
 ```bash
 ❯ whoami                                     # Miramos el nombre del usuario
-```
-
-```bash
-❯ net user                                   # Miramos todos los usuarios existentes y sus grupos
-❯ net user <User>                            # Miramos el grupo de un usuario especifico
 ```
 
 ```bash
