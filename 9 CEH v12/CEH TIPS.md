@@ -36,7 +36,8 @@
 		* Binarios SUID
 	* Windows 
 		* Kernel 
-		* 
+		* Bypassing UAC
+		* Access Token Impersonation
 
 # CEH TIPS PRACTICAL
 ## Tools a usar 
