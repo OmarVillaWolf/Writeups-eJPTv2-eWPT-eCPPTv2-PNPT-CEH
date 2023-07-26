@@ -34,46 +34,7 @@
             }
           },
           {
-            "id": "b9ffd8f4a1732cd3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "60bfb4383572998c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "447bfb1551cb9639",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "354015b31bb0de38",
+            "id": "81c8f88113583aef",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -84,9 +45,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "865e75ba9da2b66e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Mimikatz.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d80dcbf5ee3e42ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -115,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "shellshock",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -171,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md"
+                "file": "3 Tools/Metasploit Exploit.md"
               }
             }
           }
@@ -197,12 +184,23 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "447bfb1551cb9639",
+  "active": "81c8f88113583aef",
   "lastOpenFiles": [
+    "3 Tools/Mimikatz.md",
     "3 Tools/Metasploit Exploit.md",
-    "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md",
     "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
+    "3 Tools/Hashcat.md",
+    "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
+    "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
+    "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
+    "3 Tools/John the Ripper.md",
+    "3 Tools/Hydra.md",
+    "3 Tools/BurpSuite.md",
+    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "4 Escalation Lin & Win/Hack4u/Windows Escalation/3 Access Token Impersonation.md",
+    "9 CEH v12/CEH TIPS.md",
+    "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md",
     "0 Ciberseguridad/5 ITIL.md",
     "0 Ciberseguridad/4 PCI-DSS.md",
     "0 Ciberseguridad/3 ISO 20000.md",
@@ -211,21 +209,10 @@
     "2 NVIM.md",
     "0 Ciberseguridad",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/1 Windows Kernel.md",
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
-    "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
     "3 Tools/Metasploit.md",
     "3 Tools/Metasploit Reconocimiento.md",
-    "9 CEH v12/CEH TIPS.md",
     "9 CEH v12/13 Criptografia.md",
     "9 CEH v12/12 Web.md",
-    "3 Tools/John the Ripper.md",
-    "4 Escalation Lin & Win/Hack4u/Linux Escalation/2. SUID.md",
-    "4 Escalation Lin & Win/Hack4u/Linux Escalation/Linux Escalation.md",
-    "4 Escalation Lin & Win/Hack4u/Linux Escalation/3. Tareas CRON.md",
-    "README.md",
-    "9 CEH v12/1 Conceptos Hacking.md",
-    "4 Escalation Lin & Win/Hack4u/Linux Escalation/0. Kernel.md",
-    "4 Escalation Lin & Win/Hack4u/Linux Escalation/1. Sudoers.md",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
