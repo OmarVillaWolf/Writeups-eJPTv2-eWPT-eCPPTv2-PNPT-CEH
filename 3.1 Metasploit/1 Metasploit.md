@@ -16,7 +16,7 @@ En esta clase, veremos cómo utilizar algunas de las funcionalidades de esta her
 
 ## Penetration Testing con MSF
 
-| Penetration Testing Phase| Metasploit Framework Implementation |
+| **Penetration Testing Phase**| **Metasploit Framework Implementation** |
 |----|----|
 | Information Gathering & Enumeration  | Módulos auxiliares |
 | Vulnerability Scanning | Módulos auxiliares con Nessus |
@@ -24,7 +24,6 @@ En esta clase, veremos cómo utilizar algunas de las funcionalidades de esta her
 | Post Explotation | Meterpreter |
 | Privilege Escalation | Módulos de Post explotación / Meterpreter |
 | Maintaining Persistent Access | Módulos de post explotación / Persistencia |
-
 
 
 ## Terminología 
