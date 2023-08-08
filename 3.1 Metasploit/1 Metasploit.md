@@ -68,6 +68,13 @@ Staged                  # Sends payload in stages. Can be less stable -> windows
 
 Es un multi-funcional payload que es ejecutado en memoria en un sistema victima haciéndolo difícil de detectar. El se comunica a través de un socket stager y provee a un atacante un interpretado de comandos interactivo de un sistema victima que facilite la ejecución de comandos del sistema, navegación del sistema de archivos,  keylogging y mucho mas. 
 
+## Instalar MSF Framework 
+
+```bash 
+❯ apt update && apt install metasploit-framework -y          # Actualizamos e instalamos Metasploit
+❯ systemctl enable postgreql                                  
+```
+
 ## Consola Metasploit
 
 Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera vez)
