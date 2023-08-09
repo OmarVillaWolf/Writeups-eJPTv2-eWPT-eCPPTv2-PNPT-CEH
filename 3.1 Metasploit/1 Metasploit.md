@@ -80,6 +80,8 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera vez)
 ```bash 
 ❯ service postgresql start      # Iniciamos la base de datos que consulta Metasploit
+❯ msfdb init                    # Inicializamos la base de datos 
+❯ msfdb reinit                  # Reiniciamos la base de datos
 ❯ msfdb run
 ```
 
@@ -93,6 +95,7 @@ Gestionar de forma mas organizada la información que vayamos recopilando.
 ❯ workspace             # Miramos los espacios de trabajo 
 ❯ workspace -a omar     # Creamos nuestro espacio de trabajo con el nombre 'omar'
 ❯ workspace default     # Cambiamos al espacio de trabajo llamado 'default', asi podemos ir cambiando de espacios de trabajo
+❯ workspace -r Omar Juan  # Renombramos el espacio de trabajo de 'Omar' a 'Juan'
 ```
 
 ```bash
@@ -105,6 +108,8 @@ Gestionar de forma mas organizada la información que vayamos recopilando.
 
 ❯ search platform:"windows" type:"exploit"       # Buscar exploits en Windows
 ❯ search platform:"windows" type:"encoder"       # Buscar encoder en Windows
+
+❯ search cve:2017 type:exploit platform:-windows # Buscar un CVE de una SO especifico
 ```
 
 Aplicas un reconocimiento en la red local con ARP 
@@ -125,6 +130,7 @@ En Metasploit puedes importar archivos XML, el cual puedes obtener del escaneo c
 
 ```bash 
 ❯ use ❮Number or path❯       # Colocamos el numero del exploit que vamos a usar
+❯ back                       # Nos salimos del exploit o auxiliar que hemos elegido 
 ❯ options                    # Miramos las opciones del exploit y lo que debemos de configurar
 ❯ show advanced options      # Miramos las opciones avanzadas del exploit y lo que debemos de configurar
 ❯ check                      # Nos dice si el RHOST es vulnerable a ese exploit sin explotarlo, esto depende del modulo, si trae esta opcion o no
