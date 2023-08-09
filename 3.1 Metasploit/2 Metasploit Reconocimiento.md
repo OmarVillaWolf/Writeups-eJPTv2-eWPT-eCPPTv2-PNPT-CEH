@@ -3,13 +3,27 @@
 Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL 
 
 
+## PortScan
+
+```bash 
+# Escaneo de puertos a una sola direccion IP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search portscan                             
+	❯ use auxiliary/scanner/portscan/tcp          # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set PORTS 1-1000
+	❯ run 
+```
+
 ## Puerto 445 SMB 
 
 ```bash 
 # Miramos la version del SMB
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
-	❯ search smb                                  # Buscamos el exploit
+	❯ search smb                                  
 	❯ use auxiliary/scanner/smb/smb_version       # Usamos el auxiliar 
 	❯ options
 	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
