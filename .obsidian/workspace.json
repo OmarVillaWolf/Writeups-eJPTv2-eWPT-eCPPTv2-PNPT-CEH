@@ -4,50 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "cffc1ec57bd4fcb8",
+        "id": "bf1a0c3ccde1cfec",
         "type": "tabs",
         "children": [
           {
-            "id": "36374b932abd0df8",
+            "id": "324c49f6e2dbd336",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.1 Metasploit/2 Metasploit Reconocimiento.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a0ae0ff1cfc3a4fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.1 Metasploit/2 Metasploit Reconocimiento.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dc4d0da4d06d1fc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.1 Metasploit/1 Metasploit.md",
+                "file": "0 Ciberseguridad/0 Introduccion Ciber.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3.1 Metasploit/1 Metasploit.md"
+                "file": "0 Ciberseguridad/0 Introduccion Ciber.md"
               }
             }
           }
@@ -158,13 +131,19 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "dc4d0da4d06d1fc8",
+  "active": "324c49f6e2dbd336",
   "lastOpenFiles": [
-    "3 Tools/John the Ripper.md",
+    "11 AWS/AWS CLI.md",
+    "0 Ciberseguridad/0 Introduccion Ciber.md",
+    "12 Python/1 MAC.md",
+    "12 Python",
     "3.1 Metasploit/1 Metasploit.md",
+    "11 AWS",
     "3.1 Metasploit/2 Metasploit Reconocimiento.md",
-    "3.1 Metasploit/M - Recon.md",
     "3.1 Metasploit/3 Metasploit Exploit.md",
+    "3.1 Metasploit/2 MSF Fundamentals.md",
+    "3 Tools/John the Ripper.md",
+    "3.1 Metasploit/M - Recon.md",
     "3.1 Metasploit",
     "0 Ciberseguridad/ISO 27002.md",
     "9 CEH v12/CEH TIPS.md",
@@ -183,10 +162,6 @@
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/3 Access Token Impersonation.md",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md",
-    "0 Ciberseguridad/5 ITIL.md",
-    "0 Ciberseguridad/4 PCI-DSS.md",
-    "0 Ciberseguridad/3 ISO 20000.md",
-    "0 Ciberseguridad/2 ISO 20017.md",
     "0 Ciberseguridad",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
@@ -203,8 +178,6 @@
     "2 Ports/Windows Services",
     "DB Folder/WS",
     "DB Folder",
-    "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf",
-    "6 Vulhub - Machines/Youtube Simu eJPT",
-    "Z Imagenes/Hacking"
+    "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf"
   ]
 }
