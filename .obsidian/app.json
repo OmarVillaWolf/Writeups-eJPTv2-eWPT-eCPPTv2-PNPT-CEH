@@ -1,8 +1,6 @@
 {
   "promptDelete": false,
-  "spellcheckLanguages": [
-    "es-MX"
-  ],
+  "spellcheckLanguages": null,
   "autoConvertHtml": true,
   "strictLineBreaks": false,
   "tabSize": 5,
