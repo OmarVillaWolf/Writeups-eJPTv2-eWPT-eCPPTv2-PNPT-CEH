@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Ciberseguridad/0 Introduccion Ciber.md",
+                "file": "0 Ciberseguridad/4 Tools Ciber/1 Tools.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Ciberseguridad/0 Introduccion Ciber.md"
+                "file": "0 Ciberseguridad/4 Tools Ciber/1 Tools.md"
               }
             }
           }
@@ -133,9 +133,16 @@
   },
   "active": "324c49f6e2dbd336",
   "lastOpenFiles": [
-    "0 Ciberseguridad/0.1 Skills Ciber.md",
-    "0 Ciberseguridad/0 Introduccion Ciber.md",
+    "0 Ciberseguridad/4 Tools Ciber",
+    "0 Ciberseguridad/1 Introduccion/1 Intro Ciber.md",
+    "0 Ciberseguridad/4 Tools Ciber/1 Tools.md",
+    "0 Ciberseguridad/2 History",
+    "0 Ciberseguridad/1 Introduccion/2 Skills Ciber.md",
+    "0 Ciberseguridad/General/4 PCI-DSS.md",
+    "0 Ciberseguridad/General",
+    "0 Ciberseguridad/ISO",
     "0 Ciberseguridad/0.2 SIEM.md",
+    "0 Ciberseguridad/1 Introduccion",
     "11 AWS/AWS CLI.md",
     "12 Python/1 MAC.md",
     "12 Python",
@@ -147,9 +154,9 @@
     "3 Tools/John the Ripper.md",
     "3.1 Metasploit/M - Recon.md",
     "3.1 Metasploit",
-    "0 Ciberseguridad/ISO 27002.md",
+    "0 Ciberseguridad/ISO/ISO 27002.md",
     "9 CEH v12/CEH TIPS.md",
-    "0 Ciberseguridad/ISO 22301.md",
+    "0 Ciberseguridad/ISO/ISO 22301.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
     "2 Ports/445, 139- SMB.md",
     "2 Ports/445 - Samba.md",
@@ -159,9 +166,6 @@
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
     "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
     "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
-    "3 Tools/Hydra.md",
-    "3 Tools/BurpSuite.md",
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "0 Ciberseguridad",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
@@ -174,10 +178,6 @@
     "Z Imagenes/Pasted image 20230529173624.png",
     "Z Imagenes/Pasted image 20230529163726.png",
     "0 Windows Services/0 Windows Services",
-    "0 Servicios",
-    "2 Ports/Windows Services",
-    "DB Folder/WS",
-    "DB Folder",
-    "Z Anexos CEH PDF/APOYO CAP 1 Ataques.pdf"
+    "0 Servicios"
   ]
 }
