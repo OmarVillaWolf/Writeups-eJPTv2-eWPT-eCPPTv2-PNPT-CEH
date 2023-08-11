@@ -39,7 +39,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```bash 
 ❯ nmap -Pn <IP>
 ❯ nmap -Pn -p443 <IP>
-❯ nmap -Pn -sV -p80 <IP> 
+❯ nmap -Pn -sV -O <IP> -oX Scan    # Importa el resultado en un archivo XML llamado 'Scan' que luego lo podemos utilizar en Metasploit 
 ```
 
 ```bash 
