@@ -4,16 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "e0c05bf4ae9e6837",
+        "id": "d2321c2c2e647ba6",
         "type": "tabs",
         "children": [
           {
-            "id": "411edc28a1daeb96",
+            "id": "6899730efb8ee0e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/26 Optimum.md",
+                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/8 Election1.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "50c3fa148422c8b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 Escalation Lin & Win/Hack4u/Linux Escalation/2. SUID.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/26 Optimum.md"
+                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/8 Election1.md"
               }
             }
           }
@@ -131,18 +144,25 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "411edc28a1daeb96",
+  "active": "6899730efb8ee0e6",
   "lastOpenFiles": [
-    "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/26 Optimum.md",
-    "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
-    "3.1 Metasploit/3 Metasploit Exploit.md",
-    "1 Commands Lin & Win/4 Hacking/Searchsploit.md",
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/2. SUID.md",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/8 Election1.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/1. Sudoers.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/7. Capabilities.md",
+    "4 Escalation Lin & Win/Hack4u/Linux Escalation/6. Permisos incorrectos.md",
+    "2 Ports/22 - SSH.md",
+    "3 Tools/Ffuf, Gobuster, Wfuz.md",
     "2 Ports/80, 443 - HTTP, HTTPS.md",
     "3 Tools/Nmap.md",
-    "3.1 Metasploit/2 Metasploit Reconocimiento.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/25 Blue.md",
+    "3.1 Metasploit/3 Metasploit Exploit.md",
+    "3.1 Metasploit/2 Metasploit Reconocimiento.md",
+    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/26 Optimum.md",
+    "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
+    "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
+    "1 Commands Lin & Win/4 Hacking/Searchsploit.md",
     "13 SQL/1 Conceptos.md",
     "13 SQL/2 Diagrama MySQL.md",
     "0 Ciberseguridad/1 Foundations/2 Evolution ciber/1 History.md",
@@ -153,9 +173,6 @@
     "0 Ciberseguridad/ISO/3 ISO 20000.md",
     "0 Ciberseguridad/ISO/2 ISO 20017.md",
     "0 Ciberseguridad/ISO/1 ISO 27001.md",
-    "0 Ciberseguridad/General/5 ITIL.md",
-    "0 Ciberseguridad/General/4 PCI-DSS.md",
-    "0 Ciberseguridad/1 Foundations/4 Tools Ciber/1 Tools.md",
     "0 Ciberseguridad/2 Manage Security Risks/4 Use Playbooks to respond incidents",
     "0 Ciberseguridad/2 Manage Security Risks/3 Tools",
     "0 Ciberseguridad/2 Manage Security Risks/2 Security frameworks and controls",
@@ -164,11 +181,7 @@
     "0 Ciberseguridad/2 Manage Security Risks",
     "0 Ciberseguridad/1 Foundations",
     "0 Ciberseguridad/1 Foundations/4 Tools Ciber",
-    "0 Ciberseguridad/1 Foundations/1 Introduccion/1 Intro Ciber.md",
     "0 Ciberseguridad/1 Foundations/2 Evolution ciber",
-    "0 Ciberseguridad/0.2 SIEM.md",
-    "11 AWS/AWS CLI.md",
-    "12 Python/1 MAC.md",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
