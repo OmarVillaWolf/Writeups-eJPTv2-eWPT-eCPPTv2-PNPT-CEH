@@ -132,6 +132,7 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 ❯ options                    # Miramos las opciones del exploit y lo que debemos de configurar
 ❯ show advanced options      # Miramos las opciones avanzadas del exploit y lo que debemos de configurar
 ❯ check                      # Nos dice si el RHOST es vulnerable a ese exploit sin explotarlo, esto depende del modulo, si trae esta opcion o no
+❯ unset                      # Quitas la configuracion 
 ❯ set LHOST ❮IP❯             # Configuramos el IP local eth0, ens33 (Si estamos en una VPN colocar el Tun0)
 ❯ setg RHOSTS ❮IP❯           # Configuras de manera global el RHOSTS
 ❯ set RHOSTS ❮IP❯            # Configuramos el IP remoto (maquina victima)
