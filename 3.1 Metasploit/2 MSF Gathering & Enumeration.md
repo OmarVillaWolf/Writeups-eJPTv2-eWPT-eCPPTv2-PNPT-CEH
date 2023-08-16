@@ -2,6 +2,9 @@
 
 Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliary 
 
+
+* Debemos de crear siempre un espacio de trabajo, para tener un mejor control al momento de enumerar los diferentes puertos. 
+
 ## Comandos Meterpreter 
 
 ```bash 
@@ -400,6 +403,13 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set USERNAME root
 	❯ set PASSWORD ""
 	❯ run 
+```
+
+```bash 
+❯ hosts             # Direccion IP del hosts usado 
+❯ services          # Muestra informacion del host, puerto, protocolo, nombre, etc...
+❯ loot              # Mas informacion recopilada del host 
+❯ creds             # Muestras las credneciales obtenidas durante la enumeracion 
 ```
 
 ## Puerto 1433 MSSQL
