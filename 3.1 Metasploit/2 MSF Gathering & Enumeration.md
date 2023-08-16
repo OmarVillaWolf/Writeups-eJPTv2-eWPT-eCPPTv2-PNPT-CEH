@@ -16,6 +16,17 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ❯ sessions <id>              # Migras a alguna sesion que tenemos en segundo plano
 ```
 
+## Reconocimiento en la red local con ARP 
+
+```bash 
+❯ use auxiliary/scanner/discovery/arp_sweep      # Para usar el exploit
+❯ options                                        # Miramos las opciones del exploit y ver lo que es necesario cargar para hacer el barrido en la subred
+❯ info 'o' info -d                               # Nos da una breve descripcion de lo que hace el exploit
+❯ set RHOSTS 192.168.68.0/24                     # Colocamos la subred en donde queremos hacer el barrido del ARP
+❯ run
+❯ hosts                                          # Nos muestra los hosts que ha descubierto en el reconocimiento
+❯ services                                       # Nos muestra los servicios, pero para que sea mas efectivo, debemos de pasarle el archivo XML de Nmap
+```
 ## Port Scan
 
 * **Auxiliary Madules:** Son usados para  ejecutar funcionalidades como escanear, descubrir y fuzzear. Podemos usar los módulos auxiliares para ejecutar escaneo de puertos tanto TCP como UDP, así como enumerar información de los servicios como FTP, SSH, HTTP, etc... También, podemos utilizar los módulos auxiliares para descubrir hosts y ejecutar escaneo de puertos en una diferente red o subred desde de obtener el acceso inicial en un sistema target. 
