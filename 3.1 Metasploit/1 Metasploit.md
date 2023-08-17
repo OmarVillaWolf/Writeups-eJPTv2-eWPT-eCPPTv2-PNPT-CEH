@@ -123,6 +123,7 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 ❯ search platform:"windows" type:"exploit"       # Buscar exploits en Windows
 ❯ search platform:"windows" type:"encoder"       # Buscar encoder en Windows
 
+❯ search cve:2017 name:smb
 ❯ search cve:2017 type:exploit platform:-windows # Buscar un CVE de una SO especifico
 ```
 
