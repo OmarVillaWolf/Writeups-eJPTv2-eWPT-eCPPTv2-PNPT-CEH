@@ -277,7 +277,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ## EternalBlue (CVE-2017-0144)
 
 ```bash 
-# Para ver si el Windows en vulnerable al EternalBlue
+# Saber si Windows es vulnerable al EternalBlue
 ❯ msfconsole -q                                    # q = Quitar el banner de inicio
 
 	❯ use auxiliary/scanner/smb/smb_ms17_010      # Usamos el auxiliar
@@ -545,7 +545,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ```
 
 ```bash 
-# Enumeramos cuentas de usuarios 
+# Enumeramos cuentas de usuarios por Brute Force 
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use auxiliary/admin/smtp/smtp_enum                  # Usamos el auxiliar 
