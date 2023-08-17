@@ -2,9 +2,9 @@
 
 Tags: #Msfvenom #WebDav #Tomcat 
 
-### Windows Meterpreter
+Msfconsole: Es una utilidad de línea de comando que puede ser usada para generar y encodear payloads MSF para varios sistemas operativos, así, como servidores web. Es la combinación de dos utilidades: Msfpayload y Msfencode. Podemos utilizar Msfvenom para generar payloads maliciosos en Meterpreter que pueden ser transferidos al sistema del cliente. Una vez ejecutados, harán una conexión a nuestro payload handler y nos proveerá un acceso remoto al sistema target.  
 
-* Nos sirve para crear un binario malicioso, para después usar Metasploit y obtener la ReverShell para maquinas Windows 
+### Windows Meterpreter
 
 * [MsfVenom-Payload](https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/)
 
@@ -24,9 +24,8 @@ Tags: #Msfvenom #WebDav #Tomcat
 
 Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un servidor HTTP y en la maquina victima lo podemos descargar desde el navegador colocando la IP del servicio compartido
 
-* Nos ponemos en escucha por Netcat:
 ```bash 
-❯ rlwrap nc -nlvp 443
+❯ rlwrap nc -nlvp 443   # Nos ponemos en escucha por Netcat
 ```
 * Ejecutamos el binario que subimos a Windows y ganamos acceso
 
