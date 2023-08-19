@@ -10,6 +10,8 @@ Podemos usar esta herramienta para buscar exploit y ver si alguno nos puede ayud
 ```bash
 ❯ searchsploit -u                             # Actualizar la base de datos 
 
+❯ searchsploit ❮exploit_name❯ -w              # Muestra la url de donde obtiene el exploit
+
 ❯ searchsploit -c ❮exploit_name❯              # Podemos escribir un exploit con 'Case Sensitive'
 
 ❯ searchsploit ❮exploit_name❯                 # Para buscar un exploit
