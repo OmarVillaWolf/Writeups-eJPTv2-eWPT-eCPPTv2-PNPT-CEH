@@ -1,9 +1,0 @@
-# Shells 
-
-Tags: #Shells
-
-## 
-
-```bash 
-
-```
