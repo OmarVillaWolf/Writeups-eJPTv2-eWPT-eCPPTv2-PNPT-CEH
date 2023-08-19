@@ -2,6 +2,7 @@
 
 Tags: #Nmap #Escaneo #UDP #TCP 
 
+
 ```bash 
 ❯ zenmap                           # Es la version GUI de nmap
 ```
@@ -31,6 +32,8 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 
 ### Port Scanning 
+
+* [Nmap-book-scripting-engine](https://nmap.org/book/nse.html)
 
 ```bash
 ❯ nmap -iL <IP_File> -sV -O        # Escanear un archivo con varias IP, Version y Sistema Operativo
@@ -264,9 +267,10 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 
 ## Shellshock
 ```bash 
-# Ver si es vulnerable a ShellShock
-❯ nmap --script http-shellshock --script-args uri=/cgi-bin/user.sh -p80 ❮Target IP❯
-❯ nmap -p80 ❮Target IP❯ --script=http-shellshock --script-args "http-shelshock.uri=/gettime.cgi" 
+# Ver si es vulnerable a ShellShock, pero antes debemos de buscar la ruta en donde se encuentra el cgi
+
+❯ nmap -p80 <IP> --script=http-shellshock --script-args "http-shelshock.uri=/gettime.cgi" 
+❯ nmap --script http-shellshock --script-args uri=/cgi-bin/user.sh -p80 <IP>
 ```
 
 
