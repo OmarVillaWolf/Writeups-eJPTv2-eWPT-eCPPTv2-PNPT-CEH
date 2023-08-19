@@ -1,9 +1,0 @@
-# Windows 
-
-Tags: #Windows 
-
-## 
-
-```bash 
-
-```
