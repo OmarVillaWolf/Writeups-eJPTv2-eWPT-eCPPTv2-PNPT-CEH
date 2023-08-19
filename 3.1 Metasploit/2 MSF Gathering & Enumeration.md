@@ -14,6 +14,9 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ❯ background                 # Ponemos la sesion en segundo plano
 ❯ sessions                   # Miramos las sesiones activas en segundo plano 
 ❯ sessions <id>              # Migras a alguna sesion que tenemos en segundo plano
+❯ pwd                        # Nos muestra la ruta del dir actual 
+❯ cd /                       # Nos dirigimos a la raiz 'C:\'
+❯ cat file.txt               # Miramos el contenido de un archivo 
 ```
 
 ## Reconocimiento en la red local con ARP 
