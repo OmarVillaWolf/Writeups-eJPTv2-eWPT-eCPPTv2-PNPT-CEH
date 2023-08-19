@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
+                "file": "3.2 Explotation/2 Windows Black Box.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md"
+                "file": "3.2 Explotation/2 Windows Black Box.md"
               }
             }
           }
@@ -173,9 +173,10 @@
   },
   "active": "211e6c9195ea4355",
   "lastOpenFiles": [
-    "2 Ports/3306 - MYSQL.md",
     "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
-    "3.2 Explotation/2 Windows.md",
+    "3.2 Explotation/2 Windows Black Box.md",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
+    "2 Ports/3306 - MYSQL.md",
     "3.1 Metasploit/2 MSF Gathering & Enumeration.md",
     "3.1 Metasploit/3 MSF Vulnerability Scanning.md",
     "3.1 Metasploit/5 MSF Explotation.md",
@@ -189,7 +190,6 @@
     "3 Tools/John the Ripper.md",
     "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/6 Durian1.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/24 Nibbles.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
     "3.3 Post Explotation",
     "3.2 Explotation",
     "3.1 Metasploit/4 MSF Client-Side Attacks.md",
