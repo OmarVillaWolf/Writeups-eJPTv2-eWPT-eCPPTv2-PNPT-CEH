@@ -47,12 +47,12 @@
             }
           },
           {
-            "id": "211e6c9195ea4355",
+            "id": "4a1039292b89bd30",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.2 Explotation/2 Windows Black Box.md",
+                "file": "2 Ports/22 - SSH.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -89,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "IIS",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3.2 Explotation/2 Windows Black Box.md"
+                "file": "2 Ports/22 - SSH.md"
               }
             }
           }
@@ -171,36 +171,36 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "211e6c9195ea4355",
+  "active": "4a1039292b89bd30",
   "lastOpenFiles": [
-    "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
+    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "2 Ports/22 - SSH.md",
+    "3.2 Explotation/1 Vulnerability Scanning.md",
     "3.2 Explotation/2 Windows Black Box.md",
+    "2 Ports/20 - 21 FTP 134 - TFTP.md",
+    "2 Ports/80 - IIS - Webdav, FTPD.md",
+    "2 Ports/69 - TFTP.md",
+    "2 Ports/80 - IIS Windows.md",
     "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
+    "2 Ports/80, 443 - HTTP, HTTPS.md",
+    "80 - IIS.md",
+    "6 Vulhub - Machines/Youtube Simu eJPT/2 SMB.md",
+    "2 Ports/0 Servicios.md",
+    "2 Ports/80 - Shellshock - Apache.md",
+    "2 Ports/80 - Magento.md",
+    "2 Ports/80 - Joomla.md",
+    "2 Ports/80 - Drupal.md",
+    "2 Ports/53 - DNS.md",
+    "2 Ports/25, 465, 587, 2525 - SMTP.md",
+    "2 Ports/80 - WordPress.md",
+    "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
     "2 Ports/3306 - MYSQL.md",
     "3.1 Metasploit/2 MSF Gathering & Enumeration.md",
     "3.1 Metasploit/3 MSF Vulnerability Scanning.md",
     "3.1 Metasploit/5 MSF Explotation.md",
     "3.3 Post Explotation/1 Windows Enumeration.md",
-    "3.2 Explotation/3 Linux.md",
-    "1 Commands Lin & Win/4 Hacking/ReverShell.md",
-    "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
-    "1 Commands Lin & Win/4 Hacking/Searchsploit.md",
-    "3.2 Explotation/1 Vulnerability Scanning.md",
-    "3 Tools/Nmap.md",
-    "3 Tools/John the Ripper.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/6 Durian1.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/24 Nibbles.md",
     "3.3 Post Explotation",
     "3.2 Explotation",
-    "3.1 Metasploit/4 MSF Client-Side Attacks.md",
-    "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
-    "3 Tools/Nessus.md",
-    "3.1 Metasploit/1 Metasploit.md",
-    "2 Ports/25, 465, 587, 2525 - SMTP.md",
-    "2 Ports/445, 139- SMB.md",
-    "2 Ports/445 - Samba.md",
-    "3.1 Metasploit/5 Metasploit Explotation 1.md",
-    "3.1 Metasploit/2 Metasploit Enumeration 1.md",
     "13 SQL",
     "0 Ciberseguridad/2 Manage Security Risks/4 Use Playbooks to respond incidents",
     "0 Ciberseguridad/2 Manage Security Risks/3 Tools",
