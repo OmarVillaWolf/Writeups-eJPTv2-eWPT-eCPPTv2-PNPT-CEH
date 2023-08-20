@@ -1,6 +1,0 @@
-# Linux
-
-Tags: #Linux 
-
-## 
-
