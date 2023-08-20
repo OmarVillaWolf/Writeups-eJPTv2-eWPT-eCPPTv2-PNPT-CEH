@@ -22,7 +22,6 @@ Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3
 ```
 
 ```bash 
-❯ browsh --startup-url http://IP/Default.aspx/    # Enumeracion del buscador de un IIS en fomra de GUI
 ❯ browsh --startup-url <IP>                       # Enumeracion del buscador de un Apache en fomra de GUI
 ```
 
