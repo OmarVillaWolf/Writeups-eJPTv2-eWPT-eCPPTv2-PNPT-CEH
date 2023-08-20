@@ -5,7 +5,7 @@
 * Nmap
 * Dirbuster
 * Metasploit
-* SMB / SAMBA
+* FTP - SSH - HTTP - MySQL - SMB / SAMBA 
 * Nikto
 * Crackmapexec
 * Hydra
