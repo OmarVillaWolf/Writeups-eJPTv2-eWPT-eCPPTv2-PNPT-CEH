@@ -17,6 +17,8 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ❯ pwd                        # Nos muestra la ruta del dir actual 
 ❯ cd /                       # Nos dirigimos a la raiz 'C:\'
 ❯ cat file.txt               # Miramos el contenido de un archivo 
+❯ getuid                     # Nombre del servidor
+❯ getprivs                   # Miramos los privilegios que tenemos
 ```
 
 ## Reconocimiento en la red local con ARP 
@@ -534,7 +536,6 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ run 
 ```
 
-
 ## Puerto 25 SMTP o (465, 587)
 
 ```bash 
@@ -553,7 +554,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/admin/smtp/smtp_enum                  # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS 192.168.1.194                            # Colocamos la IP de la maquina victima
 	❯ run
 ```
 
