@@ -138,7 +138,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ exploit 
 ```
 
-## Samba 
+## SAMBA
 
 ```bash 
 # Algunas versiones de Samaba con exploit son: (3.0.20)
