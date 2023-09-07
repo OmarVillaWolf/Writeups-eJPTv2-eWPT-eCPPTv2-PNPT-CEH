@@ -24,6 +24,9 @@ A continuación, se proporciona el proyecto de GitHub correspondiente al laborat
 Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en donde podemos colocar las inyecciones.
 
 ```javascript
+<h1>Hola</h1>                                                /// Podemos hacer inyecciones con codigo HTML
+<marquee>Hola</marquee>                                      /// Podemos usar marquee para que el texto nos salga animado, de izquierda a derecha 
+
 <script>alert("XSS")</script>                                /// Creamos una ventana emergente con codigo javascript que dice XSS
 ```
 
