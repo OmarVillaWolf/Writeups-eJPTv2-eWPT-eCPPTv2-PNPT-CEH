@@ -4,76 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "838ff34379e0122a",
+        "id": "7c67f4ddd212de3c",
         "type": "tabs",
         "children": [
           {
-            "id": "dee1a269ffd05064",
+            "id": "a2d2e0367f114add",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/6 Durian1.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "78e4ba6397928335",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/24 Nibbles.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e66f74acbbfb8b75",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "923d9a5f9a0b5ac0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.1 Metasploit/2 MSF Gathering & Enumeration.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "35c8866e8d39d81a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.1 Metasploit/5 MSF Explotation.md",
+                "file": "13 SQL/1 Conceptos.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -158,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3.1 Metasploit/5 MSF Explotation.md"
+                "file": "13 SQL/1 Conceptos.md"
               }
             }
           }
@@ -184,8 +131,26 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "35c8866e8d39d81a",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
+    "7 Hack4u/12 Python/1 MAC.md",
+    "13 SQL/1 Conceptos.md",
+    "Portswigger/1 Broken Access/Untitled.md",
+    "Portswigger/1 Broken Access",
+    "Portswigger",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/6 Durian1.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/24 Nibbles.md",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
+    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
+    "3 Tools/BurpSuite.md",
+    "1 Commands Lin & Win/3 Docker/1 Instalacion Linux.md",
+    "1 Commands Lin & Win/3 Docker/2 Estructura.md",
+    "1 Commands Lin & Win/3 Docker/3 Imagenes.md",
+    "1 Commands Lin & Win/3 Docker/4 Contenedor.md",
+    "1 Commands Lin & Win/3 Docker/5 Gestion Contenedores.md",
+    "3.1 Metasploit/5 MSF Explotation.md",
+    "3 Tools/Shellter.md",
+    "3 Tools/Nikto.md",
     "3.1 Metasploit/2 MSF Gathering & Enumeration.md",
     "2 Ports/80 - Shellshock - Apache.md",
     "2 Ports/80 - IIS - Webdav, FTPD.md",
@@ -196,22 +161,6 @@
     "2 Ports/389 - LDAP.md",
     "2 Ports/161 - SNMP.md",
     "2 Ports/80 - Joomla.md",
-    "2 Ports/22 - SSH.md",
-    "2 Ports/23 - Telnet.md",
-    "2 Ports/53 - DNS.md",
-    "2 Ports/80 - Drupal.md",
-    "2 Ports/69 - TFTP.md",
-    "2 Ports/3306 - MYSQL.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
-    "2 Ports/135 - RPC.md",
-    "2 Ports/0 Servicios.md",
-    "3.1 Metasploit/5 MSF Explotation.md",
-    "2 Ports/445, 139- SMB.md",
-    "9 CEH v12/CEH TIPS.md",
-    "9 CEH v12/1 Conceptos Hacking.md",
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
-    "3.2 Explotation/1 Vulnerability Scanning.md",
-    "3.2 Explotation/2 Windows Black Box.md",
     "3.3 Post Explotation",
     "3.2 Explotation",
     "13 SQL",
@@ -220,8 +169,6 @@
     "0 Ciberseguridad/2 Manage Security Risks/2 Security frameworks and controls",
     "0 Ciberseguridad/2 Manage Security Risks/1 Security domains",
     "0 Ciberseguridad/1 Foundations/3 Protect threats, risks, vulnerabil;ities",
-    "0 Ciberseguridad/2 Manage Security Risks",
-    "0 Ciberseguridad/1 Foundations",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
