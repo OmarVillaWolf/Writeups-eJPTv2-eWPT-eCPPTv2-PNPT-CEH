@@ -15,7 +15,11 @@ Para prevenir los ataques CSRF, los desarrolladores de aplicaciones web deben im
 Os compartimos a continuación el enlace al comprimido ZIP que utilizamos en esta clase para desplegar el laboratorio donde practicamos esta vulnerabilidad:
 
 -   **Lab Setup**: [https://seedsecuritylabs.org/Labs_20.04/Files/Web_CSRF_Elgg/Labsetup.zip](https://seedsecuritylabs.org/Labs_20.04/Files/Web_CSRF_Elgg/Labsetup.zip)
-
+```bash 
+# Usuarios del lab 
+alice:seedalice
+samy:seedsamy
+```
 
 ## HTML
 En el CSRF podemos modificar todos aquellos campos en donde no sea necesaria una autenticación en caso de no tener las credenciales. Pero si las tenemos claro que podemos modificar cualquier tipo de campo. 
