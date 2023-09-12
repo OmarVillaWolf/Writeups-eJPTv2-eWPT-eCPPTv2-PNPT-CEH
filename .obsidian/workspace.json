@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13 SQL/1 Conceptos.md",
+                "file": "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13 SQL/1 Conceptos.md"
+                "file": "7 Hack4u/5 OWASP TOP 10/1 SQLI.md"
               }
             }
           }
@@ -131,17 +131,30 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "a2d2e0367f114add",
   "lastOpenFiles": [
+    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
+    "3 Tools/SQLMap.md",
+    "3 Tools/Wireshark - Tcpdump.md",
+    "3 Tools/Shellter(1).md",
+    "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
+    "7 Hack4u/5 OWASP TOP 10/6 LFI a RCE.md",
+    "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
+    "7 Hack4u/5 OWASP TOP 10/3 XXE.md",
+    "7 Hack4u/5 OWASP TOP 10/4 LFI.md",
+    "7.1 PortSwigger/1 SQLI/LAB 1.md",
+    "7.1 PortSwigger/1 SQLI",
+    "7.1 PortSwigger/7 Access Control/Lab 1.md",
+    "7.1 PortSwigger/13 CSRF",
+    "7.1 PortSwigger/3 Directory Traversal",
+    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
+    "12 SQL/1 Conceptos.md",
     "7 Hack4u/12 Python/1 MAC.md",
-    "13 SQL/1 Conceptos.md",
-    "Portswigger/1 Broken Access/Untitled.md",
-    "Portswigger/1 Broken Access",
-    "Portswigger",
+    "7.1 PortSwigger/7 Access Control",
+    "7.1 PortSwigger",
     "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/6 Durian1.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/24 Nibbles.md",
     "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
-    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
     "3 Tools/BurpSuite.md",
     "1 Commands Lin & Win/3 Docker/1 Instalacion Linux.md",
     "1 Commands Lin & Win/3 Docker/2 Estructura.md",
@@ -151,24 +164,11 @@
     "3.1 Metasploit/5 MSF Explotation.md",
     "3 Tools/Shellter.md",
     "3 Tools/Nikto.md",
-    "3.1 Metasploit/2 MSF Gathering & Enumeration.md",
-    "2 Ports/80 - Shellshock - Apache.md",
-    "2 Ports/80 - IIS - Webdav, FTPD.md",
-    "2 Ports/20, 21, 134 - TFP - TFPT.md",
-    "2 Ports/25, 465, 587, 2525 - SMTP.md",
-    "3 Tools/Hydra.md",
-    "2 Ports/445 - Samba.md",
-    "2 Ports/389 - LDAP.md",
-    "2 Ports/161 - SNMP.md",
-    "2 Ports/80 - Joomla.md",
     "3.3 Post Explotation",
     "3.2 Explotation",
-    "13 SQL",
+    "12 SQL",
     "0 Ciberseguridad/2 Manage Security Risks/4 Use Playbooks to respond incidents",
     "0 Ciberseguridad/2 Manage Security Risks/3 Tools",
-    "0 Ciberseguridad/2 Manage Security Risks/2 Security frameworks and controls",
-    "0 Ciberseguridad/2 Manage Security Risks/1 Security domains",
-    "0 Ciberseguridad/1 Foundations/3 Protect threats, risks, vulnerabil;ities",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
