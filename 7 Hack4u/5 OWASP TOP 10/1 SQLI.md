@@ -35,8 +35,9 @@ A continuación, se proporciona el enlace a la utilidad online de ‘**ExtendsCl
 Tenemos: **DB > TABLAS > COLUMNAS > DATOS**
 **Antes de la primer coma debemos de colocar un valor que no exista en la DB. Asi lo que inyectemos se podra visualizar.**
 
+* [Cheat-Sheet-SQLI](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
-### Inyecciones mirando el error en el Output
+## Inyecciones mirando el error en el Output
 
 Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre el **error**.
 * La mayoría de las inyecciones las puedes hacer empezando por  '
@@ -105,7 +106,7 @@ Para que nos muestre los datos de las columnas.
 ```
 
 
-### Inyecciones sin ver el error en el Output 'Blind'
+## Inyecciones sin ver el error en el Output 'Blind'
 
 -   **ExtendsClass MySQL Online**: [https://extendsclass.com/mysql-online.html](https://extendsclass.com/mysql-online.html)
 Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** o **Condiciones**
