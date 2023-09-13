@@ -3,12 +3,55 @@
 Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 
 
 ## Códigos de estado 
-* 200 -> OK
-- 301 -> Moved Permanently (Follow Redirect)
-- 401 -> Unauthorized
-- 403 -> Forbidden
-- 404 -> Not Found
 
+* 200 ‘OK’: La solicitud ha tenido éxito.
+* 204 ’No content’: La petición se ha completado con éxito, pero su respuesta no tiene
+ningún contenido, aunque los encabezados pueden ser útiles.
+* 301 ‘Moved Permanently’: Significa que la URI del recurso solicitado ha sido cambiado.
+(Redirect)
+* 302 ‘Found’: Significa que el recurso de la URI solicitada ha sido cambiado temporalmente.
+* 304 ‘Not modified’: Esta es usada para propósitos de caché. Le indica al cliente que la
+respuesta no ha sido modificada.
+* 400 ‘Bad request’: Significa que el servidor no pudo interpretar la solicitud dada una
+sintaxis inválida.
+* 401 ‘Unauthorized’: Es necesario autenticar para obtener la respuesta solicitada.
+* 403 ‘Forbidden’: El cliente no posee los permisos necesarios para cierto contenido, por lo
+que el servidor rechaza la petición.
+* 404 Not Found: El servidor no pudo encontrar el contenido solicitado.
+* 405 ‘Method not allowed’: El método solicitado es conocido por el servidor pero ha sido
+deshabilitado y no puede ser utilizado (Cambiar de GET a POST)
+* 500 ‘Internal server error’: El servidor ha encontrado una situación que no sabe cómo
+manejarla.
+* 501 ‘Not implement’: El método solicitado no está soportado por el servidor y no puede ser
+manejado.
+* 503 ‘Service unavailable’ : El servidor no está listo para manejar la petición, problemas
+comunes es la caída por mantenimiento o está sobrecargado.
+* 504 ‘Gateway timeout’ : Esta respuesta de error es dada cuando el servidor está actuando
+como una puerta de enlace y no puede obtener una respuesta a tiempo.
+* 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
+soportada por el servidor.
+
+## Flags para el identificador de sesión 
+
+Secure - Para el protocolo HTTPS 
+HTTP-Only - Solo sea accedido para el protocolo HTTP
+
+1. GET: Es el método que nos ayuda a solicitar recursos, en el podemos encontrar el tipo
+de recurso, protocolo y la versión (HTTP/1.1)
+2. Host: Es la cabecera del servidor y lleva una IP.
+3. User-Agent: Esta cabecera lleva la información del usuario, el tipo de navegador, su
+versión, sistema operativo, tipo y descripción del software.
+4. Accept: El tipo de texto que acepta como lo puede ser HTML, XML, e imágenes.
+5. Accept-Language: Son los tipo de lenguaje que acepta
+6. Accept-Encoding: Los tipos de datos que acepta
+7. Connection: Es el estado de la conexión
+8. Cookie: Identifica la sesión y su usuario
+9. Server: Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
+10. Set-Cookie: Es la cookie que ya teníamos anteriormente y la volvió a colocar para podernos
+autenticar
+11. Content-Type: Regresa código HTML de código texto, la puedes modificar para que te
+acepte otro tipo de texto como Json
+12. Content-Length: Longitud del contenido
 ## URL-Encode
 * & = %26
 
