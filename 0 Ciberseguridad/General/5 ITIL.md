@@ -1,4 +1,0 @@
-# ITIL
-
-Tags: #ITIL
-
