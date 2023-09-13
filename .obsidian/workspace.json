@@ -11,13 +11,8 @@
             "id": "a2d2e0367f114add",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -104,8 +99,16 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "b9c013d9a9f38b1c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
               "state": {
-                "file": "7 Hack4u/5 OWASP TOP 10/1 SQLI.md"
+                "sortOrder": "frequency"
               }
             }
           }
@@ -131,44 +134,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "a2d2e0367f114add",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
-    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
-    "3 Tools/SQLMap.md",
-    "3 Tools/Wireshark - Tcpdump.md",
-    "3 Tools/Shellter(1).md",
-    "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
-    "7 Hack4u/5 OWASP TOP 10/6 LFI a RCE.md",
-    "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
-    "7 Hack4u/5 OWASP TOP 10/3 XXE.md",
-    "7 Hack4u/5 OWASP TOP 10/4 LFI.md",
-    "7.1 PortSwigger/1 SQLI/LAB 1.md",
-    "7.1 PortSwigger/1 SQLI",
-    "7.1 PortSwigger/7 Access Control/Lab 1.md",
-    "7.1 PortSwigger/13 CSRF",
-    "7.1 PortSwigger/3 Directory Traversal",
+    "0 Ciberseguridad/ISO/1 ISO 27001.md",
+    "0 Ciberseguridad/1 Foundations/1 Introduccion/1 Intro Ciber.md",
+    "0 Ciberseguridad/1 Foundations/1 Introduccion/2 Skills Ciber.md",
+    "8 TCM - PNPT/6 Wireless Penetration Testing/6 Wireless Penetration Testing.md",
+    "8 TCM - PNPT/5 OWASP Top 10/5 OWASP Top 10.md",
+    "8 TCM - PNPT/4 Web Appliaction Enumeartion/4 Web Application Enumeration.md",
+    "8 TCM - PNPT/3 Post Explotation/3 Post Explotation.md",
+    "8 TCM - PNPT/2 Active Directory/2 Acitve Directory.md",
+    "8 TCM - PNPT/1 Buffer Overflow/1 Buffer Overflow.md",
+    "CEH TIPS.md",
+    "9 CEH v12/13 Criptografia.md",
+    "9 CEH v12/12 Web.md",
+    "9 CEH v12/11 Wireless Security.md",
+    "9 CEH v12/10 Ingeniería Social.md",
+    "9 CEH v12/9 Sniffer.md",
+    "9 CEH v12/5 Reconocimiento activo.md",
+    "9 CEH v12/4 Reconocimiento Pasivo.md",
+    "9 CEH v12/3 Fundamentos de seguridad.md",
+    "9 CEH v12/2 Fundamentos Networking.md",
+    "9 CEH v12/1 Conceptos Hacking.md",
     "12 SQL/1 Conceptos.md",
-    "7 Hack4u/12 Python/1 MAC.md",
-    "7.1 PortSwigger/7 Access Control",
-    "7.1 PortSwigger",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/6 Durian1.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/24 Nibbles.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/7 Hack Me Please1.md",
-    "3 Tools/BurpSuite.md",
-    "1 Commands Lin & Win/3 Docker/1 Instalacion Linux.md",
-    "1 Commands Lin & Win/3 Docker/2 Estructura.md",
-    "1 Commands Lin & Win/3 Docker/3 Imagenes.md",
-    "1 Commands Lin & Win/3 Docker/4 Contenedor.md",
-    "1 Commands Lin & Win/3 Docker/5 Gestion Contenedores.md",
-    "3.1 Metasploit/5 MSF Explotation.md",
-    "3 Tools/Shellter.md",
-    "3 Tools/Nikto.md",
+    "11 AWS/AWS CLI.md",
+    "10 PortSwigger/SSRF.md",
+    "10 PortSwigger/SQLI.md",
+    "10 PortSwigger/Directory Path Traversal.md",
+    "2 Ports/80, 443 - HTTP, HTTPS.md",
+    "8 PortSwigger/5 Information Disclosure",
+    "8 PortSwigger/4 XXE",
+    "8 PortSwigger/2 XXS",
+    "8 PortSwigger/1 SQLI",
+    "8 PortSwigger/13 CSRF",
+    "8 PortSwigger/3 Directory Traversal",
+    "8 PortSwigger/7 Access Control",
+    "8 PortSwigger",
     "3.3 Post Explotation",
     "3.2 Explotation",
-    "12 SQL",
-    "0 Ciberseguridad/2 Manage Security Risks/4 Use Playbooks to respond incidents",
-    "0 Ciberseguridad/2 Manage Security Risks/3 Tools",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
