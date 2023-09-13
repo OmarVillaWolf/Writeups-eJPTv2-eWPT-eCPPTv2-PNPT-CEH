@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/5 OWASP TOP 10/3 XXE.md",
+                "file": "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/5 OWASP TOP 10/3 XXE.md"
+                "file": "7 Hack4u/5 OWASP TOP 10/7 CSRF.md"
               }
             }
           },
@@ -157,8 +157,9 @@
   },
   "active": "ee6d46d457654c95",
   "lastOpenFiles": [
-    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
+    "7 Hack4u/5 OWASP TOP 10/3 XXE.md",
     "8 PortSwigger/1 SQLI/LAB 1.md",
+    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
     "0 Ciberseguridad/ISO/1 ISO 27001.md",
     "0 Ciberseguridad/1 Foundations/1 Introduccion/1 Intro Ciber.md",
     "0 Ciberseguridad/1 Foundations/1 Introduccion/2 Skills Ciber.md",
@@ -182,7 +183,6 @@
     "12 SQL/1 Conceptos.md",
     "11 AWS/AWS CLI.md",
     "10 PortSwigger/SSRF.md",
-    "10 PortSwigger/SQLI.md",
     "8 PortSwigger/5 Information Disclosure",
     "8 PortSwigger/4 XXE",
     "8 PortSwigger/2 XXS",
