@@ -33,5 +33,7 @@ Este tipo de scripts se deben de hacer en html, en donde sabemos que podemos hac
 ```
 Desde la parte de action es para agregar un amigo en el lab de la pagina anterior. Por lo que al momento de mandarlo a alguien y este abra el correo o url, automáticamente se le agregara el amigo con ese identificador que en este caso es 57.  La acción va de la mano con el identificador del usuario a atacar.
 
+```html
 
+```
 
