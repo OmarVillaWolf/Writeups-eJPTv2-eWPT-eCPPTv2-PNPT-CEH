@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
+                "file": "CEH TIPS.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/5 OWASP TOP 10/7 CSRF.md"
+                "file": "CEH TIPS.md"
               }
             }
           },
@@ -143,8 +143,12 @@
   },
   "active": "a2d2e0367f114add",
   "lastOpenFiles": [
-    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
+    "1 Kitty.md",
+    "2 NVIM.md",
+    "CEH TIPS.md",
+    "README.md",
     "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
+    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
     "7 Hack4u/5 OWASP TOP 10/4 LFI.md",
     "7 Hack4u/5 OWASP TOP 10/6 LFI a RCE.md",
     "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
@@ -163,13 +167,9 @@
     "8 TCM - PNPT/3 Post Explotation/3 Post Explotation.md",
     "8 TCM - PNPT/2 Active Directory/2 Acitve Directory.md",
     "8 TCM - PNPT/1 Buffer Overflow/1 Buffer Overflow.md",
-    "CEH TIPS.md",
     "9 CEH v12/13 Criptografia.md",
     "9 CEH v12/12 Web.md",
     "9 CEH v12/11 Wireless Security.md",
-    "9 CEH v12/10 Ingeniería Social.md",
-    "9 CEH v12/9 Sniffer.md",
-    "9 CEH v12/5 Reconocimiento activo.md",
     "8 PortSwigger-OWASP/1.1 Information Disclosure",
     "8 PortSwigger-OWASP/5 XXE",
     "8 PortSwigger-OWASP/3.1 XXS",
