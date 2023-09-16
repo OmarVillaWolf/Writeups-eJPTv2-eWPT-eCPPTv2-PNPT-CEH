@@ -173,4 +173,6 @@ CryptoForge  # Tool para desenciptar / Los archivos que tengan la extencion .cfe
 1. Click derecho - Encryptar 
 
 1. Click derecho - Desencriptar con la passwd que nos dan en el examen 
+
+-b(@b54CtTH&y9t^?f3|QHByH5qkr|w6
 ```
