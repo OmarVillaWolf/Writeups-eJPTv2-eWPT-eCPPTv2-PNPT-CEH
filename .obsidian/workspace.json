@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
+                "file": "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md"
+                "file": "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md"
               }
             }
           },
@@ -143,8 +143,11 @@
   },
   "active": "a2d2e0367f114add",
   "lastOpenFiles": [
-    "CEH TIPS.md",
+    "8 PortSwigger-OWASP/1.2 CSRF/Lab 2.md",
     "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
+    "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md",
+    "CEH TIPS.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
     "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
     "10 bWAPP",
@@ -171,9 +174,6 @@
     "8 TCM - PNPT/6 Wireless Penetration Testing/6 Wireless Penetration Testing.md",
     "8 TCM - PNPT/5 OWASP Top 10/5 OWASP Top 10.md",
     "8 TCM - PNPT/4 Web Appliaction Enumeartion/4 Web Application Enumeration.md",
-    "8 TCM - PNPT/3 Post Explotation/3 Post Explotation.md",
-    "8 TCM - PNPT/2 Active Directory/2 Acitve Directory.md",
-    "8 TCM - PNPT/1 Buffer Overflow/1 Buffer Overflow.md",
     "8 PortSwigger-OWASP/1.1 Information Disclosure",
     "8 PortSwigger-OWASP/5 XXE",
     "8 PortSwigger-OWASP/3.1 XSS",
