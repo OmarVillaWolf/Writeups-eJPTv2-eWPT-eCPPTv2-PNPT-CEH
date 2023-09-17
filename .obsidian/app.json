@@ -13,5 +13,6 @@
   "legacyEditor": false,
   "useMarkdownLinks": true,
   "trashOption": "none",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "8 PortSwigger-OWASP/1 Access Control (IDOR)"
 }
