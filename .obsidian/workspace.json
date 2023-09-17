@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CEH TIPS.md",
+                "file": "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CEH TIPS.md"
+                "file": "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md"
               }
             }
           },
@@ -143,9 +143,18 @@
   },
   "active": "a2d2e0367f114add",
   "lastOpenFiles": [
+    "CEH TIPS.md",
+    "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
+    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
+    "10 bWAPP",
+    "9 SQLi-Labs/Lab1.md",
+    "8 PortSwigger-OWASP/3 SQLI/LAB 1.md",
+    "9 SQLi-Labs",
+    "8 PortSwigger-OWASP/8 Insecure Deserialization",
+    "8 PortSwigger-OWASP/1.1 Information Disclosure/Untitled",
     "1 Kitty.md",
     "2 NVIM.md",
-    "CEH TIPS.md",
     "README.md",
     "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
     "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
@@ -156,8 +165,6 @@
     "7 Hack4u/5 OWASP TOP 10/24 IDORs.md",
     "8 PortSwigger-OWASP/10 SSRF",
     "7 Hack4u/5 OWASP TOP 10/3 XXE.md",
-    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
-    "8 PortSwigger-OWASP/3 SQLI/LAB 1.md",
     "0 Ciberseguridad/ISO/1 ISO 27001.md",
     "0 Ciberseguridad/1 Foundations/1 Introduccion/1 Intro Ciber.md",
     "0 Ciberseguridad/1 Foundations/1 Introduccion/2 Skills Ciber.md",
@@ -167,18 +174,11 @@
     "8 TCM - PNPT/3 Post Explotation/3 Post Explotation.md",
     "8 TCM - PNPT/2 Active Directory/2 Acitve Directory.md",
     "8 TCM - PNPT/1 Buffer Overflow/1 Buffer Overflow.md",
-    "9 CEH v12/13 Criptografia.md",
-    "9 CEH v12/12 Web.md",
-    "9 CEH v12/11 Wireless Security.md",
     "8 PortSwigger-OWASP/1.1 Information Disclosure",
     "8 PortSwigger-OWASP/5 XXE",
-    "8 PortSwigger-OWASP/3.1 XXS",
+    "8 PortSwigger-OWASP/3.1 XSS",
     "8 PortSwigger-OWASP/3 SQLI",
     "8 PortSwigger-OWASP/1.2 CSRF",
-    "8 PortSwigger-OWASP/1.3 Directory Traversal",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)",
-    "8 PortSwigger-OWASP",
-    "3.3 Post Explotation",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
