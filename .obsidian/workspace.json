@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md",
+                "file": "11 XSS-Challenges-Sudo.co/All labs.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md"
+                "file": "11 XSS-Challenges-Sudo.co/All labs.md"
               }
             }
           },
@@ -143,13 +143,17 @@
   },
   "active": "a2d2e0367f114add",
   "lastOpenFiles": [
+    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
+    "11 XSS-Challenges-Sudo.co/All labs.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 3.md",
+    "11 XSS-Challenges-Sudo.co",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 2.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
+    "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md",
     "8 PortSwigger-OWASP/1.2 CSRF/Lab 2.md",
     "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
-    "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
-    "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md",
     "CEH TIPS.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
-    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
     "10 bWAPP",
     "9 SQLi-Labs/Lab1.md",
     "8 PortSwigger-OWASP/3 SQLI/LAB 1.md",
@@ -171,14 +175,10 @@
     "0 Ciberseguridad/ISO/1 ISO 27001.md",
     "0 Ciberseguridad/1 Foundations/1 Introduccion/1 Intro Ciber.md",
     "0 Ciberseguridad/1 Foundations/1 Introduccion/2 Skills Ciber.md",
-    "8 TCM - PNPT/6 Wireless Penetration Testing/6 Wireless Penetration Testing.md",
-    "8 TCM - PNPT/5 OWASP Top 10/5 OWASP Top 10.md",
-    "8 TCM - PNPT/4 Web Appliaction Enumeartion/4 Web Application Enumeration.md",
     "8 PortSwigger-OWASP/1.1 Information Disclosure",
     "8 PortSwigger-OWASP/5 XXE",
     "8 PortSwigger-OWASP/3.1 XSS",
     "8 PortSwigger-OWASP/3 SQLI",
-    "8 PortSwigger-OWASP/1.2 CSRF",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
