@@ -24,15 +24,6 @@ A continuación, se proporciona el enlace al proyecto de GitHub correspondiente 
 
 -   **XXELab**: [https://github.com/jbarone/xxelab](https://github.com/jbarone/xxelab)
 
-![| 00x300](Pasted%20image%2020230420205723.png)
-![00x300](Pasted%20image%2020230420205849.png)
-![00x200](Pasted%20image%2020230420210056.png)
-![00x200](Pasted%20image%2020230420210113.png)  ![00x200](Pasted%20image%2020230420210246.png)
-![00x350](Pasted%20image%2020230420211907.png)
-![00x280](Pasted%20image%2020230420212052.png)
-También podemos explotar
-![00x400](Pasted%20image%2020230421134216.png)
-
 ## XML en la web
 
 * Usaremos XML como código para hacer los scripts. 
