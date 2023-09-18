@@ -1,6 +1,6 @@
 Tags: #XXE #PortSwigger 
 
-# Lab 3 XXE-OOB (with Out-of-band) 
+# Lab 3 Blind XXE-OOB (with Out-of-band) 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
