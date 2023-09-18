@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 PortSwigger-OWASP/5 XXE/Lab 5.md",
+                "file": "8 PortSwigger-OWASP/10 SSRF/Lab 3.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8 PortSwigger-OWASP/5 XXE/Lab 5.md"
+                "file": "8 PortSwigger-OWASP/10 SSRF/Lab 3.md"
               }
             }
           },
@@ -143,25 +143,28 @@
   },
   "active": "a2d2e0367f114add",
   "lastOpenFiles": [
-    "8 PortSwigger-OWASP/5 XXE/Lab 4.md",
+    "8 PortSwigger-OWASP/10 SSRF/Lab 2.md",
+    "8 PortSwigger-OWASP/10 SSRF/Lab 3.md",
+    "8 PortSwigger-OWASP/10 SSRF/Lab 1.md",
+    "10 bWAPP/CSRF/Lab 4.md",
+    "11 XSS-Challenges-Sudo.co/All labs.md",
+    "8 PortSwigger-OWASP/1.2 CSRF/Lab 2.md",
+    "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 1.md",
     "8 PortSwigger-OWASP/5 XXE/Lab 5.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 4.md",
     "8 PortSwigger-OWASP/5 XXE/Lab 3.md",
     "8 PortSwigger-OWASP/5 XXE/Lab 2.md",
-    "8 PortSwigger-OWASP/5 XXE/Lab 1.md",
     "8 PortSwigger-OWASP/3.1 XSS/Lab 3.md",
     "8 PortSwigger-OWASP/3.1 XSS/Lab 2.md",
     "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
     "8 PortSwigger-OWASP/3 SQLI/Lab 1.md",
     "7 Hack4u/5 OWASP TOP 10/3 XXE.md",
-    "10 bWAPP/CSRF/Lab 4.md",
-    "11 XSS-Challenges-Sudo.co/All labs.md",
     "10 bWAPP/CSRF",
     "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
     "11 XSS-Challenges-Sudo.co",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
     "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md",
-    "8 PortSwigger-OWASP/1.2 CSRF/Lab 2.md",
-    "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
     "CEH TIPS.md",
     "10 bWAPP",
     "9 SQLi-Labs/Lab1.md",
@@ -172,9 +175,6 @@
     "2 NVIM.md",
     "README.md",
     "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
-    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
-    "7 Hack4u/5 OWASP TOP 10/4 LFI.md",
-    "7 Hack4u/5 OWASP TOP 10/6 LFI a RCE.md",
     "8 PortSwigger-OWASP/10 SSRF",
     "8 PortSwigger-OWASP/1.1 Information Disclosure",
     "8 PortSwigger-OWASP/5 XXE",
