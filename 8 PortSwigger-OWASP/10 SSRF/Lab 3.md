@@ -12,7 +12,7 @@ Tags: #SSRF #PortSwigger
 # Miramos que hay un segundo filtro en la palabra 'admin'
 # Podemos hacer URLencode con 'Ctrl + u' 
 a = %61
-% = %25    # Debemos de URLencodear el primer porcentaje, ya que si no, nos marcaria error 
+% = %25    # Debemos de URLencodear el primer porcentaje del resultado de la 'a', esto con el fin de hacer un 'ByPass', ya que el servidor al momento de URLdecodear, si no lo hacemos dos veces, este sabra que es una 'a' y nos marcara un error 
 
 admin = %2561dmin
 
