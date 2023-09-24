@@ -11,8 +11,13 @@
             "id": "cd1bad764184820a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/17 Lame.f.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -99,7 +104,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "5 HTB - Machines/Hack4u/eJPT/1 Easy/17 Lame.f.md"
+              }
             }
           },
           {
@@ -136,6 +143,22 @@
   },
   "active": "cd1bad764184820a",
   "lastOpenFiles": [
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/17 Lame.f.md",
+    "2 Ports/445, 139- SMB.md",
+    "1 Commands Lin & Win/4 Hacking/Searchsploit.md",
+    "2 Ports/445 - Samba.md",
+    "3 Tools/Nmap.md",
+    "3 Tools/Hydra.md",
+    "2 Ports/20, 21, 134 - TFP - TFPT.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/15 Grandpa.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/14 Granny.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/13 Jerry.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/24 Nibbles.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/25 Blue.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/23 Delivery.md",
+    "5 HTB - Machines/Hack4u/eJPT/1 Easy/26 Optimum.md",
     "8 PortSwigger-OWASP/10 SSRF/Lab 3.md",
     "8 PortSwigger-OWASP/10 SSRF/Lab 2.md",
     "8 PortSwigger-OWASP/10 SSRF/Lab 1.md",
@@ -146,28 +169,12 @@
     "8 PortSwigger-OWASP/5 XXE/Lab 1.md",
     "8 PortSwigger-OWASP/5 XXE/Lab 5.md",
     "8 PortSwigger-OWASP/5 XXE/Lab 4.md",
-    "8 PortSwigger-OWASP/5 XXE/Lab 3.md",
-    "8 PortSwigger-OWASP/5 XXE/Lab 2.md",
-    "8 PortSwigger-OWASP/3.1 XSS/Lab 3.md",
-    "8 PortSwigger-OWASP/3.1 XSS/Lab 2.md",
-    "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
-    "8 PortSwigger-OWASP/3 SQLI/Lab 1.md",
-    "7 Hack4u/5 OWASP TOP 10/3 XXE.md",
     "10 bWAPP/CSRF",
-    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
     "11 XSS-Challenges-Sudo.co",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
-    "8 PortSwigger-OWASP/1.2 CSRF/Lab 3.md",
-    "CEH TIPS.md",
     "10 bWAPP",
-    "9 SQLi-Labs/Lab1.md",
     "9 SQLi-Labs",
     "8 PortSwigger-OWASP/8 Insecure Deserialization",
     "8 PortSwigger-OWASP/1.1 Information Disclosure/Untitled",
-    "1 Kitty.md",
-    "2 NVIM.md",
-    "README.md",
-    "7 Hack4u/5 OWASP TOP 10/7 CSRF.md",
     "8 PortSwigger-OWASP/10 SSRF",
     "8 PortSwigger-OWASP/1.1 Information Disclosure",
     "8 PortSwigger-OWASP/5 XXE",
