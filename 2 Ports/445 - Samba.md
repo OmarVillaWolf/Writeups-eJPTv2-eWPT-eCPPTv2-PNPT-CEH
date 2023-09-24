@@ -9,6 +9,7 @@ Samba es una implementación Linux de SMB, y permite que los sistemas Windows pu
 ```
 
 ```bash 
+❯ smbclient -L ❮IP❯ -N                      # Para hacer la consulta con la sesion 'NULL'
 ❯ smbclient -L ❮IP❯ -U admin                # Nos muesta informacion como: 'Servidor, Workgroup, Sharename'
 ❯ smbclient //❮IP❯/❮Dir❯ -U admin           # Nos conectaremos a una carpeta con un usuario especifico (Debemos tener la passwd)
 
