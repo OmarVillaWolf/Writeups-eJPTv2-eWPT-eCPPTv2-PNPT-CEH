@@ -1,7 +1,7 @@
 ## Summary
 
 Tags: 
-Y
+
 - IP -> 
 - Ports -> TCP (), UDP (idk)
 - OS ->  
