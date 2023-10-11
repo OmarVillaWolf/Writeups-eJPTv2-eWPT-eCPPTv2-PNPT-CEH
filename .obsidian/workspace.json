@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+                "file": "1 Commands Lin & Win/4 Hacking/ReverShell.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md"
+                "file": "1 Commands Lin & Win/4 Hacking/ReverShell.md"
               }
             }
           },
@@ -143,12 +143,15 @@
   },
   "active": "cd1bad764184820a",
   "lastOpenFiles": [
-    "3 Tools/Nmap.md",
+    "1 ReverShell.md",
+    "1 Commands Lin & Win/4 Hacking/ReverShell.md",
+    "2 Ports/3306 - MYSQL.md",
+    "2 Ports/445, 139- SMB.md",
+    "3 Tools/Ffuf, Gobuster, Wfuz.md",
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "3 Tools/Nmap.md",
     "5 HTB - Machines/Hack4u/eJPT/2 Medium/1 Jeeves.md",
     "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
-    "3 Tools/Ffuf, Gobuster, Wfuz.md",
-    "2 Ports/445, 139- SMB.md",
     "2 Ports/80, 443 - HTTP, HTTPS.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/1 Validation.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/0 Curling.md",
@@ -166,9 +169,6 @@
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/12 Tabby.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/24 Nibbles.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/25 Blue.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/23 Delivery.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/26 Optimum.md",
-    "8 PortSwigger-OWASP/10 SSRF/Lab 3.md",
     "10 bWAPP/CSRF",
     "11 XSS-Challenges-Sudo.co",
     "10 bWAPP",
