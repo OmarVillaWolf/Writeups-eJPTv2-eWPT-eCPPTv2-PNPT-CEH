@@ -13,41 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "57a072e5a8e57e72",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/445, 139- SMB.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4c464c04f2592255",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
+                "file": "7 Hack4u/7 Active-Directory/1 Samba Relay.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md"
+                "file": "7 Hack4u/7 Active-Directory/1 Samba Relay.md"
               }
             }
           },
@@ -168,22 +141,26 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "4c464c04f2592255",
+  "active": "cd1bad764184820a",
   "lastOpenFiles": [
+    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
+    "7 Hack4u/7 Active-Directory/1 Samba Relay.md",
+    "1 Commands Lin & Win/4 Hacking/2 Windows Commands.md",
+    "7 Hack4u/7 Active-Directory",
+    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "2 Ports/445, 139- SMB.md",
+    "3 Tools/Nmap.md",
+    "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/3 Access Token Impersonation.md",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/1 Windows Kernel.md",
-    "2 Ports/445, 139- SMB.md",
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "1 Commands Lin & Win/2 Bash/Bash.md",
     "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
     "1 Commands Lin & Win/4 Hacking/ReverShell.md",
     "1 Commands Lin & Win/4 Hacking/Searchsploit.md",
-    "7 Hack4u/5 OWASP TOP 10/1 SQLI.md",
     "1 ReverShell.md",
     "2 Ports/3306 - MYSQL.md",
     "3 Tools/Ffuf, Gobuster, Wfuz.md",
-    "3 Tools/Nmap.md",
     "5 HTB - Machines/Hack4u/eJPT/2 Medium/1 Jeeves.md",
     "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
     "2 Ports/80, 443 - HTTP, HTTPS.md",
@@ -193,9 +170,6 @@
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/18 Legacy.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/17 Lame.f.md",
     "5 HTB - Machines/Hack4u/eJPT/1 Easy/16 Knife.md",
-    "2 Ports/445 - Samba.md",
-    "3 Tools/Hydra.md",
-    "2 Ports/20, 21, 134 - TFP - TFPT.md",
     "10 bWAPP/CSRF",
     "11 XSS-Challenges-Sudo.co",
     "10 bWAPP",
@@ -205,7 +179,6 @@
     "8 PortSwigger-OWASP/10 SSRF",
     "8 PortSwigger-OWASP/1.1 Information Disclosure",
     "8 PortSwigger-OWASP/5 XXE",
-    "8 PortSwigger-OWASP/3.1 XSS",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
