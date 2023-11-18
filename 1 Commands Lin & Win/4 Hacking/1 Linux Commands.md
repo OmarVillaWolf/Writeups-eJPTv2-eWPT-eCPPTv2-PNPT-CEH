@@ -125,6 +125,13 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash 
+❯ cewl -w <passwd> http://<IP> --with-numbers      # Nos crea un diccionario con las palabras existentes de una url
+
+	# w = Queremos un diccionario que se llamara 'passwd'
+	# with-numbers = Acepta palabras con numeros, ademas de palabras con solo letras
+```
+
+```bash 
 ❯ ip a                                       # Miras la IP que tienes asignada 
 ❯ ifconfig                                   # Miras la IP asignada en Linux
 ❯ ipconfig                                   # Miras la IP asignada en Windows
