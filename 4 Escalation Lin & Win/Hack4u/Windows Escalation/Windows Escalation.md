@@ -39,6 +39,7 @@ En WinPeas podemos encontrar las siguientes vulnerabilidades
 	
 	# SetImpersonatePrivilege = En el cual podriamos usar RottenPotato o  JuicyPotato 
 	# SetLoadPrivilege = Para usar el recurso de Tarlogic
+	# SeLoadDriverPrivilege = Otra utilidad de Tarlogic
 
 ❯  whoami /all                               # Miramos todos los privilegios
 ```
