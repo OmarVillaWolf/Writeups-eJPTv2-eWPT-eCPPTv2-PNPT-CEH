@@ -32,9 +32,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4c464c04f2592255",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -119,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Ports/445, 139- SMB.md"
+                "file": "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md"
               }
             }
           },
@@ -155,10 +168,13 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "57a072e5a8e57e72",
+  "active": "4c464c04f2592255",
   "lastOpenFiles": [
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "4 Escalation Lin & Win/Hack4u/Windows Escalation/3 Access Token Impersonation.md",
+    "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md",
+    "4 Escalation Lin & Win/Hack4u/Windows Escalation/1 Windows Kernel.md",
     "2 Ports/445, 139- SMB.md",
+    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "1 Commands Lin & Win/2 Bash/Bash.md",
     "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
     "1 Commands Lin & Win/4 Hacking/ReverShell.md",
@@ -180,9 +196,6 @@
     "2 Ports/445 - Samba.md",
     "3 Tools/Hydra.md",
     "2 Ports/20, 21, 134 - TFP - TFPT.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/15 Grandpa.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/14 Granny.md",
-    "5 HTB - Machines/Hack4u/eJPT/1 Easy/13 Jerry.md",
     "10 bWAPP/CSRF",
     "11 XSS-Challenges-Sudo.co",
     "10 bWAPP",
