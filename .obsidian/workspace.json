@@ -33,7 +33,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md"
+                "file": "2 Ports/445, 139- SMB.md"
               }
             }
           },
@@ -154,10 +155,10 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "cd1bad764184820a",
+  "active": "57a072e5a8e57e72",
   "lastOpenFiles": [
-    "2 Ports/445, 139- SMB.md",
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "2 Ports/445, 139- SMB.md",
     "1 Commands Lin & Win/2 Bash/Bash.md",
     "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
     "1 Commands Lin & Win/4 Hacking/ReverShell.md",
