@@ -3,10 +3,12 @@
 Tags: #Shell #Comandos #Editor #NVim #Nano 
 
 
-NVim Practica Online: [NVim-Online](https://www.openvim.com/)
+NVim Practica Online: 
+* [NVim-Online](https://www.openvim.com/)
+* [Vim Cheat Sheet](https://vim.rtorr.com/)
 
 ### Comandos Vim
-**i** Modo inserción (ahi puedes empezar a escribir)
+**i** Modo inserción (ahí puedes empezar a escribir)
 **esc** Sales del modo inserción
 
 Todos estos comandos son en modo esc
