@@ -24,7 +24,7 @@ Todos estos comandos son en modo esc
 	**wq** Guardas y sales de Vi (w=write, q=quit)
 	**q!** Sales sin guardar
 
-Modo No-Insesion **Filtros**
+Modo No-Insersion **Filtros**
 ```bash
 ❯ **:%s/,/\r/g** Para aplicar una sustitucion 
 
