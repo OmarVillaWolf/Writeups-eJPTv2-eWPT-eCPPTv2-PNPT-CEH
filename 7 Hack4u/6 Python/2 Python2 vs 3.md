@@ -22,4 +22,8 @@ Tags: #Python3 #Python2
 
 ❯ wget https://bootstrap.pypa.io/pip/2.7/get-pip.py        # Instalar pip2
 ❯ sudo python2.7 get-pip.py
+
+❯ pip3 install pwntools                                    # Instalación de Pwntools Python3
+❯ pip2 install pwntools                                    # Instalación de Pwntools Python2
+	❯ pip2 install pathlib2                               # Instalación del complemento para usar las librerias de Pwntools
 ```
