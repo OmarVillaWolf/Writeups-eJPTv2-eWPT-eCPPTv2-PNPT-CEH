@@ -290,12 +290,3 @@ Para las monturas en Docker serian los siguientes comandos
 ```bash
 ❯ upx <FILE>                              # Podemos bajarle el peso al archivo para transferirlo a la maquina victima mas rapido
 ```
-
-
----
-
-Instalar pip2 en Parrot
-```python
-❯ wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
-❯ sudo python2.7 get-pip.py
-```
