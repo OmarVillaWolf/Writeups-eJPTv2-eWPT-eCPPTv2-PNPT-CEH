@@ -15,3 +15,11 @@ Tags: #Python3 #Python2
 - **Gestión de paquetes**: PIP2 y PIP3 son herramientas que permiten instalar paquetes para Python 2 y Python 3, respectivamente. Es importante usar la versión correcta para garantizar la compatibilidad con la versión de Python que estés utilizando.
 - **Comandos de instalación**: El uso de pip o pip3 antes de un comando determina si el paquete se instalará en Python 2 o Python 3. Algunos sistemas operativos pueden requerir especificar pip2 o pip3 explícitamente para evitar ambigüedades.
 - **Ambientes virtuales**: Es una buena práctica usar ambientes virtuales para mantener separadas las dependencias de proyectos específicos y evitar conflictos entre versiones de paquetes para Python 2 y Python 3.
+
+```bash 
+❯ apt install python2 python3                              # Instalar Python 2 y 3 en Linux
+❯ apt install python3-pip                                  # Instalar pip3
+
+❯ wget https://bootstrap.pypa.io/pip/2.7/get-pip.py        # Instalar pip2
+❯ sudo python2.7 get-pip.py
+```
