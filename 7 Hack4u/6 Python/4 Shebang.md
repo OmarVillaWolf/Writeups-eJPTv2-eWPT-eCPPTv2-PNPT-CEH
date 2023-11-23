@@ -31,8 +31,12 @@ if __name__ == '__main__':     #  Creamos una funcion para saber el modulo princ
 ```python
 #!/usr/bin/env python3
 
-def comprobacionEstadoApi():    # En funciones se aplica el lowerCamelCase
-class TwitterApi:               # En clases se aplica el UpperCamelCase
+def comprobacionEstadoApi():    # En funciones se aplica el 'lowerCamelCase'
+class TwitterApi:               # En clases se aplica el 'UpperCamelCase'
 
-def comprobar_estado_api():     # Para Python lo recomendable es usar Snake_Case 
+def comprobar_estado_api():     # Para Python lo recomendable es usar 'Snake_Case' (Recomendacion del PEP8)
+
+# Para las constantes podemos usar 'SCREAMING_SNAKE_CASE'
+	VERSION_API = 1
+	URL_API = "https://google.com"
 ```
