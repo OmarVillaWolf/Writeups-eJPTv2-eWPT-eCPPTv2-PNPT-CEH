@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/6 Python/5 Variables-Datos.md",
+                "file": "7 Hack4u/6 Python/5 Var y Datos.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/6 Python/5 Variables-Datos.md"
+                "file": "7 Hack4u/6 Python/5 Var y Datos.md"
               }
             }
           },
@@ -143,14 +143,16 @@
   },
   "active": "f7479d2418792ec1",
   "lastOpenFiles": [
+    "7 Hack4u/6 Python/6.md",
+    "7 Hack4u/6 Python/5 Var y Datos.md",
+    "7 Hack4u/6 Python/1 Ventajas.md",
+    "7 Hack4u/6 Python/2 Python2 vs 3.md",
+    "7 Hack4u/6 Python/3 Interprete.md",
     "7 Hack4u/6 Python/4 Shebang.md",
-    "7 Hack4u/6 Python/5 Variables-Datos.md",
+    "2 Ports/0 Servicios.md",
     "2 Ports/3389, 3333 - RDP.md",
     "2 Ports/873 - RSYNC.md",
     "2 Ports/135 - RPC.md",
-    "7 Hack4u/6 Python/3 Interprete.md",
-    "7 Hack4u/6 Python/2 Python2 vs 3.md",
-    "7 Hack4u/6 Python/1 Ventajas.md",
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
     "7 Hack4u/4 Enumeracion y Explotacion/4 Enumeracion.md",
@@ -168,8 +170,6 @@
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/Windows Escalation.md",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/3 Access Token Impersonation.md",
     "4 Escalation Lin & Win/Hack4u/Windows Escalation/2 Bypassing UAC.md",
-    "4 Escalation Lin & Win/Hack4u/Windows Escalation/1 Windows Kernel.md",
-    "1 Commands Lin & Win/2 Bash/Bash.md",
     "10 bWAPP/CSRF",
     "11 XSS-Challenges-Sudo.co",
     "10 bWAPP",
