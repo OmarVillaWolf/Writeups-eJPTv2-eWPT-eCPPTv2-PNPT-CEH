@@ -46,11 +46,14 @@ my_ports.insert(2, 9)                       # Para hacer una sustitucion de un v
 my_ports.insert(2, "Hola")
 
 my_ports = sorted(my_ports)                 # Nos ayuda a ordenar la lista 
+set(my_ports)                               # Te quita los valores repetidos de la lista pero te la convierte en un 'set = {}'
 
 del my_ports[0]                             # Para que nos elimine el elemento de la lista que en su posición es 0 (primer elemento)
 my_ports.pop()                              # Para eliminar el ultimo elemento de la lista 
 
 my_ports.index(445)                         # Para conocer el indice de ese elemento (Posicion en la lista), 'si hay elementos repetidos, solo te muestra el primero'
+
+my_ports.count(80)                          # Para contar el numero de veces que sale ese valor en la lista 
 
 for port in my_ports:                       # Imprimiremos cada elemento de la lista
 	print("Puerto: " + str(port))           
@@ -59,6 +62,7 @@ for port in my_ports:                       # Imprimiremos cada elemento de la l
 print(f"\n[+] La lista tiene un total de {len(my_ports)} elementos")     
 	# len = Nos muestra la longitud, en este caso la longitud de la lista 
 	# \n = Salto de linea
+
 ```
 
 ```python
@@ -87,4 +91,20 @@ enumerate(mi_lista)                    # Esto me devuelve dos elementos (indices
 
 for x, y in enumerate(mi_lista):       # Me va a mostrar por consola los indice y valores de la lista (x = indices, y = valores)
 	print(f"{x}: {y}")
+```
+
+```python 
+# Listas 
+
+mi_lista = [1, 2, 3, 4, 5]
+
+max(mi_lista)                                             # Muestra el valor maximo de la lista
+min(mi_lista)                                             # Muestra el valor minimo de la lista 
+sum(mi_lista)                                             # Sumas todos los valores de la lista
+len(mi_lista)                                             # Muestra el total de elementos en la lista 
+sum(mi_lista) / len(mi_lista)                             # Calcular el promedio 
+round(sum(mi_lista) / len(mi_lista), 2)                   # Redondear los decimales en este caso a 'dos' elementos 
+
+print(f"[+] El numero mas alto es {max(mi_lista)}")       # Para obtener el valor mas alto de la lista  
+print(f"[+] El numero mas bajo es {min(mi_lista)}")       # Para obtener el valor mas bajo de la lista
 ```
