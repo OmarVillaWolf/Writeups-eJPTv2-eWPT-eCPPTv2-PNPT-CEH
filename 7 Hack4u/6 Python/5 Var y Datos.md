@@ -108,3 +108,16 @@ round(sum(mi_lista) / len(mi_lista), 2)                   # Redondear los decima
 print(f"[+] El numero mas alto es {max(mi_lista)}")       # Para obtener el valor mas alto de la lista  
 print(f"[+] El numero mas bajo es {min(mi_lista)}")       # Para obtener el valor mas bajo de la lista
 ```
+
+```python 
+# Listas 
+
+one_list = [1, 3, 5, 7, 9]
+second_list = [2, 4, 6, 8, 10]
+
+result = list(map(sum, zip(one_list, second_list)))             # Zip te junta los valores en tuplas, ejemplo: (1, 2), (3, 4)
+	# Map = Hace que puedas meter un operador, en este caso 'sum' y asi sumara los elementos del zip 
+	# Con el 'Tipe Casting', convertimos el resultado en lista 
+
+print(result)
+```
