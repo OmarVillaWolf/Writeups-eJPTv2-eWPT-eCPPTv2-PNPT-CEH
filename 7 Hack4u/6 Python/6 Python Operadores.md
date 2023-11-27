@@ -43,6 +43,19 @@ result = a + b          # Suma
 result = a - b          # Resta 
 result = a * b          # Multiplicacion 
 result = a / b          # Division 
+result = a % b          # Modulo 
 result = a ** b         # Potencia (8 elevado a la 6)
+```
 
+```python 
+#!/usr/bin/env python3
+
+a = 'Hola'
+b = ' '
+c = 'Mundo'
+
+print(a + b + c)        # Podemos sumar los strings 
+print(a*3)              # Podemos multiplicar el string por un numero y nos mostrara la misma palabra en este caso 3 veces 
+print(a[0]*3)           # Le decimos que el primer caracter lo multiplique por 3 
+print(a[0:3]*3)         # Le que desde el primer caracter hasta el tercero (-1), lo multiplique por tres 
 ```
