@@ -116,7 +116,7 @@ one_list = [1, 3, 5, 7, 9]
 second_list = [2, 4, 6, 8, 10]
 
 result = list(map(sum, zip(one_list, second_list)))             # Zip te junta los valores en tuplas, ejemplo: (1, 2), (3, 4)
-	# Map = Hace que puedas meter un operador, en este caso 'sum' y asi sumara los elementos del zip 
+	# Map = Hace que puedas meter una funcion, en este caso 'sum' y un iterable para funcionar 
 	# Con el 'Tipe Casting', convertimos el resultado en lista 
 
 print(result)
