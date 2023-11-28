@@ -26,3 +26,23 @@ print(cuadrado(6))
 suma = lambda x, y: x + y                    # Asi decimos que le pasaremos dos argumentos a la funcion lambda
 print(suma(3, 5))
 ```
+
+```python 
+#!/usr/bin/env python3
+
+num = [1, 2, 3, 4, 5]
+
+cuadrado = list(map(lambda x: x**2, num))    # Map debe de llevar una funcion y un objeto iterable para funcionar 
+print(cuadrado)
+```
+
+```python
+#!/usr/bin/env python3
+
+from functools import reduce                    # 'Reduce' te hace la operatoria para todos los iterables de la lista 
+
+num = [1, 2, 3, 4, 5]
+
+producto = reduce(lambda x, y: x*y, num)        # Debemos de pasarle a la funcion 'reduce' una funcion y un iterable 
+print(producto)
+```
