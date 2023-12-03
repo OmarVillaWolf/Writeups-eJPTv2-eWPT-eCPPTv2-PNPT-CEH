@@ -8,19 +8,59 @@
         "type": "tabs",
         "children": [
           {
+            "id": "aca09eb821344fe8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5.5 THM - Machines/Easy/1.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0216174bb5582beb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "ba33950222a45299",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/3 Symfonos5.md",
+                "file": "7 Hack4u/8 Pivoting/1 Aragog.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "38414f7f1370ffa9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -105,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/3 Symfonos5.md"
+                "file": "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md"
               }
             }
           },
@@ -141,34 +181,37 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "ba33950222a45299",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "12 Sim-Exam-eJPT",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/2 Symfonos3.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/1 Symfonos2.md",
+    "5.5 THM - Machines/Easy/1.md",
+    "7 Hack4u/8 Pivoting/1 Aragog.md",
+    "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
+    "5.5 THM - Machines/Easy",
+    "5.5 THM - Machines",
     "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
+    "6 Vulhub - Machines/2 Medium/3 Symfonos5.md",
+    "12 Sim-Exam-eJPT",
+    "6 Vulhub - Machines/2 Medium/2 Symfonos3.md",
+    "6 Vulhub - Machines/2 Medium/1 Symfonos2.md",
     "6 Vulhub - Machines/TCM/6 Black Pearl.md",
     "6 Vulhub - Machines/TCM/5 Butler.md",
     "6 Vulhub - Machines/TCM/4 Dev.md",
     "6 Vulhub - Machines/TCM/3 Academy.md",
     "6 Vulhub - Machines/TCM/2 Blue.md",
     "6 Vulhub - Machines/TCM/1 Kioptrix level 1.md",
-    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/3. Symfonos 6.1.md",
-    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/5. Infovore 1.md",
-    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/4. Presidential 1.md",
-    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/2. Casino Royale 1.md",
-    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/1. IMF 1.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/0 DarkHole 1.md",
+    "6 Vulhub - Machines/3 Curso Hack4u/3. Symfonos 6.1.md",
+    "6 Vulhub - Machines/3 Curso Hack4u/5. Infovore 1.md",
+    "6 Vulhub - Machines/3 Curso Hack4u/4. Presidential 1.md",
+    "6 Vulhub - Machines/3 Curso Hack4u/2. Casino Royale 1.md",
+    "6 Vulhub - Machines/3 Curso Hack4u/1. IMF 1.md",
     "6 Vulhub - Machines/Hack4u/3 Pivoting/1. Pivoting.md",
     "6 Vulhub - Machines/Hack4u/3 Pivoting/4 Fawkes.md",
     "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
     "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
-    "7 Hack4u/8 Pivoting/1 Aragog.md",
     "7 Hack4u/8 Pivoting/0 Pivoting.md",
     "7 Hack4u/8 Pivoting/6 Brainpan.md",
     "7 Hack4u/8 Pivoting/5 Matrix1.md",
     "7 Hack4u/8 Pivoting/3 Dumbledore.md",
-    "7 Hack4u/8 Pivoting/4 Fawkes.md",
     "7 Hack4u/9 BufferOveflow",
     "7 Hack4u/8 Pivoting",
     "7 Hack4u/6 Python/2 Estructura de datos",
@@ -176,9 +219,6 @@
     "7 Hack4u/7 Active-Directory",
     "10 bWAPP/CSRF",
     "11 XSS-Challenges-Sudo.co",
-    "10 bWAPP",
-    "9 SQLi-Labs",
-    "8 PortSwigger-OWASP/8 Insecure Deserialization",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
