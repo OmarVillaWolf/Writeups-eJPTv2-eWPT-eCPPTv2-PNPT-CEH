@@ -58,9 +58,100 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c5830fda12736680",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7e161aa7cb182e20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Nmap.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f029aa6a2776b3a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Ports/80, 443 - HTTP, HTTPS.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "504371d869b65740",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Ffuf, Gobuster, Wfuz.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3c53513edb86fdf8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Hydra.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bce16efa1831d5c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/BurpSuite.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a44d763a60995814",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Commands Lin & Win/4 Hacking/ReverShell.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -145,7 +236,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md"
+                "file": "1 Commands Lin & Win/4 Hacking/ReverShell.md"
               }
             }
           },
@@ -181,11 +272,20 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "a44d763a60995814",
   "lastOpenFiles": [
+    "2 Ports/80, 443 - HTTP, HTTPS.md",
+    "1 Commands Lin & Win/4 Hacking/ReverShell.md",
+    "3 Tools/BurpSuite.md",
+    "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
+    "3 Tools/Hydra.md",
+    "3 Tools/Ffuf, Gobuster, Wfuz.md",
+    "3 Tools/Shellter.md",
+    "3 Tools/Shellter(1).md",
+    "3 Tools/Nmap.md",
+    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "5.5 THM - Machines/Easy/1.md",
     "7 Hack4u/8 Pivoting/1 Aragog.md",
-    "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
     "5.5 THM - Machines/Easy",
     "5.5 THM - Machines",
     "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
@@ -203,15 +303,6 @@
     "6 Vulhub - Machines/3 Curso Hack4u/5. Infovore 1.md",
     "6 Vulhub - Machines/3 Curso Hack4u/4. Presidential 1.md",
     "6 Vulhub - Machines/3 Curso Hack4u/2. Casino Royale 1.md",
-    "6 Vulhub - Machines/3 Curso Hack4u/1. IMF 1.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/1. Pivoting.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/4 Fawkes.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
-    "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
-    "7 Hack4u/8 Pivoting/0 Pivoting.md",
-    "7 Hack4u/8 Pivoting/6 Brainpan.md",
-    "7 Hack4u/8 Pivoting/5 Matrix1.md",
-    "7 Hack4u/8 Pivoting/3 Dumbledore.md",
     "7 Hack4u/9 BufferOveflow",
     "7 Hack4u/8 Pivoting",
     "7 Hack4u/6 Python/2 Estructura de datos",
