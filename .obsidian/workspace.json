@@ -13,41 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f7479d2418792ec1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/0 DarkHole 1.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2470c60624a545eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7 Hack4u/8 Pivoting/1 Aragog.md",
+                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/3 Symfonos5.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/8 Pivoting/1 Aragog.md"
+                "file": "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/3 Symfonos5.md"
               }
             }
           },
@@ -168,38 +141,38 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "2470c60624a545eb",
+  "active": "ba33950222a45299",
   "lastOpenFiles": [
+    "12 Sim-Exam-eJPT",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/2 Symfonos3.md",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/1 Symfonos2.md",
+    "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
+    "6 Vulhub - Machines/TCM/6 Black Pearl.md",
+    "6 Vulhub - Machines/TCM/5 Butler.md",
+    "6 Vulhub - Machines/TCM/4 Dev.md",
+    "6 Vulhub - Machines/TCM/3 Academy.md",
+    "6 Vulhub - Machines/TCM/2 Blue.md",
+    "6 Vulhub - Machines/TCM/1 Kioptrix level 1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/3. Symfonos 6.1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/5. Infovore 1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/4. Presidential 1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/2. Casino Royale 1.md",
+    "6 Vulhub - Machines/Hack4u/2 Curso Hack4u/1. IMF 1.md",
+    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/0 DarkHole 1.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/1. Pivoting.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/4 Fawkes.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/3 Nagini.md",
+    "6 Vulhub - Machines/Hack4u/3 Pivoting/2 Aragog.md",
+    "7 Hack4u/8 Pivoting/1 Aragog.md",
     "7 Hack4u/8 Pivoting/0 Pivoting.md",
     "7 Hack4u/8 Pivoting/6 Brainpan.md",
     "7 Hack4u/8 Pivoting/5 Matrix1.md",
     "7 Hack4u/8 Pivoting/3 Dumbledore.md",
     "7 Hack4u/8 Pivoting/4 Fawkes.md",
-    "7 Hack4u/8 Pivoting/2 Nagini.md",
-    "7 Hack4u/8 Pivoting/1 Aragog.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/0 DarkHole 1.md",
-    "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
-    "7 Hack4u/4 Enumeracion y Explotacion/4 Enumeracion.md",
     "7 Hack4u/9 BufferOveflow",
     "7 Hack4u/8 Pivoting",
-    "7 Hack4u/4 Enumeracion y Explotacion/3 Explotacion.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/11 Errores.md",
     "7 Hack4u/6 Python/2 Estructura de datos",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/10 Lambda anónimas.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/5 Var y Datos.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/9 Funciones.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/8 Condicionales y Bucles.md",
     "7 Hack4u/6 Python/1 Conceptos Basicos",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/8 ICA1.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/3 Election1.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/1 DarkHole2.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/2 Medium/1 Symfonos2.md",
-    "6 Vulhub - Machines/Hack4u/1 eJPT/1 Easy/2 Symfonos1.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/7 String Formating.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/6 Python Operadores.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/1 Ventajas.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/2 Python2 vs 3.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/3 Interprete.md",
     "7 Hack4u/7 Active-Directory",
     "10 bWAPP/CSRF",
     "11 XSS-Challenges-Sudo.co",
