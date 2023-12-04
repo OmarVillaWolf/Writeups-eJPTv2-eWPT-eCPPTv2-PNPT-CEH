@@ -4,7 +4,7 @@
 ```bash
 ❯ python3 -c ‘import pty;pty.spawn(“/bin/bash”)’         # Para remplazar el comando de 'Script' por si no lo acepta la consola
 
-❯ Script /dev/null -c bash
+❯ script /dev/null -c bash
 ❯ Ctrl + z
 ❯ stty raw -echo; fg
 ❯ reset xterm
