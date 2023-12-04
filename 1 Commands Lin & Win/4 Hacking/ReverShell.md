@@ -13,19 +13,6 @@ Tenemos diferentes tipos de Revershell este pagina Web:
 **Forward Shell**: Esta técnica se utiliza cuando no se pueden establecer conexiones Reverse o Bind debido a reglas de Firewall implementadas en la red. Se logra mediante el uso de **mkfifo**, que crea un archivo **FIFO** (**named pipe**), que se utiliza como una especie de “**consola simulada**” interactiva a través de la cual el atacante puede operar en la máquina remota. En lugar de establecer una conexión directa, el atacante redirige el tráfico a través del archivo **FIFO**, lo que permite la comunicación bidireccional con la máquina remota.
 
 La mayoría de las paginas al momento de comprometerlas encontraremos el usuario **www-data** que es el encargado de gestionar la parte de servicios web.
-
-```bash 
-# Diferentes extensiones PHP para subir 'Shells' maliciosas
-
-* php
-* php3
-* php4
-* php5
-* pht
-* phtm
-* phtml
-* phar
-```
 ## ReverShell, BindShell desde la URL de la Web
 
 Este comando lo ejecutamos desde la pagina web para hacer una **ReverShell** : 
@@ -50,6 +37,19 @@ Este comando lo ejecutamos desde la pagina web para hacer una **ReverShell** :
 ```
 
 ## ReverShell, BindShell cuando subes un archivo a la Web
+
+```bash 
+# Diferentes extensiones PHP para subir 'Shells' maliciosas
+
+* php
+* php3
+* php4
+* php5
+* pht
+* phtm
+* phtml
+* phar
+```
 
 Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/var/www/html** con el siguiente contenido: 
 ```php
