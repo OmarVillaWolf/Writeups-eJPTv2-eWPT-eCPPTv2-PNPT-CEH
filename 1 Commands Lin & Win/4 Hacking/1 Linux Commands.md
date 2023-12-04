@@ -58,6 +58,7 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 ```bash 
 ❯ shred -zun 10 -v <file>                    # Borrar un archivo, pero que el borrado sea mas complejo y asi no dejaremos evidencia, a mas valor que el 10 es mejor, ademas de borrarlo evita que se pueda recuperar
+❯ shred -zun 10 -v file*                     # Borrar todos los archivos que empiecen con una palabra en especifico
 ```
 
 ```bash 
@@ -181,14 +182,6 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 Modos de transferir archivos desde la maquina de atacante 
 ```bash
-❯ python3 -m http.server 80                 # Nos montamos un servidor http 80 en Linux
-
-❯ impacket-smbserver smbFolder $(pwd) -smb2support           # Compartiremos el recurso a nivel de red
-
-	# smbFolder = Nombre de la carpeta que compartiremos a nivel de red 
-	# pwd = Sincronizado con la ruta actual de trabajo
-	# smb2support = Sporte a la version 2 de smb
-
 ❯ scp <file> root@<IP>:/tmp/chisel          # Podemos tranferir un archivo y lo depositamos en la ruta que hayamos colocado
 	# root = Usuario de la maquina victima 
 	# IP = Direccion de la maquina victima 
