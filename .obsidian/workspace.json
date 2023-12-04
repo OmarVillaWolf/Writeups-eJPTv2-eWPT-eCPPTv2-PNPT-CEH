@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
+                "file": "7 Hack4u/6 Python/2 Estructura de datos/2 Tuplas.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -151,7 +151,7 @@
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -236,7 +236,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/ReverShell.md"
+                "file": "7 Hack4u/6 Python/2 Estructura de datos/2 Tuplas.md"
               }
             }
           },
@@ -272,10 +272,18 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "a44d763a60995814",
+  "active": "0216174bb5582beb",
   "lastOpenFiles": [
-    "2 Ports/80, 443 - HTTP, HTTPS.md",
+    "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
+    "7 Hack4u/6 Python/2 Estructura de datos/2 Tuplas.md",
+    "5.5 THM - Machines/Easy/1.md",
+    "7 Hack4u/6 Python/1 Conceptos Basicos/5 Var y Datos.md",
     "1 Commands Lin & Win/4 Hacking/ReverShell.md",
+    "1 Commands Lin & Win/4 Hacking/Msfvenom.md",
+    "1 Commands Lin & Win/4 Hacking/Searchsploit.md",
+    "1 Commands Lin & Win/4 Hacking/Tratamiento TTY.md",
+    "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
+    "2 Ports/80, 443 - HTTP, HTTPS.md",
     "3 Tools/BurpSuite.md",
     "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
     "3 Tools/Hydra.md",
@@ -284,11 +292,9 @@
     "3 Tools/Shellter(1).md",
     "3 Tools/Nmap.md",
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
-    "5.5 THM - Machines/Easy/1.md",
     "7 Hack4u/8 Pivoting/1 Aragog.md",
     "5.5 THM - Machines/Easy",
     "5.5 THM - Machines",
-    "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
     "6 Vulhub - Machines/2 Medium/3 Symfonos5.md",
     "12 Sim-Exam-eJPT",
     "6 Vulhub - Machines/2 Medium/2 Symfonos3.md",
@@ -297,12 +303,6 @@
     "6 Vulhub - Machines/TCM/5 Butler.md",
     "6 Vulhub - Machines/TCM/4 Dev.md",
     "6 Vulhub - Machines/TCM/3 Academy.md",
-    "6 Vulhub - Machines/TCM/2 Blue.md",
-    "6 Vulhub - Machines/TCM/1 Kioptrix level 1.md",
-    "6 Vulhub - Machines/3 Curso Hack4u/3. Symfonos 6.1.md",
-    "6 Vulhub - Machines/3 Curso Hack4u/5. Infovore 1.md",
-    "6 Vulhub - Machines/3 Curso Hack4u/4. Presidential 1.md",
-    "6 Vulhub - Machines/3 Curso Hack4u/2. Casino Royale 1.md",
     "7 Hack4u/9 BufferOveflow",
     "7 Hack4u/8 Pivoting",
     "7 Hack4u/6 Python/2 Estructura de datos",
