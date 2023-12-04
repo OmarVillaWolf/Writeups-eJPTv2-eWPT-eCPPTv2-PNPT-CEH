@@ -84,12 +84,11 @@ ReverShell en php
 ```
 
 Para ponernos en escucha por Netcat en espera de la **ReverShell**:
-1) Linux
-2) Windows
-```bash
-❯ nc -nlvp 443 
 
-❯ rlwrap nc -nlvp 443
+```bash
+❯ nc -nlvp 443            # Linux
+
+❯ rlwrap nc -nlvp 443     # Windows 
 
 	# nc = Netcat 
 	# n = No DNS
@@ -97,6 +96,14 @@ Para ponernos en escucha por Netcat en espera de la **ReverShell**:
 	# v = verbose
 	# p = numero local de puerto en esucha
 
+```
+
+```bash 
+❯ pwncat-cs -lp 443                         # Podemos usar esta herramienta llamada 'Pwncat'
+	❯ run enumerate                        # Enumera todo el sistema 
+	❯ run enumerate.user                   # Enumeras los usuarios
+	❯ run enumerate.system.network         # Enumeras las interfaces de la maquina 
+	❯ back                                 # Nos coloca en la ruta de la terminal de la victima
 ```
 
 Para ejecutar Netcat y hacer la **BindShell**: 
