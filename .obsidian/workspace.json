@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
+                "file": "6 Vulhub - Machines/1 Easy/1 DarkHole2.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -73,12 +73,12 @@
             }
           },
           {
-            "id": "63084b77f5d4a404",
+            "id": "6f773a30dd9217a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 Escalation Lin & Win/Linux Escalation/5. Python Library Hijacking.md",
+                "file": "7 Hack4u/8 Pivoting/0 Pivoting.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md"
+                "file": "7 Hack4u/8 Pivoting/0 Pivoting.md"
               }
             }
           },
@@ -207,11 +207,20 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "38414f7f1370ffa9",
+  "active": "6f773a30dd9217a6",
   "lastOpenFiles": [
+    "1 Commands Lin & Win/2 Bash/Bash.md",
+    "7 Hack4u/8 Pivoting/0 Pivoting.md",
+    "7 Hack4u/8 Pivoting/6 Brainpan.md",
+    "7 Hack4u/8 Pivoting/5 Matrix1.md",
+    "7 Hack4u/8 Pivoting/4 Fawkes.md",
+    "7 Hack4u/8 Pivoting/3 Dumbledore.md",
+    "7 Hack4u/8 Pivoting/2 Nagini.md",
+    "7 Hack4u/8 Pivoting/1 Aragog.md",
+    "6 Vulhub - Machines/1 Easy/1 DarkHole2.md",
+    "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
     "4 Escalation Lin & Win/Linux Escalation/5. Python Library Hijacking.md",
     "4 Escalation Lin & Win/Linux Escalation/1. Sudoers.md",
-    "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
     "4 Escalation Lin & Win/Linux Escalation/2. SUID.md",
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
     "2 Ports/80, 443 - HTTP, HTTPS.md",
@@ -226,18 +235,9 @@
     "1 Commands Lin & Win/4 Hacking/Searchsploit.md",
     "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
     "3 Tools/Hydra.md",
-    "3 Tools/Ffuf, Gobuster, Wfuz.md",
-    "3 Tools/Shellter.md",
-    "3 Tools/Shellter(1).md",
-    "3 Tools/Nmap.md",
-    "7 Hack4u/8 Pivoting/1 Aragog.md",
     "5.5 THM - Machines/Easy",
     "5.5 THM - Machines",
-    "6 Vulhub - Machines/2 Medium/3 Symfonos5.md",
     "12 Sim-Exam-eJPT",
-    "6 Vulhub - Machines/2 Medium/2 Symfonos3.md",
-    "6 Vulhub - Machines/2 Medium/1 Symfonos2.md",
-    "6 Vulhub - Machines/TCM/6 Black Pearl.md",
     "7 Hack4u/9 BufferOveflow",
     "7 Hack4u/8 Pivoting",
     "7 Hack4u/6 Python/2 Estructura de datos",
