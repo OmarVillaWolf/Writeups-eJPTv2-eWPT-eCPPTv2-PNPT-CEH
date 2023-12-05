@@ -28,11 +28,23 @@ Cuando recibimos un output, podamos mostrar solo el segundo argumento
 
 Para ir descubriendo interfaces con el comando ping 
 ```bash 
-!#/bin/bash 
+#!/bin/bash 
+
+function ctrl_c(){
+	echo -e "\n\n[!] Saliendo...\n"
+	tput cnorm; exit 1
+}
+
+# Ctrl_c
+trap ctrl_c INT
+
+tput civis
 
 for i in $(seq 1 254); do
 	timeout 1 bash -c "ping -c 1 10.10.0.$i" &>/dev/null && echo "[+] Host 10.10.0.$i - ACTIVE" &
-done; wait  
+done; wait
+
+tput cnorm
 ```
 
 Por si el comando ping no esta disponible, podemos hacerlo por los puertos mas comunes 
