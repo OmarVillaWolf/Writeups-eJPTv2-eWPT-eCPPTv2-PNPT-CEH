@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Windows #HTTP #IIS #WebDav #ReverShell #BufferOverflow #RCE #JuicyPotato #Churrasco #Server2003 #SearchSploit 
+Tags: #Windows #HTTP #IIS #WebDav #ReverShell #BufferOverflow #RCE #JuicyPotato #Churrasco #Server2003 #SearchSploit #Metodos 
 
 - IP -> 10.10.10.130
 - Ports -> TCP (80), UDP (idk)
