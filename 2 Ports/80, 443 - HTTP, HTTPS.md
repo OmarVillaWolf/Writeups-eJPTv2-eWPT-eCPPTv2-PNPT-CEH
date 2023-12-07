@@ -31,27 +31,41 @@ como una puerta de enlace y no puede obtener una respuesta a tiempo.
 * 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
 soportada por el servidor.
 
-## Flags para el identificador de sesión 
+## Cabeceras
+#### Request
 
-Secure - Para el protocolo HTTPS 
-HTTP-Only - Solo sea accedido para el protocolo HTTP
-
-1. GET: Es el método que nos ayuda a solicitar recursos, en el podemos encontrar el tipo
+1. **GET / POST**: Es el método que nos ayuda a solicitar recursos, en el podemos encontrar el tipo
 de recurso, protocolo y la versión (HTTP/1.1)
-2. Host: Es la cabecera del servidor y lleva una IP.
-3. User-Agent: Esta cabecera lleva la información del usuario, el tipo de navegador, su
+2. **Host**: Es la cabecera del servidor y lleva una IP o un dominio.
+3. **Cookie**: Identifica la sesión y su usuario
+4. **User-Agent**: Esta cabecera lleva la información del usuario, el tipo de navegador, su
 versión, sistema operativo, tipo y descripción del software.
-4. Accept: El tipo de texto que acepta como lo puede ser HTML, XML, e imágenes.
-5. Accept-Language: Son los tipo de lenguaje que acepta
-6. Accept-Encoding: Los tipos de datos que acepta
-7. Connection: Es el estado de la conexión
-8. Cookie: Identifica la sesión y su usuario
-9. Server: Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
-10. Set-Cookie: Es la cookie que ya teníamos anteriormente y la volvió a colocar para podernos
+5. Accept: El tipo de texto que acepta como lo puede ser HTML, XML, e imágenes.
+6. Accept-Language: Son los tipo de lenguaje que acepta
+7. Accept-Encoding: Los tipos de datos que acepta
+8. Connection: Es el estado de la conexión
+
+#### Response 
+
+1. **Código de estado**: 
+2. Server: Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
+3. Set-Cookie: Es la cookie que ya teníamos anteriormente y la volvió a colocar para podernos
 autenticar
-11. Content-Type: Regresa código HTML de código texto, la puedes modificar para que te
+4. **Content-Type**: Regresa código HTML de código texto, la puedes modificar para que te
 acepte otro tipo de texto como Json
-12. Content-Length: Longitud del contenido
+5. Content-Length: Longitud del contenido
+
+## Métodos
+
+1. GET
+2. HEAD
+3. POST
+4. PUT
+5. DELETE
+6. CONNECT
+7. OPTIONS
+8. TRACE
+
 ## URL-Encode
 
 ❯ **Ctrl + u** Para ver el código fuente de la pagina web
