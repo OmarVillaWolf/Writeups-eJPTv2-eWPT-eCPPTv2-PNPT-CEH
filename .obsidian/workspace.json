@@ -21,6 +21,19 @@
             }
           },
           {
+            "id": "56df626635b29936",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Commands Lin & Win/1 OverTheWire/1 SSH.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "0216174bb5582beb",
             "type": "leaf",
             "state": {
@@ -73,7 +86,7 @@
             }
           },
           {
-            "id": "8af7b24eeb90a624",
+            "id": "2e0903d7fe6302bb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -84,9 +97,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c75283bb5c87ed7a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Nikto.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -115,7 +141,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Tags",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -171,7 +197,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Ports/80, 443 - HTTP, HTTPS.md"
+                "file": "3 Tools/Nikto.md"
               }
             }
           },
@@ -207,44 +233,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "8af7b24eeb90a624",
+  "active": "c75283bb5c87ed7a",
   "lastOpenFiles": [
-    "2 Ports/0 Servicios.md",
+    "3 Tools/Ffuf, Gobuster, Wfuz.md",
+    "3 Tools/Hydra.md",
+    "3 Tools/Nikto.md",
     "2 Ports/80, 443 - HTTP, HTTPS.md",
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
-    "4 Escalation Lin & Win/Linux Escalation/Linux Escalation.md",
-    "6 Vulhub - Machines/1 Easy/1 DarkHole2.md",
-    "7 Hack4u/8 Pivoting/1 Pivoting.md",
+    "3 Tools/OWASP ZAP.md",
+    "3 Tools/BurpSuite.md",
     "7 Hack4u/8 Pivoting/2 Chisel - Port Forwarding.md",
+    "5 HTB - Machines/1 Easy/15 Grandpa.md",
+    "5 HTB - Machines/1 Easy/14 Granny.md",
+    "5 HTB - Machines/1 Easy/10 Antique.md",
+    "5 HTB - Machines/2 Medium/8 Tenten.md",
+    "5 HTB - Machines/1 Easy/12 Tabby.md",
+    "5 HTB - Machines/1 Easy/11 Shocker.md",
+    "5 HTB - Machines/1 Easy/9 ToolBox.md",
+    "5 HTB - Machines/1 Easy/8 Driver.md",
+    "5 HTB - Machines/1 Easy/7 GoodGames.md",
+    "5 HTB - Machines/1 Easy/6 NunChucks.md",
+    "5 HTB - Machines/1 Easy/5 NodeBlog.md",
+    "5 HTB - Machines/1 Easy/4 Love.md",
+    "5 HTB - Machines/1 Easy/3 Horizontal.md",
+    "5 HTB - Machines/1 Easy/2 Return.md",
+    "5 HTB - Machines/1 Easy/1 Validation.md",
+    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "1 Commands Lin & Win/0 RedHat/1 Comandos.md",
+    "1 Commands Lin & Win/0 RedHat",
+    "5.5 THM - Machines/Easy/1.md",
+    "6 Vulhub - Machines/1 Easy/1 DarkHole2.md",
     "7 Hack4u/8 Pivoting/Lab 4",
     "7 Hack4u/8 Pivoting/Lab 3",
     "7 Hack4u/8 Pivoting/Lab 2",
     "7 Hack4u/8 Pivoting/Lab 1",
     "7 Hack4u/8 Pivoting/Lab Final",
-    "1 Commands Lin & Win/4 Hacking/Transferir Archvos.md",
-    "1 Commands Lin & Win/2 Bash/Bash.md",
-    "7 Hack4u/8 Pivoting/Lab Final/6 Brainpan.md",
-    "7 Hack4u/8 Pivoting/Lab Final/5 Matrix1.md",
-    "7 Hack4u/8 Pivoting/Lab Final/4 Fawkes.md",
-    "7 Hack4u/8 Pivoting/Lab Final/3 Dumbledore.md",
-    "7 Hack4u/8 Pivoting/Lab Final/2 Nagini.md",
-    "7 Hack4u/8 Pivoting/Lab Final/1 Aragog.md",
-    "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
-    "4 Escalation Lin & Win/Linux Escalation/5. Python Library Hijacking.md",
-    "4 Escalation Lin & Win/Linux Escalation/1. Sudoers.md",
-    "4 Escalation Lin & Win/Linux Escalation/2. SUID.md",
-    "1 Commands Lin & Win/4 Hacking/ReverShell.md",
-    "1 Commands Lin & Win/4 Hacking/Tratamiento TTY.md",
-    "3 Tools/BurpSuite.md",
-    "7 Hack4u/6 Python/2 Estructura de datos/2 Tuplas.md",
-    "7 Hack4u/6 Python/2 Estructura de datos/1 Listas.md",
-    "5.5 THM - Machines/Easy/1.md",
-    "7 Hack4u/6 Python/1 Conceptos Basicos/5 Var y Datos.md",
     "5.5 THM - Machines/Easy",
     "5.5 THM - Machines",
     "12 Sim-Exam-eJPT",
     "7 Hack4u/9 BufferOveflow",
-    "7 Hack4u/8 Pivoting",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
