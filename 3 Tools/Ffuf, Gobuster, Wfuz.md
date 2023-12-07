@@ -2,14 +2,19 @@
 
 Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing 
 
-Modo directorio: Listar los directorios y archivos 
-	**/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt**
-  **/usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt**
-Modo DNS: Encontrar los subdominios 
-	**/usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt** 
-Modo vhost: Encontrar host virtuales que estén configurados en el servidor
-	**/usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt** 
+```bash 
+# Modo directorio: Listar los directorios y archivos
+❯ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+❯ /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
+❯ /usr/share/dirb/wordlists/common.txt
+❯ /usr/share/metasploit-framework/data/wordlists/directory.txt
 
+# Modo DNS: Encontrar los subdominios 
+❯ /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt
+
+# Modo vhost: Encontrar host virtuales que estén configurados en el servidor
+❯ /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt
+```
 # Wfuzz 
 ```bash
 ❯ wfuzz -c --hc=404 --hh=12345 -t 200 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.❮IP❯” https://❮IP❯
@@ -96,7 +101,7 @@ Para descubrir si tiene el Plugin de **gwolle-gb**
 # Gobuster
 Go trabaja muy bien con Sockets y conexiones 
 ```bash
-❯ gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://❮IP❯ -t 200 -k 
+❯ gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url http://❮IP❯ -t 200 -k 
 
 	# vhost -> Modo enumeracion VHost Subdominios
 	# w -> Ruta del diccionario
@@ -105,7 +110,7 @@ Go trabaja muy bien con Sockets y conexiones
 ```
 
 ```bash
-❯ gobuster vhost -u https://tinder.com -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 20 | grep -v "403"
+❯ gobuster vhost -u http://host.com -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 20 | grep -v "403"
 
 	# vhost -> Modo enumeracion VHost Subdominios
 	# u -> Colocamos la url
@@ -115,7 +120,7 @@ Go trabaja muy bien con Sockets y conexiones
 ```
 
 ```bash
-❯ gobuster dir -u https://miwifi.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 --add-slash -b 403,404
+❯ gobuster dir -u http://host.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 --add-slash -b 403,404
 
 	# dir -> Modo enumeracion directorios y archivos 
 	# u -> Colocamos la url
@@ -126,7 +131,7 @@ Go trabaja muy bien con Sockets y conexiones
 ```
 
 ```bash
-❯ gobuster dir -u https://miwifi.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -b 403,404 -x php,html,txt
+❯ gobuster dir -u http://host.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -b 403,404 -x .php,.html,.txt,.xml -r
 
 	# dir -> Modo enumeracion directory/file
 	# u -> Colocamos la url
@@ -134,6 +139,7 @@ Go trabaja muy bien con Sockets y conexiones
 	# w -> Ruta del diccionario
 	# b -> Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
 	# x -> Que extensiones queremos buscar (.php,.html,.txt)
+	# r = Para hacer 'Follow Redirect'
 ```
 
 ```bash
