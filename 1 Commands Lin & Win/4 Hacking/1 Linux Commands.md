@@ -195,6 +195,7 @@ Manera de descargar archivos en la maquina victima
 
 ```bash
 ❯ curl http://❮IP❯:PORT                     # Para ver si hay contenido 
+	# v = Verbosity
 ```
 
 ```bash
