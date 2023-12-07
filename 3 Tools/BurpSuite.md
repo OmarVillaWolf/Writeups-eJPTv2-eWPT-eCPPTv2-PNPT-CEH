@@ -30,8 +30,8 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 
 **/usr/share/wordlists/fasttrack.txt** Diccionario para passwd que generalmente traen los sitios Web 
 
-****
-## Tipos de Brute Force en Intruder
+## Enumeración con Fuerza Bruta
+
 ### Intruder: Sniper
 
 Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos permite agregar un Payload (una carga útil) y probar con un solo parámetro (una sola posición). 
@@ -40,6 +40,12 @@ Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos pe
 	Payload Type: Simple list
 
 Debemos de agregar nuestras propias palabras o cargar una lista.
+
+```bash 
+# Este ataque lo podemos hacer en el método 'GET' de Burpsuite
+
+GET /$name$ HTTP/1.1        # Agregamos al directorio principal el parametro a usar, en este caso 'name'
+```
 
 ### Intruder: Battering Ram
 Permite tomar tantas posiciones como queramos, pero cada uno de los espacios serán probados con la misma palabra.
