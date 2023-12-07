@@ -1,6 +1,6 @@
 # HTTP 
 
-Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 
+Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 #Metodos
 
 ## Códigos de estado 
 
@@ -57,21 +57,52 @@ acepte otro tipo de texto como Json
 
 ## Métodos
 
+```bash 
 1. GET
-2. HEAD
-3. POST
-4. PUT
-5. DELETE
-6. CONNECT
-7. OPTIONS
-8. TRACE
 
-## URL-Encode
+1. HEAD
 
-❯ **Ctrl + u** Para ver el código fuente de la pagina web
-❯ **Ctrl + r** Recargar la pagina web
-❯ **Ctrl + Shift + c** Para inspeccionar el código 
-❯ **Ctrl + Click-Izquierdo** Abrimos el enlace en otra pestaña
+1. POST
+❯ curl -s -X POST http://IP/login.php -d "name=omar&password=passwd" -v 
+# Podemos mandar data por este método y mirar las cabeceras
+
+1. PUT
+❯ curl -s -X PUT http://IP/cmd.txt -d @cmdasp.aspx
+	# d = Subir una data que es indicada con el @ y sera el archivo de la cdm
+❯ curl http://IP/uploads/ --upload-file file.txt  # Subir un archivo a un directorio especifico 
+
+1. MOVE 
+❯ curl -s -X MOVE http://IP/cmd.txt -H "Destination:http://IP/cmd.aspx"
+# Si no nos acepta subir la extension anterior, le cambiamos la extension para subir el archivo y en la ruta donde se encuentra lo movemos a la extension del 'aspx'
+
+1. DELETE
+❯ curl -s -X DELETE http://IP/uploads/file.txt    # Para borrar un archivo en un directorio especifico 
+
+1. CONNECT
+
+1. OPTIONS
+❯ curl -s -X OPTIONS http://IP/post.php -v
+# Podemos ver los métodos permitidos en esa página o directorio 
+
+1. TRACE
+```
+
+## Buscar en la Web
+
+```bash 
+# Que podemos buscar en una pagina Web
+1. Mirar el codigo fuente 'Ctrl + u'
+2. Inspeccionar el codigo 'Ctrl + Shift + c'
+3. Métodos permitidos
+4. Listado de directorios 'Fuzzing o Burpsuite'
+5. Nikto
+
+# Atajos en la Web
+Recargar la pagina 'Ctrl + r'
+Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
+```
+
+## Herramientas Web
 
 ```bash
 ❯ http ❮IP❯                                       # Podemos ver las cabeceras 
@@ -126,7 +157,7 @@ acepte otro tipo de texto como Json
 ```
 
 # HTTPS 
-443 - Este puerto es también para la navegación web, pero en este caso usa el protocolo HTTPS que es seguro y utiliza el protocolo TLS por debajo.
+443 - Este puerto también es para la navegación web, usa el protocolo HTTPS que es mas seguro y utiliza el protocolo TLS por debajo.
 
 ```bash
 ❯ openssl s_client -connect ❮IP❯:443     # Para conectarnos al openssl e inspeccionar el certificado del puerto 443
