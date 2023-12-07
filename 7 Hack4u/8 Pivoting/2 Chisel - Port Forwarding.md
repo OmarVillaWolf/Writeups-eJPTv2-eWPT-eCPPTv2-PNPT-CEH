@@ -73,13 +73,18 @@ Debemos de hacer los siguientes cambios después de crear el túnel
 sock5 127.0.0.1 1080 
 ```
 
+### Comandos con Proxychain
+
 Forma de verificar y de como debemos de ir colocando los comandos en nuestra maquina de atacante.
 * Siempre debemos de usar **'proxychains'** antes de cada comando
 ```bash 
+# NMAP
 ❯ seq 1 65535 | xargs -P 500 -I {} proxychains nmap -sT -Pn -p{} -open -T5 -v -n ❮Target IP❯ 2>&1 | grep "tcp open"      # Proxychains nos ayudara que el comando pase por el tunel creado por chisel 
-
 	# P = Tareas en paralelo
+❯ proxychains nmap --top-ports 500 --open -T5 -v -n <IP> -sT -Pn -oG allports 2>&1 | grep -vE "timeout|OK"
+❯ proxychains nmap -sT -Pn -sCV -p22,.. <IP> -oN Targeted
 
+# WHATWEB
 ❯ proxychains whatweb ❮Target IP❯     # Escaneo con whatweb a la maquina victima 
 ```
 
