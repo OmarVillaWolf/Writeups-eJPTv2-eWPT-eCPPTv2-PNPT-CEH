@@ -15,6 +15,19 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 	- Auditoria de passwd
 	- Recuperación de passwd
 
+```bash 
+# Directorio 
+/usr/share/wordlists/rockyou.txt
+
+# Directorios 'passwords'
+/usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
+/usr/share/wordlists/metasploit/common_passwords.txt
+
+# Directorios 'Users'
+/usr/share/metasploit-framework/data/wordlists/unix_users.txt
+/usr/share/wordlists/metasploit/common_users.txt
+```
+
 ## Hydra fuerza bruta WordPress
 
 Esto se usa en el panel del admin de WordPress.
