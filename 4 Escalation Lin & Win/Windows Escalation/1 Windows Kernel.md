@@ -11,7 +11,7 @@ Windows NT es el Kernel que esta precargado en todas las versiones de Windows
 ❯ systeminfo                                 # Nos muestra la informacion de Windows
 
 # Una vez obtenida la info, la copiamos y creamos un file en nuestra maquina de atacante
-❯ nano win7.txt                              # Pegamos la informacion obtenida del comando anterior en ese archivo
+❯ nvim win7.txt                              # Pegamos la informacion obtenida del comando anterior en ese archivo
 ❯ python2 windows-exploit-suggester.py --update    # Actualizar la base de datos 
 ❯ python2 windows-exploit-suggester.py --database 2023-07-25-mssb.xls --systeminfo ~/Desktop/win7.txt    # Con este comando haremos que con la base de datos mas actual pueda detectar las vulnerabilidades de la maquina victima 
 ```
