@@ -47,7 +47,7 @@ Haremos que al momento de ejecutar el programa, podamos tener una ReverShell al 
 ```python
 # Primero nos debemos crear un archivo python 
 
-❯ nano ShellShock.py
+❯ nvim ShellShock.py
 
 #!/usr/bin/python3
 
