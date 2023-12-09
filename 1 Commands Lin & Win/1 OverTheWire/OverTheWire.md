@@ -77,7 +77,7 @@ La clave privada la debe de tener el atacante
 - **ncat --ssl 127.0.0.1 30001** -> Es como un Netcat y podenos conectar pos SSL, en este caso nos conectamos al localhost, por el puerto 30001, solo debemos e proporcionar la passwd y listo
 
 ### 14 Creando nuestro propio escaner en Bash
-- **nano PortScan.sh** -> Creamos el file y le damos permisos de ejecucion con **chmod +x PortScan.sh**
+- **nvim PortScan.sh** -> Creamos el file y le damos permisos de ejecucion con **chmod +x PortScan.sh**
 - **vim HostScam.sh** -> Creamos un file para buscar host y le damos permisos de ejecucion con **chmod +x HostScan.sh**
 Los Script se encuentran en Documentos de Windows en la Carpeta Hack4u
 
