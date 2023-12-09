@@ -64,7 +64,7 @@ Enumerar los puertos abiertos pasando por el SQUID Proxy con Python
 ```python
 # Primero nos debemos crear un archivo python 
 
-❯ nano Squid_Proxy_port_discovery.py
+❯ nvim Squid_Proxy_port_discovery.py
 
 #!/usr/bin/python3
 
