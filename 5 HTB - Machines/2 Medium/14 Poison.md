@@ -111,7 +111,7 @@ Tenemos el puerto 5901 abierto en la maquina victima, por lo que lo podemos usar
 Ahora usaremos un Dinamic Port Forwarding 
 
 Modificaremos el:
-**nano /etc/proxychains.conf** Modificaremo este archivo en nuestra maquina
+**nvim /etc/proxychains.conf** Modificaremo este archivo en nuestra maquina
 	socks4 127.0.0.1 1080 -> Haremos que la conexion para nuestra maquina se efectue en el puerto 1080
 
 
