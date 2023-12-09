@@ -64,7 +64,7 @@ Dentro de Chisel
 
 Debemos de hacer los siguientes cambios después de crear el túnel 
 ```bash 
-❯ nano /etc/proxychains.conf 
+❯ nvim /etc/proxychains.conf 
 
 # Comentamos el Dinamic_chain, este solo se habilita cuando vamos pasando por varios tuneles
 # Activamos el strick_chain, este solo es cuando tenemos un tunel 
@@ -92,7 +92,7 @@ Forma de verificar y de como debemos de ir colocando los comandos en nuestra maq
 
 Modificaremos:
 ```bash
-❯ nano /etc/proxychains.conf                            # Modificaremo este archivo en nuestra maquina
+❯ nvim /etc/proxychains.conf                            # Modificaremo este archivo en nuestra maquina
 	socks4 127.0.0.1 1080                              # Haremos que la conexion para nuestra maquina se efectue en el puerto 1080
 ```
 
