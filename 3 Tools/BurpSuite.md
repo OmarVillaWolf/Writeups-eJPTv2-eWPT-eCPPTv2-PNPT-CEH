@@ -30,6 +30,13 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 
 **/usr/share/wordlists/fasttrack.txt** Diccionario para passwd que generalmente traen los sitios Web 
 
+## Rastreo pasivo
+
+1. Necesitamos tener el 'Proxy' activado en la web 
+2. Debemos de activar en 'Burpsuite' en la pestaña de 'Dashboard' la parte de -> 'Capturing (Live passive crawl from Proxy (all trafic))'
+3. Toda la data la podremos ver en la parte del 'Proxy' -> 'HTTP History' 
+4. Eso funcionara aunque tengamos el 'Proxy' desactivado
+
 ## Enumeración con Fuerza Bruta
 
 ### Intruder: Sniper
@@ -87,6 +94,8 @@ El primer payload se refiere a que ahí podemos colocar una lista de usuarios
 El segundo payload se refiere a que ahí podemos colocar una lista que podrían ser de passwd.
 
 En este caso probara primero el primer elemento de la lista 1 y después probara todos los elementos de la lista 2. Pasara a otro elemento de la lista 1 y después probara todos los elementos de la lista 2 y así sucesivamente. 
+
+
 
 
 
