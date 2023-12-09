@@ -50,7 +50,7 @@ Ahora debemos de buscar un Exploit pero como es del 2017 buscaremos en la pagina
 https://archive.org
 Ahi buscaremos la pagina Vagmour.es que cotiene el exploit que necesitaremos para poder hacer el Bypass. Lo buscaremos en Agosto del 2018
 
-Econtramos escrito el exploit. Por lo que hacemos un archivo en nano con la extension .py
+Econtramos escrito el exploit. Por lo que hacemos un archivo en nvim con la extension .py
 Ahi adentro lo pegamos y modificamos los siguientes campos:
 	#!/usr/bin/python3
 	print ()
