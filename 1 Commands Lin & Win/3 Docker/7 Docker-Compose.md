@@ -28,7 +28,7 @@ Web **localhost:5601** Para poder ver el servicio web de Kibana
 ❯ docker-compose logs                  # Para mirar los logs en Docker pero debes de estar dentro del contenedor 
 ❯ docker-compose exec kibana bash      # Para ingresar al Kibana
 	❯ cd /tmp                         # Este dir tiene privilegios de lectura y escritura
-	❯ nano reverse.js
+	❯ nvim reverse.js
 		(function(){
 		    var net = require("net"),
 		        cp = require("child_process"),
