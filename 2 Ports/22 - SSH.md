@@ -44,7 +44,7 @@ Cuando estamos en una **restricted bash** (rbash) podemos meter comandos en el s
 	# xclip = Copiarno el output en la clipboard
 
 # El resultado lo pegaremos en el archivo que crearemos con nombre 'authorized_keys' en la ruta de la maquina victima que es /root/.ssh
-❯ nano authorized_keys
+❯ nvim authorized_keys
 ```
 
 Descargando el Script, podemos enumerar usuarios 
