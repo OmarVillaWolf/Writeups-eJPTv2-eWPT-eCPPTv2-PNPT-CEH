@@ -96,6 +96,11 @@ acepte otro tipo de texto como Json
 3. Métodos permitidos
 4. Listado de directorios 'Fuzzing o Burpsuite'
 5. Nikto
+6. Rastreo pasivo 'Burpsuite' crawling
+7. SQLMap
+8. XSS con XSSer
+9. HTTP login con Hydra 'WordPress'
+10. Ataque al 'basic auth' con Burpsuite 'Intruder - Sniper' (Cargar diccionario y Payload Processing 'add prefix=admin:' y 'Encode=base64')
 
 # Atajos en la Web
 Recargar la pagina 'Ctrl + r'
