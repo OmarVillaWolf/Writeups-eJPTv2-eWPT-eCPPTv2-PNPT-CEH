@@ -77,7 +77,7 @@ El **API Token** lo podemos descargar registrándonos desde la siguiente url:
 ```
 
 ```bash
-❯ nano file.xml
+❯ nvim file.xml
 
 	<?xml version="1.0" encoding="utf-8"?> 
 	<methodCall> 
