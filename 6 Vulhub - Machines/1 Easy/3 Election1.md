@@ -100,11 +100,11 @@ Para escalar privilegios hacemos lo siguiente:
 	# Encontramos: Serv-U  --> Servidor FTP 
 ```
 
-Buscamos en Google 'serv-u exploit' y  nos copiamos el exploit y lo pegarnos en un archivo que crearemos en el dir 'tmp' con nano llamado 'exploit.c'
+Buscamos en Google 'serv-u exploit' y  nos copiamos el exploit y lo pegarnos en un archivo que crearemos en el dir 'tmp' con nvim llamado 'exploit.c'
 * [Exploit-Serv-U](https://www.exploit-db.com/exploits/47009)
 
 ```bash 
-❯ nano exploit.c             # Copiamos el contenido obtenido de la pagina web
+❯ nvim exploit.c             # Copiamos el contenido obtenido de la pagina web
 ```
 
 ```bash 
