@@ -89,7 +89,7 @@ Para saber la longitud
 
 Podríamos aplicar Fuerza Bruta con las Regex para ir probando carácter por carácter y así ir descubriendo la passwd de algún usuario especifico que exista.
 ```python 
-❯ nano NoSQL.py
+❯ nvim NoSQL.py
 
 	#!/usr/bin/python3
 	from pwn import *
