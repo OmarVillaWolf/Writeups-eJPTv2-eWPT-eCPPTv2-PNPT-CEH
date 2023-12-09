@@ -74,7 +74,7 @@ Tiene una pestana de **demo** en donde hay una opcion que nos indica que ‘**es
 ```
 
 ```bash
-❯ nano test                              # Nos creamos un archivo llamado test en el cual le agregamos cualquier informacion
+❯ nvim test                              # Nos creamos un archivo llamado test en el cual le agregamos cualquier informacion
 En la pagina web colocamos la url de nuestro servidor y buscamos ese archivo http://10.10.14.2/test y nos damos cuenta que nos muestra el contenido de nuestro archivo
 ```
 
@@ -103,7 +103,7 @@ Buscaremos en searchsploit pero ahora el exploit en donde dice que ya estamos au
 Puedes descargarte el archivo sploit ejecutable a tu computadora para despues poder ejecutarlo (m=move). Podemos observar que es el tipico sploit en el cual debes de meter IP, usuario, contrasena, IP de la revershell, Puerto de la revershell, para poder hacer esa autenticacion y poder ser ususario root.
 
 ```bash
-❯ nano 49445.txt                              # Para ver el contenido del exploit y modificarlo, para poder usarlo 
+❯ nvim 49445.txt                              # Para ver el contenido del exploit y modificarlo, para poder usarlo 
 ```
 
 Debemos de hacer algunas modificaciones al script como:
