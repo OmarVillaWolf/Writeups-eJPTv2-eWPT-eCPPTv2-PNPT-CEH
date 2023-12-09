@@ -25,9 +25,29 @@ Aunque no puedes modificar una tupla, hay varias operaciones que puedes realizar
 ```python 
 #!/usr/bin/env python3
 
-tupla = (1, 2, 3, 4, 5)                # Definir una tupla 
+tupla1 = (1, 2, 3, 4, 5)                # Definir una tupla 
 
 print(tupla[0])                        # Asi imprimimos el primer elemento de la tupla
+print(tupla[1:3])
+print(tupla[-1])
 
 
+tupla2 = (1, 'test', [1, 2, 3], True, 5) 
+
+for i in tupla:
+	print(i)
+
+
+tupla3 = (1, 2, 3, 4)
+a, b, c, d = tupla3
+print(a)
+print(b)
+print(c)
+print(d)
+print(len(tupla))
+
+
+tupla4 = tupla1 + tupla 3
+tupla4 = tupla1 * 3
+print(tupla4)
 ```
