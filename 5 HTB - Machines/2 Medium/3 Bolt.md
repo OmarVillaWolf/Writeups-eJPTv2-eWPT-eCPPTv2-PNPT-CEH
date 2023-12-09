@@ -29,11 +29,11 @@ Debemos de agregar el dominio que encontramos. passbolt.bolt.htb y bolt.htb
 -  http-enum -> Aplica Fuzing a HTTP, utiliza un diccionario de 1000 rutas y ver si hay algunas rutas existen
 
 En la pagina Web entrando por el puerto 443 
-Podemos hacer **Ctrl + u** para ver codigo de la pagina Web
+Podemos hacer **Ctrl + u** para ver código de la pagina Web
 
-Tambien podemos ver la pagina Web por el puerto 80 
+También podemos ver la pagina Web por el puerto 80 
 
-Mirmamos que hay 3 usuarios y hacemos un diccionario con sus nombres en nano
+Miramos que hay 3 usuarios y hacemos un diccionario con sus nombres en nvim
 joseph, bonnie, jose, jgarth, bgreen, jleos, j.garth, b.green, j.leos, neil, neilsims, nsims, n.sims
 
 - Comando -> **impacket-GetNPUsers **
