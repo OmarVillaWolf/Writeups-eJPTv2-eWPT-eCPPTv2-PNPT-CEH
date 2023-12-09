@@ -52,7 +52,7 @@ A continuación, se proporciona el enlace directo al proyecto de GitHub que nos 
 ```
 
 ```python
-❯ nano newuser.ldif
+❯ nvim newuser.ldif
 	dn: uid=omar,cd=example,dc=org
 	uid: omar
 	cn: omar
@@ -122,7 +122,7 @@ Script para enumerar usuario validos, pero estos tienen atributos como:
 * mail
 * telephoneNumber
 ```python
-❯ nano ldapi.py
+❯ nvim ldapi.py
 	#!/usr/bin/python3
 	from pwn import *
 	import requests, time, sys, signal, string
