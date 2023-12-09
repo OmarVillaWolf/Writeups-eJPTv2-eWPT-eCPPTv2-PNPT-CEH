@@ -143,7 +143,7 @@ Tipos de capabilities:
 * Podemos crearnos un Script Manual para ver las tareas que se están ejecutando y ver los procesos nuevos, antiguos, así como comandos y ver cual proceso nos puede ayudar a escalar privilegios. 
    Después encontramos un archivo que lo esta ejecutando root y otros lo pueden modificar 
 ```bash 
-❯ nano file.sh
+❯ nvim file.sh
 
 	#!/bin/bash
 	
