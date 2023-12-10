@@ -84,9 +84,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9554a1dd665bfe3b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "7 Hack4u/8 Pivoting/3 Piv - Metasploit.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f832ea6eecbdb7d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3.1 Metasploit/5 MSF Explotation.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -171,7 +197,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md"
+                "file": "7 Hack4u/8 Pivoting/3 Piv - Metasploit.md"
               }
             }
           },
@@ -207,10 +233,18 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "06013409d535fbf1",
+  "active": "9554a1dd665bfe3b",
   "lastOpenFiles": [
-    "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
+    "3.1 Metasploit/5 MSF Explotation.md",
+    "7 Hack4u/8 Pivoting/3 Piv - Metasploit.md",
+    "3.1 Metasploit/1 Metasploit.md",
+    "3.1 Metasploit/2 MSF Gathering & Enumeration.md",
+    "3.1 Metasploit/3 MSF Vulnerability Scanning.md",
+    "3.1 Metasploit/4 MSF Client-Side Attacks.md",
+    "7 Hack4u/8 Pivoting/2 Piv - Chisel - Port Forwarding.md",
+    "7 Hack4u/8 Pivoting/1 Pivoting.md",
     "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md",
+    "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
     "3 Tools/Gophish.md",
     "1 Commands Lin & Win/1 OverTheWire/1 SSH.md",
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
@@ -228,14 +262,6 @@
     "7 Hack4u/6 Python/2 Estructura de datos/3 Conjuntos.md",
     "7 Hack4u/6 Python/2 Estructura de datos/2 Tuplas.md",
     "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
-    "4 Escalation Lin & Win/Windows Escalation/1 Windows Kernel.md",
-    "7 Hack4u/8 Pivoting/2 Chisel - Port Forwarding.md",
-    "1 Commands Lin & Win/3 Docker/2 Estructura.md",
-    "5 HTB - Machines/2 Medium/3 Bolt.md",
-    "6 Vulhub - Machines/1 Easy/3 Election1.md",
-    "5 HTB - Machines/1 Easy/4 Love.md",
-    "4 Escalation Lin & Win/Linux Escalation/4. Path Hijacking.md",
-    "5 HTB - Machines/1 Easy/5 NodeBlog.md",
     "1 Commands Lin & Win/0 RedHat",
     "7 Hack4u/8 Pivoting/Lab 4",
     "7 Hack4u/8 Pivoting/Lab 3",
