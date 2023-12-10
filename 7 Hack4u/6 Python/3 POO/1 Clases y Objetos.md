@@ -48,7 +48,7 @@ perro.descripcion()
 #!/usr/bin/env python3
 
 class CuentaBanc:
-	def __init__(self, cuenta, nombre, dinero=0):       # Si no le pasas un valor a la var dinero, esta por defecto va a ser 0
+	def __init__(self, cuenta, nombre, dinero=0):    # Si no le pasas un valor a la var dinero, esta por defecto va a ser 0
 		self.cuenta = cuenta 
 		self.nombre = nombre
 		self.dinero = dinero
@@ -81,8 +81,51 @@ Los métodos estáticos, definidos con el decorador ‘**@staticmethod**‘, no 
 ```python 
 #!/usr/bin/env python3 
 
-class 
-	def __init__(self, )
+class Rectangulo:
+	def __init__(self, ancho, alto):
+		self.ancho = ancho 
+		self.alto = alto
 
+	@property       # Declaramos un decorador
+	def area(self):
+		return self.ancho * self.alto
 
+	def __str__(self):                            # Método especial 'str'
+		return f"\n[+] Propiedades del rectangulo: [Ancho: {self.ancho}][Alto: {self.alto}]"
+
+	def __eq__(self, otro):                       # Método especial de igualdad
+		return self.ancho == otro.ancho and self.alto == otro.alto
+
+rect1 = Rectangulo(20, 80)
+rect2 = Rectangulo(10, 60)
+
+print(rect1)    # Debes de poner el método 'str' para que en lugar de que te salga que es un objeto te muestre sus propiedades
+print(f"\n[+] El área es {rect1.area}") # Usas el decorador 'property' y así no es necesario usar '()' para llamar al método
+print(f"\n[+] Son iguales? -> {rect1 == rect2}") # Usa el método 'eq' para poder comparar los dos objetos
+```
+
+```python 
+#!/usr/bin/env python3 
+
+class Libro:
+
+	IVA = 0.21
+	bestseller_value = 5000
+
+	def __init__(self, titulo, autor, precio):
+		self.titulo = titulo
+		self.autor = autor 
+		self.precio = precio
+
+	@staticmethod    # Declaramos un decorador y este opera con los argumentos que le pasas en la función o variables de clase
+	def bestseller(total_ventas): # Con el decorador 'staticmethod' podemos quitar el 'self'
+		return total_ventas >  Libro.bestseller_value  # Así podemos usar una variable de la clase  
+
+	@classmethod    # Este decorador recibe como argumento la propia clase 
+	def precio_iva(cls, precio):
+		return precio + precio * cls.IVA        # Así podemos usar una variable de la clase con el decorador 
+
+mi_libro = Libro("Como ser buena onda?", "Omar", 12.5)
+print(Libro.bestseller(5000))      # Con el decorador 'staticmethod' ahora debemos de colocar la clase
+print(f"\n[+] El precio del libro con IVA incluido es de {Libro.precio_iva(mi_libro.precio)}") # Usando el decorador 'classmethod'
 ```
