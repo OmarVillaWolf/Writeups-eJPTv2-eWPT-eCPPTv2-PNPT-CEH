@@ -15,13 +15,9 @@ Tocaremos algunos temas como:
 * Pivoting  
 
 Paginas usadas en estas notas.
-* Hack4u.io
-* TCM
+* Hack4u
 * HTB
 * THM
 * PortSwigger
 * Vulnhub
-
-Material adicional:
-* CEH Kali Networks
 
