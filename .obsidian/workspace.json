@@ -8,32 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0216174bb5582beb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Gophish.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "aca09eb821344fe8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5.5 THM - Machines/Easy/1.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "06013409d535fbf1",
             "type": "leaf",
             "state": {
@@ -47,29 +21,11 @@
             }
           },
           {
-            "id": "ba33950222a45299",
+            "id": "fffaa0d13e626b8b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7 Hack4u/8 Pivoting/Lab Final/1 Aragog.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "38414f7f1370ffa9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 Vulhub - Machines/1 Easy/1 DarkHole2.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
@@ -86,25 +42,12 @@
             }
           },
           {
-            "id": "9554a1dd665bfe3b",
+            "id": "1abf6c02965a085c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/8 Pivoting/3 Piv - Metasploit.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f832ea6eecbdb7d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.1 Metasploit/5 MSF Explotation.md",
+                "file": "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 Services.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -112,7 +55,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -141,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Windows",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -197,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/8 Pivoting/3 Piv - Metasploit.md"
+                "file": "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 Services.md"
               }
             }
           },
@@ -233,44 +176,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "9554a1dd665bfe3b",
+  "active": "1abf6c02965a085c",
   "lastOpenFiles": [
-    "3.1 Metasploit/5 MSF Explotation.md",
-    "7 Hack4u/8 Pivoting/3 Piv - Metasploit.md",
-    "3.1 Metasploit/1 Metasploit.md",
-    "3.1 Metasploit/2 MSF Gathering & Enumeration.md",
-    "3.1 Metasploit/3 MSF Vulnerability Scanning.md",
-    "3.1 Metasploit/4 MSF Client-Side Attacks.md",
-    "7 Hack4u/8 Pivoting/2 Piv - Chisel - Port Forwarding.md",
-    "7 Hack4u/8 Pivoting/1 Pivoting.md",
-    "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md",
-    "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
-    "3 Tools/Gophish.md",
-    "1 Commands Lin & Win/1 OverTheWire/1 SSH.md",
+    "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 Services.md",
+    "7 Hack4u/5 OWASP TOP 10/4 LFI.md",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/4 Services.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/3 Network.md",
     "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
-    "5.5 THM - Machines/Easy/1.md",
-    "Tenable.io.md",
-    "2 Ports/80, 443 - HTTP, HTTPS.md",
-    "3 Tools/OWASP ZAP.md",
-    "3 Tools/BurpSuite.md",
-    "3 Tools/Hydra.md",
-    "3 Tools/XSSer.md",
-    "3 Tools/SQLMap.md",
-    "7 Hack4u/5 OWASP TOP 10/2 XSS.md",
-    "7 Hack4u/6 Python/2 Estructura de datos/4 Diccionarios.md",
-    "7 Hack4u/6 Python/3 POO",
-    "7 Hack4u/6 Python/2 Estructura de datos/3 Conjuntos.md",
-    "7 Hack4u/6 Python/2 Estructura de datos/2 Tuplas.md",
-    "6 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
-    "1 Commands Lin & Win/0 RedHat",
-    "7 Hack4u/8 Pivoting/Lab 4",
-    "7 Hack4u/8 Pivoting/Lab 3",
-    "7 Hack4u/8 Pivoting/Lab 2",
-    "7 Hack4u/8 Pivoting/Lab 1",
-    "7 Hack4u/8 Pivoting/Lab Final",
-    "5.5 THM - Machines/Easy",
-    "5.5 THM - Machines",
-    "12 Sim-Exam-eJPT",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/2 UsersGroups.md",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/3 Network.md",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/5 Automating.md",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/2 UsersGroups.md",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/1 SystemInfo.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/1 SystemInfo.md",
+    "5.0 THM - Machines/Linux",
+    "5.0 THM - Machines/Windows",
+    "5.0 THM - Machines",
+    "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md",
+    "7 Hack4u/8 Pivoting/3 Piv - Metasploit.md",
+    "7 Hack4u/8 Pivoting/1 Pivoting.md",
+    "7 Hack4u/8 Pivoting/2 Piv - Chisel - Port Forwarding.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/3. Tareas CRON.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/Linux Escalation.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/13. Docker Breakout.md",
+    "4 PrivEsc Lin & Win/1 Windows/Hack4u/Windows Escalation.md",
+    "4 PrivEsc Lin & Win/1 Windows/Hack4u/2 Bypassing UAC.md",
+    "4 PrivEsc Lin & Win/1 Windows/Hack4u/1 Windows Kernel.md",
+    "4 PrivEsc Lin & Win/1 Windows/Hack4u/3 Access Token Impersonation.md",
+    "4 PrivEsc Lin & Win/Post-Explotation.md",
+    "README.md",
+    "CEH TIPS.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration",
+    "4 Escalation Lin & Win/Hack-PrivEsc",
+    "4 PrivEsc Lin & Win/2 Linux",
+    "4 PrivEsc Lin & Win/1 Windows",
+    "4 Escalation Lin & Win/eJPT",
+    "5.1 HTB - Machines/1 Easy/2 Linux",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
