@@ -29,25 +29,12 @@
             }
           },
           {
-            "id": "c5830fda12736680",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "1abf6c02965a085c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 Services.md",
+                "file": "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 CronServices.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -55,7 +42,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -140,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 Services.md"
+                "file": "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 CronServices.md"
               }
             }
           },
@@ -178,8 +165,10 @@
   },
   "active": "1abf6c02965a085c",
   "lastOpenFiles": [
+    "4 PrivEsc Lin & Win/2 Linux/Tratamiento TTY.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 CronServices.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 TransferringFiles",
     "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 Services.md",
     "7 Hack4u/5 OWASP TOP 10/4 LFI.md",
     "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/4 Services.md",
     "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/3 Network.md",
@@ -206,14 +195,12 @@
     "4 PrivEsc Lin & Win/1 Windows/Hack4u/3 Access Token Impersonation.md",
     "4 PrivEsc Lin & Win/Post-Explotation.md",
     "README.md",
-    "CEH TIPS.md",
     "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion",
     "4 PrivEsc Lin & Win/1 Windows/1 Enumeration",
     "4 Escalation Lin & Win/Hack-PrivEsc",
     "4 PrivEsc Lin & Win/2 Linux",
     "4 PrivEsc Lin & Win/1 Windows",
     "4 Escalation Lin & Win/eJPT",
-    "5.1 HTB - Machines/1 Easy/2 Linux",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
