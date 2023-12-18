@@ -72,6 +72,8 @@ Tags: #LocalEnumeration #PrivEsc #Windows #Metasploit #Meterpreter
 # Lab de eJPT 
 ❯ Ctrl + Shift + Alt                 # Abre y cierra una consola para copiar codigo de la maquina real a la maquina del lab
 
+# Creas un archivo llamado 'jaws-enum.ps1' y le pegas el contenido.
+
 
 # En Meterpreter 
 ❯ cd C:\\
