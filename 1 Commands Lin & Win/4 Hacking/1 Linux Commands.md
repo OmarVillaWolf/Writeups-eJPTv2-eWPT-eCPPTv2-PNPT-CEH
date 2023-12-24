@@ -57,6 +57,8 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash 
+❯ scrub -p dod <file>                        # Primero haces esto y despues ejecutas el comando de abajo
+
 ❯ shred -zun 10 -v <file>                    # Borrar un archivo, pero que el borrado sea mas complejo y asi no dejaremos evidencia, a mas valor que el 10 es mejor, ademas de borrarlo evita que se pueda recuperar
 ❯ shred -zun 10 -v file*                     # Borrar todos los archivos que empiecen con una palabra en especifico
 ```
