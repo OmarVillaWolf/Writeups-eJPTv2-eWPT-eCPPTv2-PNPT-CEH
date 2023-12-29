@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "3ef6a925742af107",
+            "id": "36a7640f9ca9a1dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+                "file": "0 Com Lin & Win/3 Hacking/0 OverTheWire.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -105,7 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200.5
+    "width": 200
   },
   "right": {
     "id": "352c47b0cb031926",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13 AWS - Hacking/1 AWS.md"
+                "file": "0 Com Lin & Win/3 Hacking/0 OverTheWire.md"
               }
             }
           },
@@ -142,7 +142,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -168,44 +170,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "33f62d7b25811b4f",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "1 Commands Lin & Win/4 Hacking/1 Linux Commands.md",
+    "0 Com Lin & Win/3 Hacking/Cron.md",
     "13 AWS - Hacking/1 AWS.md",
-    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/1 SystemInfo.md",
-    "11 XSS-Challenges-Sudo.co/All labs.md",
-    "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md",
+    "0 Com Lin & Win/3 Hacking/0 OverTheWire.md",
+    "0 Com Lin & Win/1 OverTheWire/2 Archivos Especiales.md",
+    "0 Com Lin & Win/1 OverTheWire/1 SSH.md",
+    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
+    "2 NVIM.md",
+    "1 Kitty.md",
+    "0 Com Lin & Win/1 Bash/1 Basic.md",
+    "0 Com Lin & Win/1 Bash/2 Pentesting.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "0 Com Lin & Win/0 Basic Commands/1 Basci",
+    "0 Com Lin & Win/0 Basic Commands",
+    "0 Com Lin & Win/3 Hacking/Searchsploit.md",
+    "3.3 Explotation/Explotation.md",
+    "1 Ports/135 - RPC.md",
+    "1 Ports/80, 443 - HTTP, HTTPS.md",
+    "1 Ports/80 - Shellshock - Apache.md",
+    "1 Ports/80 - Magento.md",
+    "1 Ports/80 - Joomla.md",
+    "1 Ports/80 - IIS - Webdav, FTPD.md",
+    "1 Ports/80 - Drupal.md",
+    "1 Ports/53 - DNS.md",
+    "1 Ports/21017 - Mongo.md",
+    "1 Ports/6379 - REDIS.md",
+    "1 Ports/5985-6 - WINRM.md",
+    "1 Ports/5800, 5900 - VNC.md",
+    "1 Ports/3389, 3333 - RDP.md",
+    "3.1 Network",
+    "3.3 Explotation/2 Linux",
+    "3.3 Explotation/1 Windows",
+    "3.5 Explotation/1 Vuln Scanning",
+    "3.3 Explotation",
     "13 AWS - Hacking",
-    "4 PrivEsc Lin & Win/2 Linux/5 Clear Tracks/1 Clear Tracks Linux.md",
-    "4 PrivEsc Lin & Win/1 Windows/5 Clear Tracks/1 Clear Tracks Windows.md",
-    "4 PrivEsc Lin & Win/2 Linux/4 Crack & Dump Hashes/1 Dump & Crack Hashes.md",
     "4 PrivEsc Lin & Win/2 Linux/5 Clear Tracks",
-    "4 PrivEsc Lin & Win/1 Windows/4 Crack & Dump Hashes/1 Dump & Crack Hashes.md",
     "4 PrivEsc Lin & Win/1 Windows/5 Clear Tracks",
-    "4 PrivEsc Lin & Win/2 Linux/3 Persistence/2 Cron Jobs.md",
-    "3 Tools/John the Ripper.md",
-    "4 PrivEsc Lin & Win/2 Linux/3 Persistence/1 Via SSH Keys.md",
-    "4 PrivEsc Lin & Win/2 Linux/4 Crack & Dump Hashes",
-    "2 Ports/3389, 3333 - RDP.md",
-    "4 PrivEsc Lin & Win/1 Windows/3 Persistence/1 Via Services.md",
-    "4 PrivEsc Lin & Win/1 Windows/3 Persistence/2 Via RDP.md",
-    "4 PrivEsc Lin & Win/1 Windows/4 Crack & Dump Hashes",
-    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/2 SUDO Priv.md",
-    "4 PrivEsc Lin & Win/Post-Explotation.md",
-    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/4 Services.md",
-    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/5 Automating.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/5 Automating.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/1 SystemInfo.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 PrivEsc.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Identifying PrivEsc.md",
-    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/3 Network.md",
-    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/2 UsersGroups.md",
-    "4 PrivEsc Lin & Win/1 Windows/3 Persistence",
-    "4 PrivEsc Lin & Win/2 Linux/3 Persistence",
-    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/1 Weak Permissions.md",
-    "4 PrivEsc Lin & Win/2 Linux/2 Escalation",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation",
-    "4 PrivEsc Lin & Win/2 Linux/2 TransferringFiles",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
