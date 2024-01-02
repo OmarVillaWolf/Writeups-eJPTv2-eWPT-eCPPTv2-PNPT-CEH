@@ -5,15 +5,15 @@ Tags: #SSH #Puerto #Comandos
 SSH es un protocolo de administración remota que permite a los usuarios **controlar** y **modificar** sus servidores remotos a través de Internet mediante un mecanismo de **autenticación seguro**. Como una alternativa más segura al protocolo **Telnet**, que transmite información sin cifrar, SSH utiliza **técnicas criptográficas** para garantizar que todas las comunicaciones hacia y desde el servidor remoto estén cifradas.
 
 ```bash 
-❯  nc ❮IP❯ 22                                       # Podemos conectarnos por Netcat al SSH
+❯ nc ❮IP❯ 22                                       # Podemos conectarnos por Netcat al SSH
 ```
 
 ```bash
-❯  ssh ❮User❯@❮IP❯                                  # Para conectarnos por ssh en el puerto default 22
+❯ ssh ❮User❯@❮IP❯                                  # Para conectarnos por ssh en el puerto default 22
 ```
 
 ```bash
-❯  ssh ❮User❯@❮IP❯ -p 2222                          # Para conectarnos por ssh
+❯ ssh ❮User❯@❮IP❯ -p 2222                          # Para conectarnos por ssh
 
 	# p = En un puerto especifico
 ```
