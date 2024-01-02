@@ -1,6 +1,6 @@
-# Diferentes tipos de ReverShell
+# Tipos de ReverShell
 
-Tags: #ReverShell #Comandos 
+Tags: #ReverShell #Comandos #Netcat #BindShell
 
 Tenemos diferentes tipos de Revershell este pagina Web:
 * [Monkey-Pentester](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
@@ -13,6 +13,15 @@ Tenemos diferentes tipos de Revershell este pagina Web:
 **Forward Shell**: Esta técnica se utiliza cuando no se pueden establecer conexiones Reverse o Bind debido a reglas de Firewall implementadas en la red. Se logra mediante el uso de **mkfifo**, que crea un archivo **FIFO** (**named pipe**), que se utiliza como una especie de “**consola simulada**” interactiva a través de la cual el atacante puede operar en la máquina remota. En lugar de establecer una conexión directa, el atacante redirige el tráfico a través del archivo **FIFO**, lo que permite la comunicación bidireccional con la máquina remota.
 
 La mayoría de las paginas al momento de comprometerlas encontraremos el usuario **www-data** que es el encargado de gestionar la parte de servicios web.
+
+## Netcat
+
+```bash 
+# Netcat nos ayuda a poder hacer 'Banner grabbing, Port scanning, Transferring files, Bind/Reverse shells', puede ser utilizado como 'Modo cliente, Modo servidor'
+
+❯ 
+```
+
 ## ReverShell, BindShell desde la URL de la Web
 
 Este comando lo ejecutamos desde la pagina web para hacer una **ReverShell** : 
