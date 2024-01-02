@@ -1,4 +1,4 @@
-# Remote File Inclusion (RFI)
+# Remote File Inclusión (RFI)
 
 Tags: #RFI #OWASP #Explotacion 
 
