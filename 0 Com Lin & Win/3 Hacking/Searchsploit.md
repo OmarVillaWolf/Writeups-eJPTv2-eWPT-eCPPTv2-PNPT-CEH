@@ -22,3 +22,18 @@ Podemos usar esta herramienta para buscar exploit y ver si alguno nos puede ayud
 ❯ searchsploit -t ❮exploit_name❯              # Para buscar un exploit que contenga ese titulo 
 ❯ searchsploit -e "exploit_name"              # Para hacer una busqueda exacta
 ```
+
+## Compilar en C/C++/C\# 
+
+* [Exploits-database](https://gitlab.com/exploit-database/exploitdb-bin-sploits/-/tree/main/bin-sploits?ref_type=heads)
+```bash 
+❯ apt install mingw-w64 
+❯ apt install gcc
+
+❯ i686-w64-mingw32-gcc <exploit.c> -o exploit               # Compilación para exploits Windows 64 bits desde Linux
+	# o = Output
+❯ i686-w64-mingw32-gcc <exploit.c> -o exploit -lws2_32      # Compilación para exploits Windows 32 bits desde Linux
+
+❯ gcc -pthread <exploit.c> -o exploit -lcrypt               # Compilación para exploits Linux desde Linux
+	# o = Output
+```
