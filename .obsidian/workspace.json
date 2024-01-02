@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "46d28527a072f3ee",
+        "id": "dd7c4369ebcdb4bd",
         "type": "tabs",
         "children": [
           {
-            "id": "06013409d535fbf1",
+            "id": "4c8745243040c56e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md",
+                "file": "3.3 Explotation/Explotation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "33f62d7b25811b4f",
+            "id": "f02674f27919d965",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13 AWS - Hacking/1 AWS.md",
+                "file": "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,12 +34,38 @@
             }
           },
           {
-            "id": "36a7640f9ca9a1dd",
+            "id": "77f5d0d43c3a9630",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/0 OverTheWire.md",
+                "file": "1 Ports/22 - SSH.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7ce26cd98d8fa547",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4171311c38d74050",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -132,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/0 OverTheWire.md"
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md"
               }
             }
           },
@@ -170,36 +196,36 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "7ce26cd98d8fa547",
   "lastOpenFiles": [
-    "0 Com Lin & Win/3 Hacking/Cron.md",
-    "13 AWS - Hacking/1 AWS.md",
+    "0 Com Lin & Win/3 Hacking/Netcat.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "1 Ports/22 - SSH.md",
+    "Untitled.md",
+    "3.3 Explotation/Explotation.md",
+    "0 Com Lin & Win/3 Hacking/Searchsploit.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
+    "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
+    "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md",
+    "1 Ports/20, 21, 134 - TFP - TFPT.md",
+    "0 Com Lin & Win/1 Bash/1 Basic.md",
     "0 Com Lin & Win/3 Hacking/0 OverTheWire.md",
+    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
+    "13 AWS - Hacking/1 AWS.md",
+    "0 Com Lin & Win/3 Hacking/Cron.md",
+    "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
     "0 Com Lin & Win/1 OverTheWire/2 Archivos Especiales.md",
     "0 Com Lin & Win/1 OverTheWire/1 SSH.md",
-    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
     "2 NVIM.md",
     "1 Kitty.md",
-    "0 Com Lin & Win/1 Bash/1 Basic.md",
     "0 Com Lin & Win/1 Bash/2 Pentesting.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "0 Com Lin & Win/0 Basic Commands/1 Basci",
     "0 Com Lin & Win/0 Basic Commands",
-    "0 Com Lin & Win/3 Hacking/Searchsploit.md",
-    "3.3 Explotation/Explotation.md",
     "1 Ports/135 - RPC.md",
     "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "1 Ports/80 - Shellshock - Apache.md",
-    "1 Ports/80 - Magento.md",
-    "1 Ports/80 - Joomla.md",
-    "1 Ports/80 - IIS - Webdav, FTPD.md",
-    "1 Ports/80 - Drupal.md",
-    "1 Ports/53 - DNS.md",
-    "1 Ports/21017 - Mongo.md",
-    "1 Ports/6379 - REDIS.md",
-    "1 Ports/5985-6 - WINRM.md",
-    "1 Ports/5800, 5900 - VNC.md",
-    "1 Ports/3389, 3333 - RDP.md",
     "3.1 Network",
     "3.3 Explotation/2 Linux",
     "3.3 Explotation/1 Windows",
