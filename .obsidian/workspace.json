@@ -21,19 +21,6 @@
             }
           },
           {
-            "id": "f02674f27919d965",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "77f5d0d43c3a9630",
             "type": "leaf",
             "state": {
@@ -58,22 +45,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "4171311c38d74050",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -198,16 +172,16 @@
   },
   "active": "7ce26cd98d8fa547",
   "lastOpenFiles": [
-    "0 Com Lin & Win/3 Hacking/Netcat.md",
+    "3.3 Explotation/Explotation.md",
+    "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
     "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "0 Com Lin & Win/3 Hacking/Netcat.md",
     "1 Ports/22 - SSH.md",
     "Untitled.md",
-    "3.3 Explotation/Explotation.md",
     "0 Com Lin & Win/3 Hacking/Searchsploit.md",
     "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
     "0 Com Lin & Win/3 Hacking/Msfvenom.md",
-    "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
     "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md",
     "1 Ports/20, 21, 134 - TFP - TFPT.md",
     "0 Com Lin & Win/1 Bash/1 Basic.md",
