@@ -2,7 +2,6 @@
 
 Tags: #Linux #Comandos 
 
-
 ## Directorios 
 
 ```bash 
