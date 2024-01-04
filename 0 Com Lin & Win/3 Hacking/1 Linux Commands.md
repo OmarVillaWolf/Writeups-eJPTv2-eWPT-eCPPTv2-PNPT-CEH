@@ -1,4 +1,4 @@
-# Linux Commands ❮❯
+# Linux Commands
 
 Tags: #Linux #Comandos #Netcat #Montura #Hash 
 
@@ -23,7 +23,7 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ ssh <user>@<IP> 
 ```
 
-## Comandos Linux
+## Comandos terminal Linux
 
 ```bash
 /tmp                                         # Directorios con capacidad de lectura y escritura en Linux       
