@@ -86,9 +86,6 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	❯ run
 ```
 
-
----
-
 ## Encodear Payload con MSF
 
 * Se utiliza el encodeamiento de los payload ya que los atacantes después de transferir y almacenar los payloads maliciosos en los discos duros de los clientes, los atacantes necesitan estar consientes de la detección de los Antivirus (AV).  Los usuarios finales de soluciones de AV utilizan detección basada en orden para identificar archivos o ejecutables maliciosos. Podemos evadir los AV encodeando nuestros payloads. Encodear es un proceso de modificar el Shellcode del payload con el objetivo de modificar la firma del payload. 
@@ -167,8 +164,6 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	❯ run
 ```
 
-
----
 
 ## Inyectar Payload dentro de ejecutables portables de Windows 
 
