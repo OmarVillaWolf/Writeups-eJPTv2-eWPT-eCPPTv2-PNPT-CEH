@@ -5,22 +5,6 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 * Debemos de crear siempre un espacio de trabajo, para tener un mejor control al momento de enumerar los diferentes puertos. 
 
-## Comandos Meterpreter 
-
-```bash 
-❯ sysinfo                    # Muestra informacion general de la maquina victima, name, OS, Kernel, etc... 
-❯ shell                      # Nos carga una shell
-	❯ /bin/bash -i          # Si no nos crea la Shell con el comando anterior, lo hacemos con este 
-❯ background                 # Ponemos la sesion en segundo plano
-❯ sessions                   # Miramos las sesiones activas en segundo plano 
-❯ sessions <id>              # Migras a alguna sesion que tenemos en segundo plano
-❯ pwd                        # Nos muestra la ruta del dir actual 
-❯ cd /                       # Nos dirigimos a la raiz 'C:\'
-❯ cat file.txt               # Miramos el contenido de un archivo 
-❯ getuid                     # Nombre del servidor
-❯ getprivs                   # Miramos los privilegios que tenemos
-```
-
 ## Reconocimiento en la red local con ARP 
 
 ```bash 
