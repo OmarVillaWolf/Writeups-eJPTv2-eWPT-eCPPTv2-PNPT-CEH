@@ -1,6 +1,12 @@
-# HTTP 
+# Enumeración de servicio HTTP/HTTPS 
 
 Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 #Metodos
+
+## Practicar 
+
+```bash 
+1. svn checkout https://github.com/vulhub/vulhub/trunk/openssl/CVE-2014-0160
+```
 
 ## Códigos de estado 
 
@@ -107,7 +113,7 @@ Recargar la pagina 'Ctrl + r'
 Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 ```
 
-## Herramientas Web
+## HTTP: 80
 
 ```bash
 ❯ http ❮IP❯                                       # Podemos ver las cabeceras 
@@ -161,23 +167,26 @@ Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 ❯ wget "http://IP/index"               # Obtenemos el archivo index 'descargamos'
 ```
 
-# HTTPS 
-443 - Este puerto también es para la navegación web, usa el protocolo HTTPS que es mas seguro y utiliza el protocolo TLS por debajo.
+## HTTPS: 443 
 
+Usa el protocolo HTTPS que es más seguro y utiliza el protocolo TLS por debajo.
 ```bash
-❯ openssl s_client -connect ❮IP❯:443     # Para conectarnos al openssl e inspeccionar el certificado del puerto 443
+❯ openssl s_client -connect ❮dominio.com❯:443   # Para conectarnos al openssl e inspeccionar el certificado
+
+❯ sslyze <dominio.com>                          # Inspeccioanr el certificado SSL
 ```
 
 ```bash
-❯ sslscan ❮IP❯:8443                      # Te da informacion del ssl de la maquina y si detecta alguna vulnerabilidad te la representa, podemos colocar el puerto si no es el comun 443
+❯ sslscan ❮dominio.com❯:8443                    # Te da informacion del ssl de la maquina y si detecta alguna vulnerabilidad te la representa, podemos colocar el puerto si no es el comun 443
 ```
 
-# HTTP3
-* HTTP3 es la próxima y tercera versión principal del Protocolo de Transferencia de Hipertexto utilizado para intercambiar información en la World Wide Web, que sucederá a HTTP/2. HTTP/3 es un borrador basado en un RFC anterior, entonces nombrado "Protocolo de Transferencia de Hipertexto sobre QUIC". 
-	* Protocolo **UDP**
-	* [HTTP3-QUIC](https://github.com/cloudflare/quiche)
-* Para poder usar la herramienta de arriba debemos de instalar lo siguiente:
-	* [Rush](https://github.com/rust-lang/rustup/issues/686)
+## HTTP3
+
+Es la próxima y tercera versión principal del Protocolo de Transferencia de Hipertexto utilizado para intercambiar información en la World Wide Web, que sucederá a HTTP/2. HTTP/3 es un borrador basado en un RFC anterior, entonces nombrado "Protocolo de Transferencia de Hipertexto sobre QUIC". 
+	Protocolo **UDP**
+    [HTTP3-QUIC](https://github.com/cloudflare/quiche)
+Para poder usar la herramienta de arriba debemos de instalar lo siguiente:
+	[Rush](https://github.com/rust-lang/rustup/issues/686)
 
 ```bash
 # Ruta para poder ejecutar el http3-client /home/user/quiche/target/debug/examples
