@@ -21,10 +21,12 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 
 # Directorios 'passwords'
 /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
+/usr/share/wordlists/metasploit/unix-passwords.txt
 /usr/share/wordlists/metasploit/common_passwords.txt
 
 # Directorios 'Users'
 /usr/share/metasploit-framework/data/wordlists/unix_users.txt
+/usr/share/wordlists/metasploit/unix_users.txt
 /usr/share/wordlists/metasploit/common_users.txt
 ```
 
@@ -59,12 +61,13 @@ Esto se usa en el panel del admin de WordPress.
 ```python
 ❯ hydra -l omar -P /usr/share/wordlists/rockyou.txt ftp://❮IP❯ -t 15 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
 
-❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ❮IP❯ ftp -t 4
+❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ❮IP❯ ftp -t 4 -I
 
 	# l (ele) = Usuario de login
 	# L = Indicas un archivo que disponga de usuarios 
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
 	# t = Lanzar tareas en paralelo al mismo tiempo
+	# I = Saltar la espera 
 ```
 
 ## Hydra fuerza bruta SSH
