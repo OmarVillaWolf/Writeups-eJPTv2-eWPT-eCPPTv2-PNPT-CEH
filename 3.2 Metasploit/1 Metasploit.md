@@ -18,12 +18,12 @@ En esta clase, veremos cómo utilizar algunas de las funcionalidades de esta her
 
 | **Penetration Testing Phase**| **Metasploit Framework Implementation** |
 |----|----|
-| Information Gathering & Enumeration  | Módulos auxiliares |
-| Vulnerability Scanning | Módulos auxiliares con Nessus |
-| Explotation | Módulos de exploit & Payloads |
-| Post Explotation | Meterpreter |
-| Privilege Escalation | Módulos de Post explotación / Meterpreter |
-| Maintaining Persistent Access | Módulos de post explotación / Persistencia |
+| 1. Information Gathering & Enumeration  | Módulos auxiliares |
+| 2. Vulnerability Scanning | Módulos auxiliares con Nessus |
+| 3. Explotation | Módulos de exploit & Payloads |
+| 4. Post Explotation | Meterpreter |
+| 5. Privilege Escalation | Módulos de Post explotación / Meterpreter |
+| 6. Maintaining Persistent Access | Módulos de post explotación / Persistencia |
 
 
 ## Terminología 
