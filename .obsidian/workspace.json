@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4c8745243040c56e",
+            "id": "2a9f1434e0e5420c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.3 Explotation/Explotation.md",
+                "file": "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/22 - SSH.md",
+                "file": "1 Ports/80.1 WordPress.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,12 +34,25 @@
             }
           },
           {
-            "id": "7ce26cd98d8fa547",
+            "id": "e556d465eb9b88e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
+                "file": "3.3 Explotation/1 Windows/2 Open SSH.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c8ca9ccc6a88756d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5.1 HTB - Machines/1 Easy/1 Validation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -132,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md"
+                "file": "1 Ports/80.1 WordPress.md"
               }
             }
           },
@@ -170,36 +183,36 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "7ce26cd98d8fa547",
+  "active": "77f5d0d43c3a9630",
   "lastOpenFiles": [
+    "3.3 Explotation/1 Windows/2 Open SSH.md",
+    "1 Ports/80.1 WordPress.md",
+    "3.3 Explotation/1 Windows/2 IIS FTP.md",
+    "3.3 Explotation/1 Windows/1 Port-Scanning.md",
     "3.3 Explotation/Explotation.md",
-    "7 Hack4u/6 Python/3 POO/1 Clases y Objetos.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
-    "0 Com Lin & Win/3 Hacking/Netcat.md",
-    "1 Ports/22 - SSH.md",
-    "Untitled.md",
-    "0 Com Lin & Win/3 Hacking/Searchsploit.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
-    "7 Hack4u/6 Python/3 POO/2 Métodos estáticos y de clase.md",
     "1 Ports/20, 21, 134 - TFP - TFPT.md",
-    "0 Com Lin & Win/1 Bash/1 Basic.md",
-    "0 Com Lin & Win/3 Hacking/0 OverTheWire.md",
-    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
-    "13 AWS - Hacking/1 AWS.md",
-    "0 Com Lin & Win/3 Hacking/Cron.md",
-    "7 Hack4u/5 OWASP TOP 10/5 RFI.md",
-    "0 Com Lin & Win/1 OverTheWire/2 Archivos Especiales.md",
-    "0 Com Lin & Win/1 OverTheWire/1 SSH.md",
-    "2 NVIM.md",
-    "1 Kitty.md",
-    "0 Com Lin & Win/1 Bash/2 Pentesting.md",
+    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
+    "2 Tools/Hydra.md",
+    "5.1 HTB - Machines/1 Easy/1 Validation.md",
+    "2 Tools/Nmap.md",
+    "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
+    "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
+    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+    "3.2 Metasploit/5 MSF Explotation.md",
+    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+    "3.2 Metasploit/3 MSF Client-Side Attacks.md",
+    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
+    "3.2 Metasploit/1 Metasploit.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "5.1 HTB - Machines/1 Easy/0 Curling.md",
+    "1 Ports/445 - Samba.md",
+    "1 Ports/445, 139- SMB.md",
+    "1 Ports/80, 443 - HTTP, HTTPS.md",
+    "1 Ports/80.4 Magento.md",
+    "7 Hack4u/3 Servicios y Gestores/4 SMB.md",
     "0 Com Lin & Win/0 Basic Commands/1 Basci",
     "0 Com Lin & Win/0 Basic Commands",
-    "1 Ports/135 - RPC.md",
-    "1 Ports/80, 443 - HTTP, HTTPS.md",
     "3.1 Network",
     "3.3 Explotation/2 Linux",
     "3.3 Explotation/1 Windows",
