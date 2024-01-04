@@ -4,9 +4,14 @@ Tags: #SSH #Puerto #Comandos
 
 SSH es un protocolo de administración remota que permite a los usuarios **controlar** y **modificar** sus servidores remotos a través de Internet mediante un mecanismo de **autenticación seguro**. Como una alternativa más segura al protocolo **Telnet**, que transmite información sin cifrar, SSH utiliza **técnicas criptográficas** para garantizar que todas las comunicaciones hacia y desde el servidor remoto estén cifradas.
 
+## Practicar 
+
 ```bash 
-❯ nc ❮IP❯ 22                                       # Podemos conectarnos por Netcat al SSH
+1. https://hub.docker.com/r/linuxserver/openssh-server
+2. https://launchpad.net/ubuntu
 ```
+
+## Comandos 
 
 ```bash
 ❯ ssh ❮User❯@❮IP❯                                  # Para conectarnos por ssh en el puerto default 22
