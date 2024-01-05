@@ -26,20 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/80.1 WordPress.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e556d465eb9b88e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.3 Explotation/1 Windows/2 Open SSH.md",
+                "file": "3.3 Explotation/AV evasion.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -145,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Ports/80.1 WordPress.md"
+                "file": "3.3 Explotation/AV evasion.md"
               }
             }
           },
@@ -185,15 +172,23 @@
   },
   "active": "77f5d0d43c3a9630",
   "lastOpenFiles": [
-    "3.3 Explotation/1 Windows/2 Open SSH.md",
-    "1 Ports/80.1 WordPress.md",
+    "3.3 Explotation/2 Linux/4 Samba.md",
+    "3.3 Explotation/AV evasion.md",
+    "3.3 Explotation/2 Linux/3 PHP.md",
+    "3.3 Explotation/2 Linux/2 vsFTPd.md",
     "3.3 Explotation/1 Windows/2 IIS FTP.md",
+    "3.3 Explotation/2 Linux/1 Port-Scanning.md",
     "3.3 Explotation/1 Windows/1 Port-Scanning.md",
     "3.3 Explotation/Explotation.md",
+    "3.3 Explotation/1 Windows/4 MySQL.md",
+    "3.3 Explotation/1 Windows/2 Open SSH.md",
+    "5.1 HTB - Machines/1 Easy/1 Validation.md",
+    "1 Ports/3306 - MYSQL.md",
+    "3.3 Explotation/1 Windows/3 SMB.md",
+    "1 Ports/80.1 WordPress.md",
     "1 Ports/20, 21, 134 - TFP - TFPT.md",
     "0 Com Lin & Win/3 Hacking/Msfvenom.md",
     "2 Tools/Hydra.md",
-    "5.1 HTB - Machines/1 Easy/1 Validation.md",
     "2 Tools/Nmap.md",
     "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
     "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
@@ -203,14 +198,6 @@
     "3.2 Metasploit/3 MSF Client-Side Attacks.md",
     "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
     "3.2 Metasploit/1 Metasploit.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "5.1 HTB - Machines/1 Easy/0 Curling.md",
-    "1 Ports/445 - Samba.md",
-    "1 Ports/445, 139- SMB.md",
-    "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "1 Ports/80.4 Magento.md",
-    "7 Hack4u/3 Servicios y Gestores/4 SMB.md",
     "0 Com Lin & Win/0 Basic Commands/1 Basci",
     "0 Com Lin & Win/0 Basic Commands",
     "3.1 Network",
