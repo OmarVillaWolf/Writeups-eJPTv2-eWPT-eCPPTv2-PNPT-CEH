@@ -172,8 +172,9 @@
   },
   "active": "77f5d0d43c3a9630",
   "lastOpenFiles": [
-    "3.3 Explotation/2 Linux/4 Samba.md",
+    "2 Tools/Shellter.md",
     "3.3 Explotation/AV evasion.md",
+    "3.3 Explotation/2 Linux/4 Samba.md",
     "3.3 Explotation/2 Linux/3 PHP.md",
     "3.3 Explotation/2 Linux/2 vsFTPd.md",
     "3.3 Explotation/1 Windows/2 IIS FTP.md",
@@ -197,7 +198,6 @@
     "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "3.2 Metasploit/3 MSF Client-Side Attacks.md",
     "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
-    "3.2 Metasploit/1 Metasploit.md",
     "0 Com Lin & Win/0 Basic Commands/1 Basci",
     "0 Com Lin & Win/0 Basic Commands",
     "3.1 Network",
