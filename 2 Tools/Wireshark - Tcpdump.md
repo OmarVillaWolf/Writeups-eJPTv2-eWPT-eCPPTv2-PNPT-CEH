@@ -1,6 +1,6 @@
 # Wireshark 
 
-Tags: #Wireshark 
+Tags: #Wireshark #Tshark #Tcpdump 
 
 ```bash
 ❯ wireshark &> /dev/null & disown                 # Ejecutamos el Wireshark y lo independizamos para seguir ocupando la terminal 
@@ -16,13 +16,38 @@ En el Software de Wireshark podemos:
 ❯ ip.flags.mf == 0                  # Forma de filtrar por paquetes que no son fragmentados
 ```
 
-También podemos usar Tshark 
+## Tshark 
+
 ```bash
-❯ tshark -r ❮File.cap❯ 2>/dev/null                         # Le pasamos la captura en .cap y la podemos mirar por consola 
-❯ tshark -r ❮File.cap❯ -Y "http" 2>/dev/null               # Le pasamos la captura en .cap y la podemos mirar por consola (Y=Filtramos)
-❯ tshark -r ❮File.cap❯ -Y "http" 2>/dev/null | grep "GET"  # Le pasamos la captura en .cap y la podemos mirar por consola (Y=Filtramos) y volvemos a filrar por el metodo GET
-❯ tshark -r ❮File.cap❯ -Y "http" -Tjson 2>/dev/null        # Le pasamos la captura en .cap y la podemos mirar por consola (Y=Filtramos) y miramos los atributos de los paquetes por el formato Json 
-❯ tshark -r ❮File.cap❯ -Y "http" -Tfileds -e tcp.payload 2>/dev/null | xxd -ps -r | grep "GET" | awk '{print $2}'  # Le pasamos la captura en .cap y la podemos mirar por consola (Y=Filtramos), filtramos por un campo especifico y nos lo sacara en Hexadecimal pero lo revertimos con xxd, volvemos a filtrar por GET y todo esto es para, ver la rutas que esta probando el script de la captura de http-enum
+❯ tshark -D                                                # Miramos la lista de interfaces 
+❯ tshark -i <Interface>                                    # Iniciar captura de paquetes en esa interfaz
+	# i = interface a usar 
+
+❯ tshark -r ❮File.cap❯ -Y 'http.request.method==GET' -Tfields -e frame.time -e ip.src -e http.request.full_uri
+	# e = Agregar el campo 
+
+❯ tshark -r ❮File.cap❯ 2>/dev/null                         # Capturamos trafico  
+❯ tshark -r ❮File.cap❯ -Y "http" 2>/dev/null               # Capturamos trafico y lo filtramos 
+	# Y = Nos ayuda a filtrar por un protocolo y lo muestra 
+	# r = El archivo a leer 
+	
+❯ tshark -r ❮File.cap❯ -Y "http" 2>/dev/null | grep "GET"  # Capturamos trafico, filtramos por HTTP y volvemos a filrar por el metodo GET
+
+❯ tshark -r ❮File.cap❯ -Y "http" -Tjson 2>/dev/null        # Capturamos trafico, filtramos por HTTP y miramos los atributos de los paquetes por el formato Json 
+
+❯ tshark -r ❮File.cap❯ -Y "http" -Tfileds -e tcp.payload 2>/dev/null | xxd -ps -r | grep "GET" | awk '{print $2}'  
+# Capturamos trafico, filtramos por HTTP y filtramos por un campo especifico y nos lo sacara en hexadecimal
+# Revertimos con xxd, volvemos a filtrar por GET y todo esto es para
+# Ver la rutas que esta probando el script de la captura de http-enum
+```
+
+```bash 
+# Filtros
+1. 'http'
+2. 'ip.src==IP && ip.dst==IP'
+3. 'http.request.method==GET'
+4. 'http contains password'
+5. 'http.host==domain.com'
 ```
 
 ## Tcpdump
