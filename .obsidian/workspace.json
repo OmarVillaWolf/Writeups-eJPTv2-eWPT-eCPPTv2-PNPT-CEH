@@ -8,6 +8,32 @@
         "type": "tabs",
         "children": [
           {
+            "id": "a26d86904c20a002",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Excel.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95a23211018e0ddd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/1 Bash/3 Regex.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "2a9f1434e0e5420c",
             "type": "leaf",
             "state": {
@@ -21,12 +47,25 @@
             }
           },
           {
+            "id": "0571460720cba527",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "c8ca9ccc6a88756d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 HTB - Machines/1 Easy/1 Validation.md",
+                "file": "1 Ports/20, 21, 134 - TFP - TFPT.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,25 +73,12 @@
             }
           },
           {
-            "id": "f3b572b73efe24c0",
+            "id": "03176c1a45871998",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.1 Network/1 Based-Attacks.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "65d831f717c814b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/Wireshark - Tcpdump.md",
+                "file": "14 Wifi/Wifi.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -60,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -145,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3.1 Network/1 Based-Attacks.md"
+                "file": "14 Wifi/Wifi.md"
               }
             }
           },
@@ -183,11 +209,27 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "f3b572b73efe24c0",
+  "active": "03176c1a45871998",
   "lastOpenFiles": [
-    "2 Tools/Wireshark - Tcpdump.md",
-    "3.1 Network/1 Based-Attacks.md",
+    "3 Excel.md",
+    "5.1 HTB - Machines/1 Easy/1 Validation.md",
+    "14 Wifi/Wifi.md",
+    "1 Ports/80.2 Joomla.md",
+    "14 Wifi",
+    "1 Ports/80.1 WordPress.md",
+    "0 Com Lin & Win/1 Bash/2 Pentesting.md",
+    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+    "0 Com Lin & Win/1 Bash/3 Regex.md",
     "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
+    "0 Com Lin & Win/1 Bash/1 Basic.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "3.2 Metasploit/1 Metasploit.md",
+    "3.2 Metasploit/3 MSF Client-Side Attacks.md",
+    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "3.1 Network/1 Based-Attacks.md",
+    "2 Tools/Wireshark - Tcpdump.md",
     "3.3 Explotation/AV evasion.md",
     "2 Tools/Shellter.md",
     "3.3 Explotation/2 Linux/4 Samba.md",
@@ -196,21 +238,6 @@
     "3.3 Explotation/1 Windows/2 IIS FTP.md",
     "3.3 Explotation/2 Linux/1 Port-Scanning.md",
     "3.3 Explotation/1 Windows/1 Port-Scanning.md",
-    "3.3 Explotation/Explotation.md",
-    "3.3 Explotation/1 Windows/4 MySQL.md",
-    "3.3 Explotation/1 Windows/2 Open SSH.md",
-    "5.1 HTB - Machines/1 Easy/1 Validation.md",
-    "1 Ports/3306 - MYSQL.md",
-    "3.3 Explotation/1 Windows/3 SMB.md",
-    "1 Ports/80.1 WordPress.md",
-    "1 Ports/20, 21, 134 - TFP - TFPT.md",
-    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
-    "2 Tools/Hydra.md",
-    "2 Tools/Nmap.md",
-    "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
-    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
-    "3.2 Metasploit/5 MSF Explotation.md",
-    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "0 Com Lin & Win/0 Basic Commands/1 Basci",
     "0 Com Lin & Win/0 Basic Commands",
     "3.1 Network",
@@ -220,7 +247,6 @@
     "3.3 Explotation",
     "13 AWS - Hacking",
     "4 PrivEsc Lin & Win/2 Linux/5 Clear Tracks",
-    "4 PrivEsc Lin & Win/1 Windows/5 Clear Tracks",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
