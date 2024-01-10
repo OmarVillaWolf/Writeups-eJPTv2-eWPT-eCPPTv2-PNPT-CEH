@@ -89,6 +89,7 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 
 ```bash 
 ❯ msfconsole -q              # q = Quitar el banner de inicio
+❯ db_status                  # Mirar que tenga la conexion con la base de datos 
 ```
 
 ## Gestionar de forma mas organizada la información que vayamos recopilando. 
