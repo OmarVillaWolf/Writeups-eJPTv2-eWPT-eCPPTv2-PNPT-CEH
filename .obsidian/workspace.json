@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a26d86904c20a002",
+            "id": "03176c1a45871998",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 Excel.md",
+                "file": "14 Wifi/Wifi - WPA-WPA2/6 Pyrit.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -65,28 +65,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/20, 21, 134 - TFP - TFPT.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "03176c1a45871998",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "14 Wifi/Wifi.md",
+                "file": "1 Ports/80.2 Joomla.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14 Wifi/Wifi.md"
+                "file": "14 Wifi/Wifi - WPA-WPA2/6 Pyrit.md"
               }
             }
           },
@@ -211,16 +197,27 @@
   },
   "active": "03176c1a45871998",
   "lastOpenFiles": [
+    "14 Wifi/Wifi - WPA-WPA2/5 Beacon Flood.md",
+    "14 Wifi/Wifi - WPA-WPA2/6 Pyrit.md",
+    "14 Wifi/Wifi - WPA-WPA2/3 Ataque Deautenticacion.md",
+    "14 Wifi/Wifi - WPA-WPA2/4 CTS Frame Attack.md",
+    "14 Wifi/Wifi - WPA-WPA2/1 Conceptos.md",
+    "14 Wifi/Wifi Challenge/Version 1.0.md",
+    "14 Wifi/Wifi - WPA-WPA2/2 Aircrack.md",
+    "14 Wifi/Wifi Challenge",
+    "14 Wifi/Wifi - WPA-WPA2",
+    "0 Com Lin & Win/1 Bash/3 Regex.md",
+    "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
+    "1 Ports/80.2 Joomla.md",
+    "1 Ports/80.4 Magento.md",
+    "1 Ports/80.3 Drupal.md",
+    "1 Ports/20, 21, 134 - TFP - TFPT.md",
+    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "3 Excel.md",
     "5.1 HTB - Machines/1 Easy/1 Validation.md",
-    "14 Wifi/Wifi.md",
-    "1 Ports/80.2 Joomla.md",
     "14 Wifi",
     "1 Ports/80.1 WordPress.md",
     "0 Com Lin & Win/1 Bash/2 Pentesting.md",
-    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
-    "0 Com Lin & Win/1 Bash/3 Regex.md",
-    "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
     "0 Com Lin & Win/1 Bash/1 Basic.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "3.2 Metasploit/1 Metasploit.md",
@@ -229,15 +226,6 @@
     "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
     "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "3.1 Network/1 Based-Attacks.md",
-    "2 Tools/Wireshark - Tcpdump.md",
-    "3.3 Explotation/AV evasion.md",
-    "2 Tools/Shellter.md",
-    "3.3 Explotation/2 Linux/4 Samba.md",
-    "3.3 Explotation/2 Linux/3 PHP.md",
-    "3.3 Explotation/2 Linux/2 vsFTPd.md",
-    "3.3 Explotation/1 Windows/2 IIS FTP.md",
-    "3.3 Explotation/2 Linux/1 Port-Scanning.md",
-    "3.3 Explotation/1 Windows/1 Port-Scanning.md",
     "0 Com Lin & Win/0 Basic Commands/1 Basci",
     "0 Com Lin & Win/0 Basic Commands",
     "3.1 Network",
@@ -245,8 +233,6 @@
     "3.3 Explotation/1 Windows",
     "3.5 Explotation/1 Vuln Scanning",
     "3.3 Explotation",
-    "13 AWS - Hacking",
-    "4 PrivEsc Lin & Win/2 Linux/5 Clear Tracks",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
