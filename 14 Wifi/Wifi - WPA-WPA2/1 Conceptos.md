@@ -3,6 +3,16 @@
 Tags: #Wifi #Tool #Airodump-ng #Airmon-ng 
 
 ```bash 
+El dispositivo Wifi que se usa es el 'ALFA - AWUS036ACM' 
+
+# Instalación en Kali 
+❯ git clone https://github.com/aircrack-ng/rtl8812au 
+❯ cd rtl8812au
+❯ make 
+❯ sudo make install 
+```
+
+```bash 
 # Tools 
 1. Suite Aircrack
 2. Wireshark
