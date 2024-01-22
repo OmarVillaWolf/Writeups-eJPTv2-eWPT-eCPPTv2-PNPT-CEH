@@ -13,59 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14 Wifi/Wifi - WPA-WPA2/1 Conceptos.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "95a23211018e0ddd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/1 Bash/3 Regex.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2a9f1434e0e5420c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0571460720cba527",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c8ca9ccc6a88756d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Ports/80.2 Joomla.md",
+                "file": "14 Wifi/Pineapple/1 Instalar.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -157,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14 Wifi/Wifi - WPA-WPA2/1 Conceptos.md"
+                "file": "14 Wifi/Pineapple/1 Instalar.md"
               }
             }
           },
@@ -197,42 +145,42 @@
   },
   "active": "03176c1a45871998",
   "lastOpenFiles": [
-    "14 Wifi/Wifi - WPA-WPA2/2 Aircrack.md",
-    "14 Wifi/Wifi - WPA-WPA2/1 Conceptos.md",
     "14 Wifi/Wifi Challenge/Version 1.0.md",
+    "14 Wifi/Pineapple/1 Instalar.md",
+    "14 Wifi/Wifi - WPA-WPA2/12 Espionaje.md",
+    "14 Wifi/Pineapple",
+    "14 Wifi/Wifi - WPA-WPA2/8 Password.md",
+    "14 Wifi/Wifi - WPA-WPA2/10 Cracking.md",
     "14 Wifi/Wifi - WPA-WPA2/6 Pyrit.md",
-    "14 Wifi/Wifi - WPA-WPA2/5 Beacon Flood.md",
     "14 Wifi/Wifi - WPA-WPA2/3 Ataque Deautenticacion.md",
+    "14 Wifi/Wifi - WPA-WPA2/2 Aircrack.md",
+    "14 Wifi/Wifi - WPA-WPA2/9 Bettercap.md",
+    "14 Wifi/Wifi - WPA-WPA2/11 Rainbow table.md",
+    "1 Ports/80.2 Joomla.md",
+    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+    "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
+    "0 Com Lin & Win/1 Bash/3 Regex.md",
+    "14 Wifi/Wifi - WPA-WPA2/7 Paquetes.md",
+    "4 PrivEsc Lin & Win/2 Linux/4 Crack & Dump Hashes/1 Dump & Crack Hashes.md",
+    "14 Wifi/Wifi - WPA-WPA2/1 Conceptos.md",
+    "14 Wifi/Wifi - WPA-WPA2/5 Beacon Flood.md",
     "14 Wifi/Wifi - WPA-WPA2/4 CTS Frame Attack.md",
     "14 Wifi/Wifi Challenge",
     "14 Wifi/Wifi - WPA-WPA2",
-    "0 Com Lin & Win/1 Bash/3 Regex.md",
-    "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
-    "1 Ports/80.2 Joomla.md",
     "1 Ports/80.4 Magento.md",
     "1 Ports/80.3 Drupal.md",
     "1 Ports/20, 21, 134 - TFP - TFPT.md",
-    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "3 Excel.md",
     "5.1 HTB - Machines/1 Easy/1 Validation.md",
     "14 Wifi",
     "1 Ports/80.1 WordPress.md",
     "0 Com Lin & Win/1 Bash/2 Pentesting.md",
-    "0 Com Lin & Win/1 Bash/1 Basic.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "3.2 Metasploit/1 Metasploit.md",
-    "3.2 Metasploit/3 MSF Client-Side Attacks.md",
-    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "3.1 Network/1 Based-Attacks.md",
     "0 Com Lin & Win/0 Basic Commands/1 Basci",
     "0 Com Lin & Win/0 Basic Commands",
     "3.1 Network",
     "3.3 Explotation/2 Linux",
     "3.3 Explotation/1 Windows",
     "3.5 Explotation/1 Vuln Scanning",
-    "3.3 Explotation",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
