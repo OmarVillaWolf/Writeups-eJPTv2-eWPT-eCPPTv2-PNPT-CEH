@@ -14,5 +14,6 @@
   "useMarkdownLinks": true,
   "trashOption": "none",
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "8 PortSwigger-OWASP/1 Access Control (IDOR)"
+  "attachmentFolderPath": "8 PortSwigger-OWASP/1 Access Control (IDOR)",
+  "vimMode": false
 }
