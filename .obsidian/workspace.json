@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "dd7c4369ebcdb4bd",
+        "id": "1e717d0767a65797",
         "type": "tabs",
         "children": [
           {
-            "id": "03176c1a45871998",
+            "id": "aa8ffc67613ab3ff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14 Wifi/Pineapple/1 Instalar.md",
+                "file": "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 201.5
   },
   "right": {
     "id": "352c47b0cb031926",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14 Wifi/Pineapple/1 Instalar.md"
+                "file": "0 Com Lin & Win/3 Hacking/1 Linux Commands.md"
               }
             }
           },
@@ -143,44 +143,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "03176c1a45871998",
+  "active": "aa8ffc67613ab3ff",
   "lastOpenFiles": [
-    "14 Wifi/Wifi Challenge/Version 1.0.md",
+    "3 Excel.md",
+    "14 Wifi/Wifi Challenge/Wifi 1.0/1 Recon.md",
+    "14 Wifi/Wifi Challenge/Wifi 1.0/2 OPN.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
+    "5.2 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/1 Conceptos.md",
+    "14 Wifi/Wifi Challenge/Wifi 1.0",
+    "14 Wifi/Wifi - WPA-WPA2/3. WEP/WEP.md",
+    "14 Wifi/Wifi - WPA-WPA2/2. WPS/WPS.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/13 Evil-Twin.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/14 Red Oculta.md",
+    "14 Wifi/Wifi - WPA-WPA2/3. WEP",
+    "14 Wifi/Wifi - WPA-WPA2/2. WPS",
+    "14 Wifi/Wifi - WPA-WPA2/Untitled.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/9 Bettercap.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/12 Espionaje.md",
     "14 Wifi/Pineapple/1 Instalar.md",
-    "14 Wifi/Wifi - WPA-WPA2/12 Espionaje.md",
     "14 Wifi/Pineapple",
-    "14 Wifi/Wifi - WPA-WPA2/8 Password.md",
-    "14 Wifi/Wifi - WPA-WPA2/10 Cracking.md",
-    "14 Wifi/Wifi - WPA-WPA2/6 Pyrit.md",
-    "14 Wifi/Wifi - WPA-WPA2/3 Ataque Deautenticacion.md",
-    "14 Wifi/Wifi - WPA-WPA2/2 Aircrack.md",
-    "14 Wifi/Wifi - WPA-WPA2/9 Bettercap.md",
-    "14 Wifi/Wifi - WPA-WPA2/11 Rainbow table.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/8 Password.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/10 Cracking.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/6 Pyrit.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/3 Ataque Deautenticacion.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/11 Rainbow table.md",
     "1 Ports/80.2 Joomla.md",
     "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
     "0 Com Lin & Win/1 Bash/3 Regex.md",
-    "14 Wifi/Wifi - WPA-WPA2/7 Paquetes.md",
-    "4 PrivEsc Lin & Win/2 Linux/4 Crack & Dump Hashes/1 Dump & Crack Hashes.md",
-    "14 Wifi/Wifi - WPA-WPA2/1 Conceptos.md",
-    "14 Wifi/Wifi - WPA-WPA2/5 Beacon Flood.md",
-    "14 Wifi/Wifi - WPA-WPA2/4 CTS Frame Attack.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/7 Paquetes.md",
     "14 Wifi/Wifi Challenge",
     "14 Wifi/Wifi - WPA-WPA2",
-    "1 Ports/80.4 Magento.md",
-    "1 Ports/80.3 Drupal.md",
-    "1 Ports/20, 21, 134 - TFP - TFPT.md",
-    "3 Excel.md",
-    "5.1 HTB - Machines/1 Easy/1 Validation.md",
     "14 Wifi",
-    "1 Ports/80.1 WordPress.md",
-    "0 Com Lin & Win/1 Bash/2 Pentesting.md",
     "0 Com Lin & Win/0 Basic Commands/1 Basci",
     "0 Com Lin & Win/0 Basic Commands",
-    "3.1 Network",
-    "3.3 Explotation/2 Linux",
-    "3.3 Explotation/1 Windows",
-    "3.5 Explotation/1 Vuln Scanning",
     "Z Imagenes/Pasted image 20230531123551.png",
     "Z Imagenes/Pasted image 20230531123804.png",
     "Z Imagenes/Pasted image 20230531125838.png",
