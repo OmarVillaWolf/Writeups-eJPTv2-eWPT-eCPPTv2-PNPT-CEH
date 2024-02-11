@@ -8,7 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aa8ffc67613ab3ff",
+            "id": "441585e0a4628c43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "12 LAb-Exam-eJPT/1 WordPress.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9002c034b2edcf5e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,8 +32,87 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "66eb063ab419139f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/Nmap.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7f563dae703ac8b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/Dirbuster.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f3b5ca23b8bcb43e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Ports/80.1 WordPress.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "827043cd9b778432",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/Hydra.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cd86c2242a9f2232",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f71fe897f76d30a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Ports/3306 - MYSQL.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -78,7 +170,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5
+    "width": 200
   },
   "right": {
     "id": "352c47b0cb031926",
@@ -105,7 +197,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/1 Linux Commands.md"
+                "file": "1 Ports/3306 - MYSQL.md"
               }
             }
           },
@@ -143,15 +235,39 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "f71fe897f76d30a1",
   "lastOpenFiles": [
+    "2 Tools/Hydra.md",
+    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
+    "12 LAb-Exam-eJPT/1 WordPress.md",
+    "1 Ports/80.1 WordPress.md",
+    "2 Tools/Dirbuster.md",
+    "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Tools/Nmap.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
+    "5.1 HTB - Machines/1 Easy/0 Curling.md",
+    "15 OT/Lesson 2/3 Vulns.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "15 OT/Lesson 2/2 Protocols.md",
+    "15 OT/Lesson 2/1. Data.md",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132807.png",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132339.png",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132054.png",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205131115.png",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130901.png",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130714.png",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130624.png",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130523.png",
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
+    "15 OT/Lesson 2",
+    "15 OT",
     "7 Hack4u/5 Active-Directory/0 Machines.md",
     "7 Hack4u/5 Active-Directory/1 Samba Relay.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "3 Excel.md",
     "14 Wifi/Wifi Challenge/Wifi 1.0/1 Recon.md",
     "14 Wifi/Wifi Challenge/Wifi 1.0/2 OPN.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
     "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
     "5.2 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
     "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/1 Conceptos.md",
@@ -159,37 +275,13 @@
     "14 Wifi/Wifi - WPA-WPA2/3. WEP/WEP.md",
     "14 Wifi/Wifi - WPA-WPA2/2. WPS/WPS.md",
     "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/13 Evil-Twin.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/14 Red Oculta.md",
     "14 Wifi/Wifi - WPA-WPA2/3. WEP",
     "14 Wifi/Wifi - WPA-WPA2/2. WPS",
-    "14 Wifi/Wifi - WPA-WPA2/Untitled.md",
     "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/9 Bettercap.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/12 Espionaje.md",
-    "14 Wifi/Pineapple/1 Instalar.md",
     "14 Wifi/Pineapple",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/8 Password.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/10 Cracking.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/6 Pyrit.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/3 Ataque Deautenticacion.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/11 Rainbow table.md",
-    "1 Ports/80.2 Joomla.md",
-    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
-    "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
     "14 Wifi/Wifi Challenge",
     "14 Wifi/Wifi - WPA-WPA2",
     "14 Wifi",
-    "0 Com Lin & Win/0 Basic Commands/1 Basci",
-    "0 Com Lin & Win/0 Basic Commands",
-    "Z Imagenes/Pasted image 20230531123551.png",
-    "Z Imagenes/Pasted image 20230531123804.png",
-    "Z Imagenes/Pasted image 20230531125838.png",
-    "Z Imagenes/Pasted image 20230531123516.png",
-    "Z Imagenes/Pasted image 20230531123312.png",
-    "Z Imagenes/Pasted image 20230531113253.png",
-    "Z Imagenes/Pasted image 20230530142040.png",
-    "Z Imagenes/Pasted image 20230530142007.png",
-    "Z Imagenes/Pasted image 20230529173624.png",
-    "Z Imagenes/Pasted image 20230529163726.png"
+    "Z Imagenes/Pasted image 20230531123551.png"
   ]
 }
