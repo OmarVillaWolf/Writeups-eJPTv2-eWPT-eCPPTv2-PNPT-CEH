@@ -3,7 +3,6 @@
 Tags: #MySQL #Servidor #Comandos #DB 
 
 ### DATABASE - TABLES - COLUMS - DATA 
-Asi se conforma una base de datos
 
 ```bash
 ❯ sudo apt install mariadb-server              # Instalar Mariadb
