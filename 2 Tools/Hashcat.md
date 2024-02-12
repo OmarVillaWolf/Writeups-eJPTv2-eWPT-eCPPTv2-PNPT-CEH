@@ -2,8 +2,6 @@
 
 Tags: #HashCat 
 
-* Se recomienda ejecutar Hashcat fuera de la maquina virtual, ya que si no iría muy lento.
-
 ```bash
 ❯ hashcat --help     # Nos muestra el panel de ayuda de la tool y algunos ejemplos
 
