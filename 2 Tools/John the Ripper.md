@@ -21,6 +21,8 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 	# MD5 = 32 Caracteres
 ```
 
+## Identificar Hash
+
 * Pagina para identificar los hashes: [Identificar_Hashes](https://hashes.com/en/tools/hash_identifier) 
 * Pagina para crackear los hashes: [Crackear_Hashes](https://crackstation.net/)
 
@@ -36,18 +38,17 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 | \$y$ | Yescrypt |
 | \$gy$ | Gost-yescrypt |
 | \$7$ | Scrypt |
-
 ## John 
 
 ```bash
-❯ john --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>                              # Usamos John para crackear un hash con fuerza bruta
+❯ john --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>              # Usamos John para crackear un hash con fuerza bruta
 
 	# wordlist = Ruta del diccionario rockyou.txt
 	# hashfile = Archivo que contiene el hash a crackear
 ```
 
 ```bash
-❯ john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>            # Crackear un hash con un formato especifico
+❯ john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>    # Crackear un hash con un formato especifico
 
 	# format = raw-md5 -> Formato especifico del hash (MD4,MD5, SHA1...)
 	# Raw = Tipo de hash estandar (raw-md5, raw-sha1, raw-sha256, whirlpool...)
@@ -68,3 +69,8 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 	# u = Use-unzip 
 ```
 
+```bash 
+# Esto se hace cuando tenemos un id_rsa con 'passphrase'
+❯ ssh2jhon id_rsa > jhon.txt                                          # Pasamos el id_rsa a texto
+	❯ jhon jhon.txt --wordlist=/usr/share/wordlists/rockyou.txt      # Para encontrar la frase con un diccionario 
+```
