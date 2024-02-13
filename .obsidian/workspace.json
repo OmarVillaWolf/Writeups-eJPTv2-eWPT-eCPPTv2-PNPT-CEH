@@ -123,9 +123,87 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "839d8aeb2f460594",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/Msfvenom.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "771d3a6c674ddc7a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Ports/445, 139- SMB.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "759d3c90c4510015",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ad29e51b9361a715",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/John the Ripper.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "68f8df4a9040fec1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Ports/22 - SSH.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "74f82430f842c463",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/Ffuf, Gobuster, Wfuz.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -154,7 +232,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "crackmapexec",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -210,7 +288,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/Hashcat.md"
+                "file": "1 Ports/445, 139- SMB.md"
               }
             }
           },
@@ -248,24 +326,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "0a3cddb0088f0e26",
+  "active": "771d3a6c674ddc7a",
   "lastOpenFiles": [
-    "1 Ports/3306 - MYSQL.md",
-    "2 Tools/Hydra.md",
-    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
-    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
-    "12 LAb-Exam-eJPT/1 WordPress.md",
-    "1 Ports/80.1 WordPress.md",
-    "2 Tools/Dirbuster.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "2 Tools/Nmap.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
-    "5.1 HTB - Machines/1 Easy/0 Curling.md",
-    "15 OT/Lesson 2/3 Vulns.md",
+    "2 Tools/Dirbuster.md",
+    "2 Tools/Hydra.md",
+    "1 Ports/445, 139- SMB.md",
     "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "15 OT/Lesson 2/2 Protocols.md",
-    "15 OT/Lesson 2/1. Data.md",
+    "2 Tools/John the Ripper.md",
+    "1 Ports/22 - SSH.md",
+    "5.1 HTB - Machines/2 Medium/1 Jeeves.md",
+    "5.1 HTB - Machines/1 Easy/2 Return.md",
+    "3.3 Explotation/1 Windows/3 SMB.md",
+    "5.1 HTB - Machines/1 Easy/8 Driver.md",
+    "5.1 HTB - Machines/1 Easy/9 ToolBox.md",
+    "5.1 HTB - Machines/1 Easy/22 Netmon.md",
+    "1 Ports/5985-6 - WINRM.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/5 Automating.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/2 SUDO Priv.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/1 Weak Permissions.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 CronServices.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/3 Network.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/2 UsersGroups.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/1 SystemInfo.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/1. Sudoers.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/0. Kernel.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/13. Docker Breakout.md",
+    "4 PrivEsc Lin & Win/Post-Explotation.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132807.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132339.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132054.png",
@@ -277,17 +365,7 @@
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
     "15 OT/Lesson 2",
     "15 OT",
-    "7 Hack4u/5 Active-Directory/0 Machines.md",
-    "7 Hack4u/5 Active-Directory/1 Samba Relay.md",
-    "3 Excel.md",
-    "14 Wifi/Wifi Challenge/Wifi 1.0/1 Recon.md",
-    "14 Wifi/Wifi Challenge/Wifi 1.0/2 OPN.md",
-    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
-    "5.2 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/1 Conceptos.md",
     "14 Wifi/Wifi Challenge/Wifi 1.0",
-    "14 Wifi/Wifi - WPA-WPA2/3. WEP/WEP.md",
-    "14 Wifi/Wifi - WPA-WPA2/2. WPS/WPS.md",
     "14 Wifi/Wifi - WPA-WPA2/3. WEP",
     "14 Wifi/Wifi - WPA-WPA2/2. WPS",
     "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2",
