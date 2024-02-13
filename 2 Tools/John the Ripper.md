@@ -71,6 +71,11 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 
 ```bash 
 # Esto se hace cuando tenemos un id_rsa con 'passphrase'
-❯ ssh2jhon id_rsa > jhon.txt                                          # Pasamos el id_rsa a texto
+❯ ssh2jhon id_rsa > jhon.txt                                          # Pasamos el id_rsa a hash con la passwd cifrada 
 	❯ jhon jhon.txt --wordlist=/usr/share/wordlists/rockyou.txt      # Para encontrar la frase con un diccionario 
+```
+
+```bash 
+❯ keepass2john file.kdbx                 # Para pasar un archivo Keepass a Hash con la passwd cifrada 
+	❯ jhon -w:/usr/share/wordlists/rockyou.txt hash # Usando jhon y el diccionario rockyou, romperemos el hash obtenido anteriormente
 ```
