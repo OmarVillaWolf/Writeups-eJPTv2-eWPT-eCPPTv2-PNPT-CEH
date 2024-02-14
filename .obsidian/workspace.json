@@ -201,9 +201,87 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "bf1edaa847e4657c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e15533e81517229b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "369657abab75f07f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1ae37815100b272b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3.2 Metasploit/5 MSF Explotation.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1d9ae2981d6ad55f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8c607f7c83ad5c8f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 10
+        "currentTab": 19
       }
     ],
     "direction": "vertical"
@@ -288,7 +366,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Ports/445, 139- SMB.md"
+                "file": "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md"
               }
             }
           },
@@ -326,34 +404,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "771d3a6c674ddc7a",
+  "active": "1d9ae2981d6ad55f",
   "lastOpenFiles": [
-    "5.2 Vulhub - Machines/1 Easy/3 Election1.md",
+    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+    "3.2 Metasploit/3 MSF Client-Side Attacks.md",
+    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
+    "3.2 Metasploit/1 Metasploit.md",
+    "3.2 Metasploit/5 MSF Explotation.md",
     "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "1 Ports/445, 139- SMB.md",
+    "2 Tools/Nmap.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/2 UsersGroups.md",
+    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
     "2 Tools/John the Ripper.md",
+    "5.1 HTB - Machines/1 Easy/12 Tabby.md",
+    "5.1 HTB - Machines/2 Medium/10 Node.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "7 Hack4u/6 Pivoting/2 Piv - Chisel - Port Forwarding.md",
+    "2 Tools/BurpSuite.md",
+    "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "5.2 Vulhub - Machines/1 Easy/3 Election1.md",
     "7 Hack4u/3 OWASP TOP 10/17 Abuso Subida Archivos.md",
     "4 PrivEsc Lin & Win/2 Linux/Hack4u/3. Tareas CRON.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "2 Tools/Hydra.md",
-    "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "2 Tools/Dirbuster.md",
-    "1 Ports/22 - SSH.md",
-    "5.1 HTB - Machines/2 Medium/1 Jeeves.md",
-    "5.1 HTB - Machines/1 Easy/2 Return.md",
-    "3.3 Explotation/1 Windows/3 SMB.md",
-    "5.1 HTB - Machines/1 Easy/8 Driver.md",
-    "5.1 HTB - Machines/1 Easy/9 ToolBox.md",
-    "5.1 HTB - Machines/1 Easy/22 Netmon.md",
-    "1 Ports/5985-6 - WINRM.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/5 Automating.md",
-    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/2 SUDO Priv.md",
-    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/1 Weak Permissions.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 CronServices.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/3 Network.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/2 UsersGroups.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/1 SystemInfo.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132807.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132339.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132054.png",
