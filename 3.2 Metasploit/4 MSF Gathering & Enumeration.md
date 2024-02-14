@@ -151,7 +151,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set VERBOSE false
 	❯ run 
 
-	❯ set SMBUser <user>                                # si ya tenemos a un usuario enumerado lo podemos colocar con ese comando
+	❯ set SMBUser <user>                              # si ya tenemos a un usuario enumerado lo podemos colocar con ese comando
 
 # Diccionarios 
 /usr/share/wordlists/metasploit/unix_passwords.txt
