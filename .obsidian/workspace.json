@@ -279,9 +279,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4ba63ee3460fd286",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/Ngrok.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 19
+        "currentTab": 21
       }
     ],
     "direction": "vertical"
@@ -366,7 +379,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md"
+                "file": "2 Tools/Ngrok.md"
               }
             }
           },
@@ -404,11 +417,12 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "1d9ae2981d6ad55f",
+  "active": "4ba63ee3460fd286",
   "lastOpenFiles": [
-    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "2 Tools/Ngrok.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "3.2 Metasploit/3 MSF Client-Side Attacks.md",
     "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
     "3.2 Metasploit/1 Metasploit.md",
@@ -431,7 +445,6 @@
     "5.2 Vulhub - Machines/1 Easy/3 Election1.md",
     "7 Hack4u/3 OWASP TOP 10/17 Abuso Subida Archivos.md",
     "4 PrivEsc Lin & Win/2 Linux/Hack4u/3. Tareas CRON.md",
-    "2 Tools/Hydra.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132807.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132339.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132054.png",
