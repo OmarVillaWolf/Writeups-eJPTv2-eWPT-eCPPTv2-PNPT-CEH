@@ -101,7 +101,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ❯ nmap -p445 --script smb-protocols ❮Target IP❯              # Ver que protocolos se estan usando
 
-❯ nmap -p445 --script smb-security-mode ❮Target IP❯          # Ver si permite la autenticacion de usuarios sin passwd
+❯ nmap -p445 --script smb-security-mode ❮Target IP❯          # Ver si permite la autenticacion de usuarios anonymous
 
 ❯ nmap -p445 --script smb-enum-sessions ❮Target IP❯          # Ver si hay sesiones activas
 ❯ nmap -p445 --script smb-enum-sessions --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯        
