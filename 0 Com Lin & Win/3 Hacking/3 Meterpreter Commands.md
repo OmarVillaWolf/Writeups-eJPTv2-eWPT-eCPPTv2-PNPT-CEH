@@ -6,6 +6,16 @@ Tags: #Windows #Comandos #Meterpreter
 
 Es un multi-funcional payload que es ejecutado en memoria en un sistema victima haciéndolo difícil de detectar. El se comunica a través de un socket stager y provee a un atacante un interpretado de comandos interactivo de un sistema victima que facilite la ejecución de comandos del sistema, navegación del sistema de archivos,  keylogging y mucho mas. 
 
+## Convertir una Shell a Meterpreter
+
+```bash 
+# Debes de tener una sesion activa y en background en Metasploit 
+
+❯ use post/multi/manage/shell_to_meterpreter
+	❯ set session <ID>
+	❯ run 
+```
+
 ## Comandos con Meterpreter
 
 ```bash 
