@@ -4,232 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1e717d0767a65797",
+        "id": "ca44111cca12558a",
         "type": "tabs",
         "children": [
           {
-            "id": "441585e0a4628c43",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "12 LAb-Exam-eJPT/1 WordPress.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9002c034b2edcf5e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "66eb063ab419139f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/Nmap.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7f563dae703ac8b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/Dirbuster.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f3b5ca23b8bcb43e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Ports/80.1 WordPress.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "827043cd9b778432",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/Hydra.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cd86c2242a9f2232",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f71fe897f76d30a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Ports/3306 - MYSQL.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0a3cddb0088f0e26",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/Hashcat.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "839d8aeb2f460594",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/3 Hacking/Msfvenom.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "771d3a6c674ddc7a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Ports/445, 139- SMB.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "759d3c90c4510015",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ad29e51b9361a715",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/John the Ripper.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "68f8df4a9040fec1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Ports/22 - SSH.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "74f82430f842c463",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/Ffuf, Gobuster, Wfuz.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bf1edaa847e4657c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e15533e81517229b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "369657abab75f07f",
+            "id": "c91ca436c91c2026",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -242,12 +21,12 @@
             }
           },
           {
-            "id": "1ae37815100b272b",
+            "id": "c55e43f8d8d5a573",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.2 Metasploit/5 MSF Explotation.md",
+                "file": "2 Tools/Nmap.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -255,12 +34,12 @@
             }
           },
           {
-            "id": "1d9ae2981d6ad55f",
+            "id": "189cc84f06534627",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+                "file": "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -268,12 +47,12 @@
             }
           },
           {
-            "id": "8c607f7c83ad5c8f",
+            "id": "c9047ba9c7ef3de0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+                "file": "2 Tools/Ffuf, Gobuster, Wfuz.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -281,12 +60,38 @@
             }
           },
           {
-            "id": "4ba63ee3460fd286",
+            "id": "7f619d6cc4d3151b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Tools/Ngrok.md",
+                "file": "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dfc98f7974ada852",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1303fb5225664c84",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -294,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 19
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -379,12 +184,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md"
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md"
               }
             }
           },
           {
-            "id": "b9c013d9a9f38b1c",
+            "id": "7e97871c22240511",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -406,64 +211,64 @@
   "left-ribbon": {
     "hiddenItems": {
       "dbfolder:Create a new database table": false,
-      "workspaces:Manage workspace layouts": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "canvas:Create new canvas": false,
+      "workspaces:Manage workspace layouts": false,
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "1d9ae2981d6ad55f",
+  "active": "1303fb5225664c84",
   "lastOpenFiles": [
-    "3.2 Metasploit/5 MSF Explotation.md",
-    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
-    "1 Ports/445, 139- SMB.md",
-    "2 Tools/Nmap.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "2 Tools/Ngrok.md",
-    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
-    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "3.2 Metasploit/3 MSF Client-Side Attacks.md",
-    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
-    "3.2 Metasploit/1 Metasploit.md",
-    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+    "1 Kitty.md",
     "0 Com Lin & Win/3 Hacking/ReverShell.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/2 UsersGroups.md",
-    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
-    "2 Tools/John the Ripper.md",
-    "5.1 HTB - Machines/1 Easy/12 Tabby.md",
-    "5.1 HTB - Machines/2 Medium/10 Node.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "7 Hack4u/6 Pivoting/2 Piv - Chisel - Port Forwarding.md",
-    "2 Tools/BurpSuite.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "5.2 Vulhub - Machines/1 Easy/3 Election1.md",
-    "7 Hack4u/3 OWASP TOP 10/17 Abuso Subida Archivos.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Tools/Nmap.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/1. Sudoers.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/1 Weak Permissions.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/2 SUDO Priv.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/5 Automating.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/4 CronServices.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/3 Network.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/2 UsersGroups.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/1 SystemInfo.md",
+    "2 Tools/Ngrok.md",
+    "README.md",
+    "Z Imagenes/Hacking/SSRF.png",
+    "Z Imagenes/Hacking/Piv2.png",
+    "Z Imagenes/Hacking/Piv1.png",
+    "Z Imagenes/Hacking",
+    "Z Imagenes",
+    "Z Imagenes\\Hacking",
+    "9 SQLi-Labs/Lab1.md",
+    "9 SQLi-Labs",
+    "8 PortSwigger-OWASP/5 XXE/Lab 5.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 4.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 3.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 2.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 1.md",
+    "8 PortSwigger-OWASP/5 XXE",
+    "8 PortSwigger-OWASP\\5 XXE",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 3.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 2.md",
+    "8 PortSwigger-OWASP/3.1 XSS",
+    "8 PortSwigger-OWASP\\3.1 XSS",
+    "8 PortSwigger-OWASP/3 SQLI",
+    "8 PortSwigger-OWASP\\3 SQLI",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132807.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132339.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132054.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205131115.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130901.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130714.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130624.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130523.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
-    "15 OT/Lesson 2",
-    "15 OT",
-    "14 Wifi/Wifi Challenge/Wifi 1.0",
-    "14 Wifi/Wifi - WPA-WPA2/3. WEP",
-    "14 Wifi/Wifi - WPA-WPA2/2. WPS",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2",
-    "14 Wifi/Pineapple",
-    "14 Wifi/Wifi Challenge",
-    "14 Wifi/Wifi - WPA-WPA2",
-    "14 Wifi",
-    "Z Imagenes/Pasted image 20230531123551.png"
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130624.png"
   ]
 }
