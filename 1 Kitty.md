@@ -15,7 +15,8 @@
 **Win + Shift + f** Abre Firefox
 **Win + Shift + 2** Manda la ventana actual al segundo entorno de trabajo
 **Win + Shift + q** Cierra la sesión y te manda a la pantalla de bloqueo
-**Win + Shift + r** Recarga los cambios
+**Win + w** Cierras la ventana
+**Win + Alt + r** Recarga los cambios
 **Win + 2** Te colocas en el segundo entorno de trabajo
 **Win + Esc** Aceptar los cambios hechos
 **Win + d** Abres Rofi y puedes buscar ahí
