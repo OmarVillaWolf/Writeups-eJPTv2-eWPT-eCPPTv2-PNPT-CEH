@@ -15,7 +15,8 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing
 # Modo vhost: Encontrar host virtuales que estén configurados en el servidor
 ❯ /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt
 ```
-# Wfuzz 
+## Wfuzz 
+
 ```bash
 ❯ wfuzz -c --hc=404 --hh=12345 -t 200 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.❮IP❯” https://❮IP❯
 
@@ -98,8 +99,9 @@ Para descubrir si tiene el Plugin de **gwolle-gb**
 	# t -> Lanzar tareas en paralelo al mismo tiempo
 ```
 
-# Gobuster
-Go trabaja muy bien con Sockets y conexiones 
+## Gobuster
+
+Gobuster trabaja muy bien con sockets y conexiones 
 ```bash
 ❯ gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url http://❮IP❯ -t 200 -k 
 
@@ -153,8 +155,7 @@ Go trabaja muy bien con Sockets y conexiones
 	# w -> Ruta del diccionario
 ```
 
-# Ffuf 
-**ffuf** stands for **Fuzz Faster U Fool**. It's a tool used for web enumeration, fuzzing, and directory brute forcing. Y trabaja muy bien con Sockets y Conexiones porque esta programado en Go
+## Ffuf 
 
 ```bash
 ❯ ffuf -h                   # Despliega el panel de ayuda
