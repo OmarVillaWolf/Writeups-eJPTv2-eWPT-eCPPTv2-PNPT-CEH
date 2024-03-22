@@ -7,7 +7,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ❯ zenmap                           # Es la version GUI de nmap
 ```
 
-### Host Discovery 
+## Host Discovery 
 
 ```bash 
 ❯ man nmap                          # Despliega el manual de nmap 
@@ -32,7 +32,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 
-### Port Scanning 
+## Port Scanning 
 
 * [Nmap-book-scripting-engine](https://nmap.org/book/nse.html)
 
