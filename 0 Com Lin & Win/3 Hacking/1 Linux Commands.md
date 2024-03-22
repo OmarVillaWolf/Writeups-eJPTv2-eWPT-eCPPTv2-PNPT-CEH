@@ -109,6 +109,7 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 ```bash
 ❯ locate nc.exe                              # Buscar el Netcat para Windows
+	❯ sudo updatedb                         # Actualizar la base de datos 
 ```
 
 ```bash
