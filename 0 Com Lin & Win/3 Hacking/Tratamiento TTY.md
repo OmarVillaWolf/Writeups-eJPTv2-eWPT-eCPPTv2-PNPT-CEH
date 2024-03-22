@@ -18,6 +18,10 @@
 # Ahora para modificar las dimensiones de Vim/nano debemos hacer lo siguiente.
 ❯ stty size                                              # Miramos las dimensiones de la consola
 ❯ stty rows 51 columns 189                               # Modificamos las dimensiones de la consola Vim/Nano
+
+# Ajustar tamaño de la consola 
+❯ xrandr -s 1                                            # Modificamos las dimensiones de la consola en general (Tamaño del monitor que estemos usando)
+	❯ Win + Alt + R                                     # Recargamos los cambios en la Kitty 
 ```
 
 ## Obtener una consola interactiva en Linux desde Meterpreter
