@@ -37,8 +37,11 @@ como una puerta de enlace y no puede obtener una respuesta a tiempo.
 * 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
 soportada por el servidor.
 
-## Cabeceras
-#### Request
+## Cabeceras (Headers)
+
+Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encabezados HTTP. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting en uso.
+
+### Request
 
 1. **GET / POST**: Es el método que nos ayuda a solicitar recursos, en el podemos encontrar el tipo
 de recurso, protocolo y la versión (HTTP/1.1)
@@ -46,12 +49,12 @@ de recurso, protocolo y la versión (HTTP/1.1)
 3. **Cookie**: Identifica la sesión y su usuario
 4. **User-Agent**: Esta cabecera lleva la información del usuario, el tipo de navegador, su
 versión, sistema operativo, tipo y descripción del software.
-5. Accept: El tipo de texto que acepta como lo puede ser HTML, XML, e imágenes.
-6. Accept-Language: Son los tipo de lenguaje que acepta
-7. Accept-Encoding: Los tipos de datos que acepta
-8. Connection: Es el estado de la conexión
+5. **Accept**: El tipo de texto que acepta como lo puede ser HTML, XML, e imágenes.
+6. **Accept-Language**: Son los tipo de lenguaje que acepta
+7. **Accept-Encoding**: Los tipos de datos que acepta
+8. **Connection**: Es el estado de la conexión
 
-#### Response 
+### Response 
 
 1. **Código de estado**: 
 2. Server: Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
@@ -59,7 +62,7 @@ versión, sistema operativo, tipo y descripción del software.
 autenticar
 4. **Content-Type**: Regresa código HTML de código texto, la puedes modificar para que te
 acepte otro tipo de texto como Json
-5. Content-Length: Longitud del contenido
+5. **Content-Length**: Longitud del contenido
 
 ## Métodos
 
@@ -99,14 +102,18 @@ acepte otro tipo de texto como Json
 # Que podemos buscar en una pagina Web
 1. Mirar el codigo fuente 'Ctrl + u'
 2. Inspeccionar el codigo 'Ctrl + Shift + c'
-3. Métodos permitidos
-4. Listado de directorios 'Fuzzing o Burpsuite'
-5. Nikto
-6. Rastreo pasivo 'Burpsuite' crawling
-7. SQLMap
-8. XSS con XSSer
-9. HTTP login con Hydra 'WordPress'
-10. Ataque al 'basic auth' con Burpsuite 'Intruder - Sniper' (Cargar diccionario y Payload Processing 'add prefix=admin:' y 'Encode=base64')
+3. Robots.txt / Sitemap.xml
+4. Métodos permitidos 'Curl'
+5. Listado de directorios 'Fuzzing o Burpsuite'
+6. Nikto
+7. Rastreo pasivo 'Burpsuite' crawling
+8. SQLMap
+9. XSS con XSSer
+10. HTTP login con Hydra 'WordPress'
+11. Ataque al 'basic auth' con Burpsuite 'Intruder - Sniper' (Cargar diccionario y Payload Processing 'add prefix=admin:' y 'Encode=base64')
+
+# Subdominios 
+1. 
 
 # Atajos en la Web
 Recargar la pagina 'Ctrl + r'
@@ -157,6 +164,8 @@ Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 ```
 
 ```bash
+❯ curl http://IP -v                    # Miramos los headers de la pagina web 
+
 ❯ curl -s -X GET http://❮IP❯ -I        # Miramos las cabeceras de respuesta de la pagina web 
 
 	# I = i mayuscula
