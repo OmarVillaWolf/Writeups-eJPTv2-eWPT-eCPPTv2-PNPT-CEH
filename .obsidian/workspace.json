@@ -149,9 +149,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "00df0dc7fe796f0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5.1 HTB - Machines/1 Easy/22 Netmon.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -236,7 +249,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/Ffuf, Gobuster, Wfuz.md"
+                "file": "5.1 HTB - Machines/1 Easy/22 Netmon.md"
               }
             }
           },
@@ -274,15 +287,17 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "c9047ba9c7ef3de0",
+  "active": "00df0dc7fe796f0a",
   "lastOpenFiles": [
-    "1 Ports/80, 443 - HTTP, HTTPS.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "5.1 HTB - Machines/1 Easy/22 Netmon.md",
+    "2 Tools/Hydra.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "1 Ports/80, 443 - HTTP, HTTPS.md",
     "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
     "5.1 HTB - Machines/1 Easy/24 Nibbles.md",
     "Google Hacking.md",
     "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "4 PrivEsc Lin & Win/2 Linux/1 Enumeracion/5 Automating.md",
     "0 Com Lin & Win/3 Hacking/Searchsploit.md",
     "1 Ports/80.1 WordPress.md",
@@ -300,8 +315,6 @@
     "7 Hack4u/2 Reconocimiento/2 Nmap - UDP Scan.md",
     "7 Hack4u/2 Reconocimiento/1 Nmap - TCP Scan.md",
     "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
-    "1 Kitty.md",
-    "4 PrivEsc Lin & Win/2 Linux/Hack4u/1. Sudoers.md",
     "Z Imagenes/Hacking/SSRF.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
