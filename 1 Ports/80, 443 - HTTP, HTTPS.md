@@ -113,7 +113,11 @@ acepte otro tipo de texto como Json
 11. Ataque al 'basic auth' con Burpsuite 'Intruder - Sniper' (Cargar diccionario y Payload Processing 'add prefix=admin:' y 'Encode=base64')
 
 # Subdominios 
-1. 
+1. Gobuster, Wfuzz, Ffuz
+2. Sublist3r
+3. Dnsrecon
+4. OSINT (crt.sh)
+5. Google Dorks
 
 # Atajos en la Web
 Recargar la pagina 'Ctrl + r'
