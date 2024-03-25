@@ -119,6 +119,10 @@ acepte otro tipo de texto como Json
 4. OSINT (crt.sh)
 5. Google Dorks
 
+# Enumeracion de usuarios 
+1. Ffuf (Agregando cabeceras y contenido cuando encontramos 'username already exists')
+2. Fuerza bruta (Cuando ya tenemos algunos nombres de usuarios)
+
 # Atajos en la Web
 Recargar la pagina 'Ctrl + r'
 Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
