@@ -165,9 +165,19 @@ Gobuster trabaja muy bien con sockets y conexiones
 ❯ ffuf -w /usr/share/Seclists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeit.com" -u http://IP -fs 123
 
 	# w = Ruta absoluta de la wordlist a usar 
-	# H = Dominio a fuzzear
-	# u = Url que tiene el dominio a usar 
+	# H = Encabezado adicional y el server sabra que estamos enviando datos al server
+	# u = Url con la ruta que se va a usar
 	# fs = Palabras con el tamaño que no queremos que se muestre aunque tenga un codigo de estado de 200
+```
+
+```bash 
+❯ ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.186.98/customers/signup -mr "username already exists"
+
+	# POST = Metodo a usar porque mandamos data en la peticion 
+	# d = Datos a enviar
+	# H = Encabezado adicional y el server sabra que estamos enviando datos al server
+	# u = Url con la ruta que se va a usar
+	# mr = Texto que buscamos validar y que hemos encontrado como usuario valido
 ```
 
 ```bash
