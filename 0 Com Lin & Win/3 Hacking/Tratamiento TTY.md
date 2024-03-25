@@ -21,7 +21,7 @@
 
 # Ajustar tamaño de la consola 
 ❯ xrandr -s 1                                            # Modificamos las dimensiones de la consola en general (Tamaño del monitor que estemos usando)
-	❯ Win + Alt + R                                     # Recargamos los cambios en la Kitty 
+	❯ Win + Shift + r                                     # Recargamos los cambios en la Kitty 
 ```
 
 ## Obtener una consola interactiva en Linux desde Meterpreter
