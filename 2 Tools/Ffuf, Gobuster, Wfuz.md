@@ -161,19 +161,26 @@ Gobuster trabaja muy bien con sockets y conexiones
 ❯ ffuf -h                   # Despliega el panel de ayuda
 ```
 
-```bash
-❯ ffuf -c -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u https://miwifi.com/FUZZ -v 
-❯ ffuf -c -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u https://miwifi.com/FUZZ/ 
-❯ ffuf -c -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u https://miwifi.com/FUZZ/ --mc=200 
+```bash 
+❯ ffuf -w /usr/share/Seclists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeit.com" -u http://IP -fs 123
 
-	# c -> Permite meter colores
-	# u -> Colocamos la url
-	# w -> Ruta del diccionario
-	# t -> Lanzar peticiones en paralelo al mismo tiempo
-	# v -> verbose, te dice a donde te redirige el codigo 301 y los demas
-	# Si queremos hacer el Follow Redirect para el codigo 301 lo mejor es colocarle una **/** al final 
-	# mc -> MatchCode y sirve para filtrar por el codigo de estado 200
-	# FUZZ -> Ahi se van a sustituir las palabras del diccionario
+	# w = Ruta absoluta de la wordlist a usar 
+	# H = Dominio a fuzzear
+	# u = Url que tiene el dominio a usar 
+	# fs = Palabras con el tamaño que no queremos que se muestre aunque tenga un codigo de estado de 200
+```
+
+```bash
+❯ ffuf -c -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u https://miwifi.com/FUZZ/ -v --mc=200 
+
+	# Si queremos hacer el Follow Redirect para el codigo 301 lo mejor es colocarle una '/' al final de FUZZ
+	# c = Permite meter colores
+	# u = Colocamos la url
+	# w = Ruta del diccionario
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# v = Verbose, te dice a donde te redirige el codigo 301 y los demas
+	# mc = MatchCode y sirve para filtrar por el codigo de estado 200
+	# FUZZ = Ahi se van a sustituir las palabras del diccionario
 ```
 
 ```bash
