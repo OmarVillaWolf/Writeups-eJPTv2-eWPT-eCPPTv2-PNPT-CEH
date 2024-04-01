@@ -162,9 +162,61 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f04fdd33c8d1aaf3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Ports/3306 - MYSQL.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fdd1335240c056e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2525e64d2be88263",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Ports/445, 139- SMB.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2f8183ddbb750181",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/John the Ripper.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 9
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -249,7 +301,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Ports/80.1 WordPress.md"
+                "file": "1 Ports/445, 139- SMB.md"
               }
             }
           },
@@ -287,11 +339,17 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "8e2fa05ac598e126",
+  "active": "2525e64d2be88263",
   "lastOpenFiles": [
-    "2 Tools/Hydra.md",
-    "1 Ports/80.1 WordPress.md",
+    "2 Tools/John the Ripper.md",
     "1 Ports/445, 139- SMB.md",
+    "1 Ports/80.1 WordPress.md",
+    "1 Ports/135 - RPC.md",
+    "2 Tools/Hashcat.md",
+    "2 Tools/Hydra.md",
+    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+    "1 Ports/3306 - MYSQL.md",
+    "3.2 Metasploit/5 MSF Explotation.md",
     "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
     "0 Com Lin & Win/3 Hacking/Searchsploit.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
@@ -299,7 +357,6 @@
     "1 Ports/6379 - Redis.md",
     "1 Ports/22 - SSH.md",
     "1 Ports/2049 - NFS.md",
-    "1 Ports/135 - RPC.md",
     "1 Ports/110, 995 - POP3.md",
     "1 Ports/23 - Telnet.md",
     "1 Ports/3389, 3333 - RDP.md",
@@ -311,11 +368,6 @@
     "1 Ports/Shellshock - Apache.md",
     "1 Ports/445 - Samba.md",
     "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "2 Tools/Nmap.md",
-    "5.1 HTB - Machines/1 Easy/22 Netmon.md",
-    "0 Com Lin & Win/2 Docker/7 Docker-Compose.md",
-    "0 Com Lin & Win/2 Docker/6 Port Forw y Mount.md",
     "Z Imagenes/Hacking/SSRF.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
