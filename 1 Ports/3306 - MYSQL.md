@@ -17,7 +17,6 @@ Tags: #MySQL #Servidor #Comandos #DB
 Nos conectamos a la base de datos de esta manera 
 ```bash 
 ❯  mysql -u root -p -h <IP>
-❯  mysql -u root -p -h <IP>
 
 	# h = Host
 	# u = User
