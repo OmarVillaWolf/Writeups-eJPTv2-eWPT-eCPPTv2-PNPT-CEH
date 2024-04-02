@@ -5,6 +5,10 @@ Tags: #Windows #Comandos
 ## Comandos terminal Windows
 
 ```bash 
+❯ arp -a                                     # Barrido ARP en la maquina actual 
+```
+
+```bash 
 ❯ systeminfo                                 # Nos muestra la informacion de Windows (Parches 'Hotfix', )
 ❯ sysinfo                                    # Nos muestra algunos detalles de Windows
 ```
@@ -19,7 +23,7 @@ Tags: #Windows #Comandos
 ```
 
 ```bash
-❯ net user                                   # Miramos todos los usuarios existentes y sus grupos
+❯ net users                                  # Miramos todos los usuarios existentes y sus grupos
 ❯ net user <User>                            # Miramos el grupo de un usuario especifico como 'administrator'
 ❯ net localgroup administrators              # Miramos los miembros del grupo administrador
 ❯ net user admin password123                 # Para cambiar la passwd al usuario admin siendo NT Authority 
