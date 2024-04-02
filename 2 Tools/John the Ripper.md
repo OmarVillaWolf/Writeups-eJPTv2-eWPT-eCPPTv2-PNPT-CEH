@@ -50,9 +50,13 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 ```bash
 ❯ john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>    # Crackear un hash con un formato especifico
 
+❯ john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile.txt>
+
 	# format = raw-md5 -> Formato especifico del hash (MD4,MD5, SHA1...)
 	# Raw = Tipo de hash estandar (raw-md5, raw-sha1, raw-sha256, whirlpool...)
 	# hashfile = Archivo que contiene el hash a crackear
+	
+# Ejemplo de un hash NT --> Administrador:500:42f29043y123fa9c74f23606c6g522b0:71759a1bb2web4da43e676d6b7190711:::
 ```
 
 ```bash
