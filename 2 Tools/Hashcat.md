@@ -5,6 +5,7 @@ Tags: #HashCat
 ```bash
 ❯ hashcat --help     # Nos muestra el panel de ayuda de la tool y algunos ejemplos
 
+# Podemos crakear de uno en uno
 ❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt
 ❯ hashcat -m 400 -a 0 hash.txt /usr/share/wordlists/rockyou.txt 
 
