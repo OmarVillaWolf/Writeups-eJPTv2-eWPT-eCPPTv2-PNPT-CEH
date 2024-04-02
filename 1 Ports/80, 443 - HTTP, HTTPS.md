@@ -128,6 +128,15 @@ Recargar la pagina 'Ctrl + r'
 Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 ```
 
+## Ruta típica en consola
+
+```python 
+
+/var/www/html/
+	config.php                  # Archivo de configuracion de la aplicacion web y puede contener informacion valiosa
+	initialize.php              # Archivo que se crea con las instalacion de la web (Similar a wp-config) ya que puede contener credenciales de acceso 'user:passwd' para la DB
+```
+
 ## HTTP: 80
 
 ```bash
