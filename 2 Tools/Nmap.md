@@ -274,6 +274,10 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ❯ nmap --script http-shellshock --script-args uri=/cgi-bin/user.sh -p80 <IP>
 ```
 
+## RPC
+```bash 
+❯ nmap -p111 --script=nfs-ls,nfs-statfs,nfs-showmount <IP>   # Enumerar el servicio RPC, podemos ver las monturas e informacion adicional  
+```
 
 ## Opciones de Nmap
 
