@@ -16,15 +16,14 @@ En esta clase, veremos cómo utilizar algunas de las funcionalidades de esta her
 
 ## Penetration Testing con MSF
 
-| **Penetration Testing Phase**| **Metasploit Framework Implementation** |
-|----|----|
-| 1. Information Gathering & Enumeration  | Módulos auxiliares |
-| 2. Vulnerability Scanning | Módulos auxiliares con Nessus |
-| 3. Explotation | Módulos de exploit & Payloads |
-| 4. Post Explotation | Meterpreter |
-| 5. Privilege Escalation | Módulos de Post explotación / Meterpreter |
-| 6. Maintaining Persistent Access | Módulos de post explotación / Persistencia |
-
+| **Penetration Testing Phase**          | **Metasploit Framework Implementation**    |
+| -------------------------------------- | ------------------------------------------ |
+| 1. Information Gathering & Enumeration | Módulos auxiliares                         |
+| 2. Vulnerability Scanning              | Módulos auxiliares con Nessus              |
+| 3. Explotation                         | Módulos de exploit & Payloads              |
+| 4. Post Explotation                    | Meterpreter                                |
+| 5. Privilege Escalation                | Módulos de Post explotación / Meterpreter  |
+| 6. Maintaining Persistent Access       | Módulos de post explotación / Persistencia |
 
 ## Terminología 
 
@@ -134,7 +133,7 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 ❯ options                    # Miramos las opciones del exploit y lo que debemos de configurar
 ❯ show advanced options      # Miramos las opciones avanzadas del exploit y lo que debemos de configurar
 ❯ check                      # Nos dice si el RHOST es vulnerable a ese exploit sin explotarlo, esto depende del modulo, si trae esta opcion o no
-❯ unset                      # Quitas la configuracion 
+❯ unset                      # Quitas la configuracion de un parametro 
 ❯ set LHOST ❮IP❯             # Configuramos el IP local eth0, ens33 (Si estamos en una VPN colocar el Tun0)
 ❯ setg RHOSTS ❮IP❯           # Configuras de manera global el RHOSTS
 ❯ set RHOSTS ❮IP❯            # Configuramos el IP remoto (maquina victima)
