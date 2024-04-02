@@ -32,7 +32,7 @@ Nos conectamos a la base de datos de esta manera
 	> describe ❮Table_name❯;                         # Miramos que columnas existen
 	> select count(*) from ❮Table_name❯              # Mirar los registros de la tabla de la DB seleccionada
 	> select User,Password from ❮Table_name❯;        # Seleccionamos los campos de una tabla especifica 
-	> select * from ❮Table_name❯;                    # Seleccionamos todo de la tabla users
+	> select * from ❮Table_name❯;                    # Dumpeas toda la info de la tabla users, incluyendo sus hashes
 	> select * from ❮Table_name❯ where username=’admin’;
 	> create database ❮DB_name❯;                     # Creamos una base de datos
 	> drop table ❮Table_name❯;                       # Eliminas la tabla llamada users
