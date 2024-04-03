@@ -97,7 +97,9 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ## SMB / SAMBA
 ```bash
-❯ nmap -p445 -sCV ❮Target IP❯                                # Para enumerar exaustiva al SMB 
+❯ nmap -p445 -sCV ❮IP❯                               # Para enumerar exaustiva al SMB 
+
+❯ nmap -p445 --script='smb-vul-*' ❮IP❯               # Ejecutara todos los scripts de Nmap que empiecen con 'smb-vuln'
 
 ❯ nmap -p445 --script smb-protocols ❮Target IP❯              # Ver que protocolos se estan usando
 
@@ -140,7 +142,7 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ❯ nmap ❮Target IP❯ -sU --top-port 25 --open -sV         # Mirar la version de los puertos encontrados para SMB
 ```
 
-## EternalBlue 
+## EternalBlue 'MS17-010' Windows7
 
 ```bash 
 ❯ nmap -sV -p445 --script=smb-vuln-ms17-010 ❮Target IP❯             # Para ver si es vulnerable al EternalBlue
