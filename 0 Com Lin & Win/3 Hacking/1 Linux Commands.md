@@ -249,6 +249,7 @@ Manera de descargar archivos en la maquina victima
 ❯ 7z x <file.gz>                               # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
 ❯ tar -xf <file.tar.gz>                        # Descomprimimos el archivo tar.gz
 ❯ gzip -d <file.txt.gz>                        # Descomprimir archivos gz
+❯ 
 ```
 
 Para las monturas en Docker serian los siguientes comandos
