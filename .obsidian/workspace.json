@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+                "file": "4 PrivEsc Lin & Win/2 Linux/Hack4u/4. Path Hijacking.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
+                "file": "5.2 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -242,7 +242,7 @@
             }
           }
         ],
-        "currentTab": 15
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -271,7 +271,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "shell",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -327,7 +327,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3.2 Metasploit/5 MSF Explotation.md"
+                "file": "4 PrivEsc Lin & Win/2 Linux/Hack4u/4. Path Hijacking.md"
               }
             }
           },
@@ -365,34 +365,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "0f08d914008c45ae",
+  "active": "dfc98f7974ada852",
   "lastOpenFiles": [
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "5.2 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "2 Tools/Nmap.md",
+    "1 Ports/80.1 WordPress.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "3.2 Metasploit/5 MSF Explotation.md",
     "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "3.2 Metasploit/3 MSF Client-Side Attacks.md",
     "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
     "3.2 Metasploit/1 Metasploit.md",
     "1 Ports/80, 443 - HTTP, HTTPS.md",
     "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
-    "3.2 Metasploit/5 MSF Explotation.md",
     "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "2 Tools/Nmap.md",
     "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
     "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
     "3.3 Explotation/2 Linux/1 Port-Scanning.md",
     "3.3 Explotation/2 Linux/2 vsFTPd.md",
     "3.3 Explotation/2 Linux/3 PHP.md",
     "3.3 Explotation/2 Linux/4 Samba.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "2 Tools/Hydra.md",
     "Recomendacion.md",
     "2 Tools/John the Ripper.md",
     "0 Com Lin & Win/3 Hacking/5 Netcat Commands.md",
     "1 Ports/135 - RPC.md",
-    "1 Ports/2049 - NFS.md",
-    "1 Ports/3389, 3333 - RDP.md",
-    "1 Ports/6379 - Redis.md",
-    "1 Ports/IIS - Webdav, FTPD.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "Z Imagenes/Hacking/SSRF.png",
     "Z Imagenes/Hacking/Piv2.png",
