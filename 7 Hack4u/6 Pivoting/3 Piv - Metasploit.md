@@ -47,7 +47,7 @@ meterpreter❯ portfwd add -l <PORT_Atacante> -p <PORT_Victima> -r <IP_Victima>
 	# PORT_Victima = Puerto que nos vamos a traer de la maquina victima 
 
 
-6. # En nuestro navegador web podemos cisualizar el puerto que nos hemos traido, esto si ha sido un puerto web (80)
+6. # En nuestro navegador web podemos visualizar el puerto que nos hemos traido, esto si ha sido un puerto web (80)
 127.0.0.1:<PORT>
 	# PORT = Es el puerto que hemos puesto en el comando anterior que ibamos a abrir de nuestra maquina de atacante 
 
