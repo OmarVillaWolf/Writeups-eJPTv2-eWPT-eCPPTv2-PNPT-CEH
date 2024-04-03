@@ -34,19 +34,6 @@
             }
           },
           {
-            "id": "7f619d6cc4d3151b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Ports/135 - RPC.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "dfc98f7974ada852",
             "type": "leaf",
             "state": {
@@ -79,19 +66,6 @@
               "type": "markdown",
               "state": {
                 "file": "1 Ports/445 - SMB.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "aeb7d7ab955fea93",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Ports/135 - RPC.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -208,7 +182,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.2 Metasploit/1 Metasploit.md",
+                "file": "3.2 Metasploit/5 MSF Explotation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -229,12 +203,12 @@
             }
           },
           {
-            "id": "b33e881578f0a528",
+            "id": "0f08d914008c45ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
+                "file": "3.2 Metasploit/5 MSF Explotation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -242,12 +216,25 @@
             }
           },
           {
-            "id": "0f08d914008c45ae",
+            "id": "985f1a694a615a85",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/80, 443 - HTTP, HTTPS.md",
+                "file": "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a3ef7d17bae625c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/Nmap.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -255,7 +242,7 @@
             }
           }
         ],
-        "currentTab": 16
+        "currentTab": 15
       }
     ],
     "direction": "vertical"
@@ -340,7 +327,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md"
+                "file": "3.2 Metasploit/5 MSF Explotation.md"
               }
             }
           },
@@ -378,34 +365,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "a5b38df5cfd9f97f",
+  "active": "0f08d914008c45ae",
   "lastOpenFiles": [
-    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+    "3.2 Metasploit/3 MSF Client-Side Attacks.md",
+    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
+    "3.2 Metasploit/1 Metasploit.md",
     "1 Ports/80, 443 - HTTP, HTTPS.md",
+    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+    "3.2 Metasploit/5 MSF Explotation.md",
+    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "2 Tools/Nmap.md",
     "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+    "3.3 Explotation/2 Linux/1 Port-Scanning.md",
+    "3.3 Explotation/2 Linux/2 vsFTPd.md",
+    "3.3 Explotation/2 Linux/3 PHP.md",
+    "3.3 Explotation/2 Linux/4 Samba.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "2 Tools/Hydra.md",
+    "Recomendacion.md",
+    "2 Tools/John the Ripper.md",
     "0 Com Lin & Win/3 Hacking/5 Netcat Commands.md",
     "1 Ports/135 - RPC.md",
     "1 Ports/2049 - NFS.md",
     "1 Ports/3389, 3333 - RDP.md",
     "1 Ports/6379 - Redis.md",
     "1 Ports/IIS - Webdav, FTPD.md",
-    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "2 Tools/Nmap.md",
-    "1 Ports/110, 995 - POP3.md",
-    "1 Ports/80.1 WordPress.md",
-    "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
-    "Recomendacion.md",
-    "7 Hack4u/6 Pivoting/2 Piv - Chisel - Port Forwarding.md",
-    "7 Hack4u/6 Pivoting/1 Pivoting.md",
-    "3.2 Metasploit/1 Metasploit.md",
-    "2 Tools/John the Ripper.md",
-    "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
-    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
-    "0 Com Lin & Win/3 Hacking/Searchsploit.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "Z Imagenes/Hacking/SSRF.png",
     "Z Imagenes/Hacking/Piv2.png",
