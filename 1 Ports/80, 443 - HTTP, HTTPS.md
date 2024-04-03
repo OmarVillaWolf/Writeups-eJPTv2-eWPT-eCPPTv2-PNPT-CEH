@@ -72,25 +72,25 @@ acepte otro tipo de texto como Json
 1. HEAD
 
 1. POST
-❯ curl -s -X POST http://IP/login.php -d "name=omar&password=passwd" -v 
+❯ curl -s -X POST http://❮IP❯/login.php -d "name=omar&password=passwd" -v 
 # Podemos mandar data por este método y mirar las cabeceras
 
 1. PUT
-❯ curl -s -X PUT http://IP/cmd.txt -d @cmdasp.aspx
+❯ curl -s -X PUT http://❮IP❯/cmd.txt -d @cmdasp.aspx
 	# d = Subir una data que es indicada con el @ y sera el archivo de la cdm
 ❯ curl http://IP/uploads/ --upload-file file.txt  # Subir un archivo a un directorio especifico 
 
 1. MOVE 
-❯ curl -s -X MOVE http://IP/cmd.txt -H "Destination:http://IP/cmd.aspx"
+❯ curl -s -X MOVE http://❮IP❯/cmd.txt -H "Destination:http://IP/cmd.aspx"
 # Si no nos acepta subir la extension anterior, le cambiamos la extension para subir el archivo y en la ruta donde se encuentra lo movemos a la extension del 'aspx'
 
 1. DELETE
-❯ curl -s -X DELETE http://IP/uploads/file.txt    # Para borrar un archivo en un directorio especifico 
+❯ curl -s -X DELETE http://❮IP❯/uploads/file.txt    # Para borrar un archivo en un directorio especifico 
 
 1. CONNECT
 
 1. OPTIONS
-❯ curl -s -X OPTIONS http://IP/post.php -v
+❯ curl -s -X OPTIONS http://❮IP❯/post.php -v
 # Podemos ver los métodos permitidos en esa página o directorio 
 
 1. TRACE
@@ -144,22 +144,22 @@ Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 ```
 
 ```bash 
-❯ browsh --startup-url <IP>                       # Enumeracion del buscador de un Apache en fomra de GUI
+❯ browsh --startup-url ❮IP❯                       # Enumeracion del buscador de un Apache en fomra de GUI
 ```
 
 ```bash 
-❯ lynx http://IP                                  # Enumeracion del buscador en fomra de GUI
+❯ lynx http://❮IP❯                                  # Enumeracion del buscador en fomra de GUI
 ```
 
 ```bash
-❯ whatweb ❮http://IP❯                  # Nos dara una breve descripcion del gestor de contenidos del puerto 80
+❯ whatweb ❮http://❮IP❯                  # Nos dara una breve descripcion del gestor de contenidos del puerto 80
 
 	# Mirar la jQuery
 	# Servidor Web
 ```
 
 ```bash
-❯ whatweb ❮http://IP:PORT❯             # Nos dara una breve descripcion del gestor de contenidos por un puerto especifico
+❯ whatweb ❮http://❮IP❯:❮PORT❯           # Nos dara una breve descripcion del gestor de contenidos por un puerto especifico
 ```
 
 ```bash
@@ -181,16 +181,16 @@ Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 ```
 
 ```bash
-❯ curl http://IP -v                    # Miramos los headers de la pagina web 
+❯ curl http://❮IP❯ -v                    # Miramos los headers de la pagina web 
 
-❯ curl -s -X GET http://❮IP❯ -I        # Miramos las cabeceras de respuesta de la pagina web 
+❯ curl -s -X GET http://❮IP❯ -I          # Miramos las cabeceras de respuesta de la pagina web 
 
 	# I = i mayuscula
 	# s = silence
 ```
 
 ```bash 
-❯ wget "http://IP/index"               # Obtenemos el archivo index 'descargamos'
+❯ wget "http://❮IP❯/index"               # Obtenemos el archivo index 'descargamos'
 ```
 
 ## HTTPS: 443 
