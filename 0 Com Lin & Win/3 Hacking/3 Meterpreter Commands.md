@@ -80,14 +80,16 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 
 4. Haremos PortForwarding para tener conectividad fuera del Metasploit, los siguientes comandos los debemos de hacer dentro de la sesion de Meterpreter
 ❯ sessions ID                          # Usas la sesion con Meterpreter 
-❯ portfwd add -l 2233 -p 445 -r IP     # IP es del nuevo hosts el cual no podiamos alcanzar, l = El puerto a abrir en nuestra maquina de atacante, p = Puerto de la maquina victima a traer
+❯ portfwd add -l 4455 -p 445 -r IP     
+❯ portfwd add -l 2222 -p 22 -r IP      # IP es del nuevo hosts el cual no podiamos alcanzar, l = El puerto a abrir en nuestra maquina de atacante, p = Puerto de la maquina victima a traer
 ❯ portfwd                              # Miramos las redirecciones de los puertos
 
 5. # Ahora podemos hacer Nmap desde nuestra consola 
-❯ nmap -p2233 localhost           
+❯ nmap -p4455 localhost           
 
 6. # Podemos usar modulos de Metasploit directamente en la IP de la maquina en la nueva red, ya que gracias al enrutamiento tenemos conectividad.
 7. # Si queremos usar una 'Tool' especifica para un puerto en la consola, debemos de hacer 'PortForwarding' de ese puerto de la maquina victima a un puerto de nuestra maquina
+❯ ssh root@127.0.0.1 -p 2222 
 ```
 
 ## Pivoting en una consola 'Linux' 
