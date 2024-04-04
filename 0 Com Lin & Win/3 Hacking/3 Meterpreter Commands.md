@@ -54,10 +54,10 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ cat file.txt               # Miramos el contenido de un archivo 
 ```
 
-## Para hacer Pivoting con Metasploit  'Windows'
+## Para hacer Pivoting con Metasploit 
 
 ```bash 
-# Esto aplica si ya estas dentro de una maquina victima Windows con Meterpreter
+# Esto aplica si ya estas dentro de una maquina victima con Meterpreter
 
 
 ❯ arp                                     # Barrido ARP en la direccion IP dentro de Meterpreter, podremos ver las IP de las maquinas en otra red con las que se comunica la primer maquina victima
