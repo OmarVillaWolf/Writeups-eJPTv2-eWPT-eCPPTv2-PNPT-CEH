@@ -26,20 +26,22 @@ meterpreter❯
 	❯ Ctrl + z             # Para pasar la sesion a segundo plano
 
 
-4. # Redireccionaremos todo el trafico de una interfaz a nuestra maquina de atacante  
-msf6 post(multi/manage/shell_to_meterpreter) ❯ route add <IP> <Mask> <ID>
+4. # Nos salimos de la sesion de Meterpreter
+❯ sessions                   # Mirar los ID de las sessiones que tenemos activas 
+# Redireccionaremos todo el trafico de una interfaz a nuestra maquina de atacante en Metasploit  
+❯ route add <IP> <Mask> <ID>
 	# IP = Colocamos la direccion IP de la interfaz a la que no llegamos 
 	# Mask = Colocamos la mascara de red de esa IP (255.255.255.0)
 	# ID = Colocamos el ID de la sesion que esta en segundo plano 
 ```
 
 ```bash 
-5. # Ahora haremos el Port Forwarding (Traernos un puerto especifico a nuestra maquina de atacante)
-msf6 post(multi/manage/shell_to_meterpreter) ❯ sessions -l                  # l = ele
-msf6 post(multi/manage/shell_to_meterpreter) ❯ sessions -i <ID>             # ID = Identificador de la sesion 
+5. # Ahora haremos el Port Forwarding (Traernos un puerto especifico a nuestra maquina de atacante) en Metasploit
+❯ sessions -l                  # Listas las sesiones activas 'l = ele'
+❯ sessions -i <ID>             # Retomas la sesion activa 'ID = Identificador de la sesion' 
 
 
-# Regresamos al Meterpreter 
+# Regresamos a la sesion de Meterpreter y hacemos el 'Port Forwarding'
 meterpreter❯ portfwd add -l <PORT_Atacante> -p <PORT_Victima> -r <IP_Victima>
 	# l = ele
 	# Port_Atacante = Puerto que vamos a abrir de nuestra maquina de atacante 
