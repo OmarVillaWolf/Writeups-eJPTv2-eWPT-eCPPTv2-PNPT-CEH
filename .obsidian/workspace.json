@@ -266,6 +266,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6f4edb06cba4b4cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/1 Bash/2 Pentesting.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 15
@@ -393,13 +406,15 @@
   },
   "active": "a5b38df5cfd9f97f",
   "lastOpenFiles": [
-    "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+    "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
+    "0 Com Lin & Win/1 Bash/2 Pentesting.md",
+    "0 Com Lin & Win/1 Bash/1 Basic.md",
     "2 Tools/Nmap.md",
     "3.2 Metasploit/5 MSF Explotation.md",
     "1 Ports/445 - SMB.md",
     "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "5.2 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
     "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
@@ -417,8 +432,6 @@
     "3.2 Metasploit/1 Metasploit.md",
     "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
     "3.3 Explotation/2 Linux/1 Port-Scanning.md",
-    "3.3 Explotation/2 Linux/2 vsFTPd.md",
-    "3.3 Explotation/2 Linux/3 PHP.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "Z Imagenes/Hacking/SSRF.png",
     "Z Imagenes/Hacking/Piv2.png",
