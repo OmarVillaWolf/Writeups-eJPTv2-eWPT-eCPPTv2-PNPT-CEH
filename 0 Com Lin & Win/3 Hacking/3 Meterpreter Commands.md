@@ -53,12 +53,13 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ cat file.txt               # Miramos el contenido de un archivo 
 ```
 
-## Para hacer Pivoting con Metasploit
+## Para hacer Pivoting con Metasploit (Traes puertos individuales de la maquina victima)
 
 ```bash 
 ❯ arp                                     # Barrido ARP en la direccion IP dentro de Meterpreter, podremos ver las IP de las maquinas en otra red con las que se comunica la primer maquina victima
 ❯ shell                                   # Coloque una 'shell' 
 	❯ ipconfig                           # Mirar la IP de nuestra interfaz 
+	❯ Ctrl + z                           # Regresamos a la sesion de Meterpreter 
 
 1. Agregar la IP a la tabla de ruteo en Meterpreter y la conectividad es dentro de Metasploit
 ❯ run autoroute -s IP.0/24                # Agregas la IP a la tabla de ruteo para alcanzar la nueva red
