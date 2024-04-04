@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 PrivEsc Lin & Win/2 Linux/Hack4u/4. Path Hijacking.md",
+                "file": "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/80.1 WordPress.md",
+                "file": "5.1 HTB - Machines/2 Medium/14 Poison.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -190,6 +190,19 @@
             }
           },
           {
+            "id": "c7f3767ae45b1120",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "a5b38df5cfd9f97f",
             "type": "leaf",
             "state": {
@@ -240,9 +253,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b4bf23d7c716031d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 15
       }
     ],
     "direction": "vertical"
@@ -327,7 +353,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 PrivEsc Lin & Win/2 Linux/Hack4u/4. Path Hijacking.md"
+                "file": "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md"
               }
             }
           },
@@ -365,34 +391,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "dfc98f7974ada852",
+  "active": "a5b38df5cfd9f97f",
   "lastOpenFiles": [
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "5.2 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
+    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
     "2 Tools/Nmap.md",
+    "3.2 Metasploit/5 MSF Explotation.md",
+    "1 Ports/445 - SMB.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "5.2 Vulhub - Machines/1 Easy/0 DarkHole 1.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/4. Path Hijacking.md",
+    "2 Tools/Hydra.md",
+    "5.1 HTB - Machines/2 Medium/14 Poison.md",
+    "Recomendacion.md",
+    "1 Ports/80, 443 - HTTP, HTTPS.md",
     "1 Ports/80.1 WordPress.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "3.2 Metasploit/5 MSF Explotation.md",
     "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "3.2 Metasploit/3 MSF Client-Side Attacks.md",
     "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
     "3.2 Metasploit/1 Metasploit.md",
-    "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
     "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
-    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
     "3.3 Explotation/2 Linux/1 Port-Scanning.md",
     "3.3 Explotation/2 Linux/2 vsFTPd.md",
     "3.3 Explotation/2 Linux/3 PHP.md",
-    "3.3 Explotation/2 Linux/4 Samba.md",
-    "2 Tools/Hydra.md",
-    "Recomendacion.md",
-    "2 Tools/John the Ripper.md",
-    "0 Com Lin & Win/3 Hacking/5 Netcat Commands.md",
-    "1 Ports/135 - RPC.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "Z Imagenes/Hacking/SSRF.png",
     "Z Imagenes/Hacking/Piv2.png",
