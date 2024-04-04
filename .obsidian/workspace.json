@@ -281,7 +281,7 @@
             }
           }
         ],
-        "currentTab": 15
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -366,7 +366,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md"
+                "file": "Recomendacion.md"
               }
             }
           },
@@ -404,10 +404,10 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "a5b38df5cfd9f97f",
+  "active": "00246a3556fd30a3",
   "lastOpenFiles": [
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "7 Hack4u/6 Pivoting/3 Piv - Metasploit.md",
     "0 Com Lin & Win/1 Bash/2 Pentesting.md",
     "0 Com Lin & Win/1 Bash/1 Basic.md",
