@@ -11,7 +11,7 @@
 4. Usar los scripts de Nmap para los diferentes puertos (FTP, SMB, etc...)
 5. Usar Metasploit (Auxiliar, Exploit)
 6. Usar John the Ripper, Hashcat 
-7. SMB 445 (Nmap, Enum4linux, SmbMap, SmbClient, Crackmapexec) - Puerto 135 (RPCClient)
+7. SMB 445 (Nmap, Enum4linux, SmbMap, SmbClient, Crackmapexec, Hydra, Metasploit 'smb_login') - Puerto 135 (RPCClient)
 	1. Despues de tener un usuario y passwd validos, nos loggeamos de la siguiente manera:
 		1. Consola: psexec 
 		2. Metasploit: psexec (hashdump)
