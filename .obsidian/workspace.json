@@ -32,19 +32,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "b00cddabb0a19309",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5.1 HTB - Machines/eJPTv2/2 Medium/9 Union.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
         ],
         "currentTab": 1
@@ -76,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "load_file",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -165,8 +152,8 @@
   },
   "active": "16f747290ec46230",
   "lastOpenFiles": [
-    "5.1 HTB - Machines/eJPTv2/2 Medium/9 Union.md",
     "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
+    "5.1 HTB - Machines/eJPTv2/2 Medium/9 Union.md",
     "1 Ports/3306 - MYSQL.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi/1 Validation.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi",
