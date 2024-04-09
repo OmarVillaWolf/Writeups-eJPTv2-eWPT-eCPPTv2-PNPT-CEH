@@ -16,7 +16,7 @@
 		1. Consola: psexec 
 		2. Metasploit: psexec (hashdump)
 			1. Shell (net users)
-8. Hydra (FTP, SSH, SMB, MySQL, WordPress)
+8. Hydra (FTP, SSH, SMB, MySQL, WordPress) - La lista de usuarios tambien puede ser una lista de passwd en los ataques de Fuerza Bruta
 9. Gestores y sus tools (WordPress, Joomla, Magento, Drupal)
 10. MsfVenom (Subir archivos y crear la ReverShell)
 11. Pivoting 
