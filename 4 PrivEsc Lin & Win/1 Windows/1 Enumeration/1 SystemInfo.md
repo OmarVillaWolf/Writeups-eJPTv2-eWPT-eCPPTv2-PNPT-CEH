@@ -34,7 +34,7 @@ Tags: #LocalEnumeration #Windows #PrivEsc #Meterpreter
 
 ❯ hostname      # Muestar el nombre del usuario 
 
-❯ systeminfo    # Despliega toda la información del SO
+❯ systeminfo    # Despliega toda la información del SO como (Hotfix)
 
 ❯ wmic qfe get Caption,Description,HotfixID,InstalledOn     # Muestra información adicional 
 	# Buscar los security Update para ver cuando fue instalado 
