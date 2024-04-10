@@ -13,28 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi/1 Validation.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "16f747290ec46230",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
+                "file": "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -80,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -112,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/1 SQLI.md"
+                "file": "7 Hack4u/3 OWASP TOP 10/2 XSS.md"
               }
             }
           },
@@ -150,12 +135,18 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "16f747290ec46230",
+  "active": "e2b95b64ea4332b6",
   "lastOpenFiles": [
+    "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi/1 Validation.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/23 Delivery.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi/5 Pandora.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi/4 ToolBox.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi/3 NodeBlog.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi/2 GoodGames.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
     "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
     "5.1 HTB - Machines/eJPTv2/2 Medium/9 Union.md",
     "1 Ports/3306 - MYSQL.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi/1 Validation.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/SQLi",
     "1 Ports/80.6 Tomcat.md",
     "1 Ports/80.7 IIS - Webdav.md",
@@ -165,7 +156,6 @@
     "1 Ports/80.5 Apache - Shellshock.md",
     "1 Ports/80.1 WordPress.md",
     "1 Ports/80.3 Drupal.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
     "5.2 Vulhub - Machines/2 Medium/3 Symfonos5.md",
     "13 AWS - Hacking/1 AWS.md",
     "9 SQLi-Labs/Lab1.md",
@@ -174,11 +164,6 @@
     "8 PortSwigger-OWASP/10 SSRF/Lab 1.md",
     "8 PortSwigger-OWASP/5 XXE/Lab 5.md",
     "8 PortSwigger-OWASP/5 XXE/Lab 4.md",
-    "8 PortSwigger-OWASP/5 XXE/Lab 3.md",
-    "8 PortSwigger-OWASP/5 XXE/Lab 1.md",
-    "8 PortSwigger-OWASP/3.1 XSS/Lab 3.md",
-    "8 PortSwigger-OWASP/3.1 XSS/Lab 2.md",
-    "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
     "5.1 HTB - Machines/eWPTv2/1 Easy",
     "5.1 HTB - Machines/eWPTv2",
