@@ -152,6 +152,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 
 # Ahora vamos a la ruta y con el archov que hemos subido, podemos ejecutar comandos de la siguiente manera:
 	shell.php?cmd=whoami
+# Podemos meter los comandos pra crear la 'Revershell'
 ```
 
 ## Leer (cargar) archivos de la maquina victima 
