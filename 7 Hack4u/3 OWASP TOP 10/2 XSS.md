@@ -151,7 +151,7 @@ External JavaScript Source, podemos cargar código desde un servidor externo par
 ```
 
 ```javascript
-// 2. En nuestra maquina de atacante crearemos este archivo 'js' con el cual robaremos la Cookie de Sesion del usuario
+// 2. En nuestra maquina de atacante crearemos este archivo 'js' con el cual robaremos la Cookie de Sesion del usuario, o tambien  podemos hacer que el usuario victima (admin) haga una accion especifica en la web 
 
 ❯ nvim test.js                                                  // Creamos el archivo js
 
