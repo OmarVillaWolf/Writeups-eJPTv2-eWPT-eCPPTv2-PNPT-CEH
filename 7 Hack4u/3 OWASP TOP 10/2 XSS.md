@@ -36,7 +36,9 @@ Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en dond
 <img src/onerror=alert(1) />                                           /// Otra forma de hacerlo
 <img src/onerror=alert(document.cookie) />                             /// Mirar la cookie
 
-<iframe src="http://ejemplo.org/demo.html" height="400" width="800" name="demo">     /// Para agregar una pagina dentro de otra pagina con dimenciones 
+
+/// Para agregar una pagina dentro de otra pagina con dimenciones 
+<iframe src="http://ejemplo.org/demo.html" height="400" width="800" name="demo">     
   <p>Su navegador no es compatible con iframes</p>
 </iframe>
 ```
