@@ -1,6 +1,6 @@
 # Cross-Site Scripting
 
-Tags: #XSS #OWASP #Explotacion 
+Tags: #XSS #OWASP #Explotacion #XSS-Reflected #XSS-DOM #XSS-Stored
 
 Una vulnerabilidad **XSS** (**Cross-Site Scripting**) es un tipo de vulnerabilidad de seguridad informática que permite a un atacante ejecutar código malicioso en la página web de un usuario sin su conocimiento o consentimiento. Esta vulnerabilidad permite al atacante robar información personal, como nombres de usuario, contraseñas y otros datos confidenciales.
 
@@ -53,7 +53,7 @@ Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en dond
 ## Recibir información por medio de un 'Alert'  
 
 ```javascript
-// Podemos crear un script en donde nos devuelva el correo o algún dato a nuestra IP. 
+// Podemos crear un script en donde nos devuelva el correo o algún dato a nuestra IP. Para mandarlo por la url debemos de 'urlencodear' el codifo Javascript
 
 <script>
     var email = prompt("Por favor, introduce tu correo electronico para visualizar el post", "example@example.com");
