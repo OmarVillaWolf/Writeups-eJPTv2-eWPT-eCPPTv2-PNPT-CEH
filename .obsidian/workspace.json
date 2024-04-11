@@ -47,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/2 XSS.md"
+                "file": "7 Hack4u/3 OWASP TOP 10/1 SQLI.md"
               }
             }
           },
@@ -162,10 +162,10 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "53c383b02bf548b0",
+  "active": "c1c1ecbc02d22dc0",
   "lastOpenFiles": [
-    "7 Hack4u/3 OWASP TOP 10/7 CSRF bwapp.md",
     "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
+    "7 Hack4u/3 OWASP TOP 10/7 CSRF bwapp.md",
     "10 bWAPP/CSRF/Lab 4.md",
     "10 bWAPP/CSRF",
     "10 bWAPP",
