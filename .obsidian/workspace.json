@@ -73,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/2 XSS.md"
+                "file": "7 Hack4u/3 OWASP TOP 10/1 SQLI.md"
               }
             }
           },
@@ -188,8 +188,9 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "53c383b02bf548b0",
+  "active": "c1c1ecbc02d22dc0",
   "lastOpenFiles": [
+    "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
     "0 Com Lin & Win/2 Docker/7 Docker-Compose.md",
@@ -197,7 +198,6 @@
     "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
     "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/1 SQLi/1 Validation.md",
-    "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
     "5.2 Vulhub - Machines/Plantilla.md",
     "5.2 Vulhub - Machines/eWPT/1 MyExpense.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
