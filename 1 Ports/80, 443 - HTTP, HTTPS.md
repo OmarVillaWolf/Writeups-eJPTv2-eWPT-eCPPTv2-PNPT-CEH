@@ -37,28 +37,27 @@ como una puerta de enlace y no puede obtener una respuesta a tiempo.
 * 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
 soportada por el servidor.
 
-## Cabeceras (Headers)
+## Cabeceras 
 
 Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encabezados HTTP. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting en uso.
 
-### Request
+### Request Headers
 
-1. **GET / POST**: Es el método que nos ayuda a solicitar recursos, en el podemos encontrar el tipo
-de recurso, protocolo y la versión (HTTP/1.1)
-2. **Host**: Es la cabecera del servidor y lleva una IP o un dominio.
-3. **Cookie**: Identifica la sesión y su usuario
-4. **User-Agent**: Esta cabecera lleva la información del usuario, el tipo de navegador, su
-versión, sistema operativo, tipo y descripción del software.
-5. **Accept**: El tipo de texto que acepta como lo puede ser HTML, XML, e imágenes.
+1. **GET / POST**: Es el método que nos ayuda a solicitar recursos, en el podemos encontrar el tipo de recurso, protocolo y la versión (HTTP/1.1)
+2. **Host**: Es el hostname del servidor (\www.google.com)
+3. **Cookie**: Información almacenada del lado del cliente y envía de regreso a el servidor con cada petición
+4. **User-Agent**: Esta cabecera lleva la información del usuario, el tipo de navegador, su versión, sistema operativo, tipo y descripción del software por ejemplo: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:36.0) 
+5. **Accept**: El tipo de media que acepta el cliente como lo puede ser HTML, XML, JSON e imágenes en la respuesta (text/html, application/xhtml+xml)
 6. **Accept-Language**: Son los tipo de lenguaje que acepta
-7. **Accept-Encoding**: Los tipos de datos que acepta
-8. **Connection**: Es el estado de la conexión
+7. **Accept-Encoding**: Los tipos de datos que acepta (gzip, deflate)
+8. **Connection**: Es el estado de la conexión (keep-alive)
+9. **Authorization:** Credenciales de autenticación, si son requeridas. 
 
-### Response 
+### Response Headers
 
 1. **Código de estado**: 
-2. Server: Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
-3. Set-Cookie: Es la cookie que ya teníamos anteriormente y la volvió a colocar para podernos
+2. **Server:** Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
+3. **Set-Cookie:** Es la cookie que ya teníamos anteriormente y la volvió a colocar para podernos
 autenticar
 4. **Content-Type**: Regresa código HTML de código texto, la puedes modificar para que te
 acepte otro tipo de texto como Json
@@ -67,31 +66,33 @@ acepte otro tipo de texto como Json
 ## Métodos
 
 ```bash 
-1. GET
+1. GET: Se usa para recuperar datos del servidor. Solicita el recurso especificado en la URL y no modifica el estado del servidor. Es un metodo seguro, lo que significa que realizar la misma solicitud GET varias veces no deberia tener ningun efecto secundario.
 
-1. HEAD
-
-1. POST
+1. POST: Se utiliza para enviar datos que seran procesado por el servidor. Normalmente incluye dat6os en el cuerpo de la solicitud, y el servidor puede realizar acciones basadas en esos datos. Las solicitudes POST pueden provocar cambios en el estado del servidor.
 ❯ curl -s -X POST http://❮IP❯/login.php -d "name=omar&password=passwd" -v 
 # Podemos mandar data por este método y mirar las cabeceras
 
-1. PUT
+1. PUT: Se usa para actualizar o crear un recurso en el servidor en la URL especificada. Reemplaza todo el recurso con la nueva representacion proporcionada en el cuerpo de la solicitud. Si el recurso no existe, PUT puede crearlo.
 ❯ curl -s -X PUT http://❮IP❯/cmd.txt -d @cmdasp.aspx
 	# d = Subir una data que es indicada con el @ y sera el archivo de la cdm
 ❯ curl http://IP/uploads/ --upload-file file.txt  # Subir un archivo a un directorio especifico 
 
-1. MOVE 
+1. DELETE: Se utiliza para eliminar del servidor el recurso especificado por la URL. Despues de una solicitud de eliminacion ecitosa, el recurso ya no estara disponible en esa URL.
+❯ curl -s -X DELETE http://❮IP❯/uploads/file.txt    # Para borrar un archivo en un directorio especifico 
+
+1. PATCH: Se utiliza para aplicar modificaciones parciales a un recurso. Es similar al metodo PUT, pero solo actualiza partes especificas del recurso en lugar de reemplazar todo el recurso.
+
+1. HEAD: Es similar al metodo GET, pero solo recupera los encabezados de respueata y no el cuerpo de la respuesta. A menudo se usa para verificar los encabezados de cosas como la existencia de recursos o las fechas de modificacion.
+
+1. OPTIONS: Se utiliza para recuperar informacion sobre las opciones de comunicacion disponibles para el recurso de destino. Permite a los clientes determinar los metodos y encabezados admitidos para un recurso en particular. 
+❯ curl -s -X OPTIONS http://❮IP❯/post.php -v
+# Podemos ver los métodos permitidos en esa página o directorio 
+
+2. MOVE 
 ❯ curl -s -X MOVE http://❮IP❯/cmd.txt -H "Destination:http://IP/cmd.aspx"
 # Si no nos acepta subir la extension anterior, le cambiamos la extension para subir el archivo y en la ruta donde se encuentra lo movemos a la extension del 'aspx'
 
-1. DELETE
-❯ curl -s -X DELETE http://❮IP❯/uploads/file.txt    # Para borrar un archivo en un directorio especifico 
-
 1. CONNECT
-
-1. OPTIONS
-❯ curl -s -X OPTIONS http://❮IP❯/post.php -v
-# Podemos ver los métodos permitidos en esa página o directorio 
 
 1. TRACE
 ```
