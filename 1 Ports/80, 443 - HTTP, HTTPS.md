@@ -8,35 +8,6 @@ Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 #Metodos
 1. svn checkout https://github.com/vulhub/vulhub/trunk/openssl/CVE-2014-0160
 ```
 
-## Códigos de estado 
-
-* 200 ‘OK’: La solicitud ha tenido éxito.
-* 204 ’No content’: La petición se ha completado con éxito, pero su respuesta no tiene
-ningún contenido, aunque los encabezados pueden ser útiles.
-* 301 ‘Moved Permanently’: Significa que la URI del recurso solicitado ha sido cambiado.
-(Redirect)
-* 302 ‘Found’: Significa que el recurso de la URI solicitada ha sido cambiado temporalmente.
-* 304 ‘Not modified’: Esta es usada para propósitos de caché. Le indica al cliente que la
-respuesta no ha sido modificada.
-* 400 ‘Bad request’: Significa que el servidor no pudo interpretar la solicitud dada una
-sintaxis inválida.
-* 401 ‘Unauthorized’: Es necesario autenticar para obtener la respuesta solicitada.
-* 403 ‘Forbidden’: El cliente no posee los permisos necesarios para cierto contenido, por lo
-que el servidor rechaza la petición.
-* 404 Not Found: El servidor no pudo encontrar el contenido solicitado.
-* 405 ‘Method not allowed’: El método solicitado es conocido por el servidor pero ha sido
-deshabilitado y no puede ser utilizado (Cambiar de GET a POST)
-* 500 ‘Internal server error’: El servidor ha encontrado una situación que no sabe cómo
-manejarla.
-* 501 ‘Not implement’: El método solicitado no está soportado por el servidor y no puede ser
-manejado.
-* 503 ‘Service unavailable’ : El servidor no está listo para manejar la petición, problemas
-comunes es la caída por mantenimiento o está sobrecargado.
-* 504 ‘Gateway timeout’ : Esta respuesta de error es dada cuando el servidor está actuando
-como una puerta de enlace y no puede obtener una respuesta a tiempo.
-* 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
-soportada por el servidor.
-
 ## Cabeceras 
 
 Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encabezados HTTP. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting en uso.
@@ -53,15 +24,6 @@ Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encab
 8. **Connection**: Es el estado de la conexión (keep-alive)
 9. **Authorization:** Credenciales de autenticación, si son requeridas. 
 
-### Response Headers
-
-1. **Código de estado**: 
-2. **Server:** Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
-3. **Set-Cookie:** Es la cookie que ya teníamos anteriormente y la volvió a colocar para podernos
-autenticar
-4. **Content-Type**: Regresa código HTML de código texto, la puedes modificar para que te
-acepte otro tipo de texto como Json
-5. **Content-Length**: Longitud del contenido
 
 ## Métodos
 
@@ -96,6 +58,44 @@ acepte otro tipo de texto como Json
 
 1. TRACE
 ```
+
+### Response Headers
+
+1. **Código de estado**: 
+2. **Server:** Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
+3. **Set-Cookie:** Usa la cookie que ya teníamos anteriormente y la vuelve a reutilizar para subsecuentes requests.
+4. **Content-Type**: Regresa el contenido del tipo de media de la respuesta (text/html, application/Json)
+5. **Content-Length**: El tamaño del cuerpo de la respuesta en bytes
+6. **Cahce-Control:** Directivas del comportamiento 
+
+## Códigos de estado 
+
+* 200 ‘OK’: La solicitud ha tenido éxito.
+* 204 ’No content’: La petición se ha completado con éxito, pero su respuesta no tiene
+ningún contenido, aunque los encabezados pueden ser útiles.
+* 301 ‘Moved Permanently’: Significa que la URI del recurso solicitado ha sido cambiado.
+(Redirect)
+* 302 ‘Found’: Significa que el recurso de la URI solicitada ha sido cambiado temporalmente.
+* 304 ‘Not modified’: Esta es usada para propósitos de caché. Le indica al cliente que la
+respuesta no ha sido modificada.
+* 400 ‘Bad request’: Significa que el servidor no pudo interpretar la solicitud dada una
+sintaxis inválida.
+* 401 ‘Unauthorized’: Es necesario autenticar para obtener la respuesta solicitada.
+* 403 ‘Forbidden’: El cliente no posee los permisos necesarios para cierto contenido, por lo
+que el servidor rechaza la petición.
+* 404 Not Found: El servidor no pudo encontrar el contenido solicitado.
+* 405 ‘Method not allowed’: El método solicitado es conocido por el servidor pero ha sido
+deshabilitado y no puede ser utilizado (Cambiar de GET a POST)
+* 500 ‘Internal server error’: El servidor ha encontrado una situación que no sabe cómo
+manejarla.
+* 501 ‘Not implement’: El método solicitado no está soportado por el servidor y no puede ser
+manejado.
+* 503 ‘Service unavailable’ : El servidor no está listo para manejar la petición, problemas
+comunes es la caída por mantenimiento o está sobrecargado.
+* 504 ‘Gateway timeout’ : Esta respuesta de error es dada cuando el servidor está actuando
+como una puerta de enlace y no puede obtener una respuesta a tiempo.
+* 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
+soportada por el servidor.
 
 ## Buscar en la Web
 
