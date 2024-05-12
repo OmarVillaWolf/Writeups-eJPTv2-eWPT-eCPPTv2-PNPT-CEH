@@ -8,10 +8,6 @@ Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 #Metodos
 1. svn checkout https://github.com/vulhub/vulhub/trunk/openssl/CVE-2014-0160
 ```
 
-## Cabeceras 
-
-Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encabezados HTTP. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting en uso.
-
 ### Request Headers
 
 1. **GET / POST**: Es el método que nos ayuda a solicitar recursos, en el podemos encontrar el tipo de recurso, protocolo y la versión (HTTP/1.1)
@@ -23,7 +19,6 @@ Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encab
 7. **Accept-Encoding**: Los tipos de datos que acepta (gzip, deflate)
 8. **Connection**: Es el estado de la conexión (keep-alive)
 9. **Authorization:** Credenciales de autenticación, si son requeridas. 
-
 
 ## Métodos
 
@@ -47,7 +42,7 @@ Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encab
 1. HEAD: Es similar al metodo GET, pero solo recupera los encabezados de respueata y no el cuerpo de la respuesta. A menudo se usa para verificar los encabezados de cosas como la existencia de recursos o las fechas de modificacion.
 
 1. OPTIONS: Se utiliza para recuperar informacion sobre las opciones de comunicacion disponibles para el recurso de destino. Permite a los clientes determinar los metodos y encabezados admitidos para un recurso en particular. 
-❯ curl -s -X OPTIONS http://❮IP❯/post.php -v
+❯ curl -v -s -X OPTIONS http://❮IP❯/post.php 
 # Podemos ver los métodos permitidos en esa página o directorio 
 
 2. MOVE 
@@ -59,6 +54,7 @@ Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encab
 1. TRACE
 ```
 
+
 ### Response Headers
 
 1. **Código de estado**: 
@@ -66,7 +62,7 @@ Cuando realizamos solicitudes al servidor web, el servidor devuelve varios encab
 3. **Set-Cookie:** Usa la cookie que ya teníamos anteriormente y la vuelve a reutilizar para subsecuentes requests.
 4. **Content-Type**: Regresa el contenido del tipo de media de la respuesta (text/html, application/Json)
 5. **Content-Length**: El tamaño del cuerpo de la respuesta en bytes
-6. **Cahce-Control:** Directivas del comportamiento 
+6. **Cache-Control:** Directivas del comportamiento 
 
 ## Códigos de estado 
 
@@ -96,6 +92,7 @@ comunes es la caída por mantenimiento o está sobrecargado.
 como una puerta de enlace y no puede obtener una respuesta a tiempo.
 * 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
 soportada por el servidor.
+
 
 ## Buscar en la Web
 
@@ -182,7 +179,7 @@ Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 ```
 
 ```bash
-❯ curl http://❮IP❯ -v                    # Miramos los headers de la pagina web 
+❯ curl http://❮IP❯ -v                    # Miramos los headers de la pagina web 'Request '
 
 ❯ curl -s -X GET http://❮IP❯ -I          # Miramos las cabeceras de respuesta de la pagina web 
 
