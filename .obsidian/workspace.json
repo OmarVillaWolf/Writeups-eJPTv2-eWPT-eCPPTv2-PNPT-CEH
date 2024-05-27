@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/1 SQLi/2 GoodGames.md",
+                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,20 +21,7 @@
             }
           },
           {
-            "id": "c30c1c868d3f7cf0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/4 Web/1 Enumeration.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a28263e31bf0d571",
+            "id": "3fc78141df2f17f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -76,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "xxser",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -132,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/4 Web/1 Enumeration.md"
+                "file": "1 Ports/80, 443 - HTTP, HTTPS.md"
               }
             }
           },
@@ -170,37 +157,37 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "c30c1c868d3f7cf0",
+  "active": "3fc78141df2f17f7",
   "lastOpenFiles": [
+    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
+    "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/1 SQLi/2 GoodGames.md",
+    "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
     "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "0 Com Lin & Win/4 Web/1 Enumeration.md",
+    "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
+    "2 Tools/XSSer.md",
+    "7 Hack4u/3 OWASP TOP 10/2 XSS Sudo.co.il.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 3.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 2.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
+    "7 Hack4u/3 OWASP TOP 10/9 SSTI.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/7 GoodGames.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/6 NunChucks.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/2 XSS/1.md",
+    "2 Tools/BurpSuite.md",
+    "2 Tools/Nikto.md",
+    "0 Com Lin & Win/4 Web/1 Passive Enum.md",
+    "2 Tools/OWASP ZAP.md",
+    "0 Com Lin & Win/4 Web/Google Hacking.md",
     "0 Com Lin & Win/4 Web",
     "0 Com Lin & Win/3 Hacking/Web.md",
     "1 Ports/0 Glosario.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/1 SQLi/2 GoodGames.md",
-    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
-    "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
     "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/1 SQLi/1 Validation.md",
-    "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
-    "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
     "5.1 HTB - Machines/eJPTv2/2 Medium/14 Poison.md",
     "7 Hack4u/3 OWASP TOP 10/8 SSRF.md",
-    "7 Hack4u/3 OWASP TOP 10/7 CSRF.md",
-    "7 Hack4u/3 OWASP TOP 10/7 CSRF bwapp.md",
-    "7 Hack4u/3 OWASP TOP 10/2 XSS Sudo.co.il.md",
-    "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
-    "10 bWAPP/CSRF/Lab 4.md",
     "10 bWAPP/CSRF",
     "10 bWAPP",
-    "9 AWS - Hacking/1 AWS.md",
-    "0 Com Lin & Win/3 Hacking/Google Hacking.md",
-    "11 XSS-Challenges-Sudo.co/All labs.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "0 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
-    "0 Com Lin & Win/2 Docker/7 Docker-Compose.md",
-    "0 Com Lin & Win/2 Docker/6 Port Forw y Mount.md",
-    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
     "5.2 Vulhub - Machines/eWPT",
     "5.2 Vulhub - Machines/eJPT",
     "5.1 HTB - Machines/eWPTv2/1 Easy/2 XSS",
