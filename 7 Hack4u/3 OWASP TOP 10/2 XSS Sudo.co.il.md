@@ -20,6 +20,7 @@ Tags: #XSS #Challenges
 // Debemos de cerrar el campo valor e inyectar el codigo 
 
 "><script>alert("XSS")</script>"              // Debemos de cerrar el campo 'valor' para poder inyectar codigo JavaScript
+"><script>alert("XSS")</script><!- -          // <!- - Es un comentario, '--' Asi deberia de ir, seguidos, esto lo hacemo si el SXX se acontece en un campo de login, por lo que el comentario es para evitar el campo de password
 " onfocus="alert(1)" autofocus="              // Otra manera de colocar alert 
 ```
 
