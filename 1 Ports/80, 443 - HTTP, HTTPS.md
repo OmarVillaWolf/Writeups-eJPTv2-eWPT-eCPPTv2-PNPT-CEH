@@ -25,33 +25,33 @@ Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 #Metodos
 ```bash 
 1. GET: Se usa para recuperar datos del servidor. Solicita el recurso especificado en la URL y no modifica el estado del servidor. Es un metodo seguro, lo que significa que realizar la misma solicitud GET varias veces no deberia tener ningun efecto secundario.
 
-1. POST: Se utiliza para enviar datos que seran procesado por el servidor. Normalmente incluye dat6os en el cuerpo de la solicitud, y el servidor puede realizar acciones basadas en esos datos. Las solicitudes POST pueden provocar cambios en el estado del servidor.
+2. POST: Se utiliza para enviar datos que seran procesado por el servidor. Normalmente incluye dat6os en el cuerpo de la solicitud, y el servidor puede realizar acciones basadas en esos datos. Las solicitudes POST pueden provocar cambios en el estado del servidor.
 ❯ curl -s -X POST http://❮IP❯/login.php -d "name=omar&password=passwd" -v 
 # Podemos mandar data por este método y mirar las cabeceras
 
-1. PUT: Se usa para actualizar o crear un recurso en el servidor en la URL especificada. Reemplaza todo el recurso con la nueva representacion proporcionada en el cuerpo de la solicitud. Si el recurso no existe, PUT puede crearlo.
+3. PUT: Se usa para actualizar o crear un recurso en el servidor en la URL especificada. Reemplaza todo el recurso con la nueva representacion proporcionada en el cuerpo de la solicitud. Si el recurso no existe, PUT puede crearlo.
 ❯ curl -s -X PUT http://❮IP❯/cmd.txt -d @cmdasp.aspx
 	# d = Subir una data que es indicada con el @ y sera el archivo de la cdm
 ❯ curl http://IP/uploads/ --upload-file file.txt  # Subir un archivo a un directorio especifico 
 
-1. DELETE: Se utiliza para eliminar del servidor el recurso especificado por la URL. Despues de una solicitud de eliminacion ecitosa, el recurso ya no estara disponible en esa URL.
+4. DELETE: Se utiliza para eliminar del servidor el recurso especificado por la URL. Despues de una solicitud de eliminacion ecitosa, el recurso ya no estara disponible en esa URL.
 ❯ curl -s -X DELETE http://❮IP❯/uploads/file.txt    # Para borrar un archivo en un directorio especifico 
 
-1. PATCH: Se utiliza para aplicar modificaciones parciales a un recurso. Es similar al metodo PUT, pero solo actualiza partes especificas del recurso en lugar de reemplazar todo el recurso.
+5. PATCH: Se utiliza para aplicar modificaciones parciales a un recurso. Es similar al metodo PUT, pero solo actualiza partes especificas del recurso en lugar de reemplazar todo el recurso.
 
-1. HEAD: Es similar al metodo GET, pero solo recupera los encabezados de respueata y no el cuerpo de la respuesta. A menudo se usa para verificar los encabezados de cosas como la existencia de recursos o las fechas de modificacion.
+6. HEAD: Es similar al metodo GET, pero solo recupera los encabezados de respueata y no el cuerpo de la respuesta. A menudo se usa para verificar los encabezados de cosas como la existencia de recursos o las fechas de modificacion.
 
-1. OPTIONS: Se utiliza para recuperar informacion sobre las opciones de comunicacion disponibles para el recurso de destino. Permite a los clientes determinar los metodos y encabezados admitidos para un recurso en particular. 
+7. OPTIONS: Se utiliza para recuperar informacion sobre las opciones de comunicacion disponibles para el recurso de destino. Permite a los clientes determinar los metodos y encabezados admitidos para un recurso en particular. 
 ❯ curl -v -s -X OPTIONS http://❮IP❯/post.php 
 # Podemos ver los métodos permitidos en esa página o directorio 
 
-2. MOVE 
+8. MOVE 
 ❯ curl -s -X MOVE http://❮IP❯/cmd.txt -H "Destination:http://IP/cmd.aspx"
 # Si no nos acepta subir la extension anterior, le cambiamos la extension para subir el archivo y en la ruta donde se encuentra lo movemos a la extension del 'aspx'
 
-1. CONNECT
+9. CONNECT
 
-1. TRACE
+10. TRACE
 ```
 
 
