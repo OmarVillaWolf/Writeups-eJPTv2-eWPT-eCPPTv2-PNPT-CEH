@@ -1,6 +1,6 @@
 # Windows Commands
 
-Tags: #Windows #Comandos
+Tags: #Windows #Comandos #Powershell 
 
 ## Comandos terminal Windows
 
@@ -9,7 +9,7 @@ Tags: #Windows #Comandos
 ```
 
 ```bash 
-❯ systeminfo                                 # Nos muestra la informacion de Windows (Parches 'Hotfix', )
+❯ systeminfo                                 # Nos muestra la informacion de Windows (Parches 'Hotfix', etc...)
 ❯ sysinfo                                    # Nos muestra algunos detalles de Windows
 ```
 
