@@ -2,6 +2,17 @@
 
 Tags: #Powershell #Comandos 
 
+
+## Comandos terminal Powershell
+
+```bash 
+❯ 
+❯ Get-AdUser -Filter *                      # Nos muestra el Nombre, Objeto, SID, DistinguishedName (OU) 
+❯ Get-AdGroup -Filter *                     # Nos muestra todos los grupos 
+❯ Get-AdOrganizationalUnit -Filter *        # Muestra los OU, Politicas de grupo 
+```
+
+
 ## Powershell-empire
 
 ```bash 
