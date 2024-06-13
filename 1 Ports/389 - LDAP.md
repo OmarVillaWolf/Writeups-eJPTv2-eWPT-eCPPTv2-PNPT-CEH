@@ -22,8 +22,14 @@ A continuación, se proporciona el enlace directo al proyecto de GitHub que nos 
 
 -   **LDAP-Injection-Vuln-App**: [https://github.com/motikan2010/LDAP-Injection-Vuln-App](https://github.com/motikan2010/LDAP-Injection-Vuln-App)
 
+## LDAP
 
-## Comandos
+```bash 
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-ldap   # Web con comandos LDAP
+
+❯ ldapsearch -x -h <IP> -s base namingcontexts         # Hacemos un 'simple authentication' para enumerar 
+❯ ldapsearch -x -h <IP> -b 'DC=example'                # Enumeramos el dominio 
+```
 
 ```bash
 ❯ ldapsearch -x -H ldap://localhost -b dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w admin 'cn=admin'   # Podemos ver informacion del usuario admin 
@@ -71,6 +77,7 @@ A continuación, se proporciona el enlace directo al proyecto de GitHub que nos 
 ```
 
 ## Inyecciones
+
 ```bash
 ❯ id=a* &password=*                                  # Nos ayuda a decir que existe cualquier tipo de data y por ende nos ayuda a enumerar usuarios validos
 
