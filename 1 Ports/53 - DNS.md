@@ -43,7 +43,7 @@ Registros DNS
 * SRV        -      Registros de servicio 
 * PTR        -      Resuelve una dirección IP de un hostname 
 
-## Comandos 
+## DNS
 
 * Haremos un ataque de transferencia de Zona Completa
 * Lo haremos para poder encontrar los subdominios de la Zona.
