@@ -8,6 +8,7 @@ Tags: #Powershell #Comandos
 ```bash 
 ❯ cd .\Documents                         # Cambiar de directorio 
 	❯ cd C:\\                           # Cambiamos al directorio principal 'C'
+	❯ cd PROGRA-1                       # Para entrar al primer directorio sin escribir todo el nombre con espacios
 ❯ cls                                    # Limpiar la pantalla 
 ❯ dir                                    # Mostrar el contenido del dir actual 
 ❯ type user.txt                          # Mirar el contenido de un archivo 
