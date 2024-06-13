@@ -290,5 +290,8 @@ Para las monturas en Docker serian los siguientes comandos
 ```
 
 ```bash
-❯ upx <FILE>                              # Podemos bajarle el peso al archivo para transferirlo a la maquina victima mas rapido
+❯ du -hc <File>                           # Ver el peso del archivo 
+
+❯ go build -ldflags "-s -w"               # Bajar el peso mientras se compila un archivo con 'go'
+❯ upx <File>                              # Bajar el peso al archivo para transferirlo a la maquina victima mas rapido
 ```
