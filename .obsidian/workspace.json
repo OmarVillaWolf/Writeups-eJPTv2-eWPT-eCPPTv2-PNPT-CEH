@@ -8,46 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "29f2cdbfea62ba1a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7.1 AD/2 PT/1 Enumeration/4 PowerView.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "1b6a2c3925005b49",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b25e2fb2d7035b42",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md",
+                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md"
+                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md"
               }
             }
           },
@@ -170,14 +143,18 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "b25e2fb2d7035b42",
+  "active": "1b6a2c3925005b49",
   "lastOpenFiles": [
-    "7.1 AD/2 PT/1 Enumeration/4 PowerView.md",
+    "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
+    "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
+    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
+    "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
+    "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
     "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md",
+    "7.1 AD/2 PT/1 Enumeration/4 PowerView.md",
     "7.1 AD/2 PT/2 Priv Escalation",
     "7.1 AD/2 PT/1 Enumeration/2 Passwd Spraying.md",
     "7.1 AD/2 PT/1 Enumeration/3 BloodHound.md",
-    "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
     "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "1 Ports/5985-6 - WINRM.md",
     "1 Ports/445 - SMB.md",
@@ -195,14 +172,10 @@
     "7.1 AD/1 Intro/3 OUs, Autenticacion,.md",
     "7.1 AD/2 PT",
     "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
     "7 Hack4u/5 Pivoting/3 Piv - Metasploit.md",
     "7.1 AD/1 Intro",
     "7.1 AD",
     "7 Hack4u/5 Pivoting/2 Piv - Chisel - Port Forwarding.md",
-    "7 Hack4u/5 Pivoting/1 Pivoting.md",
-    "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
     "0 Com Lin & Win/4 Web",
     "10 bWAPP/CSRF",
     "10 bWAPP",
