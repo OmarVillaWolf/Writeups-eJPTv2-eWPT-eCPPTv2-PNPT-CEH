@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
+                "file": "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md"
+                "file": "7 Hack4u/3 OWASP TOP 10/5 RFI.md"
               }
             }
           },
@@ -145,9 +145,9 @@
   },
   "active": "1b6a2c3925005b49",
   "lastOpenFiles": [
+    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
     "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
     "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
-    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
     "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
     "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
     "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md",
