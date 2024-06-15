@@ -4,23 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "589646c4283e74f0",
+        "id": "70cf840e8b28718a",
         "type": "tabs",
         "children": [
           {
-            "id": "1b6a2c3925005b49",
+            "id": "93b5e49c33ec9f75",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
+                "file": "7.1 AD/2 PT/3 Lateral Movement/1 Pass-The-Hash.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "caba37f622d39fdb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/5 RFI.md"
+                "file": "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md"
               }
             }
           },
@@ -143,22 +157,26 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "1b6a2c3925005b49",
+  "active": "caba37f622d39fdb",
   "lastOpenFiles": [
-    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
+    "7.1 AD/2 PT/2 Priv Escalation/2 Kerberoasting.md",
+    "7.1 AD/2 PT/3 Lateral Movement/1 Pass-The-Hash.md",
+    "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md",
+    "7.1 AD/2 PT/3 Lateral Movement",
+    "7.1 AD/2 PT/1 Enumeration/2 Passwd Spraying.md",
+    "7.1 AD/2 PT/1 Enumeration/4 PowerView.md",
+    "2 Tools/John the Ripper.md",
+    "1 Ports/88 Kerberos.md",
     "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
+    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
     "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
     "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
     "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
-    "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md",
-    "7.1 AD/2 PT/1 Enumeration/4 PowerView.md",
     "7.1 AD/2 PT/2 Priv Escalation",
-    "7.1 AD/2 PT/1 Enumeration/2 Passwd Spraying.md",
     "7.1 AD/2 PT/1 Enumeration/3 BloodHound.md",
     "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "1 Ports/5985-6 - WINRM.md",
     "1 Ports/445 - SMB.md",
-    "1 Ports/88 Kerberos.md",
     "2 Tools/Hashcat.md",
     "1 Ports/53 - DNS.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
@@ -171,16 +189,12 @@
     "7.1 AD/1 Intro/2 Usuarios y Grupos.md",
     "7.1 AD/1 Intro/3 OUs, Autenticacion,.md",
     "7.1 AD/2 PT",
-    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "7 Hack4u/5 Pivoting/3 Piv - Metasploit.md",
     "7.1 AD/1 Intro",
     "7.1 AD",
-    "7 Hack4u/5 Pivoting/2 Piv - Chisel - Port Forwarding.md",
     "0 Com Lin & Win/4 Web",
     "10 bWAPP/CSRF",
     "10 bWAPP",
     "5.2 Vulhub - Machines/eWPT",
-    "5.2 Vulhub - Machines/eJPT",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "Z Imagenes/Hacking/SSRF.png",
