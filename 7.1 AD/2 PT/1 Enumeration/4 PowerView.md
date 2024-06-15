@@ -29,7 +29,8 @@ Tags: #AD #Powershell #Enumeracion #Windows
 ❯ Get-DomainUser                                  # Muestra informacion de los usuarios 
 ❯ Get-DomainUser | select samaccount, objectsid   # Muestra todos los usuarios 
 ❯ Get-DomainUser -Identity <Username>             # Muestra la info de un usuario en particular 
-	Get-DomainUser -Identity <Username> -Properties DisplayName,MemberOf,Objectsis,useraccountcontrol | Format list 
+	Get-DomainUser -Identity <Username> -Properties DisplayName,MemberOf,Objectsis,useraccountcontrol | fl
+		# fl = Format List 
 
 ❯ Get-NetUser -sPN | select samaccountname, servicepriuncipalname  # Usuarios que podemos encontrar por kerberos
 ❯ Get-NetUser -PreauthNotRequired | select samaccountname, useraccountcontrol # Usuarios que podemos encontrar por ASRP 
