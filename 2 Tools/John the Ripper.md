@@ -1,6 +1,6 @@
 # John the Ripper
 
-Tags: #Hash #BruteForce #John 
+Tags: #Hash #BruteForce #John #Fcrackzip #Crackpkcs12 #PFX 
 
 Es una herramienta de prueba de penetración que se utiliza para probar la seguridad de las passwd. Esta diseñado para descifrar passwd encriptadas en sistemas y aplicaciones.
 
@@ -66,14 +66,6 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 ```
 
 ```bash 
-❯ fcrackzip -p /usr/share/wordlists/rockyou.txt -b -u File.zip -D # Nos crackea el hash y nos proporciona la passwd 
-	# p = Init-passwd-string 
-	# b = Bruteforce
-	# D = Dicctionary 
-	# u = Use-unzip 
-```
-
-```bash 
 # Esto se hace cuando tenemos un id_rsa con 'passphrase'
 ❯ ssh2jhon id_rsa > jhon.txt                                          # Pasamos el id_rsa a hash con la passwd cifrada 
 	❯ jhon jhon.txt --wordlist=/usr/share/wordlists/rockyou.txt      # Para encontrar la frase con un diccionario 
@@ -82,4 +74,36 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 ```bash 
 ❯ keepass2john file.kdbx                 # Para pasar un archivo Keepass a Hash con la passwd cifrada 
 	❯ jhon -w:/usr/share/wordlists/rockyou.txt hash # Usando jhon y el diccionario rockyou, romperemos el hash obtenido anteriormente
+```
+
+## Fcrackzip
+
+```bash 
+❯ fcrackzip -p /usr/share/wordlists/rockyou.txt -b -u File.zip -D # Nos crackea el hash del archivo comprimido '.ZIP' y nos proporciona la passwd 
+
+	# p = Init-passwd-string 
+	# b = Bruteforce
+	# D = Dicctionary 
+	# u = Use-unzip 
+```
+
+## Crackpkcs12
+
+```bash 
+❯ git clone https://github.com/crackpkcs12/crackpkcs12   # Forma de instalar en Kali
+❯ sudo apt install libssl-dev
+❯ cd crackpkcs12/
+❯ ./configure
+❯ make
+❯ sudo make install
+
+❯ crackpkcs12 -d /usr/share/wordlists/rockyou.txt certificate.pfx    # Obtener la password del archivo 'PFX' 
+	# d = Diccionario 
+```
+
+## OpenSSL para PFX
+
+```bash 
+❯ openssl pkcs12 -in certificate.pfx -nocerts -out priv-key.pem -nodes # Obtener la 'private-key.pem' del archivo 'PFX'
+❯ openssl pkcs12 -in certificate.pfx -nokeys -out certificate.pem      # Obtener el 'certificado.pem' del archivo 'PFX'
 ```
