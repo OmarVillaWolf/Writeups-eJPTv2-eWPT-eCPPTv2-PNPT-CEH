@@ -193,7 +193,6 @@ Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 
 ## HTTPS: 443 
 
-Usa el protocolo HTTPS que es más seguro y utiliza el protocolo TLS por debajo.
 ```bash
 ❯ openssl s_client -connect ❮dominio.com❯:443   # Para conectarnos al openssl e inspeccionar el certificado
 
