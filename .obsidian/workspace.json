@@ -8,33 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "93b5e49c33ec9f75",
+            "id": "c0a0b79b0e9d5489",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.1 AD/2 PT/3 Lateral Movement/1 Pass-The-Hash.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "84e73847bfc775c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/John the Ripper.md",
+                "file": "0 Com Lin & Win/5 Powershell/1 Intro.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -63,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "openssl",
+                "query": "impacket",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -119,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/John the Ripper.md"
+                "file": "0 Com Lin & Win/5 Powershell/1 Intro.md"
               }
             }
           },
@@ -157,44 +143,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "c0a0b79b0e9d5489",
   "lastOpenFiles": [
-    "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "4 PrivEsc Lin & Win/2 Linux/Hack4u/6. Permisos incorrectos.md",
-    "2 Tools/John the Ripper.md",
-    "7.1 AD/2 PT/3 Lateral Movement/1 Pass-The-Hash.md",
-    "7.1 AD/2 PT/2 Priv Escalation/2 Kerberoasting.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "7.1 AD/2 PT/2 Priv Escalation/1 AS-REP.md",
-    "7.1 AD/2 PT/3 Lateral Movement",
-    "7.1 AD/2 PT/1 Enumeration/2 Passwd Spraying.md",
-    "7.1 AD/2 PT/1 Enumeration/4 PowerView.md",
-    "1 Ports/88 Kerberos.md",
-    "7 Hack4u/3 OWASP TOP 10/5 RFI.md",
-    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
-    "0 Com Lin & Win/3 Hacking/4 Powershell Commands.md",
-    "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
-    "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
-    "7.1 AD/2 PT/2 Priv Escalation",
-    "7.1 AD/2 PT/1 Enumeration/3 BloodHound.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "1 Ports/5985-6 - WINRM.md",
+    "0 Com Lin & Win/5 Powershell/2 Commands.md",
+    "0 Com Lin & Win/5 Powershell/1 Intro.md",
+    "0 Com Lin & Win/4 Web/1 Passive Enum.md",
+    "0 Com Lin & Win/3 Hacking/4 Netcat Commands.md",
+    "0 Com Lin & Win/5 Powershell",
+    "2 Tools/Nmap.md",
+    "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
     "1 Ports/445 - SMB.md",
-    "2 Tools/Hashcat.md",
-    "1 Ports/53 - DNS.md",
-    "1 Ports/389 - LDAP.md",
+    "1 Ports/88 Kerberos.md",
     "1 Ports/135 - RPC.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "1 Ports/445 - Samba.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/15 Grandpa.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/14 Granny.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/9 ToolBox.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/8 Driver.md",
+    "5.1 HTB - Machines/eJPTv2/2 Medium/3 Bolt.md",
+    "7.1 AD/2 PT/1 Enumeration/3 BloodHound.md",
+    "3.2 Metasploit/1 Metasploit.md",
+    "5.1 HTB - Machines/eJPTv2/2 Medium/1 Jeeves.md",
+    "1 Ports/3389, 3333 - RDP.md",
+    "7.2 C&C (C2)/2 PS Empire & Starkiller/2 Starkiller.md",
+    "7.2 C&C (C2)/1 C&C/1 Introduction.md",
+    "7.2 C&C (C2)/1 C&C/2.md",
+    "7.2 C&C (C2)/2 PS Empire & Starkiller",
+    "Recomendacion.md",
+    "7.2 C&C (C2)/1 C&C",
+    "7.2 C&C (C2)",
+    "1 Ports/5985-6 - WINRM.md",
+    "7.1 AD/2 PT/3 Lateral Movement/1 Pass-The-Hash.md",
+    "7.1 AD/2 PT/4 Persistence",
+    "7.1 AD/2 PT/3 Lateral Movement",
+    "7.1 AD/2 PT/2 Priv Escalation",
     "7.1 AD/2 PT/1 Enumeration",
-    "7.1 AD/2 PT/1 Enumeration/1 Metodologia.md",
-    "7.1 AD/1 Intro/1 Introduccion y  Componentes.md",
     "7.1 AD/2 PT",
     "7.1 AD/1 Intro",
-    "7.1 AD",
-    "0 Com Lin & Win/4 Web",
-    "10 bWAPP/CSRF",
-    "10 bWAPP",
-    "5.2 Vulhub - Machines/eWPT",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "Z Imagenes/Hacking/SSRF.png",
