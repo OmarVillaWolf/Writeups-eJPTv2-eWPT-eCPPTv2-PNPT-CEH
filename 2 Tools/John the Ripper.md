@@ -1,6 +1,6 @@
 # John the Ripper
 
-Tags: #Hash #BruteForce #John #Fcrackzip #Crackpkcs12 #PFX 
+Tags: #Hash #BruteForce #John #Fcrackzip #Crackpkcs12 #PFX #OpenSSL
 
 Es una herramienta de prueba de penetración que se utiliza para probar la seguridad de las passwd. Esta diseñado para descifrar passwd encriptadas en sistemas y aplicaciones.
 
