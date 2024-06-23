@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/5 Powershell/1 Intro.md",
+                "file": "0 Com Lin & Win/5 Powershell/3 PT PS.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/5 Powershell/1 Intro.md"
+                "file": "0 Com Lin & Win/5 Powershell/3 PT PS.md"
               }
             }
           },
@@ -145,8 +145,9 @@
   },
   "active": "c0a0b79b0e9d5489",
   "lastOpenFiles": [
-    "0 Com Lin & Win/5 Powershell/2 Commands.md",
     "0 Com Lin & Win/5 Powershell/1 Intro.md",
+    "0 Com Lin & Win/5 Powershell/3 PT PS.md",
+    "0 Com Lin & Win/5 Powershell/2 Commands.md",
     "0 Com Lin & Win/4 Web/1 Passive Enum.md",
     "0 Com Lin & Win/3 Hacking/4 Netcat Commands.md",
     "0 Com Lin & Win/5 Powershell",
@@ -174,7 +175,6 @@
     "7.2 C&C (C2)/1 C&C",
     "7.2 C&C (C2)",
     "1 Ports/5985-6 - WINRM.md",
-    "7.1 AD/2 PT/3 Lateral Movement/1 Pass-The-Hash.md",
     "7.1 AD/2 PT/4 Persistence",
     "7.1 AD/2 PT/3 Lateral Movement",
     "7.1 AD/2 PT/2 Priv Escalation",
