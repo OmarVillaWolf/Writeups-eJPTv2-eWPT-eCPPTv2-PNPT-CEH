@@ -20,7 +20,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 	# sn = No escanea los puertos despues de descubir un host 'Se refiere a un escaneo de PING', es un ICMP, TCP SYNC
 ```
-
++
 ```bash
 ❯ nmap ❮IP/24❯                      # Para escanear toda la red
 ❯ nmap ❮IP/24❯ --reason <IP.1>      # Escanea toda la red pero trae informacion detallada de esa IP especifica 
@@ -31,6 +31,11 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	# reason = Ademas nos ayuda a saber que host tenemos up o down 
 ```
 
+## Active Directory 
+
+```bash 
+❯ nmap -n --disable-arp-ping -p 88,389,53 --open -T5 -vvv ❮IP/24❯
+```
 
 ## Port Scanning 
 
@@ -47,7 +52,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ```bash 
-❯ nmap --top-ports 500 -open -T5 -v -n ❮Target IP❯
+❯ nmap --top-ports 500 --open -T5 -v -n ❮Target IP❯
 ```
 
 ```bash 
