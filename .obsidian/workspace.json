@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/5 Powershell/3 PT PS.md",
+                "file": "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "50b7caa7f320a8ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/5 Powershell/3 PT PS.md"
+                "file": "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md"
               }
             }
           },
@@ -145,14 +158,14 @@
   },
   "active": "c0a0b79b0e9d5489",
   "lastOpenFiles": [
-    "0 Com Lin & Win/5 Powershell/1 Intro.md",
-    "0 Com Lin & Win/5 Powershell/3 PT PS.md",
+    "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
+    "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md",
     "0 Com Lin & Win/5 Powershell/2 Commands.md",
+    "0 Com Lin & Win/5 Powershell/1 Intro.md",
     "0 Com Lin & Win/4 Web/1 Passive Enum.md",
     "0 Com Lin & Win/3 Hacking/4 Netcat Commands.md",
     "0 Com Lin & Win/5 Powershell",
     "2 Tools/Nmap.md",
-    "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
     "1 Ports/445 - SMB.md",
     "1 Ports/88 Kerberos.md",
     "1 Ports/135 - RPC.md",
