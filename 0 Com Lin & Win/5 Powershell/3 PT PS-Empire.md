@@ -1,6 +1,6 @@
 # Powershell Pentesters
 
-Tags: #Powershell 
+Tags: #Powershell #PSEmpire 
 
 ## Powershell Empire  
 
