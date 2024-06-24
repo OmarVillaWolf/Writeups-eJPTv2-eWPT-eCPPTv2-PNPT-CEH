@@ -19,19 +19,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "50b7caa7f320a8ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -158,8 +145,10 @@
   },
   "active": "c0a0b79b0e9d5489",
   "lastOpenFiles": [
-    "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
+    "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
+    "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
     "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md",
+    "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
     "0 Com Lin & Win/5 Powershell/2 Commands.md",
     "0 Com Lin & Win/5 Powershell/1 Intro.md",
     "0 Com Lin & Win/4 Web/1 Passive Enum.md",
@@ -184,10 +173,8 @@
     "7.2 C&C (C2)/1 C&C/1 Introduction.md",
     "7.2 C&C (C2)/1 C&C/2.md",
     "7.2 C&C (C2)/2 PS Empire & Starkiller",
-    "Recomendacion.md",
     "7.2 C&C (C2)/1 C&C",
     "7.2 C&C (C2)",
-    "1 Ports/5985-6 - WINRM.md",
     "7.1 AD/2 PT/4 Persistence",
     "7.1 AD/2 PT/3 Lateral Movement",
     "7.1 AD/2 PT/2 Priv Escalation",
