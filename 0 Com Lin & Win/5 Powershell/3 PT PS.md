@@ -1,4 +1,0 @@
-# Powershell Pentesters
-
-Tags: #Powershell 
-
