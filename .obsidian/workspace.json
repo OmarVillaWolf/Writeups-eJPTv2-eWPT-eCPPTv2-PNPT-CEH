@@ -4,33 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "70cf840e8b28718a",
+        "id": "d5ea6a870f336e9f",
         "type": "tabs",
         "children": [
           {
-            "id": "559d90a64f80a6e5",
+            "id": "e19848adaa0bb4ea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6f08a934509b5cf1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -117,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md"
-              }
+              "state": {}
             }
           },
           {
@@ -156,7 +136,7 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "559d90a64f80a6e5",
+  "active": "e19848adaa0bb4ea",
   "lastOpenFiles": [
     "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
     "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
