@@ -33,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -119,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md"
+                "file": "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md"
               }
             }
           },
@@ -157,10 +156,10 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "6f08a934509b5cf1",
+  "active": "559d90a64f80a6e5",
   "lastOpenFiles": [
-    "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
     "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
+    "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
     "3.3 Explotation/Explotation.md",
     "3.3 Explotation/AV evasion.md",
     "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md",
