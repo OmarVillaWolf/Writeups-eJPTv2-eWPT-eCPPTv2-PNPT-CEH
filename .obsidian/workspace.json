@@ -8,19 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c0a0b79b0e9d5489",
+            "id": "559d90a64f80a6e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md",
+                "file": "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6f08a934509b5cf1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -49,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "impacket",
+                "query": "shellter",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -105,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md"
+                "file": "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md"
               }
             }
           },
@@ -143,11 +157,14 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "c0a0b79b0e9d5489",
+  "active": "6f08a934509b5cf1",
   "lastOpenFiles": [
-    "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
     "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
+    "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
+    "3.3 Explotation/Explotation.md",
+    "3.3 Explotation/AV evasion.md",
     "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md",
+    "7.3 Buffer Overflow",
     "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
     "0 Com Lin & Win/5 Powershell/2 Commands.md",
     "0 Com Lin & Win/5 Powershell/1 Intro.md",
@@ -170,8 +187,6 @@
     "5.1 HTB - Machines/eJPTv2/2 Medium/1 Jeeves.md",
     "1 Ports/3389, 3333 - RDP.md",
     "7.2 C&C (C2)/2 PS Empire & Starkiller/2 Starkiller.md",
-    "7.2 C&C (C2)/1 C&C/1 Introduction.md",
-    "7.2 C&C (C2)/1 C&C/2.md",
     "7.2 C&C (C2)/2 PS Empire & Starkiller",
     "7.2 C&C (C2)/1 C&C",
     "7.2 C&C (C2)",
@@ -180,7 +195,6 @@
     "7.1 AD/2 PT/2 Priv Escalation",
     "7.1 AD/2 PT/1 Enumeration",
     "7.1 AD/2 PT",
-    "7.1 AD/1 Intro",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "Z Imagenes/Hacking/SSRF.png",
