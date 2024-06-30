@@ -11,8 +11,13 @@
             "id": "e19848adaa0bb4ea",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "7.3 Buffer Overflow/1 System/2 Registers.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -99,7 +104,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "7.3 Buffer Overflow/1 System/2 Registers.md"
+              }
             }
           },
           {
@@ -138,13 +145,16 @@
   },
   "active": "e19848adaa0bb4ea",
   "lastOpenFiles": [
+    "7.3 Buffer Overflow/1 System/1 CPU Architecture.md",
+    "7.3 Buffer Overflow/1 System/2 Registers.md",
+    "7.3 Buffer Overflow/1 System",
+    "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
     "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
     "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
     "3.3 Explotation/Explotation.md",
     "3.3 Explotation/AV evasion.md",
     "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md",
     "7.3 Buffer Overflow",
-    "7.2 C&C (C2)/2 PS Empire & Starkiller/1 PS Empire.md",
     "0 Com Lin & Win/5 Powershell/2 Commands.md",
     "0 Com Lin & Win/5 Powershell/1 Intro.md",
     "0 Com Lin & Win/4 Web/1 Passive Enum.md",
@@ -164,8 +174,6 @@
     "7.1 AD/2 PT/1 Enumeration/3 BloodHound.md",
     "3.2 Metasploit/1 Metasploit.md",
     "5.1 HTB - Machines/eJPTv2/2 Medium/1 Jeeves.md",
-    "1 Ports/3389, 3333 - RDP.md",
-    "7.2 C&C (C2)/2 PS Empire & Starkiller/2 Starkiller.md",
     "7.2 C&C (C2)/2 PS Empire & Starkiller",
     "7.2 C&C (C2)/1 C&C",
     "7.2 C&C (C2)",
@@ -173,7 +181,6 @@
     "7.1 AD/2 PT/3 Lateral Movement",
     "7.1 AD/2 PT/2 Priv Escalation",
     "7.1 AD/2 PT/1 Enumeration",
-    "7.1 AD/2 PT",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "Z Imagenes/Hacking/SSRF.png",
