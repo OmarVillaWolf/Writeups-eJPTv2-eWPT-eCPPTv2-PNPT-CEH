@@ -1,6 +1,6 @@
 # Registros 
 
-Tags: #Registers 
+Tags: #Registers #Stack
 
 Los registros de propósito general son usados para almacenar data temporalmente durante ejecución de un programa. Son versátiles y pueden mantener varios tipos de data, como enteros, dirección en memoria o resultados intermedios de aritmética/operadores lógicos. Algunos ejemplos de ellos son:
 * EAX, EBX, ECX, EDX: Usados para la manipulación de data en general y operaciones aritméticas.
@@ -16,3 +16,5 @@ Los registros de propósito general son usados para almacenar data temporalmente
 **EDI (Destination Index Register):** Complementa el registro ESI en operaciones de manipulación de string. Usualmente mantiene el comienzo de direcciones de la data de destino o del destino del string durante operaciones como copiar o concatenar. 
 **ESP (Stack Pointer Register):** Puntos de la cima del stack en memoria. Es usado para manejar el stack, un área especial de memoria usada para almacenar parámetros de funciones, variables locales, direcciones y otra data durante la ejecución del programa. 
 **EBP (Base Pointer Register):** Es comúnmente usado en conjunción con el registro de ESP para acceder a los parámetros y variables locales dentro de las llamadas de función.  Sirve como un punto de referencia para acceder a data almacenada en el stack. 
+
+**Stack:** Es una estructura fundamental de data. El stack es la región de memoria alocada para almacenar las funciones de frames, variables locales, funciones de parámetros y direcciones de regreso durante la ejecución de programa. 
