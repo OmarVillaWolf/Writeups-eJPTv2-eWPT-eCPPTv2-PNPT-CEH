@@ -1,6 +1,6 @@
 # Arquitectura del CPU
 
-Tags: #Asembly 
+Tags: #Assembly 
 
 Lenguaje de **ensamblador** es una puerta para entender las técnicas de explotación, ingeniería reversa, shellcoding y otro campos a bajo nivel en la seguridad de la información. 
 
