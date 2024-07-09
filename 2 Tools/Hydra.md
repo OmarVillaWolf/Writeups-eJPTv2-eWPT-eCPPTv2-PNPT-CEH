@@ -7,7 +7,7 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 - Soporte de múltiples protocolos: Hydra es compatible con una amplia gama de protocolos de autenticación incluyendo: SSH, Telnet, FTP, HTTP, POP3, SMB, etc...
 * Fuerza bruta avanzada: Hydra es capas de realizar ataques de fuerza bruta avanzados, incluyendo ataques de diccionario y ataques basados en patrones. 
 	* Podemos usar los diccionarios que ya viene en Parrot o Kali Linux (rockyou.txt)
-* Modos de operación flexibles: Hydra admite diferentes modos de operación, incluyendo modo de ataque directo, modo de ataque de diccionario y modo de ataque hibrido.
+* Modos de operación flexibles: Hydra admite diferentes modos de operación, incluyendo modo de ataque directo, modo de ataque de diccionario y modo de ataque híbrido.
 * Capacidad de paralelización: Hydra es capas de realizar múltiples intentos de autenticación simultáneamente, lo que mejora la velocidad y la eficiencia del ataque. 
 
 - Casos de uso:
@@ -28,6 +28,15 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 /usr/share/metasploit-framework/data/wordlists/unix_users.txt
 /usr/share/wordlists/metasploit/unix_users.txt
 /usr/share/wordlists/metasploit/common_users.txt
+```
+
+## Fuerza bruta a una autenticacion digital 
+
+```bash 
+❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> http-get /DIR/ 
+
+	# IP = Direccion IP del servidor que contiene la autenticacion que solicita user/passwd para acceder a la pagina
+	# DIR = Directorio que contiene la autenticacion 
 ```
 
 ## Fuerza bruta a un CMS
