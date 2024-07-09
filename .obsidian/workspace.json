@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d5ea6a870f336e9f",
+        "id": "ae21d1ede743b978",
         "type": "tabs",
         "children": [
           {
-            "id": "40e0c433bec522c4",
+            "id": "b80b687ce1222246",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.3 Buffer Overflow/1 System/3 Assemblers & Compilers.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e19848adaa0bb4ea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7.3 Buffer Overflow/Buffer Overflow/1 Explotacion.md",
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -62,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "shellter",
+                "query": "command injection",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -118,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7.3 Buffer Overflow/1 System/3 Assemblers & Compilers.md"
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md"
               }
             }
           },
@@ -156,9 +143,19 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "40e0c433bec522c4",
+  "active": "b80b687ce1222246",
   "lastOpenFiles": [
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/5 NodeBlog.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/22 Netmon.md",
+    "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
     "7.3 Buffer Overflow/Buffer Overflow/1 Explotacion.md",
+    "1 Ports/80, 443 - HTTP, HTTPS.md",
+    "7 Hack4u/3 OWASP TOP 10/7 CSRF.md",
+    "2 Tools/BurpSuite.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "2 Tools/Hydra.md",
+    "2 Tools/Nikto.md",
     "7.3 Buffer Overflow/1 System/3 Assemblers & Compilers.md",
     "1 Ports/20, 21, 134 - TFP - TFPT.md",
     "1 Ports/80.1 WordPress.md",
@@ -178,16 +175,6 @@
     "0 Com Lin & Win/4 Web/1 Passive Enum.md",
     "0 Com Lin & Win/3 Hacking/4 Netcat Commands.md",
     "0 Com Lin & Win/5 Powershell",
-    "2 Tools/Nmap.md",
-    "1 Ports/445 - SMB.md",
-    "1 Ports/88 Kerberos.md",
-    "1 Ports/135 - RPC.md",
-    "1 Ports/445 - Samba.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/15 Grandpa.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/14 Granny.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/9 ToolBox.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/8 Driver.md",
     "7.2 C&C (C2)/2 PS Empire & Starkiller",
     "7.2 C&C (C2)/1 C&C",
     "7.2 C&C (C2)",
