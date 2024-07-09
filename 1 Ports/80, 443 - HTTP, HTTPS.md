@@ -54,7 +54,6 @@ Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 #Metodos
 10. TRACE
 ```
 
-
 ### Response Headers
 
 1. **Código de estado**: 
@@ -63,6 +62,12 @@ Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTPS  #HTTP3 #Metodos
 4. **Content-Type**: Regresa el contenido del tipo de media de la respuesta (text/html, application/Json)
 5. **Content-Length**: El tamaño del cuerpo de la respuesta en bytes
 6. **Cache-Control:** Directivas del comportamiento 
+
+## Componentes de manejo de sesión
+
+1. **Session Identifier:** Un token único (a menudo un ID sesión) es asignado a cada sesión de usuario. Este token es usado para asociar subsecuentes solicitudes para el usuario con sus datos de sesión.
+2. **Session Data:** Información relacionada a la sesión de usuario, como el estatus de autenticacion, preferencias de usuario y data temporal, esta almacenada en el servidor. 
+3. **Session Cookies:** Son pequeñas piezas de data almacenadas en el buscador del usuario que contiene el ID de sesión.  Se utilizan para mantener el estado entre el cliente y servidor. 
 
 ## Códigos de estado 
 
@@ -109,6 +114,7 @@ soportada por el servidor.
 9. XSS con XSSer
 10. HTTP login con Hydra 'WordPress'
 11. Ataque al 'basic auth' con Burpsuite 'Intruder - Sniper' (Cargar diccionario y Payload Processing 'add prefix=admin:' y 'Encode=base64')
+12. Fuerza bruta con 'Burpsuite' al 'login Form' con 'Intruder'
 
 # Subdominios 
 1. Gobuster, Wfuzz, Ffuz
@@ -124,6 +130,12 @@ soportada por el servidor.
 # Atajos en la Web
 Recargar la pagina 'Ctrl + r'
 Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
+
+# Data sensible Expuesta
+1. Weak Password Storage 
+2. Information Disclosure in Error Messages (Banner)
+3. Directory Traversal 
+4. Unencrypted Backups
 ```
 
 ## Ruta típica en consola
