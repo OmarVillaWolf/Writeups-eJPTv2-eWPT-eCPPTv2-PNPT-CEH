@@ -8,33 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b80b687ce1222246",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "34494b58faf6ecec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/80.1 WordPress.md",
+                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -63,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "directory path:",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -119,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Ports/80.1 WordPress.md"
+                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md"
               }
             }
           },
@@ -159,6 +145,23 @@
   },
   "active": "34494b58faf6ecec",
   "lastOpenFiles": [
+    "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
+    "8 PortSwigger-OWASP/10 SSRF/Lab 3.md",
+    "8 PortSwigger-OWASP/10 SSRF/Lab 2.md",
+    "8 PortSwigger-OWASP/10 SSRF/Lab 1.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 3.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 2.md",
+    "8 PortSwigger-OWASP/5 XXE/Lab 1.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 3.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 2.md",
+    "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
+    "8 PortSwigger-OWASP/1.2 CSRF/Lab 2.md",
+    "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
+    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
+    "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
+    "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
+    "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
+    "1 Ports/80.1 WordPress.md",
     "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "0 Com Lin & Win/5 Powershell/1 Intro.md",
@@ -168,26 +171,9 @@
     "0 Com Lin & Win/5 Powershell/2 Commands.md",
     "10 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/1 Conceptos.md",
     "10 Wifi/Pineapple/1 Instalar.md",
-    "7 Hack4u/3 OWASP TOP 10/11 Padding Oracle.md",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
-    "7 Hack4u/3 OWASP TOP 10/10 CSTI.md",
-    "7 Hack4u/3 OWASP TOP 10/9 SSTI.md",
-    "7 Hack4u/3 OWASP TOP 10/8 SSRF.md",
-    "7 Hack4u/3 OWASP TOP 10/7 CSRF.md",
-    "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
-    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
-    "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
-    "7 Hack4u/3 OWASP TOP 10/2 XSS Sudo.co.il.md",
-    "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
-    "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
-    "7 Hack4u/3 OWASP TOP 10/17 Abuso Subida Archivos.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/5 NodeBlog.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/22 Netmon.md",
-    "7.3 Buffer Overflow/Buffer Overflow/1 Explotacion.md",
-    "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "2 Tools/BurpSuite.md",
     "7.3 Buffer Overflow/Buffer Overflow",
     "7.3 Buffer Overflow/1 System",
     "7.3 Buffer Overflow",
