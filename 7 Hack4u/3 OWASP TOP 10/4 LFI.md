@@ -1,6 +1,6 @@
 # LFI
 
-Tags: #LFI 
+Tags: #LFI #DirectoryPathTraversal 
 
 
 La vulnerabilidad **Local File Inclusion** (**LFI**) es una vulnerabilidad de seguridad informática que se produce cuando una aplicación web **no valida adecuadamente** las entradas de usuario, permitiendo a un atacante **acceder a archivos locales** en el servidor web.
