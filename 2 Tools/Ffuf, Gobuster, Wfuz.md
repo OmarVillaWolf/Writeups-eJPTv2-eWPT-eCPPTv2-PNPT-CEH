@@ -2,7 +2,7 @@
 
 Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing 
 
-```bash 
+```python
 # Modo directorio: Listar los directorios y archivos
 ❯ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ❯ /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
@@ -14,6 +14,9 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing
 
 # Modo vhost: Encontrar host virtuales que estén configurados en el servidor
 ❯ /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt
+
+# Para hacer enumeracion a un CMS
+❯ /usr/share/Seclists/Discovery/Web-Content/CMS/wordpress.fuzz.txt
 ```
 ## Wfuzz 
 
