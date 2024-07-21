@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4af2e41256c13feb",
+            "id": "648fe68d6dd2ac94",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Ports/80.1 WordPress.md",
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 Ports/80.1 WordPress.md"
+                "file": "0 Com Lin & Win/3 Hacking/ReverShell.md"
               }
             }
           },
@@ -143,14 +143,18 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "4af2e41256c13feb",
+  "active": "648fe68d6dd2ac94",
   "lastOpenFiles": [
+    "1 Ports/80.1 WordPress.md",
+    "2 Tools/Hydra.md",
+    "2 Tools/Nmap.md",
+    "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "2 Tools/Dirbuster.md",
     "1 Ports/80.8 WSDL.md",
     "7 Hack4u/4 Python/3 POO/1 Clases y Objetos.md",
     "7 Hack4u/4 Python/3 POO/2 Métodos estáticos y de clase.md",
     "7 Hack4u/4 Python/3 POO/3 Self.md",
     "1 Ports/80.7 IIS - Webdav.md",
-    "1 Ports/80.1 WordPress.md",
     "1 Ports/80.3 Drupal.md",
     "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
     "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
@@ -167,10 +171,6 @@
     "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
     "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
     "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
-    "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "0 Com Lin & Win/5 Powershell/1 Intro.md",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
