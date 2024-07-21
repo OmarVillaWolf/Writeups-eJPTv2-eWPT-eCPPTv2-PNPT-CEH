@@ -11,5 +11,22 @@ Se definen con el decorador ‘**@staticmethod**‘ y no reciben un argumento im
 ```python
 #!/usr/bin/env python3 
 
+class Calculadora:
 
+	@staticmethod
+	def suma(num1, num2)
+		return num + num2 
+
+	@staticmethod
+	def resta(num1, num2)
+		return num - num2 
+
+	@staticmethod
+	def multiplicacion(num1, num2)
+		return num * num2 
+
+print(Calculadora.suma(2, 8))
+print(Calculadora.resta(8, 4))
+print(Calculadora.multiplicacion(5, 10))
 ```
+
