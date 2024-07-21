@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ae21d1ede743b978",
+        "id": "6d7ed55b51b87199",
         "type": "tabs",
         "children": [
           {
-            "id": "34494b58faf6ecec",
+            "id": "4af2e41256c13feb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
+                "file": "1 Ports/80.1 WordPress.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 Hack4u/3 OWASP TOP 10/4 LFI.md"
+                "file": "1 Ports/80.1 WordPress.md"
               }
             }
           },
@@ -143,8 +143,16 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "34494b58faf6ecec",
+  "active": "4af2e41256c13feb",
   "lastOpenFiles": [
+    "1 Ports/80.8 WSDL.md",
+    "7 Hack4u/4 Python/3 POO/1 Clases y Objetos.md",
+    "7 Hack4u/4 Python/3 POO/2 Métodos estáticos y de clase.md",
+    "7 Hack4u/4 Python/3 POO/3 Self.md",
+    "1 Ports/80.7 IIS - Webdav.md",
+    "1 Ports/80.1 WordPress.md",
+    "1 Ports/80.3 Drupal.md",
+    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
     "7 Hack4u/3 OWASP TOP 10/6 LFI - RCE.md",
     "8 PortSwigger-OWASP/10 SSRF/Lab 3.md",
     "8 PortSwigger-OWASP/10 SSRF/Lab 2.md",
@@ -157,20 +165,12 @@
     "8 PortSwigger-OWASP/3.1 XSS/Lab 1.md",
     "8 PortSwigger-OWASP/1.2 CSRF/Lab 2.md",
     "8 PortSwigger-OWASP/1.2 CSRF/Lab 1.md",
-    "7 Hack4u/3 OWASP TOP 10/4 LFI.md",
     "7 Hack4u/3 OWASP TOP 10/3 XXE.md",
     "7 Hack4u/3 OWASP TOP 10/2 XSS.md",
     "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
-    "1 Ports/80.1 WordPress.md",
     "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "0 Com Lin & Win/5 Powershell/1 Intro.md",
-    "0 Com Lin & Win/5 Powershell/5 PT Obfuscating.md",
-    "0 Com Lin & Win/5 Powershell/4 PT  AV Evasion.md",
-    "0 Com Lin & Win/5 Powershell/3 PT PS-Empire.md",
-    "0 Com Lin & Win/5 Powershell/2 Commands.md",
-    "10 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/1 Conceptos.md",
-    "10 Wifi/Pineapple/1 Instalar.md",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
