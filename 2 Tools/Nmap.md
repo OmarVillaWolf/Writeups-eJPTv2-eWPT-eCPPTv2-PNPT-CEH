@@ -100,6 +100,17 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ❯ nmap -sUV -p134 ❮Target IP❯ --script=discovery    # Enumerar informacion 
 ```
 
+## WordPress
+
+```bash 
+❯ nmap -sS -sV --script=http-wordpress-enum ❮IP❯     # Enumeracion de WordPress 
+
+❯ nmap -sS -sV --script=http-wordpress-enum --script-args type="themes" ❮IP❯
+❯ nmap -sS -sV --script=http-wordpress-enum --script-args type="plugins" ❮IP❯
+
+❯ nmap -sS -sV -p80,443 --script=http-wordpress-users ❮IP❯
+```
+
 ## SMB / SAMBA
 ```bash
 ❯ nmap -p445 -sCV ❮IP❯                               # Para enumerar exaustiva al SMB 
