@@ -1,7 +1,0 @@
-# OSINT
-
-Tags: #OSINT
-
-```bash 
-
-```
