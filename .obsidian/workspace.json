@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/OSINT.md",
+                "file": "2.1 OSINT/OSINT.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 Com Lin & Win/3 Hacking/OSINT.md"
+                "file": "2.1 OSINT/OSINT.md"
               }
             }
           },
@@ -170,10 +170,11 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "6c6be202cf41468e",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
+    "2.1 OSINT",
     "7 Hack4u/4 Python/3 POO/3 Self.md",
-    "0 Com Lin & Win/3 Hacking/OSINT.md",
+    "2.1 OSINT/OSINT.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/2 Sau.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/4 Nunchucks.md",
@@ -197,7 +198,6 @@
     "5.1 HTB - Machines/eJPTv2/1 Easy/1 Validation.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/2 XSS/1.md",
     "1 Ports/3128 - SQUID.md",
-    "7 Hack4u/3 OWASP TOP 10/2 XSS Sudo.co.il.md",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
