@@ -15,6 +15,9 @@
 ❯ export SHELL=bash o ❯ export SHELL=/bin/bash           # Hacemos que shell ahora valga bash
 ❯ export TERM=xterm                                      # Para poder hacer Ctrl +c y Ctrl + l (l=ele)
 
+❯ export TERM=xterm-256color                             # Para que la shell tenga colores 
+	❯ source /etc/skel/.bashrc
+
 # Ahora para modificar las dimensiones de Vim/nano debemos hacer lo siguiente.
 ❯ stty size                                              # Miramos las dimensiones de la consola
 ❯ stty rows 51 columns 189                               # Modificamos las dimensiones de la consola Vim/Nano
