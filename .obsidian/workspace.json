@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Python/3 POO/3 Self.md",
+                "file": "6 Python/3 POO/4 Herencia y polimorfismo.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Python/3 POO/3 Self.md"
+                "file": "6 Python/3 POO/4 Herencia y polimorfismo.md"
               }
             }
           },
@@ -184,12 +184,19 @@
   },
   "active": "bf2639ebae59a07c",
   "lastOpenFiles": [
+    "6 Python/3 POO/3 Self.md",
+    "6 Python/3 POO/4 Herencia y polimorfismo.md",
+    "6 Python/3 POO/2 Métodos estáticos y de clase.md",
+    "6 Python/1 Conceptos Basicos/8 Condicionales y Bucles.md",
+    "6 Python/1 Conceptos Basicos/9 Funciones.md",
+    "6 Python/1 Conceptos Basicos/7 String Formating.md",
+    "6 Python/1 Conceptos Basicos/6 Python Operadores.md",
+    "6 Python/1 Conceptos Basicos/5 Var y Datos.md",
     "2.1 OSINT/2 Image.md",
     "7.4 Pivoting",
     "6 Python",
     "2.1 OSINT/1 Search Engines.md",
     "2.1 OSINT/0 OSINT.md",
-    "6 Python/3 POO/3 Self.md",
     "0 Com Lin & Win/4 Web/1 Passive Enum.md",
     "0 Com Lin & Win/4 Web/Google Hacking.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
@@ -206,12 +213,6 @@
     "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "1 Ports/5985-6 - WINRM.md",
     "0 Com Lin & Win/3 Hacking/Msfvenom.md",
-    "2 Tools/Hydra.md",
-    "2 Tools/Nmap.md",
-    "7 Hack4u/3 OWASP TOP 10/1 SQLI.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/8 GoodGames.md",
-    "2 Tools/SQLMap.md",
-    "2 Tools/BurpSuite.md",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
