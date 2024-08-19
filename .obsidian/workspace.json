@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Python/3 POO/4 Herencia y polimorfismo.md",
+                "file": "6 Python/3 POO/5 Encapsulamiento y metodos especiales.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Python/3 POO/4 Herencia y polimorfismo.md"
+                "file": "6 Python/3 POO/5 Encapsulamiento y metodos especiales.md"
               }
             }
           },
@@ -184,8 +184,8 @@
   },
   "active": "bf2639ebae59a07c",
   "lastOpenFiles": [
-    "6 Python/3 POO/5 Encapsulamiento y metodos especiales.md",
     "6 Python/3 POO/4 Herencia y polimorfismo.md",
+    "6 Python/3 POO/5 Encapsulamiento y metodos especiales.md",
     "6 Python/3 POO/3 Self.md",
     "6 Python/3 POO/2 Métodos estáticos y de clase.md",
     "6 Python/1 Conceptos Basicos/8 Condicionales y Bucles.md",
