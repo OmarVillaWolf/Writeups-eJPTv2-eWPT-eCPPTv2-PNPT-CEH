@@ -125,3 +125,46 @@ moto = Moto("Honda", "CBR")
 describir_vehiculo(coche)
 describir_vehiculo(moto)
 ```
+
+## Doble constructor
+
+```python
+#!/usr/bin/env python3 
+
+class A:
+	def __init__(self, x):
+		self.x = x 
+		print(f"Valor en x: {self.x}")
+
+class B:
+	def __init__(self, x, y):
+		self.y = y 
+		super().__init__(x)     # Con 'super' llamamos al primer constructor 
+		print(f"Valor en y: {self.y}")
+
+b = B(2, 10)
+```
+
+```python 
+#!/usr/bin/env python3 
+
+class Persona:
+	def __init__(self, nombre, edad):
+		self.nombre = nombre
+		self.edad = edad
+	
+	def saludo(self):
+		return f"Hola, soy {self.nombre} y tengo {self.edad}"
+
+
+class Empleado(Persona):
+	def __init__(self, nombre, edad, salario):
+		super().__init__(nombre, edad)
+		self.salario = salario 
+
+	def saludo(self):
+		return f"{super().saludo()}, y cobro {self.salario} euros brutos anuales"
+
+persona = Empleado("Alicia", 23, 35000)
+print(persona.saludo())
+```
