@@ -26,7 +26,129 @@ Algunos métodos especiales importantes en POO son:
 
 El encapsulamiento y los métodos especiales son herramientas poderosas que, cuando se utilizan correctamente, pueden mejorar la seguridad, la flexibilidad y la claridad en la construcción de aplicaciones. A lo largo de esta clase, exploraremos en detalle cómo implementar y utilizar estos conceptos y métodos para crear clases robustas y mantenibles en Python.
 
+## Encapsulamiento
 
 ```python 
+#!/usr/bin/env python3 
 
+class Ejemplo:
+	def __init__(self):
+		self._atributo_protegido = "Soy un atributo protegido y no deberias verme"   # Creamos un atributo protegido
+		self.__atributo_privado = "Soy un atributo privado y no deberias verme"      # Creamos un atributo privado 
+
+ejemplo = Ejemplo()
+print(ejemplo._atributo_protegido)           # Este si lo podemos ver pero no deberia ser la intension 
+print(ejemplo._Ejemplo__atributo_privado)    # Python hace un 'name mangling' por lo que debemos de agregar antes la clase 
+```
+
+```python 
+#!/usr/bin/env python3 
+
+class Coche:
+	def __init__(self, marca, modelo):
+		self.marca = marca 
+		self.modelo = modelo 
+		self.__kilometraje = 0                # Creamos un atributo privado  
+
+	def conducir(self, kilometros):
+		if kilometros >= 0:
+			self.__kilometraje += kilometros
+		else:
+			print("\n[+] Los kilometros deben ser mayores a 0\n")
+
+	def mostrar_kilometros(self):
+		return self.__kilometraje
+
+coche = Coche("Toyota", "Corolla")
+coche.conducir(150)
+print(coche.mostrar_kilometros())
+```
+
+## Métodos especiales 
+
+```python 
+#!/usr/bin/env python3 
+
+class Libro:
+	def __init__(self, autor, titulo):
+		self.autor = autor
+		self.titulo = titulo
+
+	def __str__(delf):             # 'STR' es un metodo especial donde accedes a los atributos y puedes mostrarlos
+		return f"El libro {self.titulo} ha sido escrito por {self.autor}"
+
+	def __eq__(self, otro)   # Metodo especial de igualdades, si son iguales se aplica lo que este dentro del metodo 
+		return self.autor == otro.autor and self.titulo == otro.titulo
+
+
+libro = Libro("Omar", "Como ser un Lammer?")
+libro_dos = Libro("Omar", "Como ser un Lammer?")
+
+
+print(libro)
+print(f"Son iguales ambos libros? -> {libro == libro_dos}")
+```
+
+```python 
+#!/usr/bin/env python3 
+
+class Caja:
+	def __init__(self, *items)   # Esta variable almacenara todos los atributos como si fuera una 'tupla'
+		self.items = items
+
+	def mostrar_items(self):
+		for item in self.items:
+			print(item)
+
+	def __len__(self):           # Metodo especial para obtener la longitud
+		return len(self.items)
+
+caja = Caja("Manzana", "Platano", "Kiwi", "Pera")
+caja.mostrar_items()
+print(len(caja))
+```
+
+```python 
+#!/usr/bin/env python3 
+
+class Pizza:
+	def __init__(self, size, *ingredientes):
+		self.size = size 
+		self.ingredientes - ingredientes 
+
+	def descripcion(self):
+		print(f"Esta pizza tiene {self.size} cm de longitud y los ingredientes son {','.join(self.ingredientes)}") # Sirve para representar cada elemento de una forma especifica, en este caso con ','
+
+pizza = Pizza(12, "Chorizo", "Jamon", "Bacon", "Queso", "Cebolla")
+pizza.descripcion()
+```
+
+```python 
+#!/usr/bin/env python3 
+
+class MiLista:
+
+	def __init__(self):
+		self.data = [1,2,3,4,5]
+
+	def __getitem__(self, index):   # Este metodo especial nos ayuda a obtener el indice de la lista
+		return sel.data[index]
+
+lista = MiLista()
+print(lista[2])
+```
+
+```python 
+#!/usr/bin/env python3 
+
+class Saludo:
+	def __init__(self, saludo):
+		self.saludo = saludo 
+
+	def __call__(self, nombre):
+		return f"{self.saludo} {nombre}!"
+
+hola = Saludo("Hola")
+print(hola("Luis"))
+print(hola("Alberto"))
 ```
