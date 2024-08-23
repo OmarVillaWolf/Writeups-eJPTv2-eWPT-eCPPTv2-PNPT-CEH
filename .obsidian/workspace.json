@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Python/4 Modulos y paquetes/3 Creacion.md",
+                "file": "6 Python/5 Entrada y salida de datos/2 Lectura y escritura.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Python/4 Modulos y paquetes/3 Creacion.md"
+                "file": "6 Python/5 Entrada y salida de datos/2 Lectura y escritura.md"
               }
             }
           },
@@ -184,9 +184,11 @@
   },
   "active": "bf2639ebae59a07c",
   "lastOpenFiles": [
-    "6 Python/5 Entrada y salida de datos",
-    "6 Python/4 Modulos y paquetes/2 Importacion.md",
+    "6 Python/5 Entrada y salida de datos/1 Entrada y salida.md",
+    "6 Python/5 Entrada y salida de datos/2 Lectura y escritura.md",
     "6 Python/4 Modulos y paquetes/3 Creacion.md",
+    "6 Python/4 Modulos y paquetes/2 Importacion.md",
+    "6 Python/5 Entrada y salida de datos",
     "6 Python/4 Modulos y paquetes/1 Organizacion.md",
     "6 Python/3 POO/5 Encapsulamiento y metodos especiales.md",
     "2.1 OSINT/4 Password.md",
@@ -213,7 +215,6 @@
     "2.1 OSINT",
     "5.1 HTB - Machines/eWPTv2/1 Easy/4 Nunchucks.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/3 Inject.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Validation.md",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
@@ -222,7 +223,6 @@
     "7.3 Buffer Overflow",
     "0 Com Lin & Win/5 Powershell",
     "7.2 C&C (C2)/2 PS Empire & Starkiller",
-    "7.2 C&C (C2)/1 C&C",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132807.png",
