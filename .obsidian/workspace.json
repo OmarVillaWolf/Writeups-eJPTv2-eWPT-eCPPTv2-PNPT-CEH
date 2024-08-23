@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Python/5 Entrada y salida de datos/2 Lectura y escritura.md",
+                "file": "6 Python/5 Entrada y salida de datos/3 Formateo de cadenas.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Python/5 Entrada y salida de datos/2 Lectura y escritura.md"
+                "file": "6 Python/5 Entrada y salida de datos/3 Formateo de cadenas.md"
               }
             }
           },
@@ -184,14 +184,15 @@
   },
   "active": "bf2639ebae59a07c",
   "lastOpenFiles": [
-    "6 Python/5 Entrada y salida de datos/1 Entrada y salida.md",
     "6 Python/5 Entrada y salida de datos/2 Lectura y escritura.md",
+    "6 Python/5 Entrada y salida de datos/3 Formateo de cadenas.md",
+    "2.1 OSINT/4 Password.md",
+    "6 Python/5 Entrada y salida de datos/1 Entrada y salida.md",
     "6 Python/4 Modulos y paquetes/3 Creacion.md",
     "6 Python/4 Modulos y paquetes/2 Importacion.md",
     "6 Python/5 Entrada y salida de datos",
     "6 Python/4 Modulos y paquetes/1 Organizacion.md",
     "6 Python/3 POO/5 Encapsulamiento y metodos especiales.md",
-    "2.1 OSINT/4 Password.md",
     "2.1 OSINT/3 Email.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/2 Sau.md",
     "0 Com Lin & Win/4 Web/Google Hacking.md",
@@ -214,7 +215,6 @@
     "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
     "2.1 OSINT",
     "5.1 HTB - Machines/eWPTv2/1 Easy/4 Nunchucks.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/3 Inject.md",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
