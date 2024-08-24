@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Python/5 Entrada y salida de datos/3 Formateo de cadenas.md",
+                "file": "10 Wifi/1 WiFi-Academy/1 Redes WiFi/1 Intro.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -27,6 +27,19 @@
               "type": "markdown",
               "state": {
                 "file": "2.1 OSINT/4 Password.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8e07259d22bccb7c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 Python/6 Biblioteca estandar/1 Fechas y horas.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -144,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 Python/5 Entrada y salida de datos/3 Formateo de cadenas.md"
+                "file": "10 Wifi/1 WiFi-Academy/1 Redes WiFi/1 Intro.md"
               }
             }
           },
@@ -184,10 +197,17 @@
   },
   "active": "bf2639ebae59a07c",
   "lastOpenFiles": [
-    "6 Python/5 Entrada y salida de datos/2 Lectura y escritura.md",
+    "10 Wifi/1 WiFi-Academy/1 Redes WiFi/2 IEEE 802.11.md",
+    "10 Wifi/1 WiFi-Academy/1 Redes WiFi/1 Intro.md",
+    "6 Python/6 Biblioteca estandar/1 Fechas y horas.md",
+    "2.1 OSINT/4 Password.md",
+    "10 Wifi/Wifi Challenge/Wifi 1.0/1 Recon.md",
+    "10 Wifi/1 WiFi-Academy/1 Redes WiFi",
+    "10 Wifi/1 WiFi-Academy",
     "6 Python/5 Entrada y salida de datos/1 Entrada y salida.md",
     "6 Python/5 Entrada y salida de datos/3 Formateo de cadenas.md",
-    "2.1 OSINT/4 Password.md",
+    "6 Python/6 Biblioteca estandar",
+    "6 Python/5 Entrada y salida de datos/2 Lectura y escritura.md",
     "6 Python/4 Modulos y paquetes/3 Creacion.md",
     "6 Python/4 Modulos y paquetes/2 Importacion.md",
     "6 Python/5 Entrada y salida de datos",
@@ -208,21 +228,14 @@
     "6 Python/1 Conceptos Basicos/9 Funciones.md",
     "6 Python/1 Conceptos Basicos/7 String Formating.md",
     "6 Python/1 Conceptos Basicos/6 Python Operadores.md",
-    "6 Python/1 Conceptos Basicos/5 Var y Datos.md",
     "7.4 Pivoting",
     "6 Python",
-    "2.1 OSINT/0 OSINT.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
     "2.1 OSINT",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/4 Nunchucks.md",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
     "7.3 Buffer Overflow/Buffer Overflow",
     "7.3 Buffer Overflow/1 System",
-    "7.3 Buffer Overflow",
-    "0 Com Lin & Win/5 Powershell",
-    "7.2 C&C (C2)/2 PS Empire & Starkiller",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132807.png",
