@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 Wifi/1 WiFi-Academy/1 Redes WiFi/1 Intro.md",
+                "file": "10 Wifi/1 WiFi-Academy/1 Redes WiFi/2 IEEE 802.11.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 Python/6 Biblioteca estandar/1 Fechas y horas.md",
+                "file": "6 Python/6 Biblioteca estandar/2 Expresiones regulares.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -72,7 +72,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -157,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10 Wifi/1 WiFi-Academy/1 Redes WiFi/1 Intro.md"
+                "file": "6 Python/6 Biblioteca estandar/2 Expresiones regulares.md"
               }
             }
           },
@@ -195,11 +196,12 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "bf2639ebae59a07c",
+  "active": "8e07259d22bccb7c",
   "lastOpenFiles": [
+    "6 Python/6 Biblioteca estandar/1 Fechas y horas.md",
+    "6 Python/6 Biblioteca estandar/2 Expresiones regulares.md",
     "10 Wifi/1 WiFi-Academy/1 Redes WiFi/2 IEEE 802.11.md",
     "10 Wifi/1 WiFi-Academy/1 Redes WiFi/1 Intro.md",
-    "6 Python/6 Biblioteca estandar/1 Fechas y horas.md",
     "2.1 OSINT/4 Password.md",
     "10 Wifi/Wifi Challenge/Wifi 1.0/1 Recon.md",
     "10 Wifi/1 WiFi-Academy/1 Redes WiFi",
@@ -227,7 +229,6 @@
     "6 Python/1 Conceptos Basicos/8 Condicionales y Bucles.md",
     "6 Python/1 Conceptos Basicos/9 Funciones.md",
     "6 Python/1 Conceptos Basicos/7 String Formating.md",
-    "6 Python/1 Conceptos Basicos/6 Python Operadores.md",
     "7.4 Pivoting",
     "6 Python",
     "2.1 OSINT",
