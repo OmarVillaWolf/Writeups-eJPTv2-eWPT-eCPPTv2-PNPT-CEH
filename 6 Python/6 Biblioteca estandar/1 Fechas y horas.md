@@ -16,6 +16,31 @@ En resumen, datetime es una biblioteca integral y robusta para el manejo de fech
 ```python 
 #!/usr/bin/env python3 
 
+import datetime
 
+ahora = datetime.datetime.now()            # Saber la fecha y hora actual
+fecha = datetime.date(2024, 8, 31)         # Indicas la fecha 
+hora = datetime.time(14, 15, 15)           # Indicas la hora, min y seg
+fecha_hora = = datetime.datetime(2024, 8, 31, 14, 15, 15)
 
+print(ahora)
+print(fecha)
+print(hora)
+print(fecha_hora)
+```
+
+```python 
+#!/usr/bin/env python3 
+
+import datetime
+
+ahora = datetime.datetime.now()  
+año = ahora.year                           # De la fecha completa solo mostraremos el año
+mes = ahora.month
+dia = ahora.day
+horas = ahora.hour
+minutos = ahora.minute
+segundo = ahora.second
+
+print(año)  
 ```
