@@ -1,6 +1,6 @@
-# Español Writeups  - eJPTv2-eWPT-eCPPTv2-PNPT-CEH
+# Español Writeups  - eJPTv2/eWPTv2/eCPPTv3/PNPT
 
-Como resolver algunas maquinas de HTB, Vulnhub que nos ayuden a tener un mejor aprendizaje para la certificación eJPTv2, eCPPTv2, eWPT, PNPT, CEH. 
+Como resolver algunas maquinas de HTB, Vulnhub que nos ayuden a tener un mejor aprendizaje para la certificación eJPTv2, eCPPTv3, eWPTv2, PNPT. 
 Tocaremos algunos temas como:
 
 * Comandos Linux, Windows 
@@ -10,14 +10,6 @@ Tocaremos algunos temas como:
 * Escalada de privilegios básica para Linux y Windows 
 * Writeups de maquinas HTB
 * Writeups de maquinas Vulnhub
-* OWASP TOP 10 
+* OWASP TOP 10 básico 
 * BufferOverflow básico
-* Pivoting  
-
-Paginas usadas en estas notas.
-* Hack4u
-* HTB
-* THM
-* PortSwigger
-* Vulnhub
-
+* Pivoting  básico
