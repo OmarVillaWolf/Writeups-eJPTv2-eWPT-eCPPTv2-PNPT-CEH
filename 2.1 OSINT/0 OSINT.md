@@ -2,6 +2,10 @@
 
 Tags: #OSINT
 
+```bash
+❯ https://osintframework.com/         # Web que muestra los recursos para cada situacion de OSINT
+```
+
 ## Intelligence Lyfecycle 
 
 ```bash 
