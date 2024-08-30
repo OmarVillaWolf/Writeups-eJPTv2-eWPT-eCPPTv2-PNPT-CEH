@@ -15,8 +15,8 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ```bash 
-❯ nmap -sn ❮IP/24❯                  # Usara ARP para escanear la red y descubir los diferentes dispositivos en la red
-❯ nmap -PR -sn ❮IP/24❯              # Usara ARP para escanear la red
+❯ nmap -sn ❮IP/24❯                  # Usara 'Ping Scan' para escanear la red y descubir los diferentes dispositivos en la red
+❯ nmap -PR -sn ❮IP/24❯              # Usara 'ARP' con 'Ping Scan' para escanear la red
 
 	# sn = No escanea los puertos despues de descubir un host 'Se refiere a un escaneo de PING', es un ICMP, TCP SYNC
 ```
