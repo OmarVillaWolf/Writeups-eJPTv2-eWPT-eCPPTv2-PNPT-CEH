@@ -8,6 +8,7 @@ Tocaremos algunos temas como:
 * Puertos mas comunes en el 'Pentesting'
 * Herramientas de 'Pentesting'
 * Escalada de privilegios básica para Linux y Windows 
+* OSINT
 * Writeups de maquinas HTB
 * Writeups de maquinas Vulnhub
 * OWASP TOP 10 básico 
