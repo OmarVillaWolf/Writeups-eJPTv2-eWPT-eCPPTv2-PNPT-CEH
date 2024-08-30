@@ -1,4 +1,4 @@
-# Expresiones regulares
+# Regex 'Expresiones Regulares'
 
 Tags: #Python3 #Regex 
 
@@ -14,6 +14,10 @@ Aquí hay varios aspectos importantes de esta librería:
 - **Aplicaciones Prácticas**: Las expresiones regulares son extremadamente útiles en tareas como la validación de formatos (por ejemplo, direcciones de correo electrónico), el análisis de registros (logs), el procesamiento de lenguaje natural, y la limpieza y preparación de datos.
 - **Curva de Aprendizaje**: Aunque potentes, las expresiones regulares pueden ser complejas y requieren una curva de aprendizaje. Sin embargo, una vez dominadas, se convierten en una herramienta invaluable en el arsenal de cualquier programador.
 
+```bash 
+❯ https://regex101.com/     # Practicar las Regex
+❯ https://cheatography.com/davechild/cheat-sheets/regular-expressions/   # Cheat Sheet
+```
 
 ```python 
 #!/usr/bin/env python3 
