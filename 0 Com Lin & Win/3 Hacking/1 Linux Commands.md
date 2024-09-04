@@ -25,6 +25,12 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 ## Comandos terminal Linux
 
+```bash 
+❯ apt update 
+❯ apt upgrade 
+❯ apt full-upgrade     
+```
+
 ```bash
 /tmp                                         # Directorios con capacidad de lectura y escritura en Linux       
 /var/tmp 
