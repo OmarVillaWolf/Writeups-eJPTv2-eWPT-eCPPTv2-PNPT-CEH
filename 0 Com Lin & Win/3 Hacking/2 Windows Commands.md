@@ -4,6 +4,8 @@ Tags: #Windows #Comandos #Powershell
 
 ## Comandos terminal Windows
 
+* [WinPeas](https://github.com/peass-ng/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md)
+
 ```bash 
 ❯ arp -a                                     # Barrido ARP en la maquina actual 
 ```
