@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "43cecfe07c00c872",
+            "id": "2ba4783edb2d75d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
+                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "2ba4783edb2d75d5",
+            "id": "5b51234567868ea2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
+                "file": "2 Tools/Nikto.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,38 +47,12 @@
             }
           },
           {
-            "id": "0760d3565b3e3a31",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b0d1031855a86f3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.1 OSINT/Inteligencia Competitiva.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b83b7683208ddd6c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/Nikto.md",
+                "file": "2.1 OSINT/Web Sites.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -115,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "directory path:",
+                "query": "love",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -171,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/SQLMap.md"
+                "file": "2.1 OSINT/Web Sites.md"
               }
             }
           },
@@ -209,35 +183,35 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "70f5ccd9ff911c69",
+  "active": "b0d1031855a86f3a",
   "lastOpenFiles": [
-    "2 Tools/Nikto.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
-    "2.1 OSINT/Inteligencia Competitiva.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "1 Ports/0 Paginas Practicar.md",
-    "5.2 Vulhub - Machines/eWPT/Lab-Final/Laboratorio.md",
-    "1 Ports/20, 21, 134 - TFP - TFPT.md",
-    "1 Ports/80.1 WordPress.md",
-    "1 Ports/80, 443 - HTTP, HTTPS.md",
-    "5.2 Vulhub - Machines/eWPT/Lab-Final",
-    "2 Tools/SQLMap.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
-    "2.1 OSINT/People.md",
+    "2.1 OSINT/Social Network.md",
+    "2.1 OSINT/Web Sites.md",
+    "2.1 OSINT/5 Usernames and accounts.md",
+    "2.1 OSINT/4 Password.md",
     "2.1 OSINT/Domains & Subdomains.md",
     "2.1 OSINT/IoT.md",
-    "2.1 OSINT/5 Usernames and accounts.md",
+    "2.1 OSINT/Inteligencia Competitiva.md",
+    "2.1 OSINT/People.md",
+    "2.1 OSINT/2 Image & geo.md",
     "2.1 OSINT/3 Email.md",
-    "2.1 OSINT/4 Password.md",
-    "2.1 OSINT/2 Image.md",
-    "2.1 OSINT/1 Search Engines.md",
-    "2.1 OSINT/0 OSINT.md",
+    "2 Tools/Nikto.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "0 Com Lin & Win/1 Bash/1 Regex.md",
-    "6 Python/7 Librerias comunes/2 Request.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/2 Sau.md",
-    "2 Tools/Nmap.md",
+    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 PrivEsc.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Identifying PrivEsc.md",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/5 Automating.md",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/1 SystemInfo.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/8 Driver.md",
+    "1 Ports/443 HTTPS.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/4 Love.md",
+    "1 Ports/80 - HTTP.md",
+    "1 Ports/53 - DNS.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "5.2 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
     "0 Com Lin & Win/Untitled",
