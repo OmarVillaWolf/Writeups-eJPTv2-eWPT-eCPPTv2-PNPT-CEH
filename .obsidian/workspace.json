@@ -86,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/Nikto.md"
+                "file": "2 Tools/SQLMap.md"
               }
             }
           },
@@ -209,8 +209,9 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "70f5ccd9ff911c69",
   "lastOpenFiles": [
+    "2 Tools/Nikto.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
     "2.1 OSINT/Inteligencia Competitiva.md",
     "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
@@ -237,7 +238,6 @@
     "6 Python/7 Librerias comunes/2 Request.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/2 Sau.md",
     "2 Tools/Nmap.md",
-    "6 Python/6 Biblioteca estandar/2 Regex.md",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
     "0 Com Lin & Win/Untitled",
