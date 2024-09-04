@@ -16,6 +16,7 @@ Tags: #OSINT
 
 ```
 ❯ https://jimpl.com/               # Mirar los datos EXIF
+❯ https://www.dogpile.com/         # Busqueda de metadatos en paginas web
 ```
 
 ## Identificar la localidad geográfica 
