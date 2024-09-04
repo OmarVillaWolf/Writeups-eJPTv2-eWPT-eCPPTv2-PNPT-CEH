@@ -7,6 +7,7 @@ Tags: #OSINT #GoogleDorks #GoogleHacking
 ```bash 
 ❯ https://www.google.com/
 ❯ https://www.google.com/advanced_search
+❯ https://www.exploit-db.com/google-hacking-database
 
 ❯ https://www.bing.com/
 ❯ https://www.bruceclay.com/blog/bing-google-advanced-search-operators/
