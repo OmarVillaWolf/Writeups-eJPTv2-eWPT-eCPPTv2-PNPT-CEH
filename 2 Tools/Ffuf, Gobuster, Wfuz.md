@@ -23,7 +23,7 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories
 
 ```bash
 # Listar subdominios 
-❯ wfuzz -c --hc=404 --hh=12345 -t 200 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.❮IP❯” https://❮IP❯
+❯ wfuzz -c --hc=404 --hh=12345 -t 200 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.❮IP❯” https://❮IP❯/
 
 	# hc = HideCode 404
 	# c = Formato colorido
@@ -35,7 +35,7 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories
 ```
 
 ```bash
-❯ wfuzz -c --hc=403 -t 20 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.tinder.com” https://tinder.com
+❯ wfuzz -c --hc=403 -t 20 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.tinder.com” https://tinder.com/
 
 	# c = Permite meter colores
 	# t = Lanzar tareas en paralelo al mismo tiempo
@@ -113,7 +113,7 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories
 ```bash
 # Enumeracion de Subdominios. Gobuster trabaja muy bien con sockets y conexiones 
 
-❯ gobuster vhost --append-domain -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://❮IP❯ -t 200 -k 
+❯ gobuster vhost --append-domain -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://❮IP❯/ -t 200 -k 
 
 	# append-domain = Enumerar los subdominios
 	# vhost = Modo enumeracion VHost Subdominios
@@ -123,7 +123,7 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories
 ```
 
 ```bash
-❯ gobuster vhost --append-domain -u https://host.com -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 200 | grep -v "403"
+❯ gobuster vhost --append-domain -u https://host.com/ -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 200 | grep -v "403"
 
 	# append-domain = Enumerar los subdominios
 	# vhost = Modo enumeracion VHost Subdominios
@@ -140,12 +140,12 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories
 	# u = Colocamos la url
 	# t = Lanzar peticiones en paralelo al mismo tiempo
 	# w = Ruta del diccionario
-	# add-slash = Ta agrega una barra al final **/** y podremos ver el codigo de estado correspondiente en lugar de 301
+	# add-slash = Ta agrega una barra al final '/' y podremos ver el codigo de estado correspondiente en lugar de 301
 	# b = Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
 ```
 
 ```bash
-❯ gobuster dir -u http://host.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -b 403,404 -x .php,.html,.txt,.xml -r
+❯ gobuster dir -u http://host.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -b 403,404 -x .php,.html,.txt,.xml -r
 
 	# dir = Modo enumeracion directory/file
 	# u = Colocamos la url
@@ -157,7 +157,7 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories
 ```
 
 ```bash
-❯ gobuster dir -u https://miwifi.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -s 200 -x html -b ' '
+❯ gobuster dir -u https://miwifi.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -s 200 -x html -b ' '
 
 	# Debemos de colocar ademas de la **s** la **b** pero con una cadena vacia para evitar el error
 	# s = Queremos codigos de estado 200 = OK
@@ -174,7 +174,7 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories
 ```
 
 ```bash 
-❯ ffuf -w /usr/share/Seclists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeit.com" -u http://IP -fs 123
+❯ ffuf -w /usr/share/Seclists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeit.com" -u http://IP/ -fs 123
 
 	# w = Ruta absoluta de la wordlist a usar 
 	# H = Encabezado adicional y el server sabra que estamos enviando datos al server
