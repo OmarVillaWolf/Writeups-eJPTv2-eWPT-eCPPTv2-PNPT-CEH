@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom 
+Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom #Windows #Apache #PHP #HTTPS #HTTP #FileTransfer #LinuxtoWindows #Dirbuster 
 
 - IP -> 10.10.10.239
 - Ports -> TCP (80, 135, 139, 445, 3306, 5000, 5440, 5986, 7680, 47001, 49664-70), UDP (idk)
@@ -10,7 +10,8 @@ Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom
 
 ## Launchpad
 
--   **Launchpad**: [https://launchpad.net/ubuntu](https://launchpad.net/ubuntu)
+-  [Launchpad](https://launchpad.net/ubuntu)
+-  [WinPeas](https://github.com/peass-ng/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md)
 
 ## Recon
 
