@@ -8,6 +8,19 @@
         "type": "tabs",
         "children": [
           {
+            "id": "a4ca32fb02776980",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "2ba4783edb2d75d5",
             "type": "leaf",
             "state": {
@@ -32,35 +45,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "70f5ccd9ff911c69",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/SQLMap.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b0d1031855a86f3a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2.1 OSINT/Web Sites.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -89,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "love",
+                "query": "tag:#PassiveReconn",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -145,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2.1 OSINT/Web Sites.md"
+                "file": "2 Tools/Nikto.md"
               }
             }
           },
@@ -183,18 +170,26 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "b0d1031855a86f3a",
+  "active": "5b51234567868ea2",
   "lastOpenFiles": [
-    "2.1 OSINT/Social Network.md",
-    "2.1 OSINT/Web Sites.md",
-    "2.1 OSINT/5 Usernames and accounts.md",
-    "2.1 OSINT/4 Password.md",
-    "2.1 OSINT/Domains & Subdomains.md",
-    "2.1 OSINT/IoT.md",
+    "2 Tools/SQLMap.md",
+    "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
+    "2.1 OSINT & Passive Recon/Tools.md",
+    "2.1 OSINT & Passive Recon/People.md",
+    "2.1 OSINT & Passive Recon/0 OSINT.md",
+    "2.1 OSINT & Passive Recon/Geografico.md",
+    "2.1 OSINT & Passive Recon/Domains & Subdomains.md",
+    "2.1 OSINT & Passive Recon/DNS.md",
+    "2.1 OSINT & Passive Recon/3 Email.md",
+    "2.1 OSINT & Passive Recon/Social Network.md",
+    "2.1 OSINT & Passive Recon/Web Sites.md",
+    "2.1 OSINT & Passive Recon/Firewall.md",
+    "2.1 OSINT & Passive Recon/IoT.md",
+    "2.1 OSINT & Passive Recon/Number.md",
+    "2.1 OSINT & Passive Recon/2 Image.md",
+    "2.1 OSINT/Firewall.md",
+    "2.1 OSINT & Passive Recon/4 Password.md",
     "2.1 OSINT/Inteligencia Competitiva.md",
-    "2.1 OSINT/People.md",
-    "2.1 OSINT/2 Image & geo.md",
-    "2.1 OSINT/3 Email.md",
     "2 Tools/Nikto.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
     "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
@@ -203,14 +198,6 @@
     "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
     "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 PrivEsc.md",
     "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Identifying PrivEsc.md",
-    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/5 Automating.md",
-    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/1 SystemInfo.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/8 Driver.md",
-    "1 Ports/443 HTTPS.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/4 Love.md",
-    "1 Ports/80 - HTTP.md",
-    "1 Ports/53 - DNS.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "5.2 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
