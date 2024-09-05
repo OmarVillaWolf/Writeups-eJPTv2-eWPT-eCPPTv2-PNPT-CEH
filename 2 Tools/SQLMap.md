@@ -256,12 +256,6 @@ Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se
 		# 2 = Diccionario custom y colocar el 'path'
 ```
 
-## Anonimato
-
-```bash 
-
-```
-
 ## Ejemplo 2  
 
 Podemos usar los archivos de BurpSuite para ingresarlos en la herramienta SQLMap y así nos diga que tipo de vulnerabilidades tiene, además de poder obtener datos a partir de ellas. Para este ejemplo usaremos **SQLI**.
