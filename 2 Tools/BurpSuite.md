@@ -21,6 +21,7 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 
 ## Comandos
 
+```bash 
 ❯ **Click derecho > Copy to file** Para guardar la intercepción del **Proxy** en un archivo **.req** y así usarlo con la herramienta **SQL-Map**
 
 ❯ **Ctrl + I** Para mandar lo del proxy al intruder (I=i)
@@ -29,6 +30,7 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 ❯ **Ctrl + Shift + u** Para url decodear la data de las peticiones
 
 **/usr/share/wordlists/fasttrack.txt** Diccionario para passwd que generalmente traen los sitios Web 
+```
 
 ## Rastreo pasivo
 
