@@ -1,149 +1,158 @@
 # Diferentes tipos de Fuzzers 
 
-Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing 
+Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories 
 
 ```python
-# Modo directorio: Listar los directorios y archivos
+# Modo directorio: Enumerar los directorios y archivos
 ❯ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ❯ /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
 ❯ /usr/share/dirb/wordlists/common.txt
 ❯ /usr/share/metasploit-framework/data/wordlists/directory.txt
 
-# Modo DNS: Encontrar los subdominios 
+# Modo DNS: Enumerar Subdominios 
 ❯ /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt
 
-# Modo vhost: Encontrar host virtuales que estén configurados en el servidor
+# Modo vhost: Enumerar host virtuales que estén configurados en el servidor
 ❯ /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt
 
-# Para hacer enumeracion a un CMS
+# Enumeracion a un CMS
 ❯ /usr/share/Seclists/Discovery/Web-Content/CMS/wordpress.fuzz.txt
 ```
+
 ## Wfuzz 
 
 ```bash
+# Listar subdominios 
 ❯ wfuzz -c --hc=404 --hh=12345 -t 200 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.❮IP❯” https://❮IP❯
 
-	# hc -> HideCode 404
-	# c -> Formato colorido
-	# hh -> HideCharacters 12345
-	# w -> Ruta del diccionario
-	# FUZZ -> Donde va a insertar las palabras el diccionario
-	# t -> Lanzar tareas en paralelo al mismo tiempo
-	# H -> Para enumerar el subdominio, utilizamos esta cabecera 'Host: '
+	# hc = HideCode 404
+	# c = Formato colorido
+	# hh = HideCharacters 12345
+	# w = Ruta del diccionario
+	# FUZZ = Donde va a insertar las palabras el diccionario
+	# t = Lanzar tareas en paralelo al mismo tiempo
+	# H = Para enumerar el subdominio, utilizamos esta cabecera 'Host: '
 ```
 
 ```bash
 ❯ wfuzz -c --hc=403 -t 20 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.tinder.com” https://tinder.com
 
-	# c -> Permite meter colores
-	# t -> Lanzar tareas en paralelo al mismo tiempo
-	# w -> Ruta del diccionario
-	# FUZZ -> Donde va a insertar las palabras el diccionario
-	# H -> Para enumerar el subdominio, utilizamos esta cabecera 'Host: '
-	# hc -> HideCode 403
+	# c = Permite meter colores
+	# t = Lanzar tareas en paralelo al mismo tiempo
+	# w = Ruta del diccionario
+	# FUZZ = Donde va a insertar las palabras el diccionario
+	# H = Para enumerar el subdominio, utilizamos esta cabecera 'Host: '
+	# hc = HideCode 403
 ```
 
 ```bash
 ❯ wfuzz -c -L --hc=404,403 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt https://miwifi.com/FUZZ
 ❯ wfuzz -c --hc=404,403 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt https://miwifi.com/FUZZ/
 
-	# L -> Te aplica un Follow Redirect al codigo de estado 301, si no nos muestra nada, le quitamos el **-L** y le colocamos una barra al final 
-	# hc -> HideCode 403 y 404
+	# L = Te aplica un Follow Redirect al codigo de estado 301, si no nos muestra nada, le quitamos el **-L** y le colocamos una barra al final 
+	# hc = HideCode 403 y 404
 ```
 
 ```bash
 ❯ wfuzz -c --sl=216 --hc=404,403 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt https://miwifi.com/FUZZ
 
-	# sl -> ShowLine es para me muestre ese numero de lineas (l=ele) especifico
+	# sl = ShowLine es para me muestre ese numero de lineas (l=ele) especifico
 ```
 
 ```bash
 ❯ wfuzz -c --hl=216 --hc=404,403 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt https://miwifi.com/FUZZ
 
-	# hl -> HideLine y sirve para ocultar ese numero de lineas
-	# hw -> HideWords y sirve para ocultar el numero de palabras
-	# sw -> ShowWords y sirve para mostrar el numero de palabras
-	# hh -> HideCharacter y sirve para ocultar el numero de caracteres
-	# sh -> ShowCharacters y sirve para mostrar el numero de caracteres
+	# hl = HideLine y sirve para ocultar ese numero de lineas
+	# hw = HideWords y sirve para ocultar el numero de palabras
+	# sw = ShowWords y sirve para mostrar el numero de palabras
+	# hh = HideCharacter y sirve para ocultar el numero de caracteres
+	# sh = ShowCharacters y sirve para mostrar el numero de caracteres
 ```
 
-Conceptos de listas 
 ```bash
+# Conceptos de listas 
+
 ❯ wfuzz -c --hc=404,403 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt https://miwifi.com/FUZZ.html
 
 	# Para enumerar archivos html en una ruta 
 ```
 
-Creamos un Payload de tipo lista 
 ```bash
+# Creamos un Payload de tipo lista 
+
 ❯ wfuzz -c --hc=404,403 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -z list,html-txt-php https://miwifi.com/FUZZ.FUZ2Z
 
 	# Para enumerar diferentes archivos en una ruta 
-	# z -> Crear un payload de tipo lista 
-	# FUZ2Z -> Ahi es donde se colocaran las extensiones que hemos definido (html,php,txt)
+	# z = Crear un payload de tipo lista 
+	# FUZ2Z = Ahi es donde se colocaran las extensiones que hemos definido (html,php,txt)
 ```
 
-Conceptos de Range 
 ```bash
+# Conceptos de Range 
+
 ❯ wfuzz -c --hw=6515 -t 200 -z range,1-20000 'https://www.mi.com/shop/buy/detail?product_id=FUZZ'
 
-	# z -> Crear un payload de tipo rango
-	# hw -> HideWords y sirve para ocultar el numero de palabras
+	# z = Crear un payload de tipo rango
+	# hw = HideWords y sirve para ocultar el numero de palabras
 ```
 
-Para descubrir si tiene el Plugin de **gwolle-gb** 
 ```bash
+# Para descubrir si tiene el Plugin de 'gwolle-gb' 
+
 ❯ wfuzz -c --hc=404 -t 200 -w wp-plugins.fuzz.txt http://❮IP❯/FUZZ
 
-	# hc -> HideCode 404
-	# c -> Formato colorido
-	# w -> Ruta del diccionario
-	# FUZZ -> Donde va a insertar las palabras el diccionario
-	# t -> Lanzar tareas en paralelo al mismo tiempo
+	# hc = HideCode 404
+	# c = Formato colorido
+	# w = Ruta del diccionario
+	# FUZZ = Donde va a insertar las palabras el diccionario
+	# t = Lanzar tareas en paralelo al mismo tiempo
 ```
 
 ## Gobuster
 
-Gobuster trabaja muy bien con sockets y conexiones 
 ```bash
-❯ gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url http://❮IP❯ -t 200 -k 
+# Enumeracion de Subdominios. Gobuster trabaja muy bien con sockets y conexiones 
 
-	# vhost -> Modo enumeracion VHost Subdominios
-	# w -> Ruta del diccionario
-	# t -> Lanzar tareas en paralelo al mismo tiempo
-	# k -> Para certificados autofirmados para el puerto 443
+❯ gobuster vhost --append-domain -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://❮IP❯ -t 200 -k 
+
+	# append-domain = Enumerar los subdominios
+	# vhost = Modo enumeracion VHost Subdominios
+	# w = Ruta del diccionario
+	# t = Lanzar tareas en paralelo al mismo tiempo
+	# k = Para certificados autofirmados para el puerto 443
 ```
 
 ```bash
-❯ gobuster vhost -u http://host.com -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 20 | grep -v "403"
+❯ gobuster vhost --append-domain -u https://host.com -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 200 | grep -v "403"
 
-	# vhost -> Modo enumeracion VHost Subdominios
-	# u -> Colocamos la url
-	# t -> Lanzar peticiones en paralelo al mismo tiempo
-	# w -> Ruta del diccionario
-	# grep -v -> Quitamos los que salgan en codigo de estado 403
+	# append-domain = Enumerar los subdominios
+	# vhost = Modo enumeracion VHost Subdominios
+	# u = Colocamos la url
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# w = Ruta del diccionario
+	# grep -v = Quitamos los que salgan en codigo de estado 403
 ```
 
 ```bash
 ❯ gobuster dir -u http://host.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 --add-slash -b 403,404
 
-	# dir -> Modo enumeracion directorios y archivos 
-	# u -> Colocamos la url
-	# t -> Lanzar peticiones en paralelo al mismo tiempo
-	# w -> Ruta del diccionario
-	# add-slash -> Ta agrega una barra al final **/** y podremos ver el codigo de estado correspondiente en lugar de 301
-	# b -> Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
+	# dir = Modo enumeracion directorios y archivos 
+	# u = Colocamos la url
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# w = Ruta del diccionario
+	# add-slash = Ta agrega una barra al final **/** y podremos ver el codigo de estado correspondiente en lugar de 301
+	# b = Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
 ```
 
 ```bash
 ❯ gobuster dir -u http://host.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -b 403,404 -x .php,.html,.txt,.xml -r
 
-	# dir -> Modo enumeracion directory/file
-	# u -> Colocamos la url
-	# t -> Lanzar peticiones en paralelo al mismo tiempo
-	# w -> Ruta del diccionario
-	# b -> Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
-	# x -> Que extensiones queremos buscar (.php,.html,.txt)
+	# dir = Modo enumeracion directory/file
+	# u = Colocamos la url
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# w = Ruta del diccionario
+	# b = Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
+	# x = Que extensiones queremos buscar (.php,.html,.txt)
 	# r = Para hacer 'Follow Redirect'
 ```
 
@@ -151,11 +160,11 @@ Gobuster trabaja muy bien con sockets y conexiones
 ❯ gobuster dir -u https://miwifi.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -s 200 -x html -b ' '
 
 	# Debemos de colocar ademas de la **s** la **b** pero con una cadena vacia para evitar el error
-	# s -> Queremos codigos de estado 200 = OK
-	# dir -> Modo enumeracion directory/file
-	# u -> Colocamos la url
-	# t -> Lanzar peticiones en paralelo al mismo tiempo
-	# w -> Ruta del diccionario
+	# s = Queremos codigos de estado 200 = OK
+	# dir = Modo enumeracion directory/file
+	# u = Colocamos la url
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# w = Ruta del diccionario
 ```
 
 ## Ffuf 
@@ -175,6 +184,7 @@ Gobuster trabaja muy bien con sockets y conexiones
 
 ```bash 
 # Fuzzing para encontrar usuarios validos en una web 
+
 ❯ ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.186.98/customers/signup -mr "username already exists"
 
 	# POST = Metodo a usar porque mandamos data en la peticion 
@@ -186,6 +196,7 @@ Gobuster trabaja muy bien con sockets y conexiones
 
 ```bash 
 # Hacer fuerza bruta con usuarios recopilados para encontrar su password
+
 ❯ ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.186.98/customers/login -fc 200
 
 	# W1 = Lista de usuarios recopilados 
@@ -213,20 +224,22 @@ Gobuster trabaja muy bien con sockets y conexiones
 ```bash
 ❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/big.txt 
 
-	# u -> url 
-	# w -> ruta del diccionario 
-	# FUZZ -> Ahi se van a sustituir las palabras del diccionario
+	# u = url 
+	# w = ruta del diccionario 
+	# FUZZ = Ahi se van a sustituir las palabras del diccionario
 ```
 
-
 ```bash
-	# Para encontrar diferentes archivos 
+# Para encontrar diferentes archivos 
 ❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.tx
-	# Encontrar extenciones para las paginas por default 'index'
+
+# Encontrar extenciones para las paginas por default 'index'
 ❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.txt
-	# Buscamos por extenciones especificas
+
+# Buscamos por extenciones especificas
 ❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-words-lowercase.txt -e .php,.txt
-	# Para fuzzear los directorios en la pagina web
+
+# Para fuzzear los directorios en la pagina web
 ❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories-lowercase.txt
 ```
 
