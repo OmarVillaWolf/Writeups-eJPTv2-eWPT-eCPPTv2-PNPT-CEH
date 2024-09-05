@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "5b51234567868ea2",
+            "id": "d404c6235fbae345",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Tools/Nikto.md",
+                "file": "2 Tools/BurpSuite.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/Nikto.md"
+                "file": "2 Tools/BurpSuite.md"
               }
             }
           },
@@ -170,10 +170,25 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "5b51234567868ea2",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "2 Tools/SQLMap.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
+    "2 Tools/Nikto.md",
+    "0 Com Lin & Win/1 Bash/2 Filtros.md",
+    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "0 Com Lin & Win/3 Hacking/0 OverTheWire.md",
+    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
+    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
+    "0 Com Lin & Win/3 Hacking/4 Netcat Commands.md",
+    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "0 Com Lin & Win/3 Hacking/Searchsploit.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "0 Com Lin & Win/3 Hacking/Encoding.md",
     "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
+    "2 Tools/SQLMap.md",
     "2.1 OSINT & Passive Recon/Tools.md",
     "2.1 OSINT & Passive Recon/People.md",
     "2.1 OSINT & Passive Recon/0 OSINT.md",
@@ -183,21 +198,6 @@
     "2.1 OSINT & Passive Recon/3 Email.md",
     "2.1 OSINT & Passive Recon/Social Network.md",
     "2.1 OSINT & Passive Recon/Web Sites.md",
-    "2.1 OSINT & Passive Recon/Firewall.md",
-    "2.1 OSINT & Passive Recon/IoT.md",
-    "2.1 OSINT & Passive Recon/Number.md",
-    "2.1 OSINT & Passive Recon/2 Image.md",
-    "2.1 OSINT/Firewall.md",
-    "2.1 OSINT & Passive Recon/4 Password.md",
-    "2.1 OSINT/Inteligencia Competitiva.md",
-    "2 Tools/Nikto.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 PrivEsc.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Identifying PrivEsc.md",
     "5.2 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
