@@ -30,7 +30,7 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 /usr/share/wordlists/metasploit/common_users.txt
 ```
 
-## Fuerza bruta a una autenticacion digital 
+## Fuerza bruta a una autenticación digital 
 
 ```bash 
 ❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> http-get /DIR/ 
