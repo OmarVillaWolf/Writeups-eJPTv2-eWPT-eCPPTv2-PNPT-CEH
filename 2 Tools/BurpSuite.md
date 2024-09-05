@@ -15,7 +15,7 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 ## Iniciar BurpSuite 
 
 ```bash
-❯ burpsuite &> /dev/null & disown                # Iniciamos el BurpSuite y lo mandamos a segundo plano e independizar el proceso del BurpSuite
+❯ burpsuite &> /dev/null & disown                   # Iniciamos el BurpSuite y lo independizamos
 ❯ BurpSuiteCommunity &> /dev/null & disown
 ```
 
@@ -34,73 +34,72 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 
 ## Rastreo pasivo
 
+```bash 
 1. Necesitamos tener el 'Proxy' activado en la web 
 2. Debemos de activar en 'Burpsuite' en la pestaña de 'Dashboard' la parte de -> 'Capturing (Live passive crawl from Proxy (all trafic))'
 3. Toda la data la podremos ver en la parte del 'Proxy' -> 'HTTP History' 
 4. Eso funcionara aunque tengamos el 'Proxy' desactivado
+```
 
-## Enumeración con Fuerza Bruta
+# Enumeración con Fuerza Bruta
 
-### Intruder: Sniper
+## Intruder: Sniper
 
-Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos permite agregar un Payload (una carga útil) y probar con un solo parámetro (una sola posición). 
+```bash 
+# Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos permite agregar un Payload (una carga útil) y probar con un solo parámetro (una sola posición). 
 .
 	Payload set: 1
 	Payload Type: Simple list
 
-Debemos de agregar nuestras propias palabras o cargar una lista.
-
-```bash 
+# Debemos de agregar nuestras propias palabras o cargar una lista.
 # Este ataque lo podemos hacer en el método 'GET' de Burpsuite
 
 GET /$name$ HTTP/1.1        # Agregamos al directorio principal el parametro a usar, en este caso 'name'
 ```
 
-### Intruder: Battering Ram
-Permite tomar tantas posiciones como queramos, pero cada uno de los espacios serán probados con la misma palabra.
+## Intruder: Battering Ram
+
+```bash 
+# Permite tomar tantas posiciones como queramos, pero cada uno de los espacios serán probados con la misma palabra.
 .
 	Payload set: 1
 	Payload Type: Simple list
 
-Aquí podemos cargar el diccionario llamado fasttrack.txt
-Lo que hace es que toma la misma palabra y la coloca en todos las posiciones que habilitamos. 
+# Aquí podemos cargar el diccionario llamado fasttrack.txt
+# Lo que hace es que toma la misma palabra y la coloca en todos las posiciones que habilitamos. 
+```
+## Intruder: Pitchfork
 
-### Intruder: Pitchfork
-Permite tener dos posiciones en las cuales podemos tener una lista en cada una o generar un ataque de fuerza bruta cada una.
+```bash 
+# Permite tener dos posiciones en las cuales podemos tener una lista en cada una o generar un ataque de fuerza bruta cada una.
 .
 	Payload set: 1
 	Payload Type: Simple list
 
-El primer payload se refiere a que ahí podemos colocar una lista de usuarios
+# El primer payload se refiere a que ahí podemos colocar una lista de usuarios
 
 .
 	Payload set: 2
 	Payload Type: Simple list
 
-El segundo payload se refiere a que ahí podemos colocar una lista que podrían ser de passwd.
+# El segundo payload se refiere a que ahí podemos colocar una lista que podrían ser de passwd.
+# Probara las posiciones al mismo tiempo, por lo que el usuario y la passwd correctas se deben de encontrar en la misma posición, de lo contrario no podría encontrarlo aunque si existan en el diccionario.
+```
+## Intruder: Cluster Bomb
 
-Probara las posiciones al mismo tiempo, por lo que el usuario y la passwd correctas se deben de encontrar en la misma posición, de lo contrario no podría encontrarlo aunque si existan en el diccionario.
-
-### Intruder: Cluster Bomb
-Permite escoger dos posiciones (2 payloads).
+```bash 
+# Permite escoger dos posiciones (2 payloads).
 .
 	Payload set: 1
 	Payload Type: Simple list
 
-El primer payload se refiere a que ahí podemos colocar una lista de usuarios
+# El primer payload se refiere a que ahí podemos colocar una lista de usuarios
 
 .
 	Payload set: 2
 	Payload Type: Simple list
 
-El segundo payload se refiere a que ahí podemos colocar una lista que podrían ser de passwd.
-
-En este caso probara primero el primer elemento de la lista 1 y después probara todos los elementos de la lista 2. Pasara a otro elemento de la lista 1 y después probara todos los elementos de la lista 2 y así sucesivamente. 
-
-
-
-
-
-
-
+# El segundo payload se refiere a que ahí podemos colocar una lista que podrían ser de passwd.
+# En este caso probara primero el primer elemento de la lista 1 y después probara todos los elementos de la lista 2. Pasara a otro elemento de la lista 1 y después probara todos los elementos de la lista 2 y así sucesivamente. 
+```
 
