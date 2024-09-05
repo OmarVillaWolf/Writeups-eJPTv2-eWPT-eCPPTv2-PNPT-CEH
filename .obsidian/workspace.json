@@ -45,9 +45,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4ca1dc3fb2113cc4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/Hydra.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8fdecd8fd8202b42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -132,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/BurpSuite.md"
+                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md"
               }
             }
           },
@@ -170,11 +196,14 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "d404c6235fbae345",
+  "active": "8fdecd8fd8202b42",
   "lastOpenFiles": [
+    "3.2 Metasploit/3 MSF Client-Side Attacks.md",
+    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
+    "2 Tools/Hydra.md",
+    "2 Tools/BurpSuite.md",
     "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
-    "2 Tools/BurpSuite.md",
     "2 Tools/Nmap.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
     "2 Tools/Dirbuster, Dirsearch.md",
@@ -195,9 +224,6 @@
     "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
     "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
     "0 Com Lin & Win/3 Hacking/4 Netcat Commands.md",
-    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
-    "0 Com Lin & Win/3 Hacking/Searchsploit.md",
     "5.2 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
