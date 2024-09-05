@@ -21,6 +21,10 @@ Esta herramienta sirve para enumerar directorios
 
 ## Dirb 
 
+```bash 
+❯ man dirb                      # Mirar las opciones del comando 'dirb'
+```
+
 ```python
 ❯ dirb http://<IP>/             # Enumerar directorios en la web por el puerto 80 
 
@@ -41,5 +45,11 @@ Esta herramienta sirve para enumerar directorios
 ## Dirsearch 
 
 ```bash 
-❯ dirsearch 
+❯ dirsearch -u http://IP/ -t 30 -e txt,html,php -f -w /usr/share/seclists/Discovery/Web-Content/Directory-list-2.3-medium.txt
+
+	# u = URL 
+	# t = Numero de peticiones 
+	# e = Extensiones a buscar 'txt,html,php,jsp,asp,aspx,rar,zip'
+	# f = Forzar la busqueda de extensiones 
+	# w = Diccionario a utilizar 
 ```
