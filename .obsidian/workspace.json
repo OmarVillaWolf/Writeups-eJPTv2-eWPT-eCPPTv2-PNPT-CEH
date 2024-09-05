@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
+                "file": "5.2 Vulhub - Machines/Plantilla.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -76,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#PassiveReconn",
+                "query": "winpeas",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/BurpSuite.md"
+                "file": "5.2 Vulhub - Machines/Plantilla.md"
               }
             }
           },
@@ -170,9 +170,17 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "2ba4783edb2d75d5",
   "lastOpenFiles": [
+    "5.1 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
+    "2 Tools/BurpSuite.md",
     "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/8 Driver.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "2 Tools/Ffuf, Gobuster, Wfuz.md",
+    "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
     "2 Tools/Nikto.md",
     "0 Com Lin & Win/1 Bash/2 Filtros.md",
     "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
@@ -184,20 +192,12 @@
     "0 Com Lin & Win/3 Hacking/Msfvenom.md",
     "0 Com Lin & Win/3 Hacking/ReverShell.md",
     "0 Com Lin & Win/3 Hacking/Searchsploit.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
     "0 Com Lin & Win/3 Hacking/Encoding.md",
-    "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
     "2 Tools/SQLMap.md",
     "2.1 OSINT & Passive Recon/Tools.md",
     "2.1 OSINT & Passive Recon/People.md",
     "2.1 OSINT & Passive Recon/0 OSINT.md",
-    "2.1 OSINT & Passive Recon/Geografico.md",
-    "2.1 OSINT & Passive Recon/Domains & Subdomains.md",
-    "2.1 OSINT & Passive Recon/DNS.md",
-    "2.1 OSINT & Passive Recon/3 Email.md",
-    "2.1 OSINT & Passive Recon/Social Network.md",
-    "2.1 OSINT & Passive Recon/Web Sites.md",
     "5.2 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
