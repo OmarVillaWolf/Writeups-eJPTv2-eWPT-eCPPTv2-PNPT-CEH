@@ -14,3 +14,19 @@ Esta herramienta sirve para escanear las vulnerabilidades web. Es bueno si lo us
 	# o = Output hacia un archivo 
 	# Format = Formato del archivo de salida
 ```
+
+```bash 
+❯ nikto -h http://IP/ -ssl                      # Muestra info sobre el SSL
+```
+
+```bash 
+❯ nikto -h niktoscan.txt                        # Escanear multiples IPs o dominios dentro de un archivo de texto
+```
+
+```bash 
+❯ nikto -h http://IP/ -Cgidirs+                 # Escanea los directorios '/cgi'
+```
+
+```bash 
+❯ nikto -h http://IP/ -f txt -o niktoscan.txt   # Guardamos el escaneo en un archivo txt con formato txt 
+```
