@@ -56,6 +56,20 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ```bash 
+❯ nmap -n -P0 -p- -sS -g 53 -T5 -vv ❮Target IP❯
+	# n = No aplicar resolucion DNS
+	# P0 = Saltar etapa de 'Host Discovery' 
+	# p = Escaneo de todos los puertos '65535'
+	# sS = Aplica un TCP SYN Scan (Rapido, Fiable, Sigiloso)
+	# g = Puerto de origen 
+	# T5 = La velocidad de escaneo 'agresivo'
+	# v = Verbosidad 
+
+❯ nmap -n -P0 -p 22,80 -sV -sS -g 53 -T5 -vv ❮Target IP❯
+	# sV = Version 
+```
+
+```bash 
 # Windows siempre bloquea los PING ICMP, por lo que debemos de agregar la sig. bandera
 ❯ nmap -Pn -F -sVC -O ❮IP/24❯ -v                
 	# Pn = Identifica si el host esta activo 
