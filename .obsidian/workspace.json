@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.1 OSINT & Passive Recon/6 People.md",
+                "file": "3 OSINT & Passive Recon/6 People.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "2ba4783edb2d75d5",
+            "id": "59eb54a874a2097a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
+                "file": "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md"
+                "file": "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md"
               }
             }
           },
@@ -157,42 +157,42 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "2ba4783edb2d75d5",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "5.1 HTB - Machines/eJPTv2/1 Easy/7 GoodGames.md",
-    "2.1 OSINT & Passive Recon/6 People.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/6 NunChucks.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
+    "3.3 Explotation/Explotation.md",
+    "3.3 Explotation/2 Linux/4 Samba.md",
+    "3.3 Explotation/2 Linux/3 PHP.md",
+    "3.3 Explotation/2 Linux/1 Port-Scanning.md",
+    "3.3 Explotation/2 Linux/2 vsFTPd.md",
+    "3.3 Explotation/1 Windows/4 MySQL.md",
+    "3.3 Explotation/1 Windows/3 SMB.md",
+    "3.3 Explotation/1 Windows/2 Open SSH.md",
+    "3.3 Explotation/1 Windows/1 Port-Scanning.md",
+    "3.3 Explotation/1 Windows/2 IIS FTP.md",
+    "Recomendacion.md",
+    "3.1 Network/1 Based-Attacks.md",
+    "10 Buffer Overflow/Buffer Overflow/1 Explotacion.md",
+    "8 AD/2 PT/4 Persistence/2 Golden Ticket.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
+    "3 OSINT & Passive Recon/6 People.md",
+    "7 Hack4u/1 IP/2 MAC.md",
+    "7 Hack4u/1 IP/1 Direcciones IP.md",
+    "7 Hack4u/2 Reconocimiento/5 ARP e ICMP.md",
+    "7 Hack4u/2 Reconocimiento/4 Nmap - Scripts.md",
+    "7 Hack4u/2 Reconocimiento/3 Nmap - Firewalls Evasion.md",
+    "7 Hack4u/2 Reconocimiento/2 Nmap - UDP Scan.md",
+    "7 Hack4u/2 Reconocimiento/1 Nmap - TCP Scan.md",
     "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "4 PrivEsc Lin & Win/2 Linux/Hack4u/7. Capabilities.md",
-    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
-    "4 PrivEsc Lin & Win/Post-Explotation.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
-    "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
-    "2 Tools/BurpSuite.md",
-    "2 Tools/Hydra.md",
-    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
-    "3.2 Metasploit/3 MSF Client-Side Attacks.md",
-    "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
-    "2 Tools/Nmap.md",
-    "2 Tools/Dirbuster, Dirsearch.md",
-    "2 Tools/Ffuf, Gobuster, Wfuz.md",
-    "1 Ports/443 HTTPS.md",
-    "1 Ports/80 - HTTP.md",
-    "7 Hack4u/3 OWASP TOP 10/9 SSTI.md",
-    "5.2 Vulhub - Machines/Plantilla.md",
-    "5.2 Vulhub - Machines/eWPT/Lab-Final",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/7 GoodGames.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/6 NunChucks.md",
+    "5.1 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
     "0 Com Lin & Win/Untitled",
     "6 Python/7 Librerias comunes",
     "0 Com Lin & Win/1.1 Python Pen",
-    "10 Wifi/1 WiFi-Academy/1 Redes WiFi",
-    "10 Wifi/1 WiFi-Academy",
+    "14 Wifi/1 WiFi-Academy/1 Redes WiFi",
+    "14 Wifi/1 WiFi-Academy",
     "6 Python/6 Biblioteca estandar",
     "6 Python/5 Entrada y salida de datos",
     "Z Imagenes/Hacking/Piv1.png",
