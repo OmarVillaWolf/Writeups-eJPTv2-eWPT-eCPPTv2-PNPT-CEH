@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
+                "file": "2.1 OSINT & Passive Recon/6 People.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -26,46 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d404c6235fbae345",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/BurpSuite.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4ca1dc3fb2113cc4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Tools/Hydra.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8fdecd8fd8202b42",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
+                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -73,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "winpeas",
+                "query": "find",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -158,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3.2 Metasploit/4 MSF Gathering & Enumeration.md"
+                "file": "5.1 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md"
               }
             }
           },
@@ -196,34 +157,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "8fdecd8fd8202b42",
+  "active": "2ba4783edb2d75d5",
   "lastOpenFiles": [
+    "5.1 HTB - Machines/eJPTv2/1 Easy/7 GoodGames.md",
+    "2.1 OSINT & Passive Recon/6 People.md",
+    "5.1 HTB - Machines/eJPTv2/1 Easy/6 NunChucks.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
+    "5.1 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/7. Capabilities.md",
+    "4 PrivEsc Lin & Win/2 Linux/Hack4u/2. SUID.md",
+    "4 PrivEsc Lin & Win/Post-Explotation.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
+    "2 Tools/BurpSuite.md",
+    "2 Tools/Hydra.md",
+    "3.2 Metasploit/4 MSF Gathering & Enumeration.md",
     "3.2 Metasploit/3 MSF Client-Side Attacks.md",
     "3.2 Metasploit/2 MSF Vulnerability Scanning.md",
-    "2 Tools/Hydra.md",
-    "2 Tools/BurpSuite.md",
-    "2.1 OSINT & Passive Recon/5 Usernames and accounts.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
     "2 Tools/Nmap.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
     "2 Tools/Dirbuster, Dirsearch.md",
     "2 Tools/Ffuf, Gobuster, Wfuz.md",
     "1 Ports/443 HTTPS.md",
     "1 Ports/80 - HTTP.md",
     "7 Hack4u/3 OWASP TOP 10/9 SSTI.md",
     "5.2 Vulhub - Machines/Plantilla.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
-    "5.1 HTB - Machines/eWPTv2/1 Easy/6 NodeBlog.md",
-    "5.1 HTB - Machines/eJPTv2/1 Easy/8 Driver.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "2 Tools/Nikto.md",
-    "0 Com Lin & Win/1 Bash/2 Filtros.md",
-    "0 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "0 Com Lin & Win/3 Hacking/0 OverTheWire.md",
-    "0 Com Lin & Win/3 Hacking/3 Meterpreter Commands.md",
-    "0 Com Lin & Win/3 Hacking/0 Basic Commands.md",
-    "0 Com Lin & Win/3 Hacking/4 Netcat Commands.md",
     "5.2 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
