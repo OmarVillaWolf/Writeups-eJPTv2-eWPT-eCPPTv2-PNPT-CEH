@@ -46,7 +46,7 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 ## Intruder: Sniper
 
 ```bash 
-# Sirve para realizar ataques de fuerza bruta (o de diccionario). El Sniper nos permite agregar un Payload (una carga útil) y probar con un solo parámetro (una sola posición). 
+# Realiza ataques de fuerza bruta o diccionario. El Sniper nos permite agregar un Payload y probar con un solo parámetro. 
 .
 	Payload set: 1
 	Payload Type: Simple list
