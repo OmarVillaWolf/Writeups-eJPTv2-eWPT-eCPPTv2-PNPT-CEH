@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 OSINT & Passive Recon/6 People.md",
+                "file": "3 OSINT & Passive Recon/8 Social Network.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -46,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -131,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Tools/Scanning Networks.md"
+                "file": "3 OSINT & Passive Recon/8 Social Network.md"
               }
             }
           },
@@ -169,17 +170,20 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "bb2eb19b62be71d5",
   "lastOpenFiles": [
-    "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
+    "3 OSINT & Passive Recon/9 Web Sites.md",
+    "3 OSINT & Passive Recon/8 Social Network.md",
+    "3 OSINT & Passive Recon/7 Number.md",
     "3 OSINT & Passive Recon/6 People.md",
     "2 Tools/Scanning Networks.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
+    "README.md",
     "2 Tools/BurpSuite.md",
     "1.1 Scanning Networks",
     "0 Com Lin & Win/4 Web/Google Hacking.md",
     "0 Com Lin & Win/4 Web/1 Passive Enum.md",
     "3 Excel.md",
-    "README.md",
     "3.3 Explotation/Explotation.md",
     "3.3 Explotation/2 Linux/4 Samba.md",
     "3.3 Explotation/2 Linux/3 PHP.md",
@@ -195,9 +199,6 @@
     "10 Buffer Overflow/Buffer Overflow/1 Explotacion.md",
     "8 AD/2 PT/4 Persistence/2 Golden Ticket.md",
     "7 Hack4u/1 IP/2 MAC.md",
-    "7 Hack4u/1 IP/1 Direcciones IP.md",
-    "7 Hack4u/2 Reconocimiento/5 ARP e ICMP.md",
-    "7 Hack4u/2 Reconocimiento/4 Nmap - Scripts.md",
     "5.1 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
