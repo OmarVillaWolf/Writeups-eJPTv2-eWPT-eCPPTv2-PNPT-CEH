@@ -54,10 +54,41 @@ tput cnorm
 ```bash
 !#/bin/bash 
 
+function ctrl_c(){
+	echo -e "\n\n[!] Saliendo...\n"
+	tput cnorm; exit 1
+}
+
+# Ctrl_c
+trap ctrl_c INT
+
+tput civis
+
 for i in $(seq 1 254); do
 	for port in 21 22 80 443 445 8080; do
 		timeout 1 bash -c "echo '' > /dev/tcp/10.10.0.$i/$port" &>/dev/null && echo "[+] Host 10.10.0.$i - PORT $port - OPEN" &
 	done 
 done; wait 
+
+tput cnorm
 ```
 
+```bash 
+#!/bin/bash 
+
+function ctrl_c(){
+	echo -e "\n\n[!] Saliendo...\n"
+	tput cnorm; exit 1
+}
+
+# Ctrl_c
+trap ctrl_c INT
+
+tput civis
+
+for port in $(seq 1 65535); do
+	timeout 1 bash -c "echo '' > /dev/tcp/172.19.0.1/$port" 2>/dev/null && echo "[+] Puerto $port abierto" & 
+done; wait
+
+tput cnorm
+```
