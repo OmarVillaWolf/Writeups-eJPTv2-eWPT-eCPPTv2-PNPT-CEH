@@ -3,6 +3,17 @@
 Tags: #PassiveRecon 
 
 ```bash 
+❯ 
+❯ 
+❯ 
+❯ 
+❯ 
+❯ 
+❯ 
+❯ 
+```
+
+```bash 
 ❯ https://web.archive.org/      # Muestra las versiones anteriores de las paginas de las empresas (Wayback Machine)
 ```
 
