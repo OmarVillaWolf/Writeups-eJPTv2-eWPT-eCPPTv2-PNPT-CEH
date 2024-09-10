@@ -3,15 +3,14 @@
 Tags: #OSINT 
 
 ```bash
-❯ 
-❯ 
-❯ 
-❯ 
-❯ 
-❯ 
-❯ 
-❯ 
-❯ 
+❯ https://www.whitepages.com/
+❯ https://www.truepeoplesearch.com/
+❯ https://www.fastpeoplesearch.com/
+❯ https://www.fastbackgroundcheck.com/
+❯ https://www.411.com/
+❯ https://thatsthem.com/challenge?r=%2F
+
+❯ https://voterrecords.com/
 ```
 
 ```bash 
