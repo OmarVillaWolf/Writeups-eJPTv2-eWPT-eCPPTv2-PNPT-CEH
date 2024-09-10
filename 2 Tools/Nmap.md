@@ -31,6 +31,25 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	# reason = Ademas nos ayuda a saber que host tenemos up o down 
 ```
 
+## Evadir IDS o Firewall
+
+```bash 
+❯ nmap -D RND:3 -v <IP>                 # Utilizar una IP señuelo 'Decoy'
+	# D RDN = Numero de 'decoy', en este caso son 3
+
+❯ nmap -sS -Pn --spoof-mac 0 <IP>       # Falsificacion de MAC Address
+
+❯ nmap --randomize-hosts <IP>           
+
+❯ nmap -g 445 -v <IP>                   # Manipulacion del puerto de origen 
+	# g = Puerto de origen 
+
+❯ nmap -sS -T4 -f -v <IP>               # Fragmentamos el trafico para evadir el Firewall 'Aveces funciona'
+	# f = Fragmentar 
+	# sS = Aplica un TCP SYN Scan (Rapido, Fiable, Sigiloso)
+	# T = Velocidad 
+```
+
 ## Active Directory 
 
 ```bash 
