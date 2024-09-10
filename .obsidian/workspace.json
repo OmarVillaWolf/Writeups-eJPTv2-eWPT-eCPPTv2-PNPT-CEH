@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 OSINT & Passive Recon/8 Social Network.md",
+                "file": "3 OSINT & Passive Recon/9 Web Sites.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -45,9 +45,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9851c327d76b3559",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Tools/John the Ripper.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -132,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 OSINT & Passive Recon/8 Social Network.md"
+                "file": "2 Tools/John the Ripper.md"
               }
             }
           },
@@ -170,14 +183,27 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "bb2eb19b62be71d5",
+  "active": "9851c327d76b3559",
   "lastOpenFiles": [
+    "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
+    "2 Tools/John the Ripper.md",
+    "0 Com Lin & Win/1 Bash/2 Filtros.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "0 Com Lin & Win/3 Hacking/ReverShell.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Tools/Hashcat.md",
+    "7 OWASP TOP 10/1 SQLI.md",
+    "1 Ports/80 - HTTP.md",
+    "2 Tools/Nmap.md",
     "3 OSINT & Passive Recon/9 Web Sites.md",
+    "2 Tools/Scanning Networks.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
+    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "0 Com Lin & Win/1 Bash/1 Regex.md",
     "3 OSINT & Passive Recon/8 Social Network.md",
     "3 OSINT & Passive Recon/7 Number.md",
     "3 OSINT & Passive Recon/6 People.md",
-    "2 Tools/Scanning Networks.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
     "README.md",
     "2 Tools/BurpSuite.md",
     "1.1 Scanning Networks",
@@ -186,19 +212,6 @@
     "3 Excel.md",
     "3.3 Explotation/Explotation.md",
     "3.3 Explotation/2 Linux/4 Samba.md",
-    "3.3 Explotation/2 Linux/3 PHP.md",
-    "3.3 Explotation/2 Linux/1 Port-Scanning.md",
-    "3.3 Explotation/2 Linux/2 vsFTPd.md",
-    "3.3 Explotation/1 Windows/4 MySQL.md",
-    "3.3 Explotation/1 Windows/3 SMB.md",
-    "3.3 Explotation/1 Windows/2 Open SSH.md",
-    "3.3 Explotation/1 Windows/1 Port-Scanning.md",
-    "3.3 Explotation/1 Windows/2 IIS FTP.md",
-    "Recomendacion.md",
-    "3.1 Network/1 Based-Attacks.md",
-    "10 Buffer Overflow/Buffer Overflow/1 Explotacion.md",
-    "8 AD/2 PT/4 Persistence/2 Golden Ticket.md",
-    "7 Hack4u/1 IP/2 MAC.md",
     "5.1 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
     "11 CEH v12",
