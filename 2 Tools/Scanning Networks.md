@@ -1,6 +1,6 @@
 # Network Scanning Tools
 
-Tags:  #Scanning #Networks #Netdiscover #Hping3 
+Tags:  #Scanning #Networks #Netdiscover #Hping3 #Proxychains 
 
 ## Técnicas para descubrir hosts
 
@@ -30,9 +30,50 @@ Tags:  #Scanning #Networks #Netdiscover #Hping3
 ❯ hping3 -2 IP -p 80        # Escaneo UDP en el puerto 80
 ❯ hping3 -s IP -p 80 --tcp-timestamp    # A Firewalls and Timestamps
 ❯ hping3 -8 50-60 -s IP -v              # Escaneo SYN en el puerto 50,60 
-❯ hping3 -s IP -a IP -p 22 --flood      # Inundacion SYN a una victima 
+❯ hping3 -s IP -a IP -p 22 --flood      
+❯ hping3 -a 1.1.1.1 <IP>                # Falsificar la IP de origen para evadir el IDS o Firewall 
+	# a = Origen 'Puede no existir'
 ```
 
 ```bash 
 ❯ netdiscover                # Descubrimiento de la red. Es una herramienta ruidosa 
+```
+
+## Proxy tools 
+
+```bash 
+❯ Proxy Switcher             # Herramientas GUI
+❯ CyberGhost VPN
+```
+
+```bash 
+# Herramienta de Kali
+
+❯ proxychains  
+	❯ nvim /etc/proxychains.conf      # Debemos modificar el archivo de configuracion 
+		# socks4 127.0.0.1 9050      # Comentamos esa instrauccion para que no sea considerada 
+		http    <IP> 80              # Agregaremos un proxy de 'http'
+
+❯ proxychains firefox <domain.com>     # Abrimos el dominio a traves del proxy 
+❯ proxychains nmap -sS -v <IP>         # Utilizar 'Proxychains' para hacer un escaneo nmap 
+```
+
+## Anonimizador 
+
+```bash 
+❯ https://centralops.net        # En el 'Browser mirror' podemos ver la peticion de la maquina con el server 
+```
+
+```bash 
+# Anonimizadores web 
+❯ https://anonymouse.org        # La version 'http' es gratis, pero la version 'https' es de pago 
+```
+
+```bash 
+❯ whonix                        # Sistema operativo completo anonimizador
+```
+
+```bash 
+❯ Alkasir                       # Evadir la censura de un pais 
+❯ Tails                         # Sistema operativo para evadir la censura
 ```
