@@ -1,6 +1,6 @@
 # John the Ripper
 
-Tags: #Hash #BruteForce #John #Fcrackzip #Crackpkcs12 #PFX #OpenSSL
+Tags: #Hash #BruteForce #JohnTheRipper #Fcrackzip #Crackpkcs12 #PFX #OpenSSL #Hash-Identifier 
 
 Es una herramienta de prueba de penetración que se utiliza para probar la seguridad de las passwd. Esta diseñado para descifrar passwd encriptadas en sistemas y aplicaciones.
 
@@ -14,8 +14,9 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 	- Auditoria de passwd: Se utiliza para auditar la fortaleza de la passwd en sistemas y aplicaciones.
 	- Recuperación de passwd: Se utiliza para recuperar passwd perdidas u olvidadas. 
 
-* Tipos de Hashes:
 ```bash
+# Tipos de Hashes:
+
 ❯ echo -n "2b22337f218b2d82dfc3b6f77e7cb8ec" | wc -c           # Nos muestra el numero de caracteres en una linea
 
 	# MD5 = 32 Caracteres
@@ -25,6 +26,15 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 
 * Pagina para identificar los hashes: [Identificar_Hashes](https://hashes.com/en/tools/hash_identifier) 
 * Pagina para crackear los hashes: [Crackear_Hashes](https://crackstation.net/)
+
+```bash
+❯ hashid <2b22337f218b2d82dfc3b6f77e7cb8ec> # Podemos saber el tipo de hash, no es muy confiable
+
+❯ hash-identifier                           # Abriremos la tool y desoues colocaremos el hash a encontrar
+	2b22337f218b2d82dfc3b6f77e7cb8ec
+
+	# MD5 = Tiene 32 caracteres
+```
 
 ## ID	Cryptographic Hash Algorithm
 
@@ -39,6 +49,10 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 | \$gy$ | Gost-yescrypt |
 | \$7$ | Scrypt |
 ## John 
+
+```bash 
+❯ john --show --format=RAW-MD5 hash.txt          # Mirar la passwd crackeada en un formato especifico 
+```
 
 ```bash
 ❯ john --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>              # Usamos John para crackear un hash con fuerza bruta
