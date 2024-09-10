@@ -21,6 +21,7 @@ Tags:  #Scanning #Networks #Netdiscover #Hping3
 4. NetScanTools Pro
 5. Angry IP Scanner 
 6. SolarWinds
+7. SSDP Scan (Metasploit)
 ```
 
 ```bash 
