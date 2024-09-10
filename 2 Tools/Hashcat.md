@@ -1,6 +1,22 @@
 # Hashcat
 
-Tags: #HashCat 
+Tags: #HashCat #Hash-Identifier 
+
+## Identificar Hash
+
+* Pagina para identificar los hashes: [Identificar_Hashes](https://hashes.com/en/tools/hash_identifier) 
+* Pagina para crackear los hashes: [Crackear_Hashes](https://crackstation.net/)
+
+```bash
+❯ hashid <2b22337f218b2d82dfc3b6f77e7cb8ec> # Podemos saber el tipo de hash, no es muy confiable
+
+❯ hash-identifier                           # Abriremos la tool y desoues colocaremos el hash a encontrar
+	2b22337f218b2d82dfc3b6f77e7cb8ec
+
+	# MD5 = Tiene 32 caracteres
+```
+
+## Hashcat 
 
 ```bash
 ❯ hashcat --help     # Nos muestra el panel de ayuda de la tool y algunos ejemplos
