@@ -212,15 +212,6 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash
-❯ hashid <2b22337f218b2d82dfc3b6f77e7cb8ec> # Podemos saber el tipo de hash, no es muy confiable
-
-❯ hash-identifier                           # Abriremos la tool y desoues colocaremos el hash a encontrar
-	2b22337f218b2d82dfc3b6f77e7cb8ec
-
-	# MD5 = Tiene 32 caracteres
-```
-
-```bash
 ❯ echo -n "2b22337f218b2d82dfc3b6f77e7cb8ec" | wc -c           # Nos muestra el numero de caracteres en una fila
 ❯ cat File | wc -l                                             # Te muestra el numero de palabras en fila que existen en ese archivo (l=ele)
 ```
