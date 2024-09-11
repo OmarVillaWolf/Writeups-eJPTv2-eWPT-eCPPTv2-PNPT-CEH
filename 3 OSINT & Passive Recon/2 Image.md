@@ -19,8 +19,9 @@ Tags: #OSINT
 ❯ https://www.dogpile.com/         # Busqueda de metadatos en paginas web
 ```
 
-```bash 
-# Herramienta de Kali 
+## Kali tools 
 
+```bash 
 ❯ exiftool image.jpg               # Muestra los metadatos de la imagen 
+❯ exiftool <img> > file.txt        # Guardar el resultado en un archivo 
 ```
