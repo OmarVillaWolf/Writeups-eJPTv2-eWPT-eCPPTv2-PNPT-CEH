@@ -9,9 +9,9 @@ Tags: #PassiveRecon
 ❯ https://www.nslookup.io/
 ```
 
-```bash 
-# Herramienta de Kali 
+## Kali tools 
 
+```bash 
 ❯ dnsrecon -r 1.1.1.1-2.2.2.2       # Busqueda reversa de IP la cual muestra los nombres de dominio
 ❯ dig A domain.com                  # Buscamos registros de tipo 'A'
 ```
