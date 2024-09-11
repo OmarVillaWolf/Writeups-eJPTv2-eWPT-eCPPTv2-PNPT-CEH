@@ -70,3 +70,7 @@ Registros DNS
 ```bash 
 ❯ fierce -dns <domain.com>     # Reconocimiento 
 ```
+
+```bash 
+❯ ldns-walk @<IP> <Domain>     # Obtener info de la red en un determinado dominio como sus registros 
+```
