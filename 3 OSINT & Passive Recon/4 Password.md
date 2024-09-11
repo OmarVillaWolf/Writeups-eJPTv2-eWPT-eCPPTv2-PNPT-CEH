@@ -14,8 +14,8 @@ Tags: #OSINT
 ❯ https://weleakinfo.to/v2/
 ```
 
-```bash 
-# Herramienta de Kali
+## Kali tools 
 
+```bash 
 ❯ python3 passwordcheck.py <password>  # Saber si la password ha sido filtrada
 ```
