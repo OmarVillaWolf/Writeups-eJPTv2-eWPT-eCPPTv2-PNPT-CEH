@@ -6,6 +6,13 @@ Tags: #Windows #Comandos #Powershell
 
 * [WinPeas](https://github.com/peass-ng/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md)
 
+```bash
+❯ ping -n 1 ❮IP❯                             # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
+
+	# IP = IP Address de la maquina target 
+	# n = Numero de pings a ejecutar
+```
+
 ```bash 
 ❯ arp -a                                     # Barrido ARP en la maquina actual 
 ```
@@ -44,16 +51,16 @@ Tags: #Windows #Comandos #Powershell
 ```
 
 ```bash
-❯ cls                                        # Nos ayuda a limpiar la pantalla
+❯ cls                            # Nos ayuda a limpiar la pantalla
 ```
 
 ```bash
-❯ ipconfig                                   # Nos muestra las interfaces y las direcciones IP y si existen mas subredes, podemos hacer 'Pivoting'
+❯ ipconfig                       # Nos muestra las interfaces y las direcciones IP y si existen mas subredes, podemos hacer 'Pivoting'
 ```
 
 ```bash
-❯ dir                                        # Listamos el contenido del directorio
-❯ dir /r /s ❮File.txt❯                       # Buscamos de forma recursiva el string .txt
+❯ dir                            # Listamos el contenido del directorio
+❯ dir /r /s ❮File.txt❯           # Buscamos de forma recursiva el string .txt
 ```
 
 ```bash
