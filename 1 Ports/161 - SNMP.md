@@ -13,10 +13,14 @@ Tags: #SNMP #Comandos
 ```
 
 ```bash
-❯ snmwalk -c public -v2c ❮IP❯                                                     # Sirve para poder inspeccionar el puerto SNMP
+❯ snmwalk -c public -v2c ❮IP❯          # Sirve para poder inspeccionar el puerto SNMP
 
 	# c = Community string
 	# v2c = version
 
-❯ snmwalk -c public -v2c ❮IP❯ 1                                                   # Colocar 1 significa que empezara desde la raiz '/' y asi poder enco0ntrar mas informacion acerca del protocolo, por default empieza desde el 2
+❯ snmwalk -c public -v2c ❮IP❯ 1        # Colocar 1 significa que empezara desde la raiz '/' y asi poder enco0ntrar mas informacion acerca del protocolo, por default empieza desde el 2
+```
+
+```bash 
+❯ snmp-check ❮IP❯        # Muestra info del protocolo snmp 
 ```
