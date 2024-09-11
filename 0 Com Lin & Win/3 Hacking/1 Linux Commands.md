@@ -132,8 +132,7 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ netstat -nat                               # Para mirar la tabla de ruteo y algunos puertos abiertos
 
 ❯ netstat -tupln                             # Miras las IPs, los puertos, sus estados de proceso y su PID
-	❯ kill -15 PID <number>                 # Matamos un proceso especifico colocando su PID
-	❯ kill -9 PID <number>                  # Otra manera de hacerlo 
+	❯ kill -9  <PID>                        # Matamos un proceso especifico colocando el PID 
 
 ❯ netstat -antu                              # Miramos los estados de los puertos
 	❯ kill -9 $(lsof -i:80 -t)              # Matamos un proceso especifico colocando el puerto 
