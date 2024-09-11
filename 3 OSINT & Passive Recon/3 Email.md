@@ -19,8 +19,15 @@ Tags: #OSINT
 ❯ https://mxtoolbox.com/                    # Poder analizar el encabezado del email 
 ```
 
-```bash 
-# Herramienta de Kali 
+## Kali tools 
 
-❯ python infoga.py --domain domain.com --source all --breach -v 2 --report ../domain.txt  # Recolecta info de email de un dominio especifico   
+```bash 
+❯ python infoga.py --domain domain.com --source all --breach -v 2 --report ../domain.txt  # Recolecta info de email de un dominio especifico 
+```
+
+```bash 
+❯ https://github.com/hmaverickadams/DeHashed-API-Tool    # Descargar Dehashed para buscar usuarios, IP, emails y mas
+
+❯ python3 dehashed_parser.py -e domain.com --only-passwords   # Muestra datos filtradas 
+❯ python3 dehashed_parser.py -u user                          # Muestra info del usuario como email, passwd-hash, etc...
 ```
