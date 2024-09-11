@@ -1,10 +1,9 @@
 # Domains and subdomains
 
 Tags: #OSINT 
+## Kali tools 
 
 ```bash 
-# Herramienta de Kali
-
 ❯ Sublit3r                                            
 	❯ sublist3r -d domain.com > sbd-google.txt         # Busca los dominios 
 	# d = Dominio
