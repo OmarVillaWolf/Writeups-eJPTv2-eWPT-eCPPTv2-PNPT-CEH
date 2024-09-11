@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom #Windows #Apache #PHP #HTTPS #HTTP #FileTransfer #LinuxtoWindows #Dirbuster #ReverShell 
+Tags: #SQLI #SSRF #SearchSploit #WinPEAS #AlwaysInstalledElevated #Msfvenom #Windows #Apache #PHP #HTTPS #HTTP #FileTransfer #LinuxtoWindows #Dirbuster #ReverShell #Nmap 
 
 - IP -> 10.10.10.239
 - Ports -> TCP (80, 135, 139, 445, 3306, 5000, 5440, 5986, 7680, 47001, 49664-70), UDP (idk)
