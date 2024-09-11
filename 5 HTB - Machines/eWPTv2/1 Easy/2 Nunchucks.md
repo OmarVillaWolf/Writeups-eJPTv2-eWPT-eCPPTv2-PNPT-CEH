@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Linux #HTTP #Capabilities #Perl #Nodejs #Nunjucks #Nginx #HTML #ReverShell #Gobuster #Dirbuster #SSTI #BurpSuite #SubDomains #Wfuzz #AppArmor
+Tags: #Linux #HTTP #Capabilities #Perl #Nodejs #Nunjucks #Nginx #HTML #ReverShell #Gobuster #Dirbuster #SSTI #BurpSuite #SubDomains #Wfuzz #AppArmor #Nmap 
 
 - IP -> 10.10.11.122
 - Ports -> TCP (22, 80, 443), UDP (idk)
