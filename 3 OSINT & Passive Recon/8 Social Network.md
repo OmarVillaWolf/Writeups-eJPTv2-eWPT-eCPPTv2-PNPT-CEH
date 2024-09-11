@@ -20,8 +20,16 @@ Tags: #OSINT
 ❯ https://followerwonk.com/           # Identificar donde se encuentra una persona por sus redes sociales 
 ❯ https://knowem.com/                 # Busqueda de usuarios en las redes sociales 
 ```
+## Kali tools 
 
 ```bash 
-# Herramienta de Kali
 ❯ sherlok <username>                  # Busca un nombre de usuario en las diferentes redes sociales 
+```
+
+```bash 
+❯ git clone  https://github.com/sc1341/InstagramOSINT   # Clonamos el repositorio
+❯ cd InstagramOSINT/
+❯ pip3 install -r requirements.txt
+
+❯ python3 main.py --username username                   # Muestra el IG, username e info del instagram 
 ```
