@@ -8,4 +8,10 @@ Tags: #OSINT
 ❯ https://namecheckup.com/   
 ```
 
+## Kali tools 
 
+```bash 
+❯ sudo apt install sherlock          # Instalacion de Sherlock
+
+❯ sherlock username                  # Muestra info de un usuario, asi como sus redes sociales, etc...
+```
