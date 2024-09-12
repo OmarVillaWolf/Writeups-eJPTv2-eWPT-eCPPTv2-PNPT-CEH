@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "02cf7d3b8cb181e5",
+            "id": "8374fda2fbc74e86",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -143,15 +143,21 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "02cf7d3b8cb181e5",
+  "active": "8374fda2fbc74e86",
   "lastOpenFiles": [
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/5 Shocker.md",
+    "2 Tools/Wireshark - Tcpdump.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/4 Toolbox.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "1 Ports/445 - SMB.md",
     "1 Ports/445 - Samba.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/5 Shocker.md",
     "1 Ports/135 - RPC.md",
     "1 Ports/53 - DNS.md",
     "1 Ports/25 - SMTP.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "1 Ports/123 NTP.md",
     "1 Ports/161 - SNMP.md",
     "1 Ports/443 HTTPS.md",
@@ -164,13 +170,7 @@
     "1 Ports/5800, 5900 - VNC.md",
     "1 Ports/5985-6 - WINRM.md",
     "5 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/4 Toolbox.md",
     "5 HTB - Machines/eJPTv2/1 Easy/9 ToolBox.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
-    "0 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
-    "0 Com Lin & Win/3 Hacking/Msfvenom.md",
     "1.1 Scanning Networks",
     "5.1 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
