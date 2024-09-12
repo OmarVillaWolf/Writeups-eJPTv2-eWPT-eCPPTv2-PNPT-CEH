@@ -28,7 +28,7 @@ Tags: #Linux #HTTP #Capabilities #Perl #Nodejs #Nunjucks #Nginx #HTML #ReverShel
 ```bash
 # Enumerar subdominios 
 
-❯ gobuster vhost --append-domain -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://nunchucks.com -t 200 -k 
+❯ gobuster vhost --append-domain -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://nunchucks.com/ -t 200 -k 
 
 	# append-domain = Enumerar los subdominios
 	# vhost = Modo enumeracion VHost Subdominios
@@ -37,7 +37,7 @@ Tags: #Linux #HTTP #Capabilities #Perl #Nodejs #Nunjucks #Nginx #HTML #ReverShel
 	# k = Para certificados autofirmados para el puerto 443
 
 
-❯ wfuzz -c --hc=404 --hh=12345 -t 200 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.nunchucks.htb” https://nunchucks.htb
+❯ wfuzz -c --hc=404 --hh=12345 -t 200 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H “Host: FUZZ.nunchucks.htb” https://nunchucks.htb/
 
 	# hc = HideCode 404
 	# c = Formato colorido
