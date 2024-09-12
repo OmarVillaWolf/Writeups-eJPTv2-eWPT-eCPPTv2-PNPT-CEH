@@ -23,6 +23,8 @@ En el Software de Wireshark podemos:
 ❯ tshark -i <Interface>                                    # Iniciar captura de paquetes en esa interfaz
 	# i = interface a usar 
 
+❯ tshark -w ❮File.cap❯ -i tun0                             # Capturamos el trafico por la interfaz 'tun0' en un archivo
+
 ❯ tshark -r ❮File.cap❯ -Y 'http.request.method==GET' -Tfields -e frame.time -e ip.src -e http.request.full_uri
 	# e = Agregar el campo 
 
@@ -35,10 +37,9 @@ En el Software de Wireshark podemos:
 
 ❯ tshark -r ❮File.cap❯ -Y "http" -Tjson 2>/dev/null        # Capturamos trafico, filtramos por HTTP y miramos los atributos de los paquetes por el formato Json 
 
-❯ tshark -r ❮File.cap❯ -Y "http" -Tfileds -e tcp.payload 2>/dev/null | xxd -ps -r | grep "GET" | awk '{print $2}'  
-# Capturamos trafico, filtramos por HTTP y filtramos por un campo especifico y nos lo sacara en hexadecimal
-# Revertimos con xxd, volvemos a filtrar por GET y todo esto es para
-# Ver la rutas que esta probando el script de la captura de http-enum
+❯ tshark -r ❮File.cap❯ -Y "http" -Tfileds -e "tcp.payload" 2>/dev/null | xxd -ps -r | grep "GET" | awk '{print $2}'  
+# Capturamos trafico, filtramos por HTTP y filtramos por un campo especifico y nos lo mostrara en hexadecimal
+# Revertimos con xxd, volvemos a filtrar por GET y todo esto es para poder ver las rutas que esta probando el script de la captura de http-enum
 ```
 
 ```bash 
