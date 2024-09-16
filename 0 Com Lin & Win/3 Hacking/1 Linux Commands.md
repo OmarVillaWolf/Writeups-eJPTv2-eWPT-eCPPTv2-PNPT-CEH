@@ -52,6 +52,12 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 /etc/ssh/sshd_config                         # Podemos ver las configuraciones de ssh y ver si el usuario root se puede conectar 
 ```
 
+```bash 
+❯ Ctrl + k                                   # Quitas todo lo que se encuentre a la derecha de donde estas posicionado
+
+❯ kitty +kitten icat <image.jpg>             # Muestras la imagen por consola 
+```
+
 ```bash
 ❯ echo ‘’ > ~/.zsh_history                   # Para borrar el historial en la zshrc
 ```
@@ -143,13 +149,6 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash 
-❯ cewl -w <passwd> http://<IP> --with-numbers      # Nos crea un diccionario con las palabras existentes de una url
-
-	# w = Queremos un diccionario que se llamara 'passwd'
-	# with-numbers = Acepta palabras con numeros, ademas de palabras con solo letras
-```
-
-```bash 
 ❯ ip a                                       # Miras la IP que tienes asignada 
 ❯ ifconfig                                   # Miras la IP asignada en Linux
 ```
@@ -173,7 +172,6 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 * [IP-Address-Calculator](https://www.ipaddressguide.com/cidr)
 
-**Tip: Si nos dan una IP 192.168.11.2/24 con esa mascara que seria de clase C, podriamos hacer el escaneo con una mascara de clase B -> asi 192.168.0.0/16 en lugar de 192.168.11.0/24**
 ```bash
 ❯ masscan -p21,22,139,445,80,8080,443 -Pn ❮IP/16❯ --rate=5000    # Es una herramienta como nmap que sirve para aplicar escaneos a nivel de red, pero mas potente y rapida
 
@@ -183,6 +181,7 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 ```bash
 ❯ exiftool ❮Image.jpg❯                      # Para ver si hay metadatos en un archivo, imagen
+
 ❯ steghide info <Image.jpg>                 # Para ver si la imagen tiene contenido oculto
 ❯ steghide extract -sf <Image.jpg>          # Para ver si la imagen tiene contenido oculto (sf=sourcefile)
 ```
@@ -273,11 +272,13 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 ```bash
 ❯ base64 -w 0 File.sh | xclip -set clip             # Codificamos el contenido de un archivo en base64 y lo copiamos en la clipboard
+
 ❯ echo kiufgaiuafgajlfufa98ag676a85g6ga7 | base64 -d > File.sh  # Decodeamos el archivo en base64 y lo colocamos en un archivo que se llamara File.sh
 ```
 
 ```bash
 ❯ echo $PATH                              # Nos damos cuenta que tiene un PATH muy pequeno, por lo que vamos a copiar el nuestro a la maquina victima y asi poder extenderlo
+
 ❯ export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin   # Faltan mas PATH pero es para hacer el ejemplo
 ```
 
