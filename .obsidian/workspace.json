@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 HTB - Machines/eWPTv2/1 Easy/5 Shocker.md",
+                "file": "5 HTB - Machines/eWPTv2/1 Easy/6 Secret.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d4b0b1b1ccb92fcd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 HTB - Machines/eWPTv2/1 Easy/5 Shocker.md"
+                "file": "0 Com Lin & Win/3 Hacking/1 Linux Commands.md"
               }
             }
           },
@@ -143,16 +157,21 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "8374fda2fbc74e86",
+  "active": "d4b0b1b1ccb92fcd",
   "lastOpenFiles": [
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "1 Kitty.md",
+    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Tools/Cupp & Cewl.md",
+    "2 Tools/John the Ripper.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/6 Secret.md",
     "5 HTB - Machines/eWPTv2/1 Easy/5 Shocker.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
+    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
     "2 Tools/Wireshark - Tcpdump.md",
     "5 HTB - Machines/eWPTv2/1 Easy/4 Toolbox.md",
     "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
     "5 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
     "5 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "1 Ports/445 - SMB.md",
     "1 Ports/445 - Samba.md",
     "1 Ports/135 - RPC.md",
@@ -166,11 +185,6 @@
     "1 Ports/80 - HTTP.md",
     "1 Ports/110, 995 - POP3.md",
     "1 Ports/3389, 3333 - RDP.md",
-    "1 Ports/4555 - RSIP.md",
-    "1 Ports/5800, 5900 - VNC.md",
-    "1 Ports/5985-6 - WINRM.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/9 ToolBox.md",
     "1.1 Scanning Networks",
     "5.1 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
