@@ -1,6 +1,6 @@
 # Cupp
 
-Tags: #Cupp #Diccionario #Cewl 
+Tags: #Cupp #Diccionario #Cewl #Crunch 
 
 * [Cupp](https://esgeeks.com/como-utilizar-cupp/)
 
@@ -23,4 +23,10 @@ La herramienta **CUPP** (_Common User Passwords Profiler_) es una utilidad en Ka
 
 	# w = Queremos un diccionario que se llamara 'passwd'
 	# with-numbers = Acepta palabras con numeros, ademas de palabras con solo letras
+```
+
+## Crunch 
+
+```bash 
+❯ crunch 5 15 abcde12345            # Crea una diccionario desde 5 hasta 15 caracteres haciendo todas las posibles combinaciones, cabe mencionar que los diccionarios son muy pesados
 ```
