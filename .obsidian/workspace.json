@@ -19,8 +19,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "53d8ec5546573cbe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5 HTB - Machines/eWPTv2/1 Easy/7 Tabby.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9864e031459dd5e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 CEH/9 Social Engineering.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -49,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "macchanger",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -105,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 HTB - Machines/eWPTv2/1 Easy/6 Traverxec.md"
+                "file": "0 CEH/9 Social Engineering.md"
               }
             }
           },
@@ -143,34 +170,37 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "8374fda2fbc74e86",
+  "active": "9864e031459dd5e3",
   "lastOpenFiles": [
-    "0 Com Lin & Win/3 Hacking/ReverShell.md",
-    "0 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "4 PrivEsc Lin & Win/2 Linux/0 Academy/2. SUID.md",
-    "1 Kitty.md",
+    "0 CEH/8 Sniffing.md",
+    "0 CEH/9 Social Engineering.md",
+    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "5 HTB - Machines/eWPTv2/1 Easy/6 Traverxec.md",
-    "1 Ports/80 - HTTP.md",
-    "2 Tools/BurpSuite.md",
-    "0 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "2 Tools/Cupp & Cewl.md",
-    "3 OSINT & Passive Recon/19 Routers.md",
-    "3 OSINT & Passive Recon/18 Camera.md",
-    "2 Tools/John the Ripper.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/5 Shocker.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/Plantilla.md",
-    "2 Tools/Wireshark - Tcpdump.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/4 Toolbox.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/3 Goodgames.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/2 Nunchucks.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/1 Love.md",
-    "1 Ports/445 - SMB.md",
-    "1 Ports/445 - Samba.md",
-    "1 Ports/135 - RPC.md",
-    "1 Ports/53 - DNS.md",
-    "1 Ports/25 - SMTP.md",
-    "1 Ports/123 NTP.md",
-    "1 Ports/161 - SNMP.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/7 Tabby.md",
+    "0 CEH/8 Sniffing",
+    "0 CEH",
+    "2 Ports/80.7 IIS - Webdav.md",
+    "2 Ports/445 - SMB.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/8 Blunder.md",
+    "6 Python/Fuerza Bruta/1 Login con CSRF Token.md",
+    "6 Python/7 Librerias comunes/2 Request.md",
+    "1 Com Lin & Win/1 Bash/2 Filtros.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/26 Optimum.md",
+    "6 Python/Fuerza Bruta",
+    "5 HTB - Machines/eJPTv2/1 Easy/25 Blue.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/24 Nibbles.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/23 Delivery.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/22 Netmon.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/21 Blocky.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/20 ScriptKiddie.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/19 Devel.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/18 Legacy.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/17 Lame.f.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/16 Knife.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/15 Grandpa.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/14 Granny.md",
     "1.1 Scanning Networks",
     "5.1 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
@@ -178,9 +208,6 @@
     "0 Com Lin & Win/Untitled",
     "6 Python/7 Librerias comunes",
     "0 Com Lin & Win/1.1 Python Pen",
-    "14 Wifi/1 WiFi-Academy/1 Redes WiFi",
-    "14 Wifi/1 WiFi-Academy",
-    "6 Python/6 Biblioteca estandar",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/SSRF.png",
