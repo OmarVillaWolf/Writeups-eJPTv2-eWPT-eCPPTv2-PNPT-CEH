@@ -12,6 +12,7 @@ Tags:
 ## Launchpad
 
 -   [Launchpad](https://launchpad.net/ubuntu)
+-   [Nostromo-man](https://www.gsp.com/cgi-bin/man.cgi?section=8&topic=NHTTPD)
 
 ## Recon
 
