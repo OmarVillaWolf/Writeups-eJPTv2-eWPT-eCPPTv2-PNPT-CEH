@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 CEH/12 Evading IDS, Firewalls, and Honeypots.md",
+                "file": "0 CEH/13 Hacking Web Servers.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -131,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 CEH/12 Evading IDS, Firewalls, and Honeypots.md"
+                "file": "0 CEH/13 Hacking Web Servers.md"
               }
             }
           },
@@ -171,9 +171,10 @@
   },
   "active": "9864e031459dd5e3",
   "lastOpenFiles": [
-    "5 HTB - Machines/eWPTv2/1 Easy/7 Tabby.md",
-    "0 CEH/12 Evading IDS, Firewalls, and Honeypots.md",
     "5 HTB - Machines/eWPTv2/1 Easy/6 Traverxec.md",
+    "0 CEH/13 Hacking Web Servers.md",
+    "0 CEH/12 Evading IDS, Firewalls, and Honeypots.md",
+    "5 HTB - Machines/eWPTv2/1 Easy/7 Tabby.md",
     "0 CEH/11 Session Hijacking.md",
     "0 CEH/9 Social Engineering.md",
     "0 CEH/10 DoS.md",
@@ -199,7 +200,6 @@
     "5 HTB - Machines/eJPTv2/1 Easy/21 Blocky.md",
     "5 HTB - Machines/eJPTv2/1 Easy/20 ScriptKiddie.md",
     "5 HTB - Machines/eJPTv2/1 Easy/19 Devel.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/18 Legacy.md",
     "1.1 Scanning Networks",
     "5.1 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
