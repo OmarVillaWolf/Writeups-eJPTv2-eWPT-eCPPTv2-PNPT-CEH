@@ -75,3 +75,14 @@ Tags: #CEH
 5. Mpack 
 6. w3af 
 ```
+
+## Patch management tools 
+
+```bash 
+1. GPI LanGuard
+2. Symantec Client Management Suite 
+3. Solarwinds Patch Manager 
+4. Kaseya Patch Management 
+5. Software Vulnerability Manager 
+6. Ivanti Patch for Endpoint Manager 
+```
