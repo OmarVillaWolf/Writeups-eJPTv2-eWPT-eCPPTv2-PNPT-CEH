@@ -124,3 +124,33 @@ aLTEr attack     # Ataque a dispositivos LTE 'celulares' creando una torre de co
 	❯ Dragontime
 ❯ Podemos hacer ataques de 'Side-channel' 
 ```
+
+## Bluetooth Hacking Tools 
+
+```bash 
+1. Bluetooth reconnaissance 
+❯ hciconfig                 # Escanear dispositivos Bluetooth 'pairable'
+	❯ hciconfig scan
+	❯ hciconfig inq        # Obtener mas info de los dispositivos descubiertos 
+
+2. Bluetooth Attack 
+❯ btlejack -d /dev/ttyACM0 -d /dev/ttyACM2 -s     # Seleccionar un dispositivo target 
+❯ btlejack -s                                     # Sniffing una conexion existente 
+❯ btlejack -c any                                 # Sniffing nuevas conexiones 
+❯ btlejack -f 0x129f3244 -j                       # Hacer una operacion jamming 
+❯ btlejack -f 0x9c68fd30 -t -m 0x1fffffffff       # Comnezar una conexion hijacking 
+
+3. Bluetooth Encryption Cracking
+❯ crackle -i <file.pcap>       
+❯ crackle -i <file.pcap> -o <output.pcap>
+❯ crackle -i <file.pcap> -l <LTK>
+❯ crackle -i <file.pcap> -o <out.pcap> -l <LTK>
+
+4. Hacking Tools 
+❯ BluetoothView
+❯ BTCrawler
+❯ BlueScan
+❯ Bluetooth Scanner - btCrawler
+❯ Bluedevil
+❯ Blueman
+```
