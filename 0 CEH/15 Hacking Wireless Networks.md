@@ -1,6 +1,6 @@
 # Hacking Wireless Networks
 
-Tags: #CEH 
+Tags: #CEH #Wifi #Bluetooth 
 
 ## Tipos de Wireless 
 
