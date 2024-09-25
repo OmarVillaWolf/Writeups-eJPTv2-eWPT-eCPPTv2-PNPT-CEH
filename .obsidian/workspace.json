@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 CEH/14 Hacking Web Applications.md",
+                "file": "0 CEH/15 Hacking Wireless Networks.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -131,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 CEH/14 Hacking Web Applications.md"
+                "file": "0 CEH/15 Hacking Wireless Networks.md"
               }
             }
           },
@@ -171,9 +171,15 @@
   },
   "active": "9864e031459dd5e3",
   "lastOpenFiles": [
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/1 Instalar y conceptos.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
+    "14 Wifi/Pineapple/1 Instalar.md",
+    "14 Wifi/1 WiFi-Academy/1 Redes WiFi/1 Intro.md",
+    "0 CEH/15 Hacking Wireless Networks.md",
     "5 HTB - Machines/eWPTv2/1 Easy/7 Tabby.md",
-    "0 CEH/14 Hacking Web Applications.md",
+    "3 Tools/Nmap.md",
     "5 HTB - Machines/eWPTv2/1 Easy/6 Traverxec.md",
+    "0 CEH/14 Hacking Web Applications.md",
     "0 CEH/13 Hacking Web Servers.md",
     "0 CEH/12 Evading IDS, Firewalls, and Honeypots.md",
     "0 CEH/11 Session Hijacking.md",
@@ -182,7 +188,6 @@
     "7 OWASP TOP 10/3 XXE.md",
     "0 CEH/8 Sniffing.md",
     "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
     "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "0 CEH/8 Sniffing",
     "0 CEH",
@@ -195,11 +200,6 @@
     "5 HTB - Machines/eJPTv2/1 Easy/26 Optimum.md",
     "6 Python/Fuerza Bruta",
     "5 HTB - Machines/eJPTv2/1 Easy/25 Blue.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/24 Nibbles.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/23 Delivery.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/22 Netmon.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/21 Blocky.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/20 ScriptKiddie.md",
     "1.1 Scanning Networks",
     "5.1 Vulhub - Machines/eWPT/Lab-Final",
     "11 CEH v12/Modulo 01",
