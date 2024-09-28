@@ -1,8 +1,9 @@
 # Comandos de AWS
 
-Tags: #AWS #Arjun
+Tags: #AWS #Arjun #Cloud 
 
 * [CloudGoat](https://pswalia2u.medium.com/)
+
 ```bash 
 ❯ cat ~/.aws/credentials                      # Miras los usuarios y sus passwds
 
