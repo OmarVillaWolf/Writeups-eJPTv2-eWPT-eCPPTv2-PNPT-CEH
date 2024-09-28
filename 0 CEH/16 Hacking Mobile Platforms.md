@@ -159,3 +159,29 @@ Tags: #CEH #IOS #Android #Mobile
 ❯ Prynt Stealer
 ❯ Clicker Trojan malware
 ```
+
+## Tools 
+
+```bash 
+1. Reverse Engineering 
+❯ Apktool
+❯ Frida
+❯ JEB
+❯ APK Studio
+❯ objection
+❯ Bytecode Viewer
+
+2. Source Code Analysis 
+❯ z3A Advanced App Analysis
+❯ Kiuwan
+❯ Appium
+❯ Selendroid
+❯ Bitbar
+❯ Infer
+
+3. App Repackaging Detector
+❯ Promon SHIELD
+
+4. Mobile Pen Testing 
+❯ ImmuniWeb MobileSuite 
+```
