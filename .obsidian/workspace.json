@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 CEH/16 Hacking Mobile Platforms.md",
+                "file": "0 CEH/17 IoT Hacking.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -45,8 +45,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ae4c3a81956832b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0 CEH/18 Cloud Computing.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -131,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0 CEH/16 Hacking Mobile Platforms.md"
+                "file": "0 CEH/18 Cloud Computing.md"
               }
             }
           },
@@ -169,10 +183,13 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "9864e031459dd5e3",
+  "active": "ae4c3a81956832b9",
   "lastOpenFiles": [
-    "0 CEH/16 Hacking Mobile Platforms.md",
+    "1 Com Lin & Win/1 Bash/1 Regex.md",
+    "0 CEH/18 Cloud Computing.md",
+    "0 CEH/17 IoT Hacking.md",
     "5 HTB - Machines/eWPTv2/1 Easy/6 Traverxec.md",
+    "0 CEH/16 Hacking Mobile Platforms.md",
     "0 CEH/15 Hacking Wireless Networks.md",
     "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/1 Instalar y conceptos.md",
     "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
@@ -196,9 +213,6 @@
     "2 Ports/445 - SMB.md",
     "5 HTB - Machines/eWPTv2/1 Easy/8 Blunder.md",
     "6 Python/Fuerza Bruta/1 Login con CSRF Token.md",
-    "6 Python/7 Librerias comunes/2 Request.md",
-    "1 Com Lin & Win/1 Bash/2 Filtros.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/26 Optimum.md",
     "6 Python/Fuerza Bruta",
     "1.1 Scanning Networks",
     "5.1 Vulhub - Machines/eWPT/Lab-Final",
