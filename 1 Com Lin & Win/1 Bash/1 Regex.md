@@ -4,6 +4,7 @@ Tags: #Bashshell #Regex
 
 ```bash 
 ❯ https://regex101.com/     # Practicar las Regex
+❯ https://regexr.com/       # Practicar las Regex
 ❯ https://cheatography.com/davechild/cheat-sheets/regular-expressions/   # Cheat Sheet
 ```
 
