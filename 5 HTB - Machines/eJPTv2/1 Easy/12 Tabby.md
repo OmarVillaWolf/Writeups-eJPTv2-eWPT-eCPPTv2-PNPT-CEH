@@ -169,7 +169,7 @@ Para poder obtener la hash del archivo la crackearemos con John The Ripper y des
 ```bash
 ❯ zip2john data.zip > hash                      # Para que nos devuelva el Hash y asi despues poderlo crackear, el resultado lo metemos dentro de un archivo llamado 'hash'
 
-❯ jhon -w:/usr/share/wordlists/rockyou.txt hash # Usando jhon y el diccionario rockyou, romperemos el hash obtenido anteriormente
+❯ john -w:/usr/share/wordlists/rockyou.txt hash # Usando jhon y el diccionario rockyou, romperemos el hash obtenido anteriormente
 
 # Nos regresa como passwd = admin@it
 ```
