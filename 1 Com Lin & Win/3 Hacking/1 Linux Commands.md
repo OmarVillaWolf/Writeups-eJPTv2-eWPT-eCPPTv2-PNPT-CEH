@@ -34,96 +34,97 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash
-/tmp                                         # Directorios con capacidad de lectura y escritura en Linux       
+/tmp                                    # Directorios con capacidad de lectura y escritura en Linux       
 /var/tmp 
 /dev/shm      
-/temp                                        # Directorios con capacidad de lectura y escritura en PHP
+/temp                                   # Directorios con capacidad de lectura y escritura en PHP
 
-❯ Ctrl + u                                   # Miramos el codigo fuente de la pagina 
-❯ Ctrl + Shift + c                           # Abrimos el 'Inspect' de la pagina 
+❯ Ctrl + u                              # Miramos el codigo fuente de la pagina 
+❯ Ctrl + Shift + c                      # Abrimos el 'Inspect' de la pagina 
 ```
 
 ```bash
-/etc/hosts                                   # Para agregar algun dominio existente
-/etc/passwd                                  # Ruta de las cuentas de usuario
-/etc/shadow                                  # Hashes encriptados de passwds de los usuarios y solo puede acceder el usuario root 
-/etc/group                                   # Ruta de configuracion del archivo de grupos
-/etc/shells                                  # Podemos ver las diferentes shells que hay 
-/etc/ssh/sshd_config                         # Podemos ver las configuraciones de ssh y ver si el usuario root se puede conectar 
+/etc/hosts                              # Para agregar algun dominio existente
+/etc/passwd                             # Ruta de las cuentas de usuario
+/etc/shadow                             # Hashes encriptados de passwds de los usuarios y solo puede acceder el usuario root 
+/etc/group                              # Ruta de configuracion del archivo de grupos
+/etc/shells                             # Podemos ver las diferentes shells que hay 
+/etc/ssh/sshd_config                    # Podemos ver las configuraciones de ssh y ver si el usuario root se puede conectar 
 ```
 
 ```bash 
-❯ Ctrl + k                                   # Quitas todo lo que se encuentre a la derecha de donde estas posicionado
+❯ Ctrl + k                              # Quitas todo lo que se encuentre a la derecha de donde estas posicionado
 
-❯ kitty +kitten icat <image.jpg>             # Muestras la imagen por consola 
+❯ kitty +kitten icat <image.jpg>        # Muestras la imagen por consola 
 ```
 
 ```bash
-❯ echo ‘’ > ~/.zsh_history                   # Para borrar el historial en la zshrc
+❯ echo ‘’ > ~/.zsh_history              # Para borrar el historial en la zshrc
 ```
 
 ```bash
-❯ !$                                         # Referencias el ultimo argumento que hayamos puesto en la consola 
+❯ !$                                    # Referencias el ultimo argumento que hayamos puesto en la consola 
 ```
 
 ```bash 
-❯ gunzip <file.gz>                           # Para descompirmir archivos gzip
+❯ pushd /usr/share/                     # Para ir a un directorio especifico, funciona como el comando 'cd'
+❯ popd                                  # Regresamos al directorio donde nos encontrabamos al momento de usar 'pushd'
 ```
 
 ```bash 
-❯ scrub -p dod <file>                        # Primero haces esto y despues ejecutas el comando de abajo
+❯ scrub -p dod <file>                   # Primero haces esto y despues ejecutas el comando de abajo
 
-❯ shred -zun 10 -v <file>                    # Borrar un archivo, pero que el borrado sea mas complejo y asi no dejaremos evidencia, a mas valor que el 10 es mejor, ademas de borrarlo evita que se pueda recuperar
-❯ shred -zun 10 -v file*                     # Borrar todos los archivos que empiecen con una palabra en especifico
+❯ shred -zun 10 -v <file>               # Borrar un archivo, pero que el borrado sea mas complejo y asi no dejaremos evidencia, a mas valor que el 10 es mejor, ademas de borrarlo evita que se pueda recuperar
+❯ shred -zun 10 -v file*                # Borrar todos los archivos que empiecen con una palabra en especifico
 ```
 
 ```bash 
-❯ watch -n 1 ls -l /bin/bash                 # Monitorizar la bash cada segundo con el siguiente comando y ver cuando cambia a SUID
+❯ watch -n 1 ls -l /bin/bash            # Monitorizar la bash cada segundo con el siguiente comando y ver cuando cambia a SUID
 ```
 
 ```bash 
-❯ extractPorts <filename>                    # Herramienta que nos ayuda extraer los puerto de la captura de Nmap y copiarlos a la clipboard 
+❯ extractPorts <filename>               # Herramienta que nos ayuda extraer los puerto de la captura de Nmap y copiarlos a la clipboard 
 ```
 
 ```bash
-❯ ping -c 1 ❮IP❯                             # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
+❯ ping -c 1 ❮IP❯                        # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
 
 	# IP = IP Address de la maquina target 
 	# c = Numero de pings a ejecutar
 
-❯ ping -c 1 < TARGET IP> -R                 # Verificar si tenemos conexion a una IP mandando numeros de ping especificos 
+❯ ping -c 1 < TARGET IP> -R             # Verificar si tenemos conexion a una IP mandando numeros de ping especificos 
 	
 	# R = Traceroute, solo aplica en maquinas Linux
 	# c = Numero de ping 
 
-❯ fping -I ens33 -g <IP/24> -a 2>/dev/null # Manda un ping a multiples IP
+❯ fping -I ens33 -g <IP/24> -a 2>/dev/null   # Manda un ping a multiples IP
 ```
 
 ```bash
-❯ ls -la                                     # Podemos observar todos los archivos del dir inclyendo los ocultos 
+❯ ls -la                                # Podemos observar todos los archivos del dir inclyendo los ocultos 
 ```
 
 ```bash
-❯ whoami                                     # Miramos el nombre del usuario
+❯ whoami                                # Miramos el nombre del usuario
 ```
 
 ```bash
-❯ lsb_release -a                             # Miramos algunas caracteristicas de la maquina Linux 
+❯ lsb_release -a                        # Miramos algunas caracteristicas de la maquina Linux 
 ```
 
 ```bash
-❯ ip a                                       # Para ver las interfaces e IPs de una maquina
-❯ ifconfig                                   # Para saber que IP hay en mi maquina 
-❯ ifconfig docker0                           # Miramos la IP de la interfaz de Docker
+❯ ip a                                  # Para ver las interfaces e IPs de una maquina
+❯ ifconfig                              # Para saber que IP hay en mi maquina 
+❯ ifconfig docker0                      # Miramos la IP de la interfaz de Docker
 ```
 
 ```bash
-❯ file <FILE>                                # Nos muestra que tipo de archivo es por los magic numbers
+❯ file <FILE>                           # Nos muestra que tipo de archivo es por los magic numbers
 ```
 
 ```bash
-❯ locate nc.exe                              # Buscar el Netcat para Windows
-	❯ sudo updatedb                         # Actualizar la base de datos 
+❯ locate nc.exe                         # Buscar el Netcat para Windows
+	❯ sudo updatedb                    # Actualizar la base de datos 
 ```
 
 ```bash
@@ -246,11 +247,12 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```python
-❯ 7z l <file.zip>                              # Podemos ver el contenido interno del archivo zip, gz, bzip2, etc... (l=ele)
-❯ 7z x <file.gz>                               # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
-❯ tar -xf <file.tar.gz>                        # Descomprimimos el archivo tar.gz
-❯ gzip -d <file.txt.gz>                        # Descomprimir archivos gz
-❯ unzip <file.zip>                             # Descomprimir un archivo zip   
+❯ 7z l <file.zip>                            # Podemos ver el contenido interno del archivo zip, gz, bzip2, etc... (l=ele)
+❯ 7z x <file.gz>                             # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
+❯ tar -xf <file.tar.gz>                      # Descomprimimos el archivo tar.gz
+❯ gzip -d <file.txt.gz>                      # Descomprimir archivos gz
+❯ unzip <file.zip>                           # Descomprimir un archivo zip 
+❯ gunzip <file.gz>                           # Para descompirmir archivos gzip
 ```
 
 ```bash
