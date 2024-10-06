@@ -52,6 +52,7 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 
 ```bash 
 ❯ john --show --format=RAW-MD5 hash.txt          # Mirar la passwd crackeada en un formato especifico 
+❯ john --show hash.txt                           # Otra forma de hacerlo 
 ```
 
 ```bash
