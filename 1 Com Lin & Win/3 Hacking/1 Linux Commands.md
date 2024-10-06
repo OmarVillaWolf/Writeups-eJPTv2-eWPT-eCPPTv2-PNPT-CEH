@@ -278,6 +278,14 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ echo kiufgaiuafgajlfufa98ag676a85g6ga7 | base64 -d > File.sh  # Decodeamos el archivo en base64 y lo colocamos en un archivo que se llamara File.sh
 ```
 
+```bash 
+❯ base64 data.zip                                # Codeamos en 'base64' el archivo data.zip, es una formade pasar un archivo desde la maquina victima a la de atacante 
+
+	❯ nvim data.zip                             # Creamos el archivo en la maquina de atacante y agregamos el contenido del comando anterior 
+
+❯ cat data.zip | base64 -d | sponge data.zip     # Decodeamos el contenido de 'data.zip' y con sponge agregamos el contenido decodeado al archivo mismo archivo 'sustitucion de contenido' 
+```
+
 ```bash
 ❯ echo $PATH                              # Nos damos cuenta que tiene un PATH muy pequeno, por lo que vamos a copiar el nuestro a la maquina victima y asi poder extenderlo
 
