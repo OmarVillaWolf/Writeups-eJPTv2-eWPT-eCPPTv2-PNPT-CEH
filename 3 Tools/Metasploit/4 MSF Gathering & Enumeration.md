@@ -1,4 +1,4 @@
-AME# Reconocimiento con Metasploit
+# Reconocimiento con Metasploit
 
 Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliary 
 
