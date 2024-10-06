@@ -58,6 +58,32 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0d9dfff8724c5ccb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e94be0bf8dcc5867",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/John the Ripper.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -183,15 +209,18 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "438b82a6c732b81f",
   "lastOpenFiles": [
-    "5 HTB - Machines/eJPTv2/1 Easy/5 NodeBlog.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/12 Tabby.md",
     "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "3 Tools/John the Ripper.md",
     "2 Ports/80.6 Tomcat.md",
+    "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "2 Ports/80 - HTTP.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/5 NodeBlog.md",
     "5 HTB - Machines/eWPTv2/1 Easy/7 Tabby.md",
     "2 Ports/80.5 Apache - Shellshock.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/12 Tabby.md",
-    "2 Ports/80 - HTTP.md",
     "3 Tools/Nmap.md",
     "5 HTB - Machines/eWPTv2/1 Easy/6 Traverxec.md",
     "0 CEH/19 Cryptography.md",
@@ -208,9 +237,6 @@
     "14 Wifi/1 WiFi-Academy/1 Redes WiFi/1 Intro.md",
     "0 CEH/14 Hacking Web Applications.md",
     "0 CEH/13 Hacking Web Servers.md",
-    "0 CEH/12 Evading IDS, Firewalls, and Honeypots.md",
-    "0 CEH/11 Session Hijacking.md",
-    "0 CEH/9 Social Engineering.md",
     "0 CEH/8 Sniffing",
     "0 CEH",
     "6 Python/Fuerza Bruta",
