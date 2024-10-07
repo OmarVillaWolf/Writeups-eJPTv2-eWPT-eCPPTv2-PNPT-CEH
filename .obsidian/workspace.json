@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e4971dcc1ad2bd0b",
+        "id": "9fa89e090d8af7ae",
         "type": "tabs",
         "children": [
           {
-            "id": "c384fd01bf5c27c5",
+            "id": "d4bf85349bc85665",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 HTB - Machines/eJPTv2/1 Easy/13 Jerry.md",
+                "file": "5.1 Vulhub - Machines/eWPT/Lab-Final/Laboratorio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,7 +21,20 @@
             }
           },
           {
-            "id": "438b82a6c732b81f",
+            "id": "63e10e522b45d558",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Com Lin & Win/3 Hacking/ReverShell.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "29ecc085cc0134ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,48 +45,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "b7125a0b639c6b6a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/80.6 Tomcat.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "41f971375a4294b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Metasploit/4 MSF Gathering & Enumeration.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "61d5ea246f3f8427",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Hydra.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -158,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 Tools/Hydra.md"
+                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md"
               }
             }
           },
@@ -196,18 +170,21 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "61d5ea246f3f8427",
+  "active": "29ecc085cc0134ae",
   "lastOpenFiles": [
-    "2 Ports/80.6 Tomcat.md",
-    "3 Tools/Hydra.md",
+    "5.1 Vulhub - Machines/eWPT/Lab-Final/Laboratorio.md",
+    "1 Com Lin & Win/3 Hacking/ReverShell.md",
+    "1 Com Lin & Win/3 Hacking/Encoding.md",
     "5 HTB - Machines/eJPTv2/1 Easy/13 Jerry.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/12 Tabby.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Ports/80.6 Tomcat.md",
     "3 Tools/Metasploit/4 MSF Gathering & Enumeration.md",
+    "3 Tools/Hydra.md",
+    "5 HTB - Machines/eJPTv2/1 Easy/12 Tabby.md",
     "4 PrivEsc Lin & Win/2 Linux/0 Academy/9. Grupos especiales.md",
     "4 PrivEsc Lin & Win/2 Linux/0 Academy/2. SUID.md",
     "4 PrivEsc Lin & Win/2 Linux/0 Academy/1. Sudoers.md",
     "4 PrivEsc Lin & Win/2 Linux/0 Academy/0. Kernel.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "2 Ports/80 - HTTP.md",
     "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "3 Tools/John the Ripper.md",
@@ -221,9 +198,6 @@
     "0 CEH/3 OSINT & Passive Recon/9 Web Sites.md",
     "0 CEH/18 Cloud Computing.md",
     "13 AWS/1 AWS.md",
-    "1 Com Lin & Win/1 Bash/1 Regex.md",
-    "0 CEH/17 IoT Hacking.md",
-    "0 CEH/16 Hacking Mobile Platforms.md",
     "0 CEH/8 Sniffing",
     "0 CEH",
     "6 Python/Fuerza Bruta",
