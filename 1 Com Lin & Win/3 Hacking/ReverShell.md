@@ -104,6 +104,7 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 * phtm
 * phtml
 * phar
+* pHP
 
 ```
 
