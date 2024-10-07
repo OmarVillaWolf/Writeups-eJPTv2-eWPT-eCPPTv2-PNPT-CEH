@@ -31,6 +31,8 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ apt update 
 ❯ apt upgrade 
 ❯ apt full-upgrade     
+
+❯ parrot-upgrade
 ```
 
 ```bash
