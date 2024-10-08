@@ -183,7 +183,7 @@ Al utilizar SQLMap, los profesionales de seguridad pueden identificar y corregir
 	# roles = Muestra el rol de cada usuario 
 ```
 
-## Ejemplo 1
+## Ejemplo 1 'Obteniendo el parámetro vulnerable en la URL'
 
 ```bash 
 ❯ sqlmap -u 'http://site.com/index.php?id=1'    # Necesitamos pasarle la URL en donde se encuentra el index.php con el parametro 'id' existente. 
@@ -257,21 +257,12 @@ Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se
 		# 2 = Diccionario custom y colocar el 'path'
 ```
 
-## Ejemplo 2  
-
-Podemos usar los archivos de BurpSuite para ingresarlos en la herramienta SQLMap y así nos diga que tipo de vulnerabilidades tiene, además de poder obtener datos a partir de ellas. Para este ejemplo usaremos **SQLI**.
+## Ejemplo 2  'Capturando la petición con Burpsuite'
 
 ```bash 
+# Podemos usar la petición donde se encuentra la inyección capturada por BurpSuite e ingresarla en la herramienta SQLMap. Esto puede ser en un panel de 'login/passwd'
+
 ❯ sqlmap -r peticion.txt            # Obtenemos el archivo 'peticion.txt' copiando la intercepcion del Burpsuite 
-```
-
-
-```bash
-❯ sqlmap -r example.req -p searchitem --batch
-
-	# r = Archivo con el contenido del Proxy de BurpSuite .req
-	# p = El campo donde queremos que pruebe 
-	# batch = Para que no nos muestre las preguntas y las salte
 ```
 
 ```bash
