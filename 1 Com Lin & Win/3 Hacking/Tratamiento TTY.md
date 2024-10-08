@@ -3,7 +3,7 @@
 ## Tratamiento de la pseudo-consola
 
 ```bash
-❯ python3 -c 'import pty;pty.spawn("/bin/bash")'         # Obtenemos una 'bash', este comando es por si no sirve el del 'script'
+❯ python3 -c 'import pty;pty.spawn("/bin/bash")'         # Obtenemos una 'bash', este comando es por si no sirve el del 'script'. Ademas, funciona en 'Metasploit' para darnos una consola intercativa despues de colocar 'Shell'. 
 
 ❯ script /dev/null -c bash                               # Inicio del tratamiento de la consola 
 ❯ Ctrl + z
