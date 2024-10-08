@@ -146,7 +146,7 @@ Verificar la DB del Metasploit y después entrar (Cuando se ejecuta por primera 
 ❯ run                        # Ejecutamos el exploit  
 
 ❯ ctrl + z                   # Colocas la sesion en 'Background'
-❯ sessions                   # Miramos las sesiones activas 
+❯ sessions -i                # Miramos las sesiones activas 
 ❯ sessions -u ❮ID❯           # Regresamos a la sesion 
 ```
 
