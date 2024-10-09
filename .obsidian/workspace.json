@@ -149,9 +149,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c3ed0df3dba2af44",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Ports/80.6 Tomcat.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8ecb18a10a05778e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/John the Ripper.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -236,7 +262,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 Tools/Metasploit/5 MSF Explotation.md"
+                "file": "2 Ports/80.6 Tomcat.md"
               }
             }
           },
@@ -274,34 +300,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "8ae465a57bf54e04",
+  "active": "c3ed0df3dba2af44",
   "lastOpenFiles": [
+    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "3 Tools/Metasploit/5 MSF Explotation.md",
+    "3 Tools/John the Ripper.md",
+    "2 Ports/22 - SSH.md",
     "2 Ports/80.1 WordPress.md",
+    "2 Ports/3306 - MYSQL.md",
+    "5.1 Vulhub - Machines/eWPT/Lab-Final/Laboratorio.md",
     "1 Com Lin & Win/3 Hacking/ReverShell.md",
     "3 Tools/Hydra.md",
     "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "3 Tools/Metasploit/5 MSF Explotation.md",
+    "2 Ports/80.6 Tomcat.md",
+    "3 Tools/BurpSuite.md",
+    "3 Tools/Ffuf, Gobuster, Wfuz.md",
+    "3 Tools/Dirbuster, Dirsearch.md",
+    "3 Tools/SQLMap.md",
     "3 Tools/Metasploit/1 Metasploit.md",
-    "5.1 Vulhub - Machines/eWPT/Lab-Final/Laboratorio.md",
     "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "2 Ports/3306 - MYSQL.md",
     "3 Tools/Metasploit/2 MSF Vulnerability Scanning.md",
     "3 Tools/Metasploit/3 MSF Client-Side Attacks.md",
     "3 Tools/Metasploit/4 MSF Gathering & Enumeration.md",
-    "3 Tools/SQLMap.md",
     "7 OWASP TOP 10/1 SQLI.md",
     "3 Tools/Nmap.md",
     "1 Com Lin & Win/3 Hacking/Encoding.md",
     "5 HTB - Machines/eJPTv2/1 Easy/13 Jerry.md",
-    "2 Ports/80.6 Tomcat.md",
     "5 HTB - Machines/eJPTv2/1 Easy/12 Tabby.md",
     "4 PrivEsc Lin & Win/2 Linux/0 Academy/9. Grupos especiales.md",
-    "4 PrivEsc Lin & Win/2 Linux/0 Academy/2. SUID.md",
-    "4 PrivEsc Lin & Win/2 Linux/0 Academy/1. Sudoers.md",
-    "4 PrivEsc Lin & Win/2 Linux/0 Academy/0. Kernel.md",
-    "2 Ports/80 - HTTP.md",
-    "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "0 CEH/8 Sniffing",
     "0 CEH",
     "6 Python/Fuerza Bruta",
