@@ -1,7 +1,7 @@
 # Laboratorio 
 
 ```bash 
-# Practicar con estas maquinas 
+# Practicar con estas maquinas eWPT
 
 1. Tomcat 
 2. https://www.vulnhub.com/entry/pwnos-20-pre-release,34/
