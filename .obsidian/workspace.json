@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9fa89e090d8af7ae",
+        "id": "0e3cbf81680137e0",
         "type": "tabs",
         "children": [
           {
-            "id": "8b9d393c17753a96",
+            "id": "03208cc65b6946f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.1 Vulhub - Machines/eWPT/Lab-Final/Laboratorio.md",
+                "file": "2 Ports/80.2 Joomla.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,155 +21,12 @@
             }
           },
           {
-            "id": "29ecc085cc0134ae",
+            "id": "9a1f866a73b1560c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f59e2be3ffcf4abc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Nmap.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b658bec69df652aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/SQLMap.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "205acbba63a0c647",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/80.1 WordPress.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "458bed833acc6389",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "60c664c801d1d4e6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7 OWASP TOP 10/1 SQLI.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ae465a57bf54e04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Metasploit/5 MSF Explotation.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "409f3eea87b62da7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/3306 - MYSQL.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9898386df7fda8b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Hydra.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6d7326e0e05334ff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Com Lin & Win/3 Hacking/ReverShell.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c3ed0df3dba2af44",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/80.6 Tomcat.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ecb18a10a05778e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/John the Ripper.md",
+                "file": "3 Tools/Fuzzers.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -177,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -262,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Ports/80.6 Tomcat.md"
+                "file": "3 Tools/Fuzzers.md"
               }
             }
           },
@@ -300,34 +157,42 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "c3ed0df3dba2af44",
+  "active": "9a1f866a73b1560c",
   "lastOpenFiles": [
-    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "3 Tools/Metasploit/5 MSF Explotation.md",
-    "3 Tools/John the Ripper.md",
-    "2 Ports/22 - SSH.md",
-    "2 Ports/80.1 WordPress.md",
-    "2 Ports/3306 - MYSQL.md",
-    "5.1 Vulhub - Machines/eWPT/Lab-Final/Laboratorio.md",
-    "1 Com Lin & Win/3 Hacking/ReverShell.md",
-    "3 Tools/Hydra.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "2 Ports/80.6 Tomcat.md",
-    "3 Tools/BurpSuite.md",
-    "3 Tools/Ffuf, Gobuster, Wfuz.md",
+    "3 Tools/Fuzzers.md",
+    "2 Ports/0 Paginas Practicar.md",
+    "13 AWS/1 AWS.md",
+    "14 Wifi/1 WiFi-Academy/1 Redes WiFi/2 IEEE 802.11.md",
+    "Z Imagenes/Hacking/SSRF.png",
+    "Z Imagenes/Hacking/Piv2.png",
+    "Z Imagenes/Hacking/Piv1.png",
+    "2 Ports/80.2 Joomla.md",
     "3 Tools/Dirbuster, Dirsearch.md",
-    "3 Tools/SQLMap.md",
-    "3 Tools/Metasploit/1 Metasploit.md",
-    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "3 Tools/Metasploit/2 MSF Vulnerability Scanning.md",
-    "3 Tools/Metasploit/3 MSF Client-Side Attacks.md",
+    "2 Ports/80.1 WordPress.md",
+    "8 AD/2 PT/1 Enumeration/1 Metodologia.md",
+    "8 AD/1 Intro/3 OUs, Autenticacion,.md",
+    "8 AD/1 Intro/2 Usuarios y Grupos.md",
+    "8 AD/1 Intro/1 Introduccion y  Componentes.md",
+    "1 Kitty.md",
+    "2 NVIM.md",
+    "3 Excel.md",
     "3 Tools/Metasploit/4 MSF Gathering & Enumeration.md",
-    "7 OWASP TOP 10/1 SQLI.md",
-    "3 Tools/Nmap.md",
-    "1 Com Lin & Win/3 Hacking/Encoding.md",
+    "7 OWASP TOP 10/2 XSS.md",
     "5 HTB - Machines/eJPTv2/1 Easy/13 Jerry.md",
     "5 HTB - Machines/eJPTv2/1 Easy/12 Tabby.md",
-    "4 PrivEsc Lin & Win/2 Linux/0 Academy/9. Grupos especiales.md",
+    "3 Tools/John the Ripper.md",
+    "2 Ports/80.6 Tomcat.md",
+    "1 Com Lin & Win/3 Hacking/ReverShell.md",
+    "3 Tools/Hydra.md",
+    "2 Ports/3306 - MYSQL.md",
+    "3 Tools/Metasploit/5 MSF Explotation.md",
+    "7 OWASP TOP 10/1 SQLI.md",
+    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "Pasted image 20241009091721.png",
+    "Pasted image 20241009094317.png",
+    "Pasted image 20241009093542.png",
+    "Pasted image 20241009092717.png",
+    "Pasted image 20241009091802.png",
     "0 CEH/8 Sniffing",
     "0 CEH",
     "6 Python/Fuerza Bruta",
@@ -338,15 +203,7 @@
     "0 Com Lin & Win/Untitled",
     "6 Python/7 Librerias comunes",
     "0 Com Lin & Win/1.1 Python Pen",
-    "Z Imagenes/Hacking/Piv1.png",
-    "Z Imagenes/Hacking/Piv2.png",
-    "Z Imagenes/Hacking/SSRF.png",
     "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130314.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132807.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132339.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205132054.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205131115.png",
-    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240205130901.png"
+    "8 PortSwigger-OWASP/1 Access Control (IDOR)/Pasted image 20240329162024.png"
   ]
 }
