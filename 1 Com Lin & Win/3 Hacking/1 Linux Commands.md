@@ -281,11 +281,15 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash 
+❯ echo -n 'administrator@test.com' | base64      # Codeamos en base64 
+
 ❯ base64 data.zip                                # Codeamos en 'base64' el archivo data.zip, es una formade pasar un archivo desde la maquina victima a la de atacante 
 
 	❯ nvim data.zip                             # Creamos el archivo en la maquina de atacante y agregamos el contenido del comando anterior 
 
 ❯ cat data.zip | base64 -d | sponge data.zip     # Decodeamos el contenido de 'data.zip' y con sponge agregamos el contenido decodeado al archivo mismo archivo 'sustitucion de contenido' 
+
+❯ echo -n 'administrator@test.com' swaks         # Automatiza la creacion en base64
 ```
 
 ```bash
