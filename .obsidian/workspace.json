@@ -4,50 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "0e3cbf81680137e0",
+        "id": "71ffe996c21cac6b",
         "type": "tabs",
         "children": [
           {
-            "id": "03208cc65b6946f9",
+            "id": "cf8885a5778218fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/80.2 Joomla.md",
+                "file": "2 Ports/25 - SMTP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "25 - SMTP"
             }
           },
           {
-            "id": "9a1f866a73b1560c",
+            "id": "38265b137db8683c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 Tools/Fuzzers.md",
+                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "84dfa55fc7fdb6c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/80.6 Tomcat.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "1 Linux Commands"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +58,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -82,7 +75,9 @@
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -90,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -98,7 +95,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -123,7 +122,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -132,8 +133,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 Ports/80.6 Tomcat.md"
-              }
+                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 1 Linux Commands"
             }
           },
           {
@@ -145,7 +148,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ],
@@ -170,11 +175,19 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "84dfa55fc7fdb6c1",
+  "active": "38265b137db8683c",
   "lastOpenFiles": [
+    "2 Ports/25 - SMTP.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Ports/445 - SMB.md",
+    "2 Ports/80.1 WordPress.md",
+    "1 Com Lin & Win/3 Hacking/ReverShell.md",
+    "2 Ports/135 - RPC.md",
     "2 Ports/80.2 Joomla.md",
     "3 Tools/Fuzzers.md",
-    "2 Ports/445 - SMB.md",
+    "2 Ports/80.6 Tomcat.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/2 Aircrack.md",
+    "14 Wifi/Wifi - WPA-WPA2/1. WPA-WPA2/1 Instalar y conceptos.md",
     "2 Ports/445 - Samba.md",
     "2 Ports/389 - LDAP.md",
     "2 Ports/88 Kerberos.md",
@@ -185,7 +198,6 @@
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
     "3 Tools/Dirbuster, Dirsearch.md",
-    "2 Ports/80.1 WordPress.md",
     "8 AD/2 PT/1 Enumeration/1 Metodologia.md",
     "8 AD/1 Intro/3 OUs, Autenticacion,.md",
     "8 AD/1 Intro/2 Usuarios y Grupos.md",
@@ -194,13 +206,6 @@
     "2 NVIM.md",
     "3 Excel.md",
     "3 Tools/Metasploit/4 MSF Gathering & Enumeration.md",
-    "7 OWASP TOP 10/2 XSS.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/13 Jerry.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/12 Tabby.md",
-    "3 Tools/John the Ripper.md",
-    "2 Ports/80.6 Tomcat.md",
-    "1 Com Lin & Win/3 Hacking/ReverShell.md",
-    "3 Tools/Hydra.md",
     "Pasted image 20241009091721.png",
     "Pasted image 20241009094317.png",
     "Pasted image 20241009093542.png",
