@@ -34,8 +34,15 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ sudo update-rc.d ssh defaults
 ❯ sudo update-rc.d ssh enable
 ❯ sudo reboot                     # Reiniciamos Kali
+```
 
-❯ ssh user@IP                 # Nos conectamos desde Powershell o Putty hacia Kali
+```bash
+# Activar RDP en Kali
+
+❯ sudo apt install xrdp -y        # Instalamos RDP
+❯ sudo adduser xrdp ssl-cert      # Incluimos el usuario 'xrdp' en el certificado SSL
+❯ sudo systemctl enable xrdp      # Activamos el servicio RDP 
+❯ sudo reboot                     # Reiniciamos Kali
 ```
 
 ```bash 
