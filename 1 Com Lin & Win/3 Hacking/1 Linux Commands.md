@@ -28,6 +28,17 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 * [LinPeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS)
 
 ```bash 
+# Activar SSH en Kali 
+
+❯ sudo update-rc.d -f ssh remove
+❯ sudo update-rc.d ssh defaults
+❯ sudo update-rc.d ssh enable
+❯ sudo reboot                     # Reiniciamos Kali
+
+❯ ssh user@IP                 # Nos conectamos desde Powershell o Putty hacia Kali
+```
+
+```bash 
 ❯ apt update 
 ❯ apt upgrade 
 ❯ apt full-upgrade     
