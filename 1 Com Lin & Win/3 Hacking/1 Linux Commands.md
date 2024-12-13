@@ -46,10 +46,12 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ```
 
 ```bash 
+# Kali
 ❯ apt update 
 ❯ apt upgrade 
 ❯ apt full-upgrade     
 
+# Parrot
 ❯ parrot-upgrade
 ```
 
