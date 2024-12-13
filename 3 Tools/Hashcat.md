@@ -26,13 +26,20 @@ Tags: #HashCat #Hash-Identifier
 
 # Podemos crakear de uno en uno
 ❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt
+❯ hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt
 ❯ hashcat -m 400 -a 0 hash.txt /usr/share/wordlists/rockyou.txt 
 
 	# m = Modo 
 		# 0 = MD5
-		# 400 = $P$
+		# 400 = inician con $P$
+		# 5500 = NetNTLMv1 / NetNTLMv1+ESS
+		# 5600 = NetNTLMv2 
 	# hashes.txt = Archivo que contiene el hash
 	# a 0 = Emplear un ataque de fuerza bruta 
+
+❯ hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt --force    # Obligar a que las VM ejecuten Hashcat
+
+❯ hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt -O         # Aumenta la velocidad del crackeo 
 ```
 
 ```bash 
@@ -43,6 +50,7 @@ Tags: #HashCat #Hash-Identifier
 
 ```bash
 ❯ hashcat.exe --stdout -r rules/best64.rule hash.txt > passwords  # Podemos hacer y mostrar variantes de la password almacenada en ese archivo hash.txt y nos creamos un diccionario el cual contenga todas esas variantes
+
 ❯ hashcat.exe -m 3200 -a 0 hash passwords                         # Con la misma herramienta crackearemos la password pasandole el hash 
 ```
 
