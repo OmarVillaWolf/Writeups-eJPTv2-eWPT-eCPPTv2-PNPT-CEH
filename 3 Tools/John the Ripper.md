@@ -71,7 +71,9 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 	# Raw = Tipo de hash estandar (raw-md5, raw-sha1, raw-sha256, whirlpool...)
 	# hashfile = Archivo que contiene el hash a crackear
 	
-# Ejemplo de un hash NT --> Administrador:500:42f29043y123fa9c74f23606c6g522b0:71759a1bb2web4da43e676d6b7190711:::
+# Ejemplo de un hash NT --> 
+	administrator:500:LM:NT:::     # Solo necesitaremos la parte de NT para crackear la password
+	Administrador:500:42f29043y123fa9c74f23606c6g522b0:71759a1bb2web4da43e676d6b7190711:::
 ```
 
 ```bash
