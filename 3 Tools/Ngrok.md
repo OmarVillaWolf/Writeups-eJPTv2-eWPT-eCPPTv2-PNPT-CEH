@@ -2,7 +2,19 @@
 
 Tags: #Ngrok
 
-[Ngrok](https://ngrok.com/) es un servicio que nos permite crear nuestro servidor local en un subdominio para poder visualizarlo fuera de la LAN, a través de Internet.
+* [Ngrok-Windows](https://download.ngrok.com/windows) es un servicio que nos permite crear nuestro servidor local en un subdominio para poder visualizarlo fuera de la LAN, a través de Internet.
+
+## Instalación Kali
+
+```bash 
+❯ wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz                                                
+
+❯ tar xvzf ngrok-v3-stable-linux-amd64.tgz 
+ngrok
+
+❯ ./ngrok config add-authtoken PEGA_AQUI_TU_TOKEN
+Authtoken saved to configuration file: /root/.config/ngrok/ngrok.yml
+```
 
 ## Comandos 
 
