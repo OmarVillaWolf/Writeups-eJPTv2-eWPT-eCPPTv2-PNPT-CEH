@@ -4,46 +4,48 @@ Tags: #Windows #Comandos #Powershell
 
 ## Comandos terminal Windows
 
+* [Abusando de Tokens Windows - Hacktricks](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens)
+* [PetitPotato](https://github.com/wh0amitz/PetitPotato)
 * [WinPeas](https://github.com/peass-ng/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md)
 
 ```bash
-❯ ping -n 1 ❮IP❯                             # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
+❯ ping -n 1 ❮IP❯                       # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
 
 	# IP = IP Address de la maquina target 
 	# n = Numero de pings a ejecutar
 ```
 
 ```bash 
-❯ arp -a                                     # Mirar la tabla ARP en la maquina actual 
+❯ arp -a                               # Mirar la tabla ARP en la maquina actual 
 ```
 
 ```bash 
-❯ systeminfo                                 # Nos muestra la informacion de Windows (Parches 'Hotfix', etc...)
-❯ sysinfo                                    # Nos muestra algunos detalles de Windows
+❯ systeminfo                           # Muestra la informacion de Windows (Parches 'Hotfix', etc...)
+❯ sysinfo                              # Muestra algunos detalles de Windows
 ```
 
 ```bash
-❯ whoami                                     # Miramos el nombre del usuario
-❯ whoami /priv                               # Miramos los privilegios 
+❯ whoami                               # Miramos el nombre del usuario
+❯ whoami /priv                         # Miramos los privilegios 
 ```
 
 ```bash 
-❯ query user                                 # Mirar si hay algun usuario loggeado
+❯ query user                           # Mirar si hay algun usuario loggeado
 ```
 
 ```bash
-❯ net users                                  # Miramos todos los usuarios existentes y sus grupos
-❯ net user <User>                            # Miramos el grupo de un usuario especifico como 'administrator'
-❯ net localgroup administrators              # Miramos los miembros del grupo administrador
-❯ net user admin password123                 # Para cambiar la passwd al usuario admin siendo NT Authority 
+❯ net users                            # Miramos todos los usuarios existentes y sus grupos
+❯ net user <User>                      # Miramos el grupo de un usuario especifico como 'administrator'
+❯ net localgroup administrators        # Miramos los miembros del grupo administrador
+❯ net user admin password123           # Para cambiar la passwd al usuario admin siendo NT Authority 
 ```
 
 ```bash 
-❯ hostname                                   # Nombre de la maquina 
+❯ hostname                 # Nombre de la maquina 
 ```
 
 ```bash
-❯ .\file.exe               # Ejecutamos un arcxhivo .exe en Windows 
+❯ .\file.exe               # Ejecutar un archivo .exe en Windows 
 ```
 
 ```bash 
@@ -51,20 +53,21 @@ Tags: #Windows #Comandos #Powershell
 ```
 
 ```bash
-❯ cls                            # Nos ayuda a limpiar la pantalla
+❯ cls                            # Limpia la pantalla
 ```
 
 ```bash
-❯ ipconfig                       # Nos muestra las interfaces y las direcciones IP y si existen mas subredes, podemos hacer 'Pivoting'
+❯ ipconfig                       # Muestra las interfaces, direcciones IP y si existen mas subredes se puede hacer 'Pivoting'
 ```
 
 ```bash
-❯ dir                            # Listamos el contenido del directorio
-❯ dir /r /s ❮File.txt❯           # Buscamos de forma recursiva el string .txt
+❯ dir                            # Lista el contenido del directorio
+❯ dir C:\Users                   # Lista los directorios de los usuarios  
+❯ dir /r /s ❮File.txt❯           # Busca de forma recursiva el string .txt
 ```
 
 ```bash
-❯ type ❮File❯                                # Nos muestra el contenido del archivo
+❯ type ❮File❯                    # Muestra el contenido del archivo
 ```
 
 
