@@ -23,7 +23,7 @@
             }
           },
           {
-            "id": "ad218c35af381376",
+            "id": "bd500ae4ec96ab90",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -37,7 +37,8 @@
               "title": "0 Comandos AD"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -174,10 +175,20 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "0912ab16c520cde8",
+  "active": "bd500ae4ec96ab90",
   "lastOpenFiles": [
-    "8 AD 2/0 Comandos AD.md",
     "0 Ethical Hacking/2 Comandos/1 Footprinting and Reconnaissance.md",
+    "2 Ports/5357, 5985-6 - WINRM.md",
+    "8 AD 2/0 Comandos AD.md",
+    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "2 Ports/80 - HTTP.md",
+    "8 AD 2/1 IIS.md",
+    "3 Tools/Fuzzers.md",
+    "1 Com Lin & Win/3 Hacking/Tokens Windows.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Ports/80.7 IIS - Webdav.md",
+    "2 Ports/5357 WinRM.md",
+    "2 Ports/3389, 3333 - RDP.md",
     "1 Com Lin & Win/0 Paginas Practicar.md",
     "FlipperZero/BadUSB.md",
     "FlipperZero",
@@ -189,23 +200,13 @@
     "0 Ethical Hacking/1 Tools/13 Cryptography.md",
     "README.md",
     "2 Ports/3306 - MYSQL.md",
-    "3 Tools/Fuzzers.md",
     "3 Tools/Hydra.md",
-    "2 Ports/80 - HTTP.md",
     "2 Ports/80.8 WSDL.md",
     "2 Ports/80.6 Tomcat.md",
     "8 AD 1/1 Enumeration/5 PowerView.md",
     "8 AD Academy 2/Untitled",
     "8 AD 2",
     "2 Ports/80.1 WordPress.md",
-    "8 AD 1/1 Enumeration/4 Plumhound.md",
-    "8 AD/1 Enumeration/5 PingCastle.md",
-    "8 AD 1/1 Enumeration/3 BloodHound.md",
-    "8 AD 1/1 Enumeration/1 Ldapdomaindump.md",
-    "8 AD 1/0 Attacks/4 IPv6 Attacks.md",
-    "8 AD 1/1 Enumeration/0 Metodología.md",
-    "8 AD/0 Attacks/5 Passback.md",
-    "8 AD 1/0 Attacks/2 SMB Relay.md",
     "8 AD 1/0 Attacks",
     "0 Ethical Hacking/2 Comandos",
     "0 Ethical Hacking/1 Tools",
