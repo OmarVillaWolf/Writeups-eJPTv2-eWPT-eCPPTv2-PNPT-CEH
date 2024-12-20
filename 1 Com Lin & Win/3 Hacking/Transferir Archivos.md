@@ -86,19 +86,18 @@ C:\Windows\Temp
 ❯ smbserver.py <FOLDERNAME> $(pwd)                 # Nos creamos un recurso de red compartido, sincronizado con la ruta actual en donde se encuentra el archivo a compartir
 ```
 
-## Windows a Linux 
+## Windows cmd a Linux 
 
 ```bash 
-# En la maquina Windows
+# En el 'cmd' de la maquina Windows debemos colocar estos comandos
 
-1. ❯ scp -r File user@IP:dir/                  # Pasar una carpeta con muchos archivos
+1. ❯ scp -r File user@IP:dir/destino/            # Pasar una carpeta con muchos archivos a Linux
+   ❯ scp file.exe user@IP:/dir/destino/          # Pasar un archivo en especifico a Linux
 
 	# r = Recursivo
 	# File = Nombre de la carpeta que contiene los archivos a pasar  
 	# user = Usuario de la maquina Linux (Debemos conocer su passwd)
 	# dir = Directorio en donde se colocara el archivo 
 
-2. ❯ scp file.exe user@IP:/dir/destino/            # Pasar un archivo 
-
-	# file.exe = Archivo a pasar
+2. ❯ scp user@IP:/dir/destino/ .                 # Copiar un archivo que se encuentra en la maquina Linux a Windows        
 ```
