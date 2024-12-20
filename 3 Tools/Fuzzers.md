@@ -154,6 +154,22 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirse
 	# b = Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
 	# x = Que extensiones queremos buscar (.php,.html,.txt)
 	# r = Para hacer 'Follow Redirect'
+
+❯ gobuster dir -u http://IP -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -x asp,txt,html,aspx -f 
+
+	# dir = Enumeracion de directorios y archivos
+	# u = URL
+	# w = Diccionario a usar
+	# x = Extensiones a buscar 
+	# --add-slash = Hace la misma funcion que 'f'
+
+Nota: Podemos crear nuestros propios diccionarios para ser mas efectivos 
+
+Nota: En los archivos que encontremos, podemos mirar cada una de las rutas y mirar su codigo fuente para ver si existe algo importante ahi
+
+Nota: 
+	* Si la aplicacion web es Windows podemos usar extensiones como: asp, aspx, html, txt...
+	* Si la aplicacion web es Linux podemos usar extensiones como: php, html, txt php5...
 ```
 
 ```bash
