@@ -138,6 +138,41 @@ Abrir una pagina en otra pestaña 'Ctrl + Click-Izquierdo'
 4. Unencrypted Backups
 ```
 
+## Inyección de comandos en un formulario Web
+
+En Windows, la concatenación de comandos permite ejecutar varios comandos en una sola línea dentro de la línea de comandos o un script batch. Esto es útil para llevar a cabo una secuencia de tareas en un orden determinado sin necesidad de ejecutar cada comando por separado. Hay diferentes operadores disponibles para combinar comandos en Windows.
+
+```bash
+1. & = Ejecuta el segundo comando independientemente del resultado del primero.
+    
+    - Ejemplo: `dir & echo Hola`
+        
+2. && = Ejecuta el segundo comando solo si el primero se completó con éxito (sin errores).
+    
+    - Ejemplo: `cd C:\Windows && dir`
+        
+3. || = Ejecuta el segundo comando solo si el primero falló.
+    
+    - Ejemplo: `cd C:\NoExiste || echo "La ruta no existe"`
+        
+4. ; = En algunos shells, como en PowerShell, el punto y coma se utiliza para separar comandos, similar al operador `&` en el CMD.
+    
+    - Ejemplo (en PowerShell): `Get-ChildItem; Write-Host "Listado completado"`
+        
+5. () = Los paréntesis se pueden usar para agrupar comandos y controlar el orden de ejecución, especialmente en combinación con los operadores anteriores.
+    
+    - Ejemplo: `(cd C:\Windows && dir) & echo "Listado completado"`
+```
+
+## Usuarios por defecto 
+
+```bash 
+# Diferentes tipos de usuario en los SO
+
+En Linux:    www-data, User, Root          
+En Windows:  AppPool, User, NT Authority\System            
+```
+
 ## Ruta típica en consola
 
 ```python 
