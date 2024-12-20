@@ -8,6 +8,11 @@ Tags: #Windows #Comandos #Powershell
 * [PetitPotato](https://github.com/wh0amitz/PetitPotato)
 * [WinPeas](https://github.com/peass-ng/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md)
 
+```bash 
+❯ del /s /q "file"                     # Eliminar un archivo 
+❯ rmdir /s /q "C:/dir/"                # Eliminar una carpeta 
+```
+
 ```bash
 ❯ ping -n 1 ❮IP❯                       # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
 
