@@ -70,4 +70,12 @@ Tags: #Windows #Comandos #Powershell
 ❯ type ❮File❯                    # Muestra el contenido del archivo
 ```
 
+```bash 
+❯ route add IP mask 255.255.255.255 GW   # Agregar una IP en especifico
+	# IP = Direccion a agregar
+	# GW = Direccion IP del Gateway
 
+❯ route add IP mask 255.255.255.0 GW     # Agregar un segmento de red 
+
+❯ route delete IP                        # Borrar una IP especifica o un segmento de red
+```
