@@ -34,6 +34,8 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ sudo update-rc.d ssh defaults
 ❯ sudo update-rc.d ssh enable
 ❯ sudo reboot                     # Reiniciamos Kali
+
+❯ sudo systemctl status ssh       # Mirar si se esta ejecutando SSH
 ```
 
 ```bash
@@ -43,6 +45,13 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 ❯ sudo adduser xrdp ssl-cert      # Incluimos el usuario 'xrdp' en el certificado SSL
 ❯ sudo systemctl enable xrdp      # Activamos el servicio RDP 
 ❯ sudo reboot                     # Reiniciamos Kali
+```
+
+```bash 
+❯ service apache2 start           # Iniciamos el servicio de apache
+❯ service apache2 stop            # Paramos el servicio de apache 
+
+❯ sudo systemctl status apache2   # Mirar si se esta ejecutando Apache
 ```
 
 ```bash 
