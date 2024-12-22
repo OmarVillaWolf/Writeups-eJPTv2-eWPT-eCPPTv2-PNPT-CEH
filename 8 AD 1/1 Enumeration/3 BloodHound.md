@@ -10,7 +10,7 @@ Bloodhound es una app en JavaScript la cual puede identificar fácilmente ataque
 ❯ wget https://raw.githubusercontent.com/puckiestyle/powershell/master/SharpHound.ps1 
 ```
 
-```bash 
+```powershell 
 # En la maquina victima con PS. Hacemos lo siguiente para la recoleccion de data
 
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
