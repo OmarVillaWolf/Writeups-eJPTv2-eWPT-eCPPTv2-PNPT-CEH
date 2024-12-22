@@ -170,7 +170,7 @@ En Windows, la concatenación de comandos permite ejecutar varios comandos en un
 # Diferentes tipos de usuario en los SO
 
 En Linux:    www-data, User, Root          
-En Windows:  AppPool, User, NT Authority\System            
+En Windows:  iss apppool\defaultapppool, User, NT Authority\System            
 ```
 
 ## Ruta típica en consola
