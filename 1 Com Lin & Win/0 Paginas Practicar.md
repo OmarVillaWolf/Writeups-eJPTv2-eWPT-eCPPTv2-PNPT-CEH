@@ -5,6 +5,8 @@
 2. https://hack4u.io/
 3. https://sso.teachable.com/secure/770707/identity/login/otp
 4. https://my.ine.com/login
+5. https://www.alteredsecurity.com/
+6. https://www.pentesteracademy.com/
 ```
 ## Practicar con maquinas vulnerables 
 
