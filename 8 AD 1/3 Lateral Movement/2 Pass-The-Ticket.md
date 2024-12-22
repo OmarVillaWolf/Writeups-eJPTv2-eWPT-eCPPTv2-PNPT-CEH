@@ -4,7 +4,7 @@ Tags: #AD #Windows #PassTheTicket
 
 Es una técnica para robar credenciales que usan los atacantes para robar tickets de Kerberos para autenticarse con los recursos, archivos compartidos, y otras computadoras como un usuario sin tener que la contraseña del usuario comprometida.  Ambos, TGS (Ticket-Granting Service) y TGT (Ticket-Granting Ticket) puede ser robado y rehusado por los atacantes.  Sin los privilegios administrativos, un atacante puede obtener el TGT (usando 'delegacion fake') y todos los tickets para el usuario actual. Con permisos administrativos, un atacante puede dumpear los procesos LSASS y obtener todos los TGTs y capturar los tickets TGS en el sistema. 
 
-```bash
+```powershell
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas
  	
