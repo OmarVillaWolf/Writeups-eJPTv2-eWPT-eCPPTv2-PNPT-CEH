@@ -25,8 +25,6 @@ Tags: #Linux #Comandos #Netcat #Montura #Hash
 
 ## Comandos terminal Linux
 
-* [LinPeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS)
-
 ```bash 
 # Activar SSH en Kali 
 
