@@ -8,7 +8,7 @@ Tags: #AD #Powershell #Enumeracion #Windows
 ❯ wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1
 ```
 
-```bash 
+```powershell 
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
 
