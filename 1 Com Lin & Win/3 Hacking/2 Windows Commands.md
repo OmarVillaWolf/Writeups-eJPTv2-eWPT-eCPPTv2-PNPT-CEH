@@ -4,9 +4,7 @@ Tags: #Windows #Comandos #Powershell
 
 ## Comandos terminal Windows
 
-* [Abusando de Tokens Windows - Hacktricks](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens)
-* [PetitPotato](https://github.com/wh0amitz/PetitPotato)
-* [WinPeas](https://github.com/peass-ng/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md)
+* [LOLBAS](https://lolbas-project.github.io/)
 
 ```bash 
 ❯ del /s /q "file"                     # Eliminar un archivo 
@@ -39,10 +37,11 @@ Tags: #Windows #Comandos #Powershell
 ```
 
 ```bash
-❯ net users                            # Miramos todos los usuarios existentes y sus grupos
+❯ net user                             # Miramos todos los usuarios existentes y sus grupos
 ❯ net user <User>                      # Miramos el grupo de un usuario especifico como 'administrator'
 ❯ net localgroup administrators        # Miramos los miembros del grupo administrador
-❯ net user admin password123           # Para cambiar la passwd al usuario admin siendo NT Authority 
+❯ net user admin password123           # Para cambiar la passwd al usuario admin siendo NT Authority\System 
+net user omar P4ssw0rd /add            # Crear un usuario siendo NT Authority\System
 ```
 
 ```bash 
