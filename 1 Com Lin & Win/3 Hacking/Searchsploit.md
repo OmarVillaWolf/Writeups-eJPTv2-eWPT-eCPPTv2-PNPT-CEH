@@ -23,7 +23,7 @@ Podemos usar esta herramienta para buscar exploit y ver si alguno nos puede ayud
 ❯ searchsploit -e "exploit_name"              # Para hacer una busqueda exacta
 ```
 
-## Compilar en C/C++/C\# 
+## Compilar en C, C++, C# 
 
 * [Exploits-database](https://gitlab.com/exploit-database/exploitdb-bin-sploits/-/tree/main/bin-sploits?ref_type=heads)
 ```bash 
