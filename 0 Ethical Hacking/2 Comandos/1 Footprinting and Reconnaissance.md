@@ -1,6 +1,6 @@
 # Footprinting and Reconnaissance
 
-Tags: #CEH 
+Tags: #Hacking 
 
 ## Google Hacking 
 
