@@ -11,7 +11,7 @@ Técnica utilizada para adivinar simultáneamente las contraseñas de varias cue
 ❯ wget https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/master/DomainPasswordSpray.ps1
 ```
 
-```bash
+```powershell
 ❯ powershell -ep bypass                   # Politica que nos permite ejecutar scripts en Powershell
  	# ep = Ejecutar politicas 
 
