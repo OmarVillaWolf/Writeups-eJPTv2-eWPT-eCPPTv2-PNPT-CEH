@@ -31,11 +31,11 @@ El "AD Module" es el módulo de Active Directory para Windows PowerShell, que of
 
 ❯ Get-ADGroup -Identity "Administrators"      # Recupera detalles de un grupo en Active Directory
    
-❯ New-ADUser -Name "John Doe"      # Crea un nuevo usuario en Active Directory
+❯ New-ADUser -Name "juan carlos"              # Crea un nuevo usuario en Active Directory
 
 ❯ Set-ADUser -Identity jdoe -Description "Account de prueba"     # Modifica propiedades de un usuario existente
 
-❯ Remove-ADUser -Identity jdoe     # Elimina un usuario de Active Directory
+❯ Remove-ADUser -Identity juan     # Elimina un usuario de Active Directory
 
 ❯ Get-ADDomain    # Recupera información sobre el dominio
 
