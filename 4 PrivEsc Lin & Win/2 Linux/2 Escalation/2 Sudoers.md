@@ -16,13 +16,7 @@ A continuación, se os comparte el recurso GTFOBINS el cual utilizamos en esta c
 
 - **GTFOBins**: [https://gtfobins.github.io/](https://gtfobins.github.io/)
 
-
 ## Sudoers 
-
-En la pagina de GTFOBins buscamos el comando y la pestaña de **SUDO**
-* Directorios  Linux con capacidad de escritura
-	* **/tmp/**
-	* **/dev/shm/**
 
 ```bash
 ❯ sudo -l                                          # Ver que permisos tenemos en el sudoer y poder ejecutar como root algun comando
