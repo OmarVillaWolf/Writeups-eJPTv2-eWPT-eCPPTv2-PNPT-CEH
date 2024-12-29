@@ -1,6 +1,6 @@
 # Bypass AMSI
 
-Tags: #Bypass #Windows #Powershell 
+Tags: #Bypass #Windows #Powershell #AMSI
 
 * [AMSI.fail](https://amsi.fail/)
 
