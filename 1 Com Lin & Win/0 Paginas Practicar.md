@@ -7,6 +7,7 @@
 4. https://my.ine.com/login
 5. https://www.alteredsecurity.com/
 6. https://www.pentesteracademy.com/
+7. https://cyberwarfare.live/
 ```
 ## Practicar con maquinas vulnerables 
 
