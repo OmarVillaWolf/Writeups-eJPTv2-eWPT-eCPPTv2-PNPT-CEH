@@ -77,6 +77,7 @@ C:\Windows\Temp
 ```
 
 ## Compartir archivos en un SMB de Linux a Windows 
+
 ```bash
 ❯ impacket-smbserver smbFolder $(pwd) -smb2support # Creamos un servicio con SMB 
 
@@ -90,6 +91,7 @@ C:\Windows\Temp
 ## Windows cmd a Linux 
 
 ```bash 
+# En Windows
 # En el 'cmd' de la maquina Windows debemos colocar estos comandos
 
 1. ❯ scp -r File user@IP:dir/destino/            # Pasar una carpeta con muchos archivos a Linux
@@ -100,9 +102,14 @@ C:\Windows\Temp
 	# user = Usuario de la maquina Linux (Debemos conocer su passwd)
 	# dir = Directorio en donde se colocara el archivo 
 
-2. ❯ scp user@IP:/dir/destino/ .                 # Copiar un archivo que se encuentra en la maquina Linux a Windows        
+2. ❯ scp user@IP:/dir/destino/ .                 # Copiar un archivo que se encuentra en la maquina Linux a Windows    
+3. ❯ python3 -m http.server 80                   # Creamos un servidor 
 ```
 
+```bash 
+# En linux
+3. ❯ http://IP          # Ingresamos desde el navegador web, colocamos la IP que se esta compartiendo y descargamos el recurso  
+```
 ## Certutil 
 
 ```bash 
