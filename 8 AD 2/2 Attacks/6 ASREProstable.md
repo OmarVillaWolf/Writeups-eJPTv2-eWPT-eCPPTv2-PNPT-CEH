@@ -1,6 +1,6 @@
 # ASREProstable 
 
-Tags: #AD #ASREProstable #Rubeus #Impacket #Crackmapexec #HashCat 
+Tags: #AD #ASREProstable #Rubeus #Impacket #Crackmapexec #HashCat #Windows 
 
 El "KRB_AS_REP Roasting" es un ataque dirigido a cuentas en dominios de Active Directory (AD) que tienen habilitada la opción "No requiere preautenticación de Kerberos". Esta configuración permite a un atacante solicitar un ticket de autenticación (AS-REP) sin proporcionar una preautenticación válida. El atacante puede capturar este ticket y descifrarlo fuera de línea para intentar recuperar las contraseñas en texto claro de las cuentas afectadas. Este método explota configuraciones inseguras y puede ser mitigado desactivando dicha propiedad en las cuentas y aplicando contraseñas fuertes junto con políticas de monitoreo.
 
