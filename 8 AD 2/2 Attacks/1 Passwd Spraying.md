@@ -1,6 +1,6 @@
 # Password Spraying 
 
-Tags: #AD #PasswordSpraying 
+Tags: #AD #PasswordSpraying #Windows 
 
 * [Generate-custom-passwds](https://www.kali.org/tools/crunch/)
 *  [Kerbrute](https://github.com/ropnop/kerbrute)
