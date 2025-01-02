@@ -1,6 +1,6 @@
 # CrackMapExec 
 
-Tags: #AD #Crackmapexec #SMB
+Tags: #AD #Crackmapexec #SMB #Windows 
 
 CrackMapExec (CME) es una herramienta de post-explotación y auditoría de seguridad ampliamente reconocida en ciberseguridad. Desarrollada en Python, está diseñada para automatizar la evaluación de redes extensas de Windows, aunque también admite interacciones con otros sistemas operativos. Es especialmente valiosa en pruebas de penetración y actividades de Red Teaming, facilitando el análisis y la explotación de redes complejas.
 
