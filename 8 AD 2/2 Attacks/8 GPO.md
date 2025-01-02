@@ -1,6 +1,6 @@
 # Abuso de GPO
 
-Tags: #AD #GPO #SysVol 
+Tags: #AD #GPO #SysVol #Windows 
 
 El abuso de GPO (Objeto de Política de Grupo) consiste en las estrategias empleadas por los atacantes para manipular las Políticas de Grupo en un entorno de Active Directory (AD) con el objetivo de realizar actividades maliciosas.
 
