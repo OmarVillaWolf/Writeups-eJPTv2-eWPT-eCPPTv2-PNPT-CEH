@@ -1,6 +1,6 @@
 # WinPEAS 
 
-Tags: #WinPEAS #Window 
+Tags: #WinPEAS #Windows
 
 * [WinPeas](https://github.com/peass-ng/PEASS-ng/blob/master/winPEAS/winPEASexe/README.md)
 
