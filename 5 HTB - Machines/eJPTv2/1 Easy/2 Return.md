@@ -41,7 +41,7 @@ Nos ponemos a explorar la pagina web y encontramos que podiamos hacer que la pag
 ```
 
 ```bash
-❯ crackmapexec smb ❮IP❯ -u ❮‘user’❯ -p ❮‘password’❯      # Para el servicio 445/tcp smb abierto podemos utilizar el siguiente comando para saber si tenemos credenciales validas, por lo que si nos muestra un (+) quiere decir que si son validas, ademas de que nos da informacion de lo que hay en ese servico (nombre, Window 10.0, dominio, signing=true)(u=user, p=password) Este comando es usado para validar aunque tenga mas aplicaciones.
+❯ crackmapexec smb ❮IP❯ -u ❮‘user’❯ -p ❮‘password’❯      # Para el servicio 445/tcp smb abierto podemos utilizar el siguiente comando para saber si tenemos credenciales validas, por lo que si nos muestra un (+) quiere decir que si son validas, ademas de que nos da informacion de lo que hay en ese servico (nombre, Windows 10.0, dominio, signing=true)(u=user, p=password) Este comando es usado para validar aunque tenga mas aplicaciones.
 
 ❯ crackmapexec winrm ❮IP❯ -u ❮‘user’❯ -p ❮‘password’❯    # Despues de saber que las credenciales son validas con crackmapexec, podemos utilizar el puerto de winrm para saber si podemos entrar, pero antes debemos saber si el usuario esta en el grupo Remote management users, para saber si pertenece nos debe poner un (Pwn3d!) y asi podernos autenticar.
 
