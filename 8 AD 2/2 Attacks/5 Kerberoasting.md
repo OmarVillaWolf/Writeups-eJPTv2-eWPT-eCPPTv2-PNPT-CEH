@@ -1,6 +1,6 @@
 # Kerberoasting 
 
-Tags: #AD #Kerberoasting #Rubeus #Crackmapexec #Impacket #BloodHound #ADPeas #PowerView #HashCat 
+Tags: #AD #Kerberoasting #Rubeus #Crackmapexec #Impacket #BloodHound #ADPeas #PowerView #HashCat #Windows 
 
 El "Kerberoasting" es una técnica utilizada por atacantes para extraer tickets de servicio de Kerberos en Active Directory y descifrarlos fuera de línea, con el objetivo de obtener contraseñas en texto claro de cuentas de servicio. Este ataque aprovecha configuraciones débiles, como contraseñas poco seguras en cuentas de servicio, y representa una vulnerabilidad significativa en entornos de AD, dado que no genera alertas inmediatas al realizarse el descifrado fuera de la red.
 
