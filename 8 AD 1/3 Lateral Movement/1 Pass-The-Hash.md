@@ -1,6 +1,6 @@
 # Pass The Hash 
 
-Tags: #AD #Window #PassTheHash 
+Tags: #AD #Windows #PassTheHash 
 
 PtH es una técnica donde robas una credencial principalmente en los sistemas Windows. Un atacante puede obtener los hashes de las password de un usuario y usarlo para autenticarse como ese usuario, bypaseando la necesidad de la actual password en texto plano. Este ataque principalmente comienza cuando el atacante gana acceso no autorizado a un sistema comprometido donde los hashes de las password estan almacenadas. Una vez adquiridas, el atacante puede explotar la vulnerabilidad en el protocolo de autenticacion de Windows, como un NTLM o Kerberos, para pasar las credenciales hasheadas a otros sistemas dentro del dominio de AD.  Para 'bypassing' se necesita crackear la password, el atacante puede moverse lateralmente dentro de la red, escalar privilegios y potencialmente hacer actividades maliciosas.  
 
