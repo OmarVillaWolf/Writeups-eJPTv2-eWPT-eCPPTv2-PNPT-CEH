@@ -1,6 +1,6 @@
 # Golden Ticket 
 
-Tags: #AD #Window #Powershell 
+Tags: #AD #Windows #Powershell 
 
 Es un ataque de ciberseguridad malicioso donde un atacante gana acceso ilimitado a un dominio de una organización, accesando a la data almacenada en AD. Explota una vulnerabilidad en el protocolo de autenticacion de Kerberos, donde es usado para acceder al AD, permitiendo al atacante un 'bypass' normal. 
 
