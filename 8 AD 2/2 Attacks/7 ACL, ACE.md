@@ -1,6 +1,6 @@
 # Lista de control de acceso 
 
-Tags: #AD #ACL #PowerView #ACE
+Tags: #AD #ACL #PowerView #ACE #Windows 
 
 ## Análisis del ACE
 
