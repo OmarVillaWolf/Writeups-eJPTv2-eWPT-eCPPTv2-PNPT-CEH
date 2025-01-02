@@ -1,6 +1,6 @@
 # Fundamentos de vulnerabilidades en AD
 
-Tags: #AD 
+Tags: #AD #Windows 
 
 Comprender las vulnerabilidades y ataques en Active Directory (AD) implica analizar su diseño, funcionamiento y los protocolos que lo sustentan. AD es un servicio de directorio de red que facilita la administración y seguridad en entornos Windows, pero su arquitectura y dependencias también presentan oportunidades para los atacantes. Una evaluación técnica de sus componentes y configuraciones es clave para identificar sus puntos débiles y mitigar riesgos asociados.
 
