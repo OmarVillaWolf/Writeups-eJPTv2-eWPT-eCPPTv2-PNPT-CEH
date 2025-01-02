@@ -1,6 +1,6 @@
 # Kerberoasting 
 
-Tags: #AD #Window #Powershell #Kerberos 
+Tags: #AD #Windows #Powershell #Kerberos 
 
 Kerberoasting es una tecnica de post explotación que permite obtener un hash de una password de una cuenta de AD que tiene un 'Service Principal Name' (SPN). Un usuario autenticado del dominio solicita a Kerberos un ticket para un SPN. El ticket es encriptado con un hash de servicio afiliado a la password del usuario con el SPN. El atacante después offline craquea la password del hash con técnicas de fuerza bruta. Una vez obtenida la credencial en texto plano, el atacante puede ingresar al sistema, dispositivos o redes de la cuenta comprometida. 
 
