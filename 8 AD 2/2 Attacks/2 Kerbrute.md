@@ -1,6 +1,6 @@
 # Kerbrute 
 
-Tags: #AD #Kerbrute 
+Tags: #AD #Kerbrute #Windows 
 
 Kerbrute es una herramienta de seguridad diseñada para realizar ataques de fuerza bruta y enumeración sobre el protocolo Kerberos en entornos de Active Directory (AD). Su objetivo es apoyar evaluaciones de seguridad al identificar cuentas de usuario válidas y detectar contraseñas potencialmente débiles, contribuyendo al análisis de vulnerabilidades en redes AD.
 
