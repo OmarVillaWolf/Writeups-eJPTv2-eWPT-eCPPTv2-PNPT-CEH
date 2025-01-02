@@ -1,6 +1,6 @@
 ## Summary
 
-Tags: #Window #FTP #SSH #ID_RSA #Docker #Contenedor #HTTPS #PostgreSQL #ReverShell #Nmap #Curl 
+Tags: #Windows #FTP #SSH #ID_RSA #Docker #Contenedor #HTTPS #PostgreSQL #ReverShell #Nmap #Curl 
 
 - IP -> 10.10.10.236
 - Ports -> TCP (21, 22, 443, 445), UDP (idk)
