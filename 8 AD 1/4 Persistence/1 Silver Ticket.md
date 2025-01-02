@@ -1,6 +1,6 @@
 # Silver Ticket 
 
-Tags: #AD #Window #Powershell 
+Tags: #AD #Windows #Powershell 
 
 Envuelve la creación de un TGS valido para un servicio especifico donde el hash de la contraseña es obtenido. Esto permite un acceso no autorizado al servicio forjando por TGS modificado. Los 'Silver Tickets' tienen un alcance mas pequeño comparado a los 'Golden Tickets', como solo proveer acceso a un recurso especifico en el sistema host y recurso. Los atacantes pueden forjar un 'Silver Ticket' para crear y usar TGS sin interactuar con los KDC.
 
