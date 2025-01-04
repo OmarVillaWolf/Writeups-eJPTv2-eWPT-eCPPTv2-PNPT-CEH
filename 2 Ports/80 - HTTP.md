@@ -54,50 +54,55 @@ Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTP3 #Metodos
 10. TRACE
 ```
 
-### Response Headers
+## Response Headers
 
-1. **Código de estado**: 
-2. **Server:** Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
-3. **Set-Cookie:** Usa la cookie que ya teníamos anteriormente y la vuelve a reutilizar para subsecuentes requests.
-4. **Content-Type**: Regresa el contenido del tipo de media de la respuesta (text/html, application/Json)
-5. **Content-Length**: El tamaño del cuerpo de la respuesta en bytes
-6. **Cache-Control:** Directivas del comportamiento 
+```bash 
+1. Código de estado: 
+2. Server: Sirve para saber la versión del servidor y si es vulnerable lo podremos explotar.
+3. Set-Cookie: Usa la cookie que ya teníamos anteriormente y la vuelve a reutilizar para subsecuentes requests.
+4. Content-Type: Regresa el contenido del tipo de media de la respuesta (text/html, application/Json)
+5. Content-Length: El tamaño del cuerpo de la respuesta en bytes
+6. Cache-Control: Directivas del comportamiento 
+```
 
 ## Componentes de manejo de sesión
 
-1. **Session Identifier:** Un token único (a menudo un ID sesión) es asignado a cada sesión de usuario. Este token es usado para asociar subsecuentes solicitudes para el usuario con sus datos de sesión.
-2. **Session Data:** Información relacionada a la sesión de usuario, como el estatus de autenticacion, preferencias de usuario y data temporal, esta almacenada en el servidor. 
-3. **Session Cookies:** Son pequeñas piezas de data almacenadas en el buscador del usuario que contiene el ID de sesión.  Se utilizan para mantener el estado entre el cliente y servidor. 
+```bash 
+1. Session Identifier: Un token único (a menudo un ID sesión) es asignado a cada sesión de usuario. Este token es usado para asociar subsecuentes solicitudes para el usuario con sus datos de sesión.
+2. *ession Data: Información relacionada a la sesión de usuario, como el estatus de autenticacion, preferencias de usuario y data temporal, esta almacenada en el servidor. 
+3. Session Cookies: Son pequeñas piezas de data almacenadas en el buscador del usuario que contiene el ID de sesión.  Se utilizan para mantener el estado entre el cliente y servidor. 
+```
 
 ## Códigos de estado 
 
-* 200 ‘OK’: La solicitud ha tenido éxito.
-* 204 ’No content’: La petición se ha completado con éxito, pero su respuesta no tiene
+```bash 
+- 200 ‘OK’: La solicitud ha tenido éxito.
+- 204 ’No content’: La petición se ha completado con éxito, pero su respuesta no tiene
 ningún contenido, aunque los encabezados pueden ser útiles.
-* 301 ‘Moved Permanently’: Significa que la URI del recurso solicitado ha sido cambiado.
+- 301 ‘Moved Permanently’: Significa que la URI del recurso solicitado ha sido cambiado.
 (Redirect)
-* 302 ‘Found’: Significa que el recurso de la URI solicitada ha sido cambiado temporalmente.
-* 304 ‘Not modified’: Esta es usada para propósitos de caché. Le indica al cliente que la
+- 302 ‘Found’: Significa que el recurso de la URI solicitada ha sido cambiado temporalmente.
+- 304 ‘Not modified’: Esta es usada para propósitos de caché. Le indica al cliente que la
 respuesta no ha sido modificada.
-* 400 ‘Bad request’: Significa que el servidor no pudo interpretar la solicitud dada una
+- 400 ‘Bad request’: Significa que el servidor no pudo interpretar la solicitud dada una
 sintaxis inválida.
-* 401 ‘Unauthorized’: Es necesario autenticar para obtener la respuesta solicitada.
-* 403 ‘Forbidden’: El cliente no posee los permisos necesarios para cierto contenido, por lo
+- 401 ‘Unauthorized’: Es necesario autenticar para obtener la respuesta solicitada.
+- 403 ‘Forbidden’: El cliente no posee los permisos necesarios para cierto contenido, por lo
 que el servidor rechaza la petición.
-* 404 Not Found: El servidor no pudo encontrar el contenido solicitado.
-* 405 ‘Method not allowed’: El método solicitado es conocido por el servidor pero ha sido
+- 404 Not Found: El servidor no pudo encontrar el contenido solicitado.
+- 405 ‘Method not allowed’: El método solicitado es conocido por el servidor pero ha sido
 deshabilitado y no puede ser utilizado (Cambiar de GET a POST)
-* 500 ‘Internal server error’: El servidor ha encontrado una situación que no sabe cómo
+- 500 ‘Internal server error’: El servidor ha encontrado una situación que no sabe cómo
 manejarla.
-* 501 ‘Not implement’: El método solicitado no está soportado por el servidor y no puede ser
+- 501 ‘Not implement’: El método solicitado no está soportado por el servidor y no puede ser
 manejado.
-* 503 ‘Service unavailable’ : El servidor no está listo para manejar la petición, problemas
+- 503 ‘Service unavailable’ : El servidor no está listo para manejar la petición, problemas
 comunes es la caída por mantenimiento o está sobrecargado.
-* 504 ‘Gateway timeout’ : Esta respuesta de error es dada cuando el servidor está actuando
+- 504 ‘Gateway timeout’ : Esta respuesta de error es dada cuando el servidor está actuando
 como una puerta de enlace y no puede obtener una respuesta a tiempo.
-* 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
+- 505 ‘HTTP version not supported’: La versión de HTTP usada en la petición no está
 soportada por el servidor.
-
+```
 
 ## Buscar en la Web
 
@@ -178,64 +183,78 @@ En Windows:  iss apppool\defaultapppool, User, NT Authority\System
 ```python 
 
 /var/www/html/
-	config.php                  # Archivo de configuracion de la aplicacion web y puede contener informacion valiosa
-	initialize.php              # Archivo que se crea con las instalacion de la web (Similar a wp-config) ya que puede contener credenciales de acceso 'user:passwd' para la DB
+	config.php                  # Archivo de configuracion de la aplicación web y puede contener informacion valiosa
+	initialize.php              # Archivo que se crea con las instalación de la web (Similar a wp-config) ya que puede contener credenciales de acceso 'user:passwd' para la DB
 ```
 
 ## Comandos
 
-```bash
-❯ http ❮IP❯                                       # Podemos ver las cabeceras 
+```bash 
+❯ nc ❮IP❯ 80                         # Enumerar la página web 
+
+	❯ OPTIONS http://IP HTTP/1.0    # Mirar la página web en código HTML y sus opciones permitidas 'GET,POST,etc...'
+	❯ host:IP
 ```
 
 ```bash 
-❯ browsh --startup-url ❮IP❯                       # Enumeracion del buscador de un Apache en fomra de GUI
-```
+❯ cadaver http://IP/dir/
 
-```bash 
-❯ lynx http://❮IP❯                                  # Enumeracion del buscador en fomra de GUI
+	❯ ls                           # Listar el contenido del directorio 
+	❯ put cmd.php                  # Subir un archivo al directorio 
 ```
 
 ```bash
-❯ whatweb ❮http://❮IP❯                  # Nos dara una breve descripcion del gestor de contenidos del puerto 80
+❯ http ❮IP❯                         # Ver las cabeceras 
+```
+
+```bash 
+❯ browsh --startup-url ❮IP❯         # Enumeración del buscador de un Apache en forma de GUI
+```
+
+```bash 
+❯ lynx http://❮IP❯                  # Enumeración del buscador en fomra de GUI
+```
+
+```bash
+❯ whatweb ❮http://❮IP❯              # Obtener una breve descripción del gestor de contenidos del puerto 80
 
 	# Mirar la jQuery
 	# Servidor Web
 ```
 
 ```bash
-❯ whatweb ❮http://❮IP❯:❮PORT❯           # Nos dara una breve descripcion del gestor de contenidos por un puerto especifico
+❯ whatweb ❮http://❮IP❯:❮PORT❯       # Obtener una breve descripción del gestor de contenidos por un puerto especifico
 ```
 
 ```bash
 ❯ whatweb ❮http://❮IP❯ -v
 
-	# v = Miramos las cabeceras de la pagina web, las cuales aveces nos revelan cosas
+	# v = Mirar las cabeceras de la pagina web, las cuales aveces nos revelan cosas
 ```
 
 ```bash 
-❯ wig ❮http://❮IP❯                     # Web Information Gathered, nos reporta las versiones de los servicios en la web
+❯ wig ❮http://❮IP❯                  # Web Information Gathered, reporta las versiones de los servicios en la web
 ```
 
 ```bash
-❯ curl ❮IP❯ | bash                     # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
+❯ curl ❮IP❯ | bash                  # Obtener un index.html del servidor y con 'bash' se interpretará la data 
 
 ❯ curl ❮IP❯ | more       
 
-❯ curl http://IP/cgi-bin/ | more       # Miramos las cabeceras de ese directorio
+❯ curl http://IP/cgi-bin/ | more    # Mirar las cabeceras de ese directorio
 ```
 
 ```bash
-❯ curl http://❮IP❯ -v                    # Miramos los headers de la pagina web 'Request '
+❯ curl http://❮IP❯ -v                # Mirar los headers de la pagina web 'Request '
 
-❯ curl -s -X GET http://❮IP❯ -I          # Miramos las cabeceras de respuesta de la pagina web 
+❯ curl -s -X GET http://❮IP❯ -I      # Mirar las cabeceras de respuesta de la pagina web 
 
 	# I = i mayuscula
 	# s = silence
 ```
 
 ```bash 
-❯ wget "http://❮IP❯/index"               # Obtenemos el archivo index 'descargamos'
+❯ wget "http://❮IP❯/index"           # Descargar el archivo index 
 ```
 
 ## HTTP3
