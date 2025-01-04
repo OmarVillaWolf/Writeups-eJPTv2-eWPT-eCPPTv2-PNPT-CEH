@@ -1,6 +1,6 @@
 # SSH 
 
-Tags: #SSH #Puerto #Comandos 
+Tags: #SSH #Puerto #Pivoting #Proxychains 
 
 SSH es un protocolo de administración remota que permite a los usuarios **controlar** y **modificar** sus servidores remotos a través de Internet mediante un mecanismo de **autenticación seguro**. Como una alternativa más segura al protocolo **Telnet**, que transmite información sin cifrar, SSH utiliza **técnicas criptográficas** para garantizar que todas las comunicaciones hacia y desde el servidor remoto estén cifradas.
 
@@ -11,32 +11,55 @@ SSH es un protocolo de administración remota que permite a los usuarios **cont
 2. https://launchpad.net/ubuntu
 ```
 
-## Comandos 
+## Pivotear con SSH
+
+```bash 
+❯ ssh -D 8090 user@IP               # Conectarse por SSH creando un tunel dinámico en la máquina local. Por lo que cualquier conexión de red al puerto 8980 en tu computadora se redirigirá a través de la sesión SSH al servidor remoto
+
+❯ netstat -ant | grep 8090          # Verificar la creación del túnel de manera local (modo: LISTENING)
+```
+
+```bash 
+❯ nano /etc/proxychains.conf        # Modificar el archivo 'proxychains' y agregar lo siguiente:
+
+	socks4 127.0.0.1 8090          # Comentar (# proxy_dns) y modificar el proxy en 'ProxyList'
+```
+
+```bash 
+# Ejecutar comandos a traves de 'Proxychains'
+❯ proxychains nc -nv IP 445        # Ejecutar netcat en el puerto 445
+	# n = No aplicar DNS
+	# v = Verbose 
+
+
+❯ proxychains rdesktop IP          # Conectarse por RDP utilizando un usuario y passwd validos. Este comando abrirá una ventana 'Windows' para hacer el login con las credenciales 
+```
+
+## SSH
 
 ```bash
-❯ ssh ❮User❯@❮IP❯                                  # Para conectarnos por ssh en el puerto default 22
+❯ ssh ❮User❯@❮IP❯                              # Conectarse por SSH
 ```
 
 ```bash
-❯ ssh ❮User❯@❮IP❯ -p 2222                          # Para conectarnos por ssh
-
-	# p = En un puerto especifico
+❯ ssh ❮User❯@❮IP❯ -p 2222                      # Conectarse por SSH en un puerto especifico
 ```
 
 ```bash
-❯ sshpass -p <'PASSWORD'> ssh <USER>@<IP>           # Conectarnos por ssh colocando de una vez la passwd  
+❯ sshpass -p <'PASSWORD'> ssh <USER>@<IP>      # Conectarse por SSH colocando la passwd en texto claro 
 ```
 
 ```bash
-❯ ssh -i id_rsa <user>@<IP>                         # Nos conectamos por ssh teniendo un id_rsa con privilegio 600
+❯ ssh -i id_rsa <user>@<IP>         # Conectarse por SSH con un 'id_rsa' y privilegio '600'
 ```
 
 ```bash
-❯ ssh <user>@localhost                             # Cuando tenemos un authorized_key podemos entrar por SSH sin proporcionar passwd en forma local 
+❯ ssh <user>@localhost              # Conectar por SSH localmente sin proporcionar passwd con la 'authorized_key' 
 ```
 
-Cuando estamos en una **restricted bash** (rbash) podemos meter comandos en el ssh, esto si la restricted bash esta mal configurada:
 ```bash
+# Cuando estamos en una 'restricted bash' (rbash) se pueden ejecutar comandos en el SSH, esto si la 'restricted bash' esta mal configurada
+
 ❯ ssh <User>@<IP> <Command>                        # Podemos ejecuta un comando, y no nos cargara la restricted bash, y en este caso podemos hacer que nos de una bash. 
 	bash                                          # Colocamos bash como comando, podremos interactuar aunque no nos de una pseudo-consola. Pero podemos hacer un tratamiento de la consola Linux
 ```
