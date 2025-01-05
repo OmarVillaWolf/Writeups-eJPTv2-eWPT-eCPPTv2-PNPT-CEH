@@ -20,6 +20,18 @@ El "KRB_AS_REP Roasting" es un ataque dirigido a cuentas en dominios de Active D
 3. Ataque Offline: A diferencia de un ataque de fuerza bruta online, el atacante puede ahora intentar descifrar el TGT offline, utilizando herramientas de cracking de contraseñas para adivinar la contraseña sin alertar al sistema o bloquear la cuenta de usuario.
 ```
 
+## Sincronizar el reloj 
+
+```bash 
+Nota: Antes de iniciar al ataque debemos de sincronizar el reloj de la maquina de atacante con el AD
+
+❯ ntpdate IP     # Sincronizar el reloj 
+
+	# IP = Dirección IP del DC
+
+❯ date -s "2025-01-04 15:30:00"   # Restablecer la fecha y hora
+```
+
 ## Explotar con Impacket
 
 ```bash 
