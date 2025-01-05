@@ -1,6 +1,6 @@
-# Creación de usuarios con 'Net'
+# Creación de usuarios local con 'Net'
 
-Tags: #Persistencia #Windows 
+Tags: #Persistencia #Windows #Local
 
 El comando `net` en Windows se utiliza para crear usuarios y asignarles privilegios elevados de manera eficiente desde la línea de comandos, siendo especialmente útil en tareas administrativas, automatización de procesos y pruebas de seguridad. Permite crear cuentas nuevas y agregarlas al grupo de administradores para otorgarles permisos elevados, facilitando configuraciones rápidas y la ejecución de scripts en entornos de gestión o auditorías.
 
