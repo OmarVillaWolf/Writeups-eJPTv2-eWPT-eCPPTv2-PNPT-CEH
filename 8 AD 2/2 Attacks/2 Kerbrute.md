@@ -16,6 +16,20 @@ Kerbrute realiza su funcionalidad principalmente a través de dos métodos: Ataq
     - Kerberos, en algunos casos, responderá de manera diferente a una solicitud de autenticación si el nombre de usuario es válido, incluso si la contraseña es incorrecta. Esto puede permitir a Kerbrute identificar cuentas de usuario válidas sin conocer la contraseña.
 ```
 
+## Sincronizar el reloj 
+
+```bash 
+Nota: Antes de iniciar al ataque debemos de sincronizar el reloj de la maquina de atacante con el AD
+
+❯ ntpdate IP     # Sincronizar el reloj 
+
+	# IP = Dirección IP del DC
+
+❯ date -s "2025-01-04 15:30:00"   # Restablecer la fecha y hora
+```
+
+## Kerbrute
+
 La herramienta Kerbrute puede generar intentos de autenticación fallidos que podrían ser detectados y provocar el bloqueo de cuentas, lo que puede interrumpir operaciones en redes de producción. Por este motivo, su uso debe limitarse a entornos controlados y autorizados, garantizando que no cause impactos negativos en sistemas en funcionamiento.
 
 * [Kerbrute](https://github.com/ropnop/kerbrute)
