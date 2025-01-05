@@ -43,10 +43,16 @@ Nota: Podemos usar ADPeas para hacer la recolección ya que automaticamente ejec
 
 * [BloodHound](https://github.com/SpecterOps/BloodHound-Legacy/releases)
 * [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries)
+* [Neo4j-installation](https://neo4j.com/docs/operations-manual/current/installation/linux/debian/)
 
 ```bash 
-❯ neo4j console                   # Iniciamos la base de datos
-❯ ./BloodHound --no-sandbox       # Despues de descargar el binario lo ejecutamos 
+❯ neo4j console &> /dev/null & disown      # Iniciamos el servicio en el puerto local '7474' y lo independizamos
+
+Nota: Si es la primera vez que lo usamos, abrimos la web 'localhost:7474' y agregamos las credenciales 'neo4j:neo4j', despues, agregamos una passwd nueva y asi podremos conectarnos al 'Bloodhound'
+
+
+❯ ./BloodHound --no-sandbox             # Ejecutar como usuario 'root' 
+❯ bloodhound &> /dev/null & disown      # Ejecutar 'Bloodhound' e independizarlo
 ```
 
 ## Tipos de ActiveDirectoryRights
