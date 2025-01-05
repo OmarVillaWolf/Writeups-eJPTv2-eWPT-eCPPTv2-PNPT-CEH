@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0912ab16c520cde8",
+            "id": "99d4bcb10afd2b0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Ethical Hacking/2 Comandos/1 Footprinting and Reconnaissance.md",
+                "file": "0 Ethical Hacking/1 Footprinting and Reconnaissance.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -23,7 +23,7 @@
             }
           },
           {
-            "id": "99d4bcb10afd2b0f",
+            "id": "9ba9cb2dfd22a59f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -38,52 +38,7 @@
             }
           },
           {
-            "id": "9ba9cb2dfd22a59f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1 Linux Commands"
-            }
-          },
-          {
-            "id": "0034cc7798997946",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2 Windows Commands"
-            }
-          },
-          {
-            "id": "c53b5f07f2fe1874",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/22 - SSH.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "22 - SSH"
-            }
-          },
-          {
-            "id": "bf07d8d7eae09c12",
+            "id": "a74041ea711755ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -96,9 +51,24 @@
               "icon": "lucide-file",
               "title": "445 - SMB"
             }
+          },
+          {
+            "id": "1a3afa5ba43cc90a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1 Linux Commands"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -129,7 +99,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "blood",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,7 +184,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -235,34 +205,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "99d4bcb10afd2b0f",
+  "active": "1a3afa5ba43cc90a",
   "lastOpenFiles": [
-    "8 AD 2/3 Mov Lateral/3 Pass-The-Hash.md",
-    "8 AD 2/3 Mov Lateral/2 Impersonation.md",
-    "8 AD 2/4 Persistencia, Post-Explotation/0 Fundamentos Persistencia.md",
+    "8 AD 1/2 Priv Escalation/1 AS-REP.md",
+    "8 AD 1/0 Enumeration/2 Passwd Spraying.md",
     "2 Ports/Ports AD/445 - SMB.md",
-    "2 Ports/5357, 5985-6 - WINRM.md",
-    "2 Ports/Ports AD/3389, 3333 - RDP.md",
+    "8 AD 1/0 Enumeration/3 BloodHound.md",
+    "8 AD 2/1 Enumeration/4 BloodHount.md",
+    "8 AD 2/2 Attacks/5 Kerberoasting.md",
+    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/0 Tecnicas.md",
+    "8 AD 1/0 Enumeration/0 Metodología.md",
+    "8 AD 2/1 Enumeration/0 Comandos AD.md",
     "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
-    "8 AD 2/3 Mov Lateral/1 Fundamentos Mov Lateral.md",
-    "8 AD 2/2 Attacks/8 Constrained Delegation.md",
-    "2 Ports/22 - SSH.md",
+    "2 Ports/Ports AD/88 Kerberos.md",
+    "8 AD 2/2 Attacks/2 Kerbrute.md",
+    "8 AD 2/2 Attacks/6 ASREProstable.md",
+    "2 Ports/Ports AD/135 - RPC.md",
+    "8 AD 2/3 Mov Lateral/3 Pass-The-Hash.md",
+    "8 AD 1/1 Attacks/1 LLMNR Poisoning.md",
+    "8 AD 1/1 Attacks/2 SMB Relay.md",
+    "8 AD 1/1 Attacks/3 Gaining Shell Access.md",
+    "2 Ports/Ports AD/389 - LDAP.md",
+    "2 Ports/Ports AD/3389, 3333 - RDP.md",
+    "8 AD 2/4 Persistencia, Post-Explotation/0 Fundamentos Persistencia.md",
     "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "2 Ports/80 - HTTP.md",
-    "0 Ethical Hacking/2 Comandos/1 Footprinting and Reconnaissance.md",
-    "8 AD 2/2 Attacks/4 Crackmapexec.md",
-    "8 AD 2/2 Attacks/7 Unconstrained Delegation.md",
-    "8 AD 2/2 Attacks/12 ACL, ACE.md",
-    "8 AD 2/2 Attacks/11 RBCD.md",
-    "8 AD 2/2 Attacks/10 LAPS Reader.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/4 CronServices.md",
-    "8 AD 2/2 Attacks/9 DNSAdmins.md",
-    "8 AD 2/2 Attacks/0 Fundamentos.md",
-    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 WinPEAS.md",
-    "5 HTB - Machines/eWPTv2/1 Easy/4 Toolbox.md",
-    "5 HTB - Machines/eJPTv2/1 Easy/2 Return.md",
+    "0 Ethical Hacking/1 Footprinting and Reconnaissance.md",
+    "0 Ethical Hacking/1 Tools/3 Social Engineering.md",
+    "0 Ethical Hacking/1 Tools/2 Sniffing.md",
+    "0 Ethical Hacking/0 OSINT & Passive Recon/2 Image.md",
     "8 AD 2/4 Persistencia, Post-Explotation",
     "8 AD 2/3 Mov Lateral",
     "8 AD 2/2 Attacks/7 ACL",
