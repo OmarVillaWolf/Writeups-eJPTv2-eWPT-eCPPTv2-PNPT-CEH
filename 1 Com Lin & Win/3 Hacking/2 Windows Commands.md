@@ -37,11 +37,11 @@ Tags: #Windows #Comandos #Powershell
 ```
 
 ```bash
-❯ net user                             # Miramos todos los usuarios existentes y sus grupos
-❯ net user <User>                      # Miramos el grupo de un usuario especifico como 'administrator'
-❯ net localgroup administrators        # Miramos los miembros del grupo administrador
-❯ net user admin password123           # Para cambiar la passwd al usuario admin siendo NT Authority\System 
-net user omar P4ssw0rd /add            # Crear un usuario siendo NT Authority\System
+❯ net user                             # Miramos todos los usuarios existentes y sus grupos de forma local
+❯ net user <User>                      # Miramos el grupo de un usuario especifico como 'administrator' de forma local
+❯ net localgroup administrators        # Miramos los miembros del grupo administrador de forma local
+❯ net user admin password123           # Para cambiar la passwd al usuario admin siendo NT Authority\System de forma local
+net user omar P4ssw0rd /add            # Crear un usuario siendo NT Authority\System de forma local
 ```
 
 ```bash 
