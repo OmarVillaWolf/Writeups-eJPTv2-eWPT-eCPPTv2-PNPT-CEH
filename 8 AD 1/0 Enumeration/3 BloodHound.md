@@ -1,8 +1,10 @@
 # BloodHound 
 
-Tags: #AD #Powershell #Windows #Enumeracion 
+Tags: #AD #Powershell #Windows #Enumeracion #BloodHound 
 
 Bloodhound es una app en JavaScript la cual puede identificar fácilmente ataques altamente complejo que de otro modo seria imposible identificar ademas puede identificar grupos con permisos excesivos. Los defensores pueden usar Bloohound para identificar y eliminar esas mismas rutas de ataque. 
+
+## SharpHound
 
 ```bash 
 # Descargamos la utilidad en nuestra maquina de atacante para despues pasar el archivo a la maquina victima que esta utilizando PowerShell
@@ -23,26 +25,28 @@ Bloodhound es una app en JavaScript la cual puede identificar fácilmente ataque
 ❯ Invoke-Bloodhound -CollectionMethod All    # Utilizamnos la funcion 'Invoke' para crear el archivo  '2024_bloodhound.zip' el cual usaremos en el GUI de la herramienta de Boolhound
 ```
 
-## BloodHound en Kali 
+## Subir Data por Python a BloodHound
 
-```bash 
-# Abrirmos la herramienta de Boodhound y cargamos el archivo '2024_bloodhound.zip'
-
-❯ apt install neo4j bloodhound          # Instalar la herramienta en Kali 
-❯ update-alternatives --config java     # Ver las versiones de Java y cual se esta utilizando (Se debe usar la version 11)
-
-❯ neo4j console &> /dev/null & disown   # Iniciamos el servicio en el puerto local 7474 y lo independizamos
-	# Nota: Si es la primera vez que lo usamos, abrimos la web 'localhost:7474' y agregamos las credenciales 'neo4j:neo4j', despues, agregamos una passwd nueva y asi podremos conectarnos al 'Bloodhound'
-
-❯ bloodhound &> /dev/null & disown      # Abrimos el 'Bloodhound' para usar el GUI y cargar el archivo .ZIP
-```
-
-```bash 
-# Otra forma de subir data a la plataforma de Bloodhound
-
+```bash
 ❯ bloodhound-python -d Domain.local -u User -p Password -ns IP_DC -c all   # Ejecutamos para recopilar la data y asi poder subir el archivo a la plataforma de Bloodhound
 
-Nota: Importamos todos los archivos que fueron generados en formato Json
+Nota: Importamos todos los archivos que fueron generados en formato 'Json'
+```
+
+## BloodHound 
+
+* [BloodHound](https://github.com/SpecterOps/BloodHound-Legacy/releases)
+* [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries)
+* [Neo4j-installation](https://neo4j.com/docs/operations-manual/current/installation/linux/debian/)
+
+```bash 
+❯ neo4j console &> /dev/null & disown      # Iniciamos el servicio en el puerto local '7474' y lo independizamos
+
+Nota: Si es la primera vez que lo usamos, abrimos la web 'localhost:7474' y agregamos las credenciales 'neo4j:neo4j', despues, agregamos una passwd nueva y asi podremos conectarnos al 'Bloodhound'
+
+
+❯ ./BloodHound --no-sandbox             # Ejecutar como usuario 'root' 
+❯ bloodhound &> /dev/null & disown      # Ejecutar 'Bloodhound' e independizarlo
 ```
 
 ## Ataques 'DCSync'
