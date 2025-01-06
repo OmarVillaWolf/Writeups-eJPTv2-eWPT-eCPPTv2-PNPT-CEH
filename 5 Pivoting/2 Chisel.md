@@ -8,7 +8,7 @@ Permite redirigir todo el tráfico entrante de un puerto local hacia un puerto r
 * **Cliente -> Kali**
 
 ```bash
-1. Descargar Chisel desde los 'Releases'
+1. Descargar el binario 'Chisel' desde los 'Releases'
 ❯ https://github.com/jpillora/chisel
 
 
