@@ -11,30 +11,6 @@ SSH es un protocolo de administración remota que permite a los usuarios **cont
 2. https://launchpad.net/ubuntu
 ```
 
-## Pivotear con SSH
-
-```bash 
-❯ ssh -D 8090 user@IP               # Conectarse por SSH creando un tunel dinámico en la máquina local. Por lo que cualquier conexión de red al puerto 8980 en tu computadora se redirigirá a través de la sesión SSH al servidor remoto
-
-❯ netstat -ant | grep 8090          # Verificar la creación del túnel de manera local (modo: LISTENING)
-```
-
-```bash 
-❯ nano /etc/proxychains.conf        # Modificar el archivo 'proxychains' y agregar lo siguiente:
-
-	socks4 127.0.0.1 8090          # Comentar (# proxy_dns) y modificar el proxy en 'ProxyList'
-```
-
-```bash 
-# Ejecutar comandos a traves de 'Proxychains'
-❯ proxychains nc -nv IP 445        # Ejecutar netcat en el puerto 445
-	# n = No aplicar DNS
-	# v = Verbose 
-
-
-❯ proxychains rdesktop IP          # Conectarse por RDP utilizando un usuario y passwd validos. Este comando abrirá una ventana 'Windows' para hacer el login con las credenciales 
-```
-
 ## SSH
 
 ```bash
