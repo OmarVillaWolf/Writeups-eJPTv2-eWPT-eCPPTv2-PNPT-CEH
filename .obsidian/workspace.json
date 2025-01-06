@@ -37,8 +37,7 @@
               "title": "2 Chisel"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -133,10 +132,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 Pivoting/2 Chisel.md"
+                "file": "0 Ethical Hacking/1 Footprinting and Reconnaissance.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 2 Chisel"
+              "title": "Outline of 1 Footprinting and Reconnaissance"
             }
           },
           {
@@ -175,10 +174,10 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "87ae9775490dcaaf",
+  "active": "da7c3023649fbc0b",
   "lastOpenFiles": [
-    "2 Ports/22 - SSH.md",
     "5 Pivoting/2 Chisel.md",
+    "2 Ports/22 - SSH.md",
     "5 Pivoting/1 Pivoting.md",
     "5 Pivoting/3 Metasploit.md",
     "4 PrivEsc Lin & Win/2 Linux/2 Escalation/1.md",
