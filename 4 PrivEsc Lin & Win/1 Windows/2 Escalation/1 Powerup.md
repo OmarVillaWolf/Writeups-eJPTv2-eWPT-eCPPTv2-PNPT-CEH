@@ -9,16 +9,19 @@ PowerUp.ps1 es un script desarrollado en PowerShell que pertenece a la suite Pow
 ```powershell 
 ❯ Import-Module .\PowerUp.ps1       # Importamos el modulo 
 ❯ Invoke-AllChecks                  # Ejecutamos el submodulo y comenzamos con el escaneo 
+
+❯ Get-ModifiableService             # lista los servicios los cuales pueden ser configurados 
+❯ Get-ServiceUnquoted               # Unquoted Service Path 
 ```
 
 
 ```bash
-# Entre las características y capacidades de `PowerUp.ps1`, se incluyen:
+Entre las características y capacidades de 'PowerUp.ps1', se incluyen:
 
 - Enumeración de servicios con rutas no citadas: Identifica servicios donde la ruta del ejecutable no está entre comillas y contiene espacios, lo que podría permitir la inserción de ejecutables maliciosos en la ruta.
 - Permisos de ejecutables de servicios: Comprueba si el usuario actual tiene permisos para modificar archivos de servicios de Windows que luego podrían ser ejecutados con privilegios elevados.
 - Permisos de servicio: Evalúa si el usuario actual tiene la capacidad de modificar servicios de Windows o su configuración.
-- Búsqueda en la variable de entorno '%PATH%': Busca ubicaciones en la variable de entorno `%PATH%` que podrían ser usadas para la inyección de DLLs maliciosas.
+- Búsqueda en la variable de entorno '%PATH%': Busca ubicaciones en la variable de entorno '%PATH%' que podrían ser usadas para la inyección de DLLs maliciosas.
 - Clave de registro 'AlwaysInstallElevated': Comprueba si esta clave de registro está configurada para permitir la instalación de programas con privilegios elevados.
 - Credenciales de autologon: Busca credenciales almacenadas en el registro que permiten el inicio de sesión automático.
 - Configuraciones de Autorun y archivos modificables: Identifica configuraciones de autorun y archivos del sistema que son modificables y podrían ser abusados para ejecutar código al reiniciar el sistema o al iniciar sesión.
