@@ -59,12 +59,13 @@ DNS (Domain Name System) es crucial para el funcionamiento de Active Directory y
 * Haremos un ataque de transferencia de Zona Completa para encontrar subdominios de la Zona.
 
 ```bash
-❯ dig ns @<IP> <Domain>         # Para listar los name-servers
-❯ dig mx @<IP> <Domain>         # Para listar los servidores de correo
+❯ dig @<IP> <Domain> 
+❯ dig mx @<IP> <Domain>         # Enumerar los servidores de correo
+❯ dig ns @<IP> <Domain>         # Enumerar los name-servers
 ```
 
 ```bash
-❯ dig axfr @<IP> <Domain>       # Para hacer el ataque de transferencia de Zona
+❯ dig axfr @<IP> <Domain>       # Ejecutar el ataque de transferencia de Zona
 
 	# Dominio = Debemos de conocer el dominio anteriormente, ya que si no no funcionaria
 ```
