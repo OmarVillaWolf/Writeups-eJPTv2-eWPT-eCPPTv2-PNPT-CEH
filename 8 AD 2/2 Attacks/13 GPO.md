@@ -47,6 +47,12 @@ SysVol (abreviatura de System Volume) es un conjunto de carpetas y archivos que 
 ❯ dir \\domain1.corp\sysvol\      # Recurso compartido donde se puede encontrar directorios 'scripts, politicas' con passwords
 ```
 
+```bash 
+# Si se obtiene el archivo 'groups.XML' dentro de Sysvol en la siguiente ruta '/MACHINES/Preferences/Groups/'
+ 
+❯ gpp-decrypt 'password'    # Desencriptar la password y obtenerla en texto plano
+```
+
 ## Análisis Técnico de la ACE
 
 ```bash 
