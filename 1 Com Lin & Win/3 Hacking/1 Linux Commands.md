@@ -1,6 +1,6 @@
 # Linux Commands
 
-Tags: #Linux #Comandos #Netcat #Montura #Hash 
+Tags: #Linux #Comandos
 
 ## Banner Grabbing 
 
