@@ -1,10 +1,8 @@
 # Windows Commands
 
-Tags: #Windows #Comandos #Powershell 
+Tags: #Windows #Comandos 
 
 ## Comandos terminal Windows
-
-* [LOLBAS](https://lolbas-project.github.io/)
 
 ```bash 
 ❯ del /s /q "file"                     # Eliminar un archivo 
