@@ -15,19 +15,21 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 	- Auditoria de passwd
 	- Recuperación de passwd
 
-```bash 
-# Directorio 
-/usr/share/wordlists/rockyou.txt
-
+```powershell 
 # Directorios 'passwords'
-/usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
-/usr/share/wordlists/metasploit/unix-passwords.txt
-/usr/share/wordlists/metasploit/common_passwords.txt
+❯ /usr/share/wordlists/rockyou.txt
+❯ /usr/share/Seclists/Passwords/xato-net-10-million-password-10000.txt
+❯ /usr/share/Seclists/Passwords/months.txt
+❯ /usr/share/Seclists/Passwords/seasons.txt
+❯ /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
+❯ /usr/share/wordlists/metasploit/unix-passwords.txt
+❯ /usr/share/wordlists/metasploit/common_passwords.txt
 
 # Directorios 'Users'
-/usr/share/metasploit-framework/data/wordlists/unix_users.txt
-/usr/share/wordlists/metasploit/unix_users.txt
-/usr/share/wordlists/metasploit/common_users.txt
+❯ /usr/share/Seclists/Usernames/xato-net-10-million-usernames.txt
+❯ /usr/share/metasploit-framework/data/wordlists/unix_users.txt
+❯ /usr/share/wordlists/metasploit/unix_users.txt
+❯ /usr/share/wordlists/metasploit/common_users.txt
 ```
 
 ## Fuerza bruta a una autenticación digital 
