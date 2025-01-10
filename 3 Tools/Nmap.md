@@ -60,6 +60,13 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 * [Nmap-book-scripting-engine](https://nmap.org/book/nse.html)
 
+```bash 
+❯ xsltproc targetedXML > index.html     # Convierte el resultyado del escaneo eu se obtiene por XML a HTML para poder ver los resultados desde la web 
+
+❯ python3 -m http.server 80             # Iniciamos un servidor HTTP para ver el archivo anterior
+```
+
+
 ```bash
 ❯ nmap -iL <IP_File> -sV -O        # Escanear un archivo con varias IP, Version y Sistema Operativo
 ```
