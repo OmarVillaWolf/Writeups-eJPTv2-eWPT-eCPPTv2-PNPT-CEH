@@ -73,5 +73,5 @@ tput cnorm
 ```bash 
 1 Descubrimiento de puertos desde una maquina Windows teniendo un túnel ya activado con 'Proxychains' el cual hace que se pueda escanear los puertos desde Kali
 
-❯ ❯ seq 1 65535 | xargs -P 500 -I {} proxychains nmap -sT -Pn -p{} -open -T5 -v -n ❮Target IP❯ --append-output -oG allPorts 2>&1 | grep -vE "chain|Initiating|Starting|timeout|seconds|Read|Completed|Scanning"
+❯ seq 1 65535 | xargs -P 500 -I {} proxychains nmap -sT -Pn -p{} -open -T5 -v -n ❮Target IP❯ --append-output -oG allPorts 2>&1 | grep -vE "chain|Initiating|Starting|timeout|seconds|Read|Completed|Scanning"
 ```
