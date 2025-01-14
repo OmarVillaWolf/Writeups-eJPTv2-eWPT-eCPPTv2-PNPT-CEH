@@ -33,8 +33,8 @@ Este es el puerto estándar para LDAP (Lightweight Directory Access Protocol), q
 ```
 
 ```bash 
-❯ ldapsearch -x -h <IP> -s base namingcontexts         # Enumerar con una autenticación simple
-❯ ldapsearch -x -h <IP> -b 'DC=Domain.corp'            # Enumerar el dominio 
+❯ ldapsearch -x -H <IP> -s base namingcontexts         # Enumerar con una autenticación simple
+❯ ldapsearch -x -H <IP> -b 'DC=Domain.corp'            # Enumerar el dominio 
 
 
 ❯ ldapsearch -x -H ldap://localhost -b dc=example,dc=org -D "cn=admin,dc=Domain,dc=corp" -w admin 'cn=admin'   # Mirar la información del usuario admin 
