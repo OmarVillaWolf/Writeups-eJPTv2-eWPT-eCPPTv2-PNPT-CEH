@@ -60,13 +60,6 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 * [Nmap-book-scripting-engine](https://nmap.org/book/nse.html)
 
-```bash 
-❯ xsltproc targetedXML > index.html     # Convierte el resultyado del escaneo eu se obtiene por XML a HTML para poder ver los resultados desde la web 
-
-❯ python3 -m http.server 80             # Iniciamos un servidor HTTP para ver el archivo anterior
-```
-
-
 ```bash
 ❯ nmap -iL <IP_File> -sV -O        # Escanear un archivo con varias IP, Version y Sistema Operativo
 ```
@@ -127,7 +120,14 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	#  sC = Lanza scripts básicos de enumeración
 	#  sV = Enumera la versión y servicio que está corriendo en los puertos
 	#  Target IP = Dirección IP que se quiere escanear
-	#  oN targeted = Exporta el output a un fichero en formato nmap con nombre “targeted”
+	#  oN targeted = Exporta el output en formato Nmap
+
+
+❯ nmap -sCV -p22,... ❮Target IP❯ -oX targeted   # Muestra el recultado en formato XML
+
+❯ xsltproc targetedXML > index.html     # Convierte el resultado del escaneo que se obtiene por XML a HTML para poder ver los resultados desde la web 
+
+❯ python3 -m http.server 80             # Iniciamos un servidor HTTP para ver el archivo anterior
 ```
 
 ```bash
