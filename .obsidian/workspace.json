@@ -43,13 +43,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/0 Enumeracion.md",
+                "file": "2 Ports/Ports DC/0 DC Enumeration.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0 Enumeracion"
+              "title": "0 DC Enumeration"
             }
           },
           {
@@ -58,17 +58,107 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/389 - LDAP.md",
+                "file": "2 Ports/Ports DC/445 - SMB.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "389 - LDAP"
+              "title": "445 - SMB"
+            }
+          },
+          {
+            "id": "bedd0d1260de804b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1 Powerup"
+            }
+          },
+          {
+            "id": "962e7227ea4a29a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2 Windows Commands"
+            }
+          },
+          {
+            "id": "4ed26191d0715a98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1 Pass-The-Hash"
+            }
+          },
+          {
+            "id": "14469ad354c4d9c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Nmap.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Nmap"
+            }
+          },
+          {
+            "id": "2b3b42be65b27926",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/2 Attacks/5 Kerberoasting.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "5 Kerberoasting"
+            }
+          },
+          {
+            "id": "7d491d8bc41a51a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Hydra.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hydra"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -99,7 +189,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#AD",
+                "query": "IPs Windows",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -134,7 +224,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 236.50467681884766
   },
   "right": {
     "id": "352c47b0cb031926",
@@ -205,34 +295,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "15c25c9340b47b23",
+  "active": "520462aee70d8de1",
   "lastOpenFiles": [
     "2 Ports/Ports DC/389 - LDAP.md",
-    "2 Ports/Ports DC/0 Enumeracion.md",
-    "2 Ports/Ports DC/5357, 5985-6 - WINRM.md",
-    "2 Ports/20, 21, 134 - FTP - TFPT.md",
-    "2 Ports/Ports DC/3389, 3333 - RDP.md",
-    "2 Ports/Ports DC/3268 - 9 GC.md",
-    "2 Ports/Ports DC/1433 MS-SQL-Server.md",
-    "2 Ports/Ports DC/636 LDAPS.md",
-    "2 Ports/Ports DC/464 kpasswd.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "2 Ports/Ports DC/139 NetBIOS.md",
+    "2 Ports/Ports DC/0 DC Enumeration.md",
     "2 Ports/Ports DC/135 - RPC.md",
     "2 Ports/Ports DC/88 Kerberos.md",
-    "2 Ports/Ports DC/53 - DNS.md",
-    "8 AD 2/2 Attacks/5 Kerberoasting.md",
-    "8 AD 2/2 Attacks/13 GPO.md",
-    "8 AD 2/1 Enumeration/2 PowerView.md",
-    "8 AD 2/2 Attacks/6 ASREProstable.md",
-    "3 Tools/Fuzzers.md",
-    "1 Com Lin & Win/3 Hacking/3 Powershell.md",
     "3 Tools/Hydra.md",
-    "3 Tools/Nmap.md",
-    "8 AD 2/4 Persistencia, Post-Explotation/4 Golden Ticket.md",
-    "8 AD 2/4 Persistencia, Post-Explotation/0 Fundamentos Persistencia.md",
+    "2 Ports/Ports DC/53 - DNS.md",
+    "2 Ports/Ports DC/445, 135 - Psexec.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "8 AD 2/2 Attacks/5 Kerberoasting.md",
+    "3 Tools/John the Ripper.md",
+    "8 AD 2/2 Attacks/4 Crackmapexec.md",
+    "8 AD 2/2 Attacks/6 ASREProstable.md",
+    "8 AD 2/2 Attacks/2 Kerbrute.md",
+    "8 AD 2/2 Attacks/13 GPO.md",
     "8 AD 2/4 Persistencia, Post-Explotation/6 Bosques, Relaciones de confianza.md",
+    "8 AD 2/3 Mov Lateral/2 Impersonation.md",
+    "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
+    "3 Tools/Nmap.md",
+    "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
+    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "8 AD 2/3 Mov Lateral/3 Pass-The-Hash.md",
+    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
+    "1 Com Lin & Win/3 Hacking/3 Powershell.md",
+    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "5 Pivoting/1 Pivoting.md",
+    "1 Com Lin & Win/1 Bash/2 Filtros.md",
     "8 AD 2/5 Evasión",
     "8 AD 2/4 Persistencia, Post-Explotation",
     "8 AD 2/3 Mov Lateral",
