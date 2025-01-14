@@ -27,13 +27,12 @@ Nota: Se coloca 'powershell -c' si no se ejecuta en un entorno de Powershell
 
 ## Enumeración
 
-```powershell 
-# Escaneo de puertos 
-❯ 442..443 | % {try ((new-object Net.Sockets.TcpClient).Connect("google.com",$_)) "Port $_ is open"} catch { # Ignorar errores para puertos cerrados }} 2>$null 
-```
-
 ```powershell
 ❯ net user /domain                   # Mirar los usuarios del dominio 
 ❯ net user                           # Mirar los usuarios locales 
 ❯ net localgroup administrators      # Muestra los miebros del grupo local de administradores
+```
+
+```powershell 
+❯ Find-WMILocalAdminAccess.ps1 -Verbose  # Enumeración de otras maquinas donde el usuario actual tiene acceso 
 ```
