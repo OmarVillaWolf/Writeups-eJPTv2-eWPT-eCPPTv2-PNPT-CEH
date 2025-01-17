@@ -58,13 +58,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/445 - SMB.md",
+                "file": "2 Ports/Ports DC/445, 135 - Psexec.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "445 - SMB"
+              "title": "445, 135 - Psexec"
+            }
+          },
+          {
+            "id": "c870af1d07a9a261",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 1/1 Attacks/3 Gaining Shell Access.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3 Gaining Shell Access"
             }
           },
           {
@@ -156,6 +171,21 @@
               "icon": "lucide-file",
               "title": "Hydra"
             }
+          },
+          {
+            "id": "06ab9692c8d59c53",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/John the Ripper.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "John the Ripper"
+            }
           }
         ],
         "currentTab": 3
@@ -189,7 +219,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "IPs Windows",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -297,32 +327,32 @@
   },
   "active": "520462aee70d8de1",
   "lastOpenFiles": [
-    "2 Ports/Ports DC/389 - LDAP.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
+    "8 AD 1/1 Attacks/3 Gaining Shell Access.md",
+    "2 Ports/Ports DC/445, 135 - Psexec.md",
+    "8 AD 2/2 Attacks/8 Constrained Delegation.md",
+    "3 Tools/John the Ripper.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
+    "2 Ports/Ports DC/3389, 3333 - RDP.md",
     "2 Ports/Ports DC/135 - RPC.md",
     "2 Ports/Ports DC/88 Kerberos.md",
-    "3 Tools/Hydra.md",
-    "2 Ports/Ports DC/53 - DNS.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
-    "2 Ports/Ports DC/445 - SMB.md",
     "8 AD 2/2 Attacks/5 Kerberoasting.md",
-    "3 Tools/John the Ripper.md",
-    "8 AD 2/2 Attacks/4 Crackmapexec.md",
     "8 AD 2/2 Attacks/6 ASREProstable.md",
+    "2 Ports/Ports DC/389 - LDAP.md",
+    "2 Ports/Ports DC/0 DC Enumeration.md",
+    "3 Tools/Hydra.md",
+    "1 Com Lin & Win/1 Bash/1 Regex.md",
+    "1 Com Lin & Win/1 Bash/2 Filtros.md",
+    "2 Ports/Ports DC/53 - DNS.md",
+    "8 AD 2/2 Attacks/4 Crackmapexec.md",
     "8 AD 2/2 Attacks/2 Kerbrute.md",
     "8 AD 2/2 Attacks/13 GPO.md",
     "8 AD 2/4 Persistencia, Post-Explotation/6 Bosques, Relaciones de confianza.md",
     "8 AD 2/3 Mov Lateral/2 Impersonation.md",
-    "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
     "3 Tools/Nmap.md",
     "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
     "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
     "8 AD 2/3 Mov Lateral/3 Pass-The-Hash.md",
-    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
-    "1 Com Lin & Win/3 Hacking/3 Powershell.md",
-    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "5 Pivoting/1 Pivoting.md",
-    "1 Com Lin & Win/1 Bash/2 Filtros.md",
     "8 AD 2/5 Evasión",
     "8 AD 2/4 Persistencia, Post-Explotation",
     "8 AD 2/3 Mov Lateral",
