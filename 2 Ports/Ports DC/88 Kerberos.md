@@ -29,6 +29,8 @@ Nota: Antes de iniciar al ataque debemos de sincronizar el reloj de la maquina d
 Nota: Si el usuario no cuenta con autenticacion previa de Kerberos, la herramienta arroja el TGT (hash) y este se puede crackear offline con 'John The Ripper'
 ```
 
+## Solcitar un TGS con un usuario valido 
+
 ```bash 
 ❯ GetUsersSPNs domain1.corp/user:password            # Verificar si el DC es kerberostable en algún usuario
 
