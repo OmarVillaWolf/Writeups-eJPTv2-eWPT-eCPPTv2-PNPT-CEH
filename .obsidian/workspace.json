@@ -8,33 +8,48 @@
         "type": "tabs",
         "children": [
           {
-            "id": "da7c3023649fbc0b",
+            "id": "f0ac4cd3eab67f54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Ethical Hacking/1 Footprinting and Reconnaissance.md",
+                "file": "0 Hacking/05 System Hacking/1.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 Footprinting and Reconnaissance"
+              "title": "1"
             }
           },
           {
-            "id": "1840302dc88986d6",
+            "id": "78cc1366db1b23bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Com Lin & Win/3 Hacking/3 Powershell.md",
+                "file": "2 Ports/Ports DC/445 - SMB.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 Powershell"
+              "title": "445 - SMB"
+            }
+          },
+          {
+            "id": "962e7227ea4a29a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Hashcat.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hashcat"
             }
           },
           {
@@ -53,33 +68,63 @@
             }
           },
           {
+            "id": "9209de6a768341f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 1/1 Attacks/4 IPv6 Attacks.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "4 IPv6 Attacks"
+            }
+          },
+          {
+            "id": "1840302dc88986d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2 Mimikatz"
+            }
+          },
+          {
             "id": "520462aee70d8de1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/445, 135 - Psexec.md",
+                "file": "2 Ports/Ports DC/135 - RPC.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "445, 135 - Psexec"
+              "title": "135 - RPC"
             }
           },
           {
-            "id": "c870af1d07a9a261",
+            "id": "894ab11703e25dae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 AD 1/1 Attacks/3 Gaining Shell Access.md",
+                "file": "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 Gaining Shell Access"
+              "title": "1 Pass-The-Hash"
             }
           },
           {
@@ -95,21 +140,6 @@
               },
               "icon": "lucide-file",
               "title": "1 Powerup"
-            }
-          },
-          {
-            "id": "962e7227ea4a29a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2 Windows Commands"
             }
           },
           {
@@ -186,9 +216,24 @@
               "icon": "lucide-file",
               "title": "John the Ripper"
             }
+          },
+          {
+            "id": "cd11acaee91f3328",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Ports/80.1 WordPress.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "80.1 WordPress"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -325,47 +370,47 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "520462aee70d8de1",
+  "active": "642b9322c22441ce",
   "lastOpenFiles": [
-    "8 AD 1/1 Attacks/3 Gaining Shell Access.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
-    "8 AD 2/2 Attacks/8 Constrained Delegation.md",
-    "3 Tools/John the Ripper.md",
+    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "2 Ports/80.1 WordPress.md",
+    "2 Ports/25 - SMTP.md",
+    "8 AD 2/1 Enumeration/5 BloodHount.md",
     "2 Ports/Ports DC/445 - SMB.md",
+    "2 Ports/Ports DC/445, 135 - Psexec.md",
+    "2 Ports/Ports DC/389 - LDAP.md",
     "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
     "2 Ports/Ports DC/3389, 3333 - RDP.md",
+    "2 Ports/Ports DC/3268 - 9 GC.md",
+    "2 Ports/Ports DC/1433 MS-SQL-Server.md",
+    "2 Ports/Ports DC/636 LDAPS.md",
+    "2 Ports/Ports DC/464 kpasswd.md",
+    "2 Ports/Ports DC/139 NetBIOS.md",
     "2 Ports/Ports DC/135 - RPC.md",
-    "2 Ports/Ports DC/88 Kerberos.md",
-    "8 AD 2/2 Attacks/5 Kerberoasting.md",
-    "8 AD 2/2 Attacks/6 ASREProstable.md",
-    "2 Ports/Ports DC/389 - LDAP.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
-    "3 Tools/Hydra.md",
-    "1 Com Lin & Win/1 Bash/1 Regex.md",
-    "1 Com Lin & Win/1 Bash/2 Filtros.md",
     "2 Ports/Ports DC/53 - DNS.md",
-    "8 AD 2/2 Attacks/4 Crackmapexec.md",
+    "8 AD 2/2 Attacks/6 ASREProstable.md",
+    "8 AD 2/2 Attacks/5 Kerberoasting.md",
+    "8 AD 1/2 Priv Escalation/2 Kerberoasting.md",
+    "8 AD 1/2 Priv Escalation/1 AS-REP.md",
+    "2 Ports/Ports DC/88 Kerberos.md",
+    "2 Ports/Ports DC/0 DC Enumeration.md",
     "8 AD 2/2 Attacks/2 Kerbrute.md",
-    "8 AD 2/2 Attacks/13 GPO.md",
-    "8 AD 2/4 Persistencia, Post-Explotation/6 Bosques, Relaciones de confianza.md",
-    "8 AD 2/3 Mov Lateral/2 Impersonation.md",
-    "3 Tools/Nmap.md",
+    "8 AD 2/2 Attacks/3 Relay.md",
     "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
-    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
-    "8 AD 2/3 Mov Lateral/3 Pass-The-Hash.md",
+    "3 Tools/Nmap.md",
+    "0 Hacking/05 System Hacking",
+    "0 Hacking/04 Vulnerability Analysis",
+    "0 Hacking/03 Enumeration",
+    "Z Imagenes/Hacking/Piv2.png",
+    "Z Imagenes/Hacking/Piv1.png",
+    "Z Imagenes/Hacking/SSRF.png",
+    "0 Hacking/02 Scanning Networks",
+    "0 Ethical Hacking/01 Footprinting and Reconnaissance/Untitled",
+    "0 Hacking/01 Footprinting and Reconnaissance",
     "8 AD 2/5 Evasión",
     "8 AD 2/4 Persistencia, Post-Explotation",
     "8 AD 2/3 Mov Lateral",
     "8 AD 2/2 Attacks/7 ACL",
-    "8 AD 2/2 Attacks",
-    "2 Ports/Ports DC",
-    "8 AD 2/1 Enumeration",
-    "4 PrivEsc Lin & Win/2 Linux/3 Persistencia",
-    "4 PrivEsc Lin & Win/1 Windows/4 Persistencia",
-    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia",
-    "Z Imagenes/Hacking/SSRF.png",
-    "Z Imagenes/Hacking/Piv2.png",
-    "Z Imagenes/Hacking/Piv1.png",
     "Pasted image 20241009091721.png",
     "Pasted image 20241009094317.png",
     "Pasted image 20241009093542.png",
