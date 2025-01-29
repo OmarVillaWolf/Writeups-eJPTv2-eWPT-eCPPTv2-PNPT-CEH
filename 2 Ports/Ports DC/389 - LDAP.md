@@ -1,6 +1,6 @@
-# Inyecciones LDAP
+# LDAP
 
-Tags: #LDAP #OWASP #Explotacion #DC 
+Tags: #LDAP #OWASP #Explotacion #DC #Impacket 
 
 * [LDAP](https://www.profesionalreview.com/2019/01/05/ldap/)
 
@@ -61,4 +61,10 @@ Este es el puerto estándar para LDAP (Lightweight Directory Access Protocol), q
 ```bash
 # Crea un usuario en base a un archivo dado 
 ❯ ldapadd -x -H ldap://localhost -D "cn=admin,dc=example,dc=org" -w admin -f newuser.ldif  
+```
+
+## Impacket-GetADUsers 
+
+```bash 
+❯ impacket-GetADUsers -all domain.com/user -dc-ip IP     # Enumeración de usuarios en el dominio con un usuario valido 
 ```
