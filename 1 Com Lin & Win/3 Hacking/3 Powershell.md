@@ -36,3 +36,14 @@ Nota: Se coloca 'powershell -c' si no se ejecuta en un entorno de Powershell
 ```powershell 
 ❯ Find-WMILocalAdminAccess.ps1 -Verbose  # Enumeración de otras maquinas donde el usuario actual tiene acceso 
 ```
+
+## Creación de una sesión a un servidor 
+
+```powershell
+❯ $session = New-PSSession -ComputerName 'server_name' -verbose  # Crear una variable para una nueva sesion
+❯ $session    # Mirar el ID, Name, ComputerName
+❯ Invoke-Command -Session $session -ScriptBlock {whoami;ipconfig} -verbose 
+❯ Enter-PSSession -Session $session -verbose         # Ingresar a la session del servidor con una consola en PowerShell 
+
+	❯ klist      # Mirar los ticktes 
+```
