@@ -52,6 +52,8 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ❯ pwd                        # Nos muestra la ruta del dir actual 
 ❯ cd /                       # Nos dirigimos a la raiz 'C:\'
 ❯ cat file.txt               # Miramos el contenido de un archivo 
+
+❯ upload /home/PowerUP.ps1   # Cargar un archivo desde la maquna Kali en la sesión establecida    
 ```
 
 ## Para hacer Pivoting con Metasploit 
