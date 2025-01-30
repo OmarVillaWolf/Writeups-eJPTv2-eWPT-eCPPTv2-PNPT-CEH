@@ -13,43 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Hacking/05 System Hacking/1.md",
+                "file": "0 Hacking/05 System Hacking/1 Active Attack.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1"
-            }
-          },
-          {
-            "id": "78cc1366db1b23bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/Ports DC/445 - SMB.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "445 - SMB"
-            }
-          },
-          {
-            "id": "962e7227ea4a29a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Hashcat.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Hashcat"
+              "title": "1 Active Attack"
             }
           },
           {
@@ -66,174 +36,9 @@
               "icon": "lucide-file",
               "title": "0 DC Enumeration"
             }
-          },
-          {
-            "id": "9209de6a768341f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 1/1 Attacks/4 IPv6 Attacks.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "4 IPv6 Attacks"
-            }
-          },
-          {
-            "id": "1840302dc88986d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2 Mimikatz"
-            }
-          },
-          {
-            "id": "520462aee70d8de1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/Ports DC/135 - RPC.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "135 - RPC"
-            }
-          },
-          {
-            "id": "894ab11703e25dae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1 Pass-The-Hash"
-            }
-          },
-          {
-            "id": "bedd0d1260de804b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1 Powerup"
-            }
-          },
-          {
-            "id": "4ed26191d0715a98",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1 Pass-The-Hash"
-            }
-          },
-          {
-            "id": "14469ad354c4d9c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Nmap.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Nmap"
-            }
-          },
-          {
-            "id": "2b3b42be65b27926",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 2/2 Attacks/5 Kerberoasting.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "5 Kerberoasting"
-            }
-          },
-          {
-            "id": "7d491d8bc41a51a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/Hydra.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Hydra"
-            }
-          },
-          {
-            "id": "06ab9692c8d59c53",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/John the Ripper.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "John the Ripper"
-            }
-          },
-          {
-            "id": "cd11acaee91f3328",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/80.1 WordPress.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "80.1 WordPress"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -370,34 +175,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "15c25c9340b47b23",
   "lastOpenFiles": [
-    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "2 Ports/80.1 WordPress.md",
-    "2 Ports/25 - SMTP.md",
-    "8 AD 2/1 Enumeration/5 BloodHount.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
     "2 Ports/Ports DC/389 - LDAP.md",
-    "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
-    "2 Ports/Ports DC/3389, 3333 - RDP.md",
-    "2 Ports/Ports DC/3268 - 9 GC.md",
-    "2 Ports/Ports DC/1433 MS-SQL-Server.md",
-    "2 Ports/Ports DC/636 LDAPS.md",
-    "2 Ports/Ports DC/464 kpasswd.md",
-    "2 Ports/Ports DC/139 NetBIOS.md",
-    "2 Ports/Ports DC/135 - RPC.md",
-    "2 Ports/Ports DC/53 - DNS.md",
-    "8 AD 2/2 Attacks/6 ASREProstable.md",
-    "8 AD 2/2 Attacks/5 Kerberoasting.md",
+    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "8 AD 1/2 Priv Escalation/2 Kerberoasting.md",
+    "3 Tools/Hashcat.md",
     "8 AD 1/2 Priv Escalation/1 AS-REP.md",
-    "2 Ports/Ports DC/88 Kerberos.md",
+    "8 AD 1/0 Enumeration/3 BloodHound.md",
+    "8 AD 2/1 Enumeration/5 BloodHount.md",
+    "12 Wifi/Wifi Challenge/Wifi 1.0/1 Recon.md",
     "2 Ports/Ports DC/0 DC Enumeration.md",
-    "8 AD 2/2 Attacks/2 Kerbrute.md",
-    "8 AD 2/2 Attacks/3 Relay.md",
+    "1 Com Lin & Win/3 Hacking/4 Meterpreter Commands.md",
+    "0 Hacking/05 System Hacking/1 Active Attack.md",
+    "8 AD 1/1 Attacks/1 LLMNR Poisoning.md",
+    "8 AD 1/1 Attacks/4 IPv6 Attacks.md",
+    "8 AD 1/1 Attacks/3 Gaining Shell Access.md",
+    "8 AD 1/1 Attacks/2 SMB Relay.md",
+    "7 OWASP TOP 10/1 SQLI.md",
+    "0 Hacking/04 Vulnerability Analysis/2 OpenVAS, Nikto.md",
+    "0 Hacking/04 Vulnerability Analysis/1 CWE, CVE.md",
+    "8 AD 2/2 Attacks/5 Kerberoasting.md",
+    "8 AD 2/2 Attacks/6 ASREProstable.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
+    "2 Ports/Ports DC/135 - RPC.md",
     "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
-    "3 Tools/Nmap.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
     "0 Hacking/05 System Hacking",
     "0 Hacking/04 Vulnerability Analysis",
     "0 Hacking/03 Enumeration",
