@@ -33,6 +33,20 @@ Bloodhound es una app en JavaScript la cual puede identificar fácilmente ataque
 Nota: Importamos todos los archivos que fueron generados en formato 'Json'
 ```
 
+## SharpHound con credenciales Validas desde un CMD en Windows 
+
+```bash 
+# Autenticarse en un 'CMD' en Windows con credenciales validas
+❯ runas /netonly /user:domain1.com\username cmd    # Autenticarse con credenciales validas a nivel de red en una CMD en Windows> Este comando abrirá una nueva CMD con las credenciales 
+
+❯ dir \\IP\DIR           # Enumerar el directorio con el usuario autenticado desde una CMD en Windows 
+
+❯ .\SharpHound.exe -c all -d domain1.com --domaincontroller IP   # Enumeración con SharpHound a un dominio con credenciales validas desde una CMD en Windows.
+Nota: La herramienta regresará un archivo '.zip' que se debe cargar en 'BloodHound' para analizar
+
+❯ python3 -m http.server 80     # Crear un recurso compartido a nivel de red para pasar archivos 
+```
+
 ## BloodHound 
 
 * [BloodHound](https://github.com/SpecterOps/BloodHound-Legacy/releases)
@@ -47,6 +61,10 @@ Nota: Si es la primera vez que lo usamos, abrimos la web 'localhost:7474' y agre
 
 ❯ ./BloodHound --no-sandbox             # Ejecutar como usuario 'root' 
 ❯ bloodhound &> /dev/null & disown      # Ejecutar 'Bloodhound' e independizarlo
+
+Nota:
+	1. Para subir info de un archivo '.zip' se debe usar 'Upload Data'
+	2. Para subir info de archivos 'Json' se debe usar 'Import Graph'
 ```
 
 ## Ataques 'DCSync'
