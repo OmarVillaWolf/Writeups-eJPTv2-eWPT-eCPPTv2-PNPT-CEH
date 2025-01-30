@@ -24,6 +24,12 @@ A continuación, se proporciona el enlace directo al proyecto de GitHub que nos 
 
 Este es el puerto estándar para LDAP (Lightweight Directory Access Protocol), que se utiliza para acceder y gestionar los servicios de directorio. En el contexto de AD, LDAP se usa para realizar consultas y cambios en el directorio de AD.
 
+## Impacket-GetADUsers 
+
+```bash 
+❯ impacket-GetADUsers -all domain.com/user -dc-ip IP     # Enumeración de usuarios en el dominio con un usuario valido 
+```
+
 ## LDAP
 
 * [LDAP-Pentesting](https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-ldap.html#ldapsearch)
@@ -61,10 +67,4 @@ Este es el puerto estándar para LDAP (Lightweight Directory Access Protocol), q
 ```bash
 # Crea un usuario en base a un archivo dado 
 ❯ ldapadd -x -H ldap://localhost -D "cn=admin,dc=example,dc=org" -w admin -f newuser.ldif  
-```
-
-## Impacket-GetADUsers 
-
-```bash 
-❯ impacket-GetADUsers -all domain.com/user -dc-ip IP     # Enumeración de usuarios en el dominio con un usuario valido 
 ```
