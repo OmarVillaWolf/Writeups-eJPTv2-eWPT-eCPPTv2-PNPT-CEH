@@ -18,6 +18,8 @@ Tags: #HashCat #Hash-Identifier #DictionaryAttack #BruteForce
 
 ## Ataque de Diccionario 
 
+* [Hashcat-ExampleHashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+
 ```bash
 ❯ hashcat --help     # Nos muestra el panel de ayuda de la tool y algunos ejemplos
 
@@ -25,24 +27,29 @@ Tags: #HashCat #Hash-Identifier #DictionaryAttack #BruteForce
 	❯ hashcat --example-hashes | grep <hash> -B 10 # Filtramos por el hash y leemos 10 lineas arriba del match
 
 # Podemos crakear de uno en uno
-❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt
-❯ hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt
-❯ hashcat -m 400 -a 0 hash.txt /usr/share/wordlists/rockyou.txt 
+❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt -d 1 -D 2
+❯ hashcat -m 5600 hashes.txt rockyou.txt -d 1 -D 2
+❯ hashcat -m 400 -a 0 hash.txt rockyou.txt -d 1 -D 2
+❯ hashcat -m 13100 -a 0 hash.txt rockyou.txt -d 1 -D 2
 
 	# m = Tipo de hash a evaluar (0 = MD5)
 	# a = Tipo de ataque  
-	# 400 = inician con $P$
+	# 400 = Inicia con $P$ y es phpass, WordPress (MD5), Joomla (MD5)
 	# 5500 = NetNTLMv1 / NetNTLMv1+ESS
 	# 5600 = NetNTLMv2 
+	# 13100 = Kerberos 5, etype 23, TGS-REP
 	# hashes.txt = Archivo que contiene el hash
+	# D = Tipo de dispositivo (2 = GPU)
+	# d = ID de la GPU a usar en 'OpenCL' (1 = GPU Nvidia con memoria de 8064 MB). Varia en cada maquina 
+	# w = Perfil de Workload (1=Low, 2=Default, 3=High, 4=Nightmare). 
 
-❯ hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt --force    # Obligar a que las VM ejecuten Hashcat
+❯ hashcat -m 5600 hashes.txt rockyou.txt --force    # Obligar a que las VM ejecuten Hashcat
 
-❯ hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt -O         # Aumenta la velocidad del crackeo 
+❯ hashcat -m 5600 hashes.txt rockyou.txt -O         # Aumenta la velocidad del crackeo 
 ```
 
 ```bash 
-❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt --show
+❯ hashcat -m 0 hashes.txt rockyou.txt --show
 
 	# show = Muestra las passwd que ya han sido crackeadas 'historial'
 ```
