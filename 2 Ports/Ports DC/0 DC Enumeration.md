@@ -13,7 +13,7 @@ Tags: #AD #Enumeracion #Puerto #DC
 	Enumeración: 'RPCClient'
 
 ❯ Puerto 389 LDAP:
-	Enumeración: 'Ldapsearch' 'Ldapdomaindump'
+	Enumeración: 'Ldapsearch' 'Ldapdomaindump' 'GetADUsers'
 
 ❯ Puerto 445 SMB:
 	Enumeración: 'Nextec / Crackmapexec' 'SMBClient' 'SMBMap' 
