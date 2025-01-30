@@ -72,6 +72,20 @@ Nota: Estos comandos los ejecutamos en la maquina victima Windows para recolecta
 Nota: Podemos usar ADPeas para hacer la recolección ya que automaticamente ejecuta 'SharpHound'
 ```
 
+## SharpHound con credenciales Validas desde un CMD en Windows 
+
+```bash 
+# Autenticarse en un 'CMD' en Windows con credenciales validas
+❯ runas /netonly /user:domain1.com\username cmd    # Autenticarse con credenciales validas a nivel de red en una CMD en Windows> Este comando abrirá una nueva CMD con las credenciales 
+
+❯ dir \\IP\DIR           # Enumerar el directorio con el usuario autenticado desde una CMD en Windows 
+
+❯ .\SharpHound.exe -c all -d domain1.com --domaincontroller IP   # Enumeración con SharpHound a un dominio con credenciales validas desde una CMD en Windows.
+Nota: La herramienta regresará un archivo '.zip' que se debe cargar en 'BloodHound' para analizar
+
+❯ python3 -m http.server 80     # Crear un recurso compartido a nivel de red para pasar archivos 
+```
+
 ## BloodHount 
 
 * [BloodHound](https://github.com/SpecterOps/BloodHound-Legacy/releases)
