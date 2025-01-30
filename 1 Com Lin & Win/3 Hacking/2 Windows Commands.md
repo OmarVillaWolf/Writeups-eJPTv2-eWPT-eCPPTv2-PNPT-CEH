@@ -81,17 +81,3 @@ net user omar P4ssw0rd /add            # Crear un usuario siendo NT Authority\Sy
 
 ❯ route delete IP                        # Borrar una IP especifica o un segmento de red
 ```
-
-## Credenciales Validas
-
-```bash 
-# Autenticarse en un 'CMD' en Windows con credenciales validas
-❯ runas /netonly /user:domain1.com\username cmd    # Autenticarse con credenciales validas a nivel de red en una CMD en Windows> Este comando abrirá una nueva CMD con las credenciales 
-
-❯ dir \\IP\DIR           # Enumerar el directorio con el usuario autenticado desde una CMD en Windows 
-
-❯ .\SharpHound.exe -c all -d domain1.com --domaincontroller IP   # Enumeración con SharpHound a un dominio con credenciales validas desde una CMD en Windows.
-Nota: La herramienta regresará un archivo '.zip' que se debe cargar en 'BloodHound' para analizar
-
-❯ python3 -m http.server 80     # Crear un recurso compartido a nivel de red para pasar archivos 
-```
