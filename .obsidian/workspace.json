@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Hacking/05 System Hacking/1 Active Attack.md",
+                "file": "0 Hacking/07 Sniffing/1.md",
                 "mode": "source",
-                "backlinks": false,
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1 Active Attack"
+              "title": "1"
             }
           },
           {
@@ -30,15 +30,14 @@
               "state": {
                 "file": "2 Ports/Ports DC/0 DC Enumeration.md",
                 "mode": "source",
-                "backlinks": false,
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "0 DC Enumeration"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -57,10 +56,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -87,7 +87,7 @@
               "type": "starred",
               "state": {},
               "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "title": "Complemento no activo"
             }
           },
           {
@@ -163,20 +163,38 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "dbfolder:Create a new database table": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "workspaces:Manage workspace layouts": false,
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "markdown-importer:Abrir el importador de Markdown": false,
+      "workspaces:Gestionar disposiciones de espacio de trabajo": false,
+      "dbfolder:Crear una nueva tabla de base de datos": false,
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "15c25c9340b47b23",
+  "active": "f0ac4cd3eab67f54",
   "lastOpenFiles": [
+    "2 Ports/22 - SSH.md",
+    "2 Ports/25 - SMTP.md",
+    "0 Hacking/06 Malware Threats/4 Dynamic Malware Analysis.md",
+    "0 Hacking/07 Sniffing/1.md",
+    "2 Ports/Ports DC/0 DC Enumeration.md",
+    "8 AD 2\\1 Enumeration",
+    "8 AD 1\\2 Priv Escalation",
+    "8 AD 1\\0 Enumeration",
+    "2 Ports\\Ports DC",
+    "1 Com Lin & Win\\3 Hacking",
+    "0 Hacking\\05 System Hacking",
+    "0 Hacking/07 Sniffing",
+    "0 Hacking/06 Malware Threats/3 Análisis Malware.md",
+    "0 Hacking/06 Malware Threats/4 Dynamic Malware Analysis",
+    "0 Hacking/06 Malware Threats/2 Virus.md",
+    "0 Hacking/06 Malware Threats/1 Troyanos.md",
+    "0 Hacking/05 System Hacking/1 Active Attack.md",
+    "0 Hacking/06 Malware Threats",
     "2 Ports/Ports DC/389 - LDAP.md",
     "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
     "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
@@ -186,9 +204,7 @@
     "8 AD 1/0 Enumeration/3 BloodHound.md",
     "8 AD 2/1 Enumeration/5 BloodHount.md",
     "12 Wifi/Wifi Challenge/Wifi 1.0/1 Recon.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
     "1 Com Lin & Win/3 Hacking/4 Meterpreter Commands.md",
-    "0 Hacking/05 System Hacking/1 Active Attack.md",
     "8 AD 1/1 Attacks/1 LLMNR Poisoning.md",
     "8 AD 1/1 Attacks/4 IPv6 Attacks.md",
     "8 AD 1/1 Attacks/3 Gaining Shell Access.md",
@@ -196,26 +212,10 @@
     "7 OWASP TOP 10/1 SQLI.md",
     "0 Hacking/04 Vulnerability Analysis/2 OpenVAS, Nikto.md",
     "0 Hacking/04 Vulnerability Analysis/1 CWE, CVE.md",
-    "8 AD 2/2 Attacks/5 Kerberoasting.md",
-    "8 AD 2/2 Attacks/6 ASREProstable.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
-    "2 Ports/Ports DC/135 - RPC.md",
-    "8 AD 1/3 Lateral Movement/1 Pass-The-Hash.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
     "0 Hacking/05 System Hacking",
-    "0 Hacking/04 Vulnerability Analysis",
-    "0 Hacking/03 Enumeration",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/SSRF.png",
-    "0 Hacking/02 Scanning Networks",
-    "0 Ethical Hacking/01 Footprinting and Reconnaissance/Untitled",
-    "0 Hacking/01 Footprinting and Reconnaissance",
-    "8 AD 2/5 Evasión",
-    "8 AD 2/4 Persistencia, Post-Explotation",
-    "8 AD 2/3 Mov Lateral",
-    "8 AD 2/2 Attacks/7 ACL",
     "Pasted image 20241009091721.png",
     "Pasted image 20241009094317.png",
     "Pasted image 20241009093542.png",
