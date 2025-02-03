@@ -7,7 +7,7 @@
   "alwaysUpdateLinks": true,
   "showInlineTitle": false,
   "autoPairBrackets": true,
-  "autoPairMarkdown": false,
+  "autoPairMarkdown": true,
   "readableLineLength": false,
   "smartIndentList": true,
   "legacyEditor": false,
