@@ -1,13 +1,21 @@
 # Enumeración DNS
 
-Tags: #Hacking #Enumeration #DNS 
+Tags: #Hacking #Enumeration #DNS #Dig #DNSZoneTransfer 
 
 ## Dig
 
 ```bash 
 # Kali Tool 
-❯ dig ns www.domain.com    # Muestra los nombres de servidores 
-❯ dig @name_server www.domain.com axfr   # Transferencia de zona 
+❯ dig ns www.domain.com                      # Muestra los nombres de servidores 
+❯ dig @name_server www.domain.com axfr       # Ataque de transferencia de zona 
+❯ dig www.domain.com axfr                    # Ataque de transferencia de zona 
+```
+
+## DNSEnum
+
+```bash 
+# Kali Tool 
+❯ dnsenum www.domain.com        # Enumeración de DNS para encontrar el nombre del servidor, direcciones de hosts y los records
 ```
 
 ## NSLookup
