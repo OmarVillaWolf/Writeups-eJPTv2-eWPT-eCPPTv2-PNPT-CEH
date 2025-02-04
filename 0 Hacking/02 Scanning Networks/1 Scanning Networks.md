@@ -4,6 +4,7 @@ Tags: #Hacking #NetworkScanning #Nmap #AngryIPScanner
 
 ```bash 
 # Kali tool 
+❯ nmap -sn -T4 IP.0/24  # Escanear los host vivos 
 ❯ nmap -sn -PR <IP>     # ARP ping scan 
 ❯ nmap -sn -PU <IP>     # UDP ping scan 
 ❯ nmap -sn -PE <IP>     # ICMP ECHO ping scan  
