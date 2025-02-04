@@ -51,7 +51,10 @@ Nota:
 	# h = Host 
 	# s = Scope  
 
-❯ ldapsearch -h IP -x -b "DC=domain,DC=com"
+❯ ldapsearch -h IP -x -b "DC=domain,DC=com" 
 
 ❯ ldapsearch -x -h IP -b "DC=domain,DC=com" "objectclass=*"
+
+# Identificar las cuentas de usuarios asociadas al dominio, no se cueuntan las que no tengan 'CN=Users', ademas de moestra la versión de LDAP
+❯ ldapsearch -x -h IP -b "DC=domain,DC=com" "objectclass=user" enm  
 ```
