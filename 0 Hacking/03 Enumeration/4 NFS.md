@@ -6,7 +6,8 @@ Tags: #Hacking #Enumeration #NFS
 
 ```bash 
 # Kali Tool 
-❯ nmap -p 2049 IP
+❯ nmap -sV -T4 IP.0/24       # Escanear todos los puertos en una red 
+❯ nmap -p 2049 IP            # Puerto 2049 es NFS 
 ```
 
 ## SuperEnum 
