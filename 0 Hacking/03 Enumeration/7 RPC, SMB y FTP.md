@@ -29,7 +29,7 @@ Notas:
 ```bash 
 # Kali Tool 
 ❯ nmap -p 21 IP   
-❯ nmap -T4 -A IP 
+❯ nmap -sV -T4 -A IP    # Verificar los servicios, en SMB puerto '445' puede mostrar si la firma esta activa o no 
 ❯ nmap -p 445 -A IP 
 ❯ nmap -p 21 -A IP 
 ```
