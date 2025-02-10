@@ -68,9 +68,10 @@ Nota:
 
 ```bash 
 ❯ nmap -T4 IP.0/24               # Escaneo de puertos 
-❯ nmap -p 53 -T4 IP.0/24         # Escaneo del puerto 53 'Domain Controller'
-❯ nmap -T4 -A IP                 # Escaneo de todos los puertos, encontrar el puerto 139 'NetBios Computer Name' 
-❯ nmap -T4 -A IP                 # Escaneo de todos los puertos y encontrar el FQDN 
+❯ nmap -p 88 -T4 IP.0/24         # Escaneo del puerto 88 'Domain Controller'
+❯ nmap -T4 -A IP                 # Host discovery para encontrar info del puertos
+❯ nmap -p3389 -sCV IP            # Host discovery para encontrar info del puerto 3389 donde se ve 'NetBios Computer Name, DNS Computer Name' 
+❯ nmap -p445 -sCV IP             # Escaneo para encontrar info del FQDN 
 ❯ nmap -T4 -A IP                 # Escaneo de todos los puertos y encontrar el 'DNS Computer Name' 
 
 ❯ nmap -T4 -A -sV IP.0/24        # Identificar la versión de los puertos en cada IP          
