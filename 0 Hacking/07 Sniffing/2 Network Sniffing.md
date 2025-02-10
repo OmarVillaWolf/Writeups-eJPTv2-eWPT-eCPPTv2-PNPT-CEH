@@ -16,6 +16,8 @@ Filtros:
 
 1. Tambien se puede dare click derecho 'Follow > TCP Stream' y se mostrará el string completo entre la máquina víctima y el sitio web 
 2. Tambien se puede aplicar filtros 
+
+❯ tcp.port eq 21    # Filtrar por un puerto en especifico 
 ```
 
 ## Omnipeek Network Protocol Analyzer
