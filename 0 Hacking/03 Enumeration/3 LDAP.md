@@ -2,6 +2,22 @@
 
 Tags: #Hacking #Enumeration #LDAP 
 
+## LDAPSearch
+
+```bash 
+# Kali Tool 
+❯ ldapsearch -h IP -x -s base namingcontexts 
+	# x = Autenticación simple 
+	# h = Host 
+	# s = Scope  
+
+❯ ldapsearch -h IP -x -b "DC=domain,DC=com" 
+
+❯ ldapsearch -x -h IP -b "DC=domain,DC=com" "objectclass=*"
+
+❯ ldapsearch -x -h IP -b "DC=domain,DC=com" "objectclass=user" enm    # Identificar las cuentas de usuarios asociadas al dominio, no se cuentan los que no tengan 'CN=Users', ademas muestra la versión de LDAP
+```
+
 ## AD Explorer 
 
 ```bash 
@@ -20,6 +36,7 @@ Nota:
 ❯ https://www.ldap-account-manager.org
 ❯ https://securityxploded.com 
 ```
+
 ## Nmap y Python3
 
 ```bash 
@@ -42,19 +59,3 @@ Nota:
 	❯ connection.entries   # Muestra los atributos de usuarios 
 ```
 
-## LDAPSearch
-
-```bash 
-# Kali Tool 
-❯ ldapsearch -h IP -x -s base namingcontexts 
-	# x = Autenticación simple 
-	# h = Host 
-	# s = Scope  
-
-❯ ldapsearch -h IP -x -b "DC=domain,DC=com" 
-
-❯ ldapsearch -x -h IP -b "DC=domain,DC=com" "objectclass=*"
-
-# Identificar las cuentas de usuarios asociadas al dominio, no se cueuntan las que no tengan 'CN=Users', ademas de moestra la versión de LDAP
-❯ ldapsearch -x -h IP -b "DC=domain,DC=com" "objectclass=user" enm  
-```
