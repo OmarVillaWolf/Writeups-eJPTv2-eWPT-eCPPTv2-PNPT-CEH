@@ -6,6 +6,7 @@ Tags: #Hacking #Enumeration #DNS #Dig #DNSZoneTransfer
 
 ```bash 
 # Kali Tool 
+❯ dig www.domain.com                         # Muestra la IP del dominio 
 ❯ dig ns www.domain.com                      # Muestra los nombres de servidores 
 ❯ dig @name_server www.domain.com axfr       # Ataque de transferencia de zona 
 ❯ dig www.domain.com axfr                    # Ataque de transferencia de zona 
@@ -21,6 +22,9 @@ Tags: #Hacking #Enumeration #DNS #Dig #DNSZoneTransfer
 ## NSLookup
 
 ```bash 
+# Kali Tool 
+❯ nslookup www.domain.com        # Muestra la IP del dominio 
+
 # Windows Tool 
 ❯ nslookup 
 	❯ set querytype=soa
