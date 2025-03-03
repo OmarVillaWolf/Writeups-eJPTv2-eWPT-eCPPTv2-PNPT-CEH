@@ -1,6 +1,6 @@
-# Sniffing de red 
+# Sniffing de red pasivo
 
-Tags: #Hacking #Sniffing #Wireshark 
+Tags: #Hacking #Sniffing #Wireshark #Ñ
 
 ## Wireshark 
 
@@ -8,16 +8,22 @@ Tags: #Hacking #Sniffing #Wireshark
 # Windows Tool 
 ❯ wireshark &       # Para snifear el tráfico en la interface 
 
-Filtros:
+# Filtrar paquetes 
 ❯ http.request.method eq POST       # Filtrar por el método POST 
-	1. Ir a la opción 'Edit > Find Packet' para agregar un nuevo filtro 
-	2. Seleccionar 'String, Packet Details y Narrow(UTF8/ASCII)' y colocar 'pwd' 
-	3. Dar click en 'Find'
+❯ tcp.port == 80 and http.method == POST 
+❯ tcp.port eq 21                  # Filtrar por un puerto en especifico 
+❯ tcp.flags.syn == 1              # Filtrar por paquetes 
+❯ ip.addr == 1.1.1.1              # Filtrar por la dirección IP y buscar texto en TCP de la IP filtrada
 
-1. Tambien se puede dare click derecho 'Follow > TCP Stream' y se mostrará el string completo entre la máquina víctima y el sitio web 
-2. Tambien se puede aplicar filtros 
+# DoS (SYN - SYN ACK)
+	1. Ir a 'Stadistics > Conversations > IPV4' y mirar el que manda mas paquetes, esto se puede hacer filtrando por 'bytes'
 
-❯ tcp.port eq 21    # Filtrar por un puerto en especifico 
+Notas:
+	1. Se puede segur la trama en 'Follow > HTTP' 
+	2. Se puede segur la trama en 'Follow > TCP' donde se puede aumentar el 'Stream' para ver mas contenido como algun texto
+	3. Se puede encontrar y extraer archivos 'Export Objects > HTTP' despues se filtra en 'Content Type' y guardar el archivo de interes para ver si hay contenido en el
+	4. Para encontrar comentarios se debe selccionar el paquete y dar click en el icono de la izquierda inferior que es una libreta y una pluma 
+	5. Activar la barra de busqueda con 'Ctrl + F' para buscar un string especifico 
 ```
 
 ## Omnipeek Network Protocol Analyzer
