@@ -1,0 +1,92 @@
+# Cifrar información 
+
+Tags: #Hacking #Criptografia #Ñ 
+
+## HashMyFiles
+
+```bash 
+# Windows Tool para calcular y comparar hashes 
+❯ hashmyfiles.exe       # Ejecutar el programa 
+
+Notas:
+	1. Seleccionar el folder para calcular los hashes 'MD5, SHA1' de todos los archivos
+	2. En 'Options > HashTypes' se puede agregar o quitar los diferentes hashes  
+```
+
+## CryptoForge
+
+```bash 
+# Windows Tool para cifrar o descifrar archivos 
+❯ cryptoforge.exe       # Ejecutar el programa y se colocará como opción al momento de dar clic derecho en un archivo 
+
+Notas:
+	1. Dar click derecho sobre un archivo y seleccionar 'Encrypt' 
+	2. Agregar una password y cifrar el documento 
+
+
+❯ cryptoforgeText.exe   # Sirve para escribir un texto y despues cifrarlo 
+
+Notas:
+	1. Escribir un texto y seleccionar 'Encrypt' 
+	2. Agregar una password y cifrar el documento 
+	3. Se puede guardar como un archivo 
+```
+
+## BCTextEncoder
+
+```bash 
+# Windows Tool para cifrar y descifrar texto en archivos
+❯ BCTextEncoder.exe      # Ejecutar el programa 
+
+Notas:
+	1. Escribir un texto en la parte de arriba y seleccionar 'Encode' 
+	2. Agregar una password y cifrar el documento
+
+Notas2:
+	1. Se generará un archivo con un banner con la siguiente leyenda "BEGIN ENCODE MESSAGE"
+	2. Además de, mostrar la versión, mostrar el enconder utilizado "BCTextEncoder" y el texto cifrado 
+
+Notas3: 
+	1. Para descifrar el mensaje, se debe de copiar todo el texto incluyendo el banner del archivo en la herramienta en la parte de abajo
+	2. Dar click en 'Decode' y agregar la contraseña
+```
+
+## Cryptool 
+
+```bash 
+# Windows Tool para cifrar o descifrar data '.hex' manipulando la longitud de llave  
+❯  # Ejecutar el programa 
+
+Notas:
+	1. Abrir el archivo con extensión hexadecimal 
+	2. Dar click en 'Analysis > Symmetric Encryption (Modern) > RC4'
+	3. Modificar la longitude de llave '8, 16 bits' y dar click en 'Start'
+	4. En el resultados en la parte de descripción se observará el texto  
+```
+
+## HashCalc
+
+```bash 
+# Windows Tool donde se carga un archivo y devuelve los diferentes hashes
+❯ hashcalc.exe        # Sirve para comparar el hash en un archivo 
+
+Notas:
+	1. Seleccionar archivo y subir el documento 
+	2. Dar click en calcular 
+	3. Solo muestra los algoritmos seleccionados 
+```
+
+## MD5 Calculator 
+
+```bash 
+# Windows Tool
+❯ md5_calculator.exe   # Ejecutar el programa 
+
+Notas:
+	1. Seleccionar el archivo y subir el documento 
+	2. Dar click en 'calculate' y muestra el hash 'MD5'
+	3. Dar click en 'Copy' para copiar el hash que se ha mostrado y pegarlo en 'Verify MD5 Value'
+	4. Despues, remover el archivo y modificarlo 
+	5. Volver a subir el archivo y compararlo 
+```
+
