@@ -2,27 +2,6 @@
 
 Tags: #Linux #Comandos
 
-## Banner Grabbing 
-
-* Banner Grabbing: Es una técnica para reunir información usada por los pentesters para enumerar información del sistema operativo 'target', así, como los servicios que están corriendo en los puertos abiertos.  El objetivo primario es identificar el servicio que esta corriendo en un puerto especifico así como la versión del servicio. El banner grabbing se ejecuta a través de varias técnicas:
-	* Ejecutar una detección de servicio con Nmap.
-	* Conectarse a un puerto abierto con Netcat. 
-	* Autenticarse con el servicio (Si el servicio soporta la autenticación) por ejemplo: SSH, FTP, Telnet, etc...
-
-```bash 
-1. Usar Nmap para ver los puertos abiertos, versiones, SO, banner, etc...
-❯ nmap -sV --script=banner <IP>
-
-2. Usar Netcat para conectarse a un puerto abierto, a veces nos muestra el 'Banner' 
-❯ nc <IP> <Port>           
-
-3. Usar Searchsploit para buscar algna vulnerabilidad en la version del puerto abierto
-❯ searchsploit <servicio> <version>
-
-4. Autenticarnos son el servicio, a veces nos muestra el 'Banner' 
-❯ ssh <user>@<IP> 
-```
-
 ## Comandos terminal Linux
 
 ```bash 
