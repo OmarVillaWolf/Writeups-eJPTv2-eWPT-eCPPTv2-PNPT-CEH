@@ -2,6 +2,27 @@
 
 Tags: #Web #Reconocimiento #Escaneo  #HTTP #HTTP3 #Metodos
 
+## Banner Grabbing 
+
+* Banner Grabbing: Es una técnica para reunir información usada por los pentesters para enumerar información del sistema operativo 'target', así, como los servicios que están corriendo en los puertos abiertos.  El objetivo primario es identificar el servicio que esta corriendo en un puerto especifico así como la versión del servicio. El banner grabbing se ejecuta a través de varias técnicas:
+	* Ejecutar una detección de servicio con Nmap.
+	* Conectarse a un puerto abierto con Netcat. 
+	* Autenticarse con el servicio (Si el servicio soporta la autenticación) por ejemplo: SSH, FTP, Telnet, etc...
+
+```bash 
+1. Usar Nmap para ver los puertos abiertos, versiones, SO, banner, etc...
+❯ nmap -sV --script=banner <IP>
+
+1. Usar Netcat para conectarse a un puerto abierto, a veces nos muestra el 'Banner' 
+❯ nc <IP> <Port>           
+
+1. Usar Searchsploit para buscar algna vulnerabilidad en la version del puerto abierto
+❯ searchsploit <servicio> <version>
+
+1. Autenticarnos son el servicio, a veces nos muestra el 'Banner' 
+❯ ssh <user>@<IP> 
+```
+
 ## Practicar 
 
 ```bash 
@@ -233,11 +254,15 @@ En Windows:  iss apppool\defaultapppool, User, NT Authority\System
 ```
 
 ```bash 
-❯ wig ❮http://❮IP❯                  # Web Information Gathered, reporta las versiones de los servicios en la web
+❯ wig http://❮IP❯        # WebApp Information Gathered recopila info de la aplicación web y reporta las versiones de los servicios en la web, el CMS 'Content Management System' que se esta utilizando, vulnerabilidades, etc...
+```
+
+```bash 
+❯ lbd http://❮IP❯        # Identificar el servicio de HTTP-Load Balancing del servidor   
 ```
 
 ```bash
-❯ curl ❮IP❯ | bash                  # Obtener un index.html del servidor y con 'bash' se interpretará la data 
+❯ curl ❮IP❯ | bash       # Obtener un index.html del servidor y con 'bash' se interpretará la data 
 
 ❯ curl ❮IP❯ | more       
 
@@ -246,6 +271,8 @@ En Windows:  iss apppool\defaultapppool, User, NT Authority\System
 
 ```bash
 ❯ curl http://❮IP❯ -v                # Mirar los headers de la pagina web 'Request '
+
+❯ curl -I ❮IP❯                       # Hacer 'Banner grabbing' y obtener info del 'ETag, Server, etc...' 
 
 ❯ curl -s -X GET http://❮IP❯ -I      # Mirar las cabeceras de respuesta de la pagina web 
 
