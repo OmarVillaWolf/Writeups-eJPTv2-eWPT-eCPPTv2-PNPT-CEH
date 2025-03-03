@@ -83,21 +83,6 @@
             }
           },
           {
-            "id": "18a045c58e4504c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/20, 21, 134 - FTP - TFPT.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "20, 21, 134 - FTP - TFPT"
-            }
-          },
-          {
             "id": "15c25c9340b47b23",
             "type": "leaf",
             "state": {
@@ -112,8 +97,7 @@
               "title": "0 DC Enumeration"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -251,9 +235,17 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "18a045c58e4504c0",
+  "active": "f0ac4cd3eab67f54",
   "lastOpenFiles": [
+    "0 Hacking/07 Sniffing/2 Network Sniffing.md",
+    "7 OWASP TOP 10/24 IDORs.md",
+    "2 Ports/80.1 WordPress.md",
     "3 Tools/Hydra.md",
+    "2 Ports/80 - HTTP.md",
+    "3 Tools/Nikto.md",
+    "1 Com Lin & Win/3 Hacking/ReverShell.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Ports/20, 21, 134 - FTP - TFPT.md",
     "0 Hacking/10 Session Hijacking/1 Perform Session Hijacking.md",
     "0 Hacking/10 Session Hijacking/2 Clickhijacking.md",
     "0 Hacking/08 Social Engineering/2 Phishing Detect.md",
@@ -261,8 +253,6 @@
     "0 Hacking/14 Hacking Mobile/1 Android Devices.md",
     "0 Hacking/12 SQL injection/1 SQL injection.md",
     "0 Hacking/06 Malware Threats/1 Troyanos.md",
-    "0 Hacking/07 Sniffing/2 Network Sniffing.md",
-    "2 Ports/80.1 WordPress.md",
     "0 Hacking/13 Wireless Networks/1 Wifi Attacks.md",
     "2 Ports/Ports DC/0 DC Enumeration.md",
     "0 Hacking/06 Malware Threats/3 Static Malware Analysis.md",
@@ -273,12 +263,6 @@
     "0 Hacking/05 System Hacking/2 Password Cracking.md",
     "3 Tools/SQLMap.md",
     "2 Ports/80.3 Drupal.md",
-    "0 Hacking/03 Enumeration/5 DNS.md",
-    "0 Hacking/06 Malware Threats/4 Dynamic Malware Analysis.md",
-    "0 Hacking/05 System Hacking/4.md",
-    "0 Hacking/05 System Hacking/1 Active Attack.md",
-    "0 Hacking/07 Sniffing/1 Sniffing activo.md",
-    "0 Hacking/17 Cryptography/3 Análisis.md",
     "0 Hacking/17 Cryptography",
     "0 Hacking/16 Cloud Computing",
     "0 Hacking/15 IoT Hacking",
