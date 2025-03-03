@@ -56,11 +56,3 @@ Nota:
 
 ❯ run vnc     # Crear un sesión de VNC en Meterpreter y sirve para visualizar lo que pasa en la maquina victima 
 ```
-
-## Armitage 
-
-```bash 
-❯ 
-❯ 
-❯ 
-```
