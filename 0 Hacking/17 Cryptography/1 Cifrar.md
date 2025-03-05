@@ -90,3 +90,14 @@ Notas:
 	5. Volver a subir el archivo y compararlo 
 ```
 
+## AES tool 
+
+```bash 
+# Windows Tool
+❯ AES-tool2.7.exe    # Ejecutar el programa para cifrar o descifrar un archivo '.aes'
+
+Notas:
+	1. Abrir el archivo a descifrar 
+	2. Colocar la password si es que el archivo la solicita 
+	3. Dar click en 'Decrypt' y colocar la ruta en donde se guardara el archivo 
+```
