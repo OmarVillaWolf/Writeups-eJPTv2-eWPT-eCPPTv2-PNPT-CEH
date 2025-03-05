@@ -15,13 +15,20 @@ Nota:
 ❯ python3 phonesploit.py   # Ejecutar la herramienta 
 
 	❯ 3                   # Conectar un nuevo telefono 
-	❯ IP_Phone            # Agregar la dirección IP del telefono 
+	❯ IP_Phone            # Agregar la dirección IP del telefono  
+	❯ p                   # Cambiar de pagina para ver mas opciones en PhoneSploit
+	❯ b                   # Regresar al menu anterior 
 		❯ 4              # Acceder a una shell en el dispositivo 
-		❯ pwd            # Mirar el directorio actual 
+		❯ IP             # Cuando te pide ingresar el nombre, es la IP del dispositivo
+		❯ pwd            # Mirar el directorio actual esperando que sea la raiz '/'
 		❯ ls             # Listar el contenido 
 		❯ cd sdcard      # Ir a la tarjeta SD 
 		❯ cd Download    # Ir al directorio donde se encuentra la imagen a descargar 
+		❯ cat file.txt   # Mirar el contenido del archivo 
 		❯ exit
+	❯ 9                   # Descargar folders desde el telefono a la PC
+		❯ /sdcard/Dir/Image.png   # Ruta del telefono a descargar 
+		❯ /home/kali/Desktop      # Ruta del PC en donde se guardará el folder 
 	❯ 7                   # Screen shot a picture on a phone
 		❯ /home/kali/Desktop    # Agregar la ruta en donde se guardará el Screen Shot 
 	❯ 14                  # Lista todas las aplicaciones en el telefono 
@@ -29,6 +36,7 @@ Nota:
 		❯ com.android.calculator2   # Ejecutar la acción e iniciar la calculadora en el telefono 
 	❯ 18                  # Muestra info de Mac/Inet
 	❯ 21                  # NetStat que es el status de la conectividad de red 
+	❯ 24                  # Obtener el Keycode 
 ```
 
 ## ADB
