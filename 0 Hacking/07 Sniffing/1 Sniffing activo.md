@@ -21,18 +21,19 @@ Tags: #Hacking #Sniffing
 # 'DHCP Starvation' y sirve para consumir todas las direcciones IP disponibles desntro del scope del DHCP  
 
 # Kali Tool 
-❯ wireshark &       # Para snifear el tráfico en la interface 
+❯ wireshark &       # Snifear el tráfico del ataque al protocolo DHCP, donde se encontra la transacción del ID
 
 ❯ yersenia -I    
 
 	# I = Modo interactivo 
 
 Nota: 
-	1. 'h' muestra la ayuda 
+	1. 'h' muestra la ayuda y como aplicar los comandos 
 	2. 'q' Salir del menú de ayuda 
 	3. 'F2' para seleccionar el modo 'DHCP Fields'
-		1. '1' para enviar un paquete de descubrimiento 
-		2. 'q' para frenar el ataque 
+		1. 'x' para listar los tipos de ataques 
+		2. '1' para enviar un paquete de descubrimiento 
+		3. 'q' para frenar el ataque 
 ```
 
 ## Arpspoof
