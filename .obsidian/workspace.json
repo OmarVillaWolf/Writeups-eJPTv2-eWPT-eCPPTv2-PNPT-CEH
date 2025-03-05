@@ -8,37 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f0ac4cd3eab67f54",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Hacking/12 SQL injection/1 SQL injection.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "1 SQL injection"
-            }
-          },
-          {
-            "id": "53005a4172221a4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Hacking/08 Social Engineering/2 Phishing Detect.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "2 Phishing Detect"
-            }
-          },
-          {
-            "id": "1d62704d2b0cf5b9",
+            "id": "235f20800ce59f56",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,36 +20,6 @@
               },
               "icon": "lucide-file",
               "title": "1 Troyanos"
-            }
-          },
-          {
-            "id": "500239d911dfbfde",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Hacking/13 Wireless Networks/1 Wifi Attacks.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "1 Wifi Attacks"
-            }
-          },
-          {
-            "id": "b979b6a93c98d5b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0 Hacking/07 Sniffing/2 Network Sniffing.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "2 Network Sniffing"
             }
           },
           {
@@ -235,34 +175,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "f0ac4cd3eab67f54",
+  "active": "235f20800ce59f56",
   "lastOpenFiles": [
-    "0 Hacking/07 Sniffing/2 Network Sniffing.md",
-    "7 OWASP TOP 10/24 IDORs.md",
-    "2 Ports/80.1 WordPress.md",
-    "3 Tools/Hydra.md",
-    "2 Ports/80 - HTTP.md",
-    "3 Tools/Nikto.md",
-    "1 Com Lin & Win/3 Hacking/ReverShell.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "2 Ports/20, 21, 134 - FTP - TFPT.md",
-    "0 Hacking/10 Session Hijacking/1 Perform Session Hijacking.md",
-    "0 Hacking/10 Session Hijacking/2 Clickhijacking.md",
-    "0 Hacking/08 Social Engineering/2 Phishing Detect.md",
-    "0 Hacking/08 Social Engineering/1 Ingeniería Social.md",
-    "0 Hacking/14 Hacking Mobile/1 Android Devices.md",
-    "0 Hacking/12 SQL injection/1 SQL injection.md",
-    "0 Hacking/06 Malware Threats/1 Troyanos.md",
     "0 Hacking/13 Wireless Networks/1 Wifi Attacks.md",
+    "0 Hacking/10 Session Hijacking/2 Clickhijacking.md",
+    "0 Hacking/06 Malware Threats/1 Troyanos.md",
     "2 Ports/Ports DC/0 DC Enumeration.md",
+    "0 Hacking/07 Sniffing/2 Network Sniffing.md",
+    "0 Hacking/07 Sniffing/1 Sniffing activo.md",
+    "0 Hacking/06 Malware Threats/4 Dynamic Malware Analysis.md",
+    "0 Hacking/03 Enumeration/7 RPC, SMB y FTP p-445.md",
     "0 Hacking/06 Malware Threats/3 Static Malware Analysis.md",
-    "0 Hacking/12 SQL injection/2 Detect SQLi.md",
-    "0 Hacking/17 Cryptography/2 Cifrado disco.md",
-    "0 Hacking/17 Cryptography/1 Cifrar.md",
     "0 Hacking/05 System Hacking/3 Steganography.md",
     "0 Hacking/05 System Hacking/2 Password Cracking.md",
-    "3 Tools/SQLMap.md",
-    "2 Ports/80.3 Drupal.md",
+    "0 Hacking/05 System Hacking/1 Active Attack.md",
+    "0 Hacking/04 Vulnerability Analysis/2 OpenVAS, Nikto.md",
+    "0 Hacking/04 Vulnerability Analysis/1 CWE, CVE.md",
+    "3 Tools/Nmap.md",
+    "0 Hacking/02 Scanning Networks/1 Scanning Networks.md",
+    "0 Hacking/03 Enumeration/5 DNS p-53.md",
+    "0 Hacking/03 Enumeration/3 LDAP p-389.md",
+    "0 Hacking/03 Enumeration/1 NetBIOS.md",
+    "0 Hacking/03 Enumeration/6 SMTP p-25.md",
+    "0 Hacking/03 Enumeration/4 NFS p-2049.md",
+    "0 Hacking/03 Enumeration/2 SNMP p-161.md",
+    "0 Hacking/12 SQL injection/1 SQL injection.md",
+    "0 Hacking/17 Cryptography/1 Cifrar.md",
+    "0 Hacking/17 Cryptography/2 Cifrado disco.md",
+    "0 Hacking/08 Social Engineering/2 Phishing Detect.md",
     "0 Hacking/17 Cryptography",
     "0 Hacking/16 Cloud Computing",
     "0 Hacking/15 IoT Hacking",
