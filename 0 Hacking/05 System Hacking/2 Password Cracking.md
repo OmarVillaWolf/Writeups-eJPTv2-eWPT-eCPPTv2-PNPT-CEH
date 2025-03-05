@@ -24,6 +24,6 @@ Tags: #Hacking #PasswordCracking #Ñ
 
 Nota:
 	1. Al iniciar, seleccionar 'Password Auditing Wizard > Windows > A remote machine'
-	2. Agregar el usuario, la password asi como la IP del dominio 
+	2. Agregar el usuario, la password asi como la IP del dominio en el host 
 	3. Seleccionar 'Quick password audit' y generar el reporte en CSV
 ```
