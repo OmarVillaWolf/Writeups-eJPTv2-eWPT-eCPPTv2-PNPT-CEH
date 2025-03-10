@@ -13,31 +13,62 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Hacking/06 Malware Threats/1 Troyanos.md",
+                "file": "0 Hacking/06 Malware Threats/3 Static Malware Analysis.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1 Troyanos"
+              "title": "3 Static Malware Analysis"
             }
           },
           {
-            "id": "15c25c9340b47b23",
+            "id": "e67712071ca2216c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/0 DC Enumeration.md",
+                "file": "2 Ports/Ports DC/445 - SMB.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "0 DC Enumeration"
+              "title": "445 - SMB"
+            }
+          },
+          {
+            "id": "a41debff7e6138ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Hydra.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Hydra"
+            }
+          },
+          {
+            "id": "a7ad9b35418ed43e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Com Lin & Win/3 Hacking/ReverShell.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "ReverShell"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -175,34 +206,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "235f20800ce59f56",
+  "active": "a7ad9b35418ed43e",
   "lastOpenFiles": [
-    "0 Hacking/13 Wireless Networks/1 Wifi Attacks.md",
-    "0 Hacking/10 Session Hijacking/2 Clickhijacking.md",
-    "0 Hacking/06 Malware Threats/1 Troyanos.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
-    "0 Hacking/07 Sniffing/2 Network Sniffing.md",
-    "0 Hacking/07 Sniffing/1 Sniffing activo.md",
-    "0 Hacking/06 Malware Threats/4 Dynamic Malware Analysis.md",
-    "0 Hacking/03 Enumeration/7 RPC, SMB y FTP p-445.md",
+    "1 Com Lin & Win/3 Hacking/Msfvenom.md",
+    "3 Tools/Metasploit/5 MSF Explotation.md",
+    "1 Com Lin & Win/3 Hacking/ReverShell.md",
+    "3 Tools/Metasploit/4 MSF Gathering & Enumeration.md",
+    "3 Tools/Metasploit/2 MSF Vulnerability Scanning.md",
+    "3 Tools/Metasploit/1 Metasploit.md",
+    "2 Ports/80.1 WordPress.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "2 Ports/80.5 Apache - Shellshock.md",
+    "2 Ports/80.6 Tomcat.md",
+    "2 Ports/80.7 IIS - Webdav.md",
+    "2 Ports/80 - HTTP.md",
+    "3 Tools/BurpSuite.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "3 Tools/Hydra.md",
+    "2 Ports/22 - SSH.md",
     "0 Hacking/06 Malware Threats/3 Static Malware Analysis.md",
-    "0 Hacking/05 System Hacking/3 Steganography.md",
-    "0 Hacking/05 System Hacking/2 Password Cracking.md",
-    "0 Hacking/05 System Hacking/1 Active Attack.md",
-    "0 Hacking/04 Vulnerability Analysis/2 OpenVAS, Nikto.md",
-    "0 Hacking/04 Vulnerability Analysis/1 CWE, CVE.md",
-    "3 Tools/Nmap.md",
-    "0 Hacking/02 Scanning Networks/1 Scanning Networks.md",
-    "0 Hacking/03 Enumeration/5 DNS p-53.md",
-    "0 Hacking/03 Enumeration/3 LDAP p-389.md",
-    "0 Hacking/03 Enumeration/1 NetBIOS.md",
-    "0 Hacking/03 Enumeration/6 SMTP p-25.md",
-    "0 Hacking/03 Enumeration/4 NFS p-2049.md",
-    "0 Hacking/03 Enumeration/2 SNMP p-161.md",
-    "0 Hacking/12 SQL injection/1 SQL injection.md",
-    "0 Hacking/17 Cryptography/1 Cifrar.md",
-    "0 Hacking/17 Cryptography/2 Cifrado disco.md",
-    "0 Hacking/08 Social Engineering/2 Phishing Detect.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/2 Sudoers.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/1 SSH.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/5 Automating.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/4 CronServices.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/2 UsersGroups.md",
+    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/1 SystemInfo.md",
+    "4 PrivEsc Lin & Win/Post-Explotation.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/0 LinPEAS.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/3 SUID.md",
     "0 Hacking/17 Cryptography",
     "0 Hacking/16 Cloud Computing",
     "0 Hacking/15 IoT Hacking",
