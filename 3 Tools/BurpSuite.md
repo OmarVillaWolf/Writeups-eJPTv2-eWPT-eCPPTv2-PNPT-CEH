@@ -6,7 +6,7 @@ Tags: #BurpSuite #Escaneo  #Web #Enumeracion
 
 Las principales herramientas que componen BurpSuite son las siguientes:
 
--   **Proxy**: Es la herramienta principal de BurpSuite y actúa como un intermediario entre el navegador web y el servidor web. Esto permite a los usuarios interceptar y modificar las solicitudes y respuestas HTTP y HTTPS enviadas entre el navegador y el servidor. El Proxy también es útil para la identificación de vulnerabilidades, ya que permite a los usuarios examinar el tráfico y analizar las solicitudes y respuestas.
+-   **Proxy**: Es la herramienta principal de BurpSuite y actúa como un intermediario entre el navegador web y el servidor web. Esto permite a los usuarios interceptar y modificar las solicitudes y respuestas HTTP y HTTPS enviadas entre el navegador y el servidor. El Proxy también es útil para la identificación de vulnerabilidades, ya que permite a los usuarios examinar el tráfico y analizar las solicitudes y respuestas. Además de, abrir su propio navegador para ir capturando las peticiones. 
 -   **Scanner**: Es una herramienta de prueba de vulnerabilidades automatizada que se utiliza para identificar vulnerabilidades en aplicaciones web. El Scanner utiliza técnicas de exploración avanzadas para detectar vulnerabilidades en la aplicación web, como inyecciones SQL, cross-site scripting (XSS), vulnerabilidades de seguridad de la capa de aplicación (OSWAP Top 10) y más.
 -   **Repeater**: Es una herramienta que permite a los usuarios reenviar y repetir solicitudes HTTP y HTTPS. Esto es útil para probar diferentes entradas y verificar la respuesta del servidor. También es útil para la identificación de vulnerabilidades, ya que permite a los usuarios probar diferentes valores y detectar respuestas inesperadas.
 -   **Intruder**: Es una herramienta que se utiliza para automatizar ataques de fuerza bruta. Los usuarios pueden definir diferentes payloads para diferentes partes de la solicitud, como la URL, el cuerpo de la solicitud y las cabeceras. Posteriormente, Intruder automatiza la ejecución de las solicitudes utilizando diferentes payloads y los usuarios pueden examinar las respuestas para identificar vulnerabilidades.
@@ -22,14 +22,14 @@ Las principales herramientas que componen BurpSuite son las siguientes:
 ## Comandos
 
 ```bash 
-❯ **Click derecho > Copy to file** Para guardar la intercepción del **Proxy** en un archivo **.req** y así usarlo con la herramienta **SQL-Map**
+# 'Click derecho > Copy to file' Para guardar la intercepción del **Proxy** en un archivo **.req** y así usarlo con la herramienta SqlMap'
 
-❯ **Ctrl + I** Para mandar lo del proxy al intruder (I=i)
-❯ **Ctrl + r** Para mandar lo del proxy al repeater
-❯ **Ctrl + u** Para url encodear la data de las peticiones
-❯ **Ctrl + Shift + u** Para url decodear la data de las peticiones
+❯ 'Ctrl + I' Para mandar lo del proxy al intruder (I=i)
+❯ 'Ctrl + r' Para mandar lo del proxy al repeater
+❯ 'Ctrl + u' Para url encodear la data de las peticiones
+❯ 'Ctrl + Shift + u' Para url decodear la data de las peticiones
 
-**/usr/share/wordlists/fasttrack.txt** Diccionario para passwd que generalmente traen los sitios Web 
+'/usr/share/wordlists/fasttrack.txt'  # Diccionario para passwd que generalmente traen los sitios Web 
 ```
 
 ## Rastreo pasivo
