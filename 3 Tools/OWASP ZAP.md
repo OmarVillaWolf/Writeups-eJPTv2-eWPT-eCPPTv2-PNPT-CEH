@@ -2,10 +2,20 @@
 
 Tags: #ZAProxy #Escaneo 
 
-Esta herramienta te crea una página con un proxy en donde puedes interactuar mostrándote ataques y lo que ya ha encontrado previamente con su nivel de criticidad. 
 
 ```bash 
-1. Manual explore 
-2. URL to explore 'http://IP'
-3. Launch Browser
+# Escanear la web 
+1. Escoger 'Automated Scan'  
+2. Colocar la 'IP' o el dominio 'www.domain.com'
+3. Dar click en 'Attack'
+
+Nota:
+	1. Si se coloca el dominio, la herramienta muestra los directorios y el contenido en ellos. Mientras que colocar la IP solo muestra algunos archivos
+	2. Puede hacer 'Web Crawling' 
+
+
+# Ataques a la web 
+1. Escoger 'Manual explore'
+2. Colocar la 'IP' o el dominio 'www.domain.com'
+3. Dar click en 'Launch Browser' para desplegar la web y hacer los ataques 
 ```
