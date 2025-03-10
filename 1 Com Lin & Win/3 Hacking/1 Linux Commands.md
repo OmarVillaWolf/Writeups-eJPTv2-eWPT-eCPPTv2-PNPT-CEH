@@ -204,13 +204,6 @@ Tags: #Linux #Comandos
 	# p = File to attack 'File.zip'
 ```
 
-```bash
-❯ scp <file> root@<IP>:/tmp/chisel          # Podemos tranferir un archivo y lo depositamos en la ruta que hayamos colocado
-	# root = Usuario de la maquina victima 
-	# IP = Direccion de la maquina victima 
-	# file = Archivo a transferir 
-```
-
 ```bash 
 ❯ md5sum file                             # Obtener el hash del archivo 
 ```
@@ -237,17 +230,17 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ lsof -i:80                                # Para ver que servicio esta ocupando cierto puerto
-❯ pwdx 1355887                              # Le pasamos el PID del comando anterior 'lsof' y asi podemos ver en que ruta se esta ejecutando ese servicio 
+❯ lsof -i:80              # Para ver que servicio esta ocupando cierto puerto
+❯ pwdx 1355887            # Le pasamos el PID del comando anterior 'lsof' y asi podemos ver en que ruta se esta ejecutando ese servicio 
 ```
 
 ```bash
-❯ tcpdump -i tun0 icmp -n                   # Nos ponemos en escucha en la interfaz i = Tun0 para trazas ICMP, n = No trazas DNS
+❯ tcpdump -i tun0 icmp -n      # Nos ponemos en escucha en la interfaz i = Tun0 para trazas ICMP, n = No trazas DNS
 ```
 
 ```bash
-❯ git clone https://❮IP❯                    # Nos clonamos un repositorio de Github
-❯ svn checkout https://❮IP❯                 # Para clonar una subcarpeta de Github y en donde dice /tree/master quitarlo de la url y colocar /trunk y el resto de la url
+❯ git clone https://❮IP❯           # Nos clonamos un repositorio de Github
+❯ svn checkout https://❮IP❯        # Para clonar una subcarpeta de Github y en donde dice /tree/master quitarlo de la url y colocar /trunk y el resto de la url
 ```
 
 ```bash 
