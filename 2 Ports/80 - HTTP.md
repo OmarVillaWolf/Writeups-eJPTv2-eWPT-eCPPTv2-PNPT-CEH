@@ -211,13 +211,6 @@ En Windows:  iss apppool\defaultapppool, User, NT Authority\System
 ## Comandos
 
 ```bash 
-❯ nc ❮IP❯ 80                         # Enumerar la página web 
-
-	❯ OPTIONS http://IP HTTP/1.0    # Mirar la página web en código HTML y sus opciones permitidas 'GET,POST,etc...'
-	❯ host:IP
-```
-
-```bash 
 ❯ cadaver http://IP/dir/
 
 	❯ ls                           # Listar el contenido del directorio 
@@ -237,10 +230,11 @@ En Windows:  iss apppool\defaultapppool, User, NT Authority\System
 ```
 
 ```bash
-❯ whatweb ❮http://❮IP❯              # Obtener una breve descripción del gestor de contenidos del puerto 80
+❯ whatweb ❮http://❮IP❯              # Obtener una breve descripción del gestor de contenidos, así como el servidor y algunas tecnologías utilizadas 
 
 	# Mirar la jQuery
 	# Servidor Web
+	# Tecnologías 
 ```
 
 ```bash
@@ -250,7 +244,7 @@ En Windows:  iss apppool\defaultapppool, User, NT Authority\System
 ```bash
 ❯ whatweb ❮http://❮IP❯ -v
 
-	# v = Mirar las cabeceras de la pagina web, las cuales aveces nos revelan cosas
+	# v = Mirar las cabeceras de la pagina web
 ```
 
 ```bash 
@@ -259,6 +253,7 @@ En Windows:  iss apppool\defaultapppool, User, NT Authority\System
 
 ```bash 
 ❯ lbd http://❮IP❯        # Identificar el servicio de HTTP-Load Balancing del servidor   
+❯ lbd domain.com         # Si se coloca un dominio de internet 
 ```
 
 ```bash
@@ -269,19 +264,23 @@ En Windows:  iss apppool\defaultapppool, User, NT Authority\System
 ❯ curl http://IP/cgi-bin/ | more    # Mirar las cabeceras de ese directorio
 ```
 
-```bash
-❯ curl http://❮IP❯ -v                # Mirar los headers de la pagina web 'Request '
-
-❯ curl -I ❮IP❯                       # Hacer 'Banner grabbing' y obtener info del 'ETag, Server, etc...' 
-
-❯ curl -s -X GET http://❮IP❯ -I      # Mirar las cabeceras de respuesta de la pagina web 
-
-	# I = i mayuscula
-	# s = silence
-```
-
 ```bash 
 ❯ wget "http://❮IP❯/index"           # Descargar el archivo index 
+```
+
+## Banner Grabbing 
+
+```bash
+❯ curl -s -X GET http://❮IP❯ -I      # Hacer 'Banner grabbing' y obtener info del 'ETag, Server, etc...'
+❯ curl http://❮IP❯ -v                # Mirar los headers de la pagina web 'Request '
+
+❯ telnet IP 80                       
+	GET / HTTP/1.0                  # Dar dos enter para obtener la información
+	
+❯ nc IP 80 
+	HEAD / HTTP/1.0                 # Dar dos enter para obtener la información
+	OPTIONS http://IP HTTP/1.0      # Mirar la página web en código HTML y sus opciones permitidas 'GET,POST,etc...'
+	host:IP
 ```
 
 ## HTTP3
