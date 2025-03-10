@@ -14,47 +14,49 @@ SSH es un protocolo de administración remota que permite a los usuarios **cont
 ## SSH
 
 ```bash
-❯ ssh ❮User❯@❮IP❯                              # Conectarse por SSH
+❯ ssh ❮User❯@❮IP❯                  # Conectarse a SSH
 ```
 
 ```bash
-❯ ssh ❮User❯@❮IP❯ -p 2222                      # Conectarse por SSH en un puerto especifico
+❯ ssh ❮User❯@❮IP❯ -p 2222          # Conectarse a SSH en un puerto especifico
 ```
 
 ```bash
-❯ sshpass -p <'PASSWORD'> ssh <USER>@<IP>      # Conectarse por SSH colocando la passwd en texto claro 
+❯ sshpass -p <'PASSWORD'> ssh <USER>@<IP>      # Conectarse a SSH colocando la passwd en texto claro 
 ```
 
 ```bash
-❯ ssh -i id_rsa <user>@<IP>         # Conectarse por SSH con un 'id_rsa' y privilegio '600'
+❯ ssh -i id_rsa <user>@<IP>         # Conectarse a SSH con un 'id_rsa' y privilegio '600'
 ```
 
 ```bash
-❯ ssh <user>@localhost              # Conectar por SSH localmente sin proporcionar passwd con la 'authorized_key' 
+❯ ssh <user>@localhost              # Conectar a SSH localmente sin proporcionar passwd solo con  'authorized_key' 
 ```
 
 ```bash
-# Cuando estamos en una 'restricted bash' (rbash) se pueden ejecutar comandos en el SSH, esto si la 'restricted bash' esta mal configurada
+# En una 'restricted bash' (rbash) se puede ejecutar comandos en el SSH, si la 'restricted bash' esta mal configurada
 
-❯ ssh <User>@<IP> <Command>                        # Podemos ejecuta un comando, y no nos cargara la restricted bash, y en este caso podemos hacer que nos de una bash. 
-	bash                                          # Colocamos bash como comando, podremos interactuar aunque no nos de una pseudo-consola. Pero podemos hacer un tratamiento de la consola Linux
+❯ ssh <User>@<IP> <Command>    # Ejecutar un comando y hacer que la restricted bash proporcione una bash. 
+	bash                      # Colocar bash como comando, se podrá interactuar aunque no se tenga una pseudo-consola. Pero se puede hacer un tratamiento de la consola Linux
 ```
 
 ```bash 
-❯ ssh-keygen                                                     # Creamos una clave publica y una clave privada en nuestra maquina de atacante 
-❯ cat ~/.ssh/id_rsa.pub | tr -d '\n' | xclip -sel clip           # Miramos el contenido de nuestra clave publica    
+❯ ssh-keygen       # Crear una clave publica y una clave privada en Kali 
+❯ cat ~/.ssh/id_rsa.pub | tr -d '\n' | xclip -sel clip   # Mirar el contenido de la clave publica    
 	# ~ = /home/omar/...
 	# tr = Quitar el salto de linea
-	# xclip = Copiarno el output en la clipboard
+	# xclip = Copiar el output en la clipboard
 
-# El resultado lo pegaremos en el archivo que crearemos con nombre 'authorized_keys' en la ruta de la maquina victima que es /root/.ssh
+# El resultado se pega en el archivo que se crea con nombre 'authorized_keys' en la ruta de la maquina victima que es /root/.ssh
 ❯ nvim authorized_keys
 ```
 
-Descargando el Script, podemos enumerar usuarios 
+## Enumerar usuarios 
+
 ```bash
-❯ searchsploit ssh user enumeration                # Es un exploit en Python2 que lo podemos enocntrar con SearchSploit y debe ser <7.7 de version para que funcione
-❯ python2 45939.py <IP> <USER> 2/dev/null          # Para confirmar si ese usuario existe en esa IP de la victima
+❯ searchsploit ssh user enumeration (2)      # Exploit en Python2 para la versión <7.7 de SSH
+
+❯ python2 45939.py <IP> <USER> 2/dev/null    # Verificar si un usuario existe en esa IP
 ```
 
 
