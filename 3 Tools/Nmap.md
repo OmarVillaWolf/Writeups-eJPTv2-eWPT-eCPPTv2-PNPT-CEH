@@ -2,6 +2,7 @@
 
 Tags: #Nmap #Escaneo #UDP #TCP 
 
+* [NSEDocs](https://nmap.org/nsedoc/)
 
 ```bash 
 ❯ zenmap                           # Es la version GUI de nmap
@@ -15,10 +16,17 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ```bash 
-❯ nmap -sn ❮IP/24❯                  # Usara 'Ping Scan' para escanear la red y descubir los diferentes dispositivos en la red
-❯ nmap -PR -sn ❮IP/24❯              # Usara 'ARP' con 'Ping Scan' para escanear la red
+❯ nmap -sn ❮IP/24❯             # Usara 'Ping Scan' para escanear la red y descubir los diferentes dispositivos en la red
+❯ nmap -sn -PR ❮IP/24❯         # Usara 'ARP' con 'Ping Scan' para escanear la red y descubrirá hosts vivos
 
 	# sn = No escanea los puertos despues de descubir un host 'Se refiere a un escaneo de PING', es un ICMP, TCP SYNC
+
+❯ nmap -sn -PU IP            # Escaneo UDP ping 
+❯ nmap -sn -PE IP-255        # Escaneo ICMP echo 
+❯ nmap -sn -PM IP-255        # Escaneo Mask ping (Se usa si el ICMP esta bloqueado)
+❯ nmap -sn -PP IP-255        # Escaneo ICMP timestamp 
+❯ nmap -sn -PS IP-255        # Escaneo TCP Syn ping 
+❯ nmap -sn -PO IP-255        # Usa diferentes protocolos para testear la conectividad 
 ```
 +
 ```bash
@@ -152,29 +160,32 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ## SMB / SAMBA
+
 ```bash
 ❯ locate -r '\.nse$' | xargs grep categories | grep 'default\|version\|safe' | grep smb  # Filtrar los scripts por la categoria 'safe, default o version' que pertenecen al protocolo SMB
 
-❯ nmap -p445 -sCV ❮IP❯                               # Enumeración exaustiva al SMB 
+❯ nmap -p445 -sS -A ❮IP❯                   # Escaneo comprensivo 
 
-❯ nmap -p445 --script safe ❮Target IP❯               # Ejecutar todos los scripts de Nmap que tengan la categoria 'Safe' 
+❯ nmap -p445 -sCV ❮IP❯                     # Enumeración exaustiva al SMB 
 
-❯ nmap -p445 --script='smb-vul-*' ❮IP❯               # Ejecutar todos los scripts de Nmap que empiecen con 'smb-vuln'
+❯ nmap -p445 --script safe ❮Target IP❯     # Ejecutar todos los scripts de Nmap que tengan la categoria 'Safe' 
 
-❯ nmap -p445 --script smb-protocols ❮Target IP❯              # Mirar los protocolos que se estan usando
+❯ nmap -p445 --script='smb-vul-*' ❮IP❯     # Ejecutar todos los scripts de Nmap que empiecen con 'smb-vuln'
 
-❯ nmap -p445 --script smb-security-mode ❮Target IP❯          # Mirar si permite la autenticación de usuarios anonymous
+❯ nmap -p445 --script smb-protocols ❮Target IP❯          # Mirar los protocolos que se estan usando
 
-❯ nmap -p445 --script smb-enum-sessions ❮Target IP❯          # Mirar si hay sesiones activas
+❯ nmap -p445 --script smb-security-mode ❮Target IP❯      # Mirar si permite la autenticación de usuarios anonymous
+
+❯ nmap -p445 --script smb-enum-sessions ❮Target IP❯      # Mirar si hay sesiones activas
 ❯ nmap -p445 --script smb-enum-sessions --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯        
-# Ver si hay sesiones activas, con un usuario y su passwd validos
+# Ver si hay sesiones activas, con un usuario y su passwd validos 'smbserver_771'
 
-❯ nmap -p445 --script smb-enum-shares ❮Target IP❯            # Ver si hay directorios 
+❯ nmap -p445 --script smb-enum-shares ❮Target IP❯         # Ver si hay directorios 
 ❯ nmap -p445 --script smb-enum-shares --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯          
 # Ver si hay directorios con un usuario y passwd validos 
 
-❯ nmap -p445 --script smb-enum-users ❮Target IP❯             # Ver si hay usuarios 
-❯ nmap -p445 --script smb-enum-users --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯          
+❯ nmap -p445 --script smb-enum-users ❮Target IP❯          # Ver si hay usuarios 
+❯ nmap -p445 --script smb-enum-users --script-args smbusername=administrator,smbpassword=smbserver ❮IP❯          
 # Ver si hay usuarios con un usuario y passwd validos 
 
 ❯ nmap -p445 --script smb-server-stats --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
@@ -188,17 +199,17 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 ❯ nmap -p445 --script smb-enum-services ❮Target IP❯ -d 
 ❯ nmap -p445 --script smb-enum-services --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
-# Ver los servicios que estan corriendo
+# Mirar los servicios que estan corriendo
 
 ❯ nmap -p445 --script smb-enum-shares,smb-ls --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
 # Conectarse al SMB y ejecutar 'ls'
 
-❯ nmap -p445 --script smb-os-discovery ❮Target IP❯    # Mirar la version OS de Samba
-
+❯ nmap -p445 --script smb-os-discovery ❮Target IP❯    # Mirar la versión del SO, FQDN, Domain, NetBIOS
 ```
 
-También hay puertos por UDP que pertenecen al Samba como 137,138
 ```bash 
+# Hay puertos por UDP que pertenecen al Samba como 137,138
+
 ❯ nmap ❮Target IP❯ -sU --top-port 25 --open             # Escaneo de puertos UDP, encontramos el 137,138
 ❯ nmap ❮Target IP❯ -sU --top-port 25 --open -sV         # Mirar la version de los puertos encontrados para SMB
 ```
@@ -217,6 +228,7 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ```
 
 ## HTTP
+
 ```bash
 ❯ nmap --script http-enum -p80 ❮Target IP❯ -oN WebScan #  http-enum = Aplica Fuzing a HTTP, utiliza un diccionario de 1000 rutas y ver si hay algunas rutas existen
 
@@ -224,22 +236,25 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 	#  Target IP = Dirección IP que se quiere escanear
 	#  -oN WebScan = Exporta el output a un fichero en formato nmap con nombre “WebScan”
 
+# Enumeración WampServer
+❯ nmap -p 80, 8080, 3306 -sV ❮Target IP❯    # El output debe mostrar el titulo de 'http-title WampServer' en un Apache, además de usar PHP y tener el puerto 3306 de MySQL 'Web phpMyAdmin'
+❯ nmap --script http-tittle,http-server-header -p 80, 8080 ❮Target IP❯
 
-#Enumeracion de IIS
+# Enumeracion de IIS
 ❯ nmap --script http-headers -p80 ❮Target IP❯         # Nos trae informacion sobre las cabeceras
 
-# Nos trae informacion sobre los metodos soportados
+# Muestra información sobre los métodos soportados
 ❯ nmap --script http-methods -p80 ❮Target IP❯ --script-args http-methods.url-path=/webdav/      
 
 # Identifica las instalaciones de Webdav, utilizando opciones y metodos
 ❯ nmap --script http-webdav-scan -p80 ❮Target IP❯ --script-args http-methods.url-path=/webdav/ 
-
 
 # Enumeracion de Apache
 ❯ nmap --script banner -p80 ❮Target IP❯    # Miras el banner y su informacion principal 
 ```
 
 ## HTTPS
+
 ```bash
 ❯ nmap --script ssl-heartbleed -p443 ❮Target IP❯ 	# heartbleed = Verifica si es vulnerable a Heartbleed
 
@@ -248,6 +263,7 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 ```
 
 ## FTP
+
 ```bash
 ❯ nmap --script ftp-anon -p21 ❮Target IP❯              # ftp-enum = Escanea y mira si el usuario invitado 'Anonymous' esta habilitado
 
@@ -270,6 +286,23 @@ También hay puertos por UDP que pertenecen al Samba como 137,138
 
 # Cuando tenemos un usuario valido podemos hacerle fuerza bruta, colocamos la ruta del archivo que contiene al usuario
 ❯ nmap ❮Target IP❯ --script ssh-brute --script-args userdb=/root/users.txt -p22
+```
+
+## SNMP
+
+```bash 
+❯ nmap -sU -p 161 --script=snmp-processes IP    # Enumerar los procesos que se estan ejecutando 
+
+❯ nmap -sU --script snmp-brute IP [--scripts-args snmp-brute.communitiesdb=rockyou.txt] # Ataque de diccionario 
+
+❯ nmap -sU -p 161 --script=snmp-interfaces IP   # Muestra las interfaces del servidor 
+```
+
+## NetBIOS
+
+```bash 
+❯ nmap -sV -v --script nbstat.nse IP 
+❯ nmap -sU -p 137 --script nbstat.nse IP 
 ```
 
 ## MYSQL
