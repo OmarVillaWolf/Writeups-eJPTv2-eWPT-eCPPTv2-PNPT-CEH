@@ -33,7 +33,6 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ```
 
 ```bash 
-# 
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
 	❯ search xoda                             
@@ -328,16 +327,51 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ run 
 ```
 
-## Shellshock (CVE-2014-6271)
+## Puerto 3389/3333 RDP
 
 ```bash 
-# Para confirmar si es vulnerable a Shellshock
+# Identifica si el 'endpoint' esta usando RDP
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
-	❯ use auxiliary/scanner/http/apache_mod_cgi_bash_env     # Usamos el auxiliar 
+	❯ use auxiliary/scanner/rdp/rdp_scanner        # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS ❮IP❯                                        # Colocamos la IP de la maquina victima
+	❯ set RHOSTS ❮IP❯             # Colocamos la IP de la maquina victima
+	❯ set RPORT 3333              # Configuramos el puerto de RDP en caso que no use el de default 3389
 	❯ run 
+```
+
+## Puerto 161 SNMP 
+
+```bash 
+# Escaner del login 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/snmp/snmp_login     # Usar el auxiliar 
+	❯ options
+	❯ set RHOSTS ❮IP❯                           # Colocar la IP de la maquina victima
+	❯ run 
+```
+
+## Puerto 25 SMTP o (465, 587)
+
+```bash 
+# Miramos la version del SMTP
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smtp/smtp_version      # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
+	❯ run 
+```
+
+```bash 
+# Enumeramos cuentas de usuarios por Brute Force 
+❯ msfconsole -q                  # q = Quitar el banner de inicio
+
+	❯ use auxiliary/admin/smtp/smtp_enum                  # Usamos el auxiliar 
+	❯ options
+	❯ set RHOSTS ❮IP❯                                     # Colocamos la IP de la maquina victima
+	❯ run
 ```
 
 ## Puerto 3306 MYSQL 
@@ -506,16 +540,15 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ run
 ```
 
-## Puerto 3389/33333 RDP
+## Shellshock (CVE-2014-6271)
 
 ```bash 
-# Identifica si el 'endpoint' esta usando RDP
+# Para confirmar si es vulnerable a Shellshock
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
-	❯ use auxiliary/scanner/rdp/rdp_scanner        # Usamos el auxiliar 
+	❯ use auxiliary/scanner/http/apache_mod_cgi_bash_env     # Usamos el auxiliar 
 	❯ options
-	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
-	❯ set RPORT 3333                               # Configuramos el puerto de RDP en caso que no use el de default 3389
+	❯ set RHOSTS ❮IP❯                                        # Colocamos la IP de la maquina victima
 	❯ run 
 ```
 
@@ -531,28 +564,6 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ options
 	❯ set RHOSTS ❮IP❯                                         # Colocamos la IP de la maquina victima
 	❯ run 
-```
-
-## Puerto 25 SMTP o (465, 587)
-
-```bash 
-# Miramos la version del SMTP
-❯ msfconsole -q                  # q = Quitar el banner de inicio
-
-	❯ use auxiliary/scanner/smtp/smtp_version      # Usamos el auxiliar 
-	❯ options
-	❯ set RHOSTS ❮IP❯                              # Colocamos la IP de la maquina victima
-	❯ run 
-```
-
-```bash 
-# Enumeramos cuentas de usuarios por Brute Force 
-❯ msfconsole -q                  # q = Quitar el banner de inicio
-
-	❯ use auxiliary/admin/smtp/smtp_enum                  # Usamos el auxiliar 
-	❯ options
-	❯ set RHOSTS ❮IP❯                                     # Colocamos la IP de la maquina victima
-	❯ run
 ```
 
 ------
