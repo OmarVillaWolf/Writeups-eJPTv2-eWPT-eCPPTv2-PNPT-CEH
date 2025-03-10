@@ -52,3 +52,13 @@ Notas:
 	# source = IP de quien lo envia 
 	# source_port = Puerto en donde se recibirá el archivo 
 ```
+
+## Entropía
+
+```bash 
+# Kali Tool 
+❯ apt install ent  
+
+❯ ent file.elf              # Calcular la entropía
+```
+
