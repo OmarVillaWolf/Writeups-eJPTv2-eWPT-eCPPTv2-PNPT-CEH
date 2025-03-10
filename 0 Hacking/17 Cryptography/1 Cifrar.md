@@ -2,6 +2,13 @@
 
 Tags: #Hacking #Criptografia #Ñ 
 
+## Obtener Hash
+
+```bash 
+# Kali Tool 
+❯ sha384sum file.elf      # Calcular el SHA-384
+```
+
 ## HashMyFiles
 
 ```bash 
@@ -35,7 +42,7 @@ Notas:
 ## BCTextEncoder
 
 ```bash 
-# Windows Tool para cifrar y descifrar texto en archivos
+# Windows Tool para cifrar y descifrar texto en archivos 'Encode, Decode'
 ❯ BCTextEncoder.exe      # Ejecutar el programa 
 
 Notas:
@@ -62,6 +69,12 @@ Notas:
 	2. Dar click en 'Analysis > Symmetric Encryption (Modern) > RC4'
 	3. Modificar la longitude de llave '8, 16 bits' y dar click en 'Start'
 	4. En el resultados en la parte de descripción se observará el texto  
+
+Notas2:
+	1. Abrir el archivo con extensión hexadecimal 
+	2. Dar click en 'Encrypt/Decrypt > Symmetric (Modern) > Further Algorithms > Twofish'
+	3. Coloca la longitud de llave '128, 192, 256 bits', además de, el numero de cifrado como el 06 y se coloca en todos los ceros que aparecen
+	4. Al finalizar dar click en 'Decrypt' para ver el mensaje oculto 
 ```
 
 ## HashCalc
