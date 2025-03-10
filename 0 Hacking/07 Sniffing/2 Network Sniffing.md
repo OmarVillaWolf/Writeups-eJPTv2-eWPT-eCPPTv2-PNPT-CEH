@@ -14,7 +14,7 @@ Tags: #Hacking #Sniffing #Wireshark #Ñ
 ❯ tcp.port eq 21                    # Filtrar por un puerto en especifico 
 ❯ tcp.flags.syn == 1                # Filtrar por paquetes 
 ❯ ip.addr == 1.1.1.1                # Filtrar por la dirección IP y buscar texto en TCP de la IP filtrada
-❯ mqtt                              # Filtrar por el procolo mqtt, el mensaje y la alerta se encuentra donde info contenga id
+❯ mqtt                              # Filtrar por el procolo mqtt, el mensaje y la alerta se encuentra donde info contenga id. La alerta se mira en el codigo hexadecimal del mensaje. 
 ❯ dhcp         # Snifear el tráfico del ataque al protocolo DHCP, donde se encuentra la transacción del ID
 ❯ icmp         # Snifear el tráfico del protocolo ICMP para encontrar el paquete ID 'Identifier BE'
 
