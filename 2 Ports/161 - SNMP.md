@@ -1,8 +1,11 @@
-# SNMP
+# SNMP (Simple Network Management Protocol)
 
-Tags: #SNMP #Comandos 
+Tags: #SNMP #Comandos #UDP 
 
-**Simple Network Management Protocol**
+
+```bash 
+❯ snmp_check IP        # Enumera el SNMP, mostando info del sistema, red, interfaces, versión, etc...
+```
 
 ```bash
 /usr/share/seclists/Discovery/SNMP/snmp-onesixtyone.txt     # Diccionario del snmp a usar para Fuerza Bruta 
@@ -19,8 +22,4 @@ Tags: #SNMP #Comandos
 	# v2c = version
 
 ❯ snmwalk -c public -v2c ❮IP❯ 1        # Colocar 1 significa que empezara desde la raiz '/' y asi poder enco0ntrar mas informacion acerca del protocolo, por default empieza desde el 2
-```
-
-```bash 
-❯ snmp-check ❮IP❯        # Muestra info del protocolo snmp 
 ```
