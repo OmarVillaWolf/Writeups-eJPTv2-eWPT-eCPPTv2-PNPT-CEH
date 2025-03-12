@@ -134,7 +134,9 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirse
 ```
 
 ```bash
-❯ gobuster dir -u http://host.com -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 --add-slash -b 403,404
+# Enumeración de directorios en una web 
+
+❯ gobuster dir -u http://host.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 --add-slash -b 403,404
 
 	# dir = Modo enumeracion directorios y archivos 
 	# u = Colocamos la url
@@ -163,13 +165,11 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirse
 	# x = Extensiones a buscar 
 	# --add-slash = Hace la misma funcion que 'f'
 
-Nota: Podemos crear nuestros propios diccionarios para ser mas efectivos 
-
-Nota: En los archivos que encontremos, podemos mirar cada una de las rutas y mirar su codigo fuente para ver si existe algo importante ahi
-
 Nota: 
-	* Si la aplicacion web es Windows podemos usar extensiones como: asp, aspx, html, txt...
-	* Si la aplicacion web es Linux podemos usar extensiones como: php, html, txt php5...
+	1. Crear diccionarios propios para ser mas efectivos 
+	2. En los archivos que se encuentren, mirar cada una de las rutas y observar su código fuente para ver si existe algo importante ahí 
+	3. Si la aplicación web es Windows usar las siguientes extensiones: asp, aspx, html, txt...
+	4. Si la aplicación web es Linux usar las siguientes extensiones: php, html, txt php5...
 ```
 
 ```bash
@@ -181,14 +181,6 @@ Nota:
 	# u = Colocamos la url
 	# t = Lanzar peticiones en paralelo al mismo tiempo
 	# w = Ruta del diccionario
-```
-
-```bash 
-❯ gobuster dir -u http://miwifi.com -w /usr/share/dirb/wordlists/common.txt -x php,txt -f 
-
-	# x = Que extensiones queremos buscar (.php,.html,.txt)
-	# f = Para agregar automaticamente el '/' al final de cada palabra agregada por el diccionario
-	# --add-slash = Hace la misma funcion que 'f'
 ```
 
 ## Dirbuster gráfico 
@@ -303,17 +295,15 @@ Esta herramienta sirve para enumerar directorios
 	# u = url 
 	# w = ruta del diccionario 
 	# FUZZ = Ahi se van a sustituir las palabras del diccionario
+	# /usr/share/wordlists/dirb/big.txt 
 ```
 
 ```bash
 # Para encontrar diferentes archivos 
 ❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.tx
 
-# Encontrar extenciones para las paginas por default 'index'
-❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.txt
-
 # Buscamos por extenciones especificas
-❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-words-lowercase.txt -e .php,.txt
+❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e .php,.txt,.html
 
 # Para fuzzear los directorios en la pagina web
 ❯ ffuf -u http://❮IP❯/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories-lowercase.txt
