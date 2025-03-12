@@ -16,14 +16,20 @@ Tags: #Hacking #Steganography #Snow #OpenStego #Ñ
 	# p = Contraseña que tendra el archivo 
 	# File.txt = Archivo en donde guardaremos el mensaje oculto 
 	# Hidden.txt = El archivo resultante 
+
+Nota:
+	1. Si hay un texto oculto con un mensaje, se puede observar al seleccionar el contenido del archivo de texto, ya que habrá espacios en blanco seleccionables. 
 ```
 
 # Imágenes 
 ## OpenStego
 
 ```bash 
-# Windows Tool para esconder y extraer data escondida en un archivo de imagen 
+# Web Tool 
+❯ https://georgeom.net/StegOnline/upload
 
+
+# Windows Tool para esconder y extraer data escondida en un archivo de imagen 
 ❯ OpenStego.exe          # Ejecutar el programa 
 
 Notas:
@@ -36,7 +42,7 @@ Notas:
 ## Convert TCP 
 
 ```bash 
-❯ https://github.com/zaheercena/Covert-TCP-IP-Protocol/blob/master/covert_tcp.c  # Descargar la herramienta
+❯ wget https://github.com/zaheercena/Covert-TCP-IP-Protocol/blob/master/covert_tcp.c  # Descargar
 
 ❯ cc -o convert_tcp convert_tcp.c     # Compilar la herramienta 
 ```
