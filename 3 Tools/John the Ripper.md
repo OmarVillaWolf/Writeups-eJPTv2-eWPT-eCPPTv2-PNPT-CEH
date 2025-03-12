@@ -77,15 +77,14 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 ```
 
 ```bash
-❯ zip2john File.zip > hash                      # Para que nos devuelva el Hash y asi despues poderlo crackear, el resultado lo metemos dentro de un archivo llamado 'hash'
-
-❯ jhon -w:/usr/share/wordlists/rockyou.txt hash # Usando jhon y el diccionario rockyou, romperemos el hash obtenido anteriormente
+❯ zip2john File.zip > hash   # Devuelva el Hash para crackearlo, el resultado se ingresa en un archivo llamado 'hash'
+❯ jhon -w:/usr/share/wordlists/rockyou.txt hash    # Romper el hash obtenido anteriormente
 ```
 
 ```bash 
-# Esto se hace cuando tenemos un id_rsa con 'passphrase'
-❯ ssh2jhon id_rsa > jhon.txt                                          # Pasamos el id_rsa a hash con la passwd cifrada 
-	❯ jhon jhon.txt --wordlist=/usr/share/wordlists/rockyou.txt      # Para encontrar la frase con un diccionario 
+# Esto se hace cuando tenemos un id_rsa con 'passphrase' o 'Encrypted'
+❯ ssh2jhon id_rsa > jhon.txt          # Pasar el id_rsa a hash con la passwd cifrada 
+	❯ jhon jhon.txt --wordlist=/usr/share/wordlists/rockyou.txt   # Encontrar la frase 
 ```
 
 ```bash 
