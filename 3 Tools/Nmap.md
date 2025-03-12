@@ -204,7 +204,7 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ❯ nmap -p445 --script smb-enum-shares,smb-ls --script-args smbusername=administrator,smbpassword=smbserver ❮Target IP❯
 # Conectarse al SMB y ejecutar 'ls'
 
-❯ nmap -p445 --script smb-os-discovery ❮Target IP❯    # Mirar la versión del SO, FQDN, Domain, NetBIOS
+❯ nmap -p445 --script smb-os-discovery ❮Target IP❯    # Mirar la versión del SO, FQDN, Domain, NetBIOS, Computer name, System time
 ```
 
 ```bash 
@@ -303,6 +303,12 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```bash 
 ❯ nmap -sV -v --script nbstat.nse IP 
 ❯ nmap -sU -p 137 --script nbstat.nse IP 
+```
+
+## NFS
+
+```bash 
+❯ nmap -sV --script=nfs-showmount IP 
 ```
 
 ## MYSQL
