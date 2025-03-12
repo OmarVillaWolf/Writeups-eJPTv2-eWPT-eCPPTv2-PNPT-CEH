@@ -133,7 +133,7 @@ soportada por el servidor.
 2. Inspeccionar el codigo 'Ctrl + Shift + c'
 3. Robots.txt / Sitemap.xml
 4. Métodos permitidos 'Curl'
-5. Listado de directorios 'Fuzzing o Burpsuite'
+5. Listado de directorios 'Fuzzing o Burpsuite'. Buscar directorio, además de buscar archivos con extensiones especificas como: .php, .html, .txt, .asp, .aspx 
 6. Nikto
 7. Rastreo pasivo 'Burpsuite' crawling
 8. SQLMap
