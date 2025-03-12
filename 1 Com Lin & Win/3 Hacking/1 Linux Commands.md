@@ -247,6 +247,15 @@ Tags: #Linux #Comandos
 ❯ cat file | xclip -sel clip                # Para copiarnos el output a la Clipboard
 ```
 
+```bash 
+❯ nano file.txt          # Crear, modificar el contenido de un archivo
+❯ cat file.txt           # Mirar el contenido de un archivo 
+❯ head file.txt          # Muestra las primeras 10 lineas del archivo 
+❯ tail file.txt          # Muestra las ultimas 10 lineas del archivo 
+❯ grep . file.txt        # Buscar un punto dentro del archivo y muestra el resultado 
+❯ grep -R .              # Busca un punto en todos los archivos del directorio y muestra los resultados 
+```
+
 ```python
 ❯ 7z l <file.zip>                            # Podemos ver el contenido interno del archivo zip, gz, bzip2, etc... (l=ele)
 ❯ 7z x <file.gz>                             # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
