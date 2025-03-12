@@ -1,6 +1,6 @@
 # Abuso de binarios específicos
 
-Tags: #Linux #BinariosEspecificos  #Escalada #Root #Privilegios 
+Tags: #Linux #BinariosEspecificos  #Escalada #Root #Privilegios #Pkexec 
 
 En esta clase, analizaremos cómo elevar nuestros privilegios de usuario mediante la explotación de dos binarios diferentes como ejemplos ilustrativos.
 
@@ -22,18 +22,21 @@ Por último, se os comparte el enlace de descarga al binario el cual estaremos e
 
 - **Binario** **CUSTOM**: [https://hack4u.io/wp-content/uploads/2023/04/custom](https://hack4u.io/wp-content/uploads/2023/04/custom) (QUITADLE LA EXTENSIÓN TXT UNA VEZ DESCARGADO)
 
-
 ## Binarios Específicos 
-
 
 ```bash 
 ❯ find / -perm -4000 2>/dev/null                # Buscar archivos con permisos SUID
+❯ find \-perm -4000 2>/dev/null
 
 	# /usr/exim/bin/exim-4.84-7 = Es un agente de transporte de correo, y puede ser utilizado en la malloria de los sistemas UNIX
 ```
 
+## Pkexec 
+
 ```bash 
-❯ searchsploit exim 4.84                        # Buscamos vulnerabilidades para exim y encontramos la de privilege escalation 
-❯ searchsploit -m 39535.sh                      # Descargamos el script y lo compartimos a la maquina victima  
-❯ chmod +x 39535.sh                             # Le damos permisos de ejecucion dentro de la maquina victima y al momento de ejecutarlo nos dara el root
+❯ https://github.com/berdav/CVE-2021-4034     # Repositorio 
+
+# Ingresar el directorio 
+❯ make                     # Crear un compilado del binario 
+❯ ./cve-2021-4034          # Ejecutar el binario 
 ```
