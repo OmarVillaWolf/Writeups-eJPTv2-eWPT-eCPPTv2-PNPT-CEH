@@ -8,22 +8,22 @@
         "type": "tabs",
         "children": [
           {
-            "id": "235f20800ce59f56",
+            "id": "bd0f3864407eaf82",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0 Hacking/06 Malware Threats/3 Static Malware Analysis.md",
+                "file": "0 Hacking/12 SQL injection/1 SQL injection.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "3 Static Malware Analysis"
+              "title": "1 SQL injection"
             }
           },
           {
-            "id": "e67712071ca2216c",
+            "id": "83794b6167b20cc0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -38,7 +38,22 @@
             }
           },
           {
-            "id": "a41debff7e6138ba",
+            "id": "3e4428efe34f20d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Com Lin & Win/3 Hacking/ReverShell.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "ReverShell"
+            }
+          },
+          {
+            "id": "ea3331fafa078395",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,22 +68,22 @@
             }
           },
           {
-            "id": "a7ad9b35418ed43e",
+            "id": "f30203b4bb6f5c4a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Com Lin & Win/3 Hacking/ReverShell.md",
+                "file": "2 Ports/80.1 WordPress.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "ReverShell"
+              "title": "80.1 WordPress"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -135,7 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.50467681884766
+    "width": 276.50467681884766
   },
   "right": {
     "id": "352c47b0cb031926",
@@ -206,34 +221,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "a7ad9b35418ed43e",
+  "active": "f30203b4bb6f5c4a",
   "lastOpenFiles": [
-    "1 Com Lin & Win/3 Hacking/Msfvenom.md",
-    "3 Tools/Metasploit/5 MSF Explotation.md",
-    "1 Com Lin & Win/3 Hacking/ReverShell.md",
-    "3 Tools/Metasploit/4 MSF Gathering & Enumeration.md",
-    "3 Tools/Metasploit/2 MSF Vulnerability Scanning.md",
-    "3 Tools/Metasploit/1 Metasploit.md",
     "2 Ports/80.1 WordPress.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "2 Ports/80.5 Apache - Shellshock.md",
-    "2 Ports/80.6 Tomcat.md",
-    "2 Ports/80.7 IIS - Webdav.md",
-    "2 Ports/80 - HTTP.md",
-    "3 Tools/BurpSuite.md",
-    "2 Ports/Ports DC/445 - SMB.md",
+    "3 Tools/Fuzzers.md",
+    "0 Hacking/12 SQL injection/1 SQL injection.md",
+    "7 OWASP TOP 10/1 SQLI.md",
     "3 Tools/Hydra.md",
-    "2 Ports/22 - SSH.md",
-    "0 Hacking/06 Malware Threats/3 Static Malware Analysis.md",
+    "1 Com Lin & Win/3 Hacking/ReverShell.md",
     "4 PrivEsc Lin & Win/2 Linux/2 Escalation/2 Sudoers.md",
-    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/1 SSH.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/5 Automating.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/4 CronServices.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/2 UsersGroups.md",
-    "4 PrivEsc Lin & Win/2 Linux/1 Enumeration/1 SystemInfo.md",
-    "4 PrivEsc Lin & Win/Post-Explotation.md",
-    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/0 LinPEAS.md",
+    "3 Tools/John the Ripper.md",
+    "1 Com Lin & Win/3 Hacking/Msfvenom.md",
+    "2 Ports/80 - HTTP.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "0 Hacking/05 System Hacking/3 Steganography.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "1 Com Lin & Win/3 Hacking/4 Meterpreter Commands.md",
+    "3 Tools/Nmap.md",
+    "2 Ports/2049 - NFS.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/12 Binarios Especificos.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/6 Python Library Hijacking.md",
     "4 PrivEsc Lin & Win/2 Linux/2 Escalation/3 SUID.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/7 Permisos incorrectos.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/8 Capabilities.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/13 Secuestro de Biblioteca.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/11 Servicios Internos.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/0 LinPEAS.md",
+    "2 Ports/23 - Telnet.md",
+    "4 PrivEsc Lin & Win/2 Linux/2 Escalation/9 Kernel.md",
     "0 Hacking/17 Cryptography",
     "0 Hacking/16 Cloud Computing",
     "0 Hacking/15 IoT Hacking",
