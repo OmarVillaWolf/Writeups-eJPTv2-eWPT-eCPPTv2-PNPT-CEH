@@ -6,7 +6,7 @@ Tags: #Hacking #Wifi #Ñ
 
 ```bash 
 # Kali Tool
-❯ aircrack-ng 'WEPcrack-01.cap'      # Si se obtiene un archivo con el 'Handshake' se puede obtener la passwd 
+❯ aircrack-ng 'WEPcrack-01.cap'      # Archivo con el 'Handshake' para obtener la passwd 
 ```
 
 ## WPA2
