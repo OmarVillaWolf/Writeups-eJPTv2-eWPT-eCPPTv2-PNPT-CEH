@@ -136,41 +136,41 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ find  / -name file.txt 2>/dev/null         # Para buscar un archivo en el sistema desde la raiz
+❯ find  / -name file.txt 2>/dev/null    # Buscar un archivo desde la raiz
 ```
 
 ```bash
-❯ route -n                                   # Para mirar la tabla de ruteo
+❯ route -n       # Mirar la tabla de ruteo
 ```
 
 ```bash
-❯ netstat -nat                               # Para mirar la tabla de ruteo y algunos puertos abiertos
+❯ netstat -nat                     # Mirar la tabla de ruteo y algunos puertos abiertos
 
-❯ netstat -tupln                             # Miras las IPs, los puertos, sus estados de proceso y su PID
-	❯ kill -9  <PID>                        # Matamos un proceso especifico colocando el PID 
+❯ netstat -tupln                   # Mirar las IPs, los puertos, sus estados de proceso y su PID
+	❯ kill -9  <PID>              # Matar un proceso especifico colocando el PID 
 
-❯ netstat -antu                              # Miramos los estados de los puertos
-	❯ kill -9 $(lsof -i:80 -t)              # Matamos un proceso especifico colocando el puerto 
+❯ netstat -antu                    # Mirar los estados de los puertos
+	❯ kill -9 $(lsof -i:80 -t)    # Matar un proceso especifico colocando el puerto 
 ```
 
 ```bash
-❯ hostname -I                                # Nos muestra solo la direccion IP
+❯ hostname -I          # Muestra la dirección IP
 ```
 
 ```bash 
-❯ ip a                                       # Miras la IP que tienes asignada 
-❯ ifconfig                                   # Miras la IP asignada en Linux
+❯ ip a                  # Mirar la IP que tienes asignada 
+❯ ifconfig              # Mirar la IP asignada en Linux
 ```
 
 ```bash 
-❯ netdiscover -i ens33 -r <IP/24>            # funciona enviando solicitudes ARP
+❯ netdiscover -i ens33 -r <IP/24>         # Funciona enviando solicitudes ARP
 
 	# i = Interface 
 	# r = range 
 ```
 
 ```bash
-❯ arp-scan -I ens33 --localnet --ignoredups       # Para hacer un escaneo de la red local, no puedes encontrar mas usuarios despues del router que no pertenecen a tu red
+❯ arp-scan -I ens33 --localnet --ignoredups       # Hacer un escaneo de la red local, no puedes encontrar mas usuarios despues del router que no pertenecen a tu red
 
 	# Escaneamos la Capa 3 del modelo OSI con el protocolo ARP el cual lo hacer por medio de Broadcast en un segmento de la red, y provee el MAC Address
 	# I = i mayuscula; es la interface ens33
