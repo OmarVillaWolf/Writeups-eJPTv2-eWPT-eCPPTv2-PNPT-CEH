@@ -1,6 +1,6 @@
 # Detectar inyecciones SQL 
 
-Tags: #Hacking #SQLI #MSSQL #DSSS 
+Tags: #Hacking #SQLI #MSSQL #DSSS #OwaspZap  
 
 ## DSSS 
 
