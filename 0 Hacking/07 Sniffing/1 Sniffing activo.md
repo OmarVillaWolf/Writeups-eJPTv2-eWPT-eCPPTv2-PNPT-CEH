@@ -1,6 +1,6 @@
 # Sniffing activo 
 
-Tags: #Hacking #Sniffing 
+Tags: #Hacking #Sniffing #MACFlooding #DHCPStarvation 
 
 ## Macof 
 
