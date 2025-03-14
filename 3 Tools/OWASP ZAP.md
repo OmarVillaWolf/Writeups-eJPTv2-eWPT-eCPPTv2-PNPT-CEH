@@ -1,9 +1,11 @@
 # OWASP ZAProxy 
 
-Tags: #ZAProxy #Escaneo 
+Tags: #ZAProxy #Escaneo #OwaspZap 
 
 
 ```bash 
+# Funciona para efectuar una investigación 'research' de vulnerabilidades y explotar el objetivo.
+
 # Escanear la web 
 1. Escoger 'Automated Scan'  
 2. Colocar la 'IP' o el dominio 'www.domain.com'
