@@ -7,8 +7,10 @@ Tags: #Hacking #Android #Ñ
 ```bash 
 # Kali Tool para conectarse a un celular Android a la PC con el 'ADB-enabled' y análisis binario  
 ❯ apt install adb        # Instalar la herramienta 
-❯ git clone https://github.com/prbhtkumr/PhoneSploit/tree/master   # Descargar la tool 
-❯ python3 -m pip install colorama 
+❯ git clone https://github.com/prbhtkumr/PhoneSploit/tree/master   # Descargar la tool e ir al dir
+	❯ python3 -m venv myenv 
+	❯ source myenv/bin/activate
+❯ pip install colorama 
 
 Nota:
 	1. El puerto al que se debe de conectar el es 5555
