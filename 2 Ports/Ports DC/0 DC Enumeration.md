@@ -25,9 +25,11 @@ Tags: #AD #Enumeracion #Puerto #DC
 	Conexión: 'Evil-winrm'
 
 Tips: 
-	1. Agregar el nombre de la maquina y su dominio al archivo '/etc/hosts' DC01.domain1.local domain1.local obteniendolos con la herramienta 'Nextec'
-	2. Si solo hay usuarios validos se puedo solicitar un TGT con un 'ASREProast attack'
-	3. Si ya hay credenciales validas se puede obtener un TGS con 'Kerberoasting attack'
+	1. Descubir puertos de un DC = 53,88,445,636,389 
+	2. Buscar el nombre del dominio y agregarlo al archivo '/etc/hosts' DC01.domain1.local domain1.local obteniendolo con la herramienta 'Nextec'
+	3. Enumeración (Shares, Usuarios) 'https://app.snov.io/login'
+	4. Si solo hay usuarios validos se puedo solicitar un TGT con un 'ASREProast attack'
+	5. Si ya hay credenciales validas se puede obtener un TGS con 'Kerberoasting attack'
 ```
 
 ## Active Directory 
