@@ -61,8 +61,9 @@ Notas3:
 ## Cryptool 
 
 ```bash 
-# Windows Tool para cifrar o descifrar data '.hex' manipulando la longitud de llave  
-❯  # Ejecutar el programa 
+# Windows Tool para cifrar o descifrar data '.hex' manipulando la longitud de llave haciendo un cripto analisis   
+
+❯ CrypTool.exe        # Ejecutar el programa 
 
 Notas:
 	1. Abrir el archivo con extensión hexadecimal 
