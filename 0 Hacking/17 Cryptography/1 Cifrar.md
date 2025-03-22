@@ -42,7 +42,7 @@ Notas:
 ## BCTextEncoder
 
 ```bash 
-# Windows Tool para cifrar y descifrar texto en archivos 'Encode, Decode'
+# Windows Tool para cifrar y descifrar archivos de texto 'Encode, Decode'
 ❯ BCTextEncoder.exe      # Ejecutar el programa 
 
 Notas:
