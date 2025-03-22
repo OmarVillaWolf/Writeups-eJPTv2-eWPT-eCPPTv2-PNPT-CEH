@@ -70,7 +70,7 @@ Nota:
 ❯ nmap -p 80,8080,443 -T4 -A -sV IP  # Escaneo para determindar WampServer       
 ❯ nmap -T4 IP.0/24               # Escaneo de puertos 
 ❯ nmap -p 88,53,445,636,389 -T4 IP.0/24    # Escaneo para encontrar el 'Domain Controller'
-❯ nmap -p 21,22,23,80,3389,3333 --open -T4 -A # El linux es un telnet, explotacion FTP
+❯ nmap -p 21,22,23,80,3389,3333 --open -T4 -A # El linux es un telnet
 ❯ nmap -T4 -A IP                 # Host discovery para encontrar info del puertos
 ❯ nmap -p3389 -sCV IP            # Host discovery para encontrar info del puerto 3389 donde se ve 'NetBios Computer Name, DNS Computer Name' 
 ❯ nmap -p445 -sCV -A -T4 IP      # Escaneo para encontrar SMB, ademas del FQDN 
