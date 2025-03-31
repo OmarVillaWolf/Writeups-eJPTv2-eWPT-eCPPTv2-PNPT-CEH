@@ -1,6 +1,6 @@
 # BurpSuite 
 
-Tags: #BurpSuite #Escaneo  #Web #Enumeracion 
+Tags: #BurpSuite #Escaneo  #Web #Enumeracion #Proxy 
 
 **BurpSuite** es una herramienta de prueba de penetración utilizada para encontrar vulnerabilidades de seguridad en aplicaciones web. Es una de las herramientas de prueba de penetración más populares y utilizadas en la industria de la seguridad informática. BurpSuite se compone de varias herramientas diferentes que se pueden utilizar juntas para identificar vulnerabilidades en una aplicación web.
 
