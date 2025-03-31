@@ -95,7 +95,7 @@ Nota: La herramienta regresará un archivo '.zip' que se debe cargar en 'BloodHo
 ```bash 
 ❯ neo4j console &> /dev/null & disown      # Iniciamos el servicio en el puerto local '7474' y lo independizamos
 
-Nota: Si es la primera vez que lo usamos, abrimos la web 'localhost:7474' y agregamos las credenciales 'neo4j:neo4j', despues, agregamos una passwd nueva y asi podremos conectarnos al 'Bloodhound'
+Nota: Si es la primera vez que se usa, abrir la web 'localhost:7474', agregar las credenciales 'neo4j:neo4j', despues, colocar una nueva passwd y conectarse al 'Bloodhound'
 
 
 ❯ ./BloodHound --no-sandbox             # Ejecutar como usuario 'root' 
