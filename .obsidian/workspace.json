@@ -160,8 +160,10 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "642b9322c22441ce",
+  "active": "6853e6a3ba5bd96d",
   "lastOpenFiles": [
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "1 Com Lin & Win/3 Hacking/ReverShell.md",
     "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "0 Hacking/06 Malware Threats/1 Troyanos.md",
     "0 Hacking/06 Malware Threats/3 Static Malware Analysis.md",
@@ -181,9 +183,7 @@
     "0 Hacking/12 SQL injection/2 Detect SQLi.md",
     "4 PrivEsc Lin & Win/2 Linux/2 Escalation/12 Binarios Especificos.md",
     "3 Tools/OWASP ZAP.md",
-    "1 Com Lin & Win/3 Hacking/ReverShell.md",
     "3 Tools/Metasploit/4 MSF Gathering & Enumeration.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "2 Ports/80.1 WordPress.md",
     "2 Ports/Ports DC/0 DC Enumeration.md",
     "3 Tools/Fuzzers.md",
