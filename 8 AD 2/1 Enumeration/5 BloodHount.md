@@ -93,12 +93,12 @@ Nota: La herramienta regresará un archivo '.zip' que se debe cargar en 'BloodHo
 * [Neo4j-installation](https://neo4j.com/docs/operations-manual/current/installation/linux/debian/)
 
 ```bash 
-❯ neo4j console &> /dev/null & disown      # Iniciamos el servicio en el puerto local '7474' y lo independizamos
+❯ sudo neo4j console &> /dev/null & disown      # Iniciamos el servicio en el puerto local '7474' y lo independizamos
 
 Nota: Si es la primera vez que se usa, abrir la web 'localhost:7474', agregar las credenciales 'neo4j:neo4j', despues, colocar una nueva passwd y conectarse al 'Bloodhound'
 
 
-❯ ./BloodHound --no-sandbox             # Ejecutar como usuario 'root' 
-❯ bloodhound &> /dev/null & disown      # Ejecutar 'Bloodhound' e independizarlo
+❯ ./BloodHound --no-sandbox & disown            # Ejecutar como usuario 'root' 
+❯ bloodhound &> /dev/null & disown              # Ejecutar 'Bloodhound' e independizarlo
 ```
 
