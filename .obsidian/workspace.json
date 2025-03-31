@@ -8,6 +8,21 @@
         "type": "tabs",
         "children": [
           {
+            "id": "6fa3a7f5136b51ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/1 Enumeration/2 PowerView.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "2 PowerView"
+            }
+          },
+          {
             "id": "8ccd34d35c254852",
             "type": "leaf",
             "state": {
@@ -66,9 +81,69 @@
               "icon": "lucide-file",
               "title": "5 BloodHount"
             }
+          },
+          {
+            "id": "86c778b0ab09d55c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 Tools/Ngrok.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Ngrok"
+            }
+          },
+          {
+            "id": "c61b859f510dbcb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Ports/Ports DC/88 Kerberos.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "88 Kerberos"
+            }
+          },
+          {
+            "id": "96333ad97ca10f2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "1 Linux Commands"
+            }
+          },
+          {
+            "id": "bf50eecf9be9a6a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/1 Enumeration/0 Glosario.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "0 Glosario"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -206,34 +281,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "ca7c8e1608fc7f7d",
+  "active": "bf50eecf9be9a6a1",
   "lastOpenFiles": [
-    "1 Com Lin & Win/3 Hacking/ReverShell.md",
-    "3 Tools/Caido.md",
-    "3 Tools/BurpSuite.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
+    "8 AD 2/1 Enumeration/Sin título.md",
+    "8 AD 2/1 Enumeration/0 Glosario.md",
+    "8 AD 2/1 Enumeration/2 PowerView.md",
+    "8 AD 2/1 Enumeration/3 ADPeas.md",
+    "8 AD 2/1 Enumeration/4 ADModule.md",
+    "8 AD 2/1 Enumeration/5 BloodHount.md",
+    "8 AD 2/1 Enumeration/6 Klist.md",
+    "8 AD 2/1 Enumeration/7 SID.md",
+    "8 AD 1/0 Enumeration/0 Metodología.md",
+    "8 AD 2/5 Evasión/5 IP Publicas.md",
+    "1 Com Lin & Win/3 Hacking/3 Powershell.md",
+    "8 AD 2/2 Attacks/1 Passwd Spraying.md",
+    "8 AD 2/2 Attacks/0 Fundamentos.md",
     "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "3 Tools/Fuzzers.md",
-    "2 Ports/Ports DC/1433 MS-SQL-Server.md",
-    "8 AD 2/5 Evasión/4 AMSI.md",
-    "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "0 Hacking/06 Malware Threats/1 Troyanos.md",
-    "0 Hacking/06 Malware Threats/3 Static Malware Analysis.md",
-    "0 Hacking/05 System Hacking/3 Steganography.md",
-    "0 Hacking/04 Vulnerability Analysis/2 OpenVAS, Nikto.md",
-    "2 Ports/80.3 Drupal.md",
-    "0 Hacking/05 System Hacking/2 Password Cracking.md",
-    "0 Hacking/17 Cryptography/1 Cifrar.md",
-    "0 Hacking/13 Wireless Networks/1 Wifi Attacks.md",
+    "3 Tools/Metasploit/1 Metasploit.md",
+    "2 NVIM.md",
+    "2 Ports/Ports DC/88 Kerberos.md",
     "2 Ports/Ports DC/3389, 3333 - RDP.md",
-    "0 Hacking/02 Scanning Networks/2 Ports and services Discovery.md",
-    "0 Hacking/02 Scanning Networks/1 Scanning Networks.md",
-    "0 Hacking/12 SQL injection/1 SQL injection.md",
-    "0 Hacking/02 Scanning Networks/3 OS Discovery.md",
-    "0 Hacking/14 Hacking Mobile/1 Android Devices.md",
-    "0 Hacking/12 SQL injection/2 Detect SQLi.md",
+    "2 Ports/Ports DC/464 kpasswd.md",
+    "2 Ports/Ports DC/1433 MS-SQL-Server.md",
+    "2 Ports/Ports DC/445, 135 - Psexec.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "2 Ports/Ports DC/389 - LDAP.md",
+    "2 Ports/Ports DC/137-139 NetBIOS.md",
+    "2 Ports/Ports DC/135 - RPC.md",
     "0 Hacking/17 Cryptography",
     "0 Hacking/16 Cloud Computing",
     "0 Hacking/15 IoT Hacking",
