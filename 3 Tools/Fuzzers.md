@@ -1,6 +1,6 @@
 # Tipos de Fuzzers 
 
-Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirsearch 
+Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirsearch #Dirb 
 
 ```python
 # Modo directorio: Enumerar los directorios y archivos
