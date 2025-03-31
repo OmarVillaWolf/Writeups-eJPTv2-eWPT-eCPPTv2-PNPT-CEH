@@ -8,7 +8,7 @@ Tags: #AD #Glosario
 https://github.com/Spartan-Cybersecurity/CPAD-Tools        # Herramientas de ayuda 
 ```
 
-## Comandos AD 
+## Comandos Extra AD 
 
 ```bash 
 python3 -c 'import pty; pty.spawn("/bin/bash")'
