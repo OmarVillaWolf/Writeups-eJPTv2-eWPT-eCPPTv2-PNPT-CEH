@@ -67,7 +67,7 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ echo ‘’ > ~/.zsh_history              # Para borrar el historial en la zshrc
+❯ echo ‘ ’ > ~/.zsh_history              # Para borrar el historial en la zshrc
 ```
 
 ```bash
