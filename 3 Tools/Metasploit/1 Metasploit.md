@@ -70,8 +70,8 @@ Es un multi-funcional payload que es ejecutado en memoria en un sistema victima 
 ## Instalar MSF Framework 
 
 ```bash 
-❯ apt update && apt install metasploit-framework -y          # Actualizamos e instalamos Metasploit
-❯ systemctl enable postgreql                                  
+❯ apt update && apt install metasploit-framework -y     # Actualizar e instalar Metasploit
+❯ systemctl enable postgresql                                  
 ```
 
 ## Consola Metasploit
