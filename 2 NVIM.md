@@ -1,6 +1,6 @@
 # Editores de texto 
 
-Tags: #Editor #NVim #Nano 
+Tags: #Editor #NVim #Neovim 
 
 NVim Practica Online: 
 * [NVim-Online](https://www.openvim.com/)
@@ -51,14 +51,4 @@ Esc + Shift + :     # Modo sustitución
 	# /,/ = Entre / es desde donde inicia (Delimitador)
 	# \r = Retorno de carro y lo aplicara para la primer coincidencia 
 	# /g = Para aplicar el filtro a todas las coincidencias
-```
-
-## Comandos Nano
-
-```bash 
-Alt + a      # Seleccionas las lineas
-Ctrl + k     # Cortar
-Ctrl + u     #  Pegas
-Ctrl + x     # Salir
-Ctrl + s     # Guardas
 ```
