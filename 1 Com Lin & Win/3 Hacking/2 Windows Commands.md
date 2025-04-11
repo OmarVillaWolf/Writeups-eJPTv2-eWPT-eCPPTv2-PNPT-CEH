@@ -27,7 +27,7 @@ Tags: #Windows #Comandos
 
 ```bash
 ❯ whoami                               # Miramos el nombre del usuario
-❯ whoami /priv                         # Miramos los privilegios 
+❯ whoami /priv                         # Miramos los privilegios 'Token' del usuario 
 ```
 
 ```bash 
@@ -35,11 +35,13 @@ Tags: #Windows #Comandos
 ```
 
 ```bash
-❯ net user                             # Miramos todos los usuarios existentes y sus grupos de forma local
+❯ net users                            # Miramos todos los usuarios existentes y sus grupos de forma local
 ❯ net user <User>                      # Miramos el grupo de un usuario especifico como 'administrator' de forma local
 ❯ net localgroup administrators        # Miramos los miembros del grupo administrador de forma local
 ❯ net user admin password123           # Para cambiar la passwd al usuario admin siendo NT Authority\System de forma local
-net user omar P4ssw0rd /add            # Crear un usuario siendo NT Authority\System de forma local
+
+❯ net user omar P4ssw0rd /add          # Crear un usuario siendo NT Authority\System de forma local
+❯ net localgroup Administrators omar /add   # Agregar al usuario al grupo local 'Administrators'
 ```
 
 ```bash 
