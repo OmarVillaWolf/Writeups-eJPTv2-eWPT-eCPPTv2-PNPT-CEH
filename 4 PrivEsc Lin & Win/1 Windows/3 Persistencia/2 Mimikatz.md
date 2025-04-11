@@ -60,6 +60,19 @@ Características y detalles sobre el hash NTLM:
 ```powershell
 # Ejecutar Mimikatz como 'Administrador'
 ❯ .\mimikatz.exe 'privilege::debug' 'token::elevate' 'sekurlsa::logonpasswords' 'lsadump::sam' 'lsadump::secrets' exit
+
+
+Nota1:
+	1. sekurlsa::logonpasswords = Muestra info de cada usuario 'Name, Hash NTLM, SHA1, Domain'. El 'SID' es un identificador unico del objeto en el DC
+	2. Existen usuarios por defecto 'DWM-8, DWM-10, UMDF-8, UMDF-10, etc...' ya que tienen como dominio 'Window Manager, Font Driver Host'
+	3. Mirar si la 'session' = 'Service from 0', si es asi guardar toda la salida del usuario ya que se puede utilizar
+	4. Si al final del 'username' hay un '$' quiere decir que es un objeto de tipo computador
+	5. Valores importantes a guardar 'SID, Username, Domain, NTLM, SHA1'
+
+
+Nota2:
+	1. lsadump::sam = Muestra las credenciales en la DB SAM
+	2. Guardar los hashes 'NTLM' del usuario 'Administrator' local 
 ```
 
 ```powershell
@@ -84,15 +97,9 @@ Características y detalles sobre el hash NTLM:
     
 3. 'sekurlsa::logonpasswords': Este comando extrae las contraseñas y otros datos de autenticación de la memoria del sistema, específicamente desde la seguridad de Kerberos, SSP, msv1_0, entre otros. Utiliza el módulo sekurlsa de Mimikatz para acceder a la información almacenada por el proceso LSASS (Local Security Authority Subsystem Service).
 
-	Nota: 
-	* Mirar si la 'session' = 'Service from 0', si es asi guardar toda la salida del usuario ya que se puede utilizar
-	* Si al final del 'username' hay un '$' quiere decir que es un objeto de tipo computador
-	* Valores importantes a guardar 'SID, Username, Domain, NTLM, SHA1'
     
 4. 'lsadump::sam': Este comando extrae las credenciales almacenadas en la base de datos SAM (Security Accounts Manager). La SAM contiene las credenciales de todos los usuarios locales del sistema y se utiliza generalmente para obtener hashes de contraseñas de cuentas locales.
 
-	Nota: 
-	* Guardar los hashes 'NTLM' del usuario 'Administrator'
     
 5. 'lsadump::secrets': Este comando se utiliza para extraer "secretos" almacenados por el sistema, como claves de acceso y otros datos sensibles, que pueden estar almacenados en el registro o en el servicio LSASS.
 ```
