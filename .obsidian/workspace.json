@@ -23,21 +23,6 @@
             }
           },
           {
-            "id": "8ccd34d35c254852",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 2/5 Evasión/4 AMSI.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "4 AMSI"
-            }
-          },
-          {
             "id": "6853e6a3ba5bd96d",
             "type": "leaf",
             "state": {
@@ -53,97 +38,67 @@
             }
           },
           {
-            "id": "077d2f74fe1eacd7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/Ports DC/1433 MS-SQL-Server.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "1433 MS-SQL-Server"
-            }
-          },
-          {
             "id": "ca7c8e1608fc7f7d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 AD 2/1 Enumeration/5 BloodHount.md",
+                "file": "3 Tools/Fuzzers.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "5 BloodHount"
+              "title": "Fuzzers"
             }
           },
           {
-            "id": "86c778b0ab09d55c",
+            "id": "83953e2ec6eaed41",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 Tools/Ngrok.md",
+                "file": "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Ngrok"
+              "title": "1 Powerup"
             }
           },
           {
-            "id": "c61b859f510dbcb1",
+            "id": "62a5dce031968e04",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/88 Kerberos.md",
+                "file": "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "88 Kerberos"
+              "title": "2 Mimikatz"
             }
           },
           {
-            "id": "96333ad97ca10f2b",
+            "id": "b578a10976af10f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+                "file": "8 AD 2/1 Enumeration/2 PowerView.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1 Linux Commands"
-            }
-          },
-          {
-            "id": "bf50eecf9be9a6a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 2/1 Enumeration/0 Glosario.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "0 Glosario"
+              "title": "2 PowerView"
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -175,7 +130,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mimikatz",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -281,44 +236,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "bf50eecf9be9a6a1",
+  "active": "62a5dce031968e04",
   "lastOpenFiles": [
-    "8 AD 2/1 Enumeration/Sin título.md",
-    "8 AD 2/1 Enumeration/0 Glosario.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
     "8 AD 2/1 Enumeration/2 PowerView.md",
-    "8 AD 2/1 Enumeration/3 ADPeas.md",
-    "8 AD 2/1 Enumeration/4 ADModule.md",
-    "8 AD 2/1 Enumeration/5 BloodHount.md",
-    "8 AD 2/1 Enumeration/6 Klist.md",
-    "8 AD 2/1 Enumeration/7 SID.md",
-    "8 AD 1/0 Enumeration/0 Metodología.md",
-    "8 AD 2/5 Evasión/5 IP Publicas.md",
-    "1 Com Lin & Win/3 Hacking/3 Powershell.md",
-    "8 AD 2/2 Attacks/1 Passwd Spraying.md",
-    "8 AD 2/2 Attacks/0 Fundamentos.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "3 Tools/Fuzzers.md",
-    "3 Tools/Metasploit/1 Metasploit.md",
-    "2 NVIM.md",
-    "2 Ports/Ports DC/88 Kerberos.md",
+    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/4 Mimikatz.md",
     "2 Ports/Ports DC/3389, 3333 - RDP.md",
-    "2 Ports/Ports DC/464 kpasswd.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token.md",
+    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "1 Com Lin & Win/3 Hacking/ReverShell.md",
+    "3 Tools/Ngrok.md",
+    "8 AD 2/5 Evasión/4 AMSI.md",
+    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/1 Usuarios.md",
+    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/0 Tecnicas.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 WinPEAS.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/0 Identifying PrivEsc.md",
+    "3 Tools/Fuzzers.md",
+    "8 AD 2/1 Enumeration/5 BloodHount.md",
     "2 Ports/Ports DC/1433 MS-SQL-Server.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "2 Ports/Ports DC/389 - LDAP.md",
-    "2 Ports/Ports DC/137-139 NetBIOS.md",
-    "2 Ports/Ports DC/135 - RPC.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "6.1 GoLang/1 Tipos de Datos.md",
+    "11 ICS-SCADA Pentesting/2 PT/2 Attacks/3 Buffer Overflow.md",
+    "6.1 GoLang",
+    "11 ICS-SCADA Pentesting/2 PT/2 Attacks/2 Modbus Injection.md",
+    "11 ICS-SCADA Pentesting/2 PT/2 Attacks/3 StuxNet.md",
+    "11 ICS-SCADA Pentesting/2 PT/2 Attacks/1 Brute Force.md",
+    "11 ICS-SCADA Pentesting/2 PT/1 Enumeration/5 ARP.md",
+    "11 ICS-SCADA Pentesting/2 PT/1 Enumeration/3 SCADA - ConPot.md",
+    "11 ICS-SCADA Pentesting/2 PT/1 Enumeration/2 OSINT.md",
+    "11 ICS-SCADA Pentesting/2 PT/2 Attacks",
+    "11 ICS-SCADA Pentesting/2 PT/1 Enumeration",
+    "12 Cloud Pentesting/2 AWS",
+    "12 Cloud Pentesting/1 Azure",
+    "11 ICS-SCADA Pentesting/2 PT",
+    "11 ICS-SCADA Pentesting/1 Conceptos",
+    "11 ICS-SCADA Pentesting",
     "0 Hacking/17 Cryptography",
     "0 Hacking/16 Cloud Computing",
-    "0 Hacking/15 IoT Hacking",
-    "0 Hacking/14 Hacking Mobile",
-    "0 Hacking/13 Wireless Networks",
-    "0 Hacking/12 SQL injection",
-    "0 Hacking/11 Evading IDS, Firewall and Honeypot/Sin nombre",
-    "0 Hacking/11 Evading IDS, Firewall and Honeypot",
-    "0 Hacking/10 Session Hijacking",
-    "0 Hacking/09 Denial of Service",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/SSRF.png",
