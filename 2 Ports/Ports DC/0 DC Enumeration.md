@@ -25,7 +25,7 @@ Tags: #AD #Enumeracion #Puerto #DC
 	Conexión: 'Evil-winrm'
 
 Tips: 
-	1. Descubir puertos de un DC = 53,88,445,636,389 
+	1. Descubir puertos de un DC = 88 Kerberos,389 LDAP, 636 LDAPS, 3268 GC  
 	2. Buscar el nombre del dominio y agregarlo al archivo '/etc/hosts' DC01.domain1.local domain1.local obteniendolo con la herramienta 'Nextec'
 	3. Enumeración (Shares, Usuarios) 'https://app.snov.io/login'
 	4. Si solo hay usuarios validos se puedo solicitar un TGT con un 'ASREProast attack'
