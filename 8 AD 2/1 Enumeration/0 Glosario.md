@@ -76,7 +76,7 @@ net group 'Domain Admins' sephiroth /add
 net group 'Enterprise Admins' sephiroth /add
 ```
 
-## CyberKillChain recomendado en AD
+## CyberKillChain recomendado en AD: 
 
 ```bash 
 1. Enumeracion local del equipo 
@@ -87,7 +87,7 @@ net group 'Enterprise Admins' sephiroth /add
 6. Realiza un reporte informal que contenga lo mas importante (hashes, contraseñas, usuarios, etc)
 ```
 
-## Principales conceptos en AD
+## Principales conceptos en AD: 
 
 ```bash 
 
