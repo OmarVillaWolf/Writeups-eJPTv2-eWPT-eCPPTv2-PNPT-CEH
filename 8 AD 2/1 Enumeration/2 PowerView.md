@@ -4,6 +4,8 @@ Tags: #AD #PowerView
 
 PowerView, desarrollada por Will Schroeder, es una herramienta que utiliza la función de dominio de Windows para recopilar información sobre una red y sus usuarios. Todas las opciones de la herramienta envían solicitudes legítimas que pueden ejecutarse en el contexto de los derechos de un usuario de dominio.
 
+* [Powershell Ofensivo](https://book.hacktricks.wiki/en/windows-hardening/basic-powershell-for-pentesters/index.html)
+
 ```bash 
 # Enumeracion con PowerView
 
