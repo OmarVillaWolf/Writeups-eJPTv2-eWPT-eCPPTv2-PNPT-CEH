@@ -29,3 +29,4 @@ Se puede descargar **ADExplorer** para buscar cuentas de usuario y mostrar su SI
 ```bash 
 ❯ wmic useraccount where name="nombre_usuario" get sid    # En la consola de Windows 'cmd'
 ```
+
