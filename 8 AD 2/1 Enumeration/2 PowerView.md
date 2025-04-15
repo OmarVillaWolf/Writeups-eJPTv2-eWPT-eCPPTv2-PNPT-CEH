@@ -2,7 +2,7 @@
 
 Tags: #AD #PowerView
 
-PowerView, desarrollada por Will Schroeder, es una herramienta que utiliza la función de dominio de Windows para recopilar información sobre una red y sus usuarios. Todas las opciones de la herramienta envían solicitudes legítimas que pueden ejecutarse en el contexto de los derechos de un usuario de dominio.
+PowerView fue desarrollado por Will Schroeder y es una herramienta que utiliza la función de dominio de Windows para recopilar información sobre una red y sus usuarios. Todas las opciones de la herramienta envían solicitudes legítimas que pueden ejecutarse en el contexto de los derechos de un usuario de dominio.
 
 * [Powershell Ofensivo](https://book.hacktricks.wiki/en/windows-hardening/basic-powershell-for-pentesters/index.html)
 
@@ -20,7 +20,7 @@ PowerView, desarrollada por Will Schroeder, es una herramienta que utiliza la fu
 - Al inspeccionar ACLs, podrían descubrirse configuraciones que otorgan permisos de escritura a usuarios normales en directorios que no deberían, permitiendo posibles ataques de escalada de privilegios.
 ```
 
-## Distinguished Namne o DN
+## Distinguished Name o DN
 
 ```bash 
 El término `'CN=Users,DC=domain1,DC=corp'` es un Nombre Distinguido (Distinguished Name o DN) en Active Directory (AD) de Microsoft, usado para identificar de manera única objetos dentro del directorio. Cada componente tiene un propósito específico:
