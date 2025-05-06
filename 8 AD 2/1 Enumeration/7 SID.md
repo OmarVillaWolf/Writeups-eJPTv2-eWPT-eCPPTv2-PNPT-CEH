@@ -1,6 +1,6 @@
 # Security Identifiers (SIDs)
 
-Tags: #AD #Windows #SID #ADExplorer
+Tags: #AD #Windows #SID #ADExplorer #Powershell 
 
 Los Security Identifiers (SIDs) en Active Directory son identificadores únicos que se asignan a cada objeto, como usuarios o grupos, dentro de un dominio. Estos SIDs permanecen inalterables durante la vida del objeto, incluso si es trasladado entre dominios. Son esenciales para la seguridad en Windows, ya que determinan los permisos y niveles de acceso de los objetos en el sistema.
 
