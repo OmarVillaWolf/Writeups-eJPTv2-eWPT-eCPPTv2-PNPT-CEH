@@ -26,7 +26,9 @@ Nota: Antes de iniciar al ataque debemos de sincronizar el reloj de la maquina d
 ❯ kerbrute userenum -d domain1.corp --dc IP user.txt   # Enumerar y verificar usuarios validos en el dominio 
 
 
-Nota: Si el usuario no cuenta con autenticacion previa de Kerberos, la herramienta arroja el TGT (hash) y este se puede crackear offline con 'John The Ripper'
+Notas: 
+	1. Se puede usar el diccionario de 'Names.txt' de Seclist 
+	2. Si el usuario no cuenta con autenticacion previa de Kerberos, la herramienta arroja el TGT (hash) y este se puede crackear offline con 'John The Ripper'
 ```
 
 ## Solcitar un TGS con un usuario valido 
