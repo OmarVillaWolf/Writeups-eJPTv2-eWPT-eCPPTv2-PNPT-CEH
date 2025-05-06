@@ -1,6 +1,6 @@
 # Enumeración Manual 
 
-Tags: #AD #Enumeracion 
+Tags: #AD #Enumeracion #Powershell 
 
 ```bash 
 Active Directory (AD) es una base de datos y un conjunto de servicios que conectan usuarios con los recursos de red que necesitan para hacer su trabajo. Aquí están algunas de las funcionalidades más importantes del Active Directory y cómo acceder a ellas a través del comando "Ejecutar" en Windows 'Win + R':
