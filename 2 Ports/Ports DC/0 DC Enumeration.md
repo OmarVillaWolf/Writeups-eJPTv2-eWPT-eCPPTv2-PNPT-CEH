@@ -16,23 +16,30 @@ Tags: #AD #Enumeracion #Puerto #DC
 	Enumeración: 'Ldapsearch' 'Ldapdomaindump' 'GetADUsers'
 
 ❯ Puerto 445 SMB:
-	Enumeración: 'Nextec / Crackmapexec' 'SMBClient' 'SMBMap' 
+	Enumeración: 'Nextec' 'SMBClient' 'SMBMap' 
 
 ❯ Puerto 1433 MsSQLServer:
 	Conexión: 'Impacket-mssqlclient'
 
 ❯ Puerto 5985, 5986 WinRM:
 	Conexión: 'Evil-winrm'
-
-Tips: 
-	1. Descubir puertos de un DC = 88 Kerberos,389 LDAP, 636 LDAPS, 3268 GC  
-	2. Buscar el nombre del dominio y agregarlo al archivo '/etc/hosts' DC01.domain1.local domain1.local obteniendolo con la herramienta 'Nextec'
-	3. Enumeración (Shares, Usuarios) 'https://app.snov.io/login'
-	4. Si solo hay usuarios validos se puedo solicitar un TGT con un 'ASREProast attack'
-	5. Si ya hay credenciales validas se puede obtener un TGS con 'Kerberoasting attack'
 ```
 
 ## Active Directory 
+
+```bash 
+Metodología general 
+
+Tips: 
+	1. Descubir puertos en un DC '88 Kerberos, 389 LDAP, 636 LDAPS, 3268 GC'  
+	2. Buscar el nombre del dominio y agregarlo al archivo '/etc/hosts' 'DC01.domain1.local domain1.local' obteniendolo con la herramienta 'Nextec'
+	3. Enumeración (Shares, Usuarios) 
+		1. Obtener usuario reales de un dominio 'https://app.snov.io/login'
+		2. Obtener usuarios con 'SMB, RPC, WEB'
+	4. Validar usuarios en AD con 'Kerbrute' o hacer ataque de diccionario para obtenerlos
+	5. Si solo hay usuarios validos se puedo solicitar un TGT con un 'ASREProast attack' donde no se necesita disponer de credenciales validas y muestra el Hash de la password si el usuario tiene 'UF_DONT_REQUIRE_PREAUTH' 
+	6. Si ya hay credenciales validas se puede obtener un TGS con 'Kerberoasting attack'
+```
 
 ```bash 
 Metodología en CRTA
