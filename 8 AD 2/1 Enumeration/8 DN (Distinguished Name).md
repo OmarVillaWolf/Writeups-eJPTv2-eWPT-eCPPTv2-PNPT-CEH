@@ -1,6 +1,6 @@
 # Distinguished Name
 
-Tags: #AD #DN 
+Tags: #AD #DN #Powershell 
 
 El término `'CN=Users,DC=Domain,DC=corp'` es un nombre distinguido (Distinguished Name o DN) en el contexto de Active Directory (AD) de Microsoft. Este tipo de notación se utiliza para identificar de forma única a los objetos dentro de un directorio de AD. A continuación, te explico en detalle cada componente de este nombre distinguido:
 
