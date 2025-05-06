@@ -4,18 +4,21 @@ Tags: #Hydra
 
 Es una herramienta de prueba de penetración que se utiliza para realizar ataques de fuerza bruta, por así decirlo, en servicios de autenticación remotos. Esta herramientas nos ayuda a poder encontrar passwd mediante ataques furtivos. 
 
+```bash 
 - Soporte de múltiples protocolos: Hydra es compatible con una amplia gama de protocolos de autenticación incluyendo: SSH, Telnet, FTP, HTTP, POP3, SMB, etc...
 * Fuerza bruta avanzada: Hydra es capas de realizar ataques de fuerza bruta avanzados, incluyendo ataques de diccionario y ataques basados en patrones. 
-	* Podemos usar los diccionarios que ya viene en Parrot o Kali Linux (rockyou.txt)
-* Modos de operación flexibles: Hydra admite diferentes modos de operación, incluyendo modo de ataque directo, modo de ataque de diccionario y modo de ataque híbrido.
-* Capacidad de paralelización: Hydra es capas de realizar múltiples intentos de autenticación simultáneamente, lo que mejora la velocidad y la eficiencia del ataque. 
+- Podemos usar los diccionarios que ya viene en Parrot o Kali Linux (rockyou.txt)
+- Modos de operación flexibles: Hydra admite diferentes modos de operación, incluyendo modo de ataque directo, modo de ataque de diccionario y modo de ataque híbrido.
+- Capacidad de paralelización: Hydra es capas de realizar múltiples intentos de autenticación simultáneamente, lo que mejora la velocidad y la eficiencia del ataque. 
 
 - Casos de uso:
 	- Pruebas de penetración 
 	- Auditoria de passwd
 	- Recuperación de passwd
+```
 
-```powershell 
+
+```python 
 # Directorios 'passwords'
 ❯ /usr/share/wordlists/rockyou.txt
 ❯ /usr/share/Seclists/Passwords/xato-net-10-million-password-10000.txt
@@ -28,10 +31,10 @@ Es una herramienta de prueba de penetración que se utiliza para realizar ataque
 # Directorios 'Users'
 ❯ /usr/share/Seclists/Usernames/xato-net-10-million-usernames.txt
 ❯ /usr/share/Seclists/Usernames/top-usernames-shortlist.txt 
+❯ /usr/share/Seclists/Usernames/Names/names.txt
 ❯ /usr/share/metasploit-framework/data/wordlists/unix_users.txt
 ❯ /usr/share/wordlists/metasploit/unix_users.txt
 ❯ /usr/share/wordlists/metasploit/common_users.txt
-
 ```
 
 ## Fuerza bruta a una autenticación digital 
