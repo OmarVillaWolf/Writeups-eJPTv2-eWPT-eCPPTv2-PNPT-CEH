@@ -65,7 +65,7 @@ DNS (Domain Name System) es crucial para el funcionamiento de Active Directory y
 ```
 
 ```bash
-❯ dig axfr @<IP> <Domain>       # Ejecutar el ataque de transferencia de Zona
+❯ dig axfr @<IP> <Domain>       # Ejecutar el ataque de transferencia de Zona para enumerar todos los subdominios existentes 
 
 	# Dominio = Debemos de conocer el dominio anteriormente, ya que si no no funcionaria
 ```
