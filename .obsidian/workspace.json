@@ -8,6 +8,21 @@
         "type": "tabs",
         "children": [
           {
+            "id": "6fa3a7f5136b51ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/2 Attacks/6 Abuso de ACL/2 PowerView.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "2 PowerView"
+            }
+          },
+          {
             "id": "1eca2f72bdf176b0",
             "type": "leaf",
             "state": {
@@ -23,67 +38,112 @@
             }
           },
           {
-            "id": "62a5dce031968e04",
+            "id": "a658b85de4f23d6c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
+                "file": "2 Ports/Ports DC/53 - DNS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "2 Mimikatz"
+              "title": "53 - DNS"
             }
           },
           {
-            "id": "6fa3a7f5136b51ed",
+            "id": "fa08f33970767c6b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 AD 2/1 Enumeration/3 ADPeas.md",
+                "file": "2 Ports/Ports DC/135 - RPC.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "3 ADPeas"
+              "title": "135 - RPC"
             }
           },
           {
-            "id": "83953e2ec6eaed41",
+            "id": "342de247ae1f01c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
+                "file": "2 Ports/Ports DC/88 Kerberos.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1 Powerup"
+              "title": "88 Kerberos"
             }
           },
           {
-            "id": "b578a10976af10f0",
+            "id": "735dc4a5073d25ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 AD 2/2 Attacks/5 Kerberoasting.md",
+                "file": "2 Ports/Ports DC/445 - SMB.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "5 Kerberoasting"
+              "title": "445 - SMB"
+            }
+          },
+          {
+            "id": "91bc50cca732d10f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/1 Enumeration/5 BloodHound.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "5 BloodHound"
+            }
+          },
+          {
+            "id": "4bc959e7f4d5ceff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "1 DCSync"
+            }
+          },
+          {
+            "id": "b711d1d4af6e575e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "12 Cloud Pentesting/1 Azure/0 Intro.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "0 Intro"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -115,7 +175,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mimikatz",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -221,44 +281,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "6fa3a7f5136b51ed",
+  "active": "b711d1d4af6e575e",
   "lastOpenFiles": [
-    "8 AD 2/1 Enumeration/2 PowerView.md",
-    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/2 Mimikatz.md",
-    "8 AD 2/2 Attacks/5 Kerberoasting.md",
-    "2 Ports/Ports DC/3389, 3333 - RDP.md",
-    "8 AD 2/2 Attacks/4 Crackmapexec.md",
-    "8 AD 2/2 Attacks/3 Relay.md",
-    "8 AD 2/2 Attacks/1 Passwd Spraying.md",
-    "8 AD 2/2 Attacks/2 Kerbrute.md",
-    "8 AD 2/2 Attacks/0 Fundamentos.md",
-    "8 AD 2/1 Enumeration/8 DN (Distinguished Name).md",
-    "8 AD 2/1 Enumeration/7 SID.md",
-    "8 AD 2/1 Enumeration/0 Glosario.md",
-    "8 AD 2/1 Enumeration/6 Klist.md",
+    "12 Cloud Pentesting/1 Azure/1 Azure.md",
+    "12 Cloud Pentesting/1 Azure/0 Intro.md",
+    "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
     "8 AD 2/1 Enumeration/5 BloodHound.md",
-    "8 AD 2/1 Enumeration/3 ADPeas.md",
-    "8 AD 1/0 Enumeration/3 BloodHound.md",
-    "8 AD 2/1 Enumeration/1 Enumeración Manual.md",
+    "8 AD 2/1 Enumeration/8 DN (Distinguished Name).md",
+    "8 AD 2/2 Attacks/7 Abuso de GPO/1 GPO.md",
+    "8 AD 2/2 Attacks/8 DnsAdmins/1 DNSAdmins.md",
     "2 Ports/Ports DC/0 DC Enumeration.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/4 Mimikatz.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token.md",
-    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "1 Com Lin & Win/3 Hacking/ReverShell.md",
-    "3 Tools/Ngrok.md",
-    "8 AD 2/5 Evasión/4 AMSI.md",
-    "4 PrivEsc Lin & Win/1 Windows/3 Persistencia/1 Usuarios.md",
-    "6.1 GoLang",
-    "11 ICS-SCADA Pentesting/2 PT/2 Attacks",
-    "11 ICS-SCADA Pentesting/2 PT/1 Enumeration",
-    "12 Cloud Pentesting/2 AWS",
-    "12 Cloud Pentesting/1 Azure",
-    "11 ICS-SCADA Pentesting/2 PT",
-    "11 ICS-SCADA Pentesting/1 Conceptos",
-    "11 ICS-SCADA Pentesting",
-    "0 Hacking/17 Cryptography",
-    "0 Hacking/16 Cloud Computing",
+    "2 Ports/Ports DC/88 Kerberos.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "5 Pivoting/2 Ligolo.md",
+    "2 Ports/Ports DC/135 - RPC.md",
+    "2 Ports/Ports DC/137-139 NetBIOS.md",
+    "2 Ports/Ports DC/53 - DNS.md",
+    "3 Tools/Hydra.md",
+    "3 Tools/Fuzzers.md",
+    "8 AD 2/1 Enumeration/7 SID.md",
+    "8 AD 2/1 Enumeration/6 Klist.md",
+    "8 AD 2/1 Enumeration/4 ADModule.md",
+    "8 AD 2/1 Enumeration/3 ADPeas.md",
+    "8 AD 2/1 Enumeration/2 PowerView.md",
+    "8 AD 2/1 Enumeration/1 Enumeración Manual.md",
+    "8 AD 2/1 Enumeration/0 Glosario.md",
+    "8 AD 2/5 Evasión/8 Sysinternals.md",
+    "8 AD 2/5 Evasión/2 Antivirus.md",
+    "8 AD 2/5 Evasión/1 UAC.md",
+    "8 AD 2/2 Attacks/7 Abuso de GPO",
+    "8 AD 2/2 Attacks/6 Abuso de ACL",
+    "8 AD 2/2 Attacks/12 Resource-based constrained",
+    "8 AD 2/2 Attacks/11 LAPS Reader",
+    "8 AD 2/2 Attacks/8 DnsAdmins",
+    "8 AD 2/2 Attacks/10 Constrained Delegation",
+    "8 AD 2/2 Attacks/9 Unconstrained Delegation",
+    "8 AD 2/2 Attacks/4 ASREProastable",
+    "8 AD 2/2 Attacks/3 Kerberoasting",
+    "8 AD 2/2 Attacks/5 Relay Attacks",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/SSRF.png",
