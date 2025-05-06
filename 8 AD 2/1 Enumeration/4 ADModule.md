@@ -1,6 +1,6 @@
 # AD Module DLL
 
-Tags: #AD #ADModuleDLL
+Tags: #AD #ADModuleDLL #Powershell 
 
 El "AD Module" es el módulo de Active Directory para Windows PowerShell, que ofrece cmdlets diseñados para administrar y consultar dominios de Active Directory (AD). Este conjunto de herramientas es invaluable tanto para administradores como para profesionales de seguridad, incluidos los hackers éticos. Sus funcionalidades están integradas en la biblioteca dinámica Microsoft.ActiveDirectory.Management.dll.
 
