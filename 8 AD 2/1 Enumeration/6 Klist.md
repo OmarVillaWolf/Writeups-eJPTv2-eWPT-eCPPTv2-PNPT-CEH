@@ -1,6 +1,6 @@
 # Klist 
 
-Tags: #AD #Klist #Windows 
+Tags: #AD #Klist #Windows #Powershell 
 
 `klist` es una herramienta de línea de comandos en Windows utilizada para inspeccionar los tickets de Kerberos almacenados en la caché de un cliente. Es especialmente útil para diagnosticar problemas de autenticación y verificar la correcta emisión de tickets. La utilidad permite visualizar tanto los Ticket Granting Tickets (TGT) como los Service Tickets (ST), mostrando detalles como su validez, tipo de cifrado y flags asociados.
 
