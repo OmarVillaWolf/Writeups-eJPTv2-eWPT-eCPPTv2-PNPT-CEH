@@ -8,6 +8,21 @@
         "type": "tabs",
         "children": [
           {
+            "id": "f266b2e863878438",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Com Lin & Win/3 Hacking/3 Powershell.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "3 Powershell"
+            }
+          },
+          {
             "id": "6fa3a7f5136b51ed",
             "type": "leaf",
             "state": {
@@ -133,17 +148,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12 Cloud Pentesting/1 Azure/0 Intro.md",
+                "file": "12 Cloud Pentesting/1 Azure/2 Enumeration/2 Enum tenant y usuarios.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "0 Intro"
+              "title": "2 Enum tenant y usuarios"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -281,34 +295,37 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "b711d1d4af6e575e",
+  "active": "f266b2e863878438",
   "lastOpenFiles": [
-    "12 Cloud Pentesting/1 Azure/1 Azure.md",
-    "12 Cloud Pentesting/1 Azure/0 Intro.md",
+    "12 Cloud Pentesting/1 Azure/2 Enumeration/2 Enum tenant y usuarios.md",
+    "1 Com Lin & Win/3 Hacking/3 Powershell.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+    "8 AD 2/5 Evasión/7 Políticas.md",
+    "8 AD 2/5 Evasión/1 UAC.md",
+    "8 AD 2/5 Evasión/4 AMSI.md",
+    "8 AD 2/5 Evasión/3 LOLBAS.md",
+    "12 Cloud Pentesting/1 Azure/2 Enumeration/1 Escaneo Dominios.md",
+    "12 Cloud Pentesting/1 Azure/2 Enumeration/0 Reconocimiento.md",
     "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro/1 Intro.md",
+    "12 Cloud Pentesting/1 Azure/2 Enumeration/3.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro/7 DB Data Leaks.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro/6 Microsoft Graph.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro/8 Key Material.md",
+    "12 Cloud Pentesting/1 Azure/3 Attacks",
+    "12 Cloud Pentesting/1 Azure/1 Intro/5 Azure Files.md",
+    "2 Ports/6379 - Redis.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro/3 Identity Services.md",
+    "3 Tools/Fuzzers.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro/4 Metodología Cloud.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro/2 Restricciones.md",
+    "12 Cloud Pentesting/1 Azure/2 Enumeration",
+    "1 Com Lin & Win/0 Paginas Practicar.md",
+    "12 Cloud Pentesting/2 AWS/1 AWS.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro/1 Azure.md",
+    "12 Cloud Pentesting/1 Azure/1 Intro",
     "8 AD 2/1 Enumeration/5 BloodHound.md",
     "8 AD 2/1 Enumeration/8 DN (Distinguished Name).md",
-    "8 AD 2/2 Attacks/7 Abuso de GPO/1 GPO.md",
-    "8 AD 2/2 Attacks/8 DnsAdmins/1 DNSAdmins.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
-    "2 Ports/Ports DC/88 Kerberos.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "5 Pivoting/2 Ligolo.md",
-    "2 Ports/Ports DC/135 - RPC.md",
-    "2 Ports/Ports DC/137-139 NetBIOS.md",
-    "2 Ports/Ports DC/53 - DNS.md",
-    "3 Tools/Hydra.md",
-    "3 Tools/Fuzzers.md",
-    "8 AD 2/1 Enumeration/7 SID.md",
-    "8 AD 2/1 Enumeration/6 Klist.md",
-    "8 AD 2/1 Enumeration/4 ADModule.md",
-    "8 AD 2/1 Enumeration/3 ADPeas.md",
-    "8 AD 2/1 Enumeration/2 PowerView.md",
-    "8 AD 2/1 Enumeration/1 Enumeración Manual.md",
-    "8 AD 2/1 Enumeration/0 Glosario.md",
-    "8 AD 2/5 Evasión/8 Sysinternals.md",
-    "8 AD 2/5 Evasión/2 Antivirus.md",
-    "8 AD 2/5 Evasión/1 UAC.md",
     "8 AD 2/2 Attacks/7 Abuso de GPO",
     "8 AD 2/2 Attacks/6 Abuso de ACL",
     "8 AD 2/2 Attacks/12 Resource-based constrained",
@@ -316,9 +333,6 @@
     "8 AD 2/2 Attacks/8 DnsAdmins",
     "8 AD 2/2 Attacks/10 Constrained Delegation",
     "8 AD 2/2 Attacks/9 Unconstrained Delegation",
-    "8 AD 2/2 Attacks/4 ASREProastable",
-    "8 AD 2/2 Attacks/3 Kerberoasting",
-    "8 AD 2/2 Attacks/5 Relay Attacks",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/SSRF.png",
