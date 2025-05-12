@@ -4,31 +4,35 @@ Tags: #AD #BloodHound #SharpHound #Kali #Parrot
 
 **BloodHound** es una herramienta especializada en analizar y mapear relaciones dentro de Active Directory (AD). Su capacidad para identificar rutas de ataque y relaciones complejas la ha convertido en una herramienta esencial tanto para pentesters como para atacantes. A través de la recopilación y visualización de datos, permite descubrir configuraciones inseguras, privilegios excesivos y posibles vectores de escalación de privilegios o movimiento lateral en entornos AD, lo que la hace invaluable en auditorías de seguridad y pruebas de penetración.
 
-* [BloodHound](https://github.com/SpecterOps/BloodHound-Legacy/releases)
-* [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries)
-* [Neo4j-installation](https://neo4j.com/docs/operations-manual/current/installation/linux/debian/)
+* [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries/tree/master/BloodHound_Custom_Queries)
 
 ```bash 
-❯ neo4j console                            # Iniciar neo4j por el puerto local '7474'
-❯ neo4j console &> /dev/null & disown      
-
-❯ BloodHound                               # Ejecutar Bloodhound 
-❯ BloodHound --no-sandbox & disown         
+❯ bloodhound-setup           # Inicia el neo4j 'http:localhost:7474'   
+❯ BloodHound --no-sandbox    # Ejecutar Bloodhound y se abre en la web 'http://localhost:8080/ui/login'
 
 Notas: 
-	1. La versión de Neo4j '4.4.26' funciona con Bloodhound '4.3.1' 
-	2. Si es la primera vez que se usa, abrir la web 'localhost:7474', agregar las credenciales 'neo4j:neo4j', despues, colocar una nueva passwd 'neo4j1' y conectarse al 'Bloodhound'
-	3. El 'CustomQueries.json' se descarga y se copia en la carpeta donde esta instalado 'BloodHound'
+	1. Si es la primera vez que se usa, abrir la web 'localhost:7474', agregar las credenciales 'neo4j:neo4j' y conectarse a la web 'Bloodhound' para agregar las nuevas credenciales 'admin:admin'
+	2. El 'CustomQueries.json' se descarga y se copia en la carpeta donde esta instalado 'BloodHound'
 ```
 
 ```bash 
-Identificar lo siguiente en BloodHound:
+Enumerar lo siguiente en BloodHound en 'Analysis':
+
 	1. Identificación de 'Doman Admins'
 	2. Identificación de 'usuarios Kerberoasteables'
 	3. Identificación de 'usuarios AS-REP Roastable'
 	4. Identificación de vectores de ataque 'Find Shortest Paths to Domain Admins'
 	5. Identificación de 'Unsconstrained Delegation'
 	6. Identificación de usuarios con permisos sobre GPO 'Find if any domain user has interesting against aGPO'
+```
+
+```bash 
+Una vez obtenido un usuario:
+
+# Manera 1
+	1. Agregar la opción 'Mark User as Owned'
+	2. Darle click al usuario y se seleccionará el menú 'Node Info'
+	3. Seleccionar la opción 'Reachable High Value Targets' para ver el camino y lo que deberiamos de hacer para ser usuario 'Administrator'
 ```
 
 ## SharpHound 
@@ -81,13 +85,4 @@ Notas:
 Nota: La herramienta regresará un archivo '.zip' que se debe cargar en 'BloodHound' para analizar
 
 ❯ python3 -m http.server 80     # Crear un recurso compartido a nivel de red para pasar archivos 
-```
-
-## Ataques 'DCSync'
-
-```bash 
-# Si encontramos en 'Bloodhound' un usuario que tiene un 'GetChangesAll' sobre el dominio podremos hacer un 'DCSync attack' para obtener el hash del usuario 'Administrador' y por lo tanto efectuar un 'Pass-The-Hash'
-
-❯ impacket-secretsdump <Domain/User@IP>    # Hacemos un ataque 'DCSync', debemos de colocar la passwd del usuario 
-❯ impacket-psexec <Domain/Administrator@IP> cmd.exe -hashes <:hash>   # Utilizamos 'psexec' para obtener una consola interactiva autenticandonos como el usuario 'Administrator' y colocando su hash para hacer 'Pass-The-Hash'    
 ```
