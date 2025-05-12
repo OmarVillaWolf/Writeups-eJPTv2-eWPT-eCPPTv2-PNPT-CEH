@@ -56,16 +56,14 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 ```
 
 ```bash
-❯ john --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>              # Usamos John para crackear un hash con fuerza bruta
+❯ john -w:/usr/share/wordlists/rockyou.txt <Hash>     # Crackear un hash con ataque de diccionario
 
 	# wordlist = Ruta del diccionario rockyou.txt
 	# hashfile = Archivo que contiene el hash a crackear
-```
 
-```bash
-❯ john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile>    # Crackear un hash con un formato especifico
+❯ john --format=Raw-MD5 -w:/usr/share/wordlists/rockyou.txt <Hashfile>    # Crackear un hash con un formato especifico
 
-❯ john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt <Hashfile.txt>
+❯ john --format=NT -w:/usr/share/wordlists/rockyou.txt <Hashfile.txt>
 
 	# format = raw-md5 -> Formato especifico del hash (MD4,MD5, SHA1...)
 	# Raw = Tipo de hash estandar (raw-md5, raw-sha1, raw-sha256, whirlpool...)
@@ -84,7 +82,7 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 ```bash 
 # Esto se hace cuando tenemos un id_rsa con 'passphrase' o 'Encrypted'
 ❯ ssh2jhon id_rsa > jhon.txt          # Pasar el id_rsa a hash con la passwd cifrada 
-	❯ jhon jhon.txt --wordlist=/usr/share/wordlists/rockyou.txt   # Encontrar la frase 
+	❯ jhon jhon.txt -w:/usr/share/wordlists/rockyou.txt   # Encontrar la frase 
 ```
 
 ```bash 
