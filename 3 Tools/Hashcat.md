@@ -43,7 +43,7 @@ Tags: #HashCat #Hash-Identifier #DictionaryAttack #BruteForce
 	# d = ID de la GPU a usar en 'OpenCL' (1 = GPU Nvidia con memoria de 8064 MB). Varia en cada maquina 
 	# w = Perfil de Workload (1=Low, 2=Default, 3=High, 4=Nightmare). 
 
-❯ hashcat -m 5600 hashes.txt rockyou.txt --force    # Obligar a que las VM ejecuten Hashcat
+❯ hashcat -m 5600 hashes.txt rockyou.txt --force    # Obligar a VM ejecutar Hashcat
 
 ❯ hashcat -m 5600 hashes.txt rockyou.txt -O         # Aumenta la velocidad del crackeo 
 ```
