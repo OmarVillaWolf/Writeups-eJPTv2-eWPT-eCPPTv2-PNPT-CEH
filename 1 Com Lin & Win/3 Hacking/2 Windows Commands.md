@@ -40,7 +40,7 @@ Tags: #Windows #Comandos
 ❯ net localgroup administrators        # Miramos los miembros del grupo administrador de forma local
 ❯ net user admin password123           # Para cambiar la passwd al usuario admin siendo NT Authority\System de forma local
 
-❯ net user omar P4ssw0rd /add          # Crear un usuario siendo NT Authority\System de forma local
+❯ net user omar P4ssw0rd /add               # Crear un usuario siendo NT Authority\System de forma local
 ❯ net localgroup Administrators omar /add   # Agregar al usuario al grupo local 'Administrators'
 ```
 
@@ -49,7 +49,7 @@ Tags: #Windows #Comandos
 ```
 
 ```bash
-❯ .\file.exe               # Ejecutar un archivo .exe en Windows 
+❯ ./SharpHound.exe         # Ejecutar un archivo .exe en Powershell o CMD
 ```
 
 ```bash 
