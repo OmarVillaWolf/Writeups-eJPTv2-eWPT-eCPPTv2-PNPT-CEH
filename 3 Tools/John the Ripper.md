@@ -93,7 +93,7 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 ## Fcrackzip
 
 ```bash 
-❯ fcrackzip -p /usr/share/wordlists/rockyou.txt -b -u File.zip -D # Nos crackea el hash del archivo comprimido '.ZIP' y nos proporciona la passwd 
+❯ fcrackzip -p /usr/share/wordlists/rockyou.txt -b -u File.zip -D   # Crackear la password del hash del archivo comprimido en '.ZIP'
 
 	# p = Init-passwd-string 
 	# b = Bruteforce
@@ -104,13 +104,15 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 ## Crackpkcs12
 
 ```bash 
-❯ git clone https://github.com/crackpkcs12/crackpkcs12   # Forma de instalar en Kali
+❯ git clone https://github.com/crackpkcs12/crackpkcs12          # Instalar en Kali
 ❯ sudo apt install libssl-dev
 ❯ cd crackpkcs12/
 ❯ ./configure
 ❯ make
 ❯ sudo make install
+```
 
+``` bash 
 ❯ crackpkcs12 -d /usr/share/wordlists/rockyou.txt certificate.pfx    # Obtener la password del archivo 'PFX' 
 	# d = Diccionario 
 ```
