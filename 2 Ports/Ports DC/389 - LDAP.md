@@ -36,6 +36,7 @@ Este es el puerto estándar para LDAP (Lightweight Directory Access Protocol), q
 
 ```bash 
 ❯ ldapdomaindump -u 'domain\user' -p 'password' IP     # Crea reportes para poder ver la info desde la web
+	❯ python3 -m http.server 80                       # Montar un server para mirar los archivos 
 ```
 
 ```bash 
