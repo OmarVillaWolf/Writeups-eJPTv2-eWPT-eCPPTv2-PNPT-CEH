@@ -22,6 +22,10 @@ Tags: #Windows #Comandos
 
 ## Enumeración 
 
+```bash
+❯ type AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt  # Historial en Windows 
+```
+
 ```bash 
 ❯ ipconfig                 # Mirar las interfaces y sus IPs
 ```
