@@ -235,7 +235,9 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ tcpdump -i tun0 icmp -n      # Nos ponemos en escucha en la interfaz i = Tun0 para trazas ICMP, n = No trazas DNS
+❯ tcpdump -i tun0 icmp -n      # Ponerse en escucha en la interfaz i = Tun0 para trazas ICMP, n = No trazas DNS
+
+❯ nc -nlvp 389                 # Ponerse en escucha por el puerto 389 con Netcat 
 ```
 
 ```bash
