@@ -20,25 +20,35 @@ Tags: #Windows #Comandos
 ❯ arp -a                               # Mirar la tabla ARP en la maquina actual 
 ```
 
-```bash 
-❯ systeminfo                           # Muestra la informacion de Windows (Parches 'Hotfix', etc...)
-❯ sysinfo                              # Muestra algunos detalles de Windows
-```
+## Enumeración 
 
-```bash
-❯ whoami                               # Miramos el nombre del usuario
-❯ whoami /priv                         # Miramos los privilegios 'Token' del usuario 
+```bash 
+❯ ipconfig                 # Mirar las interfaces y sus IPs
 ```
 
 ```bash 
-❯ query user                           # Mirar si hay algun usuario loggeado
+❯ systeminfo               # Mostrar la informacion de Windows (Parches 'Hotfix', etc...)
+❯ sysinfo                  # Mostrar algunos detalles de Windows
 ```
 
 ```bash
-❯ net users                            # Miramos todos los usuarios existentes y sus grupos de forma local
-❯ net user <User>                      # Miramos el grupo de un usuario especifico como 'administrator' de forma local
-❯ net localgroup administrators        # Miramos los miembros del grupo administrador de forma local
-❯ net user admin password123           # Para cambiar la passwd al usuario admin siendo NT Authority\System de forma local
+❯ whoami                   # Mirar el nombre del usuario
+❯ whoami /priv             # Mirar los privilegios 'Token' del usuario 
+❯ whoami /all              # Mirar toda la info del usuario 
+```
+
+```bash 
+❯ query user               # Mirar si hay algun usuario loggeado
+```
+
+```bash
+❯ net user                             # Mirar todos los usuarios existentes y sus grupos de forma local
+❯ net user <User>                      # Mirar los grupos de un usuario especifico como 'administrator' de forma local
+❯ net user admin password123           # Cambiar la passwd al usuario admin siendo NT Authority\System de forma local
+
+❯ net group "Group"                    # Mirar los grupos del usuario 
+❯ net localgroup "administrators"      # Mirar los miembros del grupo administrador de forma local
+
 
 ❯ net user omar P4ssw0rd /add               # Crear un usuario siendo NT Authority\System de forma local
 ❯ net localgroup Administrators omar /add   # Agregar al usuario al grupo local 'Administrators'
@@ -49,11 +59,14 @@ Tags: #Windows #Comandos
 ```
 
 ```bash
-❯ ./SharpHound.exe         # Ejecutar un archivo .exe en Powershell o CMD
+❯ .\SharpHound.exe         # Ejecutar un archivo .exe en Powershell o CMD
 ```
 
 ```bash 
-❯ cd DOCUME~1              # Para ir a un dir que tenga espacios en su nombre 'Documents and settings', debemos de colocar las 6 primeras letras 
+❯ cd PROGRA~1              # Colocar las 6 primeras letras e ingresar a un dir especifico con espacios 'Program Files'
+
+Notas:
+	1. Colocar '~2' si se quiere ingresar a otro dir aunque se tenga las primeras 6 letras iguales
 ```
 
 ```bash
@@ -65,9 +78,12 @@ Tags: #Windows #Comandos
 ```
 
 ```bash
-❯ dir                            # Lista el contenido del directorio
-❯ dir C:\Users                   # Lista los directorios de los usuarios  
-❯ dir /r /s ❮File.txt❯           # Busca de forma recursiva el string .txt
+❯ dir                        # Lista el contenido del directorio
+❯ dir C:\Users               # Lista los directorios de los usuarios 
+
+❯ dir /r /s ❮File.txt❯       # Busca de forma recursiva el string .txt
+
+❯ dir -Force                 # Lista todos los archivos hasta los ocultos
 ```
 
 ```bash
