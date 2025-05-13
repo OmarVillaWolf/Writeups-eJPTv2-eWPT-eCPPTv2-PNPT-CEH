@@ -23,18 +23,33 @@
             }
           },
           {
-            "id": "1eca2f72bdf176b0",
+            "id": "79805cbc005603dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/0 DC Enumeration.md",
+                "file": "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "0 DC Enumeration"
+              "title": "2 Windows Commands"
+            }
+          },
+          {
+            "id": "073cf15974ffe4b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token-Priv, Groups.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "3 Token-Priv, Groups"
             }
           },
           {
@@ -53,6 +68,21 @@
             }
           },
           {
+            "id": "1eca2f72bdf176b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Ports/Ports DC/0 DC Enumeration.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "0 DC Enumeration"
+            }
+          },
+          {
             "id": "a658b85de4f23d6c",
             "type": "leaf",
             "state": {
@@ -65,6 +95,21 @@
               },
               "icon": "lucide-file",
               "title": "53 - DNS"
+            }
+          },
+          {
+            "id": "735dc4a5073d25ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Ports/Ports DC/445 - SMB.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "445 - SMB"
             }
           },
           {
@@ -83,18 +128,18 @@
             }
           },
           {
-            "id": "735dc4a5073d25ae",
+            "id": "25d10da7103b906d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/445 - SMB.md",
+                "file": "2 Ports/Ports DC/389 - LDAP.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "445 - SMB"
+              "title": "389 - LDAP"
             }
           },
           {
@@ -133,13 +178,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
+                "file": "2 Ports/Ports DC/445, 135 - Psexec.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "5985 - 5986 - WINRM"
+              "title": "445, 135 - Psexec"
             }
           },
           {
@@ -155,6 +200,21 @@
               },
               "icon": "lucide-file",
               "title": "Hashcat"
+            }
+          },
+          {
+            "id": "d8c3643c5295fa4d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/1 Enumeration/3 ADPeas.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "3 ADPeas"
             }
           },
           {
@@ -186,24 +246,9 @@
               "icon": "lucide-file",
               "title": "1 DCSync"
             }
-          },
-          {
-            "id": "79805cbc005603dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "2 Windows Commands"
-            }
           }
         ],
-        "currentTab": 10
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -270,7 +315,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.50467681884766
+    "width": 218.50467681884766
   },
   "right": {
     "id": "352c47b0cb031926",
@@ -341,34 +386,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "91bc50cca732d10f",
+  "active": "073cf15974ffe4b2",
   "lastOpenFiles": [
-    "8 AD 1/0 Enumeration/3 BloodHound.md",
-    "8 AD 2/1 Enumeration/5 BloodHound.md",
-    "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
+    "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token-Priv, Groups.md",
     "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "4 PrivEsc Lin & Win/1 Windows/1 Enumeration/2 Users, Groups.md",
+    "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
+    "8 AD 2/5 Evasión/4 AMSI.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 WinPEAS.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/0 Identifying PrivEsc.md",
+    "2 Ports/Ports DC/445, 135 - Psexec.md",
+    "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
+    "8 AD 2/2 Attacks/3 ASREProastable/3 Impacket.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "2 Ports/Ports DC/135 - RPC.md",
+    "2 Ports/Ports DC/88 Kerberos.md",
+    "8 AD 2/1 Enumeration/5 BloodHound.md",
+    "8 AD 2/1 Enumeration/3 ADPeas.md",
+    "2 Ports/Ports DC/0 DC Enumeration.md",
+    "2 Ports/Ports DC/389 - LDAP.md",
+    "2 Ports/Ports DC/53 - DNS.md",
+    "8 AD 1/0 Enumeration/3 BloodHound.md",
     "8 AD 2/2 Attacks/3 ASREProastable/2 Netexec.md",
     "8 AD 2/2 Attacks/4 Kerberoasting/3 Netexec.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
-    "8 AD 2/2 Attacks/3 ASREProastable/3 Impacket.md",
-    "2 Ports/Ports DC/88 Kerberos.md",
     "1 Com Lin & Win/1 Bash/1 Regex.md",
     "1 Com Lin & Win/1 Bash/2 Filtros.md",
-    "2 Ports/Ports DC/135 - RPC.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
     "12 Cloud Pentesting/1 Azure/3 Attacks/1 Vector - Uploader.md",
-    "8 AD 2/2 Attacks/6 Abuso de ACL/2 PowerView.md",
-    "8 AD 2/2 Attacks/3 ASREProastable/1 Rubeus.md",
-    "8 AD 2/2 Attacks/4 Kerberoasting/4 Powerview.md",
-    "8 AD 2/2 Attacks/4 Kerberoasting/2 Impacket.md",
-    "8 AD 2/2 Attacks/4 Kerberoasting/1 Rubeus.md",
-    "3 Tools/Hashcat.md",
-    "3 Tools/John the Ripper.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "8 AD 2/2 Attacks/7 Abuso de GPO/1 GPO.md",
     "12 Cloud Pentesting/1 Azure/Sin nombre",
     "12 Cloud Pentesting/1 Azure/3 Attacks",
     "12 Cloud Pentesting/1 Azure/2 Enumeration",
