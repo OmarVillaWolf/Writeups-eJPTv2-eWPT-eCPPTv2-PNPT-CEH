@@ -23,7 +23,11 @@ Tags: #Windows #Comandos
 ## Enumeración 
 
 ```bash
-❯ type AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt  # Historial en Windows 
+# Historial en Windows
+❯ type AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt   
+
+Notas:
+	1. El comando se ejecuta en el dir del usuario 'C:\Users\omar'
 ```
 
 ```bash 
