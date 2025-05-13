@@ -107,12 +107,15 @@ C:\Windows\Temp
 
 2. ❯ scp user@IP:/dir/destino/ .    # Copiar un archivo que se encuentra en la maquina Linux a Windows    
 3. ❯ python3 -m http.server 80      # Creamos un servidor 
+4. ❯ copy \\IP\smbFolder\file.exe   # Copiar el archivo desde Windows a Kali 
 ```
 
 ```bash 
 # En linux
 3. ❯ http://IP          # Ingresamos desde el navegador web, colocamos la IP que se esta compartiendo y descargamos el recurso  
+4. ❯ impacket-smbserver smbFolder $(pwd) -smb2support     # Recurso compartido para recibir el archivo 
 ```
+
 ## Certutil 
 
 ```bash 
