@@ -101,7 +101,7 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 	# u = Use-unzip 
 ```
 
-## Crackpkcs12
+## Crackpkcs12 para archivos PFX 
 
 ```bash 
 ❯ git clone https://github.com/crackpkcs12/crackpkcs12          # Instalar en Kali
@@ -117,9 +117,13 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 	# d = Diccionario 
 ```
 
-## OpenSSL para PFX
+## OpenSSL para archivos PFX
 
 ```bash 
-❯ openssl pkcs12 -in certificate.pfx -nocerts -out priv-key.pem -nodes # Obtener la 'private-key.pem' del archivo 'PFX'
-❯ openssl pkcs12 -in certificate.pfx -nokeys -out certificate.pem      # Obtener el 'certificado.pem' del archivo 'PFX'
+# Obtener la 'private-key.pem' del archivo 'PFX' 
+❯ openssl pkcs12 -in cert.pfx -nocerts -out priv-key.pem -nodes 
+	# cert.pfx = Certificado que ya se obtiene al igual que su passwd
+
+# Obtener el 'certificado.pem' del archivo 'PFX'
+❯ openssl pkcs12 -in cert.pfx -nokeys -out certificate.pem      
 ```
