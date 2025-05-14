@@ -15,11 +15,7 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 	- Recuperación de passwd: Se utiliza para recuperar passwd perdidas u olvidadas. 
 
 ```bash
-# Tipos de Hashes:
-
-❯ echo -n "2b22337f218b2d82dfc3b6f77e7cb8ec" | wc -c           # Nos muestra el numero de caracteres en una linea
-
-	# MD5 = 32 Caracteres
+❯ echo -n "2b22337f218b2d82dfc3b6f77e7cb8ec" | wc -c     # Muestra el número de caracteres en una linea
 ```
 
 ## Identificar Hash
@@ -28,12 +24,15 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 * Pagina para crackear los hashes: [Crackear_Hashes](https://crackstation.net/)
 
 ```bash
-❯ hashid <2b22337f218b2d82dfc3b6f77e7cb8ec> # Podemos saber el tipo de hash, no es muy confiable
+❯ hashid <2b22337f218b2d82dfc3b6f77e7cb8ec>   # Identificar el tipo de hash 
 
-❯ hash-identifier                           # Abriremos la tool y desoues colocaremos el hash a encontrar
-	2b22337f218b2d82dfc3b6f77e7cb8ec
+❯ hash-identifier                             # Identificar el tipo de hash
 
-	# MD5 = Tiene 32 caracteres
+Notas:
+	1. MD5 = Tiene 32 caracteres
+	2. Hash NTLM
+	administrator:500:LM:NT:::     # Solo se necesita la parte de NT para crackear la password
+	administrador:500:42f29043y123fa9c74f23606c6g522b0:71759a1bb2web4da43e676d6b7190711:::
 ```
 
 ## ID	Cryptographic Hash Algorithm
@@ -68,10 +67,6 @@ Es una herramienta de prueba de penetración que se utiliza para probar la segur
 	# format = raw-md5 -> Formato especifico del hash (MD4,MD5, SHA1...)
 	# Raw = Tipo de hash estandar (raw-md5, raw-sha1, raw-sha256, whirlpool...)
 	# hashfile = Archivo que contiene el hash a crackear
-	
-# Ejemplo de un hash NT --> 
-	administrator:500:LM:NT:::     # Solo necesitaremos la parte de NT para crackear la password
-	Administrador:500:42f29043y123fa9c74f23606c6g522b0:71759a1bb2web4da43e676d6b7190711:::
 ```
 
 ```bash
