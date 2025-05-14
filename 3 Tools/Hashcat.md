@@ -8,12 +8,15 @@ Tags: #HashCat #Hash-Identifier #DictionaryAttack #BruteForce
 * Pagina para crackear los hashes: [Crackear_Hashes](https://crackstation.net/)
 
 ```bash
-❯ hashid <2b22337f218b2d82dfc3b6f77e7cb8ec> # Podemos saber el tipo de hash, no es muy confiable
+❯ hashid <2b22337f218b2d82dfc3b6f77e7cb8ec>   # Identificar el tipo de hash 
 
-❯ hash-identifier                           # Abriremos la tool y desoues colocaremos el hash a encontrar
-	2b22337f218b2d82dfc3b6f77e7cb8ec
+❯ hash-identifier                             # Identificar el tipo de hash
 
-	# MD5 = Tiene 32 caracteres
+Notas:
+	1. MD5 = Tiene 32 caracteres
+	2. Hash NTLM
+	administrator:500:LM:NT:::     # Solo se necesita la parte de NT para crackear la password
+	administrador:500:42f29043y123fa9c74f23606c6g522b0:71759a1bb2web4da43e676d6b7190711:::
 ```
 
 ## Ataque de Diccionario 
