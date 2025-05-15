@@ -32,32 +32,30 @@ Tags: #Linux #Comandos
 ```
 
 ```bash 
-# Kali
-❯ apt update 
+❯ apt update               # Actualizar el SO en Kali
 ❯ apt upgrade 
 ❯ apt full-upgrade     
 
-# Parrot
-❯ parrot-upgrade
+❯ parrot-upgrade           # Actualizar el SO en Parrot 
 ```
 
 ```bash
-/tmp                                    # Directorios con capacidad de lectura y escritura en Linux       
+/tmp                        # Directorios con capacidad de lectura y escritura en Linux       
 /var/tmp 
 /dev/shm      
-/temp                                   # Directorios con capacidad de lectura y escritura en PHP
+/temp                       # Directorios con capacidad de lectura y escritura en PHP
 
-❯ Ctrl + u                              # Miramos el codigo fuente de la pagina 
-❯ Ctrl + Shift + c                      # Abrimos el 'Inspect' de la pagina 
+❯ Ctrl + u                  # Miramos el codigo fuente de la pagina 
+❯ Ctrl + Shift + c          # Abrimos el 'Inspect' de la pagina 
 ```
 
 ```bash
-/etc/hosts                              # Para agregar algun dominio existente
-/etc/passwd                             # Ruta de las cuentas de usuario
-/etc/shadow                             # Hashes encriptados de passwds de los usuarios y solo puede acceder el usuario root 
-/etc/group                              # Ruta de configuracion del archivo de grupos
-/etc/shells                             # Podemos ver las diferentes shells que hay 
-/etc/ssh/sshd_config                    # Podemos ver las configuraciones de ssh y ver si el usuario root se puede conectar 
+/etc/hosts                    # Para agregar algun dominio existente
+/etc/passwd                   # Ruta de las cuentas de usuario
+/etc/shadow                   # Hashes encriptados de passwds de los usuarios y solo puede acceder el usuario root 
+/etc/group                    # Ruta de configuracion del archivo de grupos
+/etc/shells                   # Podemos ver las diferentes shells que hay 
+/etc/ssh/sshd_config          # Podemos ver las configuraciones de ssh y ver si el usuario root se puede conectar 
 ```
 
 ```bash 
@@ -67,16 +65,16 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ echo ‘ ’ > ~/.zsh_history              # Para borrar el historial en la zshrc
+❯ echo ‘ ’ > ~/.zsh_history         # Para borrar el historial en la zshrc
 ```
 
 ```bash
-❯ !$                                    # Referencias el ultimo argumento que hayamos puesto en la consola 
+❯ !$                                # Referencias el ultimo argumento que hayamos puesto en la consola 
 ```
 
 ```bash 
-❯ pushd /usr/share/                     # Para ir a un directorio especifico, funciona como el comando 'cd'
-❯ popd                                  # Regresamos al directorio donde nos encontrabamos al momento de usar 'pushd'
+❯ pushd /usr/share/                 # Para ir a un directorio especifico, funciona como el comando 'cd'
+❯ popd                              # Regresamos al directorio donde nos encontrabamos al momento de usar 'pushd'
 ```
 
 ```bash 
@@ -87,20 +85,20 @@ Tags: #Linux #Comandos
 ```
 
 ```bash 
-❯ watch -n 1 ls -l /bin/bash            # Monitorizar la bash cada segundo con el siguiente comando y ver cuando cambia a SUID
+❯ watch -n 1 ls -l /bin/bash        # Monitorizar la bash cada segundo con el siguiente comando y ver cuando cambia a SUID
 ```
 
 ```bash 
-❯ extractPorts <filename>               # Herramienta que nos ayuda extraer los puerto de la captura de Nmap y copiarlos a la clipboard 
+❯ extractPorts <filename>           # Herramienta que nos ayuda extraer los puerto de la captura de Nmap y copiarlos a la clipboard 
 ```
 
 ```bash
-❯ ping -c 1 ❮IP❯                        # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
+❯ ping -c 1 ❮IP❯                    # Para saber si la maquina esta activa o no (ttl=64 Linux, ttl=128 Windows)
 
 	# IP = IP Address de la maquina target 
 	# c = Numero de pings a ejecutar
 
-❯ ping -c 1 < TARGET IP> -R             # Verificar si tenemos conexion a una IP mandando numeros de ping especificos 
+❯ ping -c 1 < TARGET IP> -R         # Verificar si tenemos conexion a una IP mandando numeros de ping especificos 
 	
 	# R = Traceroute, solo aplica en maquinas Linux
 	# c = Numero de ping 
@@ -109,30 +107,30 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ ls -la                                # Podemos observar todos los archivos del dir inclyendo los ocultos 
+❯ ls -la                       # Podemos observar todos los archivos del dir inclyendo los ocultos 
 ```
 
 ```bash
-❯ whoami                                # Miramos el nombre del usuario
+❯ whoami                       # Miramos el nombre del usuario
 ```
 
 ```bash
-❯ lsb_release -a                        # Miramos algunas caracteristicas de la maquina Linux 
+❯ lsb_release -a               # Miramos algunas caracteristicas de la maquina Linux 
 ```
 
 ```bash
-❯ ip a                                  # Para ver las interfaces e IPs de una maquina
-❯ ifconfig                              # Para saber que IP hay en mi maquina 
-❯ ifconfig docker0                      # Miramos la IP de la interfaz de Docker
+❯ ip a                         # Para ver las interfaces e IPs de una maquina
+❯ ifconfig                     # Para saber que IP hay en mi maquina 
+❯ ifconfig docker0             # Miramos la IP de la interfaz de Docker
 ```
 
 ```bash
-❯ file <FILE>                           # Nos muestra que tipo de archivo es por los magic numbers
+❯ file <FILE>                  # Nos muestra que tipo de archivo es por los magic numbers
 ```
 
 ```bash
-❯ locate nc.exe                         # Buscar el Netcat para Windows
-	❯ sudo updatedb                    # Actualizar la base de datos 
+❯ locate nc.exe                # Buscar el Netcat para Windows
+	❯ sudo updatedb           # Actualizar la base de datos 
 ```
 
 ```bash
@@ -154,12 +152,12 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ hostname -I          # Muestra la dirección IP
+❯ hostname -I        # Muestra la dirección IP
 ```
 
 ```bash 
-❯ ip a                  # Mirar la IP que tienes asignada 
-❯ ifconfig              # Mirar la IP asignada en Linux
+❯ ip a               # Mirar la IP que tienes asignada 
+❯ ifconfig           # Mirar la IP asignada en Linux
 ```
 
 ```bash 
@@ -205,15 +203,15 @@ Tags: #Linux #Comandos
 ```
 
 ```bash 
-❯ md5sum file                             # Obtener el hash del archivo 
+❯ md5sum file                      # Obtener el hash del archivo 
 ```
 
 ```bash
-❯ wget http://❮IP❯/❮File❯                 # Para poder cargar o descargar un archivo especifico desde una IP de atacante
+❯ wget http://❮IP❯/❮File❯          # Para poder cargar o descargar un archivo especifico desde una IP de atacante
 ```
 
 ```bash
-❯ curl http://❮IP❯:PORT                   # Para ver si hay contenido 
+❯ curl http://❮IP❯:PORT            # Para ver si hay contenido 
 	# v = Verbosity
 ```
 
@@ -246,7 +244,7 @@ Tags: #Linux #Comandos
 ```
 
 ```bash 
-❯ cat file | xclip -sel clip                # Para copiarnos el output a la Clipboard
+❯ cat file | xclip -sel clip       # Para copiarnos el output a la Clipboard
 ```
 
 ```bash 
@@ -259,12 +257,12 @@ Tags: #Linux #Comandos
 ```
 
 ```python
-❯ 7z l <file.zip>                            # Podemos ver el contenido interno del archivo zip, gz, bzip2, etc... (l=ele)
-❯ 7z x <file.gz>                             # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
-❯ tar -xf <file.tar.gz>                      # Descomprimimos el archivo tar.gz
-❯ gzip -d <file.txt.gz>                      # Descomprimir archivos gz
-❯ unzip <file.zip>                           # Descomprimir un archivo zip 
-❯ gunzip <file.gz>                           # Para descompirmir archivos gzip
+❯ 7z l <file.zip>              # Podemos ver el contenido interno del archivo zip, gz, bzip2, etc... (l=ele)
+❯ 7z x <file.gz>               # Podemos extraer el contenido interno del archivo zip, gz, bzip2, etc...
+❯ tar -xf <file.tar.gz>        # Descomprimimos el archivo tar.gz
+❯ gzip -d <file.txt.gz>        # Descomprimir archivos gz
+❯ unzip <file.zip>             # Descomprimir un archivo zip 
+❯ gunzip <file.gz>             # Para descompirmir archivos gzip
 ```
 
 ```bash
@@ -276,16 +274,16 @@ Tags: #Linux #Comandos
 	# o = Para que no me pida la passwd
 	# rw = Crear la montura con capacidad de lectura y escritura
 
-❯ umount /mnt/mounted                      # Para eliminar la montura que esta en un dir especifico
-❯ mount | grep home                        # Nos muestra desde donde hasta donde esta creada esa montura
+❯ umount /mnt/mounted        # Para eliminar la montura que esta en un dir especifico
+❯ mount | grep home          # Nos muestra desde donde hasta donde esta creada esa montura
 ```
 
 ```bash
-❯ cp /bin/bash .                           # Copiamos la bash en el dir actual
+❯ cp /bin/bash .             # Copiamos la bash en el dir actual
 ```
 
 ```bash
-❯ base64 -w 0 File.sh | xclip -set clip             # Codificamos el contenido de un archivo en base64 y lo copiamos en la clipboard
+❯ base64 -w 0 File.sh | xclip -set clip      # Codificamos el contenido de un archivo en base64 y lo copiamos en la clipboard
 
 ❯ echo kiufgaiuafgajlfufa98ag676a85g6ga7 | base64 -d > File.sh  # Decodeamos el archivo en base64 y lo colocamos en un archivo que se llamara File.sh
 ```
@@ -320,12 +318,19 @@ Tags: #Linux #Comandos
 ```
 
 ```bash
-❯ du -hc <File>                           # Ver el peso del archivo 
+❯ du -hc <File>                    # Ver el peso del archivo 
 
-❯ go build -ldflags "-s -w"               # Bajar el peso mientras se compila un archivo con 'go'
-❯ upx <File>                              # Bajar el peso al archivo para transferirlo a la maquina victima mas rapido
+❯ go build -ldflags "-s -w"        # Bajar el peso mientras se compila un archivo con 'go'
+❯ upx <File>                       # Bajar el peso al archivo para transferirlo a la maquina victima mas rapido
 ```
 
 ```bash 
-❯ php -f exploit.php                      # Ejecutar un archivo con extension PHP
+❯ php -f exploit.php     # Ejecutar un archivo con extension PHP
+```
+
+```bash 
+❯ https://github.com/pwsafe/pwsafe/releases        # Descargar e instalarl la tool en Kali 
+❯ dpkg -i passwordsafe-debian12-1.21-amd64.deb
+
+❯ pwsafe          # Iniciar la herramienta 
 ```
