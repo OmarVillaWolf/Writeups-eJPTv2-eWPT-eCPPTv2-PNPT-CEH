@@ -71,7 +71,7 @@ Notas:
 
 ```bash
 ❯ zip2john File.zip > hash   # Devuelva el Hash para crackearlo, el resultado se ingresa en un archivo llamado 'hash'
-❯ jhon -w:/usr/share/wordlists/rockyou.txt hash    # Romper el hash obtenido anteriormente
+❯ jhon -w:/usr/share/wordlists/rockyou.txt hash    # Romper el hash obtenido
 ```
 
 ```bash 
@@ -81,8 +81,13 @@ Notas:
 ```
 
 ```bash 
-❯ keepass2john file.kdbx                 # Para pasar un archivo Keepass a Hash con la passwd cifrada 
-	❯ jhon -w:/usr/share/wordlists/rockyou.txt hash # Usando jhon y el diccionario rockyou, romperemos el hash obtenido anteriormente
+❯ keepass2john file.kdbx                 # Obtener el hash del archivo con la passwd cifrada 
+	❯ jhon -w:/usr/share/wordlists/rockyou.txt hash  # Romper el hash obtenido
+```
+
+```bash 
+❯ pwsafe2john file.psafe3 > hash       # Obtener el hash del archivo con la passwd cifrada
+	❯ jhon -w:/usr/share/wordlists/rockyou.txt hash  # Romper el hash obtenido
 ```
 
 ## Fcrackzip
