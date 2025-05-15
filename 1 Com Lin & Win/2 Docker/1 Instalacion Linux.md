@@ -12,12 +12,12 @@ Algunas de las ventajas que se presentan a la hora de practicar hacking usando D
 -   **Reproducibilidad**: los contenedores de Docker se pueden configurar de forma precisa y reproducible, lo que es importante en el hacking para poder recrear escenarios de ataque.
 
 ```bash 
-❯ apt install docker.io               # Para instalar Docker 
-❯ service docker start                # Iniciamos el servicio de Docker
-❯ service docker stop                 # Paramos el servicio de Docker
+❯ apt install docker.io               # Instalar Docker 
+❯ service docker start                # Iniciar el servicio de Docker
+❯ service docker stop                 # Parar el servicio de Docker
 
-❯ docker images                       # Para mirar las imagenes existentes en Docker
-❯ docker volume ls                    # Para mirar los volumenes existentes
+❯ docker images                       # Mirar las imagenes existentes en Docker
+❯ docker volume ls                    # Mirar los volumenes existentes
 
 ❯ docker ps                           # Para ver los contenedores existentes que se estan ejecutando
 	# “-a” o “–all“           =      se utiliza para listar todos los contenedores, incluyendo los contenedores detenidos.
