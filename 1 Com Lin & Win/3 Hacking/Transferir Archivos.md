@@ -14,10 +14,10 @@ C:\Windows\Temp
 
 ```bash 
 # Atacante Linux
-2. ❯ python -m SimpleHTTPServer 80      # Creamos un servidor para poder pasar los archivos a la maquina Windows
-3. ❯ python3 -m http.server 80          # Creamos un servidor 
-4. ❯ impacket-smbserver smbFolder $(pwd) -smb2support # Creamos un server para tranferir el archivo a Windows
-5. ❯ impacket-smbserver smbFolder $(pwd) -smb2support # Creamos un server para tranferir el archivo a Windows compartiendo el dir actual con 'pwd'
+2. ❯ python -m SimpleHTTPServer 80      # Crear un servidor para poder pasar los archivos a la maquina Windows
+3. ❯ python3 -m http.server 80          # Crear un servidor 
+4. ❯ impacket-smbserver smbFolder $(pwd) -smb2support # Crear un server para tranferir el archivo a Windows
+5. ❯ impacket-smbserver smbFolder $(pwd) -smb2support # Crear un server para tranferir el archivo a Windows compartiendo el dir actual con 'pwd'
 ```
 
 ```bash 
