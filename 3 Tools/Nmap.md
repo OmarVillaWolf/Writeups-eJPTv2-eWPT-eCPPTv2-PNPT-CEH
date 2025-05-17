@@ -68,6 +68,10 @@ Tags: #Nmap #Escaneo #UDP #TCP
 
 * [Nmap-book-scripting-engine](https://nmap.org/book/nse.html)
 
+```bash 
+❯ rustscan -a IP --ulimit 5000 -g  # Escaneo de puertos en la dirección IP
+```
+
 ```bash
 ❯ nmap -iL <IP_File> -sV -O        # Escanear un archivo con varias IP, Version y Sistema Operativo
 ```
@@ -106,6 +110,9 @@ Tags: #Nmap #Escaneo #UDP #TCP
 	# v = Verbose
 	# sC = Ejecuta una lista de scipts de Nmap
 
+```
+
+```bash 
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn ❮Target IP❯  -oG allPorts       # Escaneo en la Capa 4 del modelo OSI
 
 	# Protocolo usado TCP, UDP
