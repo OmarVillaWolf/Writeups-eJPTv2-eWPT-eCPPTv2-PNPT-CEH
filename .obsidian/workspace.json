@@ -263,7 +263,7 @@
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -401,11 +401,12 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "1de4f3c815de7923",
+  "active": "073cf15974ffe4b2",
   "lastOpenFiles": [
+    "2 Ports/Ports DC/445, 135 - Psexec.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token-Priv, Groups.md",
     "2 Ports/Ports DC/1433 MS-SQL-Server.md",
     "2 Ports/Ports DC/389 - LDAP.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token-Priv, Groups.md",
     "2 Ports/Ports DC/445 - SMB.md",
     "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
     "3 Tools/Nmap.md",
@@ -420,7 +421,6 @@
     "8 AD 2/1 Enumeration/2 PowerView.md",
     "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
     "2 Ports/Ports DC/88 Kerberos.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
     "8 AD 2/2 Attacks/4 Kerberoasting/5 TargetKerberoast.md",
     "8 AD 1/0 Enumeration/3 BloodHound.md",
     "2 Ports/Ports DC/135 - RPC.md",
