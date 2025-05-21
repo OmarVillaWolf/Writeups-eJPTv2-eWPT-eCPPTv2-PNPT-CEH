@@ -78,7 +78,7 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirse
 ```
 
 ```bash
-# Creamos un Payload de tipo lista 
+# Crear un Payload de tipo lista 
 
 ❯ wfuzz -c --hc=404,403 -t 200 -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -z list,html-txt-php https://miwifi.com/FUZZ.FUZ2Z
 
@@ -97,7 +97,7 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirse
 ```
 
 ```bash
-# Para descubrir si tiene el Plugin de 'gwolle-gb' 
+# Descubrir si tiene el Plugin de 'gwolle-gb' 
 
 ❯ wfuzz -c --hc=404 -t 200 -w wp-plugins.fuzz.txt http://❮IP❯/FUZZ
 
