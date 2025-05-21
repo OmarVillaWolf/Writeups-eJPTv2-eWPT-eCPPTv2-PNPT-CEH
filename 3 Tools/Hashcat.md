@@ -33,14 +33,16 @@ Notas:
 ❯ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt -d 1 -D 2
 ❯ hashcat -m 5600 hashes.txt rockyou.txt -d 1 -D 2
 ❯ hashcat -m 400 -a 0 hash.txt rockyou.txt -d 1 -D 2
-❯ hashcat -m 13100 -a 0 hash.txt rockyou.txt -d 1 -D 2
+❯ hashcat -m 13100 -a 0 hash.txt rockyou.txt --force 
+❯ hashcat -m 18200 -a 0 hash.txt rockyou.txt --force 
 
 	# m = Tipo de hash a evaluar (0 = MD5)
 	# a = Tipo de ataque  
 	# 400 = Inicia con $P$ y es phpass, WordPress (MD5), Joomla (MD5)
 	# 5500 = NetNTLMv1 / NetNTLMv1+ESS
 	# 5600 = NetNTLMv2 
-	# 13100 = Kerberos 5, etype 23, TGS-REP
+	# 18200 = ASREP TGT 
+	# 13100 = Kerberoasting TGS-REP
 	# hashes.txt = Archivo que contiene el hash
 	# D = Tipo de dispositivo (2 = GPU)
 	# d = ID de la GPU a usar en 'OpenCL' (1 = GPU Nvidia con memoria de 8064 MB). Varia en cada maquina 
@@ -52,7 +54,7 @@ Notas:
 ```
 
 ```bash 
-❯ hashcat -m 0 hashes.txt rockyou.txt --show
+❯ hashcat -m 18200 -a 0 hashes.txt rockyou.txt --force --show
 
 	# show = Muestra las passwd que ya han sido crackeadas 'historial'
 ```
