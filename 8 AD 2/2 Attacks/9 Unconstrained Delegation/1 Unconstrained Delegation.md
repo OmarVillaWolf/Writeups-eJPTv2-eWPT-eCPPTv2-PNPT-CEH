@@ -34,3 +34,4 @@ Es esencial no confundir estos dos, ya que cada uno implica un nivel diferente d
     
 - TrustedForDelegation: Este parámetro se aplica a la delegación sin restricciones (unconstrained delegation). Cuando una cuenta tiene este parámetro configurado, puede delegar credenciales a cualquier servicio, lo que representa un mayor riesgo de seguridad.
 ```
+
