@@ -23,18 +23,18 @@
             }
           },
           {
-            "id": "dd2c3564b8f707db",
+            "id": "aaa92ee88f3c1982",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
+                "file": "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token-Priv, Groups.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1 Linux Commands"
+              "title": "3 Token-Priv, Groups"
             }
           },
           {
@@ -53,22 +53,22 @@
             }
           },
           {
-            "id": "073cf15974ffe4b2",
+            "id": "7199192521fed6a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token-Priv, Groups.md",
+                "file": "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "3 Token-Priv, Groups"
+              "title": "1 Linux Commands"
             }
           },
           {
-            "id": "adaadf3ec068947b",
+            "id": "7888676df9c5d797",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -98,21 +98,6 @@
             }
           },
           {
-            "id": "a658b85de4f23d6c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/Ports DC/53 - DNS.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "53 - DNS"
-            }
-          },
-          {
             "id": "735dc4a5073d25ae",
             "type": "leaf",
             "state": {
@@ -128,142 +113,52 @@
             }
           },
           {
-            "id": "fa08f33970767c6b",
+            "id": "68a5cf8080145af5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/135 - RPC.md",
+                "file": "2 Ports/25 - SMTP.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "135 - RPC"
+              "title": "25 - SMTP"
             }
           },
           {
-            "id": "25d10da7103b906d",
+            "id": "dd2c3564b8f707db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/389 - LDAP.md",
+                "file": "2 Ports/Ports DC/464 - kpasswd.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "389 - LDAP"
+              "title": "464 - kpasswd"
             }
           },
           {
-            "id": "342de247ae1f01c9",
+            "id": "687b269e1430e1a0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 Ports/Ports DC/88 Kerberos.md",
+                "file": "8 AD 2/2 Attacks/9 Unconstrained Delegation/1 Unconstrained Delegation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "88 Kerberos"
-            }
-          },
-          {
-            "id": "974fca3c15de6517",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 2/2 Attacks/4 Kerberoasting/5 TargetKerberoast.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "5 TargetKerberoast"
-            }
-          },
-          {
-            "id": "1de4f3c815de7923",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/Ports DC/445, 135 - Psexec.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "445, 135 - Psexec"
-            }
-          },
-          {
-            "id": "3fbbc9048d170296",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 Tools/John the Ripper.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "John the Ripper"
-            }
-          },
-          {
-            "id": "d8c3643c5295fa4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 2/1 Enumeration/3 ADPeas.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "3 ADPeas"
-            }
-          },
-          {
-            "id": "91bc50cca732d10f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 2/1 Enumeration/5 BloodHound.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "5 BloodHound"
-            }
-          },
-          {
-            "id": "4bc959e7f4d5ceff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "1 DCSync"
+              "title": "1 Unconstrained Delegation"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -295,7 +190,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "exif",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -401,34 +296,34 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "073cf15974ffe4b2",
+  "active": "735dc4a5073d25ae",
   "lastOpenFiles": [
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token-Priv, Groups.md",
-    "2 Ports/Ports DC/1433 MS-SQL-Server.md",
-    "2 Ports/Ports DC/389 - LDAP.md",
+    "8 AD 2/2 Attacks/9 Unconstrained Delegation/1 Unconstrained Delegation.md",
+    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
     "2 Ports/Ports DC/445 - SMB.md",
     "8 AD 2/4 Persistencia, Post-Explotation/1 DCSync.md",
-    "3 Tools/Nmap.md",
-    "8 AD 2/1 Enumeration/5 BloodHound.md",
-    "2 Ports/25 - SMTP.md",
-    "12 Cloud Pentesting/1 Azure/3 Attacks/1 Vector - Uploader.md",
-    "2 Ports/80.2 Joomla.md",
-    "2 Ports/80.1 WordPress.md",
-    "2 Ports/80.4 Magento.md",
-    "2 Ports/80.3 Drupal.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "8 AD 2/1 Enumeration/2 PowerView.md",
-    "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
-    "2 Ports/Ports DC/88 Kerberos.md",
-    "8 AD 2/2 Attacks/4 Kerberoasting/5 TargetKerberoast.md",
-    "8 AD 1/0 Enumeration/3 BloodHound.md",
-    "2 Ports/Ports DC/135 - RPC.md",
-    "8 AD 2/2 Attacks/4 Kerberoasting/4 Powerview.md",
-    "8 AD 2/2 Attacks/4 Kerberoasting/2 Impacket.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/3 Token-Priv, Groups.md",
+    "8 AD 2/4 Persistencia, Post-Explotation/4 Golden Ticket.md",
+    "2 Ports/Ports DC/1433 MS-SQL-Server.md",
+    "3 Tools/Hashcat.md",
+    "2 Ports/Ports DC/0 DC Enumeration.md",
     "3 Tools/John the Ripper.md",
-    "1 Com Lin & Win/2 Docker/1 Instalacion Linux.md",
-    "1 Com Lin & Win/2 Docker/5 Gestion Contenedores.md",
+    "2 Ports/Ports DC/464 - kpasswd.md",
+    "2 Ports/25 - SMTP.md",
+    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
+    "1 Com Lin & Win/3 Hacking/Transferir Archivos.md",
+    "2 Ports/Ports DC/445, 135 - Psexec.md",
+    "2 Ports/464 - Keepass.md",
+    "12 Cloud Pentesting/1 Azure/3 Attacks/1 Vector - Uploader.md",
+    "2 Ports/Ports DC/389 - LDAP.md",
+    "2 Ports/Ports DC/53 - DNS.md",
+    "2 Ports/Ports DC/135 - RPC.md",
+    "8 AD 2/2 Attacks/3 ASREProastable/3 Impacket.md",
+    "2 Ports/Ports DC/5985 - 5986 - WINRM.md",
+    "3 Tools/Hydra.md",
+    "3 Tools/Fuzzers.md",
+    "2 Ports/Ports DC/88 Kerberos.md",
+    "1 Com Lin & Win/3 Hacking/Tratamiento TTY.md",
     "12 Cloud Pentesting/1 Azure/Sin nombre",
     "12 Cloud Pentesting/1 Azure/3 Attacks",
     "12 Cloud Pentesting/1 Azure/2 Enumeration",
