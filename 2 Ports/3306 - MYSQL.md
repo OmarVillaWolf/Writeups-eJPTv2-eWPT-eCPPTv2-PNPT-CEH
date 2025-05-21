@@ -16,7 +16,8 @@ Tags: #MySQL #Servidor #Comandos #DB
 
 Nos conectamos a la base de datos de esta manera 
 ```bash 
-❯  mysql -u root -p -h <IP>
+❯  mysql -u root -p -h <IP>         # Si estas fuera del server 
+❯  mysql -u root -p                 # Si estas dentro del server 
 
 	# h = Host
 	# u = User
@@ -29,10 +30,11 @@ Nos conectamos a la base de datos de esta manera
 	> show databases;                                # Muestra todas las bases de datos existentes
 	> use ❮DB_name❯;                                 # Usamos una base de datos especifica
 	> show tables;                                   # Mostramos el contenido de las tablas de la base de datos elegida
+	> select * from ❮Table_name❯;                    # Dumpeas toda la info de la tabla users, incluyendo sus hashes
 	> describe ❮Table_name❯;                         # Miramos que columnas existen
 	> select count(*) from ❮Table_name❯              # Mirar los registros de la tabla de la DB seleccionada
 	> select User,Password from ❮Table_name❯;        # Seleccionamos los campos de una tabla especifica 
-	> select * from ❮Table_name❯;                    # Dumpeas toda la info de la tabla users, incluyendo sus hashes
+	
 	> select * from ❮Table_name❯ where username=’admin’;
 	> create database ❮DB_name❯;                     # Creamos una base de datos
 	> drop table ❮Table_name❯;                       # Eliminas la tabla llamada users
