@@ -19,6 +19,16 @@ Tags: #Windows #Comandos
 ```bash 
 ❯ arp -a                               # Mirar la tabla ARP en la maquina actual 
 ```
+ty
+```bash 
+❯ route add IP mask 255.255.255.255 GW   # Agregar una IP en especifico
+	# IP = Direccion a agregar
+	# GW = Direccion IP del Gateway
+
+❯ route add IP mask 255.255.255.0 GW     # Agregar un segmento de red 
+
+❯ route delete IP                        # Borrar una IP especifica o un segmento de red
+```
 
 ## Enumeración 
 
@@ -30,8 +40,24 @@ Notas:
 	1. El comando se ejecuta en el dir del usuario 'C:\Users\omar'
 ```
 
-```bash 
-❯ ipconfig                 # Mirar las interfaces y sus IPs
+```bash
+❯ ipconfig                   # Muestrar interfaces, direcciones IP y si existen mas subredes hacer 'Pivoting'
+```
+
+```bash
+❯ dir                      # Lista el contenido del directorio
+❯ dir C:\Users             # Lista los directorios de los usuarios 
+
+❯ dir /r /s File.txt       # Busca de forma recursiva el archivo '.txt'
+❯ dir /r /s                # Listar archivos con ADS 'Alternative Data Streams' ocultos 
+
+❯ dir -Force               # Lista todos los archivos hasta los ocultos
+```
+
+```bash
+❯ type ❮File❯              # Mostrar el contenido del archivo
+
+❯ more < file.txt          # Mirar el contenido del archivo en partes 
 ```
 
 ```bash 
@@ -63,47 +89,21 @@ Notas:
 ```
 
 ```bash 
-❯ hostname                 # Nombre de la maquina 
+❯ hostname             # Mirar el nombre de la maquina 
 ```
 
 ```bash
-❯ .\SharpHound.exe         # Ejecutar un archivo .exe en Powershell o CMD
+❯ .\SharpHound.exe     # Ejecutar un archivo .exe en Powershell o CMD
 ```
 
 ```bash 
-❯ cd PROGRA~1              # Colocar las 6 primeras letras e ingresar a un dir especifico con espacios 'Program Files'
+❯ cd PROGRA~1          # Colocar las 6 primeras letras e ingresar a un dir especifico con espacios 'Program Files'
 
 Notas:
 	1. Colocar '~2' si se quiere ingresar a otro dir aunque se tenga las primeras 6 letras iguales
 ```
 
 ```bash
-❯ cls                            # Limpia la pantalla
+❯ cls       # Limpiar la pantalla
 ```
 
-```bash
-❯ ipconfig                       # Muestra las interfaces, direcciones IP y si existen mas subredes se puede hacer 'Pivoting'
-```
-
-```bash
-❯ dir                        # Lista el contenido del directorio
-❯ dir C:\Users               # Lista los directorios de los usuarios 
-
-❯ dir /r /s ❮File.txt❯       # Busca de forma recursiva el string .txt
-
-❯ dir -Force                 # Lista todos los archivos hasta los ocultos
-```
-
-```bash
-❯ type ❮File❯                    # Muestra el contenido del archivo
-```
-
-```bash 
-❯ route add IP mask 255.255.255.255 GW   # Agregar una IP en especifico
-	# IP = Direccion a agregar
-	# GW = Direccion IP del Gateway
-
-❯ route add IP mask 255.255.255.0 GW     # Agregar un segmento de red 
-
-❯ route delete IP                        # Borrar una IP especifica o un segmento de red
-```
