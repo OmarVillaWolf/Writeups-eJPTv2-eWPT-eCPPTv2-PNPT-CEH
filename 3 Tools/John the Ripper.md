@@ -50,8 +50,8 @@ Notas:
 ## John 
 
 ```bash 
-❯ john --show --format=RAW-MD5 hash.txt          # Mirar la passwd crackeada en un formato especifico 
-❯ john --show hash.txt                           # Otra forma de hacerlo 
+❯ john --show --format=RAW-MD5 <hash>       # Mirar la passwd crackeada en un formato especifico 
+❯ john --show hash.txt                      # Otra forma de hacerlo 
 ```
 
 ```bash
@@ -59,35 +59,57 @@ Notas:
 
 	# wordlist = Ruta del diccionario rockyou.txt
 	# hashfile = Archivo que contiene el hash a crackear
-
-❯ john --format=Raw-MD5 -w:/usr/share/wordlists/rockyou.txt <Hashfile>    # Crackear un hash con un formato especifico
-
-❯ john --format=NT -w:/usr/share/wordlists/rockyou.txt <Hashfile.txt>
-
-	# format = raw-md5 -> Formato especifico del hash (MD4,MD5, SHA1...)
-	# Raw = Tipo de hash estandar (raw-md5, raw-sha1, raw-sha256, whirlpool...)
-	# hashfile = Archivo que contiene el hash a crackear
 ```
+
+## MD5 
+
+```bash 
+❯ john --format=Raw-MD5 -w:/usr/share/wordlists/rockyou.txt <Hash>    
+```
+
+## NTLM 
+
+```bash 
+❯ john --format=NT -w:/usr/share/wordlists/rockyou.txt <Hash>
+```
+
+## MSSQL 
+
+```bash 
+❯ john --format=mssql12 -w:/usr/share/wordlists/rockyou.txt <Hash> 
+```
+
+## Zip2john
 
 ```bash
-❯ zip2john File.zip > hash   # Devuelva el Hash para crackearlo, el resultado se ingresa en un archivo llamado 'hash'
-❯ jhon -w:/usr/share/wordlists/rockyou.txt hash    # Romper el hash obtenido
+❯ zip2john File.zip > <Hash>   # Devuelva el Hash para crackearlo, el resultado se ingresa en un archivo llamado 'hash'
+
+❯ jhon -w:/usr/share/wordlists/rockyou.txt <Hash>    # Romper el hash obtenido
 ```
+
+## Ssh2john
 
 ```bash 
 # Esto se hace cuando tenemos un id_rsa con 'passphrase' o 'Encrypted'
-❯ ssh2jhon id_rsa > jhon.txt          # Pasar el id_rsa a hash con la passwd cifrada 
-	❯ jhon jhon.txt -w:/usr/share/wordlists/rockyou.txt   # Encontrar la frase 
+❯ ssh2jhon id_rsa > <Hash>          # Pasar el id_rsa a hash con la passwd cifrada 
+
+❯ jhon -w:/usr/share/wordlists/rockyou.txt <Hash>  # Encontrar la frase 
 ```
 
+## Keepass2john
+
 ```bash 
-❯ keepass2john file.kdbx                 # Obtener el hash del archivo con la passwd cifrada 
-	❯ jhon -w:/usr/share/wordlists/rockyou.txt hash  # Romper el hash obtenido
+❯ keepass2john file.kdbx > <Hash>                  # Obtener el hash del archivo con la passwd cifrada 
+
+❯ jhon -w:/usr/share/wordlists/rockyou.txt <Hash>  # Romper el hash obtenido
 ```
+
+## Pwsafe2john 
 
 ```bash 
 ❯ pwsafe2john file.psafe3 > hash       # Obtener el hash del archivo con la passwd cifrada
-	❯ jhon -w:/usr/share/wordlists/rockyou.txt hash  # Romper el hash obtenido
+
+❯ jhon -w:/usr/share/wordlists/rockyou.txt <Hash>  # Romper el hash obtenido
 ```
 
 ## Fcrackzip
