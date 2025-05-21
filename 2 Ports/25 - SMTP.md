@@ -26,7 +26,7 @@ Tags: #SMTP
 	❯ QUIT                    # Para salir de la sesion 
 ```
 
-## Enviar código PHP 
+## Enviar código PHP en SMTP
 
 ```bash 
 # Si el servidor SMTP no requiere autenticación puede ser vulnerable a envio de código PHP para obtener una Webshell  
@@ -42,4 +42,15 @@ Tags: #SMTP
 
 Nota:
 	1. La cmd se encontrará en la web '/var/mail/dir?cmd=whoami'
+```
+
+## Explotar OpenSMTPD
+
+```bash 
+# La versión vulnerable para usar este exploit es < 6.6 
+
+❯ 
+❯ 
+❯ 
+❯ 
 ```
