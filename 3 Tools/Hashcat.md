@@ -50,7 +50,7 @@ Notas:
 ## NTLM 
 
 ```bash 
-❯ hashcat -m 5600 hashes.txt rockyou.txt --force -O          
+❯ hashcat -m 5600 -a 0 hashes.txt rockyou.txt --force -O          
 	# 5500 = NetNTLMv1 / NetNTLMv1+ESS
 	# 5600 = NetNTLMv2 
 	# O = Aumentar la velocidad del crackeo
@@ -59,21 +59,21 @@ Notas:
 ## ASREP TGT
 
 ```bash 
-❯ hashcat -m 18200 -a 0 hashes.txt rockyou.txt --force
+❯ hashcat -m 18200 -a 0 --force --rules /usr/share/hashcat/rules/InsidePro-PasswordsPro.rule asrep.hash rockyou.txt 
 	# --show = Muestra las passwd que ya han sido crackeadas 'historial'
 ```
 
 ## Kerberos TGS-REP 
 
 ```bash 
-❯ hashcat -m 13100 -a 0 hash.txt rockyou.txt --force 
+❯ hashcat -m 13100 -a 0 --force --rules /usr/share/hashcat/rules/InsidePro-PasswordsPro.rule kerb.hash rockyou.txt 
 	# --show = Muestra las passwd que ya han sido crackeadas 'historial'
 ```
 
 ## MSSQL
 
 ```bash 
-❯ hashcat -m  -a 0 hash.txt rockyou.txt --force 
+❯ hashcat -m 1731 -a 0 hash.txt rockyou.txt --force 
 	# --show = Muestra las passwd que ya han sido crackeadas 'historial'
 ```
 
