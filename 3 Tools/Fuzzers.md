@@ -213,7 +213,7 @@ Esta herramienta sirve para enumerar directorios
 ```
 
 ```python
-❯ dirb http://<IP> /usr/share/seclists/Discovery/Web-Content/Directory-list-2.3-medium.txt -X .php # Buscar archivos 
+❯ dirb http://<IP> /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -X .php # Buscar archivos 
 
 	# X = Buscar por una extencion especifica
 	# Ruta del diccionario 
@@ -226,7 +226,7 @@ Esta herramienta sirve para enumerar directorios
 ## Dirsearch 
 
 ```bash 
-❯ dirsearch -u http://IP/ -t 30 -e txt,html,php -f -w /usr/share/seclists/Discovery/Web-Content/Directory-list-2.3-medium.txt
+❯ dirsearch -u http://IP/ -t 30 -e txt,html,php -f -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
 
 	# u = URL 
 	# t = Numero de peticiones 
