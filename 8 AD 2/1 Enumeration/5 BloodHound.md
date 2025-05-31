@@ -59,6 +59,7 @@ Los 'ActiveDirectoryRights' incluyen, pero no se limitan a:
 ```powershell
 ❯ sudo docker-compose -f docker-compose.yml up -d   # Iniciar BloodHound con Docker despues de reiniciar Kali
 ❯ sudo docker-compose -f docker-compose.yml down    # Apagar BloodHound 
+❯ bloodhound-cli resetpwd                           # Resetear la password 
 
 ❯ http://127.0.0.1:8080/ui/login         # Ingresar a BloodHound Community por la web               
 
