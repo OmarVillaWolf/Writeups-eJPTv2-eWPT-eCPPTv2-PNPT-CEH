@@ -78,7 +78,8 @@ Notas:
 ```bash
 ❯ net user                             # Mirar todos los usuarios existentes y sus grupos de forma local
 ❯ net user <User>                      # Mirar los grupos de un usuario especifico como 'administrator' de forma local
-❯ net user admin password123           # Cambiar la passwd al usuario admin siendo NT Authority\System de forma local
+❯ net user admin password123           # Cambiar la passwd al usuario admin siendo NT Authority\System de forma local  
+❯ net user admin password123 /domain   # Cambiar la passwd a un usuario admin siendo un usuario que pertenece a un grupo con privilegios para hacerlo en el dominio 
 
 ❯ net group "Group"                    # Mirar los grupos del usuario 
 ❯ net localgroup "administrators"      # Mirar los miembros del grupo administrador de forma local
