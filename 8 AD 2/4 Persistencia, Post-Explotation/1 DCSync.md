@@ -78,3 +78,14 @@ Notas:
 	1. Este ataque funciona si el usuario del cual tenemos las credenciales tiene los derechos de 'GetChanges y GetChangesAll' sobre el usuario 'Administrator'  
 	2. Es mejor hacer un 'Pass-The-Hash' con el 'aes256' que con el 'rc4' ya que los AV los detectan más fácil 
 ```
+
+## Ataque de privilegios 'DCSYNC'
+
+```bash 
+# Obtener usuarios validos y analizar si alguno de ellos tiene los permisos necesarios para hacer el ataque de DCSync 
+
+Pasos:
+> bloodhound          # Iniciarlizar BloodHound
+# Recolectar informacion del DC 
+> bloodhound-python -c All -u 'user' -p 'passwd' -d domain.corp -ns IP  
+```
