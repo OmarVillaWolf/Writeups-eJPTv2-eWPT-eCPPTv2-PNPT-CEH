@@ -1,6 +1,16 @@
-# Linux Commands
+# Linux 
 
 Tags: #Linux #Comandos
+
+## Comandos importantes en Cloud 
+
+```bash 
+❯ env           # Muestra las variables de entorno, a veces hay información sensible 
+
+Variables de entorno: 
+1. ORYX_ENV_TYPE = AppService         # Significa que es un aplicativo Web 
+2. APPSETTING_WEBSITE_SITE_NAME =  Domain1-company   # Muestra el nombre del 'AppService'
+```
 
 ## Comandos terminal Linux
 
