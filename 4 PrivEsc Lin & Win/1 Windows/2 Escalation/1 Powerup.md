@@ -12,6 +12,9 @@ PowerUp.ps1 es un script desarrollado en PowerShell que pertenece a la suite Pow
 
 ❯ Get-ModifiableService             # lista los servicios los cuales pueden ser configurados 
 ❯ Get-ServiceUnquoted               # Unquoted Service Path 
+
+Nota:
+	1. Si quieres ofuscar el 'PowerUp.ps1' ir a la linea '2640' y eliminar el contenido de la variable '$B64Binary = ""'
 ```
 
 
