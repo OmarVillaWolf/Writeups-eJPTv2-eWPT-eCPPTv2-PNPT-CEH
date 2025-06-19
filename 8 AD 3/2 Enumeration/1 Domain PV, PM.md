@@ -1,14 +1,18 @@
 # Enumeración de dominio 
 
-Tags: #Powershell #AD 
+Tags: #Powershell #AD #PowerView #PowerHuntShares #PowershellModule 
 
 ## PowerHuntShares 
 
 * [PowerHuntShares](https://github.com/NetSPI/PowerHuntShares)
 
-```bash 
+```powershell 
 PowerHuntShares sirve para descubrir recursos compartidos, archivos sensibles, ACLs para recursos compartidos, redes, computadoras, identidades, etc... y te genera un reporte HTML. 
 
+❯ Import-Module C:\AD\Tools\PowerHuntShares.psm1        # Importar el módulo  
+```
+
+```powershell 
 ❯ Invoke-HuntSMBShares -NoPing -OutputDirectory C:\AD\Tools -HostList C:\AD\Tools\servers.txt 
 ```
 
@@ -45,8 +49,10 @@ PowerHuntShares sirve para descubrir recursos compartidos, archivos sensibles, A
 
 ❯ Get-DomainComputer | select Name     # Obtener una lista de computadores del dominio actual  
 ❯ Get-DomainComputer | select dnshostname, logonCount 
+❯ Get-DomainComputer | select -ExpandProperty dnshostname 
 ❯ Get-DomainComputer -OperatingSystem "*Server 2022*"
 ❯ Get-DomainComputer -Ping 
+
 
 ❯ Get-DomainGroup | select Name        # Obtener todos los grupos del dominio actual 
 ❯ Get-DomainGroup -Domain <targetdomain>
