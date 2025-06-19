@@ -56,8 +56,6 @@ DNS (Domain Name System) es crucial para el funcionamiento de Active Directory y
 
 ## DNS Records
 
-* Haremos un ataque de transferencia de Zona Completa para encontrar subdominios de la Zona.
-
 ```bash
 ❯ dig @<IP> <Domain> 
 ❯ dig mx @<IP> <Domain>         # Enumerar los servidores de correo
