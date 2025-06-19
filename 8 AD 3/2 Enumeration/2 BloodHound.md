@@ -35,7 +35,7 @@ Notas:
 * [SOAPHound](https://github.com/FalconForceTeam/SOAPHound)
 
 ```powershell 
-SOAPHound es más sigiloso. El se comunica con Active Directory Web Services (ADWS - Puerto 9389) en l;ugar de enviar peticiones LDAP como lo haría el AD Module
+SOAPHound es más sigiloso. El se comunica con Active Directory Web Services (ADWS - Puerto 9389) en lugar de enviar peticiones LDAP como lo haría el AD Module
 	- Casi ninguna detección basada en la red  (MDI)
 	- Recupera info sobre todos los objetos (objectGuid=*) y sus procesos. Esos significa peticiones limitadas a LDAP - Menos posobilidad de detección en puntos finales 
 
