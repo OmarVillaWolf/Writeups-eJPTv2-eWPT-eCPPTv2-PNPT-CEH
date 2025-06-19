@@ -28,13 +28,73 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 AD 3/2 Enumeration/2 BloodHound.md",
+                "file": "8 AD 3/2 Enumeration/6 User Hunting.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "2 BloodHound"
+              "title": "6 User Hunting"
+            }
+          },
+          {
+            "id": "8eb9f000b5a1d68a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/2 Attacks/6 ACL - Linux/2 GenericWrite User.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "2 GenericWrite User"
+            }
+          },
+          {
+            "id": "9762b93c87d75c58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Ports/Ports DC/0 DC Enumeration.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "0 DC Enumeration"
+            }
+          },
+          {
+            "id": "86a52707ad048692",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "8 AD 2/2 Attacks/4 Kerberoasting/2 Impacket.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "2 Impacket"
+            }
+          },
+          {
+            "id": "2d5f2db3f3a7a8ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 Ports/Ports DC/445 - SMB.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "445 - SMB"
             }
           }
         ],
@@ -70,7 +130,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "net rpc",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,42 +238,42 @@
   },
   "active": "2faf1f13bdd9b6d8",
   "lastOpenFiles": [
+    "8 AD 2/2 Attacks/6 ACL - Linux/2 GenericWrite User.md",
+    "8 AD 3/2 Enumeration/6 User Hunting.md",
+    "8 AD 2/2 Attacks/6 ACL - Linux/1 WriteOwner Grupo.md",
+    "8 AD 2/2 Attacks/6 ACL - Windows/5 GenericAll User.md",
+    "8 AD 2/2 Attacks/4 Kerberoasting/2 Impacket.md",
+    "2 Ports/Ports DC/0 DC Enumeration.md",
+    "8 AD 2/2 Attacks/6 ACL - Windows/3 WriteDacl Computador.md",
+    "8 AD 2/2 Attacks/6 ACL - Windows/4 GenericAll Grupo.md",
+    "8 AD 2/2 Attacks/6 ACL - Windows/6 GenericWrite Computador.md",
+    "8 AD 2/2 Attacks/6 ACL - Windows/2 PowerView.md",
+    "8 AD 2/2 Attacks/6 ACL - Windows/1 ACL y ACE.md",
     "8 AD 2/1 Enumeration/5 BloodHound.md",
+    "8 AD 2/2 Attacks/6 ACL - Linux",
     "8 AD 3/2 Enumeration/2 BloodHound.md",
+    "8 AD 3/2 Enumeration/3 ACLs.md",
+    "2 Ports/Ports DC/445 - SMB.md",
+    "2 Ports/Ports DC/53 - DNS.md",
+    "2 Ports/Ports DC/135 - RPC.md",
+    "2 Ports/Ports DC/389 - LDAP.md",
+    "8 AD 2/2 Attacks/3 ASREProastable/3 Impacket.md",
+    "1 Kitty.md",
+    "8 AD 3/3 Priv Escalation",
     "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token/4 RoadTools.md",
-    "8 AD 3/2 Enumeration/1 Domain PV, PM.md",
-    "1 Com Lin & Win/3 Hacking/1 Linux Commands.md",
-    "8 AD 3/1 Evasión/2 Bypass.md",
-    "8 AD 3/1 Evasión/3 .NET.md",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token/2 Microsoft Storage Explorer.md",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token/3 Passwd Spraying.md",
-    "8 AD 2/5 Evasión/4 AMSI.md",
-    "7 Hacking Web 2/1/1.md",
+    "8 AD 3/2 Enumeration/5 Trusts.md",
+    "1 Com Lin & Win/0 Paginas Practicar.md",
+    "12 Cloud Pentesting/2 AWS/1 AWS.md",
+    "1 Com Lin & Win/2 Docker/1 Instalacion Linux.md",
+    "1 Com Lin & Win/2 Docker/2 Estructura.md",
     "7 Hacking Web 2/1",
     "7 Hacking Web 2",
-    "8 AD 3/1 Evasión/1 Powershell.md",
-    "2 Ports/Ports DC/1433 MS-SQL-Server.md",
     "8 AD 3/2 Enumeration",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 Powerup.md",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token/1 Enumeración con Token.md",
-    "12 Cloud Pentesting/1 Azure/3/1.md",
     "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token",
     "12 Cloud Pentesting/1 Azure/2 Enumeración/1 Sin Token",
     "12 Cloud Pentesting/1 Azure/3 Enumeración con Token",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/1 Sin Token/1 Escaneo Dominios.md",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/1 Sin Token/3 Enum Directorios.md",
-    "12 Cloud Pentesting/1 Azure/Sin título.md",
-    "1 Com Lin & Win/3 Hacking/2 Windows Commands.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "2 Ports/Ports DC/389 - LDAP.md",
-    "3 Tools/Hashcat.md",
-    "1 Com Lin & Win/3 Hacking/3 Powershell.md",
-    "8 AD 2/1 Enumeration/3 ADPeas.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
     "8 AD 3/1 Evasión",
     "8 AD 3",
-    "8 AD 2/2 Attacks/13 NoPac",
-    "0.0 A",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/SSRF.png",
