@@ -35,7 +35,7 @@ Este es el puerto estándar para LDAP (Lightweight Directory Access Protocol), q
 * [LDAP-Pentesting](https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-ldap.html#ldapsearch)
 
 ```bash 
-❯ ldapdomaindump -u 'domain1.corp\user' -p 'password' IP     # Crea reportes para poder ver la info desde la web
+❯ ldapdomaindump -u 'domain1.corp\user' -p 'password' IP     # Crear reportes para poder ver la info desde la web
 ❯ ldapdomaindump -u 'domain1.corp\user' -p 'password' -o ldd ldap://IP
 	# ldd = Directorio en donde se exportará la info 
 
