@@ -1,4 +1,4 @@
-# Bloodhound Community NEW VERSION
+# Bloodhound Community
 
 Tags: #AD #BloodHound #SharpHound #Kali #Parrot #SOAPHound 
 
@@ -47,9 +47,10 @@ Los 'ActiveDirectoryRights' incluyen, pero no se limitan a:
 3. CreateChild/DeleteChild: Crear o eliminar objetos hijos en un contenedor.
 4. Self: Derechos para modificar información propia.
 5. GenericAll: Control total sobre el objeto, incluyendo todos los derechos anteriores.
-6. WriteDacl: Modificar la lista de control de acceso discrecional (DACL).  
-7. WriteOwner: Cambiar el propietario de un objeto.
-8. GetChangesAll: Es un permiso en Active Directory que permite replicar todos los datos, incluso contraseñas; es clave para ataques como 'DCSync'.
+6. GenericWrite: Permite modificar varios atributos de ese objeto, como: password, atributos, delegación, claves
+7. WriteDacl: Modificar la lista de control de acceso discrecional (DACL).  
+8. WriteOwner: Cambiar el propietario de un objeto.
+9. GetChangesAll: Es un permiso en Active Directory que permite replicar todos los datos, incluso contraseñas; es clave para ataques como 'DCSync'.
 ```
 
 ## BloodHound Community Edition 
@@ -130,7 +131,7 @@ Notas:
 * [SOAPHound](https://github.com/FalconForceTeam/SOAPHound)
 
 ```powershell 
-SOAPHound es más sigiloso. El se comunica con Active Directory Web Services (ADWS - Puerto 9389) en l;ugar de enviar peticiones LDAP como lo haría el AD Module
+SOAPHound es más sigiloso. El se comunica con Active Directory Web Services (ADWS - Puerto 9389) en lugar de enviar peticiones LDAP como lo haría el AD Module
 	- Casi ninguna detección basada en la red  (MDI)
 	- Recupera info sobre todos los objetos (objectGuid=*) y sus procesos. Esos significa peticiones limitadas a LDAP - Menos posobilidad de detección en puntos finales 
 
