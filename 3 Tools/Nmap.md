@@ -42,6 +42,8 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ## Evadir IDS o Firewall
 
 ```bash 
+❯ nmap -p- -sS -Pn -n --disable-arp-ping --source-port 53 <IP>     # Evadir un WAF 
+
 ❯ nmap -D RND:3 -v <IP>                 # Utilizar una IP señuelo 'Decoy'
 	# D RDN = Numero de 'decoy', en este caso son 3
 
@@ -113,7 +115,8 @@ Tags: #Nmap #Escaneo #UDP #TCP
 ```
 
 ```bash 
-❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn ❮Target IP❯  -oG allPorts       # Escaneo en la Capa 4 del modelo OSI
+❯ nmap -p- --open -sS --min-rate 500 -vvv -n -Pn  ❮Target IP❯   # Escanear en un entorno real 
+❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn ❮Target IP❯  -oG allPorts     # Escanear
 
 	# Protocolo usado TCP, UDP
 	#  p = Escanea todos los puertos (65535)
