@@ -8,33 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1eca2f72bdf176b0",
+            "id": "b2a9a5fb56300a34",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token/4 RoadTools.md",
+                "file": "8 AD 3/2 Enumeration/1 Domain PV, PM.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "4 RoadTools"
-            }
-          },
-          {
-            "id": "2faf1f13bdd9b6d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8 AD 3/2 Enumeration/6 User Hunting.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "6 User Hunting"
+              "title": "1 Domain PV, PM"
             }
           },
           {
@@ -43,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 AD 2/2 Attacks/6 ACL - Linux/2 GenericWrite User.md",
+                "file": "8 AD 2/2 Attacks/6 ACL - Linux/3 GenericAll User.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "2 GenericWrite User"
+              "title": "3 GenericAll User"
             }
           },
           {
@@ -68,33 +53,18 @@
             }
           },
           {
-            "id": "86a52707ad048692",
+            "id": "debe8c79b70f4cbf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 AD 2/2 Attacks/4 Kerberoasting/2 Impacket.md",
+                "file": "8 AD 3/4 Lateral Movement/1 Powershell Remoting & Tradecraft.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "2 Impacket"
-            }
-          },
-          {
-            "id": "2d5f2db3f3a7a8ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 Ports/Ports DC/445 - SMB.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "445 - SMB"
+              "title": "1 Powershell Remoting & Tradecraft"
             }
           }
         ],
@@ -236,44 +206,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "2faf1f13bdd9b6d8",
+  "active": "8eb9f000b5a1d68a",
   "lastOpenFiles": [
     "8 AD 2/2 Attacks/6 ACL - Linux/2 GenericWrite User.md",
+    "8 AD 2/2 Attacks/6 ACL - Linux/3 GenericAll User.md",
+    "8 AD 3/4 Lateral Movement/1 Powershell Remoting & Tradecraft.md",
+    "8 AD 3/3 Priv Escalation/4 GPO Abuse.md",
+    "8 AD 3/3 Priv Escalation/3 Relaying.md",
+    "8 AD 3/4 Lateral Movement",
+    "8 AD 3/1 Evasión/1 Powershell.md",
+    "8 AD 3/2 Enumeration/1 Domain PV, PM.md",
+    "8 AD 3/3 Priv Escalation/2 Feature Abuse.md",
+    "8 AD 3/3 Priv Escalation/1 Privilege Escalation - Local.md",
     "8 AD 3/2 Enumeration/6 User Hunting.md",
-    "8 AD 2/2 Attacks/6 ACL - Linux/1 WriteOwner Grupo.md",
-    "8 AD 2/2 Attacks/6 ACL - Windows/5 GenericAll User.md",
-    "8 AD 2/2 Attacks/4 Kerberoasting/2 Impacket.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
-    "8 AD 2/2 Attacks/6 ACL - Windows/3 WriteDacl Computador.md",
-    "8 AD 2/2 Attacks/6 ACL - Windows/4 GenericAll Grupo.md",
-    "8 AD 2/2 Attacks/6 ACL - Windows/6 GenericWrite Computador.md",
-    "8 AD 2/2 Attacks/6 ACL - Windows/2 PowerView.md",
-    "8 AD 2/2 Attacks/6 ACL - Windows/1 ACL y ACE.md",
-    "8 AD 2/1 Enumeration/5 BloodHound.md",
-    "8 AD 2/2 Attacks/6 ACL - Linux",
-    "8 AD 3/2 Enumeration/2 BloodHound.md",
-    "8 AD 3/2 Enumeration/3 ACLs.md",
-    "2 Ports/Ports DC/445 - SMB.md",
-    "2 Ports/Ports DC/53 - DNS.md",
-    "2 Ports/Ports DC/135 - RPC.md",
-    "2 Ports/Ports DC/389 - LDAP.md",
-    "8 AD 2/2 Attacks/3 ASREProastable/3 Impacket.md",
-    "1 Kitty.md",
-    "8 AD 3/3 Priv Escalation",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token/4 RoadTools.md",
     "8 AD 3/2 Enumeration/5 Trusts.md",
-    "1 Com Lin & Win/0 Paginas Practicar.md",
-    "12 Cloud Pentesting/2 AWS/1 AWS.md",
-    "1 Com Lin & Win/2 Docker/1 Instalacion Linux.md",
-    "1 Com Lin & Win/2 Docker/2 Estructura.md",
+    "8 AD 3/2 Enumeration/4 GPOs.md",
+    "8 AD 3/2 Enumeration/3 ACLs.md",
+    "8 AD 3/1 Evasión/3 .NET.md",
+    "8 AD 3/1 Evasión/2 Bypass.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 WinPEAS.md",
+    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 PowerUp.md",
+    "2 Ports/Ports DC/0 DC Enumeration.md",
+    "8 AD 2/2 Attacks/0 LinWinPwn - Tool/1 LinWinPwn.md",
+    "8 AD 3/3 Priv Escalation/Unconfirmed 339358.crdownload",
+    "8 AD 3/3 Priv Escalation/Unconfirmed 119874.crdownload",
+    "8 AD 3/3 Priv Escalation/Unconfirmed 788700.crdownload",
+    "8 AD 2/2 Attacks/1 Password Spraying/0 Passwd Personalizadas.md",
+    "8 AD 2/2 Attacks/0 LinWinPwn - Tool",
+    "8 AD 2/2 Attacks/1 Password Spraying/1 Kerbrute.md",
+    "8 AD 2/2 Attacks/1 Password Spraying/2 Passwd Spraying.md",
+    "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token/4 RoadTools.md",
+    "3 Tools/Nmap.md",
+    "2 Ports/Ports DC/137-139 NetBIOS.md",
+    "2 Ports/Ports DC/445, 135 - Psexec.md",
+    "8 AD 2/2 Attacks/6 ACL - Linux",
+    "8 AD 3/3 Priv Escalation",
     "7 Hacking Web 2/1",
     "7 Hacking Web 2",
     "8 AD 3/2 Enumeration",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/1 Sin Token",
-    "12 Cloud Pentesting/1 Azure/3 Enumeración con Token",
-    "8 AD 3/1 Evasión",
-    "8 AD 3",
     "Z Imagenes/Hacking/Piv2.png",
     "Z Imagenes/Hacking/Piv1.png",
     "Z Imagenes/Hacking/SSRF.png",
