@@ -41,6 +41,9 @@ Piensa en Powershell Remoting (PSRemoting) como 'psexec' con esteroides pero muc
 
 ## Tradecraft
 
+* [WSMan-WinRM](https://github.com/bohops/WSMan-WinRM)
+
 ```powershell 
-❯ 
+# Usar WinRS en lugar de PSRemoting para evadir el 'logging' y beneficiarse del puerto 5985
+❯ winrs -remote:server1 -u:server1\administrator -p:Pass@1234 hostname 
 ```
