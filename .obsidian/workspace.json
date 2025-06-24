@@ -58,17 +58,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 AD 3/4 Lateral Movement/1 Powershell Remoting & Tradecraft.md",
+                "file": "8 AD 3/4 Lateral Movement/1 Remoting & Tradecraft.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1 Powershell Remoting & Tradecraft"
+              "title": "1 Remoting & Tradecraft"
+            }
+          },
+          {
+            "id": "c86b4d8e71d72dd4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "7 Hacking Web 1/6 LFI - RCE.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "6 LFI - RCE"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -206,11 +221,22 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "8eb9f000b5a1d68a",
+  "active": "c86b4d8e71d72dd4",
   "lastOpenFiles": [
-    "8 AD 2/2 Attacks/6 ACL - Linux/2 GenericWrite User.md",
+    "7 Hacking Web 1/5 RFI.md",
+    "7 Hacking Web 1/6 LFI - RCE.md",
+    "7 Hacking Web 1/4 LFI.md",
+    "8 AD 3/4 Lateral Movement/1 Remoting & Tradecraft.md",
+    "7 Hacking Web 1/7 CSRF.md",
+    "7 Hacking Web 1/8 SSRF.md",
+    "7 Hacking Web 1/9 SSTI.md",
+    "7 Hacking Web 1/1 SQLI.md",
+    "7 Hacking Web 1/2 XSS.md",
+    "7 Hacking Web 1/2 XSS Sudo.co.il.md",
+    "7 Hacking Web 1/3 XXE.md",
+    "7 Hacking Web 1/7 CSRF bwapp.md",
     "8 AD 2/2 Attacks/6 ACL - Linux/3 GenericAll User.md",
-    "8 AD 3/4 Lateral Movement/1 Powershell Remoting & Tradecraft.md",
+    "8 AD 2/2 Attacks/6 ACL - Linux/2 GenericWrite User.md",
     "8 AD 3/3 Priv Escalation/4 GPO Abuse.md",
     "8 AD 3/3 Priv Escalation/3 Relaying.md",
     "8 AD 3/4 Lateral Movement",
@@ -224,21 +250,10 @@
     "8 AD 3/2 Enumeration/3 ACLs.md",
     "8 AD 3/1 Evasión/3 .NET.md",
     "8 AD 3/1 Evasión/2 Bypass.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/2 WinPEAS.md",
-    "4 PrivEsc Lin & Win/1 Windows/2 Escalation/1 PowerUp.md",
-    "2 Ports/Ports DC/0 DC Enumeration.md",
-    "8 AD 2/2 Attacks/0 LinWinPwn - Tool/1 LinWinPwn.md",
     "8 AD 3/3 Priv Escalation/Unconfirmed 339358.crdownload",
     "8 AD 3/3 Priv Escalation/Unconfirmed 119874.crdownload",
     "8 AD 3/3 Priv Escalation/Unconfirmed 788700.crdownload",
-    "8 AD 2/2 Attacks/1 Password Spraying/0 Passwd Personalizadas.md",
     "8 AD 2/2 Attacks/0 LinWinPwn - Tool",
-    "8 AD 2/2 Attacks/1 Password Spraying/1 Kerbrute.md",
-    "8 AD 2/2 Attacks/1 Password Spraying/2 Passwd Spraying.md",
-    "12 Cloud Pentesting/1 Azure/2 Enumeración/2 Con Token/4 RoadTools.md",
-    "3 Tools/Nmap.md",
-    "2 Ports/Ports DC/137-139 NetBIOS.md",
-    "2 Ports/Ports DC/445, 135 - Psexec.md",
     "8 AD 2/2 Attacks/6 ACL - Linux",
     "8 AD 3/3 Priv Escalation",
     "7 Hacking Web 2/1",
