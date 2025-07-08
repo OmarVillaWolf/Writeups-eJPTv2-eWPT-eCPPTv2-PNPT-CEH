@@ -46,6 +46,7 @@ PowerHuntShares sirve para descubrir recursos compartidos, archivos sensibles, A
 ❯ Get-DomainUser -Identity user1 -Properties *    
 ❯ Get-DomainUser -Properties samaccountname, logonCount 
 ❯ Get-DomainUser -LDAPFilter "Description=*built*" | select name,Description   # Buscar una palabra en particular en los atributos del usuario 
+❯ Find-DomainUserLocation    
 
 ❯ Get-DomainComputer | select Name     # Obtener una lista de computadores del dominio actual  
 ❯ Get-DomainComputer | select dnshostname, logonCount 
