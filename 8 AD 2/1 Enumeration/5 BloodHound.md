@@ -58,6 +58,7 @@ Los 'ActiveDirectoryRights' incluyen, pero no se limitan a:
 * [Bloodhound-Community-Install](https://bloodhound.specterops.io/get-started/quickstart/community-edition-quickstart)
 
 ```powershell
+❯ bloodhound-cli install           # Instalar Bloodhound por primera vez 
 ❯ sudo docker-compose -f docker-compose.yml up -d   # Iniciar BloodHound con Docker despues de reiniciar Kali
 ❯ sudo docker-compose -f docker-compose.yml down    # Apagar BloodHound 
 ❯ bloodhound-cli resetpwd                           # Resetear la password 
