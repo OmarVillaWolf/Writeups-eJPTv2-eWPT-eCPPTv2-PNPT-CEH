@@ -19,6 +19,81 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirse
 ❯ /usr/share/Seclists/Discovery/Web-Content/CMS/wordpress.fuzz.txt
 ```
 
+## Gobuster
+
+```bash
+# Enumeracion de Subdominios. Gobuster trabaja muy bien con sockets y conexiones 
+
+❯ gobuster vhost --append-domain -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://❮IP❯/ -t 200 -k 
+
+	# append-domain = Enumerar los subdominios
+	# vhost = Modo enumeracion VHost Subdominios
+	# w = Ruta del diccionario
+	# t = Lanzar tareas en paralelo al mismo tiempo
+	# k = Para certificados autofirmados para el puerto 443
+```
+
+```bash
+❯ gobuster vhost --append-domain -u https://host.com/ -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 200 | grep -v "403"
+
+	# append-domain = Enumerar los subdominios
+	# vhost = Modo enumeracion VHost Subdominios
+	# u = Colocamos la url
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# w = Ruta del diccionario
+	# grep -v = Quitamos los que salgan en codigo de estado 403
+```
+
+```bash
+# Enumeración de directorios en una web 
+
+❯ gobuster dir -u http://host.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 --add-slash -b 403,404
+
+	# dir = Modo enumeracion directorios y archivos 
+	# u = Colocamos la url
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# w = Ruta del diccionario
+	# add-slash = Ta agrega una barra al final '/' y podremos ver el codigo de estado correspondiente en lugar de 301
+	# b = Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
+```
+
+```bash
+❯ gobuster dir -u http://host.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -b 403,404 -x .php,.html,.txt,.xml -r
+
+	# dir = Modo enumeracion directory/file
+	# u = Colocamos la url
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# w = Ruta del diccionario
+	# b = Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
+	# x = Que extensiones queremos buscar (.php,.html,.txt)
+	# r = Para hacer 'Follow Redirect'
+
+❯ gobuster dir -u http://IP -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -x asp,txt,html,aspx -f 
+
+	# dir = Enumeracion de directorios y archivos
+	# u = URL
+	# w = Diccionario a usar
+	# x = Extensiones a buscar 
+	# --add-slash = Hace la misma funcion que 'f'
+
+Nota: 
+	1. Crear diccionarios propios para ser mas efectivos 
+	2. En los archivos que se encuentren, mirar cada una de las rutas y observar su código fuente para ver si existe algo importante ahí 
+	3. Si la aplicación web es Windows usar las siguientes extensiones: asp, aspx, html, txt...
+	4. Si la aplicación web es Linux usar las siguientes extensiones: php, html, txt php5...
+```
+
+```bash
+❯ gobuster dir -u https://miwifi.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -s 200 -x html -b ' '
+
+	# Despues de la 'b' colocar una cadena vacia para evitar el error
+	# s = Queremos codigos de estado 200 = OK
+	# dir = Modo enumeracion directory/file
+	# u = Colocamos la url
+	# t = Lanzar peticiones en paralelo al mismo tiempo
+	# w = Ruta del diccionario
+```
+
 ## Wfuzz 
 
 ```bash
@@ -106,81 +181,6 @@ Tags: #Wfuzz #Gobuster #Ffuf #Fuzzing #SubDomains #Directories #Dirbuster #Dirse
 	# w = Ruta del diccionario
 	# FUZZ = Donde va a insertar las palabras el diccionario
 	# t = Lanzar tareas en paralelo al mismo tiempo
-```
-
-## Gobuster
-
-```bash
-# Enumeracion de Subdominios. Gobuster trabaja muy bien con sockets y conexiones 
-
-❯ gobuster vhost --append-domain -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --url https://❮IP❯/ -t 200 -k 
-
-	# append-domain = Enumerar los subdominios
-	# vhost = Modo enumeracion VHost Subdominios
-	# w = Ruta del diccionario
-	# t = Lanzar tareas en paralelo al mismo tiempo
-	# k = Para certificados autofirmados para el puerto 443
-```
-
-```bash
-❯ gobuster vhost --append-domain -u https://host.com/ -w /usr/share/Seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 200 | grep -v "403"
-
-	# append-domain = Enumerar los subdominios
-	# vhost = Modo enumeracion VHost Subdominios
-	# u = Colocamos la url
-	# t = Lanzar peticiones en paralelo al mismo tiempo
-	# w = Ruta del diccionario
-	# grep -v = Quitamos los que salgan en codigo de estado 403
-```
-
-```bash
-# Enumeración de directorios en una web 
-
-❯ gobuster dir -u http://host.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 --add-slash -b 403,404
-
-	# dir = Modo enumeracion directorios y archivos 
-	# u = Colocamos la url
-	# t = Lanzar peticiones en paralelo al mismo tiempo
-	# w = Ruta del diccionario
-	# add-slash = Ta agrega una barra al final '/' y podremos ver el codigo de estado correspondiente en lugar de 301
-	# b = Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
-```
-
-```bash
-❯ gobuster dir -u http://host.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -b 403,404 -x .php,.html,.txt,.xml -r
-
-	# dir = Modo enumeracion directory/file
-	# u = Colocamos la url
-	# t = Lanzar peticiones en paralelo al mismo tiempo
-	# w = Ruta del diccionario
-	# b = Para hacer Blacklist a un codigo de estado (403,404) y que no nos lo muestre
-	# x = Que extensiones queremos buscar (.php,.html,.txt)
-	# r = Para hacer 'Follow Redirect'
-
-❯ gobuster dir -u http://IP -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -x asp,txt,html,aspx -f 
-
-	# dir = Enumeracion de directorios y archivos
-	# u = URL
-	# w = Diccionario a usar
-	# x = Extensiones a buscar 
-	# --add-slash = Hace la misma funcion que 'f'
-
-Nota: 
-	1. Crear diccionarios propios para ser mas efectivos 
-	2. En los archivos que se encuentren, mirar cada una de las rutas y observar su código fuente para ver si existe algo importante ahí 
-	3. Si la aplicación web es Windows usar las siguientes extensiones: asp, aspx, html, txt...
-	4. Si la aplicación web es Linux usar las siguientes extensiones: php, html, txt php5...
-```
-
-```bash
-❯ gobuster dir -u https://miwifi.com/ -w /usr/share/Seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 200 -s 200 -x html -b ' '
-
-	# Despues de la 'b' colocar una cadena vacia para evitar el error
-	# s = Queremos codigos de estado 200 = OK
-	# dir = Modo enumeracion directory/file
-	# u = Colocamos la url
-	# t = Lanzar peticiones en paralelo al mismo tiempo
-	# w = Ruta del diccionario
 ```
 
 ## Dirbuster gráfico 
