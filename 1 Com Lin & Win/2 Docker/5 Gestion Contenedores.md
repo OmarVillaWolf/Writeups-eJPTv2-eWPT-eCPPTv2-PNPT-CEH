@@ -22,20 +22,20 @@ A continuación, se detallan algunos de los comandos vistos en esta clase:
 ```
 
 ```bash
-❯ docker stop ❮ID❯                                          # Para parar el contenedor que se esta ejecutando y solo debemos de poner su identificador 
-❯ docker rm ❮ID❯ --force                                    # Borras un contenedor dado con su ID y lo hacemos de manera forzada 
-❯ docker ps -a -q                    # Te devuelve el identificador de todos los contenedores y asi lo podriamos usar para poder eliminarlos completamente todos de un jalon
+❯ docker stop ❮ID❯               # Parar el contenedor que se esta ejecutando y solo debemos de poner su identificador 
+❯ docker rm ❮ID❯ --force         # Borrar un contenedor dado con su ID y lo hacemos de manera forzada 
+❯ docker ps -a -q                # Devolver el identificador de todos los contenedores y asi lo podriamos usar para poder eliminarlos completamente todos de un jalon
 ❯ docker rm $(docker ps -a -q) --force                      # Asi borras el contenedor de Docker
 ```
 
 ```bash
-❯ docker rmi ❮ID❯                                           # Para borrar una imagen en especifico
-❯ docker rmi $(docker images -q)                            # Para borrar todas las imagenes con su identificador
+❯ docker rmi ❮ID❯                               # Borrar una imagen en especifico
+❯ docker rmi $(docker images -q)                # Borrar todas las imagenes con su identificador
 ```
 
 ```bash
-❯ docker volume ls                                          # Listar los volumenes creados 
-❯ docker volume rm $(docker volume ls -q)                   # Para borrar todos los volumenes con su nombre
+❯ docker volume ls                               # Listar los volumenes creados 
+❯ docker volume rm $(docker volume ls -q)        # Borrar todos los volumenes con su nombre
 ```
 
 ```bash 
